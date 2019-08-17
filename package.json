@@ -1,0 +1,33 @@
+{
+  "name": "@about-code/md-glossarify",
+  "version": "0.1.0",
+  "description": "Scan markdown files for glossary terms and replace each occurence with a link to a glossary file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "markdown",
+    "glossary",
+    "linking",
+    "documenting"
+  ],
+  "author": "Andreas Martin",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "minimist": "^1.2.0",
+    "minimist-options": "^4.0.1",
+    "remark": "^11.0.1",
+    "remark-autolink-headings": "^5.2.1",
+    "remark-parse": "^7.0.1",
+    "remark-slug": "^5.1.2",
+    "remark-stringify": "^7.0.2",
+    "unified": "^8.3.2",
+    "unified-engine": "^7.0.0",
+    "unist-builder": "^1.0.4",
+    "unist-util-flatmap": "^1.0.0",
+    "unist-util-select": "^2.0.2",
+    "unist-util-visit-parents": "^3.0.0"
+  }
+}

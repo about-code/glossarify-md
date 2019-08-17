@@ -1,0 +1,2 @@
+- Foo Bar
+- Lorem ipsum in a list should be linked
