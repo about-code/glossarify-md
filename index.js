@@ -32,9 +32,8 @@ if (confPath) {
 conf = Object.assign(args, conf);
 conf.baseDir = path.resolve(proc.cwd(), (args._[0] || conf.baseDir));
 if (!conf.unlink) {
-    console.log("Linking...")
     glossarify.link(conf);
 } else {
-    console.log("Removing links...")
+    console.log("Removing links...not yet implemented.")
 }
 
