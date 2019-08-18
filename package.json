@@ -15,7 +15,6 @@
   "author": "Andreas Martin",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^12.7.2",
     "fs-extra": "^8.1.0",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",

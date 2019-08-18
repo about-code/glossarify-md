@@ -4,16 +4,17 @@ const fs = require("fs");
 const path = require("path");
 const proc = require("process");
 const glossarify = require("./lib/glossarify");
+const confSchema = require("./config.schema.json").properties;
 
 // CLI
-const cliOpts = buildOpts({
-    "baseUrl":      { type: "string",  alias: "b", default: "http://localhost/glossary" },
-    "config":       { type: "string",  alias: "c", default: "./md-glossarify.conf.json" },
-    "glossaryFile": { type: "string",  alias: "g", default: "./glossary.md" },
-    "linking":      { type: "string",  alias: "l", default: "relative" },
-    "outDir":       { type: "string",  alias: "o", default: "./dist" },
-    "unlink":       { type: "boolean", alias: "u", default: false }
-});
+const cliOpts = buildOpts(
+    Object.assign(
+        {
+            "config": { type: "string",  alias: "c", default: "./md-glossarify.conf.json" },
+        },
+        confSchema
+    )
+);
 const args = minimist(proc.argv.slice(2), cliOpts);
 
 // Read file opts

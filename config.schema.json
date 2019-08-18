@@ -5,20 +5,28 @@
     "properties": {
         "baseDir": {
             "description": "Path to directory where to search for the glossary file and markdown files. Default is '.'",
-            "type": "string"
-        },
-        "outDir": {
-            "description": "Path to directory where to write processed files to. Default: './dist'",
-            "type": "string"
-        },
-        "glossaryFile": {
-            "description": "Name of the glossary file. Conventional default is 'glossary.md'",
-            "type": "string"
+            "type": "string",
+            "alias": "d",
+            "default": "."
         },
         "baseUrl": {
             "description": "The base url to use when creating absolute links to glossary.",
             "type": "string",
-            "format": "url"
+            "format": "url",
+            "alias": "b",
+            "default": "http://localhost/glossary"
+        },
+        "termSymbol": {
+            "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
+            "type": "string",
+            "alias": "s",
+            "default": " ↴"
+        },
+        "glossaryFile": {
+            "description": "Name of the glossary file. Conventional default is 'glossary.md'",
+            "type": "string",
+            "alias": "g",
+            "default": "./glossary.md"
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Default: 'relative'. Choosing 'absolute' requires a 'baseUrl'.",
@@ -26,7 +34,15 @@
             "enum": [
                 "relative",
                 "absolute"
-            ]
+            ],
+            "alias": "l",
+            "default": "relative"
+        },
+        "outDir": {
+            "description": "Path to directory where to write processed files to. Default: './dist'",
+            "type": "string",
+            "alias": "o",
+            "default": "./dist"
         }
     },
     "required": ["baseDir", "linking"]
