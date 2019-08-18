@@ -1,6 +1,6 @@
 {
     "$schema": "./config.schema.json",
     "baseDir": "./test/input",
-    "outDir": "../dist",
+    "outDir": "./test/actual",
     "linking": "relative"
 }
