@@ -1,0 +1,3 @@
+-   [Lorem ipsum ↴](../glossary.md#lorem-ipsum) where term is a list item should be linked to glossary.
+-   [dolor ↴](../glossary.md#dolor) where term is a list item should be linked to glossary.
+-   [sit ↴](../glossary.md#sit) amet where term is a list item should be linked to glossary.

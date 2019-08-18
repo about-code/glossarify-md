@@ -1,2 +1,3 @@
-- Foo Bar
-- Lorem ipsum in a list should be linked
+- Lorem ipsum where term is a list item should be linked to glossary.
+- dolor where term is a list item should be linked to glossary.
+- sit amet where term is a list item should be linked to glossary.

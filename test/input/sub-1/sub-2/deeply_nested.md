@@ -1,1 +1,1 @@
-Lorem ipsum in a 2nd-level subdirectory
+Lorem ipsum where term is in a sub-sub directory should be linked to glossary.

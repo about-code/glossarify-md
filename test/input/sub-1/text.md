@@ -1,5 +1,5 @@
-Lorem ipsum inside plain text should be linked.
+Lorem ipsum where term is plain text should be linked to glossary.
 
-*Lorem ipsum* in italic should be linked and kept italic.
+*Lorem ipsum* where term is italic text should be linked to glossary and kept italic.
 
-**Lorem ipsum** in bold should be linked and kept bold.
+**Lorem ipsum** where term is bold text should be linked to glossary and kept bold.
