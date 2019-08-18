@@ -1,2 +1,0 @@
-- Foo Bar
-- <a href="../../glossary.md#lorem-ipsum">Lorem ipsum ↴</a> in a list
