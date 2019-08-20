@@ -1,8 +1,11 @@
 {
-  "name": "@about-code/md-glossarify",
-  "version": "0.1.0",
+  "name": "glossarify-md",
+  "version": "1.0.0",
   "description": "Scan markdown files for glossary terms and replace each occurence with a link to a glossary file.",
-  "main": "index.js",
+  "main": "bin/index.js",
+  "bin": {
+     "glossarify-md": "bin/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

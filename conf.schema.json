@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://github.com/about-code/md-glossarify/schema/config",
+    "$id": "https://github.com/about-code/glossarify-md/schema/config",
     "type": "object",
     "properties": {
         "baseDir": {
@@ -16,7 +16,7 @@
             "alias": "b",
             "default": "http://localhost/glossary"
         },
-        "termSymbol": {
+        "termHint": {
             "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
             "type": "string",
             "alias": "s",
@@ -42,8 +42,7 @@
             "description": "Path to directory where to write processed files to. Default: './dist'",
             "type": "string",
             "alias": "o",
-            "default": "./dist"
+            "default": "./tmp"
         }
-    },
-    "required": ["baseDir", "linking"]
+    }
 }

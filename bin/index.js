@@ -3,14 +3,16 @@ const minimist = require("minimist");
 const fs = require("fs");
 const path = require("path");
 const proc = require("process");
-const glossarify = require("./lib/glossarify");
-const confSchema = require("./config.schema.json").properties;
+const glossarify = require("../lib/glossarify");
+const confSchema = require("../conf.schema.json").properties;
+
+const CWD = proc.cwd();
 
 // CLI
 const cliOpts = buildOpts(
     Object.assign(
         {
-            "config": { type: "string",  alias: "c", default: "./md-glossarify.conf.json" },
+            "config": { type: "string",  alias: "c", default: "./glossarify-md.conf.json" },
         },
         confSchema
     )
@@ -22,7 +24,7 @@ let conf = {};
 const confPath = args.config || "./md-glossary.conf.json";
 if (confPath) {
     try {
-        conf = JSON.parse(fs.readFileSync(confPath));
+        conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
     } catch (e) {
         console.error(`\nFailed to read config '${confPath}'.\n  ${e.message}.`);
         proc.exit(1);
@@ -31,7 +33,7 @@ if (confPath) {
 
 // Merge CLI opts with file opts
 conf = Object.assign(args, conf);
-conf.baseDir = path.resolve(proc.cwd(), (args._[0] || conf.baseDir));
+conf.baseDir = path.resolve(CWD, (args._[0] || conf.baseDir));
 if (!conf.unlink) {
     glossarify.link(conf);
 } else {

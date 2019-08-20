@@ -1,5 +1,5 @@
 {
-    "$schema": "./config.schema.json",
+    "$schema": "./conf.schema.json",
     "baseDir": "./test/input",
     "outDir": "./test/output-actual",
     "linking": "relative"
