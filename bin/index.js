@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 const buildOpts = require("minimist-options");
 const minimist = require("minimist");
 const fs = require("fs");
