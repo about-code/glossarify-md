@@ -16,17 +16,19 @@
             "alias": "b",
             "default": "http://localhost/glossary"
         },
-        "termHint": {
-            "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
+        "filesGlob": {
+            "description": "A path or glob pattern for files whose terms should get linked to a glossary.",
             "type": "string",
-            "alias": "s",
-            "default": " ↴"
+            "alias": "f",
+            "default": "."
         },
-        "glossaryFile": {
-            "description": "Name of the glossary file. Conventional default is 'glossary.md'",
-            "type": "string",
-            "alias": "g",
-            "default": "./glossary.md"
+        "glossaries": {
+            "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
+            "type": "array",
+            "items": {
+                "$ref": "#/$defs/Glossary"
+            },
+            "default": []
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Default: 'relative'. Choosing 'absolute' requires a 'baseUrl'.",
@@ -39,10 +41,29 @@
             "default": "relative"
         },
         "outDir": {
-            "description": "Path to directory where to write processed files to. Default: './dist'",
+            "description": "Path to directory where to write processed files to. Default: './tmp'",
             "type": "string",
             "alias": "o",
             "default": "./tmp"
+        }
+    },
+    "$defs": {
+        "Glossary": {
+            "type": "object",
+            "properties": {
+                "file": {
+                    "description": "Name of the glossary file. Conventional default is 'glossary.md'",
+                    "type": "string",
+                    "alias": "g",
+                    "default": "./glossary.md"
+                },
+                "termHint": {
+                    "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
+                    "type": "string",
+                    "alias": "s",
+                    "default": " ↴"
+                }
+            }
         }
     }
 }
