@@ -34,9 +34,5 @@ if (confPath) {
 // Merge CLI opts with file opts
 conf = Object.assign(args, conf);
 conf.baseDir = path.resolve(CWD, (args._[0] || conf.baseDir));
-if (!conf.unlink) {
-    glossarify.link(conf);
-} else {
-    console.log("Removing links...not yet implemented.")
-}
+glossarify.link(conf);
 
