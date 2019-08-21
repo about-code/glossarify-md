@@ -131,7 +131,8 @@ function visitFile(scanResultExpected, scanResultActual) {
         }));
     }
 
-    return false; // TODO
+    // TODO: inspect contents (the actual work)
+    return false;
 }
 
 diff();

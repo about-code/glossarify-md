@@ -1,12 +1,13 @@
 {
   "name": "glossarify-md",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "Scan markdown files for glossary terms and replace each occurence with a link to a glossary file.",
   "main": "bin/index.js",
   "bin": {
     "glossarify-md": "bin/index.js"
   },
   "scripts": {
+    "start": "node ./bin/index.js --config ./glossarify-md.conf.json",
     "test": "node ./bin/test.js"
   },
   "keywords": [
