@@ -28,7 +28,9 @@
             "items": {
                 "$ref": "#/$defs/Glossary"
             },
-            "default": []
+            "default": [
+                { "file": "./glossary.md", "termHint": " ↴"}
+            ]
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Default: 'relative'. Choosing 'absolute' requires a 'baseUrl'.",
@@ -53,15 +55,11 @@
             "properties": {
                 "file": {
                     "description": "Name of the glossary file. Conventional default is 'glossary.md'",
-                    "type": "string",
-                    "alias": "g",
-                    "default": "./glossary.md"
+                    "type": "string"
                 },
                 "termHint": {
                     "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
-                    "type": "string",
-                    "alias": "s",
-                    "default": " ↴"
+                    "type": "string"
                 }
             }
         }
