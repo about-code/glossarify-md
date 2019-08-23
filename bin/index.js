@@ -13,7 +13,7 @@ const CWD = proc.cwd();
 const cliOpts = buildOpts(
     Object.assign(
         {
-            "config": { type: "string",  alias: "c", default: "./glossarify-md.conf.json" },
+            "config": { type: "string",  alias: "c", default: "" },
         },
         confSchema
     )
@@ -22,8 +22,8 @@ const args = minimist(proc.argv.slice(2), cliOpts);
 
 // Read file opts
 let conf = {};
-const confPath = args.config || "./md-glossary.conf.json";
-if (confPath) {
+if (args.config) {
+    const confPath = args.config;
     try {
         conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
     } catch (e) {

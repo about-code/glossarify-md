@@ -1,6 +1,6 @@
 # glossarify-md
 
-A *Term-to-Defintion*-Linker for Markdown.
+A *Term-to-Definition*-Linker for Markdown.
 
 ## Install
 
@@ -64,7 +64,7 @@ glossarify-md
 ### ...with config file
 
 ```
-glossarify-md --config ./md-glossary.conf.json
+glossarify-md --config ./glossarify-md.conf.json
 ```
 
 *glossarify-md.conf.json*  (sample with default values)
@@ -81,7 +81,7 @@ glossarify-md --config ./md-glossary.conf.json
   "baseUrl": "" // only effective with 'linking': 'absolute'
 }
 ```
-While most options are also available as a CLI option you might see, that the benefit of using a config file is the ability to specify a custom glossary file name. Its even possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be extremly valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
+While most options are also available as a CLI option you might see, that the benefit of using a config file is the ability to specify a custom glossary file name. It's even possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be extremly valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
 
 ## Result
 
