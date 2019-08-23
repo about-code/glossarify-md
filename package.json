@@ -11,10 +11,15 @@
     "test": "node ./bin/test.js"
   },
   "keywords": [
-    "markdown",
     "glossary",
+    "markdown",
+    "definitions",
+    "terms",
+    "index",
     "linking",
-    "documenting"
+    "documentation",
+    "link",
+    "book"
   ],
   "author": "Andreas Martin",
   "license": "MIT",
@@ -22,7 +27,6 @@
     "fs-extra": "^8.1.0",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
-    "remark": "^11.0.1",
     "remark-autolink-headings": "^5.2.1",
     "remark-parse": "^7.0.1",
     "remark-slug": "^5.1.2",
@@ -34,5 +38,7 @@
     "unist-util-select": "^2.0.2",
     "unist-util-visit-parents": "^3.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/node": "^12.7.2"
+  }
 }
