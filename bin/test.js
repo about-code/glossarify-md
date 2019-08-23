@@ -13,12 +13,18 @@ const FAILED = `
 | TESTS FAILED |
 +--------------+
 `
-
 const outDirActual = conf.outDir;
-const outDirActualPath = path.resolve(process.cwd(), outDirActual);
+const outDirActualPath = path.resolve(conf.baseDir, outDirActual);
 const outDirExpected = conf.outDir.replace("actual", "expected");
-const outDirExpectedPath = path.resolve(process.cwd(), outDirExpected);
+const outDirExpectedPath = path.resolve(conf.baseDir, outDirExpected);
 const errors = [];
+
+try {
+    fs.statSync(outDirActualPath);
+} catch (err) {
+    console.error(err);
+    console.log("Have you run '(npm run) glossarify-md --config <test-conf>' before running the tests?");
+}
 
 function Diff(data) {
     this.type = ""; // 'pathDiff' | 'lineDiff'
@@ -62,7 +68,6 @@ function diff() {
     const filesUnion = new Set(filesExpected.keys());
 
     filesActual.forEach((value, key) => filesUnion.add(key));
-
     for(file of filesUnion) {
         const fileExpected = filesExpected.get(file);
         const fileActual = filesActual.get(file);

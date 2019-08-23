@@ -1,12 +1,11 @@
 {
     "$schema": "./conf.schema.json",
     "baseDir": "./test/input",
-    "outDir": "./test/output-actual",
     "linking": "relative",
     "filesGlob": ".",
     "glossaries": [
         { "file": "./glossary.md", "termHint": " ↴"},
         { "file": "./cites.md", "termHint": "✶"}
-
-    ]
+    ],
+    "outDir": "../output-actual"
 }
