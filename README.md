@@ -100,7 +100,7 @@ My Term has a short description. The full description contains both sentences.
 
 and so on...
 ```
-Most occurences of a term have been replaced with a link to its glossary definition. Some syntactic positions are **excluded** from being linkified. These are
+Most occurrences of a term have been replaced with a link to its glossary definition. Some syntactic positions are **excluded** from being linkified. These are
   - Headlines
   - The first row of a table
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
