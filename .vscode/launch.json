@@ -8,7 +8,11 @@
             "type": "node",
             "request": "launch",
             "name": "Launch Program",
-            "program": "${workspaceFolder}/bin/index.js"
+            "program": "${workspaceFolder}/bin/index.js",
+            "args": [
+                "--config",
+                "./glossarify-md.conf.json"
+            ]
         }
     ]
 }
