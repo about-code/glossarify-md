@@ -8,6 +8,13 @@ const glossarify = require("../lib/glossarify");
 const confSchema = require("../conf.schema.json").properties;
 
 const CWD = proc.cwd();
+const {version} = require("../package.json");
+
+console.log(`
+.--------------------------.
+|   glossarify-md v${version}   |
+'--------------------------'
+`)
 
 // CLI
 const cliOpts = buildOpts(
@@ -22,8 +29,8 @@ const args = minimist(proc.argv.slice(2), cliOpts);
 
 // Read file opts
 let conf = {};
-if (args.config) {
-    const confPath = args.config;
+const confPath = args.config;
+if (confPath) {
     try {
         conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
     } catch (e) {
@@ -35,5 +42,10 @@ if (args.config) {
 // Merge CLI opts with file opts
 conf = Object.assign(args, conf);
 conf.baseDir = path.resolve(CWD, (args._[0] || conf.baseDir));
+conf.outDir  = path.resolve(conf.baseDir, (args._[0] || conf.outDir));
+console.log(`-> Reading from: ${conf.baseDir}`);
+console.log(`-> Writing to:   ${conf.outDir}
+`);
+
 glossarify.link(conf);
 
