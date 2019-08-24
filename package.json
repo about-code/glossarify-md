@@ -7,7 +7,7 @@
     "glossarify-md": "bin/index.js"
   },
   "scripts": {
-    "start": "node ./bin/index.js --config ./glossarify-md.conf.json",
+    "start": "node ./bin/index.js --config ./test/glossarify-md.conf.json",
     "test": "npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
     "test-debug": "git diff --minimal --color --no-index test/output-expected test/output-actual | node --inspect-brk ./bin/test.js",
     "new-baseline": "mv test/output-actual test/output-expected",
@@ -41,7 +41,5 @@
     "unist-util-select": "^2.0.2",
     "unist-util-visit-parents": "^3.0.0"
   },
-  "devDependencies": {
-    "@types/node": "^12.7.2"
-  }
+  "devDependencies": {}
 }
