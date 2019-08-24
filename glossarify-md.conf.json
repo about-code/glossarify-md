@@ -4,7 +4,7 @@
     "linking": "relative",
     "filesGlob": ".",
     "glossaries": [
-        { "file": "./glossary.md", "termHint": " ↴"},
+        { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./cites.md", "termHint": "✶"}
     ],
     "outDir": "../output-actual"
