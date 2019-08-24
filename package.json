@@ -8,7 +8,10 @@
   },
   "scripts": {
     "start": "node ./bin/index.js --config ./glossarify-md.conf.json",
-    "test": "node ./bin/test.js"
+    "test": "npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
+    "test-debug": "git diff --minimal --color --no-index test/output-expected test/output-actual | node --inspect-brk ./bin/test.js",
+    "new-baseline": "mv test/output-actual test/output-expected",
+    "commit-baseline": "git commit 'test/output-expected/**/*' -m 'test: New baseline.'"
   },
   "keywords": [
     "glossary",
@@ -39,6 +42,7 @@
     "unist-util-visit-parents": "^3.0.0"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2"
+    "@types/node": "^12.7.2",
+    "typescript": "^3.3.3"
   }
 }

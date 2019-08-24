@@ -1,143 +1,49 @@
-const conf = require("../glossarify-md.conf.json");
-const fs = require("fs");
-const path = require("path");
 const process = require("process");
+const path = require("path");
+const fs = require("fs");
 
-const PASSED = `
+let hasDiff = false;
+process.stdin.setEncoding('utf8');
+process.stdin.on('readable', () => {
+  let chunk;
+  // Use a loop to make sure we read all available data.
+  while ((chunk = process.stdin.read()) !== null) {
+    process.stdout.write(chunk);
+    hasDiff = true;
+  }
+});
+
+process.stdin.on('end', () => {
+    let hasMessage = "";
+    if (!fs.existsSync(path.resolve(process.cwd(), "test/output-actual")))
+        hasMessage += "No directory 'test/output-actual'\n";
+
+    if (!fs.existsSync(path.resolve(process.cwd(), "test/output-expected")))
+        hasMessage += "No directory 'test/output-expected'\n";
+
+    if (hasDiff || hasMessage) {
+        process.stdout.write(`${hasMessage}
++-----------------------------------------------------------------+
+| TESTS FAILED: Actual output (green*) does not match expected    |
+| output (red). Please review the diff before comitting.          |
+|                                                                 |
+| * Some diffs may not be colored.                                |
+|-----------------------------------------------------------------+
+| If 'output-actual' is what shall become the new expected        |
+| baseline, then proceed as follows:                              |
+| 1. review the diff carefully!                                   |
+| 2. remove current 'output-expected' (but *not* with git rm)     |
+| 3. rename 'output-actual' to 'output-expected'                  |
+| 4. commit the changes to 'output-expected' with a message       |
+|    'test: New baseline.' or use 'npm run commit-baseline'.      |
++-----------------------------------------------------------------+
+`);
+    } else {
+        process.stdout.write(`
 +--------------+
 | TESTS PASSED |
 +--------------+
 `
-const FAILED = `
-+--------------+
-| TESTS FAILED |
-+--------------+
-`
-const outDirActual = conf.outDir;
-const outDirActualPath = path.resolve(conf.baseDir, outDirActual);
-const outDirExpected = conf.outDir.replace("actual", "expected");
-const outDirExpectedPath = path.resolve(conf.baseDir, outDirExpected);
-const errors = [];
-
-try {
-    fs.statSync(outDirActualPath);
-} catch (err) {
-    console.error(err);
-    console.log("Have you run '(npm run) glossarify-md --config <test-conf>' before running the tests?");
-}
-
-function Diff(data) {
-    this.type = ""; // 'pathDiff' | 'lineDiff'
-    this.message = "";
-    this.expected = "";
-    this.actual = "";
-    this.line = -1;
-    this.cursor = -1;
-    return Object.assign(this, data);
-}
-
-function scanPath(basePath) {
-    let filenames = ["."];
-    let scanResult = new Map();
-    do {
-        const filenameRel = filenames.shift();
-        const filenameAbs = path.resolve(basePath, filenameRel);
-        if (fs.statSync(filenameAbs).isDirectory()) {
-            try {
-                filenames = [
-                    ...filenames,
-                    ...fs.readdirSync(filenameAbs).map(file => filenameRel + "/" + file)
-                ];
-            } catch (err) {
-                console.error(err);
-                process.exit(1);
-            }
-            scanResult.set(filenameRel, {type: "directory", filename: filenameRel });
-        } else {
-            scanResult.set(filenameRel, {type: "file", filename: filenameRel });
-        }
-    } while(filenames[0]);
-    return scanResult;
-}
-
-
-
-function diff() {
-    const filesExpected = scanPath(outDirExpectedPath);
-    const filesActual = scanPath(outDirActualPath);
-    const filesUnion = new Set(filesExpected.keys());
-
-    filesActual.forEach((value, key) => filesUnion.add(key));
-    for(file of filesUnion) {
-        const fileExpected = filesExpected.get(file);
-        const fileActual = filesActual.get(file);
-
-        if (!fileExpected || !fileActual) {
-            errors.push(new Diff({
-                type: "pathDiff",
-                message: `Actual fileset doesn't match expected fileset.`,
-                expected: fileExpected || "None",
-                actual: fileActual || "missing"
-            }));
-        } else {
-            if (fileExpected.type === "directory") {
-                visitDirectory(fileExpected, fileActual);
-            } else if (fileExpected.type === "file") {
-                visitFile(fileExpected, fileActual);
-            }
-        }
+        )
     }
-    if (errors.length > 0) {
-        console.error(FAILED);
-        console.error(JSON.stringify(errors, null, 4));
-        process.exit(1);
-    } else {
-        console.log(PASSED);
-        process.exit(0);
-    };
-}
-
-function visitDirectory(scanResultExpected, scanResultActual) {
-    if (scanResultExpected.type !== scanResultActual.type) {
-        errors.push(new Diff({
-            type: "pathDiff",
-            message: `Expected type was '${scanResultExpected.type}' but got '${scanResultActual.type}'.`,
-            expected: scanResultExpected,
-            actual: scanResultActual
-        }));
-    }
-
-    if (scanResultExpected.filename !== scanResultActual.filename) {
-        errors.push(new Diff({
-            type: "pathDiff",
-            message: `Expected directory '${scanResultExpected.filename}' but got '${scanResultActual.filename}'.`,
-            expected: scanResultExpected,
-            actual: scanResultActual
-        }));
-    }
-}
-
-function visitFile(scanResultExpected, scanResultActual) {
-    if (scanResultExpected.type !== scanResultActual.type) {
-        errors.push(new Diff({
-            type: "pathDiff",
-            message: `Expected type was '${scanResultExpected.type}' but got '${scanResultActual.type}'.`,
-            expected: scanResultExpected,
-            actual: scanResultActual
-        }));
-    }
-
-    if (scanResultExpected.filename !== scanResultActual.filename) {
-        errors.push(new Diff({
-            type: "pathDiff",
-            message: `Expected file '${scanResultExpected.filename}' but got '${scanResultActual.filename}'.`,
-            expected: scanResultExpected,
-            actual: scanResultActual
-        }));
-    }
-
-    // TODO: inspect contents (the actual work)
-    return false;
-}
-
-diff();
+});
