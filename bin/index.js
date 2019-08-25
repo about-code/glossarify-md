@@ -10,10 +10,10 @@ const confSchema = require("../conf.schema.json").properties;
 const CWD = proc.cwd();
 const {version} = require("../package.json");
 
-console.log(`
-.--------------------------.
-|   glossarify-md v${version}   |
-'--------------------------'
+console.log(
+`┌──────────────────────────┐
+│   glossarify-md v${version}   │
+└──────────────────────────┘
 `)
 
 // CLI

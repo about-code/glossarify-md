@@ -1,5 +1,3 @@
-# [Glossary](#glossary)
-
 ## [Lorem ipsum](#lorem-ipsum)
 
 Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's

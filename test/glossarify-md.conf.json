@@ -2,10 +2,12 @@
     "$schema": "../conf.schema.json",
     "baseDir": "./test/input",
     "linking": "relative",
-    "filesGlob": ".",
+    "filesGlob": ["."],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
+        { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
         { "file": "./cites.md", "termHint": "✶"}
     ],
-    "outDir": "../output-actual"
+    "outDir": "../output-actual",
+    "test": true
 }

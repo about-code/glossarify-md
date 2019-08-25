@@ -1,0 +1,184 @@
+[
+  {
+    "term": "Long description with Link",
+    "hint": "ⓕ",
+    "shortDesc": "Shortdesc.",
+    "longDesc": "Shortdesc. Long description with a ",
+    "anchor": "#long-description-with-link",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description with Link",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Shortdesc with a ",
+    "anchor": "#short-description-with-link",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description is bold (dot excluded)",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Shortdesc",
+    "anchor": "#short-description-is-bold-dot-excluded",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description is bold (dot included)",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Shortdesc.",
+    "anchor": "#short-description-is-bold-dot-included",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description is italic (dot excluded)",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Shortdesc",
+    "anchor": "#short-description-is-italic-dot-excluded",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description is italic (dot included)",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Shortdesc.",
+    "anchor": "#short-description-is-italic-dot-included",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "All description is blockquote",
+    "hint": "ⓕ",
+    "shortDesc": "Short desc in blockquote.",
+    "longDesc": "Short desc in blockquote. Long description.",
+    "anchor": "#all-description-is-blockquote",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Long description is blockquote",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Short desc in blockquote.",
+    "anchor": "#long-description-is-blockquote",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "Short description is blockquote",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "Short desc in blockquote.",
+    "anchor": "#short-description-is-blockquote",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "sit",
+    "hint": "↴",
+    "shortDesc": "",
+    "longDesc": "Formatted Term Definitions",
+    "anchor": "#sit",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/test/input/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/glossary.md"
+    }
+  },
+  {
+    "term": "dolor",
+    "hint": "↴",
+    "shortDesc": "",
+    "longDesc": "foo",
+    "anchor": "#dolor",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/test/input/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/glossary.md"
+    }
+  },
+  {
+    "term": "Lorem ipsum",
+    "hint": "↴",
+    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
+    "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "anchor": "#lorem-ipsum",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/test/input/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/glossary.md"
+    }
+  },
+  {
+    "term": "Cite of Einstein",
+    "hint": "✶",
+    "shortDesc": "",
+    "longDesc": "Keep things as simple as possible but not simplier.",
+    "anchor": "#cite-of-einstein",
+    "regex": {},
+    "glossary": {
+      "file": "./cites.md",
+      "termHint": "✶",
+      "basePath": "/{redacted}/test/input/cites.md",
+      "outPath": "/{redacted}/test/output-actual/cites.md"
+    }
+  }
+]

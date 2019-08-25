@@ -58,7 +58,8 @@ glossarify-md
 ```
 glossarify-md
   --outDir "./tmp"
-  --linking "relative"
+  --linking "relative",
+  --filesGlob ["."]
 ```
 
 ### ...with config file
@@ -72,7 +73,7 @@ glossarify-md --config ./glossarify-md.conf.json
 {
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
   "glossaries": [
-    { "file": "./glossary.md",  "termHint": " ↴" },
+    { "file": "./glossary.md",  "termHint": "↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
   ],
   "filesGlob": ["."],
@@ -81,7 +82,7 @@ glossarify-md --config ./glossarify-md.conf.json
   "baseUrl": "" // only effective with 'linking': 'absolute'
 }
 ```
-While most options are also available as a CLI option you might see, that the benefit of using a config file is the ability to specify a custom glossary file name. It's even possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be extremly valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
+As you can see it's possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be very valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
 
 ## Result
 
