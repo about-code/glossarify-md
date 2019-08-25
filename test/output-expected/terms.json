@@ -2,8 +2,8 @@
   {
     "term": "WHEN long description has a link",
     "hint": "ⓕ",
-    "shortDesc": "THEN short description MUST be complete.",
-    "longDesc": "THEN short description MUST be complete. AND long description MUST be ",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description with link MUST be complete, too.",
     "anchor": "#when-long-description-has-a-link",
     "regex": {},
     "glossary": {
@@ -16,8 +16,8 @@
   {
     "term": "WHEN short description has a link",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description with a ",
+    "shortDesc": "THEN short description with a link MUST be detected completely.",
+    "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-has-a-link",
     "regex": {},
     "glossary": {
@@ -30,8 +30,8 @@
   {
     "term": "WHEN short description is bold WITH fullstop excluded",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description MUST be detected",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-is-bold-with-fullstop-excluded",
     "regex": {},
     "glossary": {
@@ -44,8 +44,8 @@
   {
     "term": "WHEN short description is bold WITH fullstop included",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description MUST be detected.",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-is-bold-with-fullstop-included",
     "regex": {},
     "glossary": {
@@ -58,8 +58,8 @@
   {
     "term": "WHEN short description is italic WITH fullstop excluded",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description MUST be detected completely",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-is-italic-with-fullstop-excluded",
     "regex": {},
     "glossary": {
@@ -72,8 +72,8 @@
   {
     "term": "WHEN short description is italic WITH fullstop included",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description MUST be detected.",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-is-italic-with-fullstop-included",
     "regex": {},
     "glossary": {
@@ -86,8 +86,8 @@
   {
     "term": "WHEN full description is a blockquote",
     "hint": "ⓕ",
-    "shortDesc": "THEN short description MUST be detected.",
-    "longDesc": "THEN short description MUST be detected. AND long description, too.",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-full-description-is-a-blockquote",
     "regex": {},
     "glossary": {
@@ -100,8 +100,8 @@
   {
     "term": "WHEN long description is a blockquote",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description MUST be detected.",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-long-description-is-a-blockquote",
     "regex": {},
     "glossary": {
@@ -114,8 +114,8 @@
   {
     "term": "WHEN short description is a blockquote",
     "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "THEN short description in blockquote MUST be detected.",
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "anchor": "#when-short-description-is-a-blockquote",
     "regex": {},
     "glossary": {
