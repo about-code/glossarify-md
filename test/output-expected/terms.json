@@ -1,10 +1,10 @@
 [
   {
-    "term": "Long description with Link",
+    "term": "WHEN long description has a link",
     "hint": "ⓕ",
-    "shortDesc": "Shortdesc.",
-    "longDesc": "Shortdesc. Long description with a ",
-    "anchor": "#long-description-with-link",
+    "shortDesc": "THEN short description MUST be complete.",
+    "longDesc": "THEN short description MUST be complete. AND long description MUST be ",
+    "anchor": "#when-long-description-has-a-link",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -14,11 +14,11 @@
     }
   },
   {
-    "term": "Short description with Link",
+    "term": "WHEN short description has a link",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Shortdesc with a ",
-    "anchor": "#short-description-with-link",
+    "longDesc": "THEN short description with a ",
+    "anchor": "#when-short-description-has-a-link",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -28,11 +28,11 @@
     }
   },
   {
-    "term": "Short description is bold (dot excluded)",
+    "term": "WHEN short description is bold WITH fullstop excluded",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Shortdesc",
-    "anchor": "#short-description-is-bold-dot-excluded",
+    "longDesc": "THEN short description MUST be detected",
+    "anchor": "#when-short-description-is-bold-with-fullstop-excluded",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -42,11 +42,11 @@
     }
   },
   {
-    "term": "Short description is bold (dot included)",
+    "term": "WHEN short description is bold WITH fullstop included",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Shortdesc.",
-    "anchor": "#short-description-is-bold-dot-included",
+    "longDesc": "THEN short description MUST be detected.",
+    "anchor": "#when-short-description-is-bold-with-fullstop-included",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -56,11 +56,11 @@
     }
   },
   {
-    "term": "Short description is italic (dot excluded)",
+    "term": "WHEN short description is italic WITH fullstop excluded",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Shortdesc",
-    "anchor": "#short-description-is-italic-dot-excluded",
+    "longDesc": "THEN short description MUST be detected completely",
+    "anchor": "#when-short-description-is-italic-with-fullstop-excluded",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -70,11 +70,11 @@
     }
   },
   {
-    "term": "Short description is italic (dot included)",
+    "term": "WHEN short description is italic WITH fullstop included",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Shortdesc.",
-    "anchor": "#short-description-is-italic-dot-included",
+    "longDesc": "THEN short description MUST be detected.",
+    "anchor": "#when-short-description-is-italic-with-fullstop-included",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -84,11 +84,11 @@
     }
   },
   {
-    "term": "All description is blockquote",
+    "term": "WHEN full description is a blockquote",
     "hint": "ⓕ",
-    "shortDesc": "Short desc in blockquote.",
-    "longDesc": "Short desc in blockquote. Long description.",
-    "anchor": "#all-description-is-blockquote",
+    "shortDesc": "THEN short description MUST be detected.",
+    "longDesc": "THEN short description MUST be detected. AND long description, too.",
+    "anchor": "#when-full-description-is-a-blockquote",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",
@@ -98,25 +98,25 @@
     }
   },
   {
-    "term": "Long description is blockquote",
-    "hint": "ⓕ",
-    "shortDesc": "",
-    "longDesc": "Short desc in blockquote.",
-    "anchor": "#long-description-is-blockquote",
-    "regex": {},
-    "glossary": {
-      "file": "./glossary_formatted.md",
-      "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
-  },
-  {
-    "term": "Short description is blockquote",
+    "term": "WHEN long description is a blockquote",
     "hint": "ⓕ",
     "shortDesc": "",
-    "longDesc": "Short desc in blockquote.",
-    "anchor": "#short-description-is-blockquote",
+    "longDesc": "THEN short description MUST be detected.",
+    "anchor": "#when-long-description-is-a-blockquote",
+    "regex": {},
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/test/input/glossary_formatted.md",
+      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+    }
+  },
+  {
+    "term": "WHEN short description is a blockquote",
+    "hint": "ⓕ",
+    "shortDesc": "",
+    "longDesc": "THEN short description in blockquote MUST be detected.",
+    "anchor": "#when-short-description-is-a-blockquote",
     "regex": {},
     "glossary": {
       "file": "./glossary_formatted.md",

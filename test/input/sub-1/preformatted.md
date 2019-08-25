@@ -1,3 +1,3 @@
 ```html
-Lorem ipsum where term is preformatted code should not be linked to glossary.
+WHEN in preformatted text THEN "Lorem ipsum" MUST NOT be linked to glossary.
 ```

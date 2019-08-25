@@ -1,7 +1,11 @@
-[Lorem ipsum](./Headline.md) where term is a link label should not be linked to glossary.
+WHEN in a link label THEN [Lorem ipsum](./Headline.md) MUST NOT be linked to glossary.
 
-![Lorem Ipsum](./Headline) where term is an image label should not be linked to glossary.
+WHEN in a image link label ![Lorem ipsum](./Headline) MUST NOT be linked to glossary.
 
-[Foo](dolor.md) where term is a link target should not be linked to glossary.
+WHEN as a [link target](dolor.md) THEN term MUST NOT be linked to glossary.
 
-![Foo](dolor.md) where term is an image link target should not be linked to glossary.
+WHEN as an ![image link target](dolor.md) THEN term MUST NOT be linked to glossary.
+
+WHEN in an html link THEN <a href="../glossary.md" title="">[Lorem ipsum↴](../glossary.md#lorem-ipsum)</a> MUST NOT be linked to glossary.
+
+WHEN in an html attribute THEN <a href="dolor">term</a> MUST NOT be linked to glossary.

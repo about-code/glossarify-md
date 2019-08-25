@@ -1,3 +1,4 @@
-- Lorem ipsum where term is a list item should be linked to glossary.
-- dolor where term is a list item should be linked to glossary.
-- sit amet where term is a list item should be linked to glossary.
+- WHEN in a list THEN "Lorem ipsum" MUST be linked to glossary.
+- WHEN in a list THEN "dolor" MUST be linked to glossary.
+- WHEN in a list THEN "sit" MUST be linked to glossary.
+- WHEN in a list THEN "amet" MUST be linked to glossary.

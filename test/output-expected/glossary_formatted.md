@@ -1,39 +1,39 @@
-## [Short description is blockquote](#short-description-is-blockquote)
+## [WHEN short description is a blockquote](#when-short-description-is-a-blockquote)
 
-> Short desc in blockquote.
+> THEN short description in blockquote MUST be detected.
 
-Long description.
+AND long description, too.
 
-## [Long description is blockquote](#long-description-is-blockquote)
+## [WHEN long description is a blockquote](#when-long-description-is-a-blockquote)
 
-Short desc in blockquote.
+THEN short description MUST be detected.
 
-> Long description.
+> AND long description, too.
 
-## [All description is blockquote](#all-description-is-blockquote)
+## [WHEN full description is a blockquote](#when-full-description-is-a-blockquote)
 
-> Short desc in blockquote. Long description.
+> THEN short description MUST be detected. AND long description, too.
 
-## [Short description is italic (dot included)](#short-description-is-italic-dot-included)
+## [WHEN short description is italic WITH fullstop included](#when-short-description-is-italic-with-fullstop-included)
 
-_Shortdesc._ Long description.
+_THEN short description MUST be detected._ AND long description, too.
 
-## [Short description is italic (dot excluded)](#short-description-is-italic-dot-excluded)
+## [WHEN short description is italic WITH fullstop excluded](#when-short-description-is-italic-with-fullstop-excluded)
 
-_Shortdesc_. Long description.
+_THEN short description MUST be detected completely_. AND long description, too.
 
-## [Short description is bold (dot included)](#short-description-is-bold-dot-included)
+## [WHEN short description is bold WITH fullstop included](#when-short-description-is-bold-with-fullstop-included)
 
-**Shortdesc.** Long description.
+**THEN short description MUST be detected.** AND long description, too.
 
-## [Short description is bold (dot excluded)](#short-description-is-bold-dot-excluded)
+## [WHEN short description is bold WITH fullstop excluded](#when-short-description-is-bold-with-fullstop-excluded)
 
-**Shortdesc**. Long description.
+**THEN short description MUST be detected**. AND long description, too.
 
-## [Short description with Link](#short-description-with-link)
+## [WHEN short description has a link](#when-short-description-has-a-link)
 
-Shortdesc with a [link](./foo.bar).
+THEN short description with a [link](./foo.bar) MUST be complete. AND long description MUST be complete, too.
 
-## [Long description with Link](#long-description-with-link)
+## [WHEN long description has a link](#when-long-description-has-a-link)
 
-Shortdesc. Long description with a [link](./foo.bar).
+THEN short description MUST be complete. AND long description MUST be [link](./foo.bar) complete, too.

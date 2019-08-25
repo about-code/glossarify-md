@@ -1,1 +1,1 @@
-[Lorem ipsum↴](../../glossary.md#lorem-ipsum) where term is in a sub-sub directory should be linked to glossary.
+WHEN in a sub-sub directory THEN "[Lorem ipsum↴](../../glossary.md#lorem-ipsum)" MUST be linked WITH correct path to glossary.

@@ -1,3 +1,4 @@
--   [Lorem ipsum↴](../glossary.md#lorem-ipsum) where term is a list item should be linked to glossary.
--   [dolor↴](../glossary.md#dolor) where term is a list item should be linked to glossary.
--   [sit↴](../glossary.md#sit) amet where term is a list item should be linked to glossary.
+-   WHEN in a list THEN "[Lorem ipsum↴](../glossary.md#lorem-ipsum)" MUST be linked to glossary.
+-   WHEN in a list THEN "[dolor↴](../glossary.md#dolor)" MUST be linked to glossary.
+-   WHEN in a list THEN "[sit↴](../glossary.md#sit)" MUST be linked to glossary.
+-   WHEN in a list THEN "amet" MUST be linked to glossary.

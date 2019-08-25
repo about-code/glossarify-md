@@ -1,44 +1,44 @@
 # Formatted Term Definitions
 
-## Short description is blockquote
+## WHEN short description is a blockquote
 
-> Short desc in blockquote.
+> THEN short description in blockquote MUST be detected.
 
-Long description.
+AND long description, too.
 
-## Long description is blockquote
+## WHEN long description is a blockquote
 
-Short desc in blockquote.
+THEN short description MUST be detected.
 
-> Long description.
+> AND long description, too.
 
-## All description is blockquote
+## WHEN full description is a blockquote
 
-> Short desc in blockquote. Long description.
-
-
-## Short description is italic (dot included)
-
-*Shortdesc.* Long description.
-
-## Short description is italic (dot excluded)
-
-*Shortdesc*. Long description.
+> THEN short description MUST be detected. AND long description, too.
 
 
-## Short description is bold (dot included)
+## WHEN short description is italic WITH fullstop included
 
-**Shortdesc.** Long description.
+*THEN short description MUST be detected.* AND long description, too.
 
-## Short description is bold (dot excluded)
+## WHEN short description is italic WITH fullstop excluded
 
-**Shortdesc**. Long description.
+*THEN short description MUST be detected completely*. AND long description, too.
 
 
-## Short description with Link
+## WHEN short description is bold WITH fullstop included
 
-Shortdesc with a [link](./foo.bar).
+**THEN short description MUST be detected.** AND long description, too.
 
-## Long description with Link
+## WHEN short description is bold WITH fullstop excluded
 
-Shortdesc. Long description with a [link](./foo.bar).
+**THEN short description MUST be detected**. AND long description, too.
+
+
+## WHEN short description has a link
+
+THEN short description with a [link](./foo.bar) MUST be complete. AND long description MUST be complete, too.
+
+## WHEN long description has a link
+
+THEN short description MUST be complete. AND long description MUST be [link](./foo.bar) complete, too.
