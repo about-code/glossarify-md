@@ -1,3 +1,5 @@
+# Formatted Term Definitions
+
 ## [WHEN short description is a blockquote](#when-short-description-is-a-blockquote)
 
 > THEN short description MUST be detected completely.

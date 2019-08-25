@@ -3,7 +3,7 @@
     "term": "WHEN long description has a link",
     "hint": "ⓕ",
     "shortDesc": "THEN short description MUST be detected completely.",
-    "longDesc": "THEN short description MUST be detected completely. AND long description with link MUST be complete, too.",
+    "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
     "anchor": "#when-long-description-has-a-link",
     "regex": {},
     "glossary": {
@@ -129,7 +129,7 @@
     "term": "sit",
     "hint": "↴",
     "shortDesc": "",
-    "longDesc": "Formatted Term Definitions",
+    "longDesc": "",
     "anchor": "#sit",
     "regex": {},
     "glossary": {
