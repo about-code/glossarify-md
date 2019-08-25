@@ -17,10 +17,13 @@
             "default": "http://localhost/glossary"
         },
         "filesGlob": {
-            "description": "A path or glob pattern for files whose terms should get linked to a glossary.",
-            "type": "string",
+            "description": "Path or glob patterns of files to include/exclude from linking to glossaries.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
             "alias": "f",
-            "default": "."
+            "default": ["."]
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",

@@ -75,7 +75,7 @@ glossarify-md --config ./glossarify-md.conf.json
     { "file": "./glossary.md",  "termHint": " ↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
   ],
-  "filesGlob": ".",
+  "filesGlob": ["."],
   "outDir": "./tmp",
   "linking": "relative",
   "baseUrl": "" // only effective with 'linking': 'absolute'
