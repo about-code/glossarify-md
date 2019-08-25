@@ -1,3 +1,5 @@
+# [Glossary](#glossary)
+
 ## [Lorem ipsum](#lorem-ipsum)
 
 <!--

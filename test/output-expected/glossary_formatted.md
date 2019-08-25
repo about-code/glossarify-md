@@ -1,4 +1,4 @@
-# Formatted Term Definitions
+# [Formatted Term Definitions](#formatted-term-definitions)
 
 ## [WHEN short description is a blockquote](#when-short-description-is-a-blockquote)
 
