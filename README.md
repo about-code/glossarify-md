@@ -91,24 +91,24 @@ As you can see it's possible to have multiple glossary files with individual ter
 
 ## Result
 
-Glossaries have been augmented with github-style anchors.
+Terms in glossaries have been augmented with anchor links.
 
 *./tmp/glossary.md*:
 
 ```md
 # Glossary
 
-## My Term {#my-term}
+## [My Term](#my-term)
 
 My Term has a short description. The full description contains both sentences.
 
-## Another Term {#another-term}
+## [Another Term](#another-term)
 
 and so on...
 ```
 Most occurrences of a term have been replaced with a link to its glossary definition. Some syntactic positions are **excluded** from being linkified. These are
   - Headlines
-  - The first row of a table
+  - Blockquotes
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
 
 *tmp/files/file1.md*
