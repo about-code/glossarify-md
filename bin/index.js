@@ -47,5 +47,5 @@ console.log(`-> Reading from: ${conf.baseDir}`);
 console.log(`-> Writing to:   ${conf.outDir}
 `);
 
-glossarify.link(conf);
+glossarify.glossarify(conf);
 
