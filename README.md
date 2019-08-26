@@ -57,6 +57,7 @@ glossarify-md
 ### ...with command options
 ```
 glossarify-md
+  --baseDir "."
   --outDir "./tmp"
   --linking "relative"
   --includeFiles ["."]
@@ -73,17 +74,19 @@ glossarify-md --config ./glossarify-md.conf.json
 ```json
 {
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
+  "baseDir": ".",
+  "outDir": "./tmp",
   "glossaries": [
     { "file": "./glossary.md",  "termHint": "↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
   ],
   "includeFiles": ["."],
   "excludeFiles": ["node_modules"],
-  "outDir": "./tmp",
   "linking": "relative",
-  "baseUrl": "" // only effective with 'linking': 'absolute'
+  "baseUrl": ""
 }
 ```
+<!-- baseUrl only effective with linking "absolute" -->
 As you can see it's possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be very valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
 
 ## Result
