@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./bin/index.js --config ./test/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/glossarify-md.conf.json",
-    "test": "rm -r test/output-actual && npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
+    "test": "rm -rf test/output-actual && npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
     "test-debug": "git diff --minimal --color --no-index test/output-expected test/output-actual | node --inspect-brk ./bin/test.js",
     "new-baseline": "rm -r test/output-expected && mv test/output-actual test/output-expected",
     "commit-baseline": "git commit 'test/output-expected/**/*' -m 'test: New baseline.'"
