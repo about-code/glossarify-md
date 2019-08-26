@@ -16,14 +16,14 @@
             "alias": "b",
             "default": "http://localhost/glossary"
         },
-        "filesGlob": {
-            "description": "Path or glob patterns of files to include/exclude from linking to glossaries.",
+        "excludeFiles": {
+            "description": "An array of files or file name patterns to exclude from linking to terms.",
             "type": "array",
             "items": {
                 "type": "string"
             },
-            "alias": "f",
-            "default": ["."]
+            "alias": "e",
+            "default": ["node_modules"]
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
@@ -31,9 +31,19 @@
             "items": {
                 "$ref": "#/$defs/Glossary"
             },
+            "alias": "g",
             "default": [
                 { "file": "./glossary.md", "termHint": " ↴"}
             ]
+        },
+        "includeFiles": {
+            "description": "Path or glob patterns of files to include for linking to glossaries. Default '.' (relative to current working directory).",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "alias": "f",
+            "default": ["."]
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Default: 'relative'. Choosing 'absolute' requires a 'baseUrl'.",

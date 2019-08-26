@@ -58,8 +58,9 @@ glossarify-md
 ```
 glossarify-md
   --outDir "./tmp"
-  --linking "relative",
-  --filesGlob ["."]
+  --linking "relative"
+  --includeFiles ["."]
+  --excludeFiles ["node_modules"]
 ```
 
 ### ...with config file
@@ -76,7 +77,8 @@ glossarify-md --config ./glossarify-md.conf.json
     { "file": "./glossary.md",  "termHint": "↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
   ],
-  "filesGlob": ["."],
+  "includeFiles": ["."],
+  "excludeFiles": ["node_modules"],
   "outDir": "./tmp",
   "linking": "relative",
   "baseUrl": "" // only effective with 'linking': 'absolute'

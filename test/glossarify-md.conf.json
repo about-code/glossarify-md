@@ -2,7 +2,8 @@
     "$schema": "../conf.schema.json",
     "baseDir": "./test/input",
     "linking": "relative",
-    "filesGlob": ["."],
+    "includeFiles": ["."],
+    "excludeFiles": ["excludeFile.md"],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
