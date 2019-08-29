@@ -1,5 +1,33 @@
 [
   {
+    "term": "lowercase",
+    "hint": "",
+    "shortDesc": "",
+    "longDesc": "",
+    "anchor": "#lowercase",
+    "regex": {},
+    "glossary": {
+      "file": "./paths/uppercase/Glossary_Uppercase.md",
+      "termHint": "",
+      "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
+      "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
+    }
+  },
+  {
+    "term": "Uppercase",
+    "hint": "",
+    "shortDesc": "",
+    "longDesc": "",
+    "anchor": "#uppercase",
+    "regex": {},
+    "glossary": {
+      "file": "./paths/uppercase/Glossary_Uppercase.md",
+      "termHint": "",
+      "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
+      "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
+    }
+  },
+  {
     "term": "WHEN long description has a link",
     "hint": "ⓕ",
     "shortDesc": "THEN short description MUST be detected completely.",

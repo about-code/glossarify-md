@@ -1,5 +1,5 @@
-# Glossary with Uppercase Filename
+# [Glossary with Uppercase Filename](#glossary-with-uppercase-filename)
 
-## Uppercase
+## [Uppercase](#uppercase)
 
-## lowercase
+## [lowercase](#lowercase)
