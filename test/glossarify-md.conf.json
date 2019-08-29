@@ -7,7 +7,8 @@
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
-        { "file": "./cites.md", "termHint": "✶"}
+        { "file": "./cites.md", "termHint": "✶"},
+        { "file": "./paths/uppercase/Glossary_Uppercase.md", "termHint": "" }
     ],
     "outDir": "../output-actual",
     "test": true
