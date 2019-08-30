@@ -1,0 +1,18 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/features/config-glossaries/",
+    "includeFiles": ["."],
+    "excludeFiles": ["excludeFile.md", "**/config-ignoreCase-true/**"],
+    "glossaries": [
+        { "file": "./glossary-disjunct-a.md", "termHint": "(a)"},
+        { "file": "./glossary-disjunct-b.md", "termHint": "(b)"}
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../../output-actual/features/config-glossaries/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

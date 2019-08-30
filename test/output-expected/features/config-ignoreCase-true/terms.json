@@ -7,8 +7,8 @@
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -22,8 +22,8 @@
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -37,8 +37,8 @@
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -52,8 +52,8 @@
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -67,8 +67,8 @@
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
     },
     "regex": {},
     "aliases": [],

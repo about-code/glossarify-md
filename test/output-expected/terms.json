@@ -8,8 +8,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -24,8 +24,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -40,8 +40,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -56,8 +56,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -72,8 +72,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -88,8 +88,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -104,8 +104,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -120,8 +120,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -136,8 +136,8 @@
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/test/input/glossary_formatted.md",
-      "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
     },
     "regex": {},
     "aliases": [],
@@ -152,8 +152,8 @@
     "glossary": {
       "file": "./glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/test/input/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/glossary.md"
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -168,8 +168,8 @@
     "glossary": {
       "file": "./glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/test/input/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/glossary.md"
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -184,8 +184,8 @@
     "glossary": {
       "file": "./glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/test/input/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/glossary.md"
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -199,8 +199,8 @@
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./features/config-ignoreCase-false/glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -214,8 +214,8 @@
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./features/config-ignoreCase-false/glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -229,8 +229,8 @@
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./features/config-ignoreCase-false/glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -244,8 +244,8 @@
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./features/config-ignoreCase-false/glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -259,8 +259,8 @@
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./features/config-ignoreCase-false/glossary.md",
-      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -274,8 +274,8 @@
     "anchor": "#term-4",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
-      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -293,8 +293,8 @@
     "anchor": "#term-3",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
-      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -312,8 +312,8 @@
     "anchor": "#term-2",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
-      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -331,8 +331,8 @@
     "anchor": "#term-1",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
-      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -340,22 +340,6 @@
       "T1-Alias2",
       "T1.Alias3"
     ],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "Cite of Einstein",
-    "hint": "✶",
-    "longDesc": "Keep things as simple as possible but not simplier.",
-    "anchor": "#cite-of-einstein",
-    "glossary": {
-      "file": "./cites.md",
-      "termHint": "✶",
-      "basePath": "/{redacted}/test/input/cites.md",
-      "outPath": "/{redacted}/test/output-actual/cites.md"
-    },
-    "regex": {},
-    "aliases": [],
     "ignoreCase": false
   }
 ]
