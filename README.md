@@ -118,9 +118,75 @@ Most occurrences of a term have been replaced with a link to its glossary defini
 This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to describe something.
 ```
 
-## Notes and Noteworthy
 
-- There's currently no way to manage (update, delete) glossary links and might never be. You might not want to let `--outDir` point to your source files as those would be overridden. Consider glossarification to be a compile step whose outputs should be written to a separate directory. `--outDir` works relative to your "current working directory" (CWD) where you run the CLI from.
+## Options
+
+### `--baseUrl` | `--b`
+
+- **Range:** string
+
+### `--baseDir` | `--d`
+
+- **Range:** string
+
+Base directory relative to the *Current Working Directory* where the tool is
+running.
+
+> **Important:** This will be subject to change (see #6).
+
+Any relative paths in the config file are considered relative to `baseDir`.
+
+### `--excludeFiles` | `--e`
+
+- **Range:** string[]
+
+Paths or Glob-Patterns of files to exclude.
+
+### `--glossaries`
+
+- **Range:** Array&lt;{file: string, [termHint: string]}&gt;
+
+A list of glossary configuations, each with a path to the glossary file. Every
+glossary may have an optional*termHint*. A *termHint* is a symbol character
+being appended to term occurrences in order to indicate which glossary or
+category a term belongs to. A term hint may be any UTF-8 character or character
+sequence.
+
+### `--ignoreCase` | `--i`
+
+- **Range:** boolean
+
+When true any occurrence of a term will be linked no matter how it was spelled.
+
+### `--includeFiles` | `--f`
+
+- **Range:** string[]
+
+Paths or Glob-Patterns for files to include. Default is `./`
+
+### `--linking` | `--l`
+
+- **Range:** "relative" | "absolute",
+
+Whether to create absolute or relative link-urls to the glossary.
+The use of `"absolute"` may require a `baseUrl`.
+
+> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an
+absolute file system path which you might not want to publish.
+
+### `--outDir` | `--o`
+
+- **Range:** "string"
+
+The directory where to write output files to.
+
+> **Important:** using `.` or `./`
+is going to overwrite your input files. Only do this on a copy of your input
+files or if you are able to roll back any changes or if you know the outcome
+satisfies your needs.
+
+The recommendation is to write outputs to a separate directory such as `./out`
+or `./tmp`. Default is `./tmp`.
 
 ## Additional Features
 
