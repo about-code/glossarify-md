@@ -1,33 +1,5 @@
 [
   {
-    "shortDesc": "",
-    "term": "lowercase",
-    "hint": "",
-    "longDesc": "",
-    "anchor": "#lowercase",
-    "glossary": {
-      "file": "./paths/uppercase/Glossary_Uppercase.md",
-      "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
-      "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
-    },
-    "regex": {},
-    "aliases": []
-  },
-  {
-    "shortDesc": "",
-    "term": "Uppercase",
-    "hint": "",
-    "longDesc": "",
-    "anchor": "#uppercase",
-    "glossary": {
-      "file": "./paths/uppercase/Glossary_Uppercase.md",
-      "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
-      "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
-    },
-    "regex": {},
-    "aliases": []
-  },
-  {
     "shortDesc": "THEN short description MUST be detected completely.",
     "term": "WHEN long description has a link",
     "hint": "ⓕ",
@@ -40,7 +12,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description with a link MUST be detected completely.",
@@ -55,7 +28,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -70,7 +44,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -85,7 +60,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -100,7 +76,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -115,7 +92,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -130,7 +108,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -145,7 +124,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -160,7 +140,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -175,7 +156,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -190,7 +172,8 @@
       "outPath": "/{redacted}/test/output-actual/glossary.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
@@ -205,7 +188,83 @@
       "outPath": "/{redacted}/test/output-actual/glossary.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "MiXeD-CaSe",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#mixed-case",
+    "glossary": {
+      "file": "./features/config-ignoreCase-false/glossary.md",
+      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "all-lowercase",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#all-lowercase",
+    "glossary": {
+      "file": "./features/config-ignoreCase-false/glossary.md",
+      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "fIRST-lOWERCASE",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#first-lowercase",
+    "glossary": {
+      "file": "./features/config-ignoreCase-false/glossary.md",
+      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "ALL-UPPERCASE",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#all-uppercase",
+    "glossary": {
+      "file": "./features/config-ignoreCase-false/glossary.md",
+      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "First-Uppercase",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#first-uppercase",
+    "glossary": {
+      "file": "./features/config-ignoreCase-false/glossary.md",
+      "basePath": "/{redacted}/test/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -223,7 +282,8 @@
       "T4 Alias1",
       "T4-Alias2",
       "T4.Alias3"
-    ]
+    ],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -241,7 +301,8 @@
       "T3 Alias1",
       "T3-Alias2",
       "T3.Alias3"
-    ]
+    ],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -259,7 +320,8 @@
       "T2 Alias1",
       "T2-Alias2",
       "T2.Alias3"
-    ]
+    ],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -277,7 +339,8 @@
       "T1 Alias1",
       "T1-Alias2",
       "T1.Alias3"
-    ]
+    ],
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -292,6 +355,7 @@
       "outPath": "/{redacted}/test/output-actual/cites.md"
     },
     "regex": {},
-    "aliases": []
+    "aliases": [],
+    "ignoreCase": false
   }
 ]

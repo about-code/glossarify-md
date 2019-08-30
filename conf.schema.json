@@ -36,6 +36,12 @@
                 { "file": "./glossary.md", "termHint": ""}
             ]
         },
+        "ignoreCase": {
+            "description": "Find and link every occurrence of a term no matter how it is spelled.",
+            "type": "boolean",
+            "alias": "i",
+            "default": false
+        },
         "includeFiles": {
             "description": "Path or glob patterns of files to include for linking to glossaries. Default '.' (relative to current working directory).",
             "type": "array",

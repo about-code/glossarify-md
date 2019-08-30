@@ -3,19 +3,21 @@
     "baseDir": "./test/input",
     "linking": "relative",
     "includeFiles": ["."],
-    "excludeFiles": ["excludeFile.md"],
+    "excludeFiles": ["excludeFile.md", "**/config-ignoreCase-true/**"],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
         { "file": "./cites.md", "termHint": "✶"},
         { "file": "./paths/uppercase/Glossary_Uppercase.md" },
+        { "file": "./features/config-ignoreCase-false/glossary.md"},
         { "file": "./features/aliases_and_synonyms/glossary.md" }
     ],
+    "ignoreCase": false,
     "outDir": "../output-actual",
     "dev": {
         "writeTermsJson": true,
         "printInputAst": false,
-        "regexp": "(.*)\/aliases_and_synonyms\/glossary\\.md",
+        "printInputAstRegExp": "(.*)\/aliases_and_synonyms\/glossary\\.md",
         "printOutputAst": false
     }
 }
