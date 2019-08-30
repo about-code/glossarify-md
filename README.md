@@ -28,9 +28,9 @@ Your original glossary is a file
 ```md
 # Glossary
 
-## My Term
+## Glossary Term
 
-My Term has a short description. The full description contains both sentences.
+A glossary term has a short description. The full description contains both sentences.
 
 ## Another Term
 
@@ -41,9 +41,9 @@ Your original files may just use a term anywhere in text:
 
 *file1.md*
 ```md
-# Demo for My Term
+# Demo for a Glossary Term
 
-This file shows us My Term.
+This is a text which uses a Glossary Term to describe something.
 ```
 
 ## Glossarify Command
@@ -58,7 +58,7 @@ glossarify-md
 ```
 glossarify-md
   --baseDir "."
-  --outDir "./tmp"
+  --outDir "./out"
   --linking "relative"
   --includeFiles ["."]
   --excludeFiles ["node_modules"]
@@ -75,7 +75,7 @@ glossarify-md --config ./glossarify-md.conf.json
 {
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
   "baseDir": ".",
-  "outDir": "./tmp",
+  "outDir": "./out",
   "glossaries": [
     { "file": "./glossary.md",  "termHint": "↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
@@ -93,14 +93,14 @@ As you can see it's possible to have multiple glossary files with individual ter
 
 Terms in glossaries have been augmented with anchor links.
 
-*./tmp/glossary.md*:
+*./out/glossary.md*:
 
 ```md
 # Glossary
 
-## [My Term](#my-term)
+## [Glossary Term](#glossary-term)
 
-My Term has a short description. The full description contains both sentences.
+A glossary term has a short description. The full description contains both sentences.
 
 ## [Another Term](#another-term)
 
@@ -111,14 +111,40 @@ Most occurrences of a term have been replaced with a link to its glossary defini
   - Blockquotes
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
 
-*tmp/files/file1.md*
+*./out/files/file1.md*
 ```md
-# Demo for My Term
+# Demo for a Glossary Term
 
-This file shows us [My Term ↴](../glossary.md#my-term).
+This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to describe something.
 ```
 
 ## Notes and Noteworthy
 
 - There's currently no way to manage (update, delete) glossary links and might never be. You might not want to let `--outDir` point to your source files as those would be overridden. Consider glossarification to be a compile step whose outputs should be written to a separate directory. `--outDir` works relative to your "current working directory" (CWD) where you run the CLI from.
 
+## Additional Features
+
+### Aliases and Synonyms
+
+Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list
+ of alternative terms.
+
+*glossary.md*
+```md
+# Glossary
+
+## Cat
+<!--
+Aliases: Cats, Wildcat, House Cat
+-->
+Cats are cute, ...dogs are loyal.
+```
+
+Linking aliases to their related term:
+
+*./out/files/file1.md*
+```md
+# About Cats
+
+[Cats](./glossary.md#cat) and Kitten almost hidden spotting mouses in their houses. [The Author]
+```

@@ -1,31 +1,29 @@
 [
   {
     "term": "lowercase",
-    "hint": "",
     "shortDesc": "",
     "longDesc": "",
     "anchor": "#lowercase",
     "regex": {},
     "glossary": {
       "file": "./paths/uppercase/Glossary_Uppercase.md",
-      "termHint": "",
       "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
       "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "Uppercase",
-    "hint": "",
     "shortDesc": "",
     "longDesc": "",
     "anchor": "#uppercase",
     "regex": {},
     "glossary": {
       "file": "./paths/uppercase/Glossary_Uppercase.md",
-      "termHint": "",
       "basePath": "/{redacted}/test/input/paths/uppercase/Glossary_Uppercase.md",
       "outPath": "/{redacted}/test/output-actual/paths/uppercase/Glossary_Uppercase.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN long description has a link",
@@ -39,7 +37,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description has a link",
@@ -53,7 +52,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description is bold WITH fullstop excluded",
@@ -67,7 +67,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description is bold WITH fullstop included",
@@ -81,7 +82,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description is italic WITH fullstop excluded",
@@ -95,7 +97,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description is italic WITH fullstop included",
@@ -109,7 +112,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN full description is a blockquote",
@@ -123,7 +127,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN long description is a blockquote",
@@ -137,7 +142,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "WHEN short description is a blockquote",
@@ -151,7 +157,8 @@
       "termHint": "ⓕ",
       "basePath": "/{redacted}/test/input/glossary_formatted.md",
       "outPath": "/{redacted}/test/output-actual/glossary_formatted.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "sit",
@@ -165,7 +172,8 @@
       "termHint": "↴",
       "basePath": "/{redacted}/test/input/glossary.md",
       "outPath": "/{redacted}/test/output-actual/glossary.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "dolor",
@@ -179,7 +187,8 @@
       "termHint": "↴",
       "basePath": "/{redacted}/test/input/glossary.md",
       "outPath": "/{redacted}/test/output-actual/glossary.md"
-    }
+    },
+    "aliases": []
   },
   {
     "term": "Lorem ipsum",
@@ -193,7 +202,76 @@
       "termHint": "↴",
       "basePath": "/{redacted}/test/input/glossary.md",
       "outPath": "/{redacted}/test/output-actual/glossary.md"
-    }
+    },
+    "aliases": []
+  },
+  {
+    "term": "Term 4",
+    "shortDesc": "",
+    "longDesc": "WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
+    "anchor": "#term-4",
+    "regex": {},
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "aliases": [
+      "T4 Alias1",
+      "T4-Alias2",
+      "T4.Alias3"
+    ]
+  },
+  {
+    "term": "Term 3",
+    "shortDesc": "",
+    "longDesc": "WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
+    "anchor": "#term-3",
+    "regex": {},
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "aliases": [
+      "T3 Alias1",
+      "T3-Alias2",
+      "T3.Alias3"
+    ]
+  },
+  {
+    "term": "Term 2",
+    "shortDesc": "",
+    "longDesc": "WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "anchor": "#term-2",
+    "regex": {},
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "aliases": [
+      "T2 Alias1",
+      "T2-Alias2",
+      "T2.Alias3"
+    ]
+  },
+  {
+    "term": "Term 1",
+    "shortDesc": "",
+    "longDesc": "WHEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "anchor": "#term-1",
+    "regex": {},
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "basePath": "/{redacted}/test/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/test/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "aliases": [
+      "T1 Alias1",
+      "T1-Alias2",
+      "T1.Alias3"
+    ]
   },
   {
     "term": "Cite of Einstein",
@@ -207,6 +285,7 @@
       "termHint": "✶",
       "basePath": "/{redacted}/test/input/cites.md",
       "outPath": "/{redacted}/test/output-actual/cites.md"
-    }
+    },
+    "aliases": []
   }
 ]

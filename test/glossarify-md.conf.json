@@ -8,8 +8,14 @@
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
         { "file": "./cites.md", "termHint": "✶"},
-        { "file": "./paths/uppercase/Glossary_Uppercase.md", "termHint": "" }
+        { "file": "./paths/uppercase/Glossary_Uppercase.md" },
+        { "file": "./features/aliases_and_synonyms/glossary.md" }
     ],
     "outDir": "../output-actual",
-    "test": true
+    "dev": {
+        "writeTermsJson": true,
+        "printInputAst": false,
+        "regexp": "(.*)\/aliases_and_synonyms\/glossary\\.md",
+        "printOutputAst": false
+    }
 }

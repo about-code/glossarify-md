@@ -33,7 +33,7 @@
             },
             "alias": "g",
             "default": [
-                { "file": "./glossary.md", "termHint": " ↴"}
+                { "file": "./glossary.md", "termHint": ""}
             ]
         },
         "includeFiles": {
@@ -60,6 +60,11 @@
             "type": "string",
             "alias": "o",
             "default": "./tmp"
+        },
+        "dev": {
+            "descriptions": "Options for testing and debugging",
+            "$ref": "#/$defs/DevOpts",
+            "default": {}
         }
     },
     "$defs": {
@@ -73,6 +78,23 @@
                 "termHint": {
                     "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
                     "type": "string"
+                }
+            }
+        },
+        "DevOpts": {
+            "type": "object",
+            "properties": {
+                "writeTermsJson": {
+                    "description": "Write an additional terms.json to be able to test the results of terminator.",
+                    "type": "boolean"
+                },
+                "printInputAst": {
+                    "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.",
+                    "type": ["boolean", "string"]
+                },
+                "printOutputAst": {
+                    "description": "Print the AST of scanned markdown documents after linkification. May be a Regex to only print AST for particular document.",
+                    "type": ["boolean", "string"]
                 }
             }
         }
