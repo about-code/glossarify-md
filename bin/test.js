@@ -15,11 +15,11 @@ process.stdin.on('readable', () => {
 
 process.stdin.on('end', () => {
     let hasMessage = "";
-    if (!fs.existsSync(path.resolve(process.cwd(), "test/output-actual")))
-        hasMessage += "No directory 'test/output-actual'\n";
+    if (!fs.existsSync(path.resolve(process.cwd(), "./output-actual")))
+        hasMessage += "No directory './output-actual'\n";
 
-    if (!fs.existsSync(path.resolve(process.cwd(), "test/output-expected")))
-        hasMessage += "No directory 'test/output-expected'\n";
+    if (!fs.existsSync(path.resolve(process.cwd(), "./output-expected")))
+        hasMessage += "No directory './output-expected'\n";
 
     if (hasDiff || hasMessage) {
         process.stdout.write(`${hasMessage}

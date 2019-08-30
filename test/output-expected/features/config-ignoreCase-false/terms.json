@@ -7,12 +7,12 @@
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -22,12 +22,12 @@
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -37,12 +37,12 @@
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -52,12 +52,12 @@
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": false
   },
   {
     "shortDesc": "",
@@ -67,11 +67,11 @@
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-true/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-true/glossary.md"
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": false
   }
 ]

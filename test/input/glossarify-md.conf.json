@@ -6,13 +6,13 @@
     "excludeFiles": [
         "excludeFile.md",
         "**/config-ignoreCase-true/**",
+        "**/config-ignoreCase-false/**",
         "**/config-glossaries/**"
     ],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
         { "file": "./paths/uppercase/Glossary_Uppercase.md" },
-        { "file": "./features/config-ignoreCase-false/glossary.md"},
         { "file": "./features/aliases_and_synonyms/glossary.md" }
     ],
     "linking": "relative",

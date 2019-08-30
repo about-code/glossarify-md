@@ -2,33 +2,30 @@
 
 *Prerequisites*
 
-- Dependencies have been installed with `npm install`
+- `npm install` into `${workspace}/node_modules`
 - `git` command is available
+- `cd ./test`
 
 ```
 npm run test
 ```
 
-Test data is located in the `test` directory. The directory has the following
-structure:
+The `test` directory. It has the following structure:
 
 ```
 ${workspace}
-    |- /test
-    |    |- /input
-    |    |- /output-expected
-    |    |- /output-actual          <-- after test run
-    |    |- glossarify-md.conf.json
-    |- ...
-    |- package.json
+  |- /test
+  |  |- /input                    <-- test fixture
+  |  |   |- glossary-md.conf.json <-- basic tests config
+  |  |- /output-expected          <-- accepted baseline
+  |  |- /output-actual            <-- actual test results
+  |  |- package.json              <-- test scripts
+  |- package.json                 <-- script dependencies
 ```
 
-> Currently only a single configuration for the
-> basic use cases can be tested. This will be improved in the future.
-
-1. Running the test will create `output-actual` with the results of processing `input` as configured in `glossarify-md.conf.json`.
-1. `output-expected` is the *baseline* compared against `output-actual` using `git diff`. If there are differences then the tests fail.
-1. If the implementation changed the actual output probably deviates intentionally. If the produced diff only contains intended differences, then `output-actual` can be made the new *baseline* using
+1. Running the test suite will create `output-actual` with the results of processing `input` with `glossarify-md.conf.json` and other configs.
+1. `output-expected` is the *baseline* to compare `output-actual` against using `git diff`. If there are differences then the tests fail.
+1. If the implementation changed the actual output probably deviates intentionally. If the produced diff is good and only contains intentional differences, then `output-actual` can be made the new *baseline* using
     ```
     npm run new-baseline
     ```
