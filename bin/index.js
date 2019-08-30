@@ -30,9 +30,11 @@ const args = minimist(proc.argv.slice(2), cliOpts);
 // Read file opts
 let conf = {};
 const confPath = args.config;
+let confDir = CWD;
 if (confPath) {
     try {
         conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
+        confDir = path.dirname(confPath);
     } catch (e) {
         console.error(`\nFailed to read config '${confPath}'.\n  ${e.message}.`);
         proc.exit(1);
@@ -41,8 +43,8 @@ if (confPath) {
 
 // Merge CLI opts with file opts
 conf = Object.assign(args, conf);
-conf.baseDir = path.resolve(CWD, (args._[0] || conf.baseDir));
-conf.outDir  = path.resolve(conf.baseDir, (args._[0] || conf.outDir));
+conf.baseDir = path.resolve(confDir, conf.baseDir);
+conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
 console.log(`-> Reading from: ${conf.baseDir}`);
 console.log(`-> Writing to:   ${conf.outDir}
 `);

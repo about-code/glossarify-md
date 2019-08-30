@@ -1,7 +1,7 @@
 {
-    "$schema": "../conf.schema.json",
-    "baseDir": "./test/input",
-    "linking": "relative",
+    "$schema": "../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../output-actual",
     "includeFiles": ["."],
     "excludeFiles": ["excludeFile.md", "**/config-ignoreCase-true/**"],
     "glossaries": [
@@ -12,8 +12,8 @@
         { "file": "./features/config-ignoreCase-false/glossary.md"},
         { "file": "./features/aliases_and_synonyms/glossary.md" }
     ],
+    "linking": "relative",
     "ignoreCase": false,
-    "outDir": "../output-actual",
     "dev": {
         "writeTermsJson": true,
         "printInputAst": false,

@@ -7,7 +7,7 @@
     "glossarify-md": "bin/index.js"
   },
   "scripts": {
-    "start": "node ./bin/index.js --config ./test/glossarify-md.conf.json",
+    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/glossarify-md.conf.json",
     "test": "rm -rf test/output-actual && npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
     "test-debug": "git diff --minimal --color --no-index test/output-expected test/output-actual | node --inspect-brk ./bin/test.js",

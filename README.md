@@ -129,12 +129,7 @@ This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to
 
 - **Range:** string
 
-Base directory relative to the *Current Working Directory* where the tool is
-running.
-
-> **Important:** This will be subject to change (see #6).
-
-Any relative paths in the config file are considered relative to `baseDir`.
+Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./`
 
 ### `--excludeFiles` | `--e`
 
