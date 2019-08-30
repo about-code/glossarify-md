@@ -125,6 +125,11 @@ This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to
 
 - **Range:** string
 
+URL to prepend to links. Only effective with `linking: "absolute`.
+In most situations, e.g. when hosting markdown files in a repository or
+processing markdown files with an MD to HTML converter,`linking: "relative"`
+should be the better option.
+
 ### `--baseDir` | `--d`
 
 - **Range:** string
