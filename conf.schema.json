@@ -90,9 +90,9 @@
         "DevOpts": {
             "type": "object",
             "properties": {
-                "writeTermsJson": {
-                    "description": "Write an additional terms.json to be able to test the results of terminator.",
-                    "type": "boolean"
+                "termsFile": {
+                    "description": "File where to write term book to. Enables testing the term extraction results of terminator.",
+                    "type": "string"
                 },
                 "printInputAst": {
                     "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.",

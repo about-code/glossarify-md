@@ -15,7 +15,7 @@
     "linking": "relative",
     "ignoreCase": false,
     "dev": {
-        "writeTermsJson": true,
+        "termsFile": "../output-actual/terms.json",
         "printInputAst": false,
         "printInputAstRegExp": "(.*)\/aliases_and_synonyms\/glossary\\.md",
         "printOutputAst": false

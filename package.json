@@ -9,10 +9,13 @@
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/glossarify-md.conf.json",
-    "test": "rm -rf test/output-actual && npm start && git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
+    "pretest": "rm -rf test/output-actual",
+    "test": "npm start && npm run test-config-ignoreCase-true",
+    "posttest": "git diff --minimal --color --no-index test/output-expected test/output-actual | node ./bin/test.js",
     "test-debug": "git diff --minimal --color --no-index test/output-expected test/output-actual | node --inspect-brk ./bin/test.js",
     "new-baseline": "rm -r test/output-expected && mv test/output-actual test/output-expected",
-    "commit-baseline": "git commit 'test/output-expected/**/*' -m 'test: New baseline.'"
+    "commit-baseline": "git commit 'test/output-expected/**/*' -m 'test: New baseline.'",
+    "test-config-ignoreCase-true": "node ./bin/index.js --config ./test/input/features/config-ignoreCase-true/glossarify-md.conf.json"
   },
   "keywords": [
     "glossary",
