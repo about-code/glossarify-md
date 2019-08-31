@@ -151,7 +151,7 @@ Paths or Glob-Patterns of files to exclude.
 - **Range:** Array&lt;{file: string, [termHint: string]}&gt;
 
 A list of glossary configuations, each with a path to the glossary file. Every
-glossary may have an optional*termHint*. A *termHint* is a symbol character
+glossary may have an optional *termHint*. A *termHint* is a symbol character
 being appended to term occurrences in order to indicate which glossary or
 category a term belongs to. A term hint may be any UTF-8 character or character
 sequence.
