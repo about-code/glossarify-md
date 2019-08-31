@@ -1,3 +1,5 @@
 WHEN in a sub-sub directory
-THEN "[Lorem ipsum↴](../../../glossary.md#lorem-ipsum)" MUST be linked
+THEN "[Lorem ipsum↴][1]" MUST be linked
 WITH correct path to glossary.
+
+[1]: ../../../glossary.md#lorem-ipsum
