@@ -87,7 +87,11 @@ glossarify-md --config ./glossarify-md.conf.json
 }
 ```
 <!-- baseUrl only effective with linking "absolute" -->
-As you can see it's possible to have multiple glossary files with individual term hints to denote different kinds of term definitions. Multiple glossaries can be very valuable in professional writing or documentation. Though, currently a term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
+As you can see it's possible to have multiple glossary files. Multiple glossaries can be very valuable in professional writing or documentation. For example in specification documents you often want to have an index of particular specification rules. In text you often need to refer to those rules. Collect all those rules in a "glossary", then whenever you refer to them e.g. by "RULE-1", "RULE-2", etc. you'll get a link to the rule.
+
+Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
+
+> **Note:** Currently a particular term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
 
 ## Result
 
@@ -214,3 +218,5 @@ Linking aliases to their related term:
 
 [Cats](./glossary.md#cat) and Kitten almost hidden spotting mouses in their houses. [The Author]
 ```
+
+## Attribution
