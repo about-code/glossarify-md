@@ -219,6 +219,6 @@ Linking aliases to their related term:
 [Cats](./glossary.md#cat) and Kitten almost hidden spotting mouses in their houses. [The Author]
 ```
 
-## Special Thanks Go To
+## Special Thanks go to
 
 - [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://github.com/unifiedjs) and [remarkjs](https://github.com/remarkjs) and a lot of associated plugins and modules.
