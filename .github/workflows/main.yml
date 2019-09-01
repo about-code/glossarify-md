@@ -1,0 +1,17 @@
+name: main
+on: [push]
+jobs:
+  build:
+    # Job name is Greeting
+    name: test-ubuntu-latest
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          # We only need a shallow copy not the complete history
+          fetch-depth: 1
+      - run: echo The time was ${{ steps.hello.outputs.time }}
+      - run cd ./test
+      - run npm test
+      
