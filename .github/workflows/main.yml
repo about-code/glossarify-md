@@ -12,6 +12,6 @@ jobs:
           # We only need a shallow copy not the complete history
           fetch-depth: 1
       - run: echo The time was ${{ steps.hello.outputs.time }}
-      - run cd ./test
-      - run npm test
-      
+      - run: npm test
+        working-directory: ./test
+
