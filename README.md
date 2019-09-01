@@ -2,6 +2,9 @@
 
 A *Term-to-Definition*-Linker for Markdown.
 
+*glossarify-md* is a command line tool to help you link terms in a markdown
+document with their definition in another markdown document called *glossary*.
+
 ## Install
 
 ```
