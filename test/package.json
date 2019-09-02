@@ -5,7 +5,7 @@
   "description": "glossarify-md test scripts",
   "main": "../bin/index.js",
   "scripts": {
-    "debug": "node --inspect-brk ../bin/index.js --config ./glossarify-md.conf.json",
+    "debug": "node --inspect-brk ../bin/index.js --config ./input/glossarify-md.conf.json",
     "debug-test": "git diff --minimal --color --no-index ./output-expected ./output-actual | node --inspect-brk ../bin/test.js",
     "pretest": "rm -rf ./output-actual",
     "test": "npm run test-config-default && npm run test-config-ignoreCase-true && npm run test-config-ignoreCase-false && npm run test-config-glossaries",

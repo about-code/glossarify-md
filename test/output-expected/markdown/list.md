@@ -3,7 +3,7 @@
 -   WHEN in a list THEN "[sit↴][3]" MUST be linked to glossary.
 -   WHEN in a list THEN "amet" MUST be linked to glossary.
 
-[1]: ../glossary.md#lorem-ipsum
+[1]: ../glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."
 
 [2]: ../glossary.md#dolor
 
