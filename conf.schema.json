@@ -17,7 +17,7 @@
             "default": "http://localhost/glossary"
         },
         "excludeFiles": {
-            "description": "An array of files or file name patterns to exclude from linking to terms.",
+            "description": "An array of files or file name patterns that should not be included in any processing.",
             "type": "array",
             "items": {
                 "type": "string"
@@ -41,6 +41,15 @@
             "type": "boolean",
             "alias": "i",
             "default": false
+        },
+        "keepRawFiles": {
+            "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "alias": "ig",
+            "default": []
         },
         "includeFiles": {
             "description": "Path or glob patterns of files to include for linking to glossaries. Default '.' (relative to current working directory).",
