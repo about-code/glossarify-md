@@ -48,7 +48,7 @@
             "items": {
                 "type": "string"
             },
-            "alias": "ig",
+            "alias": "r",
             "default": []
         },
         "includeFiles": {
