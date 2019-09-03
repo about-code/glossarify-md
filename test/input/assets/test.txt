@@ -1,0 +1,2 @@
+This is a non-markdown file representing some arbitrary asset that must be
+copied to 'outDir' if not excluded.
