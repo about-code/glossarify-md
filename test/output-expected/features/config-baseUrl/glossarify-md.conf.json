@@ -1,0 +1,21 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "baseUrl": "http://example.org",
+    "linking": "absolute",
+    "outDir": "../../../output-actual/features/config-baseUrl/",
+    "includeFiles": ["."],
+    "excludeFiles": [
+        "**/*exclude*/**"
+    ],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": ""},
+        { "file": "./sub-1/glossary.md", "termHint": ""}
+    ],
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../../output-actual/features/config-baseUrl/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

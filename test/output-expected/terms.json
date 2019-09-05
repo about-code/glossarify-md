@@ -199,6 +199,7 @@
     "anchor": "#term-4",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
       "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
@@ -218,6 +219,7 @@
     "anchor": "#term-3",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
       "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
@@ -237,6 +239,7 @@
     "anchor": "#term-2",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
       "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
@@ -256,6 +259,7 @@
     "anchor": "#term-1",
     "glossary": {
       "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
       "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },

@@ -7,6 +7,7 @@
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
@@ -22,6 +23,7 @@
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
@@ -37,6 +39,7 @@
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
@@ -52,6 +55,7 @@
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
@@ -67,6 +71,7 @@
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
+      "termHint": "",
       "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
     },
