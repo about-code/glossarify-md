@@ -147,7 +147,8 @@ Path to directory where to search for the glossary file and markdown files. All 
 
 - **Range:** string[]
 
-Paths or Glob-Patterns of files to exclude.
+Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
+want to ignore certain markdown files from being modified.
 
 ### `--glossaries`
 
@@ -170,6 +171,14 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 - **Range:** string[]
 
 Paths or Glob-Patterns for files to include. Default is `./`
+
+### `--keepRawFiles` | `--r`
+
+- **Range:** string[]
+
+Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore
+in glossarification and linking. Non-markdown files will always be kept as is
+so no need to add those.
 
 ### `--linking` | `--l`
 

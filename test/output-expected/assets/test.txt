@@ -1,0 +1,1 @@
+WHEN this file is not in 'excludeFiles' THEN it MUST be copied to 'outDir'.

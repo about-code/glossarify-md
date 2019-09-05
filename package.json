@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json"
+    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+    "test": "npm  'Please run tests in ./test'"
   },
   "keywords": [
     "glossary",
@@ -25,6 +26,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^8.1.0",
+    "glob": "^7.0.3",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
     "remark-autolink-headings": "^5.2.1",
