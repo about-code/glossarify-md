@@ -176,8 +176,9 @@ Paths or Glob-Patterns for files to include. Default is `./`
 
 - **Range:** string[]
 
-Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in markdown
-manipulations. Non-markdown files will always be kept raw.
+Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore
+in glossarification and linking. Non-markdown files will always be kept as is
+so no need to add those.
 
 ### `--linking` | `--l`
 
