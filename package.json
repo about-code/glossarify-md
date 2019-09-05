@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json"
+    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+    "test": "npm  'Please run tests in ./test'"
   },
   "keywords": [
     "glossary",
