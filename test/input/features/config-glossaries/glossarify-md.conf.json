@@ -8,7 +8,9 @@
     ],
     "glossaries": [
         { "file": "./glossary-disjunct-a.md", "termHint": "(a)"},
-        { "file": "./glossary-disjunct-b.md", "termHint": "(b)"}
+        { "file": "./glossary-disjunct-b.md", "termHint": "(b)"},
+        { "file": "./glossary-common-a.md", "termHint": ""},
+        { "file": "./glossary-common-b.md", "termHint": ""}
     ],
     "linking": "relative",
     "ignoreCase": false,
