@@ -1,31 +1,15 @@
 [
   {
     "shortDesc": "",
-    "term": "Term Disjunct B",
-    "hint": "(b)",
-    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct B\" MUST be linked WITH glossary-disjunct-b.",
-    "anchor": "#term-disjunct-b",
+    "term": "Term Common",
+    "hint": "",
+    "longDesc": "WHEN this term also exists in 'Glossary Common B' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
+    "anchor": "#term-common",
     "glossary": {
-      "file": "./glossary-disjunct-b.md",
-      "termHint": "(b)",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-b.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-b.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "Term Disjunct A",
-    "hint": "(a)",
-    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct A\" MUST be linked WITH glossary-disjunct-a.",
-    "anchor": "#term-disjunct-a",
-    "glossary": {
-      "file": "./glossary-disjunct-a.md",
-      "termHint": "(a)",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-a.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-a.md"
+      "file": "./glossary-common-a.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-a.md"
     },
     "regex": {},
     "aliases": [],
@@ -49,15 +33,31 @@
   },
   {
     "shortDesc": "",
-    "term": "Term Common",
-    "hint": "",
-    "longDesc": "WHEN this term also exists in 'Glossary Common B' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
-    "anchor": "#term-common",
+    "term": "Term Disjunct A",
+    "hint": "(a)",
+    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct A\" MUST be linked WITH glossary-disjunct-a.",
+    "anchor": "#term-disjunct-a",
     "glossary": {
-      "file": "./glossary-common-a.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-a.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-a.md"
+      "file": "./glossary-disjunct-a.md",
+      "termHint": "(a)",
+      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Disjunct B",
+    "hint": "(b)",
+    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct B\" MUST be linked WITH glossary-disjunct-b.",
+    "anchor": "#term-disjunct-b",
+    "glossary": {
+      "file": "./glossary-disjunct-b.md",
+      "termHint": "(b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-b.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-b.md"
     },
     "regex": {},
     "aliases": [],

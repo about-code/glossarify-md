@@ -1,42 +1,10 @@
 [
   {
     "shortDesc": "",
-    "term": "MiXeD-CaSe",
+    "term": "First-Uppercase",
     "hint": "",
     "longDesc": "",
-    "anchor": "#mixed-case",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "all-lowercase",
-    "hint": "",
-    "longDesc": "",
-    "anchor": "#all-lowercase",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "fIRST-lOWERCASE",
-    "hint": "",
-    "longDesc": "",
-    "anchor": "#first-lowercase",
+    "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",
@@ -65,10 +33,42 @@
   },
   {
     "shortDesc": "",
-    "term": "First-Uppercase",
+    "term": "fIRST-lOWERCASE",
     "hint": "",
     "longDesc": "",
-    "anchor": "#first-uppercase",
+    "anchor": "#first-lowercase",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "all-lowercase",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#all-lowercase",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-ignoreCase-false/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-ignoreCase-false/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "MiXeD-CaSe",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",

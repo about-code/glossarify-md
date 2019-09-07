@@ -11,6 +11,6 @@ glossary-common-a AND glossary-common-b.
 
 [2]: glossary-disjunct-b.md#term-disjunct-b
 
-[3]: glossary-common-b.md#term-common
+[3]: glossary-common-a.md#term-common
 
-[4]: glossary-common-a.md#term-common
+[4]: glossary-common-b.md#term-common
