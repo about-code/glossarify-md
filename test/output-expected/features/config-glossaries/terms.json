@@ -30,5 +30,37 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Common",
+    "hint": "",
+    "longDesc": "WHEN this term also exists in 'Glossary Common A' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
+    "anchor": "#term-common",
+    "glossary": {
+      "file": "./glossary-common-b.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-b.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Common",
+    "hint": "",
+    "longDesc": "WHEN this term also exists in 'Glossary Common B' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
+    "anchor": "#term-common",
+    "glossary": {
+      "file": "./glossary-common-a.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
   }
 ]
