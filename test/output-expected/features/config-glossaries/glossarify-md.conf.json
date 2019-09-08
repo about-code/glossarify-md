@@ -7,10 +7,10 @@
         "**/*exclude*/**"
     ],
     "glossaries": [
-        { "file": "./glossary-disjunct-a.md", "termHint": "(a)"},
-        { "file": "./glossary-disjunct-b.md", "termHint": "(b)"},
-        { "file": "./glossary-common-a.md", "termHint": ""},
-        { "file": "./glossary-common-b.md", "termHint": ""}
+        { "file": "./disjunct-terms-glossary-a.md", "termHint": " (a/b)"},
+        { "file": "./disjunct-terms-glossary-b.md", "termHint": " (a/b)"},
+        { "file": "./shared-terms-glossary-a.md", "termHint": " (a&b)"},
+        { "file": "./shared-terms-glossary-b.md", "termHint": " (a&b)"}
     ],
     "linking": "relative",
     "ignoreCase": false,

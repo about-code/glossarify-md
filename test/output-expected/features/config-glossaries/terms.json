@@ -1,47 +1,15 @@
 [
   {
     "shortDesc": "",
-    "term": "Term Common",
-    "hint": "",
-    "longDesc": "WHEN this term also exists in 'Glossary Common B' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
-    "anchor": "#term-common",
-    "glossary": {
-      "file": "./glossary-common-a.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-a.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-a.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "Term Common",
-    "hint": "",
-    "longDesc": "WHEN this term also exists in 'Glossary Common A' THEN it MUST be linked to\n'Glossary Common A' AND 'Glossary Common B'.",
-    "anchor": "#term-common",
-    "glossary": {
-      "file": "./glossary-common-b.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-common-b.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-common-b.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
     "term": "Term Disjunct A",
-    "hint": "(a)",
-    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct A\" MUST be linked WITH glossary-disjunct-a.",
+    "hint": " (a/b)",
+    "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
     "anchor": "#term-disjunct-a",
     "glossary": {
-      "file": "./glossary-disjunct-a.md",
-      "termHint": "(a)",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-a.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-a.md"
+      "file": "./disjunct-terms-glossary-a.md",
+      "termHint": " (a/b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/disjunct-terms-glossary-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/disjunct-terms-glossary-a.md"
     },
     "regex": {},
     "aliases": [],
@@ -50,14 +18,78 @@
   {
     "shortDesc": "",
     "term": "Term Disjunct B",
-    "hint": "(b)",
-    "longDesc": "WHEN there are two or more glossaries with a disjunct set of terms THEN\n\"Term Disjunct B\" MUST be linked WITH glossary-disjunct-b.",
+    "hint": " (a/b)",
+    "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
     "anchor": "#term-disjunct-b",
     "glossary": {
-      "file": "./glossary-disjunct-b.md",
-      "termHint": "(b)",
-      "basePath": "/{redacted}/input/features/config-glossaries/glossary-disjunct-b.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/glossary-disjunct-b.md"
+      "file": "./disjunct-terms-glossary-b.md",
+      "termHint": " (a/b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/disjunct-terms-glossary-b.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/disjunct-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Shared A",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-a",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Shared B",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Shared A",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-a",
+    "glossary": {
+      "file": "./shared-terms-glossary-b.md",
+      "termHint": " (a&b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-b.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Shared B",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-b.md",
+      "termHint": " (a&b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-b.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-b.md"
     },
     "regex": {},
     "aliases": [],
