@@ -94,8 +94,6 @@ As you can see it's possible to have multiple glossary files. Multiple glossarie
 
 Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
 
-> **Note:** Currently a particular term can only be linked to a single definition. This might be subject to change in a future version (but don't nail me on this).
-
 ## Result
 
 Terms in glossaries have been augmented with anchor links.
