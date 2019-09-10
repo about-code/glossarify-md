@@ -1,22 +1,6 @@
 [
   {
     "shortDesc": "",
-    "term": "Term2",
-    "hint": "",
-    "longDesc": "",
-    "anchor": "#term2",
-    "glossary": {
-      "file": "./sub-1/glossary.md",
-      "termHint": "",
-      "basePath": "/{redacted}/input/features/config-baseUrl/sub-1/glossary.md",
-      "outPath": "/{redacted}/output-actual/features/config-baseUrl/sub-1/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
     "term": "Term1",
     "hint": "",
     "longDesc": "",
@@ -26,6 +10,22 @@
       "termHint": "",
       "basePath": "/{redacted}/input/features/config-baseUrl/glossary.md",
       "outPath": "/{redacted}/output-actual/features/config-baseUrl/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term2",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#term2",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/config-baseUrl/sub-1/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/config-baseUrl/sub-1/glossary.md"
     },
     "regex": {},
     "aliases": [],
