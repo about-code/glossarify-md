@@ -14,6 +14,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install, build, and test
+      shell: bash
       run: |
         npm install
         cd ./test
