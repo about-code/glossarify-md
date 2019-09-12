@@ -42,6 +42,7 @@ process.stdin.on('end', () => {
 │ must include a line  'test: New baseline.'                               │
 └──────────────────────────────────────────────────────────────────────────┘
 `);
+        process.exit(1);
     } else {
         process.stdout.write(`
 ┌──────────────┐
