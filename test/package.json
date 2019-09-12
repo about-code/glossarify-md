@@ -16,8 +16,8 @@
     "test-3": "npx . --config ./input/features/config-ignoreCase-false/glossarify-md.conf.json",
     "test-4": "npx . --config ./input/features/config-glossaries/glossarify-md.conf.json",
     "test-5": "npx . --config ./input/features/config-baseUrl/glossarify-md.conf.json",
-    "posttest-win": "git diff --minimal --color --no-index ./output-expected ./output-actual | node ../bin/test.js",
-    "posttest": "git diff --minimal --color --no-index ./output-expected ./output-actual | node ../bin/test.js",
+    "posttest-win": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
+    "posttest": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "commit-baseline": "git commit './output-expected/**/*' -m 'test: New baseline.'"
   },
