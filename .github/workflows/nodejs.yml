@@ -19,7 +19,6 @@ jobs:
       shell: bash
       run: |
         npm install
-        cd ./test
         npm test
       env:
         CI: true
@@ -37,10 +36,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
-      shell: powershell
+      shell: cmd
       run: |
         npm install
-        cd ./test
         npm run test-win
       env:
         CI: true

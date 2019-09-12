@@ -9,7 +9,8 @@
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "test": "npm  'Please run tests in ./test'"
+    "test": "cd ./test && npm test",
+    "test-win": "cd .\\test && npm run test-win"
   },
   "keywords": [
     "glossary",
