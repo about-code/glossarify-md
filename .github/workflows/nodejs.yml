@@ -41,6 +41,6 @@ jobs:
       run: |
         npm install
         cd ./test
-        npm test
+        npm test-win
       env:
         CI: true
