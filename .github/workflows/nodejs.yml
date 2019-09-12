@@ -8,6 +8,8 @@ jobs:
         os: [ubuntu-latest, macOS-latest]
         node-version: [8.x, 10.x, 12.x]
     steps:
+    - run: git config --global core.autocrlf false
+    - run: git config --global core.whitespace cr-at-eol
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
@@ -35,9 +37,10 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
+      shell: bash
       run: |
         npm install
-        cd .\test
-        npm test-win
+        cd ./test
+        npm test
       env:
         CI: true
