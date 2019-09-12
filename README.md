@@ -114,6 +114,7 @@ and so on...
 Most occurrences of a term have been replaced with a link to its glossary definition. Some syntactic positions are **excluded** from being linkified. These are
   - Headlines
   - Blockquotes
+  - Preformatted blocks
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
 
 *./out/files/file1.md*
@@ -132,14 +133,14 @@ This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to
 
 URL to prepend to links. Only effective with `linking: "absolute"`.
 In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter,`linking: "relative"`
-should be the better option.
+processing markdown files with an MD to HTML converter omitting a pre-defined
+`baseUrl` and using `linking: "relative"` is likely to work better.
 
 ### `--baseDir` | `--d`
 
 - **Range:** string
 
-Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./`
+Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./`
 
 ### `--excludeFiles` | `--e`
 
