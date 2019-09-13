@@ -14,4 +14,4 @@ matrix:
 install:
     - npm install
 script:
-    - test
+    - npm test
