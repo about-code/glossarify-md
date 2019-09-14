@@ -1,10 +1,10 @@
 [
   {
     "shortDesc": "",
-    "term": "First-Uppercase",
+    "term": "all-lowercase",
     "hint": "",
     "longDesc": "",
-    "anchor": "#first-uppercase",
+    "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",
@@ -49,10 +49,10 @@
   },
   {
     "shortDesc": "",
-    "term": "all-lowercase",
+    "term": "First-Uppercase",
     "hint": "",
     "longDesc": "",
-    "anchor": "#all-lowercase",
+    "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",
