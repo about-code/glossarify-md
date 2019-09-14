@@ -36,7 +36,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: npm install and test
-      shell: cmd
+      shell: bash
       run: |
         npm install
         npm run test-win
