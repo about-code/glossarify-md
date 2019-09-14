@@ -1,6 +1,54 @@
 [
   {
     "shortDesc": "",
+    "term": "dolor",
+    "hint": "↴",
+    "longDesc": "foo",
+    "anchor": "#dolor",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
+    "term": "Lorem ipsum",
+    "hint": "↴",
+    "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "anchor": "#lorem-ipsum",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "sit",
+    "hint": "↴",
+    "longDesc": "",
+    "anchor": "#sit",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/input/glossary.md",
+      "outPath": "/{redacted}/output-actual/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
     "term": "Term 1",
     "hint": "",
     "longDesc": "WHEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -80,86 +128,6 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
-    "term": "Lorem ipsum",
-    "hint": "↴",
-    "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
-    "anchor": "#lorem-ipsum",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{redacted}/input/glossary.md",
-      "outPath": "/{redacted}/output-actual/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "dolor",
-    "hint": "↴",
-    "longDesc": "foo",
-    "anchor": "#dolor",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{redacted}/input/glossary.md",
-      "outPath": "/{redacted}/output-actual/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
-    "term": "sit",
-    "hint": "↴",
-    "longDesc": "",
-    "anchor": "#sit",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{redacted}/input/glossary.md",
-      "outPath": "/{redacted}/output-actual/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN short description is a blockquote",
-    "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-short-description-is-a-blockquote",
-    "glossary": {
-      "file": "./glossary_formatted.md",
-      "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/glossary_formatted.md",
-      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN long description is a blockquote",
-    "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-long-description-is-a-blockquote",
-    "glossary": {
-      "file": "./glossary_formatted.md",
-      "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/glossary_formatted.md",
-      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
     "shortDesc": "THEN short description MUST be detected completely.",
     "term": "WHEN full description is a blockquote",
     "hint": "ⓕ",
@@ -177,10 +145,10 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN short description is italic WITH fullstop included",
+    "term": "WHEN long description has a link",
     "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-short-description-is-italic-with-fullstop-included",
+    "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
+    "anchor": "#when-long-description-has-a-link",
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
@@ -193,42 +161,10 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN short description is italic WITH fullstop excluded",
+    "term": "WHEN long description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-short-description-is-italic-with-fullstop-excluded",
-    "glossary": {
-      "file": "./glossary_formatted.md",
-      "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/glossary_formatted.md",
-      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN short description is bold WITH fullstop included",
-    "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-short-description-is-bold-with-fullstop-included",
-    "glossary": {
-      "file": "./glossary_formatted.md",
-      "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/glossary_formatted.md",
-      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN short description is bold WITH fullstop excluded",
-    "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
-    "anchor": "#when-short-description-is-bold-with-fullstop-excluded",
+    "anchor": "#when-long-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",
@@ -257,10 +193,74 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "term": "WHEN long description has a link",
+    "term": "WHEN short description is a blockquote",
     "hint": "ⓕ",
-    "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
-    "anchor": "#when-long-description-has-a-link",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#when-short-description-is-a-blockquote",
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "WHEN short description is bold WITH fullstop excluded",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#when-short-description-is-bold-with-fullstop-excluded",
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "WHEN short description is bold WITH fullstop included",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#when-short-description-is-bold-with-fullstop-included",
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "WHEN short description is italic WITH fullstop excluded",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#when-short-description-is-italic-with-fullstop-excluded",
+    "glossary": {
+      "file": "./glossary_formatted.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/glossary_formatted.md",
+      "outPath": "/{redacted}/output-actual/glossary_formatted.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "WHEN short description is italic WITH fullstop included",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#when-short-description-is-italic-with-fullstop-included",
     "glossary": {
       "file": "./glossary_formatted.md",
       "termHint": "ⓕ",

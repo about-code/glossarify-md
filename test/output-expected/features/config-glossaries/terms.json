@@ -49,22 +49,6 @@
   },
   {
     "shortDesc": "",
-    "term": "Term Shared B",
-    "hint": " (a&b)",
-    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
-    "anchor": "#term-shared-b",
-    "glossary": {
-      "file": "./shared-terms-glossary-a.md",
-      "termHint": " (a&b)",
-      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-a.md",
-      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-a.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false
-  },
-  {
-    "shortDesc": "",
     "term": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -74,6 +58,22 @@
       "termHint": " (a&b)",
       "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-b.md",
       "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term Shared B",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)",
+      "basePath": "/{redacted}/input/features/config-glossaries/shared-terms-glossary-a.md",
+      "outPath": "/{redacted}/output-actual/features/config-glossaries/shared-terms-glossary-a.md"
     },
     "regex": {},
     "aliases": [],
