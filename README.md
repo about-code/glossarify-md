@@ -8,7 +8,7 @@ document with their definition in another markdown document called *glossary*.
 ## Install
 
 ```
-npm i -g https://github.com/about-code/glossarify-md
+npm i -g glossarify-md
 ```
 
 ## Sample
