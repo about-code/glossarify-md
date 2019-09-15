@@ -4,10 +4,10 @@
     "type": "object",
     "properties": {
         "baseDir": {
-            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line. Default is '.'",
+            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line.",
             "type": "string",
             "alias": "d",
-            "default": "."
+            "default": "./src"
         },
         "baseUrl": {
             "description": "The base url to use when creating absolute links to glossary.",
@@ -23,7 +23,7 @@
                 "type": "string"
             },
             "alias": "e",
-            "default": ["node_modules"]
+            "default": ["node_modules", ".git"]
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
@@ -52,7 +52,7 @@
             "default": []
         },
         "includeFiles": {
-            "description": "Path or glob patterns of files to include for linking to glossaries. Default '.' (relative to current working directory).",
+            "description": "Path or glob patterns of files to include for linking to glossaries.",
             "type": "array",
             "items": {
                 "type": "string"
@@ -61,7 +61,7 @@
             "default": ["."]
         },
         "linking": {
-            "description": "Whether to use relative or absolute links. Default: 'relative'. Choosing 'absolute' requires a 'baseUrl'.",
+            "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
             "type": "string",
             "enum": [
                 "relative",
@@ -71,10 +71,10 @@
             "default": "relative"
         },
         "outDir": {
-            "description": "Path to directory where to write processed files to. Default: './tmp'",
+            "description": "Path to directory where to write processed files to.",
             "type": "string",
             "alias": "o",
-            "default": "./tmp"
+            "default": "./target"
         },
         "dev": {
             "descriptions": "Options for testing and debugging",

@@ -21,11 +21,26 @@ const cliOpts = buildOpts(
     Object.assign(
         {
             "config": { type: "string",  alias: "c", default: "" },
+            "help":   { type: "boolean", alias: "h", default: false}
         },
         confSchema
     )
 );
 const args = minimist(proc.argv.slice(2), cliOpts);
+
+if (args.help) {
+    console.log("Options:\n\n",
+        Object
+            .keys(confSchema)
+            .filter(key => key !== "dev")
+            .map(key => {
+                const {alias, type, description, default:_default} = confSchema[key];
+                return `--${alias} --${key} (${type})\n${description}\nDefault: ${JSON.stringify(_default)}\n\n`;
+            })
+            .join("")
+    );
+    process.exit(0);
+}
 
 // Read file opts
 let conf = {};
@@ -36,7 +51,7 @@ if (confPath) {
         conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
         confDir = path.dirname(confPath);
     } catch (e) {
-        console.error(`\nFailed to read config '${confPath}'.\n  ${e.message}.`);
+        console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
     }
 }

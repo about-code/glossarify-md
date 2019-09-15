@@ -51,12 +51,6 @@ This is a text which uses a Glossary Term to describe something.
 
 ## Glossarify Command
 
-### ...with default values
-
-```
-glossarify-md
-```
-
 ### ...with command options
 ```
 glossarify-md
@@ -73,7 +67,7 @@ glossarify-md
 glossarify-md --config ./glossarify-md.conf.json
 ```
 
-*glossarify-md.conf.json*  (sample with default values)
+*glossarify-md.conf.json*
 ```json
 {
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
@@ -124,8 +118,11 @@ Most occurrences of a term have been replaced with a link to its glossary defini
 This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to describe something.
 ```
 
-
 ## Options
+
+### `--help` | `--h`
+
+Show all options and default values.
 
 ### `--baseUrl` | `--b`
 
@@ -169,7 +166,7 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 - **Range:** string[]
 
-Paths or Glob-Patterns for files to include. Default is `./`
+Paths or Glob-Patterns for files to include.
 
 ### `--keepRawFiles` | `--r`
 
@@ -201,7 +198,7 @@ files or if you are able to roll back any changes or if you know the outcome
 satisfies your needs.
 
 The recommendation is to write outputs to a separate directory such as `./out`
-or `./tmp`. Default is `./tmp`.
+or `./tmp`. or `./target`.
 
 ## Additional Features
 
