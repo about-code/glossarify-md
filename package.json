@@ -1,8 +1,12 @@
 {
   "name": "glossarify-md",
-  "version": "0.5.0",
-  "description": "Scan markdown files for glossary terms and replace each occurence with a link to a glossary file.",
+  "version": "1.0.0",
+  "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "main": "bin/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/about-code/glossarify-md.git"
+  },
   "bin": {
     "glossarify-md": "bin/index.js"
   },
