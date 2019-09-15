@@ -1,6 +1,6 @@
 {
   "name": "glossarify-md",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "main": "bin/index.js",
   "repository": {
@@ -16,8 +16,9 @@
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
     "test-release": "standard-version --dry-run",
-    "release": "standard-version",
-    "prerelease": "standard-version --prerelease"
+    "alpha-release": "standard-version --prerelease alpha",
+    "beta-release": "standard-version --prerelease beta",
+    "stable-release": "standard-version"
   },
   "keywords": [
     "glossary",
