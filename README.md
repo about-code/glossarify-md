@@ -232,4 +232,4 @@ Linking aliases to their related term:
 
 ## Special Thanks go to
 
-- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://github.com/unifiedjs) and [remarkjs](https://github.com/remarkjs) and a lot of associated plugins and modules.
+- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://github.com/unifiedjs) and [remarkjs](https://github.com/remarkjs) and authors of any other modules adding value to the tool.

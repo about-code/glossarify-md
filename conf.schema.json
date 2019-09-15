@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://github.com/about-code/glossarify-md/schema/config",
+    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v1.0.0/conf.schema.json",
     "type": "object",
     "properties": {
         "baseDir": {
@@ -14,7 +14,7 @@
             "type": "string",
             "format": "url",
             "alias": "b",
-            "default": "http://localhost/glossary"
+            "default": "http://127.0.0.1/"
         },
         "excludeFiles": {
             "description": "An array of files or file name patterns that should not be included in any processing.",

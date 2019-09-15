@@ -1,7 +1,7 @@
 {
   "name": "glossarify-md-testsuite",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "glossarify-md test scripts",
   "main": "../bin/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "test-5": "npx . --config ./input/features/config-baseUrl/glossarify-md.conf.json",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
+    "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
     "commit-baseline": "git commit './output-expected/**/*' -m 'test: New baseline.'"
   },
   "author": "Andreas Martin",
