@@ -14,7 +14,10 @@
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "test": "cd ./test && npm test",
-    "test-win": "cd .\\test && npm run test-win"
+    "test-win": "cd .\\test && npm run test-win",
+    "test-release": "standard-version --dry-run",
+    "release": "standard-version",
+    "prerelease": "standard-version --prerelease"
   },
   "keywords": [
     "glossary",
@@ -46,5 +49,7 @@
     "unist-util-visit": "^2.0.0",
     "unist-util-visit-parents": "^3.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "standard-version": "^7.0.0"
+  }
 }
