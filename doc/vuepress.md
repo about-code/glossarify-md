@@ -34,8 +34,8 @@ Add prebuild steps to your *package.json*:
   "prestart": "npm run glossarify",
   "prebuild": "npm run glossarify",
   "glossarify": "glossarify-md --config ./glossarify-md.conf.json",
-  "start": "vuepress dev",
-  "build": "vuepress build",
+  "start": "cd ./target && vuepress dev",
+  "build": "cd ./target && vuepress build",
 }
 ```
 
