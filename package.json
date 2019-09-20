@@ -20,6 +20,15 @@
     "beta-release": "standard-version --prerelease beta",
     "stable-release": "standard-version"
   },
+  "files": [
+    "bin",
+    "lib",
+    "conf.schema.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
   "keywords": [
     "glossary",
     "markdown",
