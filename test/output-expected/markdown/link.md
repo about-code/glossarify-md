@@ -1,6 +1,6 @@
-WHEN in a link label THEN [Lorem ipsum][1] MUST NOT be linked to glossary.
+GIVEN a link label THEN [Lorem ipsum][1] MUST NOT be linked to glossary.
 
-WHEN in a image link label ![Lorem ipsum][2] MUST NOT be linked to glossary.
+GIVEN a image link label ![Lorem ipsum][2] MUST NOT be linked to glossary.
 
 WHEN as a [link target][3] THEN term MUST NOT be linked to glossary.
 

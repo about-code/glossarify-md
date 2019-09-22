@@ -1,13 +1,13 @@
-# WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+# GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-## WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+## GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-### WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+### GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-#### WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+#### GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-##### WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+##### GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-# WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+# GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
 
-## WHEN in headline THEN "Lorem ipsum" MUST NOT be linked to glossary.
+## GIVEN a headline THEN "Lorem ipsum" MUST NOT be linked to glossary.

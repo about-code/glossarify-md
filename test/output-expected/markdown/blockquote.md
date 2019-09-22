@@ -1,4 +1,4 @@
-> WHEN in a blockquote THEN "Lorem ipsum" MUST NOT be linked to a glossary.
+> GIVEN a blockquote THEN "Lorem ipsum" MUST NOT be linked to a glossary.
 
 <!--
 Linking quotes might be subject to debate. A writer
