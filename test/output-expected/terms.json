@@ -1,6 +1,54 @@
 [
   {
     "shortDesc": "",
+    "term": "äöüß Term begins with Umlauts",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#äöüß-term-begins-with-umlauts",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Äquator",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#äquator",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Der Tod und das Mädchen",
+    "hint": "",
+    "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
+    "anchor": "#der-tod-und-das-mädchen",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
     "term": "dolor",
     "hint": "↴",
     "longDesc": "foo",
@@ -10,6 +58,22 @@
       "termHint": "↴",
       "basePath": "/{redacted}/input/glossary.md",
       "outPath": "/{redacted}/output-actual/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Faß",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#faß",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
     },
     "regex": {},
     "aliases": [],
@@ -125,6 +189,38 @@
       "T4-Alias2",
       "T4.Alias3"
     ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term contains äöüß Umlauts",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#term-contains-äöüß-umlauts",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term ends with Umlauts äöüß",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#term-ends-with-umlauts-äöüß",
+    "glossary": {
+      "file": "./features/i18n/glossary_de.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
+      "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
     "ignoreCase": false
   },
   {
