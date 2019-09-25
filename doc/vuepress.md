@@ -18,13 +18,11 @@ ${root}
    |   |
    |   '- glossary.md
    |
-   +- target/                  <-- Generated
+   +- target/                  (Generated)
    |- glossarify-md.conf.json
    |- package.json
    '- .gitignore
 ```
-
-> **Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` rather than children of it. This reduces the number of files being copied from `baseDir` to `outDir` and could improve build times if there are many static assets. Relative paths just become a bit longer.
 
 ## Configure *glossarify-md*
 
@@ -48,12 +46,14 @@ ${root}
 > **Note:** All relative paths inside the config file are being interpreted
 > relativ to `baseDir`.
 
-So we set `outDir` to `../target`. Consider adding your `outDir` to *.gitignore*.
+> **Note:** Consider adding the target of `outDir` to *.gitignore*.
+
+> **Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` (src) rather than being children of it. This reduces the number of files being copied from `baseDir` to `outDir` (target) and could improve build times if there are many static assets. Relative paths may just become a bit longer.
 
 ## Configure *vuepress*
 
-*vuepress* and *glossarify-md* use different "slug" algorithms to create friendly anchor links and URL fragments. When *vuepress* translates the glossarified
-markdown into HTML it may slugifies anchor names once again *differently* by default.
+*vuepress* and *glossarify-md* use different "slug" algorithms to create friendly URL fragments (#...) for section links. When *vuepress* translates the glossarified
+markdown to HTML it may slug anchor names a seccond time *differently* by its own default algorithm.
 This can break glossary links. While they still point to the glossary they may fail to address the section with the term definition. This is
 particularly the case for terms with non-ASCII unicode characters, e.g for terms
 with German *Umlauts* (äöüß), French *accent* or Chinese *symbols*
@@ -72,11 +72,7 @@ module.exports = {
     /*,themeConfig: { ... } */
 };
 ```
-> **Important**: Changing the slugger *may* need to be considered a
-> *BREAKING CHANGE* to your docs since URL fragments following the hash #
-> change. Bookmarks of your readers still point to the correct page but may no
-> longer address the correct page section. It's up to you to decide how important
-> this is to you.
+> **Important:** Changing the slug algorithm *may* need to be considered a *BREAKING CHANGE* to your docs since URL fragments following the hash # might change. Bookmarks of your readers *should* still point to the correct page but may no longer point to the correct page section. Please, verify the results if this is important to you.
 
 ## Configure Build Scripts
 
