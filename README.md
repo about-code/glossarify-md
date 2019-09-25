@@ -17,19 +17,21 @@ npm i -g glossarify-md
 
 Below we assume a sample project structure like:
 ```
-|- files/
-|    |- file1.md
-|    |- file2.md
-|    |- more/
-|        |- file3.md
+|- src/
+|    |- pages/
+|    |    |- page1.md
+|    |    |- page2.md
+|    |
+|    |- README.md
+|    |- citations.md
+|    `- glossary.md
 |
-|- glossary.md
-|- glossarify-md.conf.json
+`- glossarify-md.conf.json
 ```
 
 Your original glossary is a file
 
-*glossary.md*
+*src/glossary.md*
 ```md
 # Glossary
 
@@ -44,11 +46,11 @@ and so on...
 
 Your original files may just use a term anywhere in text:
 
-*file1.md*
+*src/pages/page1.md*
 ```md
-# Demo for a Glossary Term
+# Demo
 
-This is a text which uses a Glossary Term to describe something.
+This is a text which uses a *Glossary Term* to describe something.
 ```
 
 ## Glossarify Command
@@ -56,8 +58,8 @@ This is a text which uses a Glossary Term to describe something.
 ### ...with command options
 ```
 glossarify-md
-  --baseDir "."
-  --outDir "./out"
+  --baseDir "./src"
+  --outDir "../target"
   --linking "relative"
   --includeFiles ["."]
   --excludeFiles ["node_modules"]
@@ -73,8 +75,8 @@ glossarify-md --config ./glossarify-md.conf.json
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v1.0.0/conf.schema.json",
-  "baseDir": ".",
-  "outDir": "./out",
+  "baseDir": "./src",
+  "outDir": "../target",
   "glossaries": [
     { "file": "./glossary.md",  "termHint": "↴" },
     { "file": "./citations.md", "termHint": "Ⓒ"  }
@@ -94,7 +96,7 @@ Glossaries can be associated with *term hints*. A term hint will be visible as a
 
 Terms in glossaries have been augmented with anchor links.
 
-*./out/glossary.md*:
+*./target/glossary.md*:
 
 ```md
 # Glossary
@@ -113,11 +115,11 @@ Most occurrences of a term have been replaced with a link to its glossary defini
   - Preformatted blocks
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
 
-*./out/files/file1.md*
+*./out/files/page1.md*
 ```md
-# Demo for a Glossary Term
+# Demo
 
-This is a text which uses a [Glossary Term ↴](../glossary.md#glossary-term) to describe something.
+This is a text which uses a *[Glossary Term ↴](../glossary.md#glossary-term)* to describe something.
 ```
 
 ## Options
@@ -139,7 +141,7 @@ processing markdown files with an MD to HTML converter omitting a pre-defined
 
 - **Range:** string
 
-Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./`
+Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./src`
 
 ### `--excludeFiles` | `--e`
 
@@ -199,8 +201,8 @@ is going to overwrite your input files. Only do this on a copy of your input
 files or if you are able to roll back any changes or if you know the outcome
 satisfies your needs.
 
-The recommendation is to write outputs to a separate directory such as `./out`
-or `./tmp`. or `./target`.
+The recommendation is to write outputs to a separate directory such as `../out`
+or `../tmp`. or `../target`.
 
 ## Additional Features
 
@@ -222,7 +224,7 @@ Cats are cute, ...dogs are loyal.
 
 Linking aliases to their related term:
 
-*./out/files/file1.md*
+*./target/pages/page2.md*
 ```md
 # About Cats
 
