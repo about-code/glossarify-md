@@ -44,6 +44,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^8.1.0",
+    "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
