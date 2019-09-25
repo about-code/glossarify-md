@@ -2,8 +2,10 @@
 
 A *Term-to-Definition*-Linker for Markdown.
 
-*glossarify-md* is a command line tool to help you link terms in a markdown
-document with their definition in another markdown document called *glossary*.
+*glossarify-md* is a command line tool to help you link terms in markdown
+documents with their definition in another markdown document called *glossary*.
+
+[vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
 ## Install
 
