@@ -16,17 +16,20 @@ npm i -g glossarify-md
 ## Sample
 
 Below we assume a sample project structure like:
+
 ```
-|- src/
-|    |- pages/
-|    |    |- page1.md
-|    |    |- page2.md
-|    |
-|    |- README.md
-|    |- citations.md
-|    `- glossary.md
-|
-`- glossarify-md.conf.json
+${root}
+   +- src/
+   |    +- pages/
+   |    |    |- page1.md
+   |    |    `- page2.md
+   |    |
+   |    |- README.md
+   |    |- citations.md
+   |    `- glossary.md
+   |
+   +- target/                  (Output directory. Generated.)
+   `- glossarify-md.conf.json
 ```
 
 Your original glossary is a file
@@ -115,7 +118,7 @@ Most occurrences of a term have been replaced with a link to its glossary defini
   - Preformatted blocks
   - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
 
-*./out/files/page1.md*
+*./target/pages/page1.md*
 ```md
 # Demo
 
