@@ -28,7 +28,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 * glossarify-md --help ([0084878](https://github.com/about-code/glossarify-md/commit/0084878))
 
-## v1.0.0
+## 1.0.0
 
 ### Features:
 
