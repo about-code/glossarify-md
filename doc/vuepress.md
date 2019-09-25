@@ -24,9 +24,9 @@ ${root}
    '- .gitignore
 ```
 
-> **Tip:** As a matter of choice you may also decide for a different structure with `.vuepress` *next to* `baseDir` rather than being a child of it. This will reduce the number of files being copied from `baseDir` to `outDir`.
+> **Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` rather than children of it. This reduces the number of files being copied from `baseDir` to `outDir` and could improve build times if there are many static assets. Relative paths just become a bit longer.
 
-## Configure glossarify-md
+## Configure *glossarify-md*
 
 *glossarify-md.conf.json*
 ```json
@@ -50,7 +50,35 @@ ${root}
 
 So we set `outDir` to `../target`. Consider adding your `outDir` to *.gitignore*.
 
-## Build Scripts
+## Configure *vuepress*
+
+*vuepress* and *glossarify-md* use different "slug" algorithms to create friendly anchor links and URL fragments. When *vuepress* translates the glossarified
+markdown into HTML it may slugifies anchor names once again *differently* by default.
+This can break glossary links. While they still point to the glossary they may fail to address the section with the term definition. This is
+particularly the case for terms with non-ASCII unicode characters, e.g for terms
+with German *Umlauts* (äöüß), French *accent* or Chinese *symbols*
+(see [Issue #27](https://github.com/about-code/glossarify-md/issues/#27)).
+
+Fortunately *vuepress* allows for replacing their default slug algorithm. So we can configure vuepress to use the same slugger also used by *glossarify-md*:
+
+*.vuepress/config.js*
+```js
+const glossarify = require("glossarify-md");
+module.exports = {
+    title: 'Hello VuePress',
+    markdown: {
+      slugify: glossarify.getSlugger()
+    }
+    /*,themeConfig: { ... } */
+};
+```
+> **Important**: Changing the slugger *may* need to be considered a
+> *BREAKING CHANGE* to your docs since URL fragments following the hash #
+> change. Bookmarks of your readers still point to the correct page but may no
+> longer address the correct page section. It's up to you to decide how important
+> this is to you.
+
+## Configure Build Scripts
 
 *package.json*
 ```json
@@ -62,8 +90,12 @@ So we set `outDir` to `../target`. Consider adding your `outDir` to *.gitignore*
   "build": "npm run glossarify && vuepress build target",
 }
 ```
-`npm start` builds and serves files from `src/`. Unfortunately, the preview won't be glossarified but live-reloading your changes to `src/` is likely to be more important to you when writing.
+- `npm start` builds and serves files from `src/` with *live-reload*. This is
+what you probably want while writing. Since glossarified sources are written to
+a separate `target/` directory you won't see glossary terms linked in this build mode.
 
-`npm run glossarified` serves a glossarified preview from `target/`.
+- `npm run glossarified` builds and serves the glossarified version from `target/` output directory. No live-reload if `src/` changes.
+
+- `npm run build` just builds the glossarified version.
 
 More information see [README.md](../README.md).
