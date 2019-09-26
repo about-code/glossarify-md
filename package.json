@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+    "debug": "node --inspect-brk ./bin/index.js --config ./test/input/glossarify-md.gitignore.json",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
     "test-release": "standard-version --dry-run",

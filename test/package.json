@@ -5,8 +5,8 @@
   "description": "glossarify-md test scripts",
   "main": "../bin/index.js",
   "scripts": {
-    "debug": "node --inspect-brk ../bin/index.js --config ./input/glossarify-md.conf.json",
-    "debug-test": "git diff --minimal --color --no-index ./output-expected ./output-actual | node --inspect-brk ../bin/test.js",
+    "debug": "node --inspect-brk ../bin/index.js --config ./input/glossarify-md.gitignore.json",
+    "debug-differ": "git diff --minimal --color --no-index ./output-expected ./output-actual | node --inspect-brk ../bin/test.js",
     "pretest": "rm -rf ./output-actual",
     "pretest-win": "del /Q .\\output-actual",
     "test": "npm run suite",

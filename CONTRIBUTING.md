@@ -8,7 +8,9 @@
    1. [Basic Workflow](#basic-workflow)
    2. [Extending the Test Suite](#extending-the-test-suite)
 4. [Debugging](#debugging)
-
+   1. [Adding a Debug Configuration](#adding-a-debug-configuration)
+   2. [Using a Remote Debugger](#using-a-remote-debugger)
+   3. [Using Visual Studio Code](#debugging-in-visual-studio-code)
 ## Preparing for Contributions
 
 *Prerequisites*
@@ -33,7 +35,7 @@ npm test
 
 ## Testing
 
-Any scripts and paths below assume you're in `${workspace}/test`. If you followed the Installation you're already there, otherwise begin with:
+Any scripts and paths below assume you're in `${workspace}/test`
 ```
 cd ./test
 ```
@@ -50,13 +52,13 @@ npm test
 The `test` directory has the following structure:
 
 ```
-${workspace}
-  |- /test
-  |  |- /input                    <-- test fixture
-  |  |- /output-expected          <-- accepted baseline
-  |  |- /output-actual            <-- actual test results
-  |  |- package.json              <-- test scripts
-  |- package.json                 <-- script dependencies
+${workspace}/
+   |- test/
+   |   |- input/              <-- test fixture
+   |   |- output-expected/    <-- accepted baseline
+   |   |- output-actual/      <-- actual test results
+   |   `- package.json        <-- test scripts
+   `- package.json            <-- project dependencies
 ```
 
 1. Running the test suite will create a new folder `./output-actual` with the results of processing the contents in `./input`. Test results are *never* comitted.
@@ -76,33 +78,88 @@ ${workspace}
 
 ### Extending the Test Suite
 
-If you contribute a fix or extension to an existing feature you typically
+If you're testing a bugfix or a new feature you need
 
-- add a new term to some glossary
-- add a new clause with the term to a non-glossary `.md`-file in BDD-like syntax: `GIVEN <condition> THEN <expectation> [AND (<expectation>)] [OR (<expectation>)]`. The main purpose is to express assumptions and preconditions and desired output. Feel free to use any wording between those keywords to make the intent of the test case reasonable. Try to use braces in case of complex logical expressions.
+1. **one or more *document* input files...**
+   - ...with term usages in sentences that specify the test case and acceptance criteria
+   - ...with sentences adhering to a BDD-style syntax `GIVEN <condition> THEN <expectation> [AND (<expectation>)] [OR (<expectation>)]`
+1. **one or more *glossary* input files ...**
+   - ...with term definitions required for the test goal
+1. **a glossarify-md *config* input file**...
+   - ...refering to the glossary file in its `glossaries` section
+     - extend `./input/feature/foo/glossarify-md.conf.json` if the feature under test has its own config
+     - extend `./input/glossarify-md.conf.json` if the tests *don't need* a case-specific config
+     - add a new config as described in the next section if you *need* a case-specific config
 
-#### Adding a Glossary
+Rules of thumb:
 
-Extend the `glossaries` section of a feature's own `glossarify-md.conf.json` if such config exists. Otherwise add a reference in `./input/glossarify-md.conf.json`. If you require a special configuration continue reading.
+- each bugfix or feature SHOULD have its own input directory with its own glossary and document input files reproducing the bug *before* implementing the bugfix
+- sometimes bugs are the result of missing test cases in *exisiting* feature tests. If you think this is the case then you MAY add a test case to existing files
 
-#### Testing a Particular Configuration
+#### Running Tests with a Particular Configuration
 
-If you need to test a particular configuration setting, e.g.
+If you need to test with a particular glossarify-md configuration then
 
-1. add a new `./input/features/<xy>` directory or extend an existing one
-1. add a new `glossarify-md.conf.json`.
-   - `outDir` must point to `../../../output-actual/features/<xy>` with the path being relative to `baseDir: '.'`.
-1. add a new `test-*` script in `${workspace}/test/package.json` which uses your config
-    - extend the `suite` script to call your `test-*` script
+1. add a new `./input/features/foo` directory or extend an existing one
+1. add a new `./input/features/foo/glossarify-md.conf.json`
+   ```json
+   {
+     "baseDir": ".",
+     "outDir": "../../../output-actual/features/foo`,
+   }
+   ```
+1. extend in `${workspace}/test/package.json`:
+   - add a new `test-*` script
+   - append ` && npm run test-*` to the `suite` script
 
 ## Debugging
 
-### Option 1: Debugging with VSCode
+Below we assume the following directory structure:
 
-If you're using VSCode then your VSCode launch configuration might look like
-this:
+```
+${workspace}/
+  |- test/
+  |   |- input/
+  |   |     |- gitignore.files/                <-- debug input files (optional)
+  |   |     |     |- document.md
+  |   |     |     `- glossary.md
+  |   |     |- glossarify-md.conf.json
+  |   |     `- glossarify-md.gitignore.json    <-- debug config (tailored glossarify-md.conf.json)
+  |   |
+  |   |- output-gitignore.files/               <-- outDir to write debug outputs to (optional)>
+  |   |- output-expected/                      <-- MUST NOT change for experimental debugging
+  |   |- output-actual/                        <-- SHOULD NOT change for experimental debugging
+  |   `- package.json                          <-- provides 'npm run debug' script
+```
 
-*.vscode/launch.json*
+### Add a Debug Configuration
+
+1. `cd` into `${workspace}/test/input`
+1. Copy contents of `glossarify-md.conf.json` to `glossarify-md.gitignore.json`
+1. Tailor the config to your needs, e.g. filter for test input files you want to debug
+
+### Using a Remote Debugger
+
+```
+npm run debug
+```
+
+starts a remote debugging session on `127.0.0.1:9229`. Now connect with any debugger supporting the remote debugging protocol, e.g.
+
+- *Chromium Browser* -> URL-Bar: `chrome://inspect`
+- *Firefox Browser* -> URL-Bar: `about:debugging`
+    - or ☰ Menu -> Web Developer Tools -> Remote Debugging (FF69+)
+    - or ☰ Menu -> Web Developer Tools -> Connect...
+- *VSCode*
+
+### Using Visual Studio Code
+
+The launch configuration example shows two debug options:
+
+- VSCode connecting as a remote debugger (see previous section)
+- VSCode internal debugging (recommended)
+
+*${workspace}/.vscode/launch.json*
 ```json
 {
     "version": "0.2.0",
@@ -110,44 +167,36 @@ this:
         {
             "type": "node",
             "request": "launch",
-            "name": "VSCode Debugger",
+            "name": "Debug (internal)",
             "program": "${workspaceFolder}/bin/index.js",
             "args": [
                 "--config",
-                "./test/input/glossarify-md.conf.json"
+                "./test/input/glossarify-md.gitignore.json"
             ]
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Debug (remote)",
+            "address": "127.0.0.1",
+            "port": 9229,
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "${workspaceFolder}/bin/index.js"
         }
     ]
 }
 ```
 
-### Option 2: Remote Debugging
+### Experimental Debugging
 
-```
-npm run debug
-```
+If you need input files for experiments you should not modify test input files. Rather copy them or write your own...
 
-in `${workspace}` runs the program for *remote debugging* on `127.0.0.1:9229`. You can now
-connect with any debugger which supports the remote debugging protocol, e.g.
-
-- *Chrome Browser* -> URL-Bar: `chrome://inspect`
-- *Firefox Browser* -> URL-Bar: `about:debugging`
-    - or ☰ Menu -> Web Developer Tools -> Remote Debugging (FF69+)
-    - or ☰ Menu -> Web Developer Tools -> Connect...
-- *VSCode* -> `.vscode/launch.json`
+1. ...and put them into `gitignore.files`
+1. ...and configure `glossarify-md.gitignore.json` like so:
     ```json
     {
-        "version": "0.2.0",
-        "configurations": [
-            {
-                "type": "node",
-                "request": "attach",
-                "name": "Remote Debugging",
-                "address": "127.0.0.1",
-                "port": 9229,
-                "localRoot": "${workspaceFolder}",
-                "remoteRoot": "${workspaceFolder}/bin/index.js"
-            }
-        ]
+        "baseDir": "./gitignore.files",
+        "outDir": "../../output-gitignore.files",
+        ...
     }
     ```
