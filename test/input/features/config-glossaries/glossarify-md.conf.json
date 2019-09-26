@@ -10,7 +10,8 @@
         { "file": "./disjunct-terms-glossary-a.md", "termHint": " (a/b)"},
         { "file": "./disjunct-terms-glossary-b.md", "termHint": " (a/b)"},
         { "file": "./shared-terms-glossary-a.md", "termHint": " (a&b)"},
-        { "file": "./shared-terms-glossary-b.md", "termHint": " (a&b)"}
+        { "file": "./shared-terms-glossary-b.md", "termHint": " (a&b)"},
+        { "file": "./unicode-glossary.md", "termHint": ""}
     ],
     "linking": "relative",
     "ignoreCase": false,
