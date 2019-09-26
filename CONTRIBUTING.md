@@ -118,24 +118,25 @@ Below we assume the following directory structure:
 
 ```
 ${workspace}/
-  |- test/
-  |   |- input/
-  |   |     |- gitignore.files/                <-- debug input files (optional)
-  |   |     |     |- document.md
-  |   |     |     `- glossary.md
-  |   |     |- glossarify-md.conf.json
-  |   |     `- glossarify-md.gitignore.json    <-- debug config (tailored glossarify-md.conf.json)
-  |   |
-  |   |- output-gitignore.files/               <-- outDir to write debug outputs to (optional)>
-  |   |- output-expected/                      <-- MUST NOT change for experimental debugging
-  |   |- output-actual/                        <-- SHOULD NOT change for experimental debugging
-  |   `- package.json                          <-- provides 'npm run debug' script
+    |- test/
+    |   |- input/
+    |   |     |- ...                           <-- Do not change test inputs for experiments
+    |   |     |- gitignore.files/              <-- Put experimental inputs here
+    |   |     |     |- document.md
+    |   |     |     `- glossary.md
+    |   |     |- glossarify-md.conf.json       <-- Do not change for debugging, only for testing
+    |   |     `- glossarify-md.gitignore.json  <-- Use this config for debugging
+    |   |
+    |   |- output-gitignore.files/             <-- Write experimental debug outputs here
+    |   |- output-expected/
+    |   |- output-actual/
+    |   `- package.json
 ```
 
 ### Add a Debug Configuration
 
 1. `cd` into `${workspace}/test/input`
-1. Copy contents of `glossarify-md.conf.json` to a separate `glossarify-md.gitignore.json` which you can tailor (e.g. filter for particular input files) without changing the default test configuration used for `npm test`.
+1. Copy contents of `glossarify-md.conf.json` into a separate `glossarify-md.gitignore.json` which you can use e.g. to filter for particular input files you want to debug with
 
 ### Using a Remote Debugger
 
