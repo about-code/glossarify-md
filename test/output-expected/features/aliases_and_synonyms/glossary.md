@@ -4,7 +4,7 @@
 
 <!-- Aliases: T1 Alias1, T1-Alias2, T1.Alias3 -->
 
-WHEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
+GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated words MUST be detected as the term's aliases.
 
 ## [Term 2](#term-2)
@@ -13,7 +13,7 @@ subsequent comma-separated words MUST be detected as the term's aliases.
 Aliases: T2 Alias1, T2-Alias2, T2.Alias3
 -->
 
-WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated words MUST be detected as the term's aliases.
 
 ## [Term 3](#term-3)
@@ -25,7 +25,7 @@ T3-Alias2,
 T3.Alias3
 -->
 
-WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated lines of words MUST be detected as the term's aliases.
 
 ## [Term 4](#term-4)
@@ -38,7 +38,7 @@ T4-Alias2,
 T4.Alias3
 -->
 
-WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
+GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
 line THEN the subsequent comma-separated lines of words MUST be detected as the
 term's aliases.
 
