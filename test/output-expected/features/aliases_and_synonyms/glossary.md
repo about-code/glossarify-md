@@ -50,3 +50,13 @@ GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND the comment ends with a trailing comma
 THEN this MUST NOT result in an infinite loop or out-of-memory error
 as has been reported in #26
+
+## [Unicode Support](#unicode-support)
+
+### [China](#china)
+
+<!-- Aliases: 中国zhōngguó, zhōngguó中国, 中zhōngguó国, zhōng中国guó -->
+
+GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
+AND aliases contain unicode word characters
+THEN they MUST still be separated correctly

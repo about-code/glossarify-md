@@ -33,6 +33,27 @@
   },
   {
     "shortDesc": "",
+    "term": "China",
+    "hint": "",
+    "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
+    "anchor": "#china",
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "中国zhōngguó",
+      "zhōngguó中国",
+      "中zhōngguó国",
+      "zhōng中国guó"
+    ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
     "term": "Der Tod und das Mädchen",
     "hint": "",
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
@@ -381,6 +402,22 @@
       "termHint": "",
       "basePath": "/{redacted}/input/features/i18n/glossary_de.md",
       "outPath": "/{redacted}/output-actual/features/i18n/glossary_de.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Unicode Support",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#unicode-support",
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [],
