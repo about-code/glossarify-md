@@ -38,7 +38,8 @@
     "linking",
     "documentation",
     "link",
-    "book"
+    "book",
+    "vuepress"
   ],
   "author": "Andreas Martin",
   "license": "MIT",
