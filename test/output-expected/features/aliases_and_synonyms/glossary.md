@@ -41,3 +41,12 @@ T4.Alias3
 WHEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
 line THEN the subsequent comma-separated lines of words MUST be detected as the
 term's aliases.
+
+## [Term 5](#term-5)
+
+<!-- Aliases: T5-Alias1, T5-Alias2, -->
+
+GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
+AND the comment ends with a trailing comma
+THEN this MUST NOT result in an infinite loop or out-of-memory error
+as has been reported in #26

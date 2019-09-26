@@ -193,6 +193,25 @@
   },
   {
     "shortDesc": "",
+    "term": "Term 5",
+    "hint": "",
+    "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
+    "anchor": "#term-5",
+    "glossary": {
+      "file": "./features/aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/features/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/features/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "T5-Alias1",
+      "T5-Alias2"
+    ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
     "term": "Term contains äöüß Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
