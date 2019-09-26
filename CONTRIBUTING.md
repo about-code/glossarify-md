@@ -135,8 +135,7 @@ ${workspace}/
 ### Add a Debug Configuration
 
 1. `cd` into `${workspace}/test/input`
-1. Copy contents of `glossarify-md.conf.json` to `glossarify-md.gitignore.json`
-1. Tailor the config to your needs, e.g. filter for test input files you want to debug
+1. Copy contents of `glossarify-md.conf.json` to a separate `glossarify-md.gitignore.json` which you can tailor (e.g. filter for particular input files) without changing the default test configuration used for `npm test`.
 
 ### Using a Remote Debugger
 
@@ -144,12 +143,12 @@ ${workspace}/
 npm run debug
 ```
 
-starts a remote debugging session on `127.0.0.1:9229`. Now connect with any debugger supporting the remote debugging protocol, e.g.
+starts a remote debug session on `127.0.0.1:9229`. You can then connect with any debugger supporting the remote debugging protocol, e.g.
 
-- *Chromium Browser* -> URL-Bar: `chrome://inspect`
-- *Firefox Browser* -> URL-Bar: `about:debugging`
-    - or ☰ Menu -> Web Developer Tools -> Remote Debugging (FF69+)
-    - or ☰ Menu -> Web Developer Tools -> Connect...
+- *Chrome Browser* ⇨ URL-Bar: [ `chrome://inspect` ]
+- *Firefox Browser* ⇨ URL-Bar: [ `about:debugging` ]
+    - or ☰ Menu ⇨ Web Developer Tools ⇨ Remote Debugging (FF69+)
+    - or ☰ Menu ⇨ Web Developer Tools ⇨ Connect...
 - *VSCode*
 
 ### Using Visual Studio Code
@@ -192,11 +191,6 @@ The launch configuration example shows two debug options:
 If you need input files for experiments you should not modify test input files. Rather copy them or write your own...
 
 1. ...and put them into `gitignore.files`
-1. ...and configure `glossarify-md.gitignore.json` like so:
-    ```json
-    {
-        "baseDir": "./gitignore.files",
-        "outDir": "../../output-gitignore.files",
-        ...
-    }
-    ```
+1. ...and configure `glossarify-md.gitignore.json` with:
+    - `"baseDir": "./gitignore.files"`
+    - `"outDir": "../../output-gitignore.files"`
