@@ -5,7 +5,7 @@
   "description": "glossarify-md test scripts",
   "main": "../bin/index.js",
   "scripts": {
-    "debug": "node --inspect-brk ../bin/index.js --config ./input/glossarify-md.gitignore.json",
+    "debug": "node --inspect-brk ../bin/index.js --config ./gitignore.conf.json",
     "debug-differ": "git diff --minimal --color --no-index ./output-expected ./output-actual | node --inspect-brk ../bin/test.js",
     "pretest": "rm -rf ./output-actual",
     "pretest-win": "del /Q .\\output-actual",
@@ -21,7 +21,7 @@
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
-    "commit-baseline": "git commit './output-expected/**/*' -m 'test: New baseline.'"
+    "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'"
   },
   "author": "Andreas Martin",
   "license": "MIT"
