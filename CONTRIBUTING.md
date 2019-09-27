@@ -31,7 +31,7 @@ cd ./test
 npm test
 ```
 
-> **Important:** Make sure to run tests successfully, locally on a fresh clone before you start editing. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be fixed. Otherwise leave a note in your pull request, at least. DO NOT commit a new baseline in this case. With a corrupted baseline the CI pipeline may run green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
+> **⚠ Important:** Make sure to run tests successfully, locally on a fresh clone before you start editing. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be fixed. Otherwise leave a note in your pull request, at least. DO NOT commit a new baseline in this case. With a corrupted baseline the CI pipeline may run green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
 
 ## Testing
 
@@ -44,8 +44,7 @@ Then run:
 npm test
 ```
 
-> Windows users may use above command with the `git-bash` (being installed with
-*Git*) or try running `npm run test-win` within `cmd`.
+> Windows users may use above command with the `git-bash` (being installed with *Git*) or try running `npm run test-win` within `cmd`.
 
 ### Basic Workflow
 
@@ -54,63 +53,86 @@ The `test` directory has the following structure:
 ```
 ${workspace}/
    |- test/
-   |   |- input/              <-- test fixture
-   |   |- output-expected/    <-- accepted baseline
-   |   |- output-actual/      <-- actual test results
-   |   `- package.json        <-- test scripts
-   `- package.json            <-- project dependencies
+   |   |- input/            <-- test fixture
+   |   |- output-expected/  <-- accepted baseline
+   |   |- output-actual/    <-- actual test results
+   |   `- package.json      <-- test scripts
+   `- package.json          <-- project dependencies
 ```
 
 1. Running the test suite will create a new folder `./output-actual` with the results of processing the contents in `./input`. Test results are *never* comitted.
-1. `./output-expected` is the *baseline* compared against `./output-actual` using `git diff`. If there are any differences then the tests fail.
-    > If the implementation changed the actual output might differ intentionally. In this case review the diff *carefully*. If it is good and only contains intended changes, then `./output-actual` can be made the new baseline using
-    ```
-    npm run new-baseline
-    ```
-    Windows users may have to run `npm run new-baseline-win`.
+1. `./output-expected` is the *baseline* compared against `./output-actual` using `git diff`. If there are any differences then the tests fail. Mind the note above, regarding failures after a fresh clone.
 
+1. extend/update test inputs *and* expected outputs. See also *Extending the Test Suite*
 
-1. Eventually the new `./output-expected` baseline should be committed in a distinct commit with a message "*test: New baseline.*" or by entering
+1. implement feature or bugfix
+1. run tests against your implementation
+
+    If you followed the guide so far then tests pass, because you described your expected output *before* and now actual outputs match. **This is the ideal world you should strive for**.
+
+    However, new tests may change many things which can be tedious to write (e.g. `terms.json` dumps with terms and metadata extracted by the *terminator*). Then it's more efficient to *review* changes.
+
+    Your practical workflow should be a mix of both, that is, an **expect-and-review workflow**:
+
+    1. make the diff causing tests to fail *minimal* by writing down expected output as much as you can anticipate based on the intent of your change
+    1. review remaining diff *carefully* for reasonable and unexpected changes (once or twice)
+    1. tweak implementation & rerun tests
+    1. if actual output is okay create a new baseline from `./output-actual` with
+    ```
+    npm run new-baseline      (Linux, Mac, Unix)
+    npm run new-baseline-win  (Windows)
+    ```
+
+1. Commit a new baseline
 
     ```
     npm run commit-baseline
     ```
 
+    > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
 ### Extending the Test Suite
 
 If you're testing a bugfix or a new feature you need
 
-1. **one or more *document* input files...**
-   - ...with term usages in sentences that specify the test case and acceptance criteria
-   - ...with sentences adhering to a BDD-style syntax `GIVEN <condition> THEN <expectation> [AND (<expectation>)] [OR (<expectation>)]`
-1. **one or more *glossary* input files ...**
-   - ...with term definitions required for the test goal
-1. **a glossarify-md *config* input file**...
-   - ...refering to the glossary file in its `glossaries` section
-     - extend `./input/feature/foo/glossarify-md.conf.json` if the feature under test has its own config
-     - extend `./input/glossarify-md.conf.json` if the tests *don't need* a case-specific config
-     - add a new config as described in the next section if you *need* a case-specific config
+1. **one or more *document* files...**
 
-Rules of thumb:
+   ...with term usages in sentences that specify the test case and acceptance criteria in a `GIVEN <condition> THEN <expectation> [AND (<expectation>)] [OR (<expectation>)]`
+1. **one or more *glossary* files ...**
 
-- each bugfix or feature SHOULD have its own input directory with its own glossary and document input files reproducing the bug *before* implementing the bugfix
-- sometimes bugs are the result of missing test cases in *exisiting* feature tests. If you think this is the case then you MAY add a test case to existing files
+   ...with term definitions required for the test goal
+1. **a glossarify-md.conf.json *config* file**...
 
-#### Running Tests with a Particular Configuration
+   ...where its `glossaries` section points to the glossary file(s)
+
+> Rules of thumb:
+>
+> - each bugfix or feature should   have its distinct glossary and document input files
+> - extend a config if the feature under test has its own config
+> - extend `./input/glossarify-md.conf.json` default config if the test cases *doesn't* need a special config
+> - add a new config and run tests with a particular config if they are to be run separately/independently. See next section.
+
+#### Running Tests with a particular Configuration
 
 If you need to test with a particular glossarify-md configuration then
 
 1. add a new `./input/features/foo` directory or extend an existing one
 1. add a new `./input/features/foo/glossarify-md.conf.json`
-   ```json
-   {
-     "baseDir": ".",
-     "outDir": "../../../output-actual/features/foo`,
-   }
-   ```
-1. extend in `${workspace}/test/package.json`:
-   - add a new `test-*` script
-   - append ` && npm run test-*` to the `suite` script
+1. add a test script in `${workspace}/test/package.json` with the next free `{#nr}`:
+   - `"test-{#nr}": "npx . --config=./input/features/foo/glossarify-md.conf.json"`
+   - append ` && npm run test-{#nr}` to the `suite` script
+
+
+*./input/features/foo/glossarify-md.conf.json*
+```json
+{
+    "baseDir": ".",
+    "outDir": "../../../output-actual/features/foo`",
+    "...": "...additional config...",
+    "dev": {
+        "termsFile": "../../../output-actual/features/foo/terms.json"
+    }
+}
+```
 
 ## Debugging
 
@@ -119,24 +141,45 @@ Below we assume the following directory structure:
 ```
 ${workspace}/
     |- test/
+    |   |- gitignore.input/      <-- debug inputs
+    |   |- gitignore.output/     <-- debug outputs
     |   |- input/
-    |   |     |- ...                           <-- Do not change test inputs for experiments
-    |   |     |- gitignore.files/              <-- Put experimental inputs here
-    |   |     |     |- document.md
-    |   |     |     `- glossary.md
-    |   |     |- glossarify-md.conf.json       <-- Do not change for debugging, only for testing
-    |   |     `- glossarify-md.gitignore.json  <-- Use this config for debugging
-    |   |
-    |   |- output-gitignore.files/             <-- Write experimental debug outputs here
     |   |- output-expected/
     |   |- output-actual/
+    |   |- gitignore.conf.json   <-- debug config  (glossarify-md config)
     |   `- package.json
 ```
 
 ### Add a Debug Configuration
 
-1. `cd` into `${workspace}/test/input`
-1. Copy contents of `glossarify-md.conf.json` into a separate `glossarify-md.gitignore.json` which you can use e.g. to filter for particular input files you want to debug with
+1. `cd` into `${workspace}/test`
+1. Create a personal `gitignore.input/` folder
+1. Create a personal `gitignore.conf.json` and copy sample below
+1. Tailor debug config
+   1. keep writing to a `*gitignore.*` directory (`outDir`)
+
+
+*${workspace}/test/gitignore.conf.json*
+```
+{
+    "$schema": "../conf.schema.json",
+    "baseDir": "./gitignore.input",
+    "outDir": "../gitignore.output",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": "Ⓓ"}
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../gitignore.output/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}
+```
 
 ### Using a Remote Debugger
 
@@ -146,8 +189,8 @@ npm run debug
 
 starts a remote debug session on `127.0.0.1:9229`. You can then connect with any debugger supporting the remote debugging protocol, e.g.
 
-- *Chrome Browser* ⇨ URL-Bar: [ `chrome://inspect` ]
-- *Firefox Browser* ⇨ URL-Bar: [ `about:debugging` ]
+- *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
+- *Firefox Browser* ⇨ URL-Bar: `about:debugging`
     - or ☰ Menu ⇨ Web Developer Tools ⇨ Remote Debugging (FF69+)
     - or ☰ Menu ⇨ Web Developer Tools ⇨ Connect...
 - *VSCode*
@@ -171,7 +214,7 @@ The launch configuration example shows two debug options:
             "program": "${workspaceFolder}/bin/index.js",
             "args": [
                 "--config",
-                "./test/input/glossarify-md.gitignore.json"
+                "./test/gitignore.conf.json"
             ]
         },
         {
@@ -186,12 +229,3 @@ The launch configuration example shows two debug options:
     ]
 }
 ```
-
-### Experimental Debugging
-
-If you need input files for experiments you should not modify test input files. Rather copy them or write your own...
-
-1. ...and put them into `gitignore.files`
-1. ...and configure `glossarify-md.gitignore.json` with:
-    - `"baseDir": "./gitignore.files"`
-    - `"outDir": "../../output-gitignore.files"`
