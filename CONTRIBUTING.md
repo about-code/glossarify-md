@@ -8,9 +8,7 @@
    1. [Basic Workflow](#basic-workflow)
    2. [Extending the Test Suite](#extending-the-test-suite)
 4. [Debugging](#debugging)
-   1. [Adding a Debug Configuration](#adding-a-debug-configuration)
-   2. [Using a Remote Debugger](#using-a-remote-debugger)
-   3. [Using Visual Studio Code](#debugging-in-visual-studio-code)
+
 ## Preparing for Contributions
 
 *Prerequisites*
@@ -28,6 +26,7 @@ git clone https://github.com/<your-name>/glossarify-md
 cd glossarify-md
 npm install
 cd ./test
+npm install
 npm test
 ```
 
@@ -56,7 +55,7 @@ ${workspace}/
    |   |- input/            <-- test fixture
    |   |- output-expected/  <-- accepted baseline
    |   |- output-actual/    <-- actual test results
-   |   `- package.json      <-- test scripts
+   |   `- package.json      <-- test dependencies and scripts
    `- package.json          <-- project dependencies
 ```
 
@@ -90,6 +89,7 @@ ${workspace}/
     ```
 
     > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
+
 ### Extending the Test Suite
 
 If you're testing a bugfix or a new feature you need
@@ -117,9 +117,8 @@ If you need to test with a particular glossarify-md configuration then
 
 1. add a new `./input/features/foo` directory or extend an existing one
 1. add a new `./input/features/foo/glossarify-md.conf.json`
-1. add a test script in `${workspace}/test/package.json` with the next free `{#nr}`:
-   - `"test-{#nr}": "npx . --config=./input/features/foo/glossarify-md.conf.json"`
-   - append ` && npm run test-{#nr}` to the `suite` script
+1. add a new test script in `${workspace}/test/package.json`
+   - `"test_{#nr}": "npx . --config=./input/features/foo/glossarify-md.conf.json"`
 
 
 *./input/features/foo/glossarify-md.conf.json*
@@ -136,71 +135,27 @@ If you need to test with a particular glossarify-md configuration then
 
 ## Debugging
 
-Below we assume the following directory structure:
-
 ```
-${workspace}/
-    |- test/
-    |   |- gitignore.input/      <-- debug inputs
-    |   |- gitignore.output/     <-- debug outputs
-    |   |- input/
-    |   |- output-expected/
-    |   |- output-actual/
-    |   |- gitignore.conf.json   <-- debug config  (glossarify-md config)
-    |   `- package.json
-```
-
-### Add a Debug Configuration
-
-1. `cd` into `${workspace}/test`
-1. Create a personal `gitignore.input/` folder
-1. Create a personal `gitignore.conf.json` and copy sample below
-1. Tailor debug config
-   1. keep writing to a `*gitignore.*` directory (`outDir`)
-
-
-*${workspace}/test/gitignore.conf.json*
-```
-{
-    "$schema": "../conf.schema.json",
-    "baseDir": "./gitignore.input",
-    "outDir": "../gitignore.output",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "keepRawFiles": [],
-    "glossaries": [
-        { "file": "./glossary.md", "termHint": "Ⓓ"}
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "termsFile": "../gitignore.output/terms.json",
-        "printInputAst": false,
-        "printOutputAst": false
-    }
-}
-```
-
-### Using a Remote Debugger
-
-```
+cd ./test
 npm run debug
 ```
 
-starts a remote debug session on `127.0.0.1:9229`. You can then connect with any debugger supporting the remote debugging protocol, e.g.
+starts a remote debug session on `127.0.0.1:9229`. It assumes there is a *glossary-md* configuration with name `./gitignore.conf.json`. To debug an arbitrary configuration use
+
+```
+npm run debug-cfg -- ./path/to/glossary-md.conf.json
+```
+
+You can now connect e.g. with
 
 - *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
 - *Firefox Browser* ⇨ URL-Bar: `about:debugging`
-    - or ☰ Menu ⇨ Web Developer Tools ⇨ Remote Debugging (FF69+)
-    - or ☰ Menu ⇨ Web Developer Tools ⇨ Connect...
 - *VSCode*
 
-### Using Visual Studio Code
+The launch configuration example for VSCode below offers two debug options:
 
-The launch configuration example shows two debug options:
-
-- VSCode connecting as a remote debugger (see previous section)
-- VSCode internal debugging (recommended)
+1. VSCode connecting as a remote debugger
+1. VSCode internal debugging (recommended)
 
 *${workspace}/.vscode/launch.json*
 ```json
@@ -229,3 +184,20 @@ The launch configuration example shows two debug options:
     ]
 }
 ```
+
+Should you need to play around with different inputs avoid changing the test suite. Instead configure `gitignore.conf.json` to use `baseDir: ./gitignore.input` and `outDir: ../gitignore.output`.
+
+> If you change and debug tests, then you are  *testing*, which means you should not think of *why* or *how* some output is generated but what output you *expect* for given *inputs*.
+
+*Files with gitignore.\* pattern can't be committed accidentally*
+```
+${workspace}/
+    |- test/
+    |   |- gitignore.input/      <-- debug inputs
+    |   |- gitignore.output/     <-- debug outputs
+    |   |- gitignore.conf.json   <-- debug config
+    |   |- input/
+    |   |- output-expected/
+    |   |- output-actual/
+    |   `- package.json
+ ```
