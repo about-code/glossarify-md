@@ -7,73 +7,66 @@ const proc = require("process");
 const glossarify = require("../lib/glossarify");
 const confSchema = require("../conf.schema.json").properties;
 const messages = require("../lib/messages");
-
-const CWD = proc.cwd();
 const {version} = require("../package.json");
 
-console.log(
+const CWD = proc.cwd();
+const banner =
 `┌──────────────────────────┐
 │   glossarify-md v${version}   │
 └──────────────────────────┘
-`)
+`
+console.log(banner);
 
-const opts = Object.assign(
-    {
-        "config": { type: "string",  alias: "c", default: ""   , description: "Path to config file, e.g. './glossarify-md.conf.json'."},
-        "help":   { type: "boolean", alias: "h", default: false, description: "Show this help."}
-    },
-    confSchema
-);
-
-// CLI
-const defaults = minimist([], buildOpts(opts));
-const cliArgs  = minimist(proc.argv.slice(2));
-let conf = {};
+//_/ CLI \______________________________________________________________________
+const optsSchema = Object.assign({
+    "config": {
+        alias: "c",
+        description: "Path to config file, e.g. './glossarify-md.conf.json'."},
+        type: "string",
+        default: "",
+    "help":{
+        alias: "h",
+        description: "Show this help.",
+        type: "boolean",
+        default: false
+    }
+}, confSchema);
+const optsDefault = minimist([], buildOpts(optsSchema));
+const optsCli  = minimist(proc.argv.slice(2));
+let optsFile = {};
 
 // --help (or no args at all)
-if (cliArgs.help || proc.argv.length === 2) {
-    printHelp(opts);
+if (optsCli.help || proc.argv.length === 2) {
+    printOpts(optsSchema);
 }
 // --config
-const confPath = cliArgs.config;
-let confDir = CWD;
+let confDir = "";
+let confPath = optsCli.config;
 if (confPath) {
     try {
-        conf = JSON.parse(fs.readFileSync(path.resolve(CWD, confPath)));
+        confPath = path.resolve(CWD, confPath);
+        optsFile = JSON.parse(fs.readFileSync(confPath));
         confDir = path.dirname(confPath);
     } catch (e) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
     }
+} else {
+    confDir = CWD;
 }
 
-// command-line arguments must take precedence over config file and defaults
-conf = Object.assign(defaults, conf, cliArgs);
-conf.baseDir = path.resolve(confDir, conf.baseDir);
-conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
-validateConfig(conf);
+// Opts precedence: CLI over file over defaults
+const opts = Object.assign(optsDefault, optsFile, optsCli);
+// Resolve 2nd arg paths relative to 1st arg paths...
+opts.baseDir = path.resolve(confDir, opts.baseDir);
+opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
+validateOpts(opts);
 
-// Run
-glossarify.glossarify(conf);
+//_/ Run \______________________________________________________________________
+glossarify.glossarify(opts);
 
-// Helpers
-function printHelp(parameters) {
-    console.log("Options:\n");
-    console.log(
-        Object
-            .keys(parameters)
-            .filter(key => key !== "dev")
-            .sort((a, b) => a.localeCompare(b, "en"))
-            .map(key => {
-                const {alias, type, description, default:_default} = parameters[key];
-                return `--${key}${alias ? ', --' + alias : ''} (${type})\n  ${description}\n  Default: ${JSON.stringify(_default)}\n\n`;
-            })
-            .join("")
-    );
-    process.exit(0);
-}
-
-function validateConfig(conf) {
+//_/ Helpers \__________________________________________________________________
+function validateOpts(conf) {
 
     if (conf.baseDir === "") {
         console.log(messages.NO_BASEDIR);
@@ -88,12 +81,27 @@ function validateConfig(conf) {
     }
 
     console.log(`☛ Reading from: ${conf.baseDir}`);
-    console.log(`☛ Writing to:   ${conf.outDir}
-    `);
+    console.log(`☛ Writing to:   ${conf.outDir}\n`);
 
     if (conf.outDir === conf.baseDir && !conf.force) {
         console.log(messages.OUTDIR_IS_BASEDIR)
         console.log('ABORTED.\n');
         proc.exit(0);
     }
+}
+
+function printOpts(parameters) {
+    console.log("Options:\n");
+    console.log(
+        Object
+            .keys(parameters)
+            .filter(key => key !== "dev")
+            .sort((a, b) => a.localeCompare(b, "en"))
+            .map(key => {
+                const {alias, type, description, default:_default} = parameters[key];
+                return `--${key}${alias ? ', --' + alias : ''} (${type})\n  ${description}\n  Default: ${JSON.stringify(_default)}\n\n`;
+            })
+            .join("")
+    );
+    process.exit(0);
 }
