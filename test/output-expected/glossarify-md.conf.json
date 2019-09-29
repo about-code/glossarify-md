@@ -13,7 +13,6 @@
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
         { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
-        { "file": "./paths/uppercase/Glossary_Uppercase.md" },
         { "file": "./features/aliases_and_synonyms/glossary.md" }
     ],
     "linking": "relative",
