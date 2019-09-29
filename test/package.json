@@ -23,11 +23,10 @@
     "test_07": "npx . --config ./input/config-tailored/config-linking/relative/glossarify-md.conf.json",
     "test_08": "npx . --config ./input/config-tailored/config-linking/absolute-baseUrl/glossarify-md.conf.json",
     "test_09": "npx . --config ./input/cli/precedence/glossarify-md.conf.json --baseUrl cli://localhost --linking absolute",
-    "testlocally": "npx . --config ./input/config-tailored/config-linking/absolute-baseUrl-empty/glossarify-md.conf.json",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
-    "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'"
+    "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'",
   },
   "author": "Andreas Martin",
   "license": "MIT",
