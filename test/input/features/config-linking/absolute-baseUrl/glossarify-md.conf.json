@@ -1,0 +1,19 @@
+{
+    "$schema": "../../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "absolute",
+    "baseUrl": "http://localhost",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md" },
+        { "file": "./sub-1/glossary.md" }
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../../output-actual/features/config-linking/absolute-baseUrl",
+    "dev": {
+        "termsFile": "../../../../output-actual/features/config-linking/absolute-baseUrl/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}
