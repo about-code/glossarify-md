@@ -105,33 +105,36 @@ If you're testing a bugfix or a new feature you need
 1. **one or more *glossary* files ...**
 
    ...with term definitions required for the test goal
-1. **a glossarify-md.conf.json *config* file**...
+1. **a *config* file**...
 
-   ...where its `glossaries` section points to the glossary file(s)
+   ...whose `glossaries` section points to the glossary file(s)
 
-> Rules of thumb:
+> Conventions
 >
-> - each bugfix or feature should   have its distinct glossary and document input files
-> - extend a config if the feature under test has its own config
-> - extend `./input/glossarify-md.conf.json` default config if the test cases *doesn't* need a special config
-> - add a new config and run tests with a particular config if they are to be run separately/independently. See next section.
+> - each bugfix or feature should have its distinct glossary and document input files
+> - tests which need a particular configuration reside in `./input/config-tailored`
+>   - more see *Running Tests with a particular Configuation*
+> - tests which can reuse the default configuration reside in `./input/config-shared`
+>   - just add glossary files to the `glossaries` section of `./input/glossarify-md.conf.json`
 
 #### Running Tests with a particular Configuration
-
-If you need to test with a particular glossarify-md configuration then
 
 1. add a new `./input/config-tailored/foo` directory or extend an existing one
 1. add a new `./input/config-tailored/foo/glossarify-md.conf.json`
 1. add a new test script in `${workspace}/test/package.json`
    - `"test_{#nr}": "npx . --config=./input/config-tailored/foo/glossarify-md.conf.json"`
 
-
-*./input/features/foo/glossarify-md.conf.json*
+*./input/features/foo/glossarify-md.conf.json (sample)*
 ```json
 {
     "baseDir": ".",
     "outDir": "../../../output-actual/config-tailored/foo`",
-    "...": "...additional config...",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
     "dev": {
         "termsFile": "../../../output-actual/config-tailored/foo/terms.json"
     }
@@ -141,11 +144,10 @@ If you need to test with a particular glossarify-md configuration then
 ## Debugging
 
 ```
-cd ./test
 npm run debug
 ```
 
-starts a remote debug session on `127.0.0.1:9229`. It assumes there is a *glossary-md* configuration with name `./gitignore.conf.json`. To debug an arbitrary configuration use
+starts a remote debug session on `127.0.0.1:9229`. It assumes there is a *glossary-md* configuration with name `./test/gitignore.conf.json`. To debug an arbitrary configuration use
 
 ```
 npm run debug-cfg -- ./path/to/glossary-md.conf.json
@@ -157,7 +159,7 @@ You can now connect e.g. with
 - *Firefox Browser* ⇨ URL-Bar: `about:debugging`
 - *VSCode*
 
-The launch configuration example for VSCode below offers two debug options:
+A launch configuration example for [VSCode](https://code.visualstudio.com) below offers two debug options:
 
 1. VSCode connecting as a remote debugger
 1. VSCode internal debugging (recommended)
@@ -190,11 +192,14 @@ The launch configuration example for VSCode below offers two debug options:
 }
 ```
 
-Should you need to play around with different inputs avoid changing the test suite. Instead configure `gitignore.conf.json` to use `baseDir: ./gitignore.input` and `outDir: ../gitignore.output`.
+Should you need to play around/analyse different inputs avoid changing the test suite. Instead configure `gitignore.conf.json` to use
 
-> If you change and debug tests, then you are  *testing*, which means you should not think of *why* or *how* some output is generated but what output you *expect* for given *inputs*.
+ - `"baseDir": "./gitignore.input"`
+ - `"outDir": "../gitignore.output"`
 
-*Files with gitignore.\* pattern can't be committed accidentally*
+ and put input files in `baseDir` directory.
+
+*Files with gitignore.\* are excluded from revision control*
 ```
 ${workspace}/
     |- test/
