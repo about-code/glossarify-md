@@ -1,0 +1,34 @@
+[
+  {
+    "shortDesc": "",
+    "term": "Term1",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#term1",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-baseUrl/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-baseUrl/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term2",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#term2",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-baseUrl/sub-1/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-baseUrl/sub-1/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  }
+]

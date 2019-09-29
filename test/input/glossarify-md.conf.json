@@ -1,24 +1,20 @@
 {
     "$schema": "../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../output-actual",
+    "baseDir": "./config-shared",
+    "outDir": "../../output-actual/config-shared",
     "includeFiles": ["."],
-    "excludeFiles": [
-        "**/*exclude*/**",
-        "**/config-ignoreCase-true/**",
-        "**/config-ignoreCase-false/**",
-        "**/config-glossaries/**"
-    ],
+    "excludeFiles": [],
     "keepRawFiles": [],
     "glossaries": [
-        { "file": "./glossary.md", "termHint": "↴"},
-        { "file": "./glossary_formatted.md", "termHint": "ⓕ"},
-        { "file": "./features/aliases_and_synonyms/glossary.md" }
+        { "file": "./markdown/glossary.md", "termHint": "↴" },
+        { "file": "./substring_behavior/glossary.md", "termHint": ""},
+        { "file": "./term_descriptions/glossary.md", "termHint": "ⓕ"},
+        { "file": "./aliases_and_synonyms/glossary.md", "termHint": ""}
     ],
     "linking": "relative",
     "ignoreCase": false,
     "dev": {
-        "termsFile": "../output-actual/terms.json",
+        "termsFile": "../../output-actual/config-shared/terms.json",
         "printInputAst": false,
         "printOutputAst": false
     }

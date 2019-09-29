@@ -1,5 +1,6 @@
-# Testing option `excludeFiles`.
+# Testing option `excludeFiles`
 
-GIVEN this file is excluded
-THEN the term "Lorem ipsum" MUST NOT be replaced
-AND the file MUST NOT exist in 'output-expected.
+GIVEN option 'excludeFiles' WITH pattern `excludeFile*`
+AND this file having name 'excludeFile.md' matching the pattern
+THEN term 'Term' MUST NOT be replaced
+AND the file MUST NOT exist in 'output-expected'.

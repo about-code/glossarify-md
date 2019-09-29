@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-tailored/config-excludeFiles/",
+    "includeFiles": ["."],
+    "excludeFiles": [
+        "excludeFile*",
+        "**/exclude*/**"
+    ],
+    "glossaries": [
+        { "file": "glossary.md", "termHint": ""}
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../../output-actual/config-tailored/config-excludeFiles/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}
