@@ -1,7 +1,7 @@
 {
   "name": "glossarify-md-testsuite",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "glossarify-md test scripts",
   "main": "../bin/index.js",
   "scripts": {
