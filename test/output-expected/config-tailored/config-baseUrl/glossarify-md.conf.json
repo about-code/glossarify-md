@@ -5,9 +5,7 @@
     "linking": "absolute",
     "outDir": "../../../output-actual/config-tailored/config-baseUrl/",
     "includeFiles": ["."],
-    "excludeFiles": [
-        "**/*exclude*/**"
-    ],
+    "excludeFiles": [],
     "glossaries": [
         { "file": "./glossary.md", "termHint": ""},
         { "file": "./sub-1/glossary.md", "termHint": ""}
