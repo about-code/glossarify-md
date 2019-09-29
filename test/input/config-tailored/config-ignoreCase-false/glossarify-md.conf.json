@@ -3,9 +3,7 @@
     "baseDir": ".",
     "linking": "relative",
     "includeFiles": ["."],
-    "excludeFiles": [
-        "**/*exclude*/**"
-    ],
+    "excludeFiles": [],
     "glossaries": [
         { "file": "./glossary.md"}
     ],
