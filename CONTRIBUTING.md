@@ -114,7 +114,7 @@ If you're testing a bugfix or a new feature you need
 > - each bugfix or feature should have its distinct glossary and document input files
 > - tests which need a particular configuration reside in `./input/config-tailored`
 >   - more see *Running Tests with a particular Configuation*
-> - tests which can reuse the default configuration reside in `./input/config-shared`
+> - tests which can reuse a default configuration reside in `./input/config-shared`
 >   - just add glossary files to the `glossaries` section of `./input/glossarify-md.conf.json`
 
 #### Running Tests with a particular Configuration
