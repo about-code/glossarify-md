@@ -1,6 +1,6 @@
 {
-    "$schema": "../../conf.schema.json",
-    "baseDir": "./config-shared",
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
     "outDir": "../../output-actual/config-shared",
     "includeFiles": ["."],
     "excludeFiles": [],

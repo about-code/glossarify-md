@@ -1,8 +1,8 @@
 {
-    "$schema": "../../../../conf.schema.json",
+    "$schema": "../../../../../conf.schema.json",
     "baseUrl": "file://localhost",
     "baseDir": ".",
-    "outDir": "../../../output-actual/cli/precedence",
+    "outDir": "../../../../output-actual/config-tailored/config-cli/precedence",
     "includeFiles": ["."],
     "excludeFiles": [],
     "keepRawFiles": [],
