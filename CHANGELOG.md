@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/about-code/glossarify-md/compare/v1.1.3...v2.0.0) (2019-09-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* **cli:** No `--baseDir` and `--outDir` default values anymore. Asks for explicit values.
+* **cli:** Now stops if `--baseDir` and `--outDir` resolve to same directory to prevent overriding sources. Can be ignored with `--force` flag.
+* **cli:** CLI options now take precedence over config file options. CLI opts used together with config file opts caused config file opts to become effective.
+
+### Bug Fixes
+
+* **cli:** CLI argument handling and defaults ([c55cee0](https://github.com/about-code/glossarify-md/commit/c55cee0))
+* **dev:** Make 'npm run commit-baseline' run tests first, reset git index before commit and include new test artifacts in commit. ([19fd039](https://github.com/about-code/glossarify-md/commit/19fd039))
+* Runtime error 'path.absolute is not a function' for 'linking: absolute' and 'baseUrl: ""'. ([538c65d](https://github.com/about-code/glossarify-md/commit/538c65d))
+
+
+### Documentation Updates
+
+* **CONTRIBUTING.md:** Adapt to restructurings of testsuite ([27be1cf](https://github.com/about-code/glossarify-md/commit/27be1cf))
+* **CONTRIBUTING.md:** Explain expect-and-review workflow. Fix Debugging section. ([b57231b](https://github.com/about-code/glossarify-md/commit/b57231b))
+* **CONTRIBUTING.md:** Less verbose 'Debugging' section. Show debugging with arbitrary config. ([c670749](https://github.com/about-code/glossarify-md/commit/c670749))
+
+
 ### [1.1.3](https://github.com/about-code/glossarify-md/compare/v1.1.2...v1.1.3) (2019-09-26)
 
 
