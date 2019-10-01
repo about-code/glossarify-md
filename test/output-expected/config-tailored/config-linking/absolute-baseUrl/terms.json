@@ -1,6 +1,6 @@
 [
   {
-    "shortDesc": "",
+    "shortDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
     "term": "First-Level-Child",
     "hint": "",
     "longDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
@@ -16,7 +16,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
     "term": "First-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
@@ -32,7 +32,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
     "term": "Second-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
@@ -48,7 +48,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",
     "term": "Sibling",
     "hint": "",
     "longDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",

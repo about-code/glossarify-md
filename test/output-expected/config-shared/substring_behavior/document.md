@@ -42,14 +42,14 @@ THEN ['ÄÖÜ'][6] MUST be linked as a single term to its definition of ['ÄÖÜ
  AND ['ÄÖÜ'][6] MUST NOT be split by a link to the definition of ['ÄÖ'][5]
  AND ['ÄÖÜ'][6] MUST NOT be split by a link to the definition of '[Ä][4]'
 
-[1]: glossary.md#a
+[1]: glossary.md#a "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'"
 
-[2]: glossary.md#ab
+[2]: glossary.md#ab "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'"
 
-[3]: glossary.md#abc
+[3]: glossary.md#abc "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it"
 
-[4]: glossary.md#ä
+[4]: glossary.md#ä "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'"
 
-[5]: glossary.md#äö
+[5]: glossary.md#äö "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'"
 
-[6]: glossary.md#äöü
+[6]: glossary.md#äöü "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it"
