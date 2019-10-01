@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Bug Fixes
 
+* Short description sometimes not correctly extracted ([#30](https://github.com/about-code/glossarify-md/issues/30)) ([eff54b4](https://github.com/about-code/glossarify-md/commit/eff54b4))
 * **cli:** CLI argument handling and defaults ([c55cee0](https://github.com/about-code/glossarify-md/commit/c55cee0))
 * **dev:** Make 'npm run commit-baseline' run tests first, reset git index before commit and include new test artifacts in commit. ([19fd039](https://github.com/about-code/glossarify-md/commit/19fd039))
 * Runtime error 'path.absolute is not a function' for 'linking: absolute' and 'baseUrl: ""'. ([538c65d](https://github.com/about-code/glossarify-md/commit/538c65d))
