@@ -101,7 +101,7 @@ If you're testing a bugfix or a new feature you need
 
 1. **one or more *document* files...**
 
-   ...with term usages in sentences that specify the test case and acceptance criteria in a `GIVEN <condition> THEN <expectation> [AND (<expectation>)] [OR (<expectation>)]`
+   ...with term usages in sentences that specify the test case and acceptance criteria in a `GIVEN <condition> [AND|OR <condition>] THEN <expectation> [AND|OR <expectation>]` syntax
 1. **one or more *glossary* files ...**
 
    ...with term definitions required for the test goal
