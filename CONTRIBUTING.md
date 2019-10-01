@@ -112,12 +112,13 @@ If you're testing a bugfix or a new feature you need
 > Conventions
 >
 > - each bugfix or feature should have its distinct glossary and document input files
+> - tests which don't need a special configuration reside in `./input/config-shared`
+>   - just add any glossary files to the `glossaries` section of `./input/config-shared/glossarify-md.conf.json`
 > - tests which need a particular configuration reside in `./input/config-tailored`
->   - more see *Running Tests with a particular Configuation*
-> - tests which can reuse a default configuration reside in `./input/config-shared`
->   - just add glossary files to the `glossaries` section of `./input/glossarify-md.conf.json`
+>   - more see *Running Tests with a Tailored Configuation*
 
-#### Running Tests with a particular Configuration
+
+#### Running Tests with a Tailored Configuration
 
 1. add a new `./input/config-tailored/foo` directory or extend an existing one
 1. add a new `./input/config-tailored/foo/glossarify-md.conf.json`
