@@ -1,0 +1,66 @@
+[
+  {
+    "shortDesc": "",
+    "term": "First-Level-Child",
+    "hint": "",
+    "longDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
+    "anchor": "#first-level-child",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-linking/absolute-baseUrl/sub-1/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/absolute-baseUrl/sub-1/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "First-Level-Parent",
+    "hint": "",
+    "longDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
+    "anchor": "#first-level-parent",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-linking/absolute-baseUrl/sub-1/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/absolute-baseUrl/sub-1/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Second-Level-Parent",
+    "hint": "",
+    "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
+    "anchor": "#second-level-parent",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-linking/absolute-baseUrl/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/absolute-baseUrl/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Sibling",
+    "hint": "",
+    "longDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",
+    "anchor": "#sibling",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-linking/absolute-baseUrl/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/absolute-baseUrl/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  }
+]

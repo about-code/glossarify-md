@@ -7,14 +7,14 @@
             "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line.",
             "type": "string",
             "alias": "d",
-            "default": "./src"
+            "default": ""
         },
         "baseUrl": {
             "description": "The base url to use when creating absolute links to glossary.",
             "type": "string",
             "format": "url",
             "alias": "b",
-            "default": "http://127.0.0.1/"
+            "default": "http://127.0.0.1"
         },
         "excludeFiles": {
             "description": "An array of files or file name patterns that should not be included in any processing.",
@@ -24,6 +24,11 @@
             },
             "alias": "e",
             "default": ["node_modules", ".git"]
+        },
+        "force": {
+            "description": "Choose true, only if you know the consequences.",
+            "type": "boolean",
+            "default": false
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
@@ -74,7 +79,7 @@
             "description": "Path to directory where to write processed files to.",
             "type": "string",
             "alias": "o",
-            "default": "./target"
+            "default": ""
         },
         "dev": {
             "descriptions": "Options for testing and debugging",

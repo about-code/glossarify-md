@@ -1,0 +1,22 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-tailored/config-glossaries/",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./disjunct-terms-glossary-a.md", "termHint": " (a/b)"},
+        { "file": "./disjunct-terms-glossary-b.md", "termHint": " (a/b)"},
+        { "file": "./shared-terms-glossary-a.md", "termHint": " (a&b)"},
+        { "file": "./shared-terms-glossary-b.md", "termHint": " (a&b)"},
+        { "file": "./Uppercase-glossary.md", "termHint": ""},
+        { "file": "./unicode-glossary.md", "termHint": ""}
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../../output-actual/config-tailored/config-glossaries/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

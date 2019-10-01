@@ -1,0 +1,18 @@
+[
+  {
+    "shortDesc": "",
+    "term": "Term",
+    "hint": "",
+    "longDesc": "must not be referred to by excluded files.",
+    "anchor": "#term",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-excludeFiles/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-excludeFiles/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  }
+]

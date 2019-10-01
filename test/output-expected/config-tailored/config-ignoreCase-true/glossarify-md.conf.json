@@ -1,0 +1,17 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": true,
+    "outDir": "../../../output-actual/config-tailored/config-ignoreCase-true",
+    "dev": {
+        "termsFile": "../../../output-actual/config-tailored/config-ignoreCase-true/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

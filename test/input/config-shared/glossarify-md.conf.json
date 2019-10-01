@@ -1,0 +1,21 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../output-actual/config-shared",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./markdown/glossary.md", "termHint": "↴" },
+        { "file": "./substring_behavior/glossary.md", "termHint": ""},
+        { "file": "./term_descriptions/glossary.md", "termHint": "ⓕ"},
+        { "file": "./aliases_and_synonyms/glossary.md", "termHint": ""}
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../output-actual/config-shared/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

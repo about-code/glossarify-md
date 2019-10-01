@@ -17,6 +17,8 @@ jobs:
       shell: bash
       run: |
         npm install
+        cd ./test
+        npm install
         npm test
       env:
         CI: true

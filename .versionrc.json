@@ -4,6 +4,7 @@
         {"type": "fix", "section": "Bug Fixes"},
         {"type": "chore", "hidden": true},
         {"type": "doc", "section": "Documentation Updates"},
+        {"type": "docs", "section": "Documentation Updates"},
         {"type": "style", "hidden": true},
         {"type": "refactor", "hidden": true},
         {"type": "perf", "hidden": true},

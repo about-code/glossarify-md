@@ -13,9 +13,10 @@
   "scripts": {
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./test/gitignore.conf.json",
+    "debug-cfg": "node --inspect-brk ./bin/index.js --config",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
-    "test-release": "standard-version --dry-run",
+    "dry-release": "standard-version --dry-run",
     "alpha-release": "standard-version --prerelease alpha",
     "beta-release": "standard-version --prerelease beta",
     "stable-release": "standard-version"
@@ -41,7 +42,10 @@
     "book",
     "vuepress"
   ],
-  "author": "Andreas Martin",
+  "author": {
+    "name": "Andreas Martin",
+    "email": "about-code@users.noreply.github.com"
+  },
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^8.1.0",
