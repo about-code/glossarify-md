@@ -24,6 +24,11 @@ All notable changes to this project will be documented in this file. See [standa
 * **CONTRIBUTING.md:** Adapt to restructurings of testsuite ([27be1cf](https://github.com/about-code/glossarify-md/commit/27be1cf))
 * **CONTRIBUTING.md:** Explain expect-and-review workflow. Fix Debugging section. ([b57231b](https://github.com/about-code/glossarify-md/commit/b57231b))
 * **CONTRIBUTING.md:** Less verbose 'Debugging' section. Show debugging with arbitrary config. ([c670749](https://github.com/about-code/glossarify-md/commit/c670749))
+
+
+### Features
+
+* Option to let user define position of term hint ([#10](https://github.com/about-code/glossarify-md/issues/10)) ([0569652](https://github.com/about-code/glossarify-md/commit/0569652))
 -->
 
 ### [1.1.3](https://github.com/about-code/glossarify-md/compare/v1.1.2...v1.1.3) (2019-09-26)

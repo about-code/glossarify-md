@@ -128,7 +128,7 @@ If you're testing a bugfix or a new feature you need
 ```json
 {
     "baseDir": ".",
-    "outDir": "../../../output-actual/config-tailored/foo`",
+    "outDir": "../../../output-actual/config-tailored/foo",
     "linking": "relative",
     "includeFiles": ["."],
     "excludeFiles": [],

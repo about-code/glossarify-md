@@ -225,6 +225,70 @@
   },
   {
     "shortDesc": "",
+    "term": "Term-Hint-Prefix",
+    "hint": "☛ ${term}",
+    "longDesc": "",
+    "anchor": "#term-hint-prefix",
+    "glossary": {
+      "file": "./term-hint-prefix-glossary.md",
+      "termHint": "☛ ${term}",
+      "basePath": "/{redacted}/input/config-tailored/config-glossaries/term-hint-prefix-glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-glossaries/term-hint-prefix-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Suffix",
+    "hint": "${term} ☚",
+    "longDesc": "",
+    "anchor": "#term-hint-suffix",
+    "glossary": {
+      "file": "./term-hint-suffix-glossary.md",
+      "termHint": "${term} ☚",
+      "basePath": "/{redacted}/input/config-tailored/config-glossaries/term-hint-suffix-glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-glossaries/term-hint-suffix-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Suffix-Default",
+    "hint": "↴",
+    "longDesc": "",
+    "anchor": "#term-hint-suffix-default",
+    "glossary": {
+      "file": "./term-hint-suffix-default-glossary.md",
+      "termHint": "↴",
+      "basePath": "/{redacted}/input/config-tailored/config-glossaries/term-hint-suffix-default-glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-glossaries/term-hint-suffix-default-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Wrapped",
+    "hint": "☛ ${term} ☚",
+    "longDesc": "",
+    "anchor": "#term-hint-wrapped",
+    "glossary": {
+      "file": "./term-hint-wrapped-glossary.md",
+      "termHint": "☛ ${term} ☚",
+      "basePath": "/{redacted}/input/config-tailored/config-glossaries/term-hint-wrapped-glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-glossaries/term-hint-wrapped-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
     "term": "Uppercase",
     "hint": "",
     "longDesc": "",
