@@ -95,6 +95,8 @@ As you can see it's possible to have multiple glossary files. Multiple glossarie
 
 Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
 
+> **Since v2.0.0**: If you need more control about placement of a term hint, you can use `${term}` as a placeholder in term hints. For example, `☛ ${term}` adds `☛ ` in front of the term.
+
 ## Result
 
 Terms in glossaries have been augmented with anchor links.
