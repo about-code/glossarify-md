@@ -1,7 +1,7 @@
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
+<!--
 ## [2.0.0](https://github.com/about-code/glossarify-md/compare/v1.1.3...v2.0.0) (2019-09-30)
 
 
@@ -23,7 +23,7 @@ All notable changes to this project will be documented in this file. See [standa
 * **CONTRIBUTING.md:** Adapt to restructurings of testsuite ([27be1cf](https://github.com/about-code/glossarify-md/commit/27be1cf))
 * **CONTRIBUTING.md:** Explain expect-and-review workflow. Fix Debugging section. ([b57231b](https://github.com/about-code/glossarify-md/commit/b57231b))
 * **CONTRIBUTING.md:** Less verbose 'Debugging' section. Show debugging with arbitrary config. ([c670749](https://github.com/about-code/glossarify-md/commit/c670749))
-
+-->
 
 ### [1.1.3](https://github.com/about-code/glossarify-md/compare/v1.1.2...v1.1.3) (2019-09-26)
 
