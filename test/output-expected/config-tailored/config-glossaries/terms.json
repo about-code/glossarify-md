@@ -1,6 +1,6 @@
 [
   {
-    "shortDesc": "",
+    "shortDesc": "Testing German Umlauts.",
     "term": "äöüß Term begins with Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -16,7 +16,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
     "term": "Äquator",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
@@ -32,7 +32,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Word ends with symbols",
     "term": "China中国",
     "hint": "",
     "longDesc": "Word ends with symbols",
@@ -48,7 +48,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Word contains symbols",
     "term": "Chi中国na",
     "hint": "",
     "longDesc": "Word contains symbols",
@@ -64,7 +64,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
     "term": "Der Tod und das Mädchen",
     "hint": "",
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
@@ -80,7 +80,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "term": "Faß",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
@@ -96,7 +96,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Testing German Umlauts.",
     "term": "Term contains äöüß Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -112,7 +112,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
     "term": "Term Disjunct A",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
@@ -128,7 +128,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
     "term": "Term Disjunct B",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
@@ -144,7 +144,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Testing German Umlauts.",
     "term": "Term ends with Umlauts äöüß",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -160,7 +160,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "term": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -176,7 +176,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "term": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -192,7 +192,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "term": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -208,7 +208,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "term": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -240,7 +240,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "China (spelling)",
     "term": "zhōngguó",
     "hint": "",
     "longDesc": "China (spelling)",
@@ -256,7 +256,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Word begins and ends with symbols",
     "term": "中China国",
     "hint": "",
     "longDesc": "Word begins and ends with symbols",
@@ -272,7 +272,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "China",
     "term": "中国",
     "hint": "",
     "longDesc": "China",
@@ -288,7 +288,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "Word begins with symbols",
     "term": "中国China",
     "hint": "",
     "longDesc": "Word begins with symbols",

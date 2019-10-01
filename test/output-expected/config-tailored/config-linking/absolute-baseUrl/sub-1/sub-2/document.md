@@ -6,6 +6,6 @@ GIVEN option 'linking: absolute'
 AND option 'baseUrl: ${baseUrl}'
 THEN term '[Second-Level-Parent][2]' MUST be linked by an absolute URL '${baseUrl}/glossary.md#second-level-parent'
 
-[1]: http://localhost/sub-1/glossary.md#first-level-parent
+[1]: http://localhost/sub-1/glossary.md#first-level-parent "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'"
 
-[2]: http://localhost/glossary.md#second-level-parent
+[2]: http://localhost/glossary.md#second-level-parent "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'"

@@ -26,12 +26,19 @@ AND alias [zhōng中国guó][5]
 WITH aliases containing non-ASCII unicode characters
 THEN all aliases MUST still be separated and linked correctly
 
-[1]: glossary.md#term-1
+[1]: glossary.md#term-1 "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
+subsequent comma-separated words MUST be detected as the term's aliases."
 
-[2]: glossary.md#term-2
+[2]: glossary.md#term-2 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+subsequent comma-separated words MUST be detected as the term's aliases."
 
-[3]: glossary.md#term-3
+[3]: glossary.md#term-3 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+subsequent comma-separated lines of words MUST be detected as the term's aliases."
 
-[4]: glossary.md#term-4
+[4]: glossary.md#term-4 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
+line THEN the subsequent comma-separated lines of words MUST be detected as the
+term's aliases."
 
-[5]: glossary.md#china
+[5]: glossary.md#china "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
+AND aliases contain unicode word characters
+THEN they MUST still be separated correctly"

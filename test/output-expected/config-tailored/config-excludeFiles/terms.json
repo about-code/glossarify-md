@@ -1,6 +1,6 @@
 [
   {
-    "shortDesc": "",
+    "shortDesc": "must not be referred to by excluded files.",
     "term": "Term",
     "hint": "",
     "longDesc": "must not be referred to by excluded files.",

@@ -1,6 +1,6 @@
 [
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "term": "'ÄÖ'",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
@@ -16,7 +16,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "term": "'ÄÖÜ'",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
@@ -32,7 +32,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "term": "A",
     "hint": "",
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
@@ -48,7 +48,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "term": "Ä",
     "hint": "",
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
@@ -64,7 +64,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "term": "AB",
     "hint": "",
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
@@ -80,7 +80,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "term": "ABC",
     "hint": "",
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
@@ -96,7 +96,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
     "term": "China",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
@@ -117,7 +117,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "foo",
     "term": "dolor",
     "hint": "↴",
     "longDesc": "foo",
@@ -127,6 +127,22 @@
       "termHint": "↴",
       "basePath": "/{redacted}/input/config-shared/markdown/glossary.md",
       "outPath": "/{redacted}/output-actual/config-shared/markdown/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "",
+    "term": "Formatted Term Definitions",
+    "hint": "ⓕ",
+    "longDesc": "",
+    "anchor": "#formatted-term-definitions",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -293,6 +309,70 @@
     "ignoreCase": false
   },
   {
+    "shortDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "term": "Single sentence accross multiple lines",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "anchor": "#single-sentence-accross-multiple-lines",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "term": "Single sentence terminated by exclamation mark",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "anchor": "#single-sentence-terminated-by-exclamation-mark",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "term": "Single sentence terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "anchor": "#single-sentence-terminated-by-full-stop",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "term": "Single sentence terminated by question mark",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "anchor": "#single-sentence-terminated-by-question-mark",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
     "shortDesc": "",
     "term": "sit",
     "hint": "↴",
@@ -309,7 +389,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "term": "Term 1",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -329,7 +409,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "term": "Term 2",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -349,7 +429,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
     "term": "Term 3",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
@@ -369,7 +449,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
     "term": "Term 4",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
@@ -389,7 +469,7 @@
     "ignoreCase": false
   },
   {
-    "shortDesc": "",
+    "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
     "term": "Term 5",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
@@ -405,6 +485,54 @@
       "T5-Alias1",
       "T5-Alias2"
     ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
+    "term": "Two sentences accross multiple lines terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
+    "anchor": "#two-sentences-accross-multiple-lines-terminated-by-full-stop",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "term": "Two sentences in a single line terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
+    "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "term": "Two sentences in multiple lines terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
+    "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
+    "glossary": {
+      "file": "./term_descriptions/glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
     "ignoreCase": false
   },
   {
