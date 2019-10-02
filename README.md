@@ -124,7 +124,9 @@ Most occurrences of a term have been replaced with a link to its glossary defini
 ```md
 # Demo
 
-This is a text which uses a *[Glossary Term ↴](../glossary.md#glossary-term)* to describe something.
+This is a text which uses a *[Glossary Term ↴][1]* to describe something.
+
+[1]: ../glossary.md#glossary-term "A glossary term has a short description."
 ```
 
 ## Options
