@@ -115,7 +115,7 @@ If you're testing a bugfix or a new feature you need
 > - tests which don't need a special configuration reside in `./input/config-shared`
 >   - just add any glossary files to the `glossaries` section of `./input/config-shared/glossarify-md.conf.json`
 > - tests which need a particular configuration reside in `./input/config-tailored`
->   - more see *Running Tests with a Tailored Configuation*
+>   - more see *Running Tests with a Tailored Configuration*
 
 
 #### Running Tests with a Tailored Configuration
@@ -151,7 +151,7 @@ npm run debug
 starts a remote debug session on `127.0.0.1:9229`. It assumes there is a *glossary-md* configuration with name `./test/gitignore.conf.json`. To debug an arbitrary configuration use
 
 ```
-npm run debug-cfg -- ./path/to/glossary-md.conf.json
+npm run debug-cfg -- ./path/to/glossarify-md.conf.json
 ```
 
 You can now connect e.g. with
