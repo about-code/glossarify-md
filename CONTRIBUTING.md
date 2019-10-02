@@ -157,7 +157,6 @@ npm run debug-cfg -- ./path/to/glossarify-md.conf.json
 You can now connect e.g. with
 
 - *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
-- *Firefox Browser* ⇨ URL-Bar: `about:debugging`
 - *VSCode*
 
 A launch configuration example for [VSCode](https://code.visualstudio.com) below offers two debug options:
