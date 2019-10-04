@@ -157,6 +157,10 @@ Path to directory where to search for the glossary and markdown files. All paths
 Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
 want to ignore certain markdown files from being modified.
 
+### `--experimentalFootnotes`
+
+Enable support for markdown footnote syntax as defined at https://pandoc.org/MANUAL.html#footnotes. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at https://spec.commonmark.org.
+
 ### `--glossaries`
 
 - **Range:** Array&lt;{file: string, [termHint: string]}&gt;
