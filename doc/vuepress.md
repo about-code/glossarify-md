@@ -40,6 +40,7 @@ npm i --save glossarify-md
     "outDir": "../target",
     "includeFiles": ["."],
     "excludeFiles": ["**/*.exclude.md"],
+    "experimentalFootnotes": true,
     "keepRawFiles": ["**/*.raw.md"],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
@@ -55,6 +56,8 @@ npm i --save glossarify-md
 > **☛ Note:** Consider adding the target of `outDir` to *.gitignore*.
 
 > **☛ Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` (src) rather than being children of it. This reduces the number of files being copied from `baseDir` to `outDir` (target) and could improve build times if there are many static assets. Relative paths may just become a bit longer.
+
+> **☛ Since v2.1.0** you can enable `experimentalFootnotes` if you use *vuepress* with [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote) plug-in.
 
 ## Configure *vuepress*
 

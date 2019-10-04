@@ -4,6 +4,7 @@
     "outDir": "../../output-actual/config-shared",
     "includeFiles": ["."],
     "excludeFiles": [],
+    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
         { "file": "./markdown/glossary.md", "termHint": "↴" },
