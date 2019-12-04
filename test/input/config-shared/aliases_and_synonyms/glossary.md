@@ -41,6 +41,44 @@ AND the comment ends with a trailing comma
 THEN this MUST NOT result in an infinite loop or out-of-memory error
 as has been reported in #26
 
+## Alias substring behavior
+
+### Issue
+<!-- Aliases: Issues -->
+GIVEN a term "Issue"
+AND an alias "Issues" WHERE *the alias* begins with the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### OUR
+<!-- Aliases: FLOURISH -->
+GIVEN a term "OUR"
+AND an alias "FLOURISH" WHERE *the alias* includes the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### FIELD
+<!-- Aliases: GREENFIELD -->
+GIVEN a term "FIELD"
+AND an alias "GREENFIELD" WHERE *the alias* ends with the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### Hopefully
+<!-- Aliases: Hope -->
+GIVEN a term "Hopefully"
+AND an alias "Hope" WHERE *the term* begins with the alias
+THEN the alias MUST still be linked to the term, correctly.
+
+### Flower
+<!-- Aliases: lower -->
+GIVEN a term "Flower"
+AND an alias "lower" WHERE *the term* ends with the alias
+THEN the alias MUST still be linked to the term, correctly.
+
+### Friendship
+<!-- Aliases: end -->
+GIVEN a term "Friendship"
+AND an alias "end" WHERE *the term* includes the alias
+THEN the alias MUST be linked to the term, correctly.
+
 
 ## Unicode Support
 
@@ -49,7 +87,3 @@ as has been reported in #26
 GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND aliases contain unicode word characters
 THEN they MUST still be separated correctly
-
-## Issue
-<!-- Aliases: Issues -->
-Damit wird der Verstoß gegen eine SonarQube-Regel bezeichnet.

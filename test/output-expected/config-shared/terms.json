@@ -96,6 +96,22 @@
     "ignoreCase": false
   },
   {
+    "shortDesc": "",
+    "term": "Alias substring behavior",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#alias-substring-behavior",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false
+  },
+  {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
     "term": "China",
     "hint": "",
@@ -133,6 +149,42 @@
     "ignoreCase": false
   },
   {
+    "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "term": "FIELD",
+    "hint": "",
+    "longDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "anchor": "#field",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "GREENFIELD"
+    ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "term": "Flower",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "anchor": "#flower",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "lower"
+    ],
+    "ignoreCase": false
+  },
+  {
     "shortDesc": "",
     "term": "Formatted Term Definitions",
     "hint": "ⓕ",
@@ -146,6 +198,24 @@
     },
     "regex": {},
     "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
+    "term": "Friendship",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
+    "anchor": "#friendship",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "end"
+    ],
     "ignoreCase": false
   },
   {
@@ -293,6 +363,42 @@
     "ignoreCase": false
   },
   {
+    "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "term": "Hopefully",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "anchor": "#hopefully",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "Hope"
+    ],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "term": "Issue",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "anchor": "#issue",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "Issues"
+    ],
+    "ignoreCase": false
+  },
+  {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
     "term": "Lorem ipsum",
     "hint": "↴",
@@ -306,6 +412,24 @@
     },
     "regex": {},
     "aliases": [],
+    "ignoreCase": false
+  },
+  {
+    "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "term": "OUR",
+    "hint": "",
+    "longDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "anchor": "#our",
+    "glossary": {
+      "file": "./aliases_and_synonyms/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "FLOURISH"
+    ],
     "ignoreCase": false
   },
   {
