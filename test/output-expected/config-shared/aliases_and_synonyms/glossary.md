@@ -51,6 +51,56 @@ AND the comment ends with a trailing comma
 THEN this MUST NOT result in an infinite loop or out-of-memory error
 as has been reported in #26
 
+## [Alias substring behavior](#alias-substring-behavior)
+
+### [Issue](#issue)
+
+<!-- Aliases: Issues -->
+
+GIVEN a term "Issue"
+AND an alias "Issues" WHERE _the alias_ begins with the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### [OUR](#our)
+
+<!-- Aliases: FLOURISH -->
+
+GIVEN a term "OUR"
+AND an alias "FLOURISH" WHERE _the alias_ includes the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### [FIELD](#field)
+
+<!-- Aliases: GREENFIELD -->
+
+GIVEN a term "FIELD"
+AND an alias "GREENFIELD" WHERE _the alias_ ends with the term
+THEN the alias MUST still be linked to the term, correctly.
+
+### [Hopefully](#hopefully)
+
+<!-- Aliases: Hope -->
+
+GIVEN a term "Hopefully"
+AND an alias "Hope" WHERE _the term_ begins with the alias
+THEN the alias MUST still be linked to the term, correctly.
+
+### [Flower](#flower)
+
+<!-- Aliases: lower -->
+
+GIVEN a term "Flower"
+AND an alias "lower" WHERE _the term_ ends with the alias
+THEN the alias MUST still be linked to the term, correctly.
+
+### [Friendship](#friendship)
+
+<!-- Aliases: end -->
+
+GIVEN a term "Friendship"
+AND an alias "end" WHERE _the term_ includes the alias
+THEN the alias MUST be linked to the term, correctly.
+
 ## [Unicode Support](#unicode-support)
 
 ### [China](#china)
