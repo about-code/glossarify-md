@@ -25,3 +25,7 @@ AND alias 中zhōngguó国
 AND alias zhōng中国guó
 WITH aliases containing non-ASCII unicode characters
 THEN all aliases MUST still be separated and linked correctly
+
+Given a term "Issue"
+AND alias Issues
+THEN occurrences of the alias MUST be linked with the terms definition.

@@ -60,3 +60,7 @@ as has been reported in #26
 GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND aliases contain unicode word characters
 THEN they MUST still be separated correctly
+
+## [Issue](#issue)
+<!-- Aliases: Issues -->
+Damit wird der Verstoß gegen eine SonarQube-Regel bezeichnet.

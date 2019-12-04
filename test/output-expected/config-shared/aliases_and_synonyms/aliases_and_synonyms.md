@@ -26,6 +26,10 @@ AND alias [zhōng中国guó][5]
 WITH aliases containing non-ASCII unicode characters
 THEN all aliases MUST still be separated and linked correctly
 
+Given a term "[Issue][6]"
+AND alias [Issues][6]
+THEN occurrences of the alias MUST be linked with the terms definition.
+
 [1]: glossary.md#term-1 "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated words MUST be detected as the term's aliases."
 
@@ -42,3 +46,5 @@ term's aliases."
 [5]: glossary.md#china "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND aliases contain unicode word characters
 THEN they MUST still be separated correctly"
+
+[6]: glossary.md#issue "Damit wird der Verstoß gegen eine SonarQube-Regel bezeichnet."
