@@ -215,12 +215,19 @@ satisfies your needs.
 The recommendation is to write outputs to a separate directory such as `../out`
 or `../tmp`. or `../target`.
 
+- ### `--reportNotMentioned`
+
+- **Range:** "boolean"
+
+Report on terms which exist in a glossary but have neither been mentioned
+directly nor with any of its aliases.
+
 ## Additional Features
 
 ### Aliases and Synonyms
 
-Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list
- of alternative terms.
+Aliases can be defined in an HTML comment with the keyword `Aliases:` followed
+by a comma-separated list of alternative terms.
 
 *glossary.md*
 ```md
@@ -239,7 +246,7 @@ Linking aliases to their related term:
 ```md
 # About Cats
 
-[Cats](./glossary.md#cat) and Kitten almost hidden spotting mouses in their houses. [The Author]
+[Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
 ```
 
 ## Special Thanks go to

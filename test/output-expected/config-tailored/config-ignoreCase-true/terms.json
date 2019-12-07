@@ -13,7 +13,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": true,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "",
@@ -29,7 +30,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": true,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "",
@@ -45,7 +47,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": true,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "",
@@ -61,7 +64,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": true,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "",
@@ -77,6 +81,7 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": true
+    "ignoreCase": true,
+    "countOccurrenceTotal": 2
   }
 ]
