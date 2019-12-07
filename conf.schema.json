@@ -87,6 +87,12 @@
             "alias": "o",
             "default": ""
         },
+        "reportNotMentioned": {
+            "description": "Report on terms which have been defined in a glossary but not been mentioned anywhere.",
+            "type": "boolean",
+            "alias": "",
+            "default": true
+        },
         "dev": {
             "descriptions": "Options for testing and debugging",
             "$ref": "#/$defs/DevOpts",
