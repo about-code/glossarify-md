@@ -13,7 +13,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 7
   },
   {
     "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
@@ -29,7 +30,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 7
   },
   {
     "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
@@ -45,7 +47,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 9
   },
   {
     "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
@@ -61,7 +64,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 9
   },
   {
     "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
@@ -77,7 +81,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 7
   },
   {
     "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
@@ -93,7 +98,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 7
   },
   {
     "shortDesc": "",
@@ -109,7 +115,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
@@ -130,7 +137,8 @@
       "中zhōngguó国",
       "zhōng中国guó"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 5
   },
   {
     "shortDesc": "foo",
@@ -146,7 +154,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 3
   },
   {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -164,7 +173,8 @@
     "aliases": [
       "GREENFIELD"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -182,7 +192,8 @@
     "aliases": [
       "lower"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "",
@@ -198,7 +209,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
@@ -216,7 +228,8 @@
     "aliases": [
       "end"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -232,7 +245,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -248,7 +262,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -264,7 +279,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description with a link MUST be detected completely.",
@@ -280,7 +296,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -296,7 +313,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -312,7 +330,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -328,7 +347,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -344,7 +364,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
@@ -360,7 +381,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -378,7 +400,8 @@
     "aliases": [
       "Hope"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -396,7 +419,8 @@
     "aliases": [
       "Issues"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
@@ -412,7 +436,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 11
   },
   {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -430,7 +455,8 @@
     "aliases": [
       "FLOURISH"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
   },
   {
     "shortDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
@@ -446,7 +472,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
@@ -462,7 +489,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
@@ -478,7 +506,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
@@ -494,7 +523,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "",
@@ -510,7 +540,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 3
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -530,7 +561,8 @@
       "T1-Alias2",
       "T1.Alias3"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -550,7 +582,8 @@
       "T2-Alias2",
       "T2.Alias3"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
@@ -570,7 +603,8 @@
       "T3-Alias2",
       "T3.Alias3"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
@@ -590,7 +624,8 @@
       "T4-Alias2",
       "T4.Alias3"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
@@ -609,7 +644,8 @@
       "T5-Alias1",
       "T5-Alias2"
     ],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
@@ -625,7 +661,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
@@ -641,7 +678,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
@@ -657,7 +695,8 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "",
@@ -673,6 +712,7 @@
     },
     "regex": {},
     "aliases": [],
-    "ignoreCase": false
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   }
 ]
