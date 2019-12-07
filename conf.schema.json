@@ -71,6 +71,12 @@
             "alias": "f",
             "default": ["."]
         },
+        "indexFile": {
+            "description": "Path relative to outDir where to write an index file with glossary terms and links to there occurrences in text.",
+            "type": "string",
+            "alias": "x",
+            "default": ""
+        },
         "linking": {
             "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
             "type": "string",
