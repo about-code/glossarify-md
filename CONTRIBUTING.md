@@ -144,11 +144,49 @@ If you're testing a bugfix or a new feature you need
 
 ## Debugging
 
+Should you need to play around/analyse different inputs avoid changing the test suite. Instead set up  a *debug* folder and debug configuration as follows:
+
+```
+${workspace}/
+   |- bin
+   |- debug/        <-- create
+   |   |- input/
+   |   |   |- document.md
+   |   |   |- glossary.md
+   |   |- output/
+   |   |- glossarify-md.conf.json
+   |- doc
+   |- ...
+   `- package.json
+```
+
+*glossarify-md.conf.json*
+
+```json
+{
+    "$schema": "../conf.schema.json",
+    "baseDir": "./input",
+    "outDir": "../output",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "dev": {
+        "termsFile": "../output/terms.json",
+        "printInputAst": true
+    }
+}
+```
+
+In a console at `${workspace}` type
+
 ```
 npm run debug
 ```
 
-starts a remote debug session on `127.0.0.1:9229`. It assumes there is a *glossary-md* configuration with name `./test/gitignore.conf.json`. To debug an arbitrary configuration use
+This starts a remote debug session at `127.0.0.1:9229`. To debug with a configuration in another directory type:
 
 ```
 npm run debug-cfg -- ./path/to/glossarify-md.conf.json
@@ -157,12 +195,12 @@ npm run debug-cfg -- ./path/to/glossarify-md.conf.json
 You can now connect e.g. with
 
 - *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
-- *VSCode*
+- *VSCode* (attaching as a remote debugger)
 
-A launch configuration example for [VSCode](https://code.visualstudio.com) below offers two debug options:
+The launch configuration example for [VSCode](https://code.visualstudio.com) below offers two debug options:
 
 1. VSCode connecting as a remote debugger
-1. VSCode internal debugging (recommended)
+1. VSCode internal debugging
 
 *${workspace}/.vscode/launch.json*
 ```json
@@ -176,7 +214,7 @@ A launch configuration example for [VSCode](https://code.visualstudio.com) below
             "program": "${workspaceFolder}/bin/index.js",
             "args": [
                 "--config",
-                "./test/gitignore.conf.json"
+                "./debug/glossarify-md.conf.json"
             ]
         },
         {
@@ -192,22 +230,4 @@ A launch configuration example for [VSCode](https://code.visualstudio.com) below
 }
 ```
 
-Should you need to play around/analyse different inputs avoid changing the test suite. Instead configure `gitignore.conf.json` to use
-
- - `"baseDir": "./gitignore.input"`
- - `"outDir": "../gitignore.output"`
-
- and put input files in `baseDir` directory.
-
-*Files with gitignore.\* are excluded from revision control*
-```
-${workspace}/
-    |- test/
-    |   |- gitignore.input/      <-- debug inputs
-    |   |- gitignore.output/     <-- debug outputs
-    |   |- gitignore.conf.json   <-- debug config
-    |   |- input/
-    |   |- output-expected/
-    |   |- output-actual/
-    |   `- package.json
- ```
+> **☛ Note**: If you need to create files outside the `debug/` folder, consider using a gitignore.\* prefix. Those files will be excluded from revision control.
