@@ -183,6 +183,12 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 Paths or Glob-Patterns for files to include.
 
+### `--indexFile` | `--x`
+
+- **Range:** string[]
+
+Path relative to `outDir` where to write an index file to. The index contains links from glossary terms to  their occurrences in documents or document sections.
+
 ### `--keepRawFiles` | `--r`
 
 - **Range:** string[]

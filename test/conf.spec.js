@@ -27,8 +27,7 @@ let errors = [];
 })();
 
 if(errors.length > 0) {
-    console.log(`Tests failed with errors.
-  ${errors}
-    `, );
+    console.log(errors);
+    console.log("Tests failed with errors.");
     process.exit(1);
 };
