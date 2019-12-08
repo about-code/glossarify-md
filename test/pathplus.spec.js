@@ -12,7 +12,18 @@ const errors = [];
     }
 })();
 
-(function testWhenFromIsInSubdirectory() {
+(function testWhenFromIsInSubdirectoryDepth1() {
+    const from = "/home/user/foo/baz.md";
+    const to   = "/home/user/dolor.md";
+    const expected = "../dolor.md";
+
+    const actual = relativeFromTo(from, to);
+    if (actual !== expected) {
+        errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
+})();
+
+(function testWhenFromIsInSubdirectoryDepth2() {
     const from = "/home/user/foo/bar/baz.md";
     const to   = "/home/user/dolor.md";
     const expected = "../../dolor.md";
