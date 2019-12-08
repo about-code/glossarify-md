@@ -1,31 +1,43 @@
-# Testing Config Option ignoreCase
+# [Testing Config Option ignoreCase][1]
 
-## First-Uppercase
+## [First-Uppercase][2]
 
-GIVEN term is [First-Uppercase][1] AND ignoreCase is 'true' THEN term occurence '[first-uppercase][1]' MUST be linked with it, too.
+GIVEN term is [First-Uppercase][3] AND ignoreCase is 'true' THEN term occurence '[first-uppercase][3]' MUST be linked with it, too.
 
-## ALL-UPPERCASE
+## [ALL-UPPERCASE][4]
 
-GIVEN term is '[ALL-UPPERCASE][2]' AND ignoreCase is 'true' THEN term occurence '[all-uppercase][2]' MUST be linked with it, too.
+GIVEN term is '[ALL-UPPERCASE][5]' AND ignoreCase is 'true' THEN term occurence '[all-uppercase][5]' MUST be linked with it, too.
 
-## fIRST-lOWERCASE
+## [fIRST-lOWERCASE][6]
 
-GIVEN term is '[fIRST-lOWERCASE][3]' AND ignoreCase is 'true' THEN term occurence '[First-Lowercase][3]' MUST be linked with it, too.
+GIVEN term is '[fIRST-lOWERCASE][7]' AND ignoreCase is 'true' THEN term occurence '[First-Lowercase][7]' MUST be linked with it, too.
 
-## all-lowercase
+## [all-lowercase][8]
 
-GIVEN term is '[all-lowercase][4]' AND ignoreCase is 'true' THEN term occurence '[ALL-LOWERCASE][4]' MUST be linked with it, too.
+GIVEN term is '[all-lowercase][9]' AND ignoreCase is 'true' THEN term occurence '[ALL-LOWERCASE][9]' MUST be linked with it, too.
 
-## MiXeD-CaSe
+## [MiXeD-CaSe][10]
 
-GIVEN term is '[MiXeD-CaSe][5]' AND ignoreCase is 'true' THEN term occurence '[mIxEd-cAsE][5]' MUST be linked with it, too.
+GIVEN term is '[MiXeD-CaSe][11]' AND ignoreCase is 'true' THEN term occurence '[mIxEd-cAsE][11]' MUST be linked with it, too.
 
-[1]: glossary.md#first-uppercase
+[1]: #testing-config-option-ignorecase
 
-[2]: glossary.md#all-uppercase
+[2]: #first-uppercase
 
-[3]: glossary.md#first-lowercase
+[3]: glossary.md#first-uppercase
 
-[4]: glossary.md#all-lowercase
+[4]: #all-uppercase
 
-[5]: glossary.md#mixed-case
+[5]: glossary.md#all-uppercase
+
+[6]: #first-lowercase
+
+[7]: glossary.md#first-lowercase
+
+[8]: #all-lowercase
+
+[9]: glossary.md#all-lowercase
+
+[10]: #mixed-case
+
+[11]: glossary.md#mixed-case

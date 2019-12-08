@@ -14,6 +14,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#ä": "Ä",
+      "./substring_behavior/document.md#äö": "ÄÖ",
+      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+    },
     "countOccurrenceTotal": 7
   },
   {
@@ -31,6 +36,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#ä": "Ä",
+      "./substring_behavior/document.md#äö": "ÄÖ",
+      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+    },
     "countOccurrenceTotal": 7
   },
   {
@@ -48,6 +58,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#a": "A",
+      "./substring_behavior/document.md#ab": "AB",
+      "./substring_behavior/document.md#abc": "ABC"
+    },
     "countOccurrenceTotal": 9
   },
   {
@@ -65,6 +80,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#ä": "Ä",
+      "./substring_behavior/document.md#äö": "ÄÖ",
+      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+    },
     "countOccurrenceTotal": 9
   },
   {
@@ -82,6 +102,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#a": "A",
+      "./substring_behavior/document.md#ab": "AB",
+      "./substring_behavior/document.md#abc": "ABC"
+    },
     "countOccurrenceTotal": 7
   },
   {
@@ -99,6 +124,11 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./substring_behavior/document.md#a": "A",
+      "./substring_behavior/document.md#ab": "AB",
+      "./substring_behavior/document.md#abc": "ABC"
+    },
     "countOccurrenceTotal": 7
   },
   {
@@ -116,6 +146,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -138,6 +169,9 @@
       "zhōng中国guó"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#unicode-behavior": "Unicode behavior"
+    },
     "countOccurrenceTotal": 5
   },
   {
@@ -155,6 +189,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./markdown/list.md": "./markdown/list.md",
+      "./markdown/table.md": "./markdown/table.md"
+    },
     "countOccurrenceTotal": 3
   },
   {
@@ -174,6 +212,9 @@
       "GREENFIELD"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -193,6 +234,9 @@
       "lower"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -210,6 +254,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -229,6 +274,9 @@
       "end"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -246,6 +294,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -263,6 +312,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -280,6 +330,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -297,6 +348,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -314,6 +366,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -331,6 +384,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -348,6 +402,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -365,6 +420,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -382,6 +438,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -401,6 +458,9 @@
       "Hope"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -420,6 +480,9 @@
       "Issues"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -437,6 +500,13 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./markdown/html.md": "./markdown/html.md",
+      "./markdown/link.md": "./markdown/link.md",
+      "./markdown/list.md": "./markdown/list.md",
+      "./markdown/table.md": "./markdown/table.md",
+      "./markdown/text.md": "./markdown/text.md"
+    },
     "countOccurrenceTotal": 11
   },
   {
@@ -456,6 +526,9 @@
       "FLOURISH"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -473,6 +546,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -490,6 +564,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -507,6 +582,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -524,6 +600,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -541,6 +618,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "./markdown/list.md": "./markdown/list.md",
+      "./markdown/table.md": "./markdown/table.md"
+    },
     "countOccurrenceTotal": 3
   },
   {
@@ -562,6 +643,9 @@
       "T1.Alias3"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+    },
     "countOccurrenceTotal": 4
   },
   {
@@ -583,6 +667,9 @@
       "T2.Alias3"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+    },
     "countOccurrenceTotal": 4
   },
   {
@@ -604,6 +691,9 @@
       "T3.Alias3"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+    },
     "countOccurrenceTotal": 4
   },
   {
@@ -625,6 +715,9 @@
       "T4.Alias3"
     ],
     "ignoreCase": false,
+    "occurrences": {
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+    },
     "countOccurrenceTotal": 4
   },
   {
@@ -645,6 +738,7 @@
       "T5-Alias2"
     ],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -662,6 +756,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -679,6 +774,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -696,6 +792,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   },
   {
@@ -713,6 +810,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {},
     "countOccurrenceTotal": 0
   }
 ]
