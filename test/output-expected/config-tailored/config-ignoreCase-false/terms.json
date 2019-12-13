@@ -15,7 +15,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#all-lowercase": "all-lowercase"
+      "./document.md#all-lowercase": "all-lowercase",
+      "/{redacted}/document.md#all-lowercase": "all-lowercase"
     },
     "countOccurrenceTotal": 1
   },
@@ -35,7 +36,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#all-uppercase": "ALL-UPPERCASE"
+      "./document.md#all-uppercase": "ALL-UPPERCASE",
+      "/{redacted}/document.md#all-uppercase": "ALL-UPPERCASE"
     },
     "countOccurrenceTotal": 1
   },
@@ -55,7 +57,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#first-lowercase": "fIRST-lOWERCASE"
+      "./document.md#first-lowercase": "fIRST-lOWERCASE",
+      "/{redacted}/document.md#first-lowercase": "fIRST-lOWERCASE"
     },
     "countOccurrenceTotal": 1
   },
@@ -75,7 +78,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#first-uppercase": "First-Uppercase"
+      "./document.md#first-uppercase": "First-Uppercase",
+      "/{redacted}/document.md#first-uppercase": "First-Uppercase"
     },
     "countOccurrenceTotal": 1
   },
@@ -95,7 +99,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#mixed-case": "MiXeD-CaSe"
+      "./document.md#mixed-case": "MiXeD-CaSe",
+      "/{redacted}/document.md#mixed-case": "MiXeD-CaSe"
     },
     "countOccurrenceTotal": 1
   }

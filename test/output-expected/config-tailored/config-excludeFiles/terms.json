@@ -15,7 +15,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./include/document.md": "./include/document.md"
+      "./include/document.md": "./include/document.md",
+      "/{redacted}/include/document.md": "./include/document.md"
     },
     "countOccurrenceTotal": 1
   }

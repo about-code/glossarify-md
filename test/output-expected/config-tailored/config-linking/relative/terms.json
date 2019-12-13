@@ -15,7 +15,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md": "./document.md"
+      "./document.md": "./document.md",
+      "/{redacted}/document.md": "./document.md"
     },
     "countOccurrenceTotal": 1
   },
@@ -35,7 +36,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./sub-1/sub-2/document.md": "./sub-1/sub-2/document.md"
+      "./sub-1/sub-2/document.md": "./sub-1/sub-2/document.md",
+      "/{redacted}/sub-1/sub-2/document.md": "./sub-1/sub-2/document.md"
     },
     "countOccurrenceTotal": 1
   },
@@ -55,7 +57,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./sub-1/sub-2/document.md": "./sub-1/sub-2/document.md"
+      "./sub-1/sub-2/document.md": "./sub-1/sub-2/document.md",
+      "/{redacted}/sub-1/sub-2/document.md": "./sub-1/sub-2/document.md"
     },
     "countOccurrenceTotal": 1
   },
@@ -75,7 +78,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md": "./document.md"
+      "./document.md": "./document.md",
+      "/{redacted}/document.md": "./document.md"
     },
     "countOccurrenceTotal": 1
   }

@@ -15,7 +15,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#shared-set-of-terms": "Shared set of terms"
+      "./document.md#shared-set-of-terms": "Shared set of terms",
+      "/{redacted}/document.md#shared-set-of-terms": "Shared set of terms"
     },
     "countOccurrenceTotal": 1
   },
@@ -35,7 +36,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#shared-set-of-terms": "Shared set of terms"
+      "./document.md#shared-set-of-terms": "Shared set of terms",
+      "/{redacted}/document.md#shared-set-of-terms": "Shared set of terms"
     },
     "countOccurrenceTotal": 1
   },
@@ -55,7 +57,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#disjunct-set-of-terms": "Disjunct set of terms"
+      "./document.md#disjunct-set-of-terms": "Disjunct set of terms",
+      "/{redacted}/document.md#disjunct-set-of-terms": "Disjunct set of terms"
     },
     "countOccurrenceTotal": 1
   },
@@ -75,7 +78,8 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./document.md#disjunct-set-of-terms": "Disjunct set of terms"
+      "./document.md#disjunct-set-of-terms": "Disjunct set of terms",
+      "/{redacted}/document.md#disjunct-set-of-terms": "Disjunct set of terms"
     },
     "countOccurrenceTotal": 1
   }

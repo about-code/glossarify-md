@@ -16,7 +16,9 @@
     "ignoreCase": false,
     "occurrences": {
       "./with-section-heading.md#section": "Section",
-      "./without-section-heading.md": "./without-section-heading.md"
+      "./without-section-heading.md": "./without-section-heading.md",
+      "/{redacted}/with-section-heading.md#section": "Section",
+      "/{redacted}/without-section-heading.md": "./without-section-heading.md"
     },
     "countOccurrenceTotal": 2
   }

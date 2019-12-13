@@ -17,7 +17,10 @@
     "occurrences": {
       "./substring_behavior/document.md#ä": "Ä",
       "./substring_behavior/document.md#äö": "ÄÖ",
-      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+      "./substring_behavior/document.md#äöü": "ÄÖÜ",
+      "/{redacted}/substring_behavior/document.md#ä": "Ä",
+      "/{redacted}/substring_behavior/document.md#äö": "ÄÖ",
+      "/{redacted}/substring_behavior/document.md#äöü": "ÄÖÜ"
     },
     "countOccurrenceTotal": 7
   },
@@ -39,7 +42,10 @@
     "occurrences": {
       "./substring_behavior/document.md#ä": "Ä",
       "./substring_behavior/document.md#äö": "ÄÖ",
-      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+      "./substring_behavior/document.md#äöü": "ÄÖÜ",
+      "/{redacted}/substring_behavior/document.md#ä": "Ä",
+      "/{redacted}/substring_behavior/document.md#äö": "ÄÖ",
+      "/{redacted}/substring_behavior/document.md#äöü": "ÄÖÜ"
     },
     "countOccurrenceTotal": 7
   },
@@ -61,7 +67,10 @@
     "occurrences": {
       "./substring_behavior/document.md#a": "A",
       "./substring_behavior/document.md#ab": "AB",
-      "./substring_behavior/document.md#abc": "ABC"
+      "./substring_behavior/document.md#abc": "ABC",
+      "/{redacted}/substring_behavior/document.md#a": "A",
+      "/{redacted}/substring_behavior/document.md#ab": "AB",
+      "/{redacted}/substring_behavior/document.md#abc": "ABC"
     },
     "countOccurrenceTotal": 9
   },
@@ -83,7 +92,10 @@
     "occurrences": {
       "./substring_behavior/document.md#ä": "Ä",
       "./substring_behavior/document.md#äö": "ÄÖ",
-      "./substring_behavior/document.md#äöü": "ÄÖÜ"
+      "./substring_behavior/document.md#äöü": "ÄÖÜ",
+      "/{redacted}/substring_behavior/document.md#ä": "Ä",
+      "/{redacted}/substring_behavior/document.md#äö": "ÄÖ",
+      "/{redacted}/substring_behavior/document.md#äöü": "ÄÖÜ"
     },
     "countOccurrenceTotal": 9
   },
@@ -105,7 +117,10 @@
     "occurrences": {
       "./substring_behavior/document.md#a": "A",
       "./substring_behavior/document.md#ab": "AB",
-      "./substring_behavior/document.md#abc": "ABC"
+      "./substring_behavior/document.md#abc": "ABC",
+      "/{redacted}/substring_behavior/document.md#a": "A",
+      "/{redacted}/substring_behavior/document.md#ab": "AB",
+      "/{redacted}/substring_behavior/document.md#abc": "ABC"
     },
     "countOccurrenceTotal": 7
   },
@@ -127,7 +142,10 @@
     "occurrences": {
       "./substring_behavior/document.md#a": "A",
       "./substring_behavior/document.md#ab": "AB",
-      "./substring_behavior/document.md#abc": "ABC"
+      "./substring_behavior/document.md#abc": "ABC",
+      "/{redacted}/substring_behavior/document.md#a": "A",
+      "/{redacted}/substring_behavior/document.md#ab": "AB",
+      "/{redacted}/substring_behavior/document.md#abc": "ABC"
     },
     "countOccurrenceTotal": 7
   },
@@ -170,7 +188,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#unicode-behavior": "Unicode behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#unicode-behavior": "Unicode behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#unicode-behavior": "Unicode behavior"
     },
     "countOccurrenceTotal": 5
   },
@@ -191,7 +210,9 @@
     "ignoreCase": false,
     "occurrences": {
       "./markdown/list.md": "./markdown/list.md",
-      "./markdown/table.md": "./markdown/table.md"
+      "./markdown/table.md": "./markdown/table.md",
+      "/{redacted}/markdown/list.md": "./markdown/list.md",
+      "/{redacted}/markdown/table.md": "./markdown/table.md"
     },
     "countOccurrenceTotal": 3
   },
@@ -213,7 +234,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -235,7 +257,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -275,7 +298,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -459,7 +483,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -481,7 +506,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -505,7 +531,12 @@
       "./markdown/link.md": "./markdown/link.md",
       "./markdown/list.md": "./markdown/list.md",
       "./markdown/table.md": "./markdown/table.md",
-      "./markdown/text.md": "./markdown/text.md"
+      "./markdown/text.md": "./markdown/text.md",
+      "/{redacted}/markdown/html.md": "./markdown/html.md",
+      "/{redacted}/markdown/link.md": "./markdown/link.md",
+      "/{redacted}/markdown/list.md": "./markdown/list.md",
+      "/{redacted}/markdown/table.md": "./markdown/table.md",
+      "/{redacted}/markdown/text.md": "./markdown/text.md"
     },
     "countOccurrenceTotal": 11
   },
@@ -527,7 +558,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
+      "./aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md#alias-substring-behavior": "Alias substring behavior"
     },
     "countOccurrenceTotal": 2
   },
@@ -620,7 +652,9 @@
     "ignoreCase": false,
     "occurrences": {
       "./markdown/list.md": "./markdown/list.md",
-      "./markdown/table.md": "./markdown/table.md"
+      "./markdown/table.md": "./markdown/table.md",
+      "/{redacted}/markdown/list.md": "./markdown/list.md",
+      "/{redacted}/markdown/table.md": "./markdown/table.md"
     },
     "countOccurrenceTotal": 3
   },
@@ -644,7 +678,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
     },
     "countOccurrenceTotal": 4
   },
@@ -668,7 +703,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
     },
     "countOccurrenceTotal": 4
   },
@@ -692,7 +728,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
     },
     "countOccurrenceTotal": 4
   },
@@ -716,7 +753,8 @@
     ],
     "ignoreCase": false,
     "occurrences": {
-      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
+      "./aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md",
+      "/{redacted}/aliases_and_synonyms/aliases_and_synonyms.md": "./aliases_and_synonyms/aliases_and_synonyms.md"
     },
     "countOccurrenceTotal": 4
   },
