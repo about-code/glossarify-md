@@ -3,8 +3,10 @@
     "baseDir": ".",
     "linking": "relative",
     "includeFiles": ["."],
-    "indexFile": "./sub/index.md",
     "excludeFiles": [],
+    "generateFiles": {
+        "indexFile": "./sub/index.md"
+    },
     "glossaries": [
         { "file": "./glossary.md"}
     ],
