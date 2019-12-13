@@ -1,10 +1,10 @@
-const {relativeFromTo} = require("../lib/pathplus");
+const {relativeFromTo, toSystemSlash} = require("../lib/pathplus");
 const errors = [];
 
 (function testWhenFromAndToInDifferentBranch() {
     const from = "/home/user/foo/bar/baz.md";
     const to   = "/home/user/lorem/ipsum/dolor.md";
-    const expected = "../../lorem/ipsum/dolor.md";
+    const expected = toSystemSlash("../../lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
@@ -15,7 +15,7 @@ const errors = [];
 (function testWhenFromIsInSubdirectoryDepth1() {
     const from = "/home/user/foo/baz.md";
     const to   = "/home/user/dolor.md";
-    const expected = "../dolor.md";
+    const expected = toSystemSlash("../dolor.md");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
@@ -26,7 +26,7 @@ const errors = [];
 (function testWhenFromIsInSubdirectoryDepth2() {
     const from = "/home/user/foo/bar/baz.md";
     const to   = "/home/user/dolor.md";
-    const expected = "../../dolor.md";
+    const expected = toSystemSlash("../../dolor.md");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
@@ -37,7 +37,7 @@ const errors = [];
 (function testWhenToIsInSubdirectory() {
     const from = "/home/user/baz.md";
     const to   = "/home/user/lorem/ipsum/dolor.md";
-    const expected = "./lorem/ipsum/dolor.md";
+    const expected = toSystemSlash("./lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
@@ -48,7 +48,7 @@ const errors = [];
 (function testWhenFromAndToAreSiblings() {
     const from = "/home/user/foo.md";
     const to   = "/home/user/bar.md";
-    const expected = "./bar.md";
+    const expected = toSystemSlash("./bar.md");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
@@ -59,7 +59,7 @@ const errors = [];
 (function testWhenFromAndToIsEqual() {
     const from = "/home/user/lorem/ipsum/dolor.md";
     const to   = "/home/user/lorem/ipsum/dolor.md";
-    const expected = "./";
+    const expected = toSystemSlash("./");
 
     const actual = relativeFromTo(from, to);
     if (actual !== expected) {
