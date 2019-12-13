@@ -1,0 +1,18 @@
+{
+    "$schema": "../../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "indexFile": "./index.md",
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./sub/glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../../output-actual/config-tailored/config-indexFile/glossary-in-subdir",
+    "dev": {
+        "termsFile": "../../../../output-actual/config-tailored/config-indexFile/glossary-in-subdir/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}
