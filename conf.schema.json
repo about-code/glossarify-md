@@ -36,6 +36,11 @@
             "type": "boolean",
             "default": false
         },
+        "generateFiles": {
+            "description": "File generation options.",
+            "$ref": "#/$defs/GenerateFiles",
+            "default": {}
+        },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
             "type": "array",
@@ -71,12 +76,6 @@
             "alias": "f",
             "default": ["."]
         },
-        "indexFile": {
-            "description": "Path relative to outDir where to write an index file with glossary terms and links to there occurrences in text.",
-            "type": "string",
-            "alias": "x",
-            "default": ""
-        },
         "linking": {
             "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
             "type": "string",
@@ -106,6 +105,16 @@
         }
     },
     "$defs": {
+        "GenerateFiles": {
+            "type": "object",
+            "properties": {
+                "indexFile": {
+                    "description": "Path relative to 'outDir' where to write an index file with glossary terms and links to there occurrences in text.",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
         "Glossary": {
             "type": "object",
             "properties": {
