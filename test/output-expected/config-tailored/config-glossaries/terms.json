@@ -234,8 +234,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {},
-    "countOccurrenceTotal": 0
+    "occurrences": {
+      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -272,8 +274,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {},
-    "countOccurrenceTotal": 0
+    "occurrences": {
+      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "",

@@ -1,0 +1,18 @@
+{
+    "$schema": "../../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "indexFile": "./index.md",
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../../output-actual/config-tailored/config-indexFile/term-link-to-section",
+    "dev": {
+        "termsFile": "../../../../output-actual/config-tailored/config-indexFile/term-link-to-section/terms.json",
+        "printInputAst": false,
+        "printOutputAst": false
+    }
+}

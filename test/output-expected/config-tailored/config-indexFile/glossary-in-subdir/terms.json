@@ -1,0 +1,20 @@
+[
+  {
+    "shortDesc": "GIVEN a term \"Term\" AND option 'indexFile' is './index.md' AND the glossary file is in './sub/glossary.md' AND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
+    "term": "Term",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Term\" AND option 'indexFile' is './index.md' AND the glossary file is in './sub/glossary.md' AND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
+    "anchor": "#term",
+    "glossary": {
+      "file": "./sub/glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "occurrences": {},
+    "countOccurrenceTotal": 0
+  }
+]

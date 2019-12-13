@@ -1,0 +1,23 @@
+[
+  {
+    "shortDesc": "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section' AND a link label 'Section'.",
+    "term": "Term",
+    "hint": "",
+    "longDesc": "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section' AND a link label 'Section'.",
+    "anchor": "#term",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/config-indexFile/term-link-to-section/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/config-indexFile/term-link-to-section/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "occurrences": {
+      "./with-section-heading.md#section": "Section",
+      "./without-section-heading.md": "./without-section-heading.md"
+    },
+    "countOccurrenceTotal": 2
+  }
+]
