@@ -15,7 +15,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -36,7 +35,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 2
@@ -57,7 +55,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -78,7 +75,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -99,7 +95,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -120,7 +115,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 3
@@ -141,7 +135,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -162,7 +155,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms",
       "/{redacted}/disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms"
     },
     "countOccurrenceTotal": 1
@@ -183,7 +175,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms",
       "/{redacted}/disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms"
     },
     "countOccurrenceTotal": 1
@@ -204,7 +195,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -225,7 +215,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms",
       "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
     },
     "countOccurrenceTotal": 1
@@ -246,7 +235,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms",
       "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
     },
     "countOccurrenceTotal": 1
@@ -267,7 +255,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms",
       "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
     },
     "countOccurrenceTotal": 1
@@ -288,7 +275,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms",
       "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
     },
     "countOccurrenceTotal": 1
@@ -309,7 +295,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./term-hint-document.md": "./term-hint-document.md",
       "/{redacted}/term-hint-document.md": "./term-hint-document.md"
     },
     "countOccurrenceTotal": 1
@@ -330,7 +315,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./term-hint-document.md": "./term-hint-document.md",
       "/{redacted}/term-hint-document.md": "./term-hint-document.md"
     },
     "countOccurrenceTotal": 1
@@ -351,7 +335,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./term-hint-document.md": "./term-hint-document.md",
       "/{redacted}/term-hint-document.md": "./term-hint-document.md"
     },
     "countOccurrenceTotal": 1
@@ -372,7 +355,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./term-hint-document.md": "./term-hint-document.md",
       "/{redacted}/term-hint-document.md": "./term-hint-document.md"
     },
     "countOccurrenceTotal": 1
@@ -393,7 +375,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./Uppercase-document.md": "./Uppercase-document.md",
       "/{redacted}/Uppercase-document.md": "./Uppercase-document.md"
     },
     "countOccurrenceTotal": 1
@@ -414,7 +395,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -435,7 +415,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -456,7 +435,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1
@@ -477,7 +455,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "./unicode-document.md": "./unicode-document.md",
       "/{redacted}/unicode-document.md": "./unicode-document.md"
     },
     "countOccurrenceTotal": 1

@@ -15,7 +15,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "http://example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'",
       "/{redacted}/http:/example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'"
     },
     "countOccurrenceTotal": 1
@@ -36,7 +35,6 @@
     "aliases": [],
     "ignoreCase": false,
     "occurrences": {
-      "http://example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'",
       "/{redacted}/http:/example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'"
     },
     "countOccurrenceTotal": 1

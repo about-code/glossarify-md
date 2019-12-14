@@ -21,6 +21,7 @@
     "dev": {
         "termsFile": "../../../output-actual/config-tailored/config-glossaries/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }

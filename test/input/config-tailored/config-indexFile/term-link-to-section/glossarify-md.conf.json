@@ -15,6 +15,7 @@
     "dev": {
         "termsFile": "../../../../output-actual/config-tailored/config-indexFile/term-link-to-section/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }

@@ -12,6 +12,7 @@
     "dev": {
         "termsFile": "../../../output-actual/config-tailored/config-ignoreCase-true/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }
