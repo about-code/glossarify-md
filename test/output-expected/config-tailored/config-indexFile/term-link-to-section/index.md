@@ -1,9 +1,8 @@
 # Index
 
-#### Term ([Glossary][1])
+#### Term
 
--   [Section][2]
--   [./without-section-heading.md][3]
+-   [Glossary][1] - [Section][2] - [./without-section-heading.md][3]
 
 [1]: ./glossary.md#term
 
