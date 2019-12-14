@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/about-code/glossarify-md/compare/v2.1.0...v3.0.0) (2019-12-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **v3.0.0:** End of support for nodejs 8.x (LTS). Versions of glossarify-md >= 3.0.0
+may continue to work with nodejs 8.x but may also begin to use JS language
+features and APIs earliest available with nodejs 10.x LTS. Such changes
+may be introduced with any new version including bugfix versions and without
+notice or classification of being breaking changes to nodejs 8.x users.
+* With this change section headings will be automatically linkified. URL fragments of section headings may change thus affecting inter-document cross-links or bookmarks of already published documentation. Note: links and bookmarks will continue to point the same *page* yet not the correct section on that page. Prior section headings which have manually been wrapped into markdown link brackets may get wrapped twice. Review any output prior to publishing it.
+
+### Documentation Updates
+
+* **CONTRIBUTING.md:** Rework debug section ([25a1288](https://github.com/about-code/glossarify-md/commit/25a1288))
+
+
+### Features
+
+* Report on glossary terms never mentioned in text ([#43](https://github.com/about-code/glossarify-md/issues/43)) ([96a7415](https://github.com/about-code/glossarify-md/commit/96a7415))
+
+
+* 3 support backlinks from definition to usage (#46) ([9d06dd6](https://github.com/about-code/glossarify-md/commit/9d06dd6)), closes [#46](https://github.com/about-code/glossarify-md/issues/46) [#3](https://github.com/about-code/glossarify-md/issues/3)
+* **v3.0.0:** New node support matrix ([#45](https://github.com/about-code/glossarify-md/issues/45)) ([#47](https://github.com/about-code/glossarify-md/issues/47)) ([c140016](https://github.com/about-code/glossarify-md/commit/c140016))
+
 ### [2.1.1](https://github.com/about-code/glossarify-md/compare/v2.1.0...v2.1.1) (2019-12-04)
 
 ### Bug Fixes
