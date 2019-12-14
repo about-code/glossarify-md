@@ -14,6 +14,7 @@
     "dev": {
         "termsFile": "../../../output-actual/config-tailored/config-baseUrl/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }

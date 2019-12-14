@@ -36,6 +36,11 @@
             "type": "boolean",
             "default": false
         },
+        "generateFiles": {
+            "description": "File generation options.",
+            "$ref": "#/$defs/GenerateFiles",
+            "default": {}
+        },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
             "type": "array",
@@ -100,6 +105,16 @@
         }
     },
     "$defs": {
+        "GenerateFiles": {
+            "type": "object",
+            "properties": {
+                "indexFile": {
+                    "description": "Path relative to 'outDir' where to write an index file with glossary terms and links to there occurrences in text.",
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
         "Glossary": {
             "type": "object",
             "properties": {
@@ -119,6 +134,10 @@
                 "termsFile": {
                     "description": "File where to write term book to. Enables testing the term extraction results of terminator.",
                     "type": "string"
+                },
+                "reproducablePaths": {
+                    "description": "Write system-independent paths into 'termsFile' to produce reproducable output accross environments.",
+                    "type": "boolean"
                 },
                 "printInputAst": {
                     "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.",

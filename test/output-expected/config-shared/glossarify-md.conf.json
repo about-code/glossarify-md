@@ -17,6 +17,7 @@
     "dev": {
         "termsFile": "../../output-actual/config-shared/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }

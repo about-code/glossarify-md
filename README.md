@@ -161,6 +161,14 @@ want to ignore certain markdown files from being modified.
 
 Enable support for markdown footnote syntax as defined at https://pandoc.org/MANUAL.html#footnotes. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at https://spec.commonmark.org.
 
+### `--generateFiles.indexFile`
+
+- **Range:** string
+- **Since:** v3.0.0
+
+Path relative to `outDir` where to write an index file to. The index contains links from glossary terms to  their occurrences in documents or document sections.
+
+
 ### `--glossaries`
 
 - **Range:** Array&lt;{file: string, [termHint: string]}&gt;
@@ -247,6 +255,21 @@ Linking aliases to their related term:
 # About Cats
 
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
+```
+
+### Index of terms and where they have been used
+
+> **Since v3.0.0**
+
+Just add the following option with your preferred file name and location to your
+*glossarify-md.conf.json*:
+
+```json
+{
+    "generateFiles": {
+        "indexFile": "./book-index.md"
+    },
+}
 ```
 
 ## Special Thanks go to

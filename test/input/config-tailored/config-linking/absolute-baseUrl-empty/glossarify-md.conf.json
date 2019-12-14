@@ -13,6 +13,7 @@
     "dev": {
         "termsFile": "../../../../output-actual/config-tailored/config-linking/absolute-baseUrl-empty/terms.json",
         "printInputAst": false,
+        "reproducablePaths": true,
         "printOutputAst": false
     }
 }

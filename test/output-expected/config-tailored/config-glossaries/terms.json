@@ -14,6 +14,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -31,6 +34,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 2
   },
   {
@@ -48,6 +54,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -65,6 +74,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -82,6 +94,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -99,6 +114,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 3
   },
   {
@@ -116,6 +134,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -133,6 +154,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -150,6 +174,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/disjunct-terms-document.md#two-glossaries-a-and-b-with-disjunct-set-of-terms": "Two Glossaries A and B with disjunct set of terms"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -167,6 +194,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -184,6 +214,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -201,7 +234,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "occurrences": {
+      "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -218,6 +254,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -235,7 +274,10 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "occurrences": {
+      "/{redacted}/shared-terms-document.md#two-glossaries-a-and-b-with-shared-set-of-terms": "Two Glossaries A and B with shared set of terms"
+    },
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "",
@@ -252,6 +294,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/term-hint-document.md": "./term-hint-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -269,6 +314,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/term-hint-document.md": "./term-hint-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -286,6 +334,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/term-hint-document.md": "./term-hint-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -303,6 +354,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/term-hint-document.md": "./term-hint-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -320,6 +374,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/Uppercase-document.md": "./Uppercase-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -337,6 +394,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -354,6 +414,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -371,6 +434,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   },
   {
@@ -388,6 +454,9 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
+    "occurrences": {
+      "/{redacted}/unicode-document.md": "./unicode-document.md"
+    },
     "countOccurrenceTotal": 1
   }
 ]
