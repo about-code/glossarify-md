@@ -7,6 +7,8 @@ documents with their definition in another markdown document called *glossary*.
 
 [vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
+- **⚠ Important:** due to a [bug](https://github.com/about-code/glossarify-md/issues/48) (#48) in *glossarify-md v3.0.0* vuepress users are advised to wait for a bugfix before updating.
+
 ## Install
 
 ```
