@@ -14,10 +14,6 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {
-      "/{redacted}/with-section-heading.md#section": "Section",
-      "/{redacted}/without-section-heading.md": "./without-section-heading.md"
-    },
     "countOccurrenceTotal": 2
   }
 ]

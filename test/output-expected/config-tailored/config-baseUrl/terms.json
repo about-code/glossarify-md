@@ -14,9 +14,6 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {
-      "/{redacted}/http:/example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'"
-    },
     "countOccurrenceTotal": 1
   },
   {
@@ -34,9 +31,6 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {
-      "/{redacted}/http:/example.org/document.md#testing-option-baseurl-with-option-linking--absolute": "Testing option 'baseUrl' with option 'linking = absolute'"
-    },
     "countOccurrenceTotal": 1
   }
 ]

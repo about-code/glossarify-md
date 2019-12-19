@@ -14,9 +14,6 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "occurrences": {
-      "/{redacted}/include/document.md": "./include/document.md"
-    },
     "countOccurrenceTotal": 1
   }
 ]
