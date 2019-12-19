@@ -130,111 +130,6 @@ This is a text which uses a *[Glossary Term ↴][1]* to describe something.
 [1]: ../glossary.md#glossary-term "A glossary term has a short description."
 ```
 
-## Options
-
-### `--help` | `--h`
-
-Show all options and default values.
-
-### `--baseUrl` | `--b`
-
-- **Range:** string
-
-URL to prepend to links. Only effective with `linking: "absolute"`.
-In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter omitting a pre-defined
-`baseUrl` and using `linking: "relative"` is likely to work better.
-
-### `--baseDir` | `--d`
-
-- **Range:** string
-
-Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./src`
-
-### `--excludeFiles` | `--e`
-
-- **Range:** string[]
-
-Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
-want to ignore certain markdown files from being modified.
-
-### `--experimentalFootnotes`
-
-Enable support for markdown footnote syntax as defined at https://pandoc.org/MANUAL.html#footnotes. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at https://spec.commonmark.org.
-
-### `--generateFiles.indexFile`
-
-- **Range:** string | { file: string, [title: string]}
-- **Since:** v3.0.0
-
-If available, generates an index of glossary terms with links to files in which they have been mentioned.
-
-*Configuration example*
-```
-[...]
-"generateFiles": {
-  "indexFile": {
-    "file": "./book-index.md",  // Path relative to `outDir` where to write an index file to.
-    "title": "Book Index"       // Title for the generated page. If missing the example value will be the default.
-  }
-}
-```
-> **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
-
-
-### `--glossaries`
-
-- **Range:** Array&lt;{file: string, [termHint: string]}&gt;
-
-A list of glossary configuations, each with a path to the glossary file. Every
-glossary may have an optional *termHint*. A *termHint* is a symbol character
-being appended to term occurrences in order to indicate which glossary or
-category a term belongs to. A term hint may be any UTF-8 character or character
-sequence.
-
-### `--ignoreCase` | `--i`
-
-- **Range:** boolean
-
-When true any occurrence of a term will be linked no matter how it was spelled.
-
-### `--includeFiles` | `--f`
-
-- **Range:** string[]
-
-Paths or Glob-Patterns for files to include.
-
-### `--keepRawFiles` | `--r`
-
-- **Range:** string[]
-
-Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in glossarification and linking. Non-markdown files will always be kept as is so no need to add those.
-
-### `--linking` | `--l`
-
-- **Range:** "relative" | "absolute",
-
-Whether to create absolute or relative link-urls to the glossary.
-The use of `"absolute"` may require a `baseUrl`.
-
-> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
-
-### `--outDir` | `--o`
-
-- **Range:** "string"
-
-The directory where to write output files to.
-
-> **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
-files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
-
-The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
-
-- ### `--reportNotMentioned`
-
-- **Range:** "boolean"
-
-Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
 
 ## Additional Features
 
@@ -266,15 +161,116 @@ Linking aliases to their related term:
 
 > **Since v3.0.0**
 
-Just add the following option with your preferred file name and location to your *glossarify-md.conf.json*:
+Just add the following to to your *glossarify-md.conf.json*:
 
 ```json
-{
-    "generateFiles": {
-        "indexFile": "./book-index.md"
-    },
+"generateFiles": {
+    "indexFile": {
+       "file": "./book-index.md",
+       "title": "Book Index"
+    }
 }
 ```
+This will generate a file `./book-index.md` (relative to `outDir`) with a page title *Book Index*. The title is optional. If missing the title shown in the example will be the default.
+
+## Options
+
+### `--help` | `--h`
+
+Show all options and default values.
+
+### `--baseUrl` | `--b`
+
+- **Range:** `string`
+
+URL to prepend to links. Only effective with `linking: "absolute"`.
+In most situations, e.g. when hosting markdown files in a repository or
+processing markdown files with an MD to HTML converter omitting a pre-defined
+`baseUrl` and using `linking: "relative"` is likely to work better.
+
+### `--baseDir` | `--d`
+
+- **Range:** `string`
+
+Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./src`
+
+### `--excludeFiles` | `--e`
+
+- **Range:** `string[]`
+
+Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
+want to ignore certain markdown files from being modified.
+
+### `--experimentalFootnotes`
+
+- **Range:** `boolean`
+
+Enable support for markdown footnote syntax as defined at https://pandoc.org/MANUAL.html#footnotes. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at https://spec.commonmark.org.
+
+### `--generateFiles.indexFile`
+
+- **Range:** `{file: string, [title: string]} | string`
+- **Since:** v3.0.0
+
+If available, generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
+
+> **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
+
+
+### `--glossaries`
+
+- **Range:** `Array<{file: string, [termHint: string]}>`
+
+A list of glossary configuations, each with a path to the glossary file. Every
+glossary may have an optional *termHint*. A *termHint* is a symbol character
+being appended to term occurrences in order to indicate which glossary or
+category a term belongs to. A term hint may be any UTF-8 character or character
+sequence.
+
+### `--ignoreCase` | `--i`
+
+- **Range:** `boolean`
+
+When true any occurrence of a term will be linked no matter how it was spelled.
+
+### `--includeFiles` | `--f`
+
+- **Range:** `string[]`
+
+Paths or Glob-Patterns for files to include.
+
+### `--keepRawFiles` | `--r`
+
+- **Range:** `string[]`
+
+Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in glossarification and linking. Non-markdown files will always be kept as is so no need to add those.
+
+### `--linking` | `--l`
+
+- **Range:** `"relative" | "absolute"`
+
+Whether to create absolute or relative link-urls to the glossary.
+The use of `"absolute"` may require a `baseUrl`.
+
+> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
+
+### `--outDir` | `--o`
+
+- **Range:** `string`
+
+The directory where to write output files to.
+
+> **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
+files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
+
+The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
+
+### `--reportNotMentioned`
+
+- **Range:** `boolean`
+
+Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
+
 
 ## Special Thanks go to
 
