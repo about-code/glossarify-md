@@ -5,6 +5,7 @@
         {"type": "chore", "hidden": true},
         {"type": "doc", "section": "Documentation Updates"},
         {"type": "docs", "section": "Documentation Updates"},
+        {"type": "deprecated", "section": "Deprecation Notices"},
         {"type": "style", "hidden": true},
         {"type": "refactor", "hidden": true},
         {"type": "perf", "hidden": true},
