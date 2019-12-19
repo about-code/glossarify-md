@@ -142,13 +142,11 @@ Aliases can be defined in an HTML comment with the keyword `Aliases:` followed b
 # Glossary
 
 ## Cat
-<!--
-Aliases: Cats, Wildcat, House Cat
--->
+<!-- Aliases: Cats, Wildcat, House Cat -->
 Cats are cute, ...dogs are loyal.
 ```
 
-Linking aliases to their related term:
+In the output files aliases will be linked to their related term:
 
 *./target/pages/page2.md*
 ```md
@@ -161,8 +159,7 @@ Linking aliases to their related term:
 
 > **Since v3.0.0**
 
-Just add the following to to your *glossarify-md.conf.json*:
-
+*glossarify-md.conf.json*:
 ```json
 "generateFiles": {
     "indexFile": {
@@ -171,7 +168,11 @@ Just add the following to to your *glossarify-md.conf.json*:
     }
 }
 ```
-This will generate a file `./book-index.md` (relative to `outDir`) with a page title *Book Index*. The title is optional. If missing the title shown in the example will be the default.
+This option will generate a file `./book-index.md` with a list of glossary terms and links to book sections in which they have been mentioned. The `title` argument is optional. If missing the value given in the example will be the default.
+
+> **Note**: If plan to translate markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
+
+> **Note (vuepress)**: A page title "Index" may not appear in the  [vuepress](https://vuepress.vuejs.org) sidebar.
 
 ## Options
 
