@@ -179,6 +179,8 @@ If available, generates an index of glossary terms with links to files in which 
   }
 }
 ```
+> **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
+
 
 ### `--glossaries`
 
