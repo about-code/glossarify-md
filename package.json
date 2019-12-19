@@ -14,6 +14,7 @@
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
     "debug-cfg": "node --inspect-brk ./bin/index.js --config",
+    "config": "node ./bin/index.js --config",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
     "dry-release": "standard-version --dry-run",
@@ -51,6 +52,7 @@
     "fs-extra": "^8.1.0",
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
+    "mdast-builder": "^1.1.1",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
     "remark-autolink-headings": "^5.2.1",
@@ -63,7 +65,8 @@
     "unist-builder": "^1.0.4",
     "unist-util-flatmap": "^1.0.0",
     "unist-util-visit": "^2.0.0",
-    "unist-util-visit-parents": "^3.0.0"
+    "unist-util-visit-parents": "^3.0.0",
+    "vfile": "^4.0.2"
   },
   "devDependencies": {
     "standard-version": "^7.0.0"
