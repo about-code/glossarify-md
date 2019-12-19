@@ -1,43 +1,31 @@
-# [Testing Config Option ignoreCase][1]
+# [Testing Config Option ignoreCase](#testing-config-option-ignorecase)
 
-## [First-Uppercase][2]
+## [First-Uppercase](#first-uppercase)
 
-GIVEN term is [First-Uppercase][3] AND ignoreCase is 'false' THEN term occurence 'first-uppercase' MUST NOT be linked with it.
+GIVEN term is [First-Uppercase][1] AND ignoreCase is 'false' THEN term occurence 'first-uppercase' MUST NOT be linked with it.
 
-## [ALL-UPPERCASE][4]
+## [ALL-UPPERCASE](#all-uppercase)
 
-GIVEN term is '[ALL-UPPERCASE][5]' AND ignoreCase is 'false' THEN term occurence 'all-uppercase' MUST NOT be linked with it.
+GIVEN term is '[ALL-UPPERCASE][2]' AND ignoreCase is 'false' THEN term occurence 'all-uppercase' MUST NOT be linked with it.
 
-## [fIRST-lOWERCASE][6]
+## [fIRST-lOWERCASE](#first-lowercase)
 
-GIVEN term is '[fIRST-lOWERCASE][7]' AND ignoreCase is 'false' THEN term occurence 'First-Lowercase' MUST NOT be linked with it.
+GIVEN term is '[fIRST-lOWERCASE][3]' AND ignoreCase is 'false' THEN term occurence 'First-Lowercase' MUST NOT be linked with it.
 
-## [all-lowercase][8]
+## [all-lowercase](#all-lowercase)
 
-GIVEN term is '[all-lowercase][9]' AND ignoreCase is 'false' THEN term occurence 'ALL-LOWERCASE' MUST NOT be linked with it.
+GIVEN term is '[all-lowercase][4]' AND ignoreCase is 'false' THEN term occurence 'ALL-LOWERCASE' MUST NOT be linked with it.
 
-## [MiXeD-CaSe][10]
+## [MiXeD-CaSe](#mixed-case)
 
-GIVEN term is '[MiXeD-CaSe][11]' AND ignoreCase is 'false' THEN term occurence 'mIxEd-cAsE' MUST NOT be linked with it.
+GIVEN term is '[MiXeD-CaSe][5]' AND ignoreCase is 'false' THEN term occurence 'mIxEd-cAsE' MUST NOT be linked with it.
 
-[1]: #testing-config-option-ignorecase
+[1]: glossary.md#first-uppercase
 
-[2]: #first-uppercase
+[2]: glossary.md#all-uppercase
 
-[3]: glossary.md#first-uppercase
+[3]: glossary.md#first-lowercase
 
-[4]: #all-uppercase
+[4]: glossary.md#all-lowercase
 
-[5]: glossary.md#all-uppercase
-
-[6]: #first-lowercase
-
-[7]: glossary.md#first-lowercase
-
-[8]: #all-lowercase
-
-[9]: glossary.md#all-lowercase
-
-[10]: #mixed-case
-
-[11]: glossary.md#mixed-case
+[5]: glossary.md#mixed-case
