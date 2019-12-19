@@ -109,9 +109,27 @@
             "type": "object",
             "properties": {
                 "indexFile": {
-                    "description": "Path relative to 'outDir' where to write an index file with glossary terms and links to there occurrences in text.",
-                    "type": "string",
+                    "description": "Generate a file with a list of glossary terms and where they have been used.",
+                    "oneOf": [{
+                        "type": "string"
+                    }, {
+                        "type": "object",
+                        "$ref": "#/$defs/IndexFile"
+                    }],
                     "default": ""
+                }
+            }
+        },
+        "IndexFile": {
+            "type": "object",
+            "properties": {
+                "file":  {
+                    "description": "Path relative to 'outDir' where to create the index markdown file.",
+                    "type": "string"
+                },
+                "title": {
+                    "description": "The page title for the index file. If missing the application uses a default value.",
+                    "type": "string"
                 }
             }
         },
