@@ -7,7 +7,6 @@ documents with their definition in another markdown document called *glossary*.
 
 [vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
-- **⚠ Important:** due to a [bug](https://github.com/about-code/glossarify-md/issues/48) (#48) in *glossarify-md v3.0.0* vuepress users are advised to wait for a bugfix before updating.
 
 ## Install
 
@@ -165,11 +164,21 @@ Enable support for markdown footnote syntax as defined at https://pandoc.org/MAN
 
 ### `--generateFiles.indexFile`
 
-- **Range:** string
+- **Range:** string | { file: string, [title: string]}
 - **Since:** v3.0.0
 
-Path relative to `outDir` where to write an index file to. The index contains links from glossary terms to  their occurrences in documents or document sections.
+If available, generates an index of glossary terms with links to files in which they have been mentioned.
 
+*Configuration example*
+```
+[...]
+"generateFiles": {
+  "indexFile": {
+    "file": "./book-index.md",  // Path relative to `outDir` where to write an index file to.
+    "title": "Book Index"       // Title for the generated page. If missing the example value will be the default.
+  }
+}
+```
 
 ### `--glossaries`
 
@@ -197,9 +206,7 @@ Paths or Glob-Patterns for files to include.
 
 - **Range:** string[]
 
-Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore
-in glossarification and linking. Non-markdown files will always be kept as is
-so no need to add those.
+Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in glossarification and linking. Non-markdown files will always be kept as is so no need to add those.
 
 ### `--linking` | `--l`
 
@@ -208,8 +215,7 @@ so no need to add those.
 Whether to create absolute or relative link-urls to the glossary.
 The use of `"absolute"` may require a `baseUrl`.
 
-> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an
-absolute file system path which you might not want to publish.
+> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
 
 ### `--outDir` | `--o`
 
@@ -217,27 +223,22 @@ absolute file system path which you might not want to publish.
 
 The directory where to write output files to.
 
-> **Important:** using `.` or `./`
-is going to overwrite your input files. Only do this on a copy of your input
-files or if you are able to roll back any changes or if you know the outcome
-satisfies your needs.
+> **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
+files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
 
-The recommendation is to write outputs to a separate directory such as `../out`
-or `../tmp`. or `../target`.
+The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
 
 - ### `--reportNotMentioned`
 
 - **Range:** "boolean"
 
-Report on terms which exist in a glossary but have neither been mentioned
-directly nor with any of its aliases.
+Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
 
 ## Additional Features
 
 ### Aliases and Synonyms
 
-Aliases can be defined in an HTML comment with the keyword `Aliases:` followed
-by a comma-separated list of alternative terms.
+Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list of alternative terms.
 
 *glossary.md*
 ```md
@@ -263,8 +264,7 @@ Linking aliases to their related term:
 
 > **Since v3.0.0**
 
-Just add the following option with your preferred file name and location to your
-*glossarify-md.conf.json*:
+Just add the following option with your preferred file name and location to your *glossarify-md.conf.json*:
 
 ```json
 {
