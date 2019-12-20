@@ -7,10 +7,12 @@
     "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
-        { "file": "./markdown/glossary.md", "termHint": "↴" },
-        { "file": "./substring_behavior/glossary.md", "termHint": ""},
-        { "file": "./term_descriptions/glossary.md", "termHint": "ⓕ"},
-        { "file": "./aliases_and_synonyms/glossary.md", "termHint": ""}
+        { "file": "./markdown/glossary.md", "termHint": "↴" }
+        ,{ "file": "./substring_behavior/glossary.md", "termHint": "" }
+        ,{ "file": "./term_descriptions/glossary.md", "termHint": "ⓕ" }
+        ,{ "file": "./aliases_and_synonyms/glossary.md", "termHint": "" }
+        ,{ "file": "./glossary-crosslinks/glossary-g1.md", "termHint": "" }
+        ,{ "file": "./glossary-crosslinks/glossary-g2.md", "termHint": "" }
     ],
     "linking": "relative",
     "ignoreCase": false,
