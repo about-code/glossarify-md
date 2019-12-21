@@ -2,13 +2,13 @@
 
 ## [Term A](#term-a)
 
-"Term [A][1]" only exists for the sake of being linked to from within this glossary.
+"[Term A][1]" only exists for the sake of being linked to from within this glossary.
 
 ## [Term B](#term-b)
 
-GIVEN a term "Term [A][1]" AND a definition of "[Term B][2]" in the same glossary G1
-THEN any occurrence of "Term [A][1]" in the definition of "[Term B][2]" MUST be linked
-to the definition of "Term [A][1]".
+GIVEN a term "[Term A][1]" AND a definition of "[Term B][2]" in the same glossary G1
+THEN any occurrence of "[Term A][1]" in the definition of "[Term B][2]" MUST be linked
+to the definition of "[Term A][1]".
 
 ## [Term C](#term-c)
 
@@ -20,7 +20,7 @@ of "[Term D][4]".
 
 "[Term E][5]" only exists for the sake of being linked to from glossary G2.
 
-[1]: ../substring_behavior/glossary.md#a "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'"
+[1]: glossary-g1.md#term-a '"Term A" only exists for the sake of being linked to from within this glossary.'
 
 [2]: glossary-g1.md#term-b 'GIVEN a term "Term A" AND a definition of "Term B" in the same glossary G1
 THEN any occurrence of "Term A" in the definition of "Term B" MUST be linked
