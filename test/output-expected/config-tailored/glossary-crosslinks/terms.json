@@ -14,7 +14,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
@@ -48,7 +48,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
@@ -65,7 +65,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
@@ -82,7 +82,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",

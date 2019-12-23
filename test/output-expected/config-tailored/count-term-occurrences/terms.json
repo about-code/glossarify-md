@@ -82,7 +82,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
@@ -99,7 +99,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 0
   },
   {
     "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",

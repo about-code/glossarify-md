@@ -20,17 +20,17 @@ Classical composition by Franz Schubert (The Death and the Maiden).
 
 ## [Äquator](#äquator)
 
-GIVEN a compound term 'Äquatorregion' AND GIVEN '[Äquator][1]' is a glossary term
+GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term
 THEN the linker MUST NOT link the compound with a glossary definition.
 
 ## [Faß](#faß)
 
 GIVEN a compound term 'Faßöl'
-WITH '[Faß][2]' being a glossary term
- AND '[Faß][2]' ending with a non-ASCII character
+WITH 'Faß' being a glossary term
+ AND 'Faß' ending with a non-ASCII character
  AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
-AND 'Faßöl' MUST NOT be linked to the glossary definition of '[Faß][2]'.
+AND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.
 
 <!-- =========== ZH ============= -->
 
@@ -57,11 +57,3 @@ Word begins and ends with symbols
 ## [Chi中国na](#chi中国na)
 
 Word contains symbols
-
-[1]: unicode-glossary.md#äquator "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term
-THEN the linker MUST NOT link the compound with a glossary definition."
-
-[2]: unicode-glossary.md#faß "GIVEN a compound term 'Faßöl'
-WITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character
-THEN 'Faßöl' MUST NOT be split into two words
-AND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'."

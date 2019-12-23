@@ -69,10 +69,8 @@ _THEN short description MUST be detected completely_. AND long description MUST 
 
 ### [GIVEN short description has a link](#given-short-description-has-a-link)
 
-THEN short description with a [link][1] MUST be detected completely. AND long description MUST be complete, too.
+THEN short description with a [link](./foo.md) MUST be detected completely. AND long description MUST be complete, too.
 
 ### [GIVEN long description has a link](#given-long-description-has-a-link)
 
-THEN short description MUST be detected completely. AND long description with a [link][1] MUST be complete, too.
-
-[1]: ./foo.md
+THEN short description MUST be detected completely. AND long description with a [link](./foo.md) MUST be complete, too.
