@@ -14,7 +14,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 7
+    "countOccurrenceTotal": 9
   },
   {
     "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
@@ -31,7 +31,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 7
+    "countOccurrenceTotal": 9
   },
   {
     "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
@@ -48,7 +48,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 9
+    "countOccurrenceTotal": 11
   },
   {
     "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
@@ -65,7 +65,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 9
+    "countOccurrenceTotal": 11
   },
   {
     "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
@@ -82,7 +82,7 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 7
+    "countOccurrenceTotal": 9
   },
   {
     "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
@@ -99,6 +99,6 @@
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 7
+    "countOccurrenceTotal": 9
   }
 ]
