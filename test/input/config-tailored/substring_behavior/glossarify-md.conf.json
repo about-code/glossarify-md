@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-tailored/substring_behavior",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "experimentalFootnotes": true,
+    "keepRawFiles": [],
+    "glossaries": [
+         { "file": "./glossary.md", "termHint": "" }
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../../output-actual/config-tailored/substring_behavior/terms.json",
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
