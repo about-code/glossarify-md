@@ -1,6 +1,7 @@
-# Book Index
+# [Book Index](#book-index)
 
-#### Term  
+#### [Term](#term)  
+  
 [Glossary][1] - [Section][2] - [./without-section-heading.md][3]
 
 [1]: ./glossary.md#term "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section

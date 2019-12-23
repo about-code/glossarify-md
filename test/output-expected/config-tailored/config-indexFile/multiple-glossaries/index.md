@@ -1,12 +1,15 @@
-# Book Index
+# [Book Index](#book-index)
 
-#### In Glossary A and B  
+#### [In Glossary A and B](#in-glossary-a-and-b)  
+  
 [Glossary A][1] - [Glossary B][2] - [Shared set of terms][3]
 
-#### Only in Glossary A  
+#### [Only in Glossary A](#only-in-glossary-a)  
+  
 [Glossary A][4] - [Disjunct set of terms][5]
 
-#### Only in Glossary B  
+#### [Only in Glossary B](#only-in-glossary-b)  
+  
 [Glossary B][6] - [Disjunct set of terms][5]
 
 [1]: ./glossary-a.md#in-glossary-a-and-b

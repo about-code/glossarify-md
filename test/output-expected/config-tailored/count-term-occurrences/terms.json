@@ -1,0 +1,121 @@
+[
+  {
+    "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
+    "term": "mention-one-once",
+    "hint": "",
+    "longDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
+    "anchor": "#mention-one-once",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
+    "term": "mention-two-twice",
+    "hint": "",
+    "longDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
+    "anchor": "#mention-two-twice",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
+    "term": "Mentioned-in-document-once",
+    "hint": "",
+    "longDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
+    "anchor": "#mentioned-in-document-once",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
+    "term": "Mentioned-in-document-twice",
+    "hint": "",
+    "longDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
+    "anchor": "#mentioned-in-document-twice",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
+    "term": "One",
+    "hint": "",
+    "longDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
+    "anchor": "#one",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
+    "term": "Two",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
+    "anchor": "#two",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
+    "term": "Zero",
+    "hint": "",
+    "longDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
+    "anchor": "#zero",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{redacted}/input/config-tailored/count-term-occurrences/glossary.md",
+      "outPath": "/{redacted}/output-actual/config-tailored/count-term-occurrences/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  }
+]
