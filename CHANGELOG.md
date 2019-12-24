@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/about-code/glossarify-md/compare/v3.0.0...v3.1.0) (2019-12-24)
+
+
+### Bug Fixes
+
+* escape terms containing characters with special meaning in regExp ([1815304](https://github.com/about-code/glossarify-md/commit/1815304))
+* v3.0.0 linkified headings don't play well with vuepress. Closes [#48](https://github.com/about-code/glossarify-md/issues/48). ([e9485f2](https://github.com/about-code/glossarify-md/commit/e9485f2))
+
+
+### Deprecation Notices
+
+* Value range 'string' of config option 'generateFiles.indexFile'. Use object instead (see README.md). ([ceb7e0c](https://github.com/about-code/glossarify-md/commit/ceb7e0c))
+
+
+### Features
+
+* Custom page title for generated index file can now be set. ([0b98e43](https://github.com/about-code/glossarify-md/commit/0b98e43))
+* link usage of (other) terms in a term's glossary definition. ([671d1ee](https://github.com/about-code/glossarify-md/commit/671d1ee))
+
 ## [3.0.0](https://github.com/about-code/glossarify-md/compare/v2.1.0...v3.0.0) (2019-12-14)
 
 
