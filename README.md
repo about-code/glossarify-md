@@ -172,8 +172,6 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Note**: If you plan translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
 
-> **Note (vuepress)**: A page title "Index" may not appear in the  [vuepress](https://vuepress.vuejs.org) sidebar.
-
 ## Options
 
 ### `--help` | `--h`
