@@ -8,8 +8,8 @@
     "glossary": {
       "file": "./sub/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/config-indexFile/glossary-in-subdir/sub/glossary.md"
     },
     "regex": {},
     "aliases": [],

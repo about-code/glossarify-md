@@ -4,7 +4,7 @@ const minimist = require("minimist");
 const fs = require("fs");
 const path = require("path");
 const proc = require("process");
-const glossarify = require("../lib/glossarify");
+const program = require("../lib/main");
 const confSchema = require("../conf.schema.json").properties;
 const messages = require("../lib/messages");
 const {version} = require("../package.json");
@@ -63,7 +63,7 @@ opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
 validateOpts(opts);
 
 //_/ Run \______________________________________________________________________
-glossarify.glossarify(opts);
+program.run(opts);
 
 //_/ Helpers \__________________________________________________________________
 function validateOpts(conf) {

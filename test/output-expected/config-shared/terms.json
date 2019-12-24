@@ -8,8 +8,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -25,8 +25,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -47,8 +47,8 @@
     "glossary": {
       "file": "./markdown/glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/input/config-shared/markdown/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/markdown/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -64,8 +64,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -83,8 +83,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -102,8 +102,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -119,8 +119,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -138,8 +138,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -155,8 +155,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -172,8 +172,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -189,8 +189,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -206,8 +206,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -223,8 +223,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -240,8 +240,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -257,8 +257,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -274,8 +274,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -291,8 +291,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -310,8 +310,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -329,8 +329,8 @@
     "glossary": {
       "file": "./markdown/glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/input/config-shared/markdown/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/markdown/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -346,8 +346,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -365,8 +365,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -382,8 +382,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -399,8 +399,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -416,8 +416,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -433,8 +433,8 @@
     "glossary": {
       "file": "./markdown/glossary.md",
       "termHint": "↴",
-      "basePath": "/{redacted}/input/config-shared/markdown/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/markdown/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -450,8 +450,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -471,8 +471,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -492,8 +492,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -513,8 +513,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -534,8 +534,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [
@@ -554,8 +554,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -571,8 +571,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -588,8 +588,8 @@
     "glossary": {
       "file": "./term_descriptions/glossary.md",
       "termHint": "ⓕ",
-      "basePath": "/{redacted}/input/config-shared/term_descriptions/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/term_descriptions/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/term_descriptions/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -605,8 +605,8 @@
     "glossary": {
       "file": "./aliases_and_synonyms/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-shared/aliases_and_synonyms/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-shared/aliases_and_synonyms/glossary.md"
     },
     "regex": {},
     "aliases": [],
