@@ -8,8 +8,8 @@
     "glossary": {
       "file": "./glossary-g1.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
     },
     "regex": {},
     "aliases": [],
@@ -25,8 +25,8 @@
     "glossary": {
       "file": "./glossary-g1.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
     },
     "regex": {},
     "aliases": [],
@@ -42,8 +42,8 @@
     "glossary": {
       "file": "./glossary-g1.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
     },
     "regex": {},
     "aliases": [],
@@ -59,8 +59,8 @@
     "glossary": {
       "file": "./glossary-g2.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g2.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md"
     },
     "regex": {},
     "aliases": [],
@@ -76,8 +76,8 @@
     "glossary": {
       "file": "./glossary-g1.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g1.md"
     },
     "regex": {},
     "aliases": [],
@@ -93,8 +93,8 @@
     "glossary": {
       "file": "./glossary-g2.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/glossary-crosslinks/glossary-g2.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/glossary-crosslinks/glossary-g2.md"
     },
     "regex": {},
     "aliases": [],

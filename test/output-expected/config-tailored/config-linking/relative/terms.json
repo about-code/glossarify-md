@@ -8,8 +8,8 @@
     "glossary": {
       "file": "./sub-1/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/config-linking/relative/sub-1/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -25,8 +25,8 @@
     "glossary": {
       "file": "./sub-1/glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/config-linking/relative/sub-1/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/config-linking/relative/sub-1/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -42,8 +42,8 @@
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/config-linking/relative/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/relative/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/config-linking/relative/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/config-linking/relative/glossary.md"
     },
     "regex": {},
     "aliases": [],
@@ -59,8 +59,8 @@
     "glossary": {
       "file": "./glossary.md",
       "termHint": "",
-      "basePath": "/{redacted}/input/config-tailored/config-linking/relative/glossary.md",
-      "outPath": "/{redacted}/output-actual/config-tailored/config-linking/relative/glossary.md"
+      "basePath": "/{CWD}/output-actual/config-tailored/config-linking/relative/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/config-linking/relative/glossary.md"
     },
     "regex": {},
     "aliases": [],
