@@ -9,7 +9,7 @@ AND the index MUST contain links to the correct glossary.
 
 ## [Shared set of terms](#shared-set-of-terms)
 
-GIVEN term '[In Glossary A and B][3][ (0)][3][, (1)][4]'
+GIVEN term '[In Glossary A and B][3][<sup>1)</sup>][3][<sup> 2)</sup>][4]'
 AND the term is defined in both glossaries
 THEN the index MUST contain the term only once AND link to both glossaries
 
