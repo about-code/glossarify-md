@@ -1,0 +1,53 @@
+[
+  {
+    "shortDesc": "foo",
+    "term": "dolor",
+    "hint": "↴",
+    "longDesc": "foo",
+    "anchor": "#dolor",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 3
+  },
+  {
+    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
+    "term": "Lorem ipsum",
+    "hint": "↴",
+    "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "anchor": "#lorem-ipsum",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 11
+  },
+  {
+    "shortDesc": "",
+    "term": "sit",
+    "hint": "↴",
+    "longDesc": "",
+    "anchor": "#sit",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴",
+      "basePath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-tailored/markdown/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 3
+  }
+]

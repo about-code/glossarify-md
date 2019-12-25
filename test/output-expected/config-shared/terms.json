@@ -39,23 +39,6 @@
     "countOccurrenceTotal": 5
   },
   {
-    "shortDesc": "foo",
-    "term": "dolor",
-    "hint": "↴",
-    "longDesc": "foo",
-    "anchor": "#dolor",
-    "glossary": {
-      "file": "./markdown/glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false,
-    "countOccurrenceTotal": 3
-  },
-  {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "term": "FIELD",
     "hint": "",
@@ -321,23 +304,6 @@
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
-    "term": "Lorem ipsum",
-    "hint": "↴",
-    "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
-    "anchor": "#lorem-ipsum",
-    "glossary": {
-      "file": "./markdown/glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false,
-    "countOccurrenceTotal": 11
-  },
-  {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "term": "OUR",
     "hint": "",
@@ -423,23 +389,6 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
-  },
-  {
-    "shortDesc": "",
-    "term": "sit",
-    "hint": "↴",
-    "longDesc": "",
-    "anchor": "#sit",
-    "glossary": {
-      "file": "./markdown/glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/config-shared/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-shared/markdown/glossary.md"
-    },
-    "regex": {},
-    "aliases": [],
-    "ignoreCase": false,
-    "countOccurrenceTotal": 3
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
