@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../output-actual/markdown",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "experimentalFootnotes": true,
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": "↴" }
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../output-actual/markdown/terms.json",
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}

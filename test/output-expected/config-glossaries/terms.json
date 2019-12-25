@@ -1,0 +1,393 @@
+[
+  {
+    "shortDesc": "Testing German Umlauts.",
+    "term": "äöüß Term begins with Umlauts",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#äöüß-term-begins-with-umlauts",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
+    "term": "Äquator",
+    "hint": "",
+    "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
+    "anchor": "#äquator",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "Word ends with symbols",
+    "term": "China中国",
+    "hint": "",
+    "longDesc": "Word ends with symbols",
+    "anchor": "#china中国",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Word contains symbols",
+    "term": "Chi中国na",
+    "hint": "",
+    "longDesc": "Word contains symbols",
+    "anchor": "#chi中国na",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
+    "term": "Der Tod und das Mädchen",
+    "hint": "",
+    "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
+    "anchor": "#der-tod-und-das-mädchen",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
+    "term": "Faß",
+    "hint": "",
+    "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
+    "anchor": "#faß",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 3
+  },
+  {
+    "shortDesc": "Testing German Umlauts.",
+    "term": "Term contains äöüß Umlauts",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#term-contains-äöüß-umlauts",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
+    "term": "Term Disjunct A",
+    "hint": " (a/b)",
+    "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
+    "anchor": "#term-disjunct-a",
+    "glossary": {
+      "file": "./disjunct-terms-glossary-a.md",
+      "termHint": " (a/b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/disjunct-terms-glossary-a.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/disjunct-terms-glossary-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
+    "term": "Term Disjunct B",
+    "hint": " (a/b)",
+    "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
+    "anchor": "#term-disjunct-b",
+    "glossary": {
+      "file": "./disjunct-terms-glossary-b.md",
+      "termHint": " (a/b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/disjunct-terms-glossary-b.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/disjunct-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Testing German Umlauts.",
+    "term": "Term ends with Umlauts äöüß",
+    "hint": "",
+    "longDesc": "Testing German Umlauts.",
+    "anchor": "#term-ends-with-umlauts-äöüß",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "term": "Term Shared A",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-a",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-a.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
+  },
+  {
+    "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "term": "Term Shared A",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-a",
+    "glossary": {
+      "file": "./shared-terms-glossary-b.md",
+      "termHint": " (a&b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-b.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
+  },
+  {
+    "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "term": "Term Shared B",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-a.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-a.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "term": "Term Shared B",
+    "hint": " (a&b)",
+    "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "anchor": "#term-shared-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-b.md",
+      "termHint": " (a&b)",
+      "basePath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-b.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/shared-terms-glossary-b.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Prefix",
+    "hint": "☛ ${term}",
+    "longDesc": "",
+    "anchor": "#term-hint-prefix",
+    "glossary": {
+      "file": "./term-hint-prefix-glossary.md",
+      "termHint": "☛ ${term}",
+      "basePath": "/{CWD}/output-actual/config-glossaries/term-hint-prefix-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/term-hint-prefix-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Suffix",
+    "hint": "${term} ☚",
+    "longDesc": "",
+    "anchor": "#term-hint-suffix",
+    "glossary": {
+      "file": "./term-hint-suffix-glossary.md",
+      "termHint": "${term} ☚",
+      "basePath": "/{CWD}/output-actual/config-glossaries/term-hint-suffix-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/term-hint-suffix-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Suffix-Default",
+    "hint": "↴",
+    "longDesc": "",
+    "anchor": "#term-hint-suffix-default",
+    "glossary": {
+      "file": "./term-hint-suffix-default-glossary.md",
+      "termHint": "↴",
+      "basePath": "/{CWD}/output-actual/config-glossaries/term-hint-suffix-default-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/term-hint-suffix-default-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "term": "Term-Hint-Wrapped",
+    "hint": "☛ ${term} ☚",
+    "longDesc": "",
+    "anchor": "#term-hint-wrapped",
+    "glossary": {
+      "file": "./term-hint-wrapped-glossary.md",
+      "termHint": "☛ ${term} ☚",
+      "basePath": "/{CWD}/output-actual/config-glossaries/term-hint-wrapped-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/term-hint-wrapped-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "term": "Uppercase",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#uppercase",
+    "glossary": {
+      "file": "./Uppercase-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/Uppercase-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/Uppercase-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "China (spelling)",
+    "term": "zhōngguó",
+    "hint": "",
+    "longDesc": "China (spelling)",
+    "anchor": "#zhōngguó",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Word begins and ends with symbols",
+    "term": "中China国",
+    "hint": "",
+    "longDesc": "Word begins and ends with symbols",
+    "anchor": "#中china国",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "China",
+    "term": "中国",
+    "hint": "",
+    "longDesc": "China",
+    "anchor": "#中国",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Word begins with symbols",
+    "term": "中国China",
+    "hint": "",
+    "longDesc": "Word begins with symbols",
+    "anchor": "#中国china",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/unicode-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]

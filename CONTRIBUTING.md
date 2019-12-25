@@ -64,11 +64,9 @@ ${workspace}/
    `- package.json          <-- project dependencies
 ```
 
-1. Running the test suite will create a new folder `./output-actual` with the results from processing `./input`. Test results are *never* comitted.
+1. Running the test suite will create a new folder `./output-actual` with the results from processing `./input`. Actual test results are *never* comitted.
 1. `./output-expected` is the *baseline* to compare `./output-actual` against using `git diff`. If there are any differences then tests fail. Mind the note above, regarding failures after a fresh clone.
-
 1. extend/update test inputs *and* expected outputs. See also *Extending the Test Suite*
-
 1. implement feature or bugfix
 1. run tests against your implementation
 
@@ -109,27 +107,21 @@ If you're testing a bugfix or a new feature you need
 
    ...whose `glossaries` section points to the glossary file(s)
 
-> Conventions
+> Convention
 >
-> - each bugfix or feature should have its distinct glossary and document input files
-> - tests which don't need a special configuration reside in `./input/config-shared`
->   - just add any glossary files to the `glossaries` section of `./input/config-shared/glossarify-md.conf.json`
-> - tests which need a particular configuration reside in `./input/config-tailored`
->   - more see *Running Tests with a Tailored Configuration*
+> Each bugfix or feature should have its distinct glossary and document input files
 
-
-#### Running Tests with a Tailored Configuration
-
-1. add a new `./input/config-tailored/foo` directory or extend an existing one
-1. add a new `./input/config-tailored/foo/glossarify-md.conf.json`
+1. add a new `./input/foo-test` directory
+1. add a new `./input/foo-test/glossarify-md.conf.json`
 1. add a new test script in `${workspace}/test/package.json`
-   - `"test_{#nr}": "npx . --config=./input/config-tailored/foo/glossarify-md.conf.json"`
+   - `"test_{#nr}": "npx . --config=./input/config-tailored/foo-test/glossarify-md.conf.json"`
 
-*./input/features/foo/glossarify-md.conf.json (sample)*
+*./input/foo-test/glossarify-md.conf.json (sample)*
 ```json
 {
+    "$schema": "../../../conf.schema.json",
     "baseDir": ".",
-    "outDir": "../../../output-actual/config-tailored/foo",
+    "outDir": "../../output-actual/foo-test",
     "linking": "relative",
     "includeFiles": ["."],
     "excludeFiles": [],
@@ -137,7 +129,7 @@ If you're testing a bugfix or a new feature you need
         { "file": "./glossary.md"}
     ],
     "dev": {
-        "termsFile": "../../../output-actual/config-tailored/foo/terms.json"
+        "termsFile": "../../output-actual/foo-test/terms.json"
     }
 }
 ```

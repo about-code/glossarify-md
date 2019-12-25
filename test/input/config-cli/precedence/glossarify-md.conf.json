@@ -1,0 +1,14 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseUrl": "file://localhost",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-cli/precedence",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": ""}
+    ],
+    "linking": "relative",
+    "ignoreCase": false
+}

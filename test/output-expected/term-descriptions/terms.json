@@ -1,0 +1,291 @@
+[
+  {
+    "shortDesc": "",
+    "term": "Formatted Term Definitions",
+    "hint": "ⓕ",
+    "longDesc": "",
+    "anchor": "#formatted-term-definitions",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN full description is a blockquote",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-full-description-is-a-blockquote",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN long description has a link",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
+    "anchor": "#given-long-description-has-a-link",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN long description is a blockquote",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-long-description-is-a-blockquote",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description with a link MUST be detected completely.",
+    "term": "GIVEN short description has a link",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-has-a-link",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN short description is a blockquote",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-is-a-blockquote",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN short description is bold WITH fullstop excluded",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-is-bold-with-fullstop-excluded",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN short description is bold WITH fullstop included",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-is-bold-with-fullstop-included",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN short description is italic WITH fullstop excluded",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-is-italic-with-fullstop-excluded",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "THEN short description MUST be detected completely.",
+    "term": "GIVEN short description is italic WITH fullstop included",
+    "hint": "ⓕ",
+    "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "anchor": "#given-short-description-is-italic-with-fullstop-included",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "term": "Single sentence accross multiple lines",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "anchor": "#single-sentence-accross-multiple-lines",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "term": "Single sentence terminated by exclamation mark",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "anchor": "#single-sentence-terminated-by-exclamation-mark",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "term": "Single sentence terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "anchor": "#single-sentence-terminated-by-full-stop",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "term": "Single sentence terminated by question mark",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "anchor": "#single-sentence-terminated-by-question-mark",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
+    "term": "Two sentences accross multiple lines terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
+    "anchor": "#two-sentences-accross-multiple-lines-terminated-by-full-stop",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "term": "Two sentences in a single line terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
+    "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "term": "Two sentences in multiple lines terminated by full stop",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
+    "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  }
+]
