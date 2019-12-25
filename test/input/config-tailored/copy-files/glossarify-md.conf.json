@@ -1,16 +1,17 @@
 {
-    "$schema": "../../../conf.schema.json",
+    "$schema": "../../../../conf.schema.json",
     "baseDir": ".",
-    "outDir": "../../output-actual/config-shared",
+    "outDir": "../../../output-actual/config-tailored/copy-files",
     "includeFiles": ["."],
     "excludeFiles": [],
     "experimentalFootnotes": true,
     "keepRawFiles": [],
-    "glossaries": [],
+    "glossaries": [
+        {"file": "./glossary.md", "termHint": ""}
+    ],
     "linking": "relative",
     "ignoreCase": false,
     "dev": {
-        "termsFile": "../../output-actual/config-shared/terms.json",
         "printInputAst": false,
         "reproducablePaths": true,
         "printOutputAst": false
