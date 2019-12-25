@@ -1,0 +1,19 @@
+[
+  {
+    "shortDesc": "must not be referred to by excluded files.",
+    "term": "Term",
+    "hint": "",
+    "longDesc": "must not be referred to by excluded files.",
+    "anchor": "#term",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-excludeFiles/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-excludeFiles/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]

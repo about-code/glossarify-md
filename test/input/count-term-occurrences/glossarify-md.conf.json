@@ -1,0 +1,19 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../output-actual/count-term-occurrences",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": "" }
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "termsFile": "../../output-actual/count-term-occurrences/terms.json",
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../output-actual/config-ignoreCase-false",
+    "dev": {
+        "termsFile": "../../output-actual/config-ignoreCase-false/terms.json",
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}

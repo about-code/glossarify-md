@@ -1,0 +1,36 @@
+[
+  {
+    "shortDesc": "",
+    "term": "Term1",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#term1",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-baseUrl/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-baseUrl/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "term": "Term2",
+    "hint": "",
+    "longDesc": "",
+    "anchor": "#term2",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-baseUrl/sub-1/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-baseUrl/sub-1/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]
