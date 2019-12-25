@@ -1,19 +1,18 @@
 {
-    "$schema": "../../../conf.schema.json",
+    "$schema": "../../../../conf.schema.json",
     "baseDir": ".",
-    "outDir": "../../output-actual/config-shared",
+    "outDir": "../../../output-actual/config-tailored/markdown",
     "includeFiles": ["."],
     "excludeFiles": [],
     "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
-        { "file": "./term_descriptions/glossary.md", "termHint": "ⓕ" }
-        ,{ "file": "./aliases_and_synonyms/glossary.md", "termHint": "" }
+        { "file": "./glossary.md", "termHint": "↴" }
     ],
     "linking": "relative",
     "ignoreCase": false,
     "dev": {
-        "termsFile": "../../output-actual/config-shared/terms.json",
+        "termsFile": "../../../output-actual/config-tailored/markdown/terms.json",
         "printInputAst": false,
         "reproducablePaths": true,
         "printOutputAst": false
