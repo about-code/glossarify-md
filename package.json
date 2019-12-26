@@ -35,7 +35,7 @@
     "release-beta": "standard-version --prerelease beta",
     "release-dry": "standard-version --dry-run",
     "release-stable": "standard-version",
-    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
