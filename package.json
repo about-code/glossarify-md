@@ -2,25 +2,14 @@
   "name": "glossarify-md",
   "version": "3.1.0",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
+  "author": {
+    "name": "Andreas Martin"
+  },
+  "license": "MIT",
   "main": "lib/main.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/about-code/glossarify-md.git"
-  },
-  "bin": {
-    "glossarify-md": "bin/index.js"
-  },
-  "scripts": {
-    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
-    "debug-cfg": "node --inspect-brk ./bin/index.js --config",
-    "config": "node ./bin/index.js --config",
-    "test": "cd ./test && npm test",
-    "test-win": "cd .\\test && npm run test-win",
-    "dry-release": "standard-version --dry-run",
-    "alpha-release": "standard-version --prerelease alpha",
-    "beta-release": "standard-version --prerelease beta",
-    "stable-release": "standard-version"
   },
   "files": [
     "bin",
@@ -31,23 +20,23 @@
     "package.json",
     "README.md"
   ],
-  "keywords": [
-    "glossary",
-    "markdown",
-    "definitions",
-    "terms",
-    "index",
-    "linking",
-    "documentation",
-    "link",
-    "book",
-    "vuepress"
-  ],
-  "author": {
-    "name": "Andreas Martin",
-    "email": "about-code@users.noreply.github.com"
+  "bin": {
+    "glossarify-md": "bin/index.js"
   },
-  "license": "MIT",
+  "scripts": {
+    "config": "node ./bin/index.js --config",
+    "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
+    "debug-cfg": "node --inspect-brk ./bin/index.js --config",
+    "fixes": "eslint . --fix",
+    "linter": "eslint .",
+    "test": "cd ./test && npm test",
+    "test-win": "cd .\\test && npm run test-win",
+    "release-alpha": "standard-version --prerelease alpha",
+    "release-beta": "standard-version --prerelease beta",
+    "release-dry": "standard-version --dry-run",
+    "release-stable": "standard-version",
+    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+  },
   "dependencies": {
     "fs-extra": "^8.1.0",
     "github-slugger": "^1.0.0",
@@ -69,6 +58,22 @@
     "vfile": "^4.0.2"
   },
   "devDependencies": {
-    "standard-version": "^7.0.0"
-  }
+    "eslint": "^6.8.0",
+    "standard-version": "^7.0.0",
+    "npm-run-all": "^4.1.5"
+  },
+  "keywords": [
+    "glossary",
+    "markdown",
+    "definitions",
+    "terms",
+    "index",
+    "linking",
+    "crosslink",
+    "documentation",
+    "link",
+    "book",
+    "vuepress",
+    "gitbook"
+  ]
 }

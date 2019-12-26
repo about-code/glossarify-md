@@ -3,17 +3,17 @@ const path = require("path");
 const fs = require("fs");
 
 let hasDiff = false;
-process.stdin.setEncoding('utf8');
-process.stdin.on('readable', () => {
-  let chunk;
-  // Use a loop to make sure we read all available data.
-  while ((chunk = process.stdin.read()) !== null) {
-    process.stdout.write(chunk);
-    hasDiff = true;
-  }
+process.stdin.setEncoding("utf8");
+process.stdin.on("readable", () => {
+    let chunk;
+    // Use a loop to make sure we read all available data.
+    while ((chunk = process.stdin.read()) !== null) {
+        process.stdout.write(chunk);
+        hasDiff = true;
+    }
 });
 
-process.stdin.on('end', () => {
+process.stdin.on("end", () => {
     let hasMessage = "";
     if (!fs.existsSync(path.resolve(process.cwd(), "./output-actual")))
         hasMessage += "No directory './output-actual'\n";
@@ -49,6 +49,6 @@ process.stdin.on('end', () => {
 │ TESTS PASSED │
 └──────────────┘
 `
-        )
+        );
     }
 });

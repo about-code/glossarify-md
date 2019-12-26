@@ -14,21 +14,22 @@ const banner =
 `┌──────────────────────────┐
 │   glossarify-md v${version}   │
 └──────────────────────────┘
-`
+`;
 console.log(banner);
 
 //_/ CLI \______________________________________________________________________
 const optsSchema = Object.assign({
     "config": {
-        alias: "c",
-        description: "Path to config file, e.g. './glossarify-md.conf.json'."},
-        type: "string",
-        default: "",
-    "help":{
-        alias: "h",
-        description: "Show this help.",
-        type: "boolean",
-        default: false
+        alias: "c"
+        ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
+    }
+    ,type: "string"
+    ,default: ""
+    ,"help": {
+        alias: "h"
+        ,description: "Show this help."
+        ,type: "boolean"
+        ,default: false
     }
 }, confSchema);
 const optsDefault = minimist([], buildOpts(optsSchema));
@@ -36,13 +37,13 @@ const optsCli  = minimist(proc.argv.slice(2));
 let optsFile = {};
 
 // --help (or no args at all)
-if (optsCli.help || proc.argv.length === 2) {
+if (optsCli.help || proc.argv.length === 2)
     printOpts(optsSchema);
-}
+
 // --config
 let confDir = "";
 let confPath = optsCli.config;
-if (confPath) {
+if (confPath)
     try {
         confPath = path.resolve(CWD, confPath);
         optsFile = JSON.parse(fs.readFileSync(confPath));
@@ -51,9 +52,9 @@ if (confPath) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
     }
-} else {
+else
     confDir = CWD;
-}
+
 
 // Opts precedence: CLI over file over defaults
 const opts = Object.assign(optsDefault, optsFile, optsCli);
@@ -70,13 +71,13 @@ function validateOpts(conf) {
 
     if (conf.baseDir === "") {
         console.log(messages.NO_BASEDIR);
-        console.log('ABORTED.\n');
+        console.log("ABORTED.\n");
         proc.exit(0);
     }
 
     if (conf.outDir === "") {
         console.log(messages.NO_OUTDIR);
-        console.log('ABORTED.\n');
+        console.log("ABORTED.\n");
         proc.exit(0);
     }
 
@@ -84,8 +85,8 @@ function validateOpts(conf) {
     console.log(`☛ Writing to:   ${conf.outDir}\n`);
 
     if (conf.outDir === conf.baseDir && !conf.force) {
-        console.log(messages.OUTDIR_IS_BASEDIR)
-        console.log('ABORTED.\n');
+        console.log(messages.OUTDIR_IS_BASEDIR);
+        console.log("ABORTED.\n");
         proc.exit(0);
     }
 }
@@ -99,7 +100,7 @@ function printOpts(parameters) {
             .sort((a, b) => a.localeCompare(b, "en"))
             .map(key => {
                 const {alias, type, description, default:_default} = parameters[key];
-                return `--${key}${alias ? ', --' + alias : ''} (${type})\n  ${description}\n  Default: ${JSON.stringify(_default)}\n\n`;
+                return `--${key}${alias ? ", --" + alias : ""} (${type})\n  ${description}\n  Default: ${JSON.stringify(_default)}\n\n`;
             })
             .join("")
     );

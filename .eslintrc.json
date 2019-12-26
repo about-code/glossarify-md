@@ -1,0 +1,33 @@
+{
+    "env": {
+        "commonjs": true,
+        "es6": true,
+        "node": true
+    },
+    "ignorePatterns": ["node_modules/", "test/node_modules/**/*"],
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018
+    },
+    "rules": {
+        "indent": [ "error", 4 ]
+        ,"linebreak-style": [ "error", "unix" ]
+        ,"quotes": [ "error", "double" ]
+        ,"semi": [ "error", "always" ]
+        ,"curly": [ "error", "multi", "consistent"]
+        ,"dot-location": ["error", "property"]
+        ,"dot-notation": ["error"]
+        ,"no-trailing-spaces": ["error"]
+        ,"space-before-blocks": ["error", {
+            "functions": "always"
+            ,"keywords": "always"
+            ,"classes": "always"
+        }]
+        ,"comma-dangle": ["error", "never"]
+        ,"comma-style": ["warn", "first"]
+    }
+}

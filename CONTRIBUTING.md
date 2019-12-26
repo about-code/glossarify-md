@@ -27,15 +27,7 @@ cd glossarify-md
 npm install
 ```
 
-Also install test-suite dependencies:
-
-```
-cd ./test
-npm install
-npm test
-```
-
-> **⚠ Important:** Make sure to run tests successfully, locally on a fresh clone before you start coding. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be tracked down and fixed. Leave a note on the issue in your pull request. DO NOT commit a new baseline in this case. With a corrupted baseline the CI pipeline may run green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
+> **⚠ Important:** Make sure to run `npm test` successfully, locally, on a fresh clone before you start coding. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be fixed or work on resolving those issues first. Do NOT just ignore it and commit new baselines in this case. This will corrupt the baseline and the CI pipeline might now going green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
 
 ## Testing
 

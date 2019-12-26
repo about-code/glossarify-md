@@ -7,9 +7,9 @@ const errors = [];
     const expected = toSystemSlash("../../lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 (function testWhenFromIsInSubdirectoryDepth1() {
@@ -18,9 +18,9 @@ const errors = [];
     const expected = toSystemSlash("../dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 (function testWhenFromIsInSubdirectoryDepth2() {
@@ -29,9 +29,9 @@ const errors = [];
     const expected = toSystemSlash("../../dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 (function testWhenToIsInSubdirectory() {
@@ -40,9 +40,9 @@ const errors = [];
     const expected = toSystemSlash("./lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 (function testWhenFromAndToAreSiblings() {
@@ -51,9 +51,9 @@ const errors = [];
     const expected = toSystemSlash("./bar.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 (function testWhenFromAndToIsEqual() {
@@ -62,13 +62,13 @@ const errors = [];
     const expected = toSystemSlash("./");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected) {
+    if (actual !== expected)
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
-    }
+
 })();
 
 if(errors.length > 0) {
     console.log(errors);
     console.log("Tests failed with errors.");
     process.exit(1);
-};
+}
