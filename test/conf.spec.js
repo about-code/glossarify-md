@@ -5,12 +5,13 @@ let errors = [];
 (function testNoDuplicateArgs() {
     let counter = {};
     function count(name) {
-        if (name)
+        if (name) {
             if (!counter[name]) {
                 counter[name] = 1;
             } else {
                 counter[name] += 1;
             }
+        }
 
     }
     Object.keys(opts)
@@ -26,7 +27,7 @@ let errors = [];
     );
 })();
 
-if(errors.length > 0) {
+if (errors.length > 0) {
     console.log(errors);
     console.log("Tests failed with errors.");
     process.exit(1);

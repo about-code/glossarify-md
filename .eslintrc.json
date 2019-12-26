@@ -14,20 +14,31 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "indent": [ "error", 4 ]
-        ,"linebreak-style": [ "error", "unix" ]
+        "semi": [ "error", "always" ]
         ,"quotes": [ "error", "double" ]
-        ,"semi": [ "error", "always" ]
-        ,"curly": [ "error", "multi", "consistent"]
+        ,"indent": [ "error", 4 ]
         ,"dot-location": ["error", "property"]
         ,"dot-notation": ["error"]
+        ,"linebreak-style": [ "error", "unix" ]
+        ,"newline-per-chained-call": ["error", {"ignoreChainWithDepth": 2 }]
+        ,"brace-style": ["error", "1tbs", { "allowSingleLine": true}]
+        ,"curly": [ "error", "all"]
+        ,"eol-last": ["error", "always"]
+        ,"no-multiple-empty-lines": ["error", { "max": 2, "maxEOF": 1, "maxBOF": 0}]
         ,"no-trailing-spaces": ["error"]
         ,"space-before-blocks": ["error", {
             "functions": "always"
             ,"keywords": "always"
             ,"classes": "always"
         }]
+        ,"block-spacing": ["error", "always"]
+        ,"keyword-spacing": ["error", { "before": true, "after": true}]
+        ,"spaced-comment": ["warn", "always", { "exceptions": ["_", "-", "="] }]
         ,"comma-dangle": ["error", "never"]
         ,"comma-style": ["warn", "first"]
+        ,"guard-for-in": ["error"]
+        ,"eqeqeq": ["error", "always"]
+        ,"no-extra-bind": ["error"]
+        ,"no-eval": ["error"]
     }
 }

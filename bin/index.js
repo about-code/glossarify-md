@@ -17,7 +17,7 @@ const banner =
 `;
 console.log(banner);
 
-//_/ CLI \______________________________________________________________________
+// _/ CLI \_____________________________________________________________________
 const optsSchema = Object.assign({
     "config": {
         alias: "c"
@@ -37,13 +37,14 @@ const optsCli  = minimist(proc.argv.slice(2));
 let optsFile = {};
 
 // --help (or no args at all)
-if (optsCli.help || proc.argv.length === 2)
+if (optsCli.help || proc.argv.length === 2) {
     printOpts(optsSchema);
+}
 
 // --config
 let confDir = "";
 let confPath = optsCli.config;
-if (confPath)
+if (confPath) {
     try {
         confPath = path.resolve(CWD, confPath);
         optsFile = JSON.parse(fs.readFileSync(confPath));
@@ -52,8 +53,9 @@ if (confPath)
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
     }
-else
+} else {
     confDir = CWD;
+}
 
 
 // Opts precedence: CLI over file over defaults
@@ -63,10 +65,10 @@ opts.baseDir = path.resolve(confDir, opts.baseDir);
 opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
 validateOpts(opts);
 
-//_/ Run \______________________________________________________________________
+// _/ Run \_____________________________________________________________________
 program.run(opts);
 
-//_/ Helpers \__________________________________________________________________
+// _/ Helpers \_________________________________________________________________
 function validateOpts(conf) {
 
     if (conf.baseDir === "") {

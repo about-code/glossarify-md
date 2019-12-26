@@ -7,8 +7,9 @@ const errors = [];
     const expected = toSystemSlash("../../lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
@@ -18,8 +19,9 @@ const errors = [];
     const expected = toSystemSlash("../dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
@@ -29,8 +31,9 @@ const errors = [];
     const expected = toSystemSlash("../../dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
@@ -40,8 +43,9 @@ const errors = [];
     const expected = toSystemSlash("./lorem/ipsum/dolor.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
@@ -51,8 +55,9 @@ const errors = [];
     const expected = toSystemSlash("./bar.md");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
@@ -62,12 +67,13 @@ const errors = [];
     const expected = toSystemSlash("./");
 
     const actual = relativeFromTo(from, to);
-    if (actual !== expected)
+    if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
+    }
 
 })();
 
-if(errors.length > 0) {
+if (errors.length > 0) {
     console.log(errors);
     console.log("Tests failed with errors.");
     process.exit(1);
