@@ -25,6 +25,7 @@
 git clone https://github.com/<your-name>/glossarify-md
 cd glossarify-md
 npm install
+./install-git-hooks.sh  // optional; Run tests prior to pushing.
 ```
 
 > **⚠ Important:** Make sure to run `npm test` successfully, locally, on a fresh clone before you start coding. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be fixed or work on resolving those issues first. Do NOT just ignore it and commit new baselines in this case. This will corrupt the baseline and the CI pipeline might now going green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
