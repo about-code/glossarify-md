@@ -22,6 +22,8 @@ jobs:
       run: |
         npm install
         cd ./test
+        npm install
+        cd ..
         npm test
       env:
         CI: true
