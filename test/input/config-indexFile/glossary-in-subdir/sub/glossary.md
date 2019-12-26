@@ -2,7 +2,7 @@
 
 ## Term
 
-GIVEN a term "Term"
+GIVEN a term 'Term'
   AND option 'indexFile' is './index.md'
   AND the glossary file is in './sub/glossary.md'
   AND config option 'linking' is 'relative'

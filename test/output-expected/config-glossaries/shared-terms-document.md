@@ -11,10 +11,10 @@ AND a shared term '[Term Shared A][1][<sup>1)</sup>][1][<sup> 2)</sup>][2]'
 AND term '[Term Shared A][1][<sup>1)</sup>][1][<sup> 2)</sup>][2]' is mentioned twice in a paragraph, like this one,
 THEN each occurrence of the term MUST be linked with both glossaries 'Glossary A' AND 'Glossary B'.
 
-[1]: shared-terms-glossary-a.md#term-shared-a "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
+[1]: ./shared-terms-glossary-a.md#term-shared-a "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
 
-[2]: shared-terms-glossary-b.md#term-shared-a "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
+[2]: ./shared-terms-glossary-b.md#term-shared-a "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
 
-[3]: shared-terms-glossary-a.md#term-shared-b "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
+[3]: ./shared-terms-glossary-a.md#term-shared-b "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
 
-[4]: shared-terms-glossary-b.md#term-shared-b "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."
+[4]: ./shared-terms-glossary-b.md#term-shared-b "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'."

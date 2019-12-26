@@ -58,10 +58,10 @@ Word begins and ends with symbols
 
 Word contains symbols
 
-[1]: unicode-glossary.md#äquator "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term
+[1]: #äquator "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term
 THEN the linker MUST NOT link the compound with a glossary definition."
 
-[2]: unicode-glossary.md#faß "GIVEN a compound term 'Faßöl'
+[2]: #faß "GIVEN a compound term 'Faßöl'
 WITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
 AND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'."

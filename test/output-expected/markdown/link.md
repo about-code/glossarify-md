@@ -18,4 +18,4 @@ GIVEN term is in braces THEN ([Lorem ipsum↴][4]) MUST be linked.
 
 [3]: dolor.md
 
-[4]: glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."
+[4]: ./glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."

@@ -14,4 +14,4 @@ foo
 
 ## [sit](#sit)
 
-[1]: glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."
+[1]: #lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."

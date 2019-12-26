@@ -12,4 +12,4 @@ THEN "[Lorem ipsum↴][1]"
 </p>MAY be linked.
 <!-- End Scenario-->
 
-[1]: glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."
+[1]: ./glossary.md#lorem-ipsum "Lorem ipsum is the worlds most famous, most beloved piece of nonsense."

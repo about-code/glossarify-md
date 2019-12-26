@@ -1,4 +1,4 @@
-const {relativeFromTo, toSystemSlash} = require("../lib/pathplus");
+const {relativeFromTo, toSystemSlash} = require("../lib/path/tools");
 const errors = [];
 
 (function testWhenFromAndToInDifferentBranch() {

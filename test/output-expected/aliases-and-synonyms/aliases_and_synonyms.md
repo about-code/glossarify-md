@@ -54,43 +54,43 @@ AND alias [zhōng中国guó][11]
 WITH aliases containing non-ASCII unicode characters
 THEN all aliases MUST still be separated and linked correctly
 
-[1]: glossary.md#term-1 "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
+[1]: ./glossary.md#term-1 "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated words MUST be detected as the term's aliases."
 
-[2]: glossary.md#term-2 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+[2]: ./glossary.md#term-2 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated words MUST be detected as the term's aliases."
 
-[3]: glossary.md#term-3 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
+[3]: ./glossary.md#term-3 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the
 subsequent comma-separated lines of words MUST be detected as the term's aliases."
 
-[4]: glossary.md#term-4 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
+[4]: ./glossary.md#term-4 "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty
 line THEN the subsequent comma-separated lines of words MUST be detected as the
 term's aliases."
 
-[5]: glossary.md#issue 'GIVEN a term "Issue"
+[5]: ./glossary.md#issue 'GIVEN a term "Issue"
 AND an alias "Issues" WHERE the alias begins with the term
 THEN the alias MUST still be linked to the term, correctly.'
 
-[6]: glossary.md#our 'GIVEN a term "OUR"
+[6]: ./glossary.md#our 'GIVEN a term "OUR"
 AND an alias "FLOURISH" WHERE the alias includes the term
 THEN the alias MUST still be linked to the term, correctly.'
 
-[7]: glossary.md#field 'GIVEN a term "FIELD"
+[7]: ./glossary.md#field 'GIVEN a term "FIELD"
 AND an alias "GREENFIELD" WHERE the alias ends with the term
 THEN the alias MUST still be linked to the term, correctly.'
 
-[8]: glossary.md#hopefully 'GIVEN a term "Hopefully"
+[8]: ./glossary.md#hopefully 'GIVEN a term "Hopefully"
 AND an alias "Hope" WHERE the term begins with the alias
 THEN the alias MUST still be linked to the term, correctly.'
 
-[9]: glossary.md#flower 'GIVEN a term "Flower"
+[9]: ./glossary.md#flower 'GIVEN a term "Flower"
 AND an alias "lower" WHERE the term ends with the alias
 THEN the alias MUST still be linked to the term, correctly.'
 
-[10]: glossary.md#friendship 'GIVEN a term "Friendship"
+[10]: ./glossary.md#friendship 'GIVEN a term "Friendship"
 AND an alias "end" WHERE the term includes the alias
 THEN the alias MUST be linked to the term, correctly.'
 
-[11]: glossary.md#china "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
+[11]: ./glossary.md#china "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND aliases contain unicode word characters
 THEN they MUST still be separated correctly"

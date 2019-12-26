@@ -33,7 +33,7 @@
     "test_18": "npx . --config ./input/count-term-occurrences/glossarify-md.conf.json",
     "test_19": "npx . --config ./input/glossary-crosslinks/glossarify-md.conf.json",
     "test_20": "node ./conf.spec.js",
-    "test_21": "node ./pathplus.spec.js",
+    "test_21": "node ./path-tools.spec.js",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",

@@ -8,6 +8,6 @@ AND option 'baseUrl: ${baseUrl}'
 THEN term '[First-Level-Child][2]' MUST be linked by a relative path './sub-1/glossary.md#first-level-child'
 AND 'baseUrl' MUST NOT affect the result.
 
-[1]: glossary.md#sibling "must be referred to in './document.md' with 'glossary.md#sibling'"
+[1]: ./glossary.md#sibling "must be referred to in './document.md' with 'glossary.md#sibling'"
 
-[2]: sub-1/glossary.md#first-level-child "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'"
+[2]: ./sub-1/glossary.md#first-level-child "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'"

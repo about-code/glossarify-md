@@ -20,17 +20,17 @@ of "[Term D][4]".
 
 "[Term E][5]" only exists for the sake of being linked to from glossary G2.
 
-[1]: glossary-g1.md#term-a '"Term A" only exists for the sake of being linked to from within this glossary.'
+[1]: #term-a '"Term A" only exists for the sake of being linked to from within this glossary.'
 
-[2]: glossary-g1.md#term-b 'GIVEN a term "Term A" AND a definition of "Term B" in the same glossary G1
+[2]: #term-b 'GIVEN a term "Term A" AND a definition of "Term B" in the same glossary G1
 THEN any occurrence of "Term A" in the definition of "Term B" MUST be linked
 to the definition of "Term A".'
 
-[3]: glossary-g1.md#term-c 'GIVEN a term "Term C" in glossary G1 AND a term "Term D" in another glossary G2
+[3]: #term-c 'GIVEN a term "Term C" in glossary G1 AND a term "Term D" in another glossary G2
 THEN any occurrence of "Term D" in glossary G1 MUST be linked to the definition
 of "Term D".'
 
-[4]: glossary-g2.md#term-d '"Term D" only exists for the sake of being linked to by the definition of
+[4]: ./glossary-g2.md#term-d '"Term D" only exists for the sake of being linked to by the definition of
 "Term C" in Glossary G1.'
 
-[5]: glossary-g1.md#term-e '"Term E" only exists for the sake of being linked to from glossary G2.'
+[5]: #term-e '"Term E" only exists for the sake of being linked to from glossary G2.'
