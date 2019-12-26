@@ -15,8 +15,7 @@
     "pretest-win": "del /Q .\\output-actual",
     "test-win": "npm run suite",
     "test": "npm run suite",
-    "suite": "../node_modules/.bin/npm-run-all test_*",
-    "test_00": "../node_modules/.bin/eslint ../",
+    "suite": "npm-run-all test_*",
     "test_01": "npx . --config ./input/markdown/glossarify-md.conf.json",
     "test_02": "npx . --config ./input/term-descriptions/glossarify-md.conf.json",
     "test_03": "npx . --config ./input/aliases-and-synonyms/glossarify-md.conf.json",
@@ -42,5 +41,8 @@
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
     "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

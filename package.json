@@ -29,6 +29,8 @@
     "debug-cfg": "node --inspect-brk ./bin/index.js --config",
     "fixes": "eslint . --fix",
     "linter": "eslint .",
+    "pretest": "eslint .",
+    "pretest-win": "eslint .",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
     "release-alpha": "standard-version --prerelease alpha",
@@ -59,8 +61,7 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
-    "standard-version": "^7.0.0",
-    "npm-run-all": "^4.1.5"
+    "standard-version": "^7.0.0"
   },
   "keywords": [
     "glossary",
