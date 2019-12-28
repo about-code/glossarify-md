@@ -5,7 +5,7 @@
     "includeFiles": ["."],
     "excludeFiles": [],
     "generateFiles": {
-        "indexFile": "./index.md"
+        "indexFile": { "file": "./index.md" }
     },
     "glossaries": [
         { "file": "./sub/glossary.md"}
