@@ -6,7 +6,7 @@ const path = require("path");
 const proc = require("process");
 const program = require("../lib/main");
 const confSchema = require("../conf.schema.json").properties;
-const messages = require("../lib/messages");
+const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR} = require("../lib/cli/messages");
 const {version} = require("../package.json");
 
 const CWD = proc.cwd();
@@ -72,13 +72,13 @@ program.run(opts);
 function validateOpts(conf) {
 
     if (conf.baseDir === "") {
-        console.log(messages.NO_BASEDIR);
+        console.log(NO_BASEDIR);
         console.log("ABORTED.\n");
         proc.exit(0);
     }
 
     if (conf.outDir === "") {
-        console.log(messages.NO_OUTDIR);
+        console.log(NO_OUTDIR);
         console.log("ABORTED.\n");
         proc.exit(0);
     }
@@ -87,7 +87,7 @@ function validateOpts(conf) {
     console.log(`☛ Writing to:   ${conf.outDir}\n`);
 
     if (conf.outDir === conf.baseDir && !conf.force) {
-        console.log(messages.OUTDIR_IS_BASEDIR);
+        console.log(OUTDIR_IS_BASEDIR);
         console.log("ABORTED.\n");
         proc.exit(0);
     }
