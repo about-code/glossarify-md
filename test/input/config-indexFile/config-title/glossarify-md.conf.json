@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "generateFiles": {
+        "indexFile": { "file": "./index.md", "title": "Custom Title" }
+    },
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../output-actual/config-indexFile/config-title",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
