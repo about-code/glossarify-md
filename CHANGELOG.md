@@ -9,11 +9,11 @@ All notable changes to this project will be documented in this file. See [standa
 
 * Errorneous file links with config option `linking: "absolute"` and `generateFiles.indexFile`. ([293c7eb](https://github.com/about-code/glossarify-md/commit/293c7eb))
 
-* Only last occurrence of a shared term gets linked with all its definitions (#55) ([c891c87](https://github.com/about-code/glossarify-md/commit/c891c87))
+* Only last occurrence of a shared term gets linked with all its definitions. ([#55](https://github.com/about-code/glossarify-md/issues/55)) ([c891c87](https://github.com/about-code/glossarify-md/commit/c891c87))
 
 ### Features
 
-* Use superscript typesetting for ambiguously defined term links (#57) ([0b98e43](https://github.com/about-code/glossarify-md/commit/1bf9f37))
+* Use superscript typesetting for ambiguously defined term links. ([#57](https://github.com/about-code/glossarify-md/issues/57)) ([0b98e43](https://github.com/about-code/glossarify-md/commit/1bf9f37))
 
 
 ## [3.1.0](https://github.com/about-code/glossarify-md/compare/v3.0.0...v3.1.0) (2019-12-24)
