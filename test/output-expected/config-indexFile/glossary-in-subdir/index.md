@@ -1,6 +1,6 @@
 # [Book Index](#book-index)
 
-#### [Term](#term)  
+## [Term](#term)  
   
 [Glossary][1] - [Term][2]
 
