@@ -101,7 +101,7 @@
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
             "type": "boolean",
             "alias": "",
-            "default": true
+            "default": false
         },
         "dev": {
             "descriptions": "Options for testing and debugging",
