@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+
+## [3.3.0](https://github.com/about-code/glossarify-md/compare/v3.1.0...v3.2.0) (2020-01-19)
+
+### Bug Fixes
+
+* Option `--reportNotMentioned` is ignored. With this fix please pass `--reportNotMentioned` explicitely via command line or config file to keep on being informed about unused terms. ([#67](https://github.com/about-code/glossarify-md/issues/67)) ([dbbf4a4](https://github.com/about-code/glossarify-md/commit/dbbf4a4))
+
+* Index: term headings should be at depth 2 ([#64](https://github.com/about-code/glossarify-md/issues/64)) ([792253e](https://github.com/about-code/glossarify-md/commit/792253e))
+
+### Features
+
+* Generate a List of Figures with option `generateFiles.listOfFigures`. More see README.md. ([#61](https://github.com/about-code/glossarify-md/issues/61)) ([2c57ace](https://github.com/about-code/glossarify-md/commit/2c57ace))
+
+
 ## [3.2.0](https://github.com/about-code/glossarify-md/compare/v3.1.0...v3.2.0) (2019-12-29)
 
 

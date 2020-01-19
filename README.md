@@ -232,6 +232,13 @@ If available, generates an index of glossary terms with links to files in which 
 
 > **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
 
+### `--generateFiles.listOfFigures`
+
+- **Range:** `{file: string, [title: string]}`
+- **Since:** v3.3.0
+
+If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
+
 
 ### `--glossaries`
 
