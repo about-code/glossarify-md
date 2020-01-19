@@ -58,15 +58,6 @@
             "alias": "i",
             "default": false
         },
-        "keepRawFiles": {
-            "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "alias": "r",
-            "default": []
-        },
         "includeFiles": {
             "description": "Path or glob patterns of files to include for linking to glossaries.",
             "type": "array",
@@ -75,6 +66,20 @@
             },
             "alias": "f",
             "default": ["."]
+        },
+        "indexing": {
+            "description": "Path or glob patterns of files to include for linking to glossaries.",
+            "$ref": "#/$defs/IndexingOpts",
+            "default": {}
+        },
+        "keepRawFiles": {
+            "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "alias": "r",
+            "default": []
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
