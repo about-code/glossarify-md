@@ -56,7 +56,7 @@
     "unist-builder": "^1.0.4",
     "unist-util-flatmap": "^1.0.0",
     "unist-util-visit": "^2.0.0",
-    "unist-util-visit-parents": "^3.0.0",
+    "unist-util-visit-parents": "^3.0.1",
     "vfile": "^4.0.2"
   },
   "devDependencies": {
