@@ -1,0 +1,19 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "reportNotMentioned": false,
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../output-actual/config-reportNotMentioned/false",
+    "dev": {
+        "reportsFile": "../../../output-actual/config-reportNotMentioned/false/report.txt",
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
