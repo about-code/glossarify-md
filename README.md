@@ -172,6 +172,23 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Note**: If you plan translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
 
+### List of Figures
+
+> **Since v3.3.0**
+
+```json
+"generateFiles": {
+    "listOfFigures": { "file": "./figures.md", "title": "Abbildungen" }
+}
+```
+
+This option will generate an index file `./figures.md` with a flat list of figures and links to where they have been used. Optionally you can group figures by page title (depth 1) or sections (depth >= 2).
+```json
+"indexing": {
+    "groupByHeadingDepth": 1
+}
+```
+
 ## Options
 
 ### `--help` | `--h`
