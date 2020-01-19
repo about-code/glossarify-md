@@ -101,7 +101,7 @@
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
             "type": "boolean",
             "alias": "",
-            "default": true
+            "default": false
         },
         "dev": {
             "descriptions": "Options for testing and debugging",
@@ -173,14 +173,6 @@
         "DevOpts": {
             "type": "object",
             "properties": {
-                "termsFile": {
-                    "description": "File where to write term book to. Enables testing the term extraction results of terminator.",
-                    "type": "string"
-                },
-                "reproducablePaths": {
-                    "description": "Write system-independent paths into 'termsFile' to produce reproducable output accross environments.",
-                    "type": "boolean"
-                },
                 "printInputAst": {
                     "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.",
                     "type": ["boolean", "string"]
@@ -188,6 +180,18 @@
                 "printOutputAst": {
                     "description": "Print the AST of scanned markdown documents after linkification. May be a Regex to only print AST for particular document.",
                     "type": ["boolean", "string"]
+                },
+                "reportsFile": {
+                    "description": "File where to write console report output. Enables testing the report output generated  by the 'writer' component.",
+                    "type": "string"
+                },
+                "reproducablePaths": {
+                    "description": "Write system-independent paths into 'termsFile' to produce reproducable output accross environments.",
+                    "type": "boolean"
+                },
+                "termsFile": {
+                    "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component.",
+                    "type": "string"
                 }
             }
         }
