@@ -78,7 +78,7 @@ glossarify-md --config ./glossarify-md.conf.json
 *glossarify-md.conf.json*
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v1.0.0/conf.schema.json",
+  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v3.3.0/conf.schema.json",
   "baseDir": "./src",
   "outDir": "../target",
   "glossaries": [

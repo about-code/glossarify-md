@@ -19,6 +19,7 @@ ${root}
    |   '- glossary.md
    |
    +- target/                  (Generated)
+   +- node_modules/
    |- glossarify-md.conf.json
    |- package.json
    '- .gitignore
@@ -35,7 +36,7 @@ npm i --save glossarify-md
 *glossarify-md.conf.json*
 ```json
 {
-    "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v1.0.0/conf.schema.json",
+    "$schema": "./node_modules/glossarify-md/conf.schema.json",
     "baseDir": "./src",
     "outDir": "../target",
     "includeFiles": ["."],
