@@ -151,6 +151,8 @@
                 "groupByHeadingDepth": {
                     "description": "Level of detail by which to group occurrences of terms or syntactic elements in generated files (Range [min; max] = [0; 9]). For example, use 0 to not group at all; 1 to group things at the level of document titles, etc. Configures the indexer. The option affects any files generated from the internal AST node index.",
                     "type": "number",
+                    "minimum": 0,
+                    "maximum": 9,
                     "default": 0
                 }
             }
