@@ -4,6 +4,9 @@
     "linking": "relative",
     "includeFiles": ["."],
     "excludeFiles": [],
+    "indexing": {
+        "groupByHeadingDepth": 0
+    },
     "generateFiles": {
         "listOfFigures": { "file": "./figures.md", "title": "Figures" }
     },
