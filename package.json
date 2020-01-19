@@ -26,7 +26,7 @@
   "scripts": {
     "config": "node ./bin/index.js --config",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
-    "debug-cfg": "node --inspect-brk ./bin/index.js --config",
+    "debug-config": "node --inspect-brk ./bin/index.js --config",
     "fixes": "eslint . --fix",
     "linter": "eslint .",
     "pretest": "eslint .",
@@ -56,7 +56,7 @@
     "unist-builder": "^1.0.4",
     "unist-util-flatmap": "^1.0.0",
     "unist-util-visit": "^2.0.0",
-    "unist-util-visit-parents": "^3.0.0",
+    "unist-util-visit-parents": "^3.0.1",
     "vfile": "^4.0.2"
   },
   "devDependencies": {

@@ -1,0 +1,23 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "indexing": {
+        "groupByHeadingDepth": 0
+    },
+    "generateFiles": {
+        "listOfFigures": { "file": "./figures.md", "title": "Figures" }
+    },
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../output-actual/config-listOfFigures/groupByHeadingDepth-0",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}

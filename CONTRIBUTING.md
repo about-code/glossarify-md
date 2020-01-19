@@ -204,7 +204,7 @@ npm run debug
 This starts a remote debug session at `127.0.0.1:9229`. To debug with a configuration in another directory type:
 
 ```
-npm run debug-cfg -- ./path/to/glossarify-md.conf.json
+npm run debug-config -- ./path/to/glossarify-md.conf.json
 ```
 
 You can now connect e.g. with
