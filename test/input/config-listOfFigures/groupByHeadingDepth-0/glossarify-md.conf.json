@@ -11,7 +11,7 @@
         { "file": "./glossary.md"}
     ],
     "ignoreCase": false,
-    "outDir": "../../../output-actual/config-indexFile/config-title",
+    "outDir": "../../../output-actual/config-listOfFigures/groupByHeadingDepth-missing",
     "dev": {
         "printInputAst": false,
         "reproducablePaths": true,
