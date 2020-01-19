@@ -5,13 +5,13 @@
     "includeFiles": ["."],
     "excludeFiles": [],
     "generateFiles": {
-        "listOfFigures": { "file": "./figures.md", "title": "Figures" }
+        "listOfFigures": { "file": "./figures.md" }
     },
     "glossaries": [
         { "file": "./glossary.md"}
     ],
     "ignoreCase": false,
-    "outDir": "../../../output-actual/config-listOfFigures/groupByHeadingDepth-missing",
+    "outDir": "../../../output-actual/config-listOfFigures/option-title-missing",
     "dev": {
         "printInputAst": false,
         "reproducablePaths": true,
