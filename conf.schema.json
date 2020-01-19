@@ -38,14 +38,14 @@
         },
         "generateFiles": {
             "description": "File generation options.",
-            "$ref": "#/$defs/GenerateFiles",
+            "$ref": "#/$defs/GenerateFilesOpts",
             "default": {}
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
             "type": "array",
             "items": {
-                "$ref": "#/$defs/Glossary"
+                "$ref": "#/$defs/GlossariesOpts"
             },
             "alias": "g",
             "default": [
@@ -105,22 +105,29 @@
         }
     },
     "$defs": {
-        "GenerateFiles": {
+        "GenerateFilesOpts": {
             "type": "object",
             "properties": {
                 "indexFile": {
                     "description": "Generate a file with a list of glossary terms and where they have been used.",
                     "oneOf": [{
-                        "type": "string"
-                    }, {
                         "type": "object",
-                        "$ref": "#/$defs/IndexFile"
+                        "$ref": "#/$defs/IndexFileOpts"
+                    },{
+                        "type": "string",
+                        "description": "String value range is deprecated and will be removed with v4. Use object notation instead."
                     }],
+                    "default": ""
+                },
+                "listOfFigures": {
+                    "description": "Generate a file with a list of figures and where they can be found.",
+                    "type": "object",
+                    "$ref": "#/$defs/IndexFileOpts",
                     "default": ""
                 }
             }
         },
-        "IndexFile": {
+        "IndexFileOpts": {
             "type": "object",
             "properties": {
                 "file":  {
@@ -133,7 +140,17 @@
                 }
             }
         },
-        "Glossary": {
+        "IndexingOpts": {
+            "type": "object",
+            "properties": {
+                "groupByHeadingDepth": {
+                    "description": "Level of detail by which to group occurrences of terms or syntactic elements in generated files (Range [min; max] = [0; 9]). For example, use 0 to not group at all; 1 to group things at the level of document titles, etc. Configures the indexer. The option affects any files generated from the internal AST node index.",
+                    "type": "number",
+                    "default": 0
+                }
+            }
+        },
+        "GlossariesOpts": {
             "type": "object",
             "properties": {
                 "file": {
