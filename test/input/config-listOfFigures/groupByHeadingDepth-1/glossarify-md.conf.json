@@ -5,7 +5,7 @@
     "includeFiles": ["."],
     "excludeFiles": [],
     "indexing": {
-        "groupByHeadingDepth": 0
+        "groupByHeadingDepth": 1
     },
     "generateFiles": {
         "listOfFigures": { "file": "./figures.md", "title": "Figures" }
@@ -14,7 +14,7 @@
         { "file": "./glossary.md"}
     ],
     "ignoreCase": false,
-    "outDir": "../../../output-actual/config-listOfFigures/groupByHeadingDepth-0",
+    "outDir": "../../../output-actual/config-listOfFigures/groupByHeadingDepth-1",
     "dev": {
         "printInputAst": false,
         "reproducablePaths": true,
