@@ -1,7 +1,7 @@
 # [Document with Figure](#document-with-figure)
 
 GIVEN a config option `generateFiles.listOfFigures`
-AND config `indexing.groupByHeadingDepth` is `undefined`
+AND config `indexing === undefined`
 THEN a file `generateFiles.listOfFigures.file` MUST be generated successfully
 AND the generated file MUST be a flat list of figures.
 

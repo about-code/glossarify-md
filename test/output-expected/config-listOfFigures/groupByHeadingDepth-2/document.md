@@ -1,7 +1,7 @@
 # [Testing option generateFiles.listOfFigures](#testing-option-generatefileslistoffigures)
 
 GIVEN a config option `generateFiles.listOfFigures`
-AND config `indexing.groupByHeadingDepth === 0`
+AND config `indexing.groupByHeadingDepth === 2`
 THEN a file `generateFiles.listOfFigures.file` MUST be generated successfully
 AND the generated file MUST be a flat list of figures.
 
