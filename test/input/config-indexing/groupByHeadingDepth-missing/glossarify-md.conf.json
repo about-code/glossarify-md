@@ -8,7 +8,8 @@
         "groupByHeadingDepth___is_missing": 1
     },
     "generateFiles": {
-        "indexFile": { "file": "./index.md" }
+        "indexFile": { "file": "./index.md" },
+        "listOfFigures": { "file": "./figures.md", "title": "Figures" }
     },
     "glossaries": [
         { "file": "./glossary.md"}
