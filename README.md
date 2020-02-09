@@ -262,11 +262,30 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 Paths or Glob-Patterns for files to include.
 
+### `--indexing.groupByHeadingDepth`
+
+- **Range:** `number` in [1-6]
+- **Since:** v3.4.0
+
+This option affects outputs generated with `generateFiles`. By default when
+indexing terms and markdown elements they are being grouped by the heading of
+the section they've been found in. In larger books with a lot of sections and
+subsections this can lead to *Index* files or *Tables of X* to be generated with
+lots of low-level sections and much detail. Yet sometimes it may be preferable
+to only list the book chapter or high-level sections which some element has been
+found in. This option allows to set the depth by which indexed elements shall be
+grouped where `1` refers to chapters (`#` headings). Note that grouping by
+high-level sections doesn't mean that only links to the high-level sections are
+generated. Where it makes sense links to low-level sections of occurrence are
+just being shortened.
+
 ### `--keepRawFiles` | `--r`
 
 - **Range:** `string[]`
 
-Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in glossarification and linking. Non-markdown files will always be kept as is so no need to add those.
+Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
+glossarification and linking. Non-markdown files will always be kept as is so no
+need to add those.
 
 ### `--linking` | `--l`
 

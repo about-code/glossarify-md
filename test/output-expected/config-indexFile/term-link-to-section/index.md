@@ -2,7 +2,7 @@
 
 ## [Term](#term)  
   
-[Glossary][1] - [Term][2] - [Section][3] - [./without-section-heading.md][4]
+[Glossary][1] ○ [Term][2] ○ [Section][3] ○ [./without-section-heading.md][4]
 
 [1]: ./glossary.md#term "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section
 THEN in the index the term MUST be linked with a path './with-section-heading.md#section' AND a link label 'Section'."
