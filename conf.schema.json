@@ -129,6 +129,12 @@
                     "type": "object",
                     "$ref": "#/$defs/IndexFileOpts",
                     "default": ""
+                },
+                "listOfTables": {
+                    "description": "Generate a file with a list of tables and where they can be found.",
+                    "type": "object",
+                    "$ref": "#/$defs/IndexFileOpts",
+                    "default": ""
                 }
             }
         },
