@@ -189,6 +189,58 @@ This option will generate an index file `./figures.md` with a flat list of figur
 }
 ```
 
+### List of Tables
+
+> **Since v3.4.0**
+
+```json
+"generateFiles": {
+    "listOfTables": { "file": "./tables.md", "title": "Abbildungen" }
+}
+```
+This option will generate an index file `./tables.md` with a flat listing of
+table labels and links to sections where the tables have been declared. See [`groupByHeadingDepth`](#list-of-figures) to read how to group tables by sections.
+
+Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to
+infer a table label otherwise.
+
+#### Invisible table label with HTML comment
+
+Provide an invisible table label with an HTML comment pattern `<!-- table: ... -->` preceding the table.
+
+```md
+<!-- table: Average Prices by Article Category -->
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+#### Visible table label
+
+A visible table label will be inferred from an all-italic paragraph preceding a table:
+
+```md
+[...] which we can see from the average price by article category.
+
+*Average prices by article category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+#### Table Label Inference
+
+If there's no table label, then a table label will be inferred with these attempts:
+
+1. **column headers** separated by comma, e.g. *Category, Description, Price Avg.*
+1. **preceding section heading** (multiple tables without column headers in the same section may be labeled ambiguously)
+1. **filename** in which the table has been found.
+
 ## Options
 
 ### `--help` | `--h`
@@ -239,6 +291,12 @@ If available, generates an index of glossary terms with links to files in which 
 
 If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
 
+### `--generateFiles.listOfFigures`
+
+- **Range:** `{file: string, [title: string]}`
+- **Since:** v3.4.0
+
+If available, generates a list of figures. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
 
 ### `--glossaries`
 
