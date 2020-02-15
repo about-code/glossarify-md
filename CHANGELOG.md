@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/about-code/glossarify-md/compare/v3.4.0...v3.4.1) (2020-02-15)
+
+
+### Documentation Updates
+
+* Fix opts for listOfTables ([203c4f7](https://github.com/about-code/glossarify-md/commit/203c4f7))
+
 ## [3.4.0](https://github.com/about-code/glossarify-md/compare/v3.3.0...v3.4.0) (2020-02-15)
 
 ### Features
