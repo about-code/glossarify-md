@@ -78,7 +78,7 @@ glossarify-md --config ./glossarify-md.conf.json
 *glossarify-md.conf.json*
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v3.3.0/conf.schema.json",
+  "$schema": "./node_modules/glossarify-md/conf.schema.json",
   "baseDir": "./src",
   "outDir": "../target",
   "glossaries": [
@@ -198,11 +198,9 @@ This option will generate an index file `./figures.md` with a list of figures gr
     "listOfTables": { "file": "./tables.md", "title": "Abbildungen" }
 }
 ```
-This option will generate an index file `./tables.md` with a list of
-tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
+This option will generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
-Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to
-infer a table label otherwise.
+Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to infer a table label otherwise.
 
 #### Invisible table label with HTML comment
 

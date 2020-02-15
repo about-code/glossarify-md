@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v1.0.0/conf.schema.json",
+    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v3.4.0/conf.schema.json",
     "type": "object",
     "properties": {
         "baseDir": {
