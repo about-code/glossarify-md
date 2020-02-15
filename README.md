@@ -182,10 +182,10 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 }
 ```
 
-This option will generate an index file `./figures.md` with a flat list of figures and links to where they have been used. Optionally you can group figures by page title (depth 1) or sections (depth >= 2).
+This option will generate an index file `./figures.md` with a list of figures grouped by sections of occurrence. You can control heading depth for grouping and e.g. generate a flat list without any grouping using
 ```json
 "indexing": {
-    "groupByHeadingDepth": 1
+    "groupByHeadingDepth": 0
 }
 ```
 
@@ -198,8 +198,8 @@ This option will generate an index file `./figures.md` with a flat list of figur
     "listOfTables": { "file": "./tables.md", "title": "Abbildungen" }
 }
 ```
-This option will generate an index file `./tables.md` with a flat listing of
-table labels and links to sections where the tables have been declared. See [`groupByHeadingDepth`](#list-of-figures) to read how to group tables by sections.
+This option will generate an index file `./tables.md` with a list of
+tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
 Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to
 infer a table label otherwise.
@@ -219,12 +219,22 @@ Provide an invisible table label with an HTML comment pattern `<!-- table: ... -
 
 #### Visible table label
 
-A visible table label will be inferred from an all-italic paragraph preceding a table:
+A visible table label will be inferred from an italic phrase terminated by a colon two lines prior to the table. For example:
 
 ```md
 [...] which we can see from the average price by article category.
 
 *Average prices by article category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+```md
+[...] which we can see from the *Average prices by article category:*
 
 | Category | Description | Price Avg. |
 | -------- | ----------- | ---------- |
