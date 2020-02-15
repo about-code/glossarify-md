@@ -45,6 +45,7 @@
     "test_26": "npx . --config ./input/config-indexing/groupByHeadingDepth-1/glossarify-md.conf.json",
     "test_27": "npx . --config ./input/config-indexing/groupByHeadingDepth-2/glossarify-md.conf.json",
     "test_28": "npx . --config ./input/config-listOfFigures/option-title-missing/glossarify-md.conf.json",
+    "test_29": "npx . --config ./input/config-listOfTables/glossarify-md.conf.json",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",

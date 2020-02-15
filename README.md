@@ -182,12 +182,74 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 }
 ```
 
-This option will generate an index file `./figures.md` with a flat list of figures and links to where they have been used. Optionally you can group figures by page title (depth 1) or sections (depth >= 2).
+This option will generate an index file `./figures.md` with a list of figures grouped by sections of occurrence. You can control heading depth for grouping and e.g. generate a flat list without any grouping using
 ```json
 "indexing": {
-    "groupByHeadingDepth": 1
+    "groupByHeadingDepth": 0
 }
 ```
+
+### List of Tables
+
+> **Since v3.4.0**
+
+```json
+"generateFiles": {
+    "listOfTables": { "file": "./tables.md", "title": "Abbildungen" }
+}
+```
+This option will generate an index file `./tables.md` with a list of
+tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
+
+Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to
+infer a table label otherwise.
+
+#### Invisible table label with HTML comment
+
+Provide an invisible table label with an HTML comment pattern `<!-- table: ... -->` preceding the table.
+
+```md
+<!-- table: Average Prices by Article Category -->
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+#### Visible table label
+
+A visible table label will be inferred from an italic phrase terminated by a colon two lines prior to the table. For example:
+
+```md
+[...] which we can see from the average price by article category.
+
+*Average prices by article category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+```md
+[...] which we can see from the *Average prices by article category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+#### Table Label Inference
+
+If there's no table label, then a table label will be inferred with these attempts:
+
+1. **column headers** separated by comma, e.g. *Category, Description, Price Avg.*
+1. **preceding section heading** (multiple tables without column headers in the same section may be labeled ambiguously)
+1. **filename** in which the table has been found.
 
 ## Options
 
@@ -239,6 +301,12 @@ If available, generates an index of glossary terms with links to files in which 
 
 If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
 
+### `--generateFiles.listOfFigures`
+
+- **Range:** `{file: string, [title: string]}`
+- **Since:** v3.4.0
+
+If available, generates a list of figures. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
 
 ### `--glossaries`
 
