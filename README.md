@@ -299,12 +299,12 @@ If available, generates an index of glossary terms with links to files in which 
 
 If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
 
-### `--generateFiles.listOfFigures`
+### `--generateFiles.listOfTables`
 
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.4.0
 
-If available, generates a list of figures. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
+If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
 
 ### `--glossaries`
 
