@@ -1,0 +1,23 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "indexing": {
+        "groupByHeadingDepth": 1
+    },
+    "generateFiles": {
+        "listOfTables": { "file": "./tables.md", "title": "List of Tables" }
+    },
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../output-actual/config-listOfTables",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
