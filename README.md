@@ -1,12 +1,24 @@
 # glossarify-md
 
-A *Term-to-Definition*-Linker for Markdown.
+*Term-to-Definition*- and *Cross-Linking* for Markdown.
 
-*glossarify-md* is a command line tool to help you link terms in markdown
-documents with their definition in another markdown document called *glossary*.
 
 [vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
+## Table of Contents
+
+- [Install](#install)
+- [Sample](#sample)
+- [Results](#results)
+- [Configuration](#configuration)
+- [Additional Features](#additional-features)
+   - [Aliases and Synonyms](#aliases-and-synonyms)
+   - [Multiple Glossaries](#multiple-glossaries)
+   - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
+   - [List of Figures](#list-of-figures)
+   - [List of Tables](#list-of-tables)
+   - [Arbitrary Lists of Anything](#arbitrary-lists-of-anything)
+- [Options](#options)
 
 ## Install
 
@@ -16,7 +28,7 @@ npm i -g glossarify-md
 
 ## Sample
 
-Below we assume a sample project structure like:
+We assume a sample project with the following structure:
 
 ```
 ${root}
@@ -29,7 +41,7 @@ ${root}
    |    |- citations.md
    |    `- glossary.md
    |
-   +- target/                  (Output directory. Generated.)
+   +- target/ (Generated output directory)
    `- glossarify-md.conf.json
 ```
 
@@ -39,27 +51,69 @@ Your original glossary is a file
 ```md
 # Glossary
 
-## Glossary Term
+## Term
 
 A glossary term has a short description. The full description contains both sentences.
-
-## Another Term
-
-and so on...
 ```
 
-Your original files may just use a term anywhere in text:
+Your original files may just use the term *Term* anywhere in text:
 
 *src/pages/page1.md*
 ```md
 # Demo
 
-This is a text which uses a *Glossary Term* to describe something.
+This is a text which uses a glossary Term to describe something.
 ```
 
-## Glossarify Command
+Then in `${root}` of your project run *glossarify-md* with a [configuration](#configuration) file.
 
-### ...with command options
+```
+glossarify-md --config ./glossarify-md.conf.json
+```
+
+## Results
+
+After running *glossarify-md* there have been written  modified versions of the source files to the output directory. Headings in glossary files have been made referencable...
+
+*./target/glossary.md*:
+
+```md
+# Glossary
+
+## [Term](#term)
+
+A glossary term has a short description. The full description contains both sentences.
+```
+
+... and occurrences of the term in markdown files have been replaced with links to the term definition in the glossary:
+
+*./target/pages/page1.md*
+```md
+# Demo
+
+This is a text which uses a *Glossary [Term ↴][1]* to describe something.
+
+[1]: ../glossary.md#term "A glossary term has a short description."
+```
+
+Some syntactic positions of a term are **excluded** from being linked to the glossary. These are
+
+- Headlines
+- Blockquotes
+- Preformatted blocks
+- (Markdown) links
+
+> **Important:** Unfortunately, we can't exclude text between the opening and closing angle brackets of an HTML link tag, at the moment. In a markdown syntax tree something like `<a href="">term</a>` is represented as distinct HTML nodes with arbitrary complex markdown nodes in between. Therefore a term found between those HTML tags currently results in
+> ```
+> <a href="">[term][1]</a>
+>
+> [1] ./glossary.md#term
+> ```
+> Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
+
+## Configuration
+
+### ...via command-line (not all options supported)
 ```
 glossarify-md
   --baseDir "./src"
@@ -69,13 +123,13 @@ glossarify-md
   --excludeFiles ["node_modules"]
 ```
 
-### ...with config file
+### ...via config file
 
 ```
 glossarify-md --config ./glossarify-md.conf.json
 ```
 
-*glossarify-md.conf.json*
+*glossarify-md.conf.json* (further options see [below](#options))
 ```json
 {
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
@@ -83,7 +137,6 @@ glossarify-md --config ./glossarify-md.conf.json
   "outDir": "../target",
   "glossaries": [
     { "file": "./glossary.md",  "termHint": "↴" },
-    { "file": "./citations.md", "termHint": "Ⓒ"  }
   ],
   "includeFiles": ["."],
   "excludeFiles": ["node_modules"],
@@ -91,45 +144,9 @@ glossarify-md --config ./glossarify-md.conf.json
   "baseUrl": ""
 }
 ```
+> **Since v2.0.0**: If you need more control about placement of a `termHint` symbol, you can use `"${term}"` as a placeholder. For example, `"☛ ${term}"` puts the hint symbol `☛ ` in front of the term.
+
 <!-- baseUrl only effective with linking "absolute" -->
-As you can see it's possible to have multiple glossary files. Multiple glossaries can be very valuable in professional writing or documentation. For example in specification documents you often want to have an index of particular specification rules. In text you often need to refer to those rules. Collect all those rules in a "glossary", then whenever you refer to them e.g. by "RULE-1", "RULE-2", etc. you'll get a link to the rule.
-
-Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
-
-> **Since v2.0.0**: If you need more control about placement of a term hint, you can use `${term}` as a placeholder in term hints. For example, `☛ ${term}` adds `☛ ` in front of the term.
-
-## Result
-
-Terms in glossaries have been augmented with anchor links.
-
-*./target/glossary.md*:
-
-```md
-# Glossary
-
-## [Glossary Term](#glossary-term)
-
-A glossary term has a short description. The full description contains both sentences.
-
-## [Another Term](#another-term)
-
-and so on...
-```
-Most occurrences of a term have been replaced with a link to its glossary definition. Some syntactic positions are **excluded** from being linkified. These are
-  - Headlines
-  - Blockquotes
-  - Preformatted blocks
-  - Existing (markdown) links. There's currently no way to exclude text between HTML `<a></a>`-links.
-
-*./target/pages/page1.md*
-```md
-# Demo
-
-This is a text which uses a *[Glossary Term ↴][1]* to describe something.
-
-[1]: ../glossary.md#glossary-term "A glossary term has a short description."
-```
-
 
 ## Additional Features
 
@@ -154,6 +171,30 @@ In the output files aliases will be linked to their related term:
 
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
 ```
+
+### Multiple Glossaries
+
+*glossarify-md.conf.json*
+```json
+"glossaries": [
+    { "file": "./glossary.md",  "termHint": "↴" },
+    { "file": "./requirements.md", "termHint": "★" }
+]
+```
+Multiple glossaries can be very valuable in professional writing or documentation. In fact any heading in any document can serve as the source for terms. For example in requirements documents you often not just have a glossary but a requirement catalogue, like
+
+*requirements.md*
+
+```md
+## REQ-1: The system MUST provide service X
+<!-- Aliases: REQ-1 -->
+...
+## REQ-2: The system MAY provide service Y
+<!-- Aliases: REQ-2 -->
+...
+```
+
+Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
 
 ### Index of terms and where they have been used
 
@@ -249,6 +290,35 @@ If there's no table label, then a table label will be inferred with these attemp
 1. **preceding section heading** (multiple tables without column headers in the same section may be labeled ambiguously)
 1. **filename** in which the table has been found.
 
+### Arbitrary Lists of Anything
+
+> **Since v3.5.0**
+
+Since version 3.5.0 you can generate arbitrary *List of `X`*  by using
+HTML anchors and CSS classes to categorize them. For example, instead of using `listOfTables` you could now also create a *List of Tables* by placing an
+anchor near a table...
+
+```md
+<a class="table" id="table-1" title="Average prices by article category" />
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+... and using the configuration:
+
+```json
+"generateFiles": {
+    "listOf": [
+       { "class": "table", "file": "./tables.md", "title": "List of Tables" }
+    ]
+}
+```
+
+The advantage over `listOfTables` is that due to the HTML anchor element links in the generated list of tables can directly point to the anchor position rather than the closest section heading. And of course by using arbitrary CSS classes for your anchors you are able to create any lists you like, e.g. *List of Listings*, *List of Rules*, etc.
+
 ## Options
 
 ### `--help` | `--h`
@@ -283,7 +353,7 @@ want to ignore certain markdown files from being modified.
 
 Enable support for markdown footnote syntax as defined at https://pandoc.org/MANUAL.html#footnotes. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at https://spec.commonmark.org.
 
-### `--generateFiles.indexFile`
+### `generateFiles.indexFile`
 
 - **Range:** `{file: string, [title: string]} | string`
 - **Since:** v3.0.0
@@ -292,21 +362,28 @@ If available, generates an index of glossary terms with links to files in which 
 
 > **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
 
-### `--generateFiles.listOfFigures`
+### `generateFiles.listOfFigures`
 
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.3.0
 
 If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
 
-### `--generateFiles.listOfTables`
+### `generateFiles.listOfTables`
 
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.4.0
 
 If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
 
-### `--glossaries`
+### `generateFiles.listOf`
+
+- **Range:** `Array<{class: string, file: string, [title: string]}>`
+- **Since:** v3.5.0
+
+If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-of-anything) for a configuration example.
+
+### `glossaries`
 
 - **Range:** `Array<{file: string, [termHint: string]}>`
 
@@ -328,7 +405,7 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 Paths or Glob-Patterns for files to include.
 
-### `--indexing.groupByHeadingDepth`
+### `indexing.groupByHeadingDepth`
 
 - **Range:** `number` in [1-6]
 - **Since:** v3.4.0

@@ -124,6 +124,27 @@
                     }],
                     "default": ""
                 },
+                "listOf": {
+                    "description": "Generate an arbitrary 'List of {x}' from HTML anchors with css class {x}. E.g. Generate a List of Listings from every <a class='listings' id='listing-1', title='Listing 1' /> and link to those anchors.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "class": {
+                                "description": "The CSS class to look for in anchor elements",
+                                "type": "string"
+                            },
+                            "file": {
+                                "description": "Path relative to 'outDir' where to create the output file.",
+                                "type": "string"
+                            },
+                            "title": {
+                                "description": "The page title for the index file. If missing it's being inferred from the value of 'class'.",
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
                 "listOfFigures": {
                     "description": "Generate a file with a list of figures and where they can be found.",
                     "type": "object",
