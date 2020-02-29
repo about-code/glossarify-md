@@ -38,10 +38,10 @@ ${root}
    |    |    `- page2.md
    |    |
    |    |- README.md
-   |    |- citations.md
+   |    |- requirements.md
    |    `- glossary.md
    |
-   +- target/ (Generated output directory)
+   +- target/  (Generated output directory)
    `- glossarify-md.conf.json
 ```
 
@@ -73,7 +73,7 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ## Results
 
-After running *glossarify-md* there have been written  modified versions of the source files to the output directory. Headings in glossary files have been made referencable...
+After running *glossarify-md* augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
 
 *./target/glossary.md*:
 
@@ -84,17 +84,35 @@ After running *glossarify-md* there have been written  modified versions of the 
 
 A glossary term has a short description. The full description contains both sentences.
 ```
+> ## Glossary
+>
+> ### [Term](#term)
+>
+> A glossary term has a short description. The full description contains both sentences.
+>
+> ----
+>*Preview: added +1 to headline depth for readability*
 
-... and occurrences of the term in markdown files have been replaced with links to the term definition in the glossary:
+... and occurrences of the term in markdown files have been linked to the term definition in the glossary:
 
 *./target/pages/page1.md*
 ```md
 # Demo
 
-This is a text which uses a *Glossary [Term ↴][1]* to describe something.
+This is a text which uses a glossary [Term ↴][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
+
+> ## Demo
+>
+> This is a text which uses a glossary [Term ↴][1] to describe something.
+>
+> [1]: #term "A glossary term has a short description."
+> ----
+> *Preview:*
+> - *added +1 to headline depth for readability*
+> - *manually adjusted link to point to sample above*
 
 Some syntactic positions of a term are **excluded** from being linked to the glossary. These are
 
@@ -294,8 +312,7 @@ If there's no table label, then a table label will be inferred with these attemp
 
 > **Since v3.5.0**
 
-Since version 3.5.0 you can generate arbitrary *List of `X`*  by using
-HTML anchors and CSS classes to categorize them. For example, instead of using `listOfTables` you could now also create a *List of Tables* by placing an
+Since version 3.5.0 you can generate arbitrary *List of `X`*  by using HTML anchors and CSS classes to categorize them. For example, instead of using `listOfTables` you could now also create a *List of Tables* by placing an
 anchor near a table...
 
 ```md
@@ -317,7 +334,7 @@ anchor near a table...
 }
 ```
 
-The advantage over `listOfTables` is that due to the HTML anchor element links in the generated list of tables can directly point to the anchor position rather than the closest section heading. And of course by using arbitrary CSS classes for your anchors you are able to create any lists you like, e.g. *List of Listings*, *List of Rules*, etc.
+The advantage over `listOfTables` is that due to the HTML anchor element links in the generated list of tables can directly point to the anchor and table position rather than the closest section heading. And of course by using arbitrary CSS classes for your anchors you are able to create any lists you like, e.g. *List of Listings*, *List of Rules*, etc.
 
 ## Options
 
@@ -374,14 +391,14 @@ If available, generates a list of figures with links to sections where the figur
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.4.0
 
-If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for a configuration example.
+If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
 
 ### `generateFiles.listOf`
 
 - **Range:** `Array<{class: string, file: string, [title: string]}>`
 - **Since:** v3.5.0
 
-If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-of-anything) for a configuration example.
+If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-of-anything) for an example.
 
 ### `glossaries`
 
