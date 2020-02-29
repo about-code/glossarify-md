@@ -78,41 +78,35 @@ After running *glossarify-md* augmented versions of the source files have been w
 *./target/glossary.md*:
 
 ```md
-# Glossary
+# [Glossary](#glossary)
 
 ## [Term](#term)
 
 A glossary term has a short description. The full description contains both sentences.
 ```
-> ## Glossary
+> ## [Glossary](#glossary)
 >
 > ### [Term](#term)
 >
 > A glossary term has a short description. The full description contains both sentences.
->
-> ----
->*Preview: added +1 to headline depth for readability*
+
 
 ... and occurrences of the term in markdown files have been linked to the term definition in the glossary:
 
 *./target/pages/page1.md*
 ```md
-# Demo
+# [Demo](#demo)
 
 This is a text which uses a glossary [Term ↴][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
 
-> ## Demo
+> ## [Demo](#demo)
 >
 > This is a text which uses a glossary [Term ↴][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
-> ----
-> *Preview:*
-> - *added +1 to headline depth for readability*
-> - *manually adjusted link to point to sample above*
 
 Some syntactic positions of a term are **excluded** from being linked to the glossary. These are
 
