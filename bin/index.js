@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 const buildOpts = require("minimist-options");
 const minimist = require("minimist");
-const fs = require("fs");
+const fs = require("fs-extra");
 const path = require("path");
 const proc = require("process");
 const program = require("../lib/main");
 const confSchema = require("../conf.schema.json").properties;
-const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR} = require("../lib/cli/messages");
+const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_NOT_DELETED} = require("../lib/cli/messages");
 const {version} = require("../package.json");
 
 const CWD = proc.cwd();
@@ -57,13 +57,22 @@ if (confPath) {
     confDir = CWD;
 }
 
-
 // Opts precedence: CLI over file over defaults
 const opts = Object.assign(optsDefault, optsFile, optsCli);
 // Resolve 2nd arg paths relative to 1st arg paths...
 opts.baseDir = path.resolve(confDir, opts.baseDir);
 opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
 validateOpts(opts);
+
+// _/ Drop old stuff \__________________________________________________________
+if (opts.outDirDropOld) {
+    try {
+        fs.removeSync(opts.outDir);
+    } catch (err) {
+        console.log(OUTDIR_NOT_DELETED,` Reason: ${err.code}
+    `);
+    }
+}
 
 // _/ Run \_____________________________________________________________________
 program.run(opts);

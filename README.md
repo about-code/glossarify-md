@@ -450,12 +450,17 @@ files or if you are able to roll back any changes or if you know the outcome sat
 
 The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
 
+### `--outDirDropOld`
+
+- **Range:** `boolean`
+
+If `true` remove old `--outDir` before writing a new one, otherwise overwrite files. Drops orphan files that have intentionally been removed from `--baseDir`.
+
 ### `--reportNotMentioned`
 
 - **Range:** `boolean`
 
 Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
-
 
 ## Special Thanks go to
 
