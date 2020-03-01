@@ -297,7 +297,7 @@ A visible table label will be inferred from an italic phrase terminated by a col
 | 3        | Book        | $23.45     |
 ```
 
-#### Infering a label for the generated list item (first-match):
+#### Labels for generated list items will be inferred in this order (first-match):
 
 1. **HTML comment** in the line above the table
 1. **emphasized text** at the end of the preceding paragraph
@@ -309,7 +309,7 @@ A visible table label will be inferred from an italic phrase terminated by a col
 
 > **Since v3.5.0**
 
-You can generate arbitrary *List of ...* lists by using HTML anchors with a `class` attribute or `id` prefixes and a `title`. For example, you could now also create a *List of Tables* with an anchor paragraph...
+You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and arbitrary *anchor-classes*. For example, you can now also create a *List of Tables* from the following syntax...
 
 ```md
 <a id="table-avg" title="Average prices by article category"></a>
@@ -320,7 +320,7 @@ You can generate arbitrary *List of ...* lists by using HTML anchors with a `cla
 | 2        | Film        | $10.13     |
 | 3        | Book        | $23.45     |
 ```
-... and a `listOf` configuration:
+... and with a `listOf` configuration:
 
 ```json
 "generateFiles": {
@@ -329,13 +329,20 @@ You can generate arbitrary *List of ...* lists by using HTML anchors with a `cla
     ]
 }
 ```
-In contrast to [`listOfTables`](#list-of-tables) anchors allow for direct navigation to their position rather than to the closest section heading, only.
+For a visible anchor we can omit `title` and use HTML inner text...
 
-*Use `class` instead of `id` prefix (esp. if the class name itself contains hyphens):*
 ```md
-<a class="table" id="avg" title="Average prices by article category"></a>
+<a id="table-avg">Average prices by article category</a>
 ```
-**Infering a label for the generated list item  (first-match)**
+
+So far we prefixed the anchor `id` with the anchor-class "table". Alternatively we can also use the `class` attribute. We *must* do so if the anchor-class contains hyphens:
+```md
+<a id="avg" class="price-table">Average prices by article category</a>
+```
+
+In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-figures), which only support navigating to the closest section heading, anchors can be directly navigated to.
+
+#### Labels for generated list items will be inferred in this order (first-match):
 
 1. `title` attribute value (`<a id="..." "title"="label"></a>`)
 1. Inner text of anchor tag (`<a id="...">label</a>`)
@@ -405,7 +412,7 @@ If available, generates a list of tables. See section [Additional Features](http
 - **Range:** `Array<{class: string, file: string, [title: string]}>`
 - **Since:** v3.5.0
 
-If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-with-anchors) for an example.
+If available, generates a list from HTML anchors exposing the configured `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-with-anchors) for an example.
 
 ### `glossaries`
 
