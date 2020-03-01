@@ -1,0 +1,26 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "indexing": {
+        "groupByHeadingDepth": 0
+    },
+    "generateFiles": {
+        "listOf": [
+            { "class": "prefix", "file": "./list-of-prefix.md", "title": "Test Case: List of 'prefix'" },
+            { "class": "class-attr", "file": "./list-of-class-attr.md", "title": "Test Case: List of 'class-attr'" }
+        ]
+    },
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../output-actual/config-listOf",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
