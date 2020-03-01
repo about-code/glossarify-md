@@ -160,6 +160,8 @@ glossarify-md --config ./glossarify-md.conf.json
   "baseUrl": ""
 }
 ```
+Glossaries can be associated with *term hints*. A term hint indicates that a (generated) link refers to a glossary. In case of [multiple glossaries](#multiple-glossaries) different term hints help to denote which glossary a term belongs to.
+
 > **Since v2.0.0**: If you need more control about placement of a `termHint` symbol, you can use `"${term}"` as a placeholder. For example, `"☛ ${term}"` puts the hint symbol `☛ ` in front of the term.
 
 <!-- baseUrl only effective with linking "absolute" -->
@@ -197,7 +199,7 @@ In the output files aliases will be linked to their related term:
     { "file": "./requirements.md", "termHint": "★" }
 ]
 ```
-Multiple glossaries can be very valuable in professional writing or documentation. In fact any heading in any document can serve as the source for terms. For example in requirements documents you often not just have a glossary but a requirement catalogue, like
+Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 
 *requirements.md*
 
@@ -210,7 +212,7 @@ Multiple glossaries can be very valuable in professional writing or documentatio
 ...
 ```
 
-Glossaries can be associated with *term hints*. A term hint will be visible as an appendix to a term occurrence and can be used to indicate that a particular term and link refers to a glossary term. They can also be used to highlight which glossary a term belongs to.
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate a book index in order to answer the question in which particular book sections those requirements got mentioned.
 
 ### Index of terms and where they have been used
 
