@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/about-code/glossarify-md/compare/v3.4.1...v3.5.0) (2020-03-01)
+
+### Features
+
+* Arbitrary Lists with HTML anchor tags (`<a>`), e.g. *List of Listings, List of Formulas, ...* . See also [README.md](https://github.com/about-code/glossarify-md/blob/22bcbdd0523742df4d8a3d726f89511e7d6a028e/README.md#arbitrary-lists-with-anchors).  ([#73](https://github.com/about-code/glossarify-md/issues/73)) ([4cee0ec](https://github.com/about-code/glossarify-md/commit/4cee0ec))
+* New option `outDirDropOld` to remove prior outputs rather than overwrite/merge with new ones. Default: `false` ([5c518b0](https://github.com/about-code/glossarify-md/commit/5c518b0))
+
 ### [3.4.1](https://github.com/about-code/glossarify-md/compare/v3.4.0...v3.4.1) (2020-02-15)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "glossarify-md",
-  "version": "3.4.1",
+  "version": "3.5.0",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "author": {
     "name": "Andreas Martin"
@@ -23,11 +23,18 @@
   "bin": {
     "glossarify-md": "bin/index.js"
   },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
+  },
   "scripts": {
     "config": "node ./bin/index.js --config",
+    "dconfig": "node --inspect-brk ./bin/index.js --config",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
-    "debug-config": "node --inspect-brk ./bin/index.js --config",
-    "fixes": "eslint . --fix",
+    "debug-config": "npm run dconfig",
+    "fix": "eslint . --fix",
     "linter": "eslint .",
     "pretest": "eslint .",
     "pretest-win": "eslint .",
