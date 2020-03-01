@@ -8,10 +8,10 @@
 
 [1]: ./document-infer-label.md "./document-infer-label.md"
 
-[2]: ./document-infer-label.md#test-Case-B:-Label-from-%27id%27 "Test Case B: Label from 'id'"
+[2]: ./document-infer-label.md#label-test-Case-B:-Label-from-%27id%27 "Test Case B: Label from 'id'"
 
-[3]: ./document-infer-label.md#no-title-but-text "Test Case C: 'innerText'"
+[3]: ./document-infer-label.md#label-no-title-but-text "Test Case C: 'innerText'"
 
-[4]: ./document-infer-label.md#title-but-no-text "Test Case D: 'title'"
+[4]: ./document-infer-label.md#label-title-but-no-text "Test Case D: 'title'"
 
-[5]: ./document-infer-label.md#title-and-text "Test Case E: 'title'"
+[5]: ./document-infer-label.md#label-title-and-text "Test Case E: 'title'"
