@@ -1,4 +1,4 @@
-## TestCase: `class`-Attribute
+# Test Case: `class`-Attribute
 
 GIVEN a configuration
 

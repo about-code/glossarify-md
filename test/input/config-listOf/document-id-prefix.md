@@ -1,6 +1,4 @@
-# Document
-
-## TestCase: `id`-prefix
+# Test Case: `id`-prefix
 
 GIVEN a configuration
 
