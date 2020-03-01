@@ -2,9 +2,9 @@
 
 **About:** This is a command line tool to help Markdown book writers with
 
-- **Glossary Linking**: autolink terms to their definition in a glossary.
-- **Book Index**: generate an index from glossary terms and navigate to where they were mentioned.
-- **List of X**: Generate lists such as a List of Tables, a List of Figures, a List of Listings, a List of Definitions, a List of Formulas, etc. and link to where they have been declared.
+- **Glossary Linking** (prime use case): autolink terms to their definition in a glossary
+- **Book Indexing**: generate a Book Index from glossary terms and navigate to where they were mentioned
+- **Listings**: generate arbitrary lists such as List of Tables, List of Figures, List of Definitions, List of Formulas, List of Examples and so forth.
 
 [vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
