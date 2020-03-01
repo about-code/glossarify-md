@@ -45,7 +45,7 @@ AND WITH hyphens replaced by spaces
 AND WITH the first letter uppercased:
 
 ~~~md
-- [Test Case B: Label from 'id'](./document-infer-label.md#test-Case-B:-Label-from-%27id%27)
+- [Test Case B: Label from 'id'](./document-infer-label.md#label-test-Case-B:-Label-from-%27id%27)
 ~~~
 
 ## Test Case C: No `title` but `innerText`
