@@ -297,10 +297,10 @@ A visible table label will be inferred from an italic phrase terminated by a col
 | 3        | Book        | $23.45     |
 ```
 
-#### Table Label Inference
+#### Infering a label for the generated list item (first-match):
 
-If there's no table label, then a table label will be inferred with these attempts:
-
+1. **HTML comment** in the line above the table
+1. **emphasized text** at the end of the preceding paragraph
 1. **column headers** separated by comma, e.g. *Category, Description, Price Avg.*
 1. **preceding section heading** (multiple tables without column headers in the same section may be labeled ambiguously)
 1. **filename** in which the table has been found.
@@ -335,6 +335,13 @@ In contrast to [`listOfTables`](#list-of-tables) anchors allow for direct naviga
 ```md
 <a class="table" id="avg" title="Average prices by article category"></a>
 ```
+**Infering a label for the generated list item  (first-match)**
+
+1. `title` attribute value (`<a id="..." "title"="label"></a>`)
+1. Inner text of anchor tag (`<a id="...">label</a>`)
+1. `id` attribute value, yet without list prefix (`<a id="prefix-label"></a>`)
+1. Preceding section heading if `id` is just the list prefix (`<a id="prefix"></a>`)
+1. Filename if `id` is just the list prefix and there is no preceding section heading, either.
 
 ## Options
 
