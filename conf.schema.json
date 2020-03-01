@@ -97,6 +97,12 @@
             "alias": "o",
             "default": ""
         },
+        "outDirDropOld": {
+            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files.",
+            "type": "boolean",
+            "alias": "",
+            "default": false
+        },
         "reportNotMentioned": {
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
             "type": "boolean",
@@ -123,6 +129,27 @@
                         "description": "String value range is deprecated and will be removed with v4. Use object notation instead."
                     }],
                     "default": ""
+                },
+                "listOf": {
+                    "description": "Generate an arbitrary 'List of {x}' from HTML anchors with css class {x}. E.g. Generate a List of Listings from every <a class='listings' id='listing-1', title='Listing 1' /> and link to those anchors.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "class": {
+                                "description": "The CSS class to look for in anchor elements",
+                                "type": "string"
+                            },
+                            "file": {
+                                "description": "Path relative to 'outDir' where to create the output file.",
+                                "type": "string"
+                            },
+                            "title": {
+                                "description": "The page title for the index file. If missing it's being inferred from the value of 'class'.",
+                                "type": "string"
+                            }
+                        }
+                    }
                 },
                 "listOfFigures": {
                     "description": "Generate a file with a list of figures and where they can be found.",
