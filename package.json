@@ -62,8 +62,7 @@
     "unified-engine": "^7.0.0",
     "unist-builder": "^1.0.4",
     "unist-util-flatmap": "^1.0.0",
-    "unist-util-visit": "^2.0.0",
-    "unist-util-visit-parents": "^3.0.1"
+    "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
