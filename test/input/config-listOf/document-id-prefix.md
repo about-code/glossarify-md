@@ -16,17 +16,13 @@ GIVEN a configuration
 ~~~
 AND a document *./document-id-prefix.md*
 
-WITH
-
-<a id="prefix-a" title="Title Prefix A">Anchor A</a>
+WITH <a id="prefix-a" title="Title Prefix A">Anchor A</a>
 
 ~~~md
 <a id="prefix-a" title="Title Prefix A">Anchor A</a>
 ~~~
 
-AND WITH
-
-<a id="prefix-b" title="Title Prefix B">Anchor B</a>
+AND WITH <a id="prefix-b" title="Title Prefix B">Anchor B</a>
 
 ~~~md
 <a id="prefix-b" title="Title Prefix B">Anchor B</a>

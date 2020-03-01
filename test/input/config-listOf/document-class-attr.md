@@ -14,17 +14,13 @@ GIVEN a configuration
 ~~~
 AND a document *./document-class-attr.md*
 
-WITH
-
-<a class="class-attr" id="a" title="Title Class-Attr A">Anchor A</a>
+WITH <a class="class-attr" id="a" title="Title Class-Attr A">Anchor A</a>
 
 ~~~md
 <a class="class-attr" id="a" title="Title Class-Attr A">Anchor A</a>
 ~~~
 
-AND WITH
-
-<a class="class-attr" id="b" title="Title Class-Attr B">Anchor B</a>
+AND WITH <a class="class-attr" id="b" title="Title Class-Attr B">Anchor B</a>
 
 ~~~md
 <a class="class-attr" id="b" title="Title Class-Attr B">Anchor B</a>
