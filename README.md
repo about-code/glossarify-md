@@ -17,7 +17,7 @@
    - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
    - [List of Figures](#list-of-figures)
    - [List of Tables](#list-of-tables)
-   - [Arbitrary Lists of Anything](#arbitrary-lists-of-anything)
+   - [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
 - [Options](#options)
 
 ## Install
@@ -73,7 +73,7 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ## Results
 
-After running *glossarify-md* augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
+Augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
 
 *./target/glossary.md*:
 
@@ -115,13 +115,14 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 - Preformatted blocks
 - (Markdown) links
 
-> **Important:** Unfortunately, we can't exclude text between the opening and closing angle brackets of an HTML link tag, at the moment. In a markdown syntax tree something like `<a href="">term</a>` is represented as distinct HTML nodes with arbitrary complex markdown nodes in between. Therefore a term found between those HTML tags currently results in
+> **Important:** As of now, we can't prevent text between the opening and closing angle brackets of an HTML link to be linkified. In a markdown syntax tree something like `<a href="">term</a>` is represented as distinct HTML nodes with arbitrary complex markdown nodes in between. Therefore a term found between those HTML tags currently results in
 > ```
 > <a href="">[term][1]</a>
 >
 > [1] ./glossary.md#term
 > ```
-> Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
+
+> **Note:** Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
 
 ## Configuration
 
@@ -231,7 +232,7 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 ```json
 "generateFiles": {
-    "listOfFigures": { "file": "./figures.md", "title": "Abbildungen" }
+    "listOfFigures": { "file": "./figures.md", "title": "Figures" }
 }
 ```
 
@@ -245,19 +246,19 @@ This option will generate an index file `./figures.md` with a list of figures gr
 ### List of Tables
 
 > **Since v3.4.0**
+> - Since v3.5.0 see also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
+
+Generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
 ```json
 "generateFiles": {
-    "listOfTables": { "file": "./tables.md", "title": "Abbildungen" }
+    "listOfTables": { "file": "./tables.md", "title": "Tables" }
 }
 ```
-This option will generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
 Markdown tables have no inherent notion of a table label. *glossarify-md* scans for two patterns of user-defined table labels and attempts to infer a table label otherwise.
 
-#### Invisible table label with HTML comment
-
-Provide an invisible table label with an HTML comment pattern `<!-- table: ... -->` preceding the table.
+#### Invisible table label
 
 ```md
 <!-- table: Average Prices by Article Category -->
@@ -270,7 +271,7 @@ Provide an invisible table label with an HTML comment pattern `<!-- table: ... -
 
 #### Visible table label
 
-A visible table label will be inferred from an italic phrase terminated by a colon two lines prior to the table. For example:
+A visible table label will be inferred from an italic phrase terminated by a colon two lines prior to the table. The phrase can be a distinct paragraph...
 
 ```md
 [...] which we can see from the average price by article category.
@@ -283,6 +284,8 @@ A visible table label will be inferred from an italic phrase terminated by a col
 | 2        | Film        | $10.13     |
 | 3        | Book        | $23.45     |
 ```
+
+... or a phrase inlined into text:
 
 ```md
 [...] which we can see from the *Average prices by article category:*
@@ -302,23 +305,22 @@ If there's no table label, then a table label will be inferred with these attemp
 1. **preceding section heading** (multiple tables without column headers in the same section may be labeled ambiguously)
 1. **filename** in which the table has been found.
 
-### Arbitrary Lists of Anything
+### Arbitrary Lists with Anchors
 
 > **Since v3.5.0**
 
-Since version 3.5.0 you can generate arbitrary *List of `X`*  by using HTML anchors and CSS classes to categorize them. For example, instead of using `listOfTables` you could now also create a *List of Tables* by placing an
-anchor near a table...
+You can generate arbitrary *List of ...* lists by using HTML anchors with a `class` attribute or `id` prefixes and a `title`. For example, you could now also create a *List of Tables* with an anchor paragraph...
 
 ```md
-<a class="table" id="table-1" title="Average prices by article category" />
+<a id="table-avg" title="Average prices by article category"></a>
+
 | Category | Description | Price Avg. |
 | -------- | ----------- | ---------- |
 | 1        | Video Game  | $35.66     |
 | 2        | Film        | $10.13     |
 | 3        | Book        | $23.45     |
 ```
-
-... and using the configuration:
+... and a `listOf` configuration:
 
 ```json
 "generateFiles": {
@@ -327,8 +329,12 @@ anchor near a table...
     ]
 }
 ```
+In contrast to [`listOfTables`](#list-of-tables) anchors allow for direct navigation to their position rather than to the closest section heading, only.
 
-The advantage over `listOfTables` is that due to the HTML anchor element links in the generated list of tables can directly point to the anchor and table position rather than the closest section heading. And of course by using arbitrary CSS classes for your anchors you are able to create any lists you like, e.g. *List of Listings*, *List of Rules*, etc.
+*Use `class` instead of `id` prefix (esp. if the class name itself contains hyphens):*
+```md
+<a class="table" id="avg" title="Average prices by article category"></a>
+```
 
 ## Options
 
@@ -392,7 +398,7 @@ If available, generates a list of tables. See section [Additional Features](http
 - **Range:** `Array<{class: string, file: string, [title: string]}>`
 - **Since:** v3.5.0
 
-If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-of-anything) for an example.
+If available, generates a list from HTML anchors exposing a CSS class declared in the list's `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#arbitrary-lists-with-anchors) for an example.
 
 ### `glossaries`
 

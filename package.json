@@ -25,8 +25,9 @@
   },
   "scripts": {
     "config": "node ./bin/index.js --config",
+    "dconfig": "node --inspect-brk ./bin/index.js --config",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
-    "debug-config": "node --inspect-brk ./bin/index.js --config",
+    "debug-config": "npm run dconfig",
     "fixes": "eslint . --fix",
     "linter": "eslint .",
     "pretest": "eslint .",
