@@ -1,6 +1,4 @@
-# [Document](#document)
-
-## [TestCase: `id`-prefix](#testcase-id-prefix)
+# [Test Case: `id`-prefix](#test-case-id-prefix)
 
 GIVEN a configuration
 

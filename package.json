@@ -28,7 +28,7 @@
     "dconfig": "node --inspect-brk ./bin/index.js --config",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
     "debug-config": "npm run dconfig",
-    "fixes": "eslint . --fix",
+    "fix": "eslint . --fix",
     "linter": "eslint .",
     "pretest": "eslint .",
     "pretest-win": "eslint .",
