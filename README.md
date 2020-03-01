@@ -1,7 +1,10 @@
 # glossarify-md
 
-*Term-to-Definition*- and *Cross-Linking* for Markdown.
+**About:** This is a command line tool to help Markdown book writers with
 
+- **Glossary Linking**: autolink terms to their definition in a glossary.
+- **Book Index**: generate an index from glossary terms and navigate to where they were mentioned.
+- **List of X**: Generate lists such as a List of Tables, a List of Figures, a List of Listings, a List of Definitions, a List of Formulas, etc. and link to where they have been declared.
 
 [vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
@@ -495,4 +498,6 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 
 ## Special Thanks go to
 
-- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://github.com/unifiedjs) and [remarkjs](https://github.com/remarkjs) and authors of any other modules adding value to the tool.
+- [John Gruber](https://daringfireball.net/projects/markdown/) for developing the Markdown syntax
+- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more
+- and authors of any other modules adding value to the tool.
