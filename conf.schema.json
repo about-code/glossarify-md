@@ -100,6 +100,7 @@
         "outDirDropOld": {
             "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files.",
             "type": "boolean",
+            "alias": "",
             "default": false
         },
         "reportNotMentioned": {

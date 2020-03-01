@@ -338,11 +338,11 @@ In contrast to [`listOfTables`](#list-of-tables) anchors allow for direct naviga
 
 ## Options
 
-### `--help` | `--h`
+### `help` | `--h`
 
 Show all options and default values.
 
-### `--baseUrl` | `--b`
+### `baseUrl` | `--b`
 
 - **Range:** `string`
 
@@ -351,20 +351,20 @@ In most situations, e.g. when hosting markdown files in a repository or
 processing markdown files with an MD to HTML converter omitting a pre-defined
 `baseUrl` and using `linking: "relative"` is likely to work better.
 
-### `--baseDir` | `--d`
+### `baseDir` | `--d`
 
 - **Range:** `string`
 
 Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./src`
 
-### `--excludeFiles` | `--e`
+### `excludeFiles` | `--e`
 
 - **Range:** `string[]`
 
 Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
 want to ignore certain markdown files from being modified.
 
-### `--experimentalFootnotes`
+### `experimentalFootnotes`
 
 - **Range:** `boolean`
 
@@ -410,13 +410,13 @@ being appended to term occurrences in order to indicate which glossary or
 category a term belongs to. A term hint may be any UTF-8 character or character
 sequence.
 
-### `--ignoreCase` | `--i`
+### `ignoreCase` | `--i`
 
 - **Range:** `boolean`
 
 When true any occurrence of a term will be linked no matter how it was spelled.
 
-### `--includeFiles` | `--f`
+### `includeFiles` | `--f`
 
 - **Range:** `string[]`
 
@@ -439,7 +439,7 @@ high-level sections doesn't mean that only links to the high-level sections are
 generated. Where it makes sense links to low-level sections of occurrence are
 just being shortened.
 
-### `--keepRawFiles` | `--r`
+### `keepRawFiles` | `--r`
 
 - **Range:** `string[]`
 
@@ -447,7 +447,7 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-### `--linking` | `--l`
+### `linking` | `--l`
 
 - **Range:** `"relative" | "absolute"`
 
@@ -456,7 +456,7 @@ The use of `"absolute"` may require a `baseUrl`.
 
 > **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
 
-### `--outDir` | `--o`
+### `outDir` | `--o`
 
 - **Range:** `string`
 
@@ -467,13 +467,13 @@ files or if you are able to roll back any changes or if you know the outcome sat
 
 The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
 
-### `--outDirDropOld`
+### `outDirDropOld`
 
 - **Range:** `boolean`
 
 If `true` remove old `--outDir` before writing a new one, otherwise overwrite files. Drops orphan files that have intentionally been removed from `--baseDir`.
 
-### `--reportNotMentioned`
+### `reportNotMentioned`
 
 - **Range:** `boolean`
 
