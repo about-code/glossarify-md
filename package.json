@@ -23,12 +23,6 @@
   "bin": {
     "glossarify-md": "bin/index.js"
   },
-  "standard-version": {
-    "skip": {
-      "commit": true,
-      "tag": true
-    }
-  },
   "scripts": {
     "config": "node ./bin/index.js --config",
     "dconfig": "node --inspect-brk ./bin/index.js --config",
@@ -44,7 +38,8 @@
     "release-beta": "standard-version --prerelease beta",
     "release-dry": "standard-version --dry-run",
     "release-stable": "standard-version",
-    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
+    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
+    "readme": "remark README.gitignore.md > README.md"
   },
   "dependencies": {
     "fs-extra": "^8.1.0",
@@ -57,7 +52,6 @@
     "remark-parse": "^7.0.1",
     "remark-reference-links": "^4.0.4",
     "remark-slug": "^5.1.2",
-    "remark-stringify": "^7.0.2",
     "unified": "^8.3.2",
     "unified-engine": "^7.0.0",
     "unist-builder": "^1.0.4",
@@ -66,7 +60,41 @@
   },
   "devDependencies": {
     "eslint": "^6.8.0",
+    "remark-cli": "^7.0.1",
+    "remark-comment-config": "^5.1.0",
+    "remark-license": "^5.1.0",
+    "remark-stringify": "^7.0.4",
+    "remark-toc": "^7.0.0",
     "standard-version": "^7.0.0"
+  },
+  "remarkConfig": {
+    "settings": {
+      "bullet": "-",
+      "emphasis": "*",
+      "strong": "*",
+      "listItemIndent": "1",
+      "incrementListMarker": false,
+      "fences": true,
+      "fence": "`"
+    },
+    "plugins": {
+      "remark-toc": {
+        "maxDepth": 3,
+        "tight": true
+      },
+      "remark-license": {
+        "name": "Andreas Martin",
+        "url": "https://github.com/about-code",
+        "ignoreFinalDefinitions": false
+      },
+      "remark-comment-config": {}
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "tag": true
+    }
   },
   "keywords": [
     "glossary",
