@@ -10,12 +10,10 @@ GIVEN this input file
             "numeric": true
         }
     },
-    "glossaries": [
-        {
-            "file": "./glossary-i18n-compare-numeric-desc.md" ,
-            "sort": "desc"
-        }
-    ]
+    "glossaries": [{
+        "file": "./glossary-i18n-compare-numeric-desc.md" ,
+        "sort": "desc"
+    }]
     ```
 
 - AND an alphabet
@@ -31,12 +29,10 @@ GIVEN this input file
             ignorePunctuation: false
         }
     },
-    "glossaries": [
-        {
-            "file": "./glossary-i18n-compare-numeric-desc.md" ,
-            "sort": "desc"
-        }
-    ]
+    "glossaries": [{
+        "file": "./glossary-i18n-compare-numeric-desc.md" ,
+        "sort": "desc"
+    }]
     ```
 
 - AND the following sections WITH a heading depth >= 2 MUST be sorted such that their numeric section bodies produce a **descending** sequence

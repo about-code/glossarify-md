@@ -26,12 +26,10 @@ GIVEN this input file
             ignorePunctuation: false
         }
     },
-    "glossaries": [
-        {
-            "file": "./glossary-numbers-default-desc.md" ,
-            "sort": "desc"
-        }
-    ]
+    "glossaries": [{
+        "file": "./glossary-numbers-default-desc.md" ,
+        "sort": "desc"
+    }]
     ```
 
 - AND the following sections WITH a heading depth >= 2 MUST be sorted such that their numeric section bodies produce a **descending** sequence
