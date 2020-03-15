@@ -1,0 +1,23 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-glossaries/sort-i18n-compare-numeric",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "i18n": {
+        "compare": {
+            "numeric": true
+        }
+    },
+    "glossaries": [
+        { "file": "./glossary-i18n-compare-numeric-asc.md" , "sort": "asc" },
+        { "file": "./glossary-i18n-compare-numeric-desc.md" , "sort": "desc" }
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
