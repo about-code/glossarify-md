@@ -5,12 +5,10 @@ GIVEN this input file
 -   AND a configuration
 
     ```json
-    "glossaries": [
-        {
-            "file": "./glossary-numbers-default-asc.md" ,
-            "sort": "asc"
-        }
-    ]
+    "glossaries": [{
+        "file": "./glossary-numbers-default-asc.md" ,
+        "sort": "asc"
+    }]
     ```
 
 -   AND an alphabet
@@ -26,12 +24,10 @@ GIVEN this input file
             ignorePunctuation: false
         }
     },
-    "glossaries": [
-        {
-            "file": "./glossary-numbers-default-asc.md" ,
-            "sort": "asc"
-        }
-    ]
+    "glossaries": [{
+        "file": "./glossary-numbers-default-asc.md" ,
+        "sort": "asc"
+    }]
     ```
 
 -   AND the following sections WITH a heading depth >= 2 MUST be sorted such that their numeric section bodies produce an **ascending** sequence
