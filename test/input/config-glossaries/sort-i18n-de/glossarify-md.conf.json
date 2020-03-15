@@ -4,6 +4,9 @@
     "outDir": "../../../output-actual/config-glossaries/sort-i18n-de",
     "includeFiles": ["."],
     "excludeFiles": [],
+    "i18n": {
+        "locale": "de"
+    },
     "glossaries": [
         { "file": "./glossary-i18n-de-asc.md", "sort": "asc" }
     ],

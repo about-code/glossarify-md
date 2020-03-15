@@ -38,44 +38,44 @@ GIVEN this input file
 
 ## a-Term
 0
-## b-Term
-2
-## o-Term
-4
-## s-Term
-6
-## u-Term
-8
-## z-Term
-10
 ## ä-Term
-1
+2
+## b-Term
+4
 ## c-Term
-3
+6
+## o-Term
+8
 ## ö-Term
-5
-## ß-Term
-7
-## ü-Term
-9
-
-## Ä-Term
+10
+## s-Term
 12
-## C-Term
+## ß-Term
 14
-## Ö-Term
-16
 ## U-Term
+16
+## Ü-Term
 18
 ## Z-Term
 20
+
 ## A-Term
-11
+1
+## Ä-Term
+3
 ## B-Term
-13
+5
+## C-Term
+7
 ## O-Term
-15
+9
+## Ö-Term
+11
 ## S-Term
+13
+## u-Term
+15
+## ü-Term
 17
-## Ü-Term
+## z-Term
 19
