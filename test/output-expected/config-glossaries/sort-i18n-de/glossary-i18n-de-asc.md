@@ -42,79 +42,79 @@ GIVEN this input file
 
 ## [A-Term](#a-term-1)
 
-11
+1
 
 ## [ä-Term](#ä-term)
 
-1
+2
 
 ## [Ä-Term](#ä-term-1)
 
-12
+3
 
 ## [b-Term](#b-term)
 
-2
+4
 
 ## [B-Term](#b-term-1)
 
-13
+5
 
 ## [c-Term](#c-term)
 
-3
+6
 
 ## [C-Term](#c-term-1)
 
-14
+7
 
 ## [o-Term](#o-term)
 
-4
+8
 
 ## [O-Term](#o-term-1)
 
-15
+9
 
 ## [ö-Term](#ö-term)
 
-5
+10
 
 ## [Ö-Term](#ö-term-1)
 
-16
+11
 
 ## [s-Term](#s-term)
 
-6
+12
 
 ## [S-Term](#s-term-1)
 
-17
+13
 
 ## [ß-Term](#ß-term)
 
-7
+14
 
 ## [u-Term](#u-term)
 
-8
+15
 
 ## [U-Term](#u-term-1)
 
-18
+16
 
 ## [ü-Term](#ü-term)
 
-9
+17
 
 ## [Ü-Term](#ü-term-1)
 
-19
+18
 
 ## [z-Term](#z-term)
 
-10
+19
 
 ## [Z-Term](#z-term-1)
 
