@@ -381,7 +381,7 @@ In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-f
 
 > **Since v3.6.0**
 
-Maintaining terms in alphabetical order manually, can become tedious and computers are quite good at sorting. So let *glossarify-md* sort the output glossary for you by adding a `sort` direction to your glossaries:
+Let *glossarify-md* sort the output glossary for you by adding a `sort` direction to your glossaries:
 
 *glossarify-md.conf.json*
 
@@ -400,8 +400,7 @@ available for those APIs and best documented on [Mozilla Developer Portal](https
 ```json
 "i18n": {
    "locale": "de",
-   "ignorePunctuation": true,
-   // and others from JavaScript's Intl.Collator
+   "ignorePunctuation": true
 },
 ```
 
