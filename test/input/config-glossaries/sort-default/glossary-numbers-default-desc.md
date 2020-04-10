@@ -21,10 +21,8 @@ GIVEN this input file
     ```json
     "i18n": {
         locale: "en",
-        compare: {
-            numeric: false,
-            ignorePunctuation: false
-        }
+        numeric: false,
+        ignorePunctuation: false
     },
     "glossaries": [{
         "file": "./glossary-numbers-default-desc.md" ,

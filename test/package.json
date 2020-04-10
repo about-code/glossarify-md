@@ -31,7 +31,7 @@
     "test_12": "npx . --config ./input/config-glossaries/sort-default/glossarify-md.conf.json",
     "test_13": "npx . --config ./input/config-glossaries/sort-i18n-compare-numeric/glossarify-md.conf.json",
     "test_14": "npx . --config ./input/config-glossaries/sort-i18n-de/glossarify-md.conf.json",
-
+    "test_15": "npx . --config ./input/config-glossaries/sort-i18n-es/glossarify-md.conf.json",
     "test_16": "npx . --config ./input/config-baseUrl/glossarify-md.conf.json",
     "test_17": "npx . --config ./input/config-excludeFiles/glossarify-md.conf.json",
     "test_18": "npx . --config ./input/config-linking/relative/glossarify-md.conf.json",
