@@ -72,6 +72,11 @@
             "$ref": "#/$defs/IndexingOpts",
             "default": {}
         },
+        "i18n": {
+            "description": "Internationalization and collation options. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator.",
+            "$ref": "#/$defs/IntlOpts",
+            "default": {}
+        },
         "keepRawFiles": {
             "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
             "type": "array",
@@ -190,6 +195,43 @@
                 }
             }
         },
+        "IntlOpts": {
+            "type": "object",
+            "properties": {
+                "caseFirst": {
+                    "description": "Whether upper case or lower case should sort first. Default: 'false' (Use locale's default). See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "string",
+                    "enum": ["upper", "lower", "false"]
+                },
+                "locale": {
+                    "description": "The locale to use for operations such as sorting. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "string"
+                },
+                "localeMatcher": {
+                    "description": "The locale matching algorithm to use. Default: 'best fit'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "string",
+                    "enum": ["best fit", "lookup"]
+                },
+                "numeric": {
+                    "description": "Whether to use numeric collation. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "boolean"
+                },
+                "ignorePunctuation": {
+                    "description": "Whether punctuation should be ignored. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "boolean"
+                },
+                "sensitivity": {
+                    "description": "Which differences in the strings should lead to non-zero result values. Default: 'variant' for sorts, locale dependent for searches. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "string",
+                    "enum": ["base", "accent", "case", "variant"]
+                },
+                "usage": {
+                    "description": "Whether the comparison is for sorting or for searching for matching strings. Default: 'sort'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "string",
+                    "enum": ["sort", "search"]
+                }
+            }
+        },
         "GlossariesOpts": {
             "type": "object",
             "properties": {
@@ -200,6 +242,11 @@
                 "termHint": {
                     "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
                     "type": "string"
+                },
+                "sort": {
+                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options.",
+                    "type": "string",
+                    "enum": ["asc", "desc"]
                 }
             }
         },

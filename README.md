@@ -442,13 +442,14 @@ If available, generates a list from HTML anchors exposing the configured `class`
 
 #### `glossaries`
 
-- **Range:** `Array<{file: string, [termHint: string]}>`
+- **Range:** `Array<{file: string, [termHint: string], [sort: string]}>`
 
 A list of glossary configuations, each with a path to the glossary file. Every
 glossary may have an optional *termHint*. A *termHint* is a symbol character
 being appended to term occurrences in order to indicate which glossary or
 category a term belongs to. A term hint may be any UTF-8 character or character
-sequence.
+sequence. If you would like to have the glossary sorted provide a *sort* direction
+`"asc"` or `"desc"`.
 
 #### `ignoreCase` \| `--i`
 
