@@ -203,6 +203,10 @@
                     "type": "string",
                     "enum": ["upper", "lower", "false"]
                 },
+                "ignorePunctuation": {
+                    "description": "Whether punctuation should be ignored. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
+                    "type": "boolean"
+                },
                 "locale": {
                     "description": "The locale to use for operations such as sorting. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
                     "type": "string"
@@ -214,10 +218,6 @@
                 },
                 "numeric": {
                     "description": "Whether to use numeric collation. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "boolean"
-                },
-                "ignorePunctuation": {
-                    "description": "Whether punctuation should be ignored. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
                     "type": "boolean"
                 },
                 "sensitivity": {

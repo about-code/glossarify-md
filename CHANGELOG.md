@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/about-code/glossarify-md/compare/v3.4.1...v3.6.0) (2020-04-10)
+
+
+### Features
+
+* Minor performance improvements. Write outputs in parallel. ([f7720e8](https://github.com/about-code/glossarify-md/commit/f7720e8))
+* Sort terms in a glossary ([#66](https://github.com/about-code/glossarify-md/issues/66)) ([1846929](https://github.com/about-code/glossarify-md/commit/1846929))
+
 ## [3.5.0](https://github.com/about-code/glossarify-md/compare/v3.4.1...v3.5.0) (2020-03-01)
 
 ### Features

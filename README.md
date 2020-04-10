@@ -376,6 +376,32 @@ In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-f
 1. Preceding section heading if `id` is just the list prefix (`<a id="prefix"></a>`)
 1. Filename if `id` is just the list prefix and there is no preceding section heading, either.
 
+
+### Sorting your glossaries
+
+> **Since v3.6.0**
+
+Maintaining terms in alphabetical order manually, can become tedious and computers are quite good at sorting. So let *glossarify-md* sort the output glossary for you by adding a `sort` direction to your glossaries:
+
+*glossarify-md.conf.json*
+```json
+"glossaries": [
+    { "file":"./glossary.md", "termHint": "", "sort": "asc" }
+]
+```
+Internally we use `Intl.Collator` and fall back to `String.localeCompare` if the
+`Intl` API is missing on your version of node. Thus you can use options
+available for those APIs and best documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
+
+*glossarify-md.conf.json*
+```json
+"i18n": {
+   "locale": "de",
+   "ignorePunctuation": true,
+   // and others from JavaScript's Intl.Collator
+},
+```
+
 ## Options
 
 #### `help` \| `--h`
@@ -479,6 +505,14 @@ grouped where `1` refers to chapters (`#` headings). Note that grouping by
 high-level sections doesn't mean that only links to the high-level sections are
 generated. Where it makes sense links to low-level sections of occurrence are
 just being shortened.
+
+#### `i18n`
+
+- **Range**:` { locale: string, [localeMatcher: string],
+    [caseFirst: string], [ignorePunctuation: boolean],
+    [numeric: boolean], [sensitivity: string], [usage: string] }`
+
+Locale options to control [sorting](#sorting-your-glossaries). See also: [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
 #### `keepRawFiles` \| `--r`
 
