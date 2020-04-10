@@ -23,6 +23,7 @@
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
   - [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
+  - [Sorting your glossaries](#sorting-your-glossaries)
 - [Options](#options)
 - [License](#license)
 
@@ -376,7 +377,6 @@ In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-f
 1. Preceding section heading if `id` is just the list prefix (`<a id="prefix"></a>`)
 1. Filename if `id` is just the list prefix and there is no preceding section heading, either.
 
-
 ### Sorting your glossaries
 
 > **Since v3.6.0**
@@ -384,16 +384,19 @@ In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-f
 Maintaining terms in alphabetical order manually, can become tedious and computers are quite good at sorting. So let *glossarify-md* sort the output glossary for you by adding a `sort` direction to your glossaries:
 
 *glossarify-md.conf.json*
+
 ```json
 "glossaries": [
     { "file":"./glossary.md", "termHint": "", "sort": "asc" }
 ]
 ```
+
 Internally we use `Intl.Collator` and fall back to `String.localeCompare` if the
 `Intl` API is missing on your version of node. Thus you can use options
 available for those APIs and best documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
 
 *glossarify-md.conf.json*
+
 ```json
 "i18n": {
    "locale": "de",
