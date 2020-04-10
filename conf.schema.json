@@ -242,6 +242,11 @@
                 "termHint": {
                     "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
                     "type": "string"
+                },
+                "sort": {
+                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options.",
+                    "type": "string",
+                    "enum": ["asc", "desc"]
                 }
             }
         },
