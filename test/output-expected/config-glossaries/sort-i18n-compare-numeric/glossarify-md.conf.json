@@ -5,9 +5,7 @@
     "includeFiles": ["."],
     "excludeFiles": [],
     "i18n": {
-        "compare": {
-            "numeric": true
-        }
+        "numeric": true
     },
     "glossaries": [
         { "file": "./glossary-i18n-compare-numeric-asc.md" , "sort": "asc" },

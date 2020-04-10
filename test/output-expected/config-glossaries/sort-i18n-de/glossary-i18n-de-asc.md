@@ -23,10 +23,8 @@ GIVEN this input file
     ```json
     "i18n": {
         locale: "de",
-        compare: {
-            numeric: false,
-            ignorePunctuation: false
-        }
+        numeric: false,
+        ignorePunctuation: false
     },
     "glossaries": [{
         "file": "./glossary-i18n-de-asc.md" ,

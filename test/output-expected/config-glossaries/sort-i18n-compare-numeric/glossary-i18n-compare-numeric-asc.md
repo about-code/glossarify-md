@@ -6,9 +6,7 @@ GIVEN this input file
 
     ```json
     "i18n": {
-        "compare": {
-            "numeric": true
-        }
+        "numeric": true
     },
     "glossaries": [{
         "file": "./glossary-i18n-compare-numeric-asc.md" ,
@@ -24,10 +22,8 @@ GIVEN this input file
     ```json
     "i18n": {
         locale: "en",
-        compare: {
-            numeric: true,
-            ignorePunctuation: false
-        }
+        numeric: true,
+        ignorePunctuation: false
     },
     "glossaries": [{
         "file": "./glossary-i18n-compare-numeric-asc.md" ,
