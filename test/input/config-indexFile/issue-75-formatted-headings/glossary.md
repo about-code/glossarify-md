@@ -1,0 +1,4 @@
+# Glossary
+
+## Term
+...a term

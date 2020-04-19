@@ -1,0 +1,20 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseDir": ".",
+    "linking": "relative",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "generateFiles": {
+        "indexFile": { "file": "./index.md" }
+    },
+    "glossaries": [
+        { "file": "./glossary.md"}
+    ],
+    "ignoreCase": false,
+    "outDir": "../../../output-actual/config-indexFile/issue-75-formatted-headings",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
