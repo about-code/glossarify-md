@@ -1,5 +1,22 @@
 [
   {
+    "shortDesc": "GIVEN short description partly formatted.",
+    "term": "Description Partly Formatted",
+    "hint": "ⓕ",
+    "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
+    "anchor": "#description-partly-formatted",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ",
+      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
+      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
     "shortDesc": "",
     "term": "Formatted Term Definitions",
     "hint": "ⓕ",

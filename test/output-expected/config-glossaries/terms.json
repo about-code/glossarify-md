@@ -1,5 +1,22 @@
 [
   {
+    "shortDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
+    "term": "#Hashtag",
+    "hint": "",
+    "longDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
+    "anchor": "#hashtag",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
     "shortDesc": "Testing German Umlauts.",
     "term": "äöüß Term begins with Umlauts",
     "hint": "",
@@ -32,6 +49,23 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "term": "bold-format",
+    "hint": "",
+    "longDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "anchor": "#bold-format",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "Word ends with symbols",
@@ -68,6 +102,59 @@
     "countOccurrenceTotal": 1
   },
   {
+    "shortDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "term": "codespan-format",
+    "hint": "",
+    "longDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "anchor": "#codespan-format",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.",
+    "term": "dense-definition",
+    "hint": "",
+    "longDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.\nTHEN term, short and long description MUST still be extracted, correctly.",
+    "anchor": "#dense-definition",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.",
+    "term": "dense-definition-with-alias",
+    "hint": "",
+    "longDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.\nTHEN term, aliases, short and long description MUST still be extracted, correctly.",
+    "anchor": "#dense-definition-with-alias",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [
+      "dense-with-alia"
+    ],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
     "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
     "term": "Der Tod und das Mädchen",
     "hint": "",
@@ -100,6 +187,40 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 3
+  },
+  {
+    "shortDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
+    "term": "In parts formatted",
+    "hint": "",
+    "longDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
+    "anchor": "#in-parts-formatted",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "term": "italic-format",
+    "hint": "",
+    "longDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "anchor": "#italic-format",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md",
+      "outPath": "/{CWD}/output-actual/config-glossaries/formatted-terms-glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
   },
   {
     "shortDesc": "Testing German Umlauts.",
