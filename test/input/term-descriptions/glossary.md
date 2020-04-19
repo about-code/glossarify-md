@@ -74,3 +74,8 @@ THEN short description with a [link](./foo.md) MUST be detected completely. AND 
 ### GIVEN long description has a link
 
 THEN short description MUST be detected completely. AND long description with a [link](./foo.md) MUST be complete, too.
+
+### Description Partly Formatted
+
+GIVEN short description `partly formatted`. AND long description being partly `formatted`, too.
+THEN short AND long description MUST still be extracted, correctly.
