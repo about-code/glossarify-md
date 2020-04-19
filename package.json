@@ -46,6 +46,7 @@
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "mdast-builder": "^1.1.1",
+    "mdast-util-to-string": "^1.1.0",
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
     "remark-autolink-headings": "^5.2.1",
