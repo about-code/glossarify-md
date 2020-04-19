@@ -1,12 +1,18 @@
 # glossarify-md
 
-**About:** This is a command line tool to help Markdown book writers with
+*glossarify-md* is a command line tool to help Markdown writers with
 
-- **Glossary Linking** (prime use case): autolink terms to their definition in a glossary
-- **Book Indexing**: generate a Book Index from glossary terms and navigate to where they were mentioned
-- **Listings**: generate arbitrary lists such as List of Tables, List of Figures, List of Definitions, List of Formulas, List of Examples and so forth.
+- **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
+- **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
+- **Lists**: generate arbitrary lists such as
+  - List of Tables
+  - List of Figures
+  - List of Listings
+  - List of Definitions
+  - List of Formulas
+  - and so forth...
 
-[vuepress](https://vuepress.vuejs.org) users may be interested to learn [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
+[vuepress](https://vuepress.vuejs.org) users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
 ## Table of Contents
 
@@ -251,6 +257,8 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 ### List of Figures
 
 > **Since v3.3.0**
+>
+> - See also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 ```json
 "generateFiles": {
@@ -270,7 +278,7 @@ This option will generate an index file `./figures.md` with a list of figures gr
 
 > **Since v3.4.0**
 >
-> - Since v3.5.0 see also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
+> - See also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 Generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
@@ -333,19 +341,11 @@ A visible table label will be inferred from an italic phrase terminated by a col
 
 > **Since v3.5.0**
 
-You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and arbitrary *anchor-classes*. For example, you can now also create a *List of Tables* from the following syntax...
+You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and anchor *classes*.
 
-```md
-<a id="table-avg" title="Average prices by article category"></a>
+> Anchors can be directly navigated to while [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-figures) only generate links to headings preceding a table or figure.
 
-| Category | Description | Price Avg. |
-| -------- | ----------- | ---------- |
-| 1        | Video Game  | $35.66     |
-| 2        | Film        | $10.13     |
-| 3        | Book        | $23.45     |
-```
-
-... and with a `listOf` configuration:
+For example, to generate a *List of Tables* add
 
 ```json
 "generateFiles": {
@@ -355,19 +355,29 @@ You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and
 }
 ```
 
-For a visible anchor we can omit `title` and use HTML inner text...
+and mark the position of a table with an HTML anchor:
+
+```md
+<a id="avg" class="table">Average prices by article category:</a>
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+Type less by passing the anchor `class` as an `id`-prefix:
 
 ```md
 <a id="table-avg">Average prices by article category</a>
 ```
 
-So far we prefixed the anchor `id` with the anchor-class "table". Alternatively we can also use the `class` attribute. We *must* do so if the anchor-class contains hyphens:
+Hide anchors with a `title` attribute:
 
 ```md
-<a id="avg" class="price-table">Average prices by article category</a>
+<a id="table-avg" title="Average prices by article category"></a>
 ```
-
-In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-figures), which only support navigating to the closest section heading, anchors can be directly navigated to.
 
 #### Labels for generated list items will be inferred in this order (first-match):
 
@@ -381,7 +391,7 @@ In contrast to [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-f
 
 > **Since v3.6.0**
 
-Let *glossarify-md* sort the output glossary for you by adding a `sort` direction to your glossaries:
+Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want *glossarify-md* to sort them for you:
 
 *glossarify-md.conf.json*
 
@@ -391,9 +401,7 @@ Let *glossarify-md* sort the output glossary for you by adding a `sort` directio
 ]
 ```
 
-Internally we use `Intl.Collator` and fall back to `String.localeCompare` if the
-`Intl` API is missing on your version of node. Thus you can use options
-available for those APIs and best documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
+Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare` if the `Intl` API is missing. You can tweak collation by adding `i18n` options:
 
 *glossarify-md.conf.json*
 
@@ -402,7 +410,12 @@ available for those APIs and best documented on [Mozilla Developer Portal](https
    "locale": "de",
    "ignorePunctuation": true
 },
+"glossaries": [
+    ...
+]
 ```
+
+The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
 
 ## Options
 
@@ -514,7 +527,7 @@ just being shortened.
     [caseFirst: string], [ignorePunctuation: boolean],
     [numeric: boolean], [sensitivity: string], [usage: string] }`
 
-Locale options to control [sorting](#sorting-your-glossaries). See also: [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
+Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
 #### `keepRawFiles` \| `--r`
 
@@ -558,9 +571,9 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 
 #### Special Thanks go to
 
-- [John Gruber](https://daringfireball.net/projects/markdown/) for developing the Markdown syntax
+- [John Gruber](https://daringfireball.net/projects/markdown/), author of the Markdown syntax
 - [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more
-- and authors of any other modules adding value to the tool.
+- and all the other great people publishing modules of value to the tool - directly or transitively.
 
 ## License
 
