@@ -4,13 +4,7 @@
 
 - **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
-- **Lists**: generate arbitrary lists such as
-  - List of Tables
-  - List of Figures
-  - List of Listings
-  - List of Definitions
-  - List of Formulas
-  - and so forth...
+- **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
 [vuepress](https://vuepress.vuejs.org) users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
@@ -20,9 +14,9 @@
 - [Sample](#sample)
 - [Results](#results)
 - [Configuration](#configuration)
-  - [...via command-line (not all options supported)](#via-command-line-not-all-options-supported)
-  - [...via config file](#via-config-file)
+  - [Command-line (not all options supported)](#command-line-not-all-options-supported)
 - [Additional Features](#additional-features)
+  - [Term Hints](#term-hints)
   - [Aliases and Synonyms](#aliases-and-synonyms)
   - [Multiple Glossaries](#multiple-glossaries)
   - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
@@ -35,8 +29,38 @@
 
 ## Install
 
+#### Option 1: Run in any directory:
+
 ```
 npm i -g glossarify-md
+```
+
+```
+glossarify-md --config ./glossarify-md.conf.json
+```
+
+#### Option 2: Install locally to your project:
+
+```
+npm i glossarify-md
+```
+
+```
+npx glossarify-md --config ./glossarify-md.conf.json
+```
+
+or add as an npm-script to your `package.json`:
+
+*package.json*
+
+```json
+scripts: {
+  "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
+}
+```
+
+```
+npm run glossarify
 ```
 
 ## Sample
@@ -80,11 +104,7 @@ Your original files may just use the term *Term* anywhere in text:
 This is a text which uses a glossary Term to describe something.
 ```
 
-Then in `${root}` of your project run *glossarify-md* with a [configuration](#configuration) file.
-
-```
-glossarify-md --config ./glossarify-md.conf.json
-```
+Then in `${root}` of your project run *glossarify-md* with a [glossarify-md.conf.json](#configuration) file.
 
 ## Results
 
@@ -143,7 +163,24 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 
 ## Configuration
 
-### ...via command-line (not all options supported)
+*glossarify-md.conf.json* (further options see [below](#options))
+
+```json
+{
+  "$schema": "./node_modules/glossarify-md/conf.schema.json",
+  "baseDir": "./src",
+  "outDir": "../target",
+  "glossaries": [
+     { "file": "./glossary.md" },
+  ],
+  "includeFiles": ["."],
+  "excludeFiles": ["node_modules"],
+  "linking": "relative",
+  "baseUrl": ""
+}
+```
+
+### Command-line (not all options supported)
 
 ```
 glossarify-md
@@ -154,36 +191,24 @@ glossarify-md
   --excludeFiles ["node_modules"]
 ```
 
-### ...via config file
-
-```
-glossarify-md --config ./glossarify-md.conf.json
-```
-
-*glossarify-md.conf.json* (further options see [below](#options))
-
-```json
-{
-  "$schema": "./node_modules/glossarify-md/conf.schema.json",
-  "baseDir": "./src",
-  "outDir": "../target",
-  "glossaries": [
-    { "file": "./glossary.md",  "termHint": "↴" },
-  ],
-  "includeFiles": ["."],
-  "excludeFiles": ["node_modules"],
-  "linking": "relative",
-  "baseUrl": ""
-}
-```
-
-Glossaries can be associated with *term hints*. A term hint indicates that a (generated) link refers to a glossary. In case of [multiple glossaries](#multiple-glossaries) different term hints help to denote which glossary a term belongs to.
-
-> **Since v2.0.0**: If you need more control about placement of a `termHint` symbol, you can use `"${term}"` as a placeholder. For example, `"☛ ${term}"` puts the hint symbol `☛ ` in front of the term.
-
 <!-- baseUrl only effective with linking "absolute" -->
 
 ## Additional Features
+
+### Term Hints
+
+*glossarify-md.conf.json*
+
+```json
+"glossaries": [
+    { "file": "./glossary.md", "termHint": "↴"},
+]
+```
+
+Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries](#multiple-glossaries) to which one.
+
+> **Since v2.0.0**:
+> Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 
 ### Aliases and Synonyms
 
