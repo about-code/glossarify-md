@@ -2,8 +2,8 @@ name: Run Tests
 on:
   push:
   pull_request:
-  schedule:
-  - cron: '0 23 * * *'
+#  schedule:
+#  - cron: '0 23 * * *'
 jobs:
   test:
     runs-on: ${{ matrix.os }}
