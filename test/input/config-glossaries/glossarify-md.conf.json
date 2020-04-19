@@ -14,7 +14,8 @@
         { "file": "./shared-terms-glossary-a.md", "termHint": " (a&b)"},
         { "file": "./shared-terms-glossary-b.md", "termHint": " (a&b)"},
         { "file": "./Uppercase-glossary.md", "termHint": ""},
-        { "file": "./unicode-glossary.md", "termHint": ""}
+        { "file": "./unicode-glossary.md", "termHint": ""},
+        { "file": "./formatted-terms-glossary.md" }
     ],
     "linking": "relative",
     "ignoreCase": false,
