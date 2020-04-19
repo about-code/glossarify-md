@@ -86,9 +86,41 @@ GIVEN anchor <a id="label-title-and-text" title="Test Case E: 'title'">Test Case
 <a id="label-title-and-text" title="Test Case E: 'title'">Test Case E: 'innerText'</a>
 ~~~
 
+a file `./list-of-label.md` MUST be generated
+WITH a list item being a link OR link-reference similar to:
+
+~~~md
+- [Test Case E: 'title'](./document-infer-label.md#label-title-and-text)
+~~~
+
+WHERE "title" attribute took precedence over inner text.
+
+## Test Case F: Partly formatted `innerText`
+
+GIVEN anchor <a id="label-partly-formatted-text">Test Case F: Partly `formatted` innerText</a>
+
+~~~md
+<a id="label-partly-formatted-text">Test Case F: Partly `formatted` innerText</a>
+~~~
+
 THEN a file `./list-of-label.md` MUST be generated
 WITH a list item being a link OR link-reference similar to:
 
 ~~~md
-- [Test Case D: 'title'](./document-infer-label.md#label-title-and-text)
+- [Test Case F: Partly formatted innerText](./document-infer-label.md#label-partly-formatted-text)
+~~~
+
+## Test Case G: Fully formatted `innerText`
+
+GIVEN anchor <a id="label-fully-formatted-text">*Test Case G: Fully formatted innerText*</a>
+
+~~~md
+<a id="label-fully-formatted-text">*Test Case G: Fully formatted innerText*</a>
+~~~
+
+THEN a file `./list-of-label.md` MUST be generated
+WITH a list item being a link OR link-reference similar to:
+
+~~~md
+- [Test Case G: Fully formatted innerText](./document-infer-label.md#label-fully-formatted-text)
 ~~~
