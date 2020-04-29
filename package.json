@@ -56,14 +56,12 @@
     "remark-stringify": "^7.0.4",
     "unified": "^8.3.2",
     "unified-engine": "^7.0.0",
-    "unist-builder": "^1.0.4",
     "unist-util-flatmap": "^1.0.0",
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
     "remark-cli": "^7.0.1",
-    "remark-comment-config": "^5.1.0",
     "remark-license": "^5.1.0",
     "remark-toc": "^7.0.0",
     "standard-version": "^7.0.0"
