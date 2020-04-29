@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.6.1](https://github.com/about-code/glossarify-md/compare/v3.6.0...v3.6.1) (2020-04-29)
+
+
+### Bug Fixes
+
+* Don't cut a term's short description on markdown formatting ([#81](https://github.com/about-code/glossarify-md/issues/81)) and Correctly link to formatted term headings ([#82](https://github.com/about-code/glossarify-md/issues/82)) ([c0066f2](https://github.com/about-code/glossarify-md/commit/c0066f2))
+* Extract anchor labels with markdown formatting ([#84](https://github.com/about-code/glossarify-md/issues/84)) ([3c85a96](https://github.com/about-code/glossarify-md/commit/3c85a96))
+* Headings with codespans cause error output ([#75](https://github.com/about-code/glossarify-md/issues/75)) ([dfa42d4](https://github.com/about-code/glossarify-md/commit/dfa42d4))
+
 ## [3.6.0](https://github.com/about-code/glossarify-md/compare/v3.4.1...v3.6.0) (2020-04-10)
 
 
