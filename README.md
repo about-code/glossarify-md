@@ -24,6 +24,7 @@
   - [List of Tables](#list-of-tables)
   - [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
   - [Sorting your glossaries](#sorting-your-glossaries)
+  - [Node Support Matrix](#node-support-matrix)
 - [Options](#options)
 - [License](#license)
 
@@ -451,6 +452,18 @@ Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare`
 ```
 
 The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
+
+### Node Support Matrix
+
+> **Since v3.0.0**
+
+The term *support* refers to *runs on the given platform*. Compatibility is maintained with *best effort* and under the terms and conditions of [LICENSE](#license).
+
+| Node-Version | compatibility & support status                                                                                                                                        |
+| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Current      | Tested. Should Node introduce breaking changes which affect *glossarify-md*, then we may choose to step back from supporting *Current* until it becomes the next LTS. |
+| 12.x LTS     | Tested + Supported                                                                                                                                                    |
+| 10.x LTS     | Tested + Supported                                                                                                                                                    |
 
 ## Options
 
