@@ -239,6 +239,7 @@ Glossaries can be associated with *term hints*. Term hints may be used to indica
 ### Multiple Glossaries
 
 Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
+
 *glossarify-md.conf.json*
 
 ```json
@@ -265,7 +266,7 @@ By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *R
 
 > **Since v3.0.0**
 
-*glossarify-md.conf.json*:
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
@@ -286,6 +287,8 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 >
 > - Alternatively read [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
+*glossarify-md.conf.json*
+
 ```json
 "generateFiles": {
     "listOfFigures": { "file": "./figures.md", "title": "Figures" }
@@ -293,6 +296,8 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 ```
 
 This option will generate an index file `./figures.md` with a list of figures grouped by sections of occurrence. You can control heading depth for grouping and e.g. generate a flat list without any grouping using
+
+*glossarify-md.conf.json*
 
 ```json
 "indexing": {
@@ -307,6 +312,8 @@ This option will generate an index file `./figures.md` with a list of figures gr
 > - Alternatively read [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 Generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
+
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
@@ -372,6 +379,8 @@ You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and
 > Anchors can be directly navigated to while [`listOfTables`](#list-of-tables) or [`listOfFigures`](#list-of-figures) only generate links to headings preceding a table or figure.
 
 For example, to generate a *List of Tables* add
+
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
