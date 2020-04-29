@@ -16,8 +16,8 @@
 - [Configuration](#configuration)
   - [Command-line (not all options supported)](#command-line-not-all-options-supported)
 - [Additional Features](#additional-features)
-  - [Term Hints](#term-hints)
   - [Aliases and Synonyms](#aliases-and-synonyms)
+  - [Term Hints](#term-hints)
   - [Multiple Glossaries](#multiple-glossaries)
   - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
   - [List of Figures](#list-of-figures)
@@ -104,7 +104,7 @@ Your original files may just use the term *Term* anywhere in text:
 This is a text which uses a glossary Term to describe something.
 ```
 
-Then in `${root}` of your project run *glossarify-md* with a [glossarify-md.conf.json](#configuration) file.
+Then run *glossarify-md* with a [glossarify-md.conf.json](#configuration).
 
 ## Results
 
@@ -163,7 +163,7 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 
 ## Configuration
 
-*glossarify-md.conf.json* (further options see [below](#options))
+*glossarify-md.conf.json* (minimal):
 
 ```json
 {
@@ -175,10 +175,12 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
   ],
   "includeFiles": ["."],
   "excludeFiles": ["node_modules"],
-  "linking": "relative",
-  "baseUrl": ""
+  "linking": "relative"
 }
 ```
+
+**Note:** All paths (except of `$schema`) must be relative to `baseDir`. `baseDir` itself is relative to the location of the config file or relative to
+the *current working directory* when provided via command line option `--baseDir`.
 
 ### Command-line (not all options supported)
 
@@ -191,24 +193,9 @@ glossarify-md
   --excludeFiles ["node_modules"]
 ```
 
-<!-- baseUrl only effective with linking "absolute" -->
+More options see [Additional Features](#additional-features) or [Options](#options) below.
 
 ## Additional Features
-
-### Term Hints
-
-*glossarify-md.conf.json*
-
-```json
-"glossaries": [
-    { "file": "./glossary.md", "termHint": "↴"},
-]
-```
-
-Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries](#multiple-glossaries) to which one.
-
-> **Since v2.0.0**:
-> Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 
 ### Aliases and Synonyms
 
@@ -234,8 +221,24 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
 ```
 
+### Term Hints
+
+*glossarify-md.conf.json*
+
+```json
+"glossaries": [
+    { "file": "./glossary.md", "termHint": "↴"},
+]
+```
+
+Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries](#multiple-glossaries) to which one.
+
+> **Since v2.0.0**:
+> Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
+
 ### Multiple Glossaries
 
+Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 *glossarify-md.conf.json*
 
 ```json
@@ -244,8 +247,6 @@ In the output files aliases will be linked to their related term:
     { "file": "./requirements.md", "termHint": "★" }
 ]
 ```
-
-Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 
 *requirements.md*
 
@@ -258,7 +259,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ...
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate a book index in order to answer the question in which particular book sections those requirements got mentioned.
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
 
 ### Index of terms and where they have been used
 
@@ -277,13 +278,13 @@ By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *R
 
 This option will generate a file `./book-index.md` with a list of glossary terms and links to book sections in which they have been mentioned. The `title` argument is optional. If missing the value given in the example will be the default.
 
-> **Note**: If you plan translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
+> **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
 
 ### List of Figures
 
 > **Since v3.3.0**
 >
-> - See also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
+> - Alternatively read [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 ```json
 "generateFiles": {
@@ -303,7 +304,7 @@ This option will generate an index file `./figures.md` with a list of figures gr
 
 > **Since v3.4.0**
 >
-> - See also [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
+> - Alternatively read [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 Generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
@@ -461,7 +462,7 @@ processing markdown files with an MD to HTML converter omitting a pre-defined
 
 - **Range:** `string`
 
-Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line. Default is `./src`
+Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line.
 
 #### `excludeFiles` \| `--e`
 
