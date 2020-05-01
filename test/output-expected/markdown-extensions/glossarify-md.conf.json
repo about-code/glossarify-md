@@ -1,0 +1,19 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../output-actual/markdown-extensions",
+    "includeFiles": ["."],
+    "excludeFiles": [],
+    "experimentalFootnotes": true,
+    "keepRawFiles": [],
+    "glossaries": [
+        { "file": "./glossary.md", "termHint": "↴" }
+    ],
+    "linking": "relative",
+    "ignoreCase": false,
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
