@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.6.3](https://github.com/about-code/glossarify-md/compare/v3.6.2...v3.6.3) (2020-05-01)
+
+
+### Bug Fixes
+
+* glossarify-md breaks VuePress `[[toc]]` markdown extension ([#88](https://github.com/about-code/glossarify-md/issues/88)) ([539b685](https://github.com/about-code/glossarify-md/commit/539b685))
+
 ### [3.6.2](https://github.com/about-code/glossarify-md/compare/v3.6.1...v3.6.2) (2020-04-29)
 
 
