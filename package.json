@@ -50,6 +50,7 @@
     "minimist": "^1.2.0",
     "minimist-options": "^4.0.1",
     "remark-autolink-headings": "^5.2.1",
+    "remark-burger": "^1.0.1",
     "remark-parse": "^7.0.1",
     "remark-reference-links": "^4.0.4",
     "remark-slug": "^5.1.2",
