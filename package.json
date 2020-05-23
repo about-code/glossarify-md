@@ -52,7 +52,7 @@
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "minimist": "^1.2.0",
-    "minimist-options": "^4.0.1",
+    "minimist-options": "4.0.1",
     "remark-autolink-headings": "^5.2.1",
     "remark-parse": "^7.0.1",
     "remark-reference-links": "^4.0.4",
