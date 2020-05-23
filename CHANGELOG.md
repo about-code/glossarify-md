@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.2](https://github.com/about-code/glossarify-md/compare/v2.1.1...v2.1.2) (2020-05-23)
+
+
+### Bug Fixes
+
+* **Hotfix:** Nail minimist-options to version 4.0.1 ([3d57136](https://github.com/about-code/glossarify-md/commit/3d571360404340f28f5cfba1907518b873335913))
+
 ### [2.1.1](https://github.com/about-code/glossarify-md/compare/v2.1.0...v2.1.1) (2019-12-04)
 
 ### Bug Fixes
