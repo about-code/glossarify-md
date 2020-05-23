@@ -1,6 +1,6 @@
 {
   "name": "glossarify-md",
-  "version": "3.6.3",
+  "version": "3.6.4",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "author": {
     "name": "Andreas Martin"
