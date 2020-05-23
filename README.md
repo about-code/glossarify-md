@@ -1,5 +1,7 @@
 # glossarify-md
 
+![Run Tests](https://github.com/about-code/glossarify-md/workflows/Run%20Tests/badge.svg)
+
 *glossarify-md* is a command line tool to help Markdown writers with
 
 - **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
