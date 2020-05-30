@@ -42,13 +42,13 @@
     "readme": "remark EDITME.gitignore.md > README.md"
   },
   "dependencies": {
+    "deepmerge": "^4.2.2",
     "fs-extra": "^8.1.0",
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "mdast-builder": "^1.1.1",
     "mdast-util-to-string": "^1.1.0",
-    "minimist": "^1.2.0",
-    "minimist-options": "4.0.1",
+    "minimist": "^1.2.5",
     "remark-autolink-headings": "^5.2.1",
     "remark-burger": "^1.0.1",
     "remark-parse": "^7.0.1",

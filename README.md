@@ -1,7 +1,5 @@
 # glossarify-md
 
-![Run Tests](https://github.com/about-code/glossarify-md/workflows/Run%20Tests/badge.svg)
-
 *glossarify-md* is a command line tool to help Markdown writers with
 
 - **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
@@ -16,7 +14,6 @@
 - [Sample](#sample)
 - [Results](#results)
 - [Configuration](#configuration)
-  - [Command-line (not all options supported)](#command-line-not-all-options-supported)
 - [Additional Features](#additional-features)
   - [Aliases and Synonyms](#aliases-and-synonyms)
   - [Term Hints](#term-hints)
@@ -182,19 +179,7 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 }
 ```
 
-**Note:** All paths (except of `$schema`) must be relative to `baseDir`. `baseDir` itself is relative to the location of the config file or relative to
-the *current working directory* when provided via command line option `--baseDir`.
-
-### Command-line (not all options supported)
-
-```
-glossarify-md
-  --baseDir "./src"
-  --outDir "../target"
-  --linking "relative"
-  --includeFiles ["."]
-  --excludeFiles ["node_modules"]
-```
+**Note:** All paths (except of `$schema`) must be relative to `baseDir`. `baseDir` itself is relative to the location of the config file.
 
 More options see [Additional Features](#additional-features) or [Options](#options) below.
 
@@ -469,11 +454,11 @@ The term *support* refers to *runs on the given platform*. Compatibility is main
 
 ## Options
 
-#### `help` \| `--h`
+#### `help`
 
 Show all options and default values.
 
-#### `baseUrl` \| `--b`
+#### `baseUrl`
 
 - **Range:** `string`
 
@@ -482,13 +467,13 @@ In most situations, e.g. when hosting markdown files in a repository or
 processing markdown files with an MD to HTML converter omitting a pre-defined
 `baseUrl` and using `linking: "relative"` is likely to work better.
 
-#### `baseDir` \| `--d`
+#### \`baseDir\`\`
 
 - **Range:** `string`
 
-Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or relative to the *current working directory* when provided via command line.
+Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file.
 
-#### `excludeFiles` \| `--e`
+#### \`excludeFiles
 
 - **Range:** `string[]`
 
@@ -542,13 +527,13 @@ category a term belongs to. A term hint may be any UTF-8 character or character
 sequence. If you would like to have the glossary sorted provide a *sort* direction
 `"asc"` or `"desc"`.
 
-#### `ignoreCase` \| `--i`
+#### `ignoreCase`
 
 - **Range:** `boolean`
 
 When true any occurrence of a term will be linked no matter how it was spelled.
 
-#### `includeFiles` \| `--f`
+#### `includeFiles`
 
 - **Range:** `string[]`
 
@@ -579,7 +564,7 @@ just being shortened.
 
 Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
-#### `keepRawFiles` \| `--r`
+#### `keepRawFiles`
 
 - **Range:** `string[]`
 
@@ -587,7 +572,7 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-#### `linking` \| `--l`
+#### `linking`
 
 - **Range:** `"relative" | "absolute"`
 
@@ -596,7 +581,7 @@ The use of `"absolute"` may require a `baseUrl`.
 
 > **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
 
-#### `outDir` \| `--o`
+#### `outDir`
 
 - **Range:** `string`
 
