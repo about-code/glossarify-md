@@ -78,10 +78,10 @@ const optsDefault = Object
 
 let opts = Object.assign(optsDefault, optsFile);
 
-// --set-deep
+// --deep
 if (argv.deep) {
     try {
-        opts = merge(opts, JSON.parse(argv.deep));
+        opts = merge(opts, JSON.parse(argv.deep.replace(/'/g, "\"")));
     } catch (e) {
         console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
@@ -90,7 +90,7 @@ if (argv.deep) {
 // --shallow
 if (argv.shallow) {
     try {
-        opts = Object.assign(opts, JSON.parse(argv.shallow));
+        opts = Object.assign(opts, JSON.parse(argv.shallow.replace(/'/g, "\"")));
     } catch (e) {
         console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
         proc.exit(1);

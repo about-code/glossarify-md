@@ -36,7 +36,7 @@
     "test_17": "npx . --config ./input/config-excludeFiles/glossarify-md.conf.json",
     "test_18": "npx . --config ./input/config-linking/relative/glossarify-md.conf.json",
     "test_19": "npx . --config ./input/config-linking/absolute-baseUrl/glossarify-md.conf.json",
-    "test_20": "npx . --config ./input/config-cli/precedence/glossarify-md.conf.json --shallow \"{\\\"baseUrl\\\": \\\"cli://localhost\\\", \\\"linking\\\": \\\"absolute\\\"}\"",
+    "test_20": "npx . --config ./input/config-cli/precedence/glossarify-md.conf.json --shallow \"{'baseUrl': 'cli://localhost', 'linking': 'absolute'}\"",
     "test_21": "npx . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_22": "npx . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
     "test_23": "npx . --config ./input/config-indexFile/term-link-to-section/glossarify-md.conf.json",
