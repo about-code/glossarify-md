@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/aliases-and-synonyms",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "" }
