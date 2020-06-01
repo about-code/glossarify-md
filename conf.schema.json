@@ -126,14 +126,9 @@
             "properties": {
                 "indexFile": {
                     "description": "Generate a file with a list of glossary terms and where they have been used.",
-                    "oneOf": [{
-                        "type": "object",
-                        "$ref": "#/$defs/IndexFileOpts"
-                    },{
-                        "type": "string",
-                        "description": "String value range is deprecated and will be removed with v4. Use object notation instead."
-                    }],
-                    "default": ""
+                    "type": "object",
+                    "$ref": "#/$defs/IndexFileOpts",
+                    "default": {}
                 },
                 "listOf": {
                     "description": "Generate an arbitrary 'List of {x}' from HTML anchors with css class {x}. E.g. Generate a List of Listings from every <a class='listings' id='listing-1', title='Listing 1' /> and link to those anchors.",

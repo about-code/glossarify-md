@@ -54,7 +54,7 @@ if (argv.help || proc.argv.length === 2) {
 
 // --config
 let confDir = "";
-let confPath = argv.config;
+let confPath = argv.config || "";
 let optsFile = {};
 if (confPath) {
     try {

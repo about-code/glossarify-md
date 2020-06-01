@@ -14,6 +14,8 @@
 - [Sample](#sample)
 - [Results](#results)
 - [Configuration](#configuration)
+  - [Via File](#via-file)
+  - [Via Command Line](#via-command-line)
 - [Additional Features](#additional-features)
   - [Aliases and Synonyms](#aliases-and-synonyms)
   - [Term Hints](#term-hints)
@@ -163,6 +165,8 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 
 ## Configuration
 
+### Via File
+
 *glossarify-md.conf.json* (minimal):
 
 ```json
@@ -182,6 +186,38 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 **Note:** All paths (except of `$schema`) must be relative to `baseDir`. `baseDir` itself is relative to the location of the config file.
 
 More options see [Additional Features](#additional-features) or [Options](#options) below.
+
+### Via Command Line
+
+Use `--shallow` or `--deep`
+
+1. to provide a configuration solely via command line
+1. to merge a configuration via command line with
+   - the implicit default configuration in `./node_modules/glossarify-md/conf.json.schema`
+   - a configuration file (to modify it for a particular execution)
+
+*Example: Shallow-Merge with implicit default configuration*
+
+```
+glossarify-md
+  --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
+```
+
+*Example: Override glossaries array in a config file via CLI*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
+```
+
+*Example: Extend glossaries array in a config file via CLI*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --deep "{'glossaries': [{'file':'./extend.md'}] }"
+```
 
 ## Additional Features
 
@@ -596,7 +632,7 @@ The recommendation is to write outputs to a separate directory such as `../out` 
 
 - **Range:** `boolean`
 
-If `true` remove old `--outDir` before writing a new one, otherwise overwrite files. Drops orphan files that have intentionally been removed from `--baseDir`.
+If `true` remove old `outDir` before writing a new one, otherwise overwrite files. Drops orphan files that have intentionally been removed from `baseDir`.
 
 #### `reportNotMentioned`
 
