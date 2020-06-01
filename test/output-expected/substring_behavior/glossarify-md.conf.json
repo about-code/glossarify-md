@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/substring_behavior",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
          { "file": "./glossary.md", "termHint": "" }

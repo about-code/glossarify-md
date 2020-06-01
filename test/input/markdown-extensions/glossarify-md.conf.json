@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/markdown-extensions",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴" }
