@@ -127,59 +127,60 @@ A test case usually consists of
 }
 ```
 
-### Workflow Summary
+### Implement and Review
 
-**Preparation Phase**
+When you extended the test suite and implemented the feature or bugfix
+("test-first-approach") run the tests once again now with your changes to
+the implementation:
 
-Run the test suite with `npm run test` once before you start changing anything.
-**If the installation is okay tests *must* pass.**. Otherwise stop and go back
-to *[Installation](#installation)*.
+~~~
+npm run test
+~~~
 
-**Implementation Phase**
+**If you followed the guide so far then tests are *expected to fail* at this point.**
 
-1. When adding a new feature think of good test cases first ("test-first"). [Extend the test suite](#extending-the-test-suite).
-1. Implement the feature or bugfix
-1. Run the tests against your implementation with `npm run test`
+ This is because
+your new test inputs aren't part of the baseline yet. Before adding them to the
+baseline **carefully review the diff of failing tests**:
 
-If you followed the guide so far then tests will fail *but only because of your new test inputs*.
+- there should not be any changes to other files apart from test input files
+  added by you. Otherwise your change is likely to be a *major change* requiring
+  a major version update.
 
-**Review Phase**
+- the diff should be *minimal* and only change what you would really would *expect to change*.
 
-1. **Carefully *review* the diff of the failing tests**.
+Tweak the implementation & rerun tests as necessary. Start careful reviewing again.
 
-   - There should not be any changes to other files apart from your input files.
-   Otherwise your change is likely to be a *major change* requiring a major
-   version update.
+**Once the diff is okay..**
 
-   - The diff should be *minimal* and only change what you really *expected* to change.
+1. Commit changes to the `${workspace}/lib` directory using [conventional commit messages](https://www.conventionalcommits.org/)
 
-1. Tweak the implementation & rerun tests if necessary. Start careful reviewing again.
-1. Once the diff is okay
+    - bugfixes must have a message
 
-    1. Commit changes to the implementation using [conventional commit messages](https://www.conventionalcommits.org/)
+      `fix: <issue-title>. Closes #<issue-nr>.`
 
-        - the commit with the fix must have a message
+    - new features must have a message
 
-            `fix: <issue-title>. Closes #<issue-nr>.`
+      `feat: <description>. Closes #<issue-nr>.`
 
-        - the commit adding a new feature must have a message
+1. Commit changes to `${workspace}/test/input/*` with a message:
 
-            `feat: <description>. Closes #<issue-nr>.`
+    ~~~
+    test: New test cases.
+    ~~~
 
-    1. Commit changes to test inputs `git commit test/input/*`
+1. Create a new baseline from `./output-actual` with
 
-1. create a new baseline from `./output-actual` with
-
-    ```
+    ~~~
     npm run new-baseline      (Linux, Mac, Unix)
     npm run new-baseline-win  (Windows)
-    ```
+    ~~~
 
 1. Commit a new baseline
 
-    ```
+    ~~~
     npm run commit-baseline
-    ```
+    ~~~
 
     > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
 
@@ -225,16 +226,17 @@ ${workspace}/
 }
 ```
 
-In a console at `${workspace}` type
+To debug `${workspace}/debug/glossarify-md.conf.json` type
 
 ```
 npm run debug
 ```
 
-This starts a remote debug session at `127.0.0.1:9229`. To debug with a configuration in another directory type:
+This starts a remote debug session at `127.0.0.1:9229`. To debug a configuration
+in another directory type:
 
 ```
-npm run dconfig -- ./path/to/glossarify-md.conf.json
+npm run dconfig ./path/to/glossarify-md.conf.json
 ```
 
 You can now connect e.g. with
@@ -275,4 +277,4 @@ The launch configuration example for [VSCode](https://code.visualstudio.com) bel
 }
 ```
 
-> **☛ Note**: If you need to create files outside the `debug/` folder, consider using a gitignore.\* prefix. Those files will be excluded from revision control.
+> **☛ Note**: If you need to create files outside the `debug/` folder, consider using a \*.gitignore.\* pattern. Those files will be excluded from revision control and may not be accidentally committed.
