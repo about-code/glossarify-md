@@ -25,12 +25,6 @@
             "alias": "e",
             "default": ["node_modules", ".git"]
         },
-        "experimentalFootnotes": {
-            "description": "Enable support for markdown footnotes as defined in https://pandoc.org/MANUAL.html#footnotes. Footnotes are considered 'experimental' until they become part of the CommonMark Specification at https://spec.commonmark.org.",
-            "type": "boolean",
-            "alias": "",
-            "default": false
-        },
         "force": {
             "description": "Choose true, only if you know the consequences.",
             "type": "boolean",

@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/copy-files",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
         {"file": "./glossary.md", "termHint": ""}

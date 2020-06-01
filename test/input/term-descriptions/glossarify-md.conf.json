@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/term-descriptions",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "ⓕ" }
