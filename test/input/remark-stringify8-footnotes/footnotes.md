@@ -1,0 +1,6 @@
+# Markdown Extensions: Footnotes
+
+GIVEN text with a footnote [^footnote]
+THEN colons of the footnote definition prior to 'Footnote text' MUST NOT be converted to HTML entities.
+
+[^footnote]: Footnote text.

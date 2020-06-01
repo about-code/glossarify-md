@@ -1,0 +1,15 @@
+{
+    "$schema": "../../../conf.schema.json",
+    "baseDir": ".",
+    "outDir": "../../output-actual/remark-stringify8-footnotes",
+    "includeFiles": ["."],
+    "glossaries": [
+        { "file": "./glossary.md" }
+    ],
+    "linking": "relative",
+    "dev": {
+        "printInputAst": false,
+        "reproducablePaths": true,
+        "printOutputAst": false
+    }
+}
