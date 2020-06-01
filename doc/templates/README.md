@@ -8,31 +8,13 @@
 
 [vuepress](https://vuepress.vuejs.org) users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
-## Table of Contents
 
-- [Install](#install)
-- [Sample](#sample)
-- [Results](#results)
-- [Configuration](#configuration)
-  - [Via File](#via-file)
-  - [Via Command Line](#via-command-line)
-- [Additional Features](#additional-features)
-  - [Aliases and Synonyms](#aliases-and-synonyms)
-  - [Term Hints](#term-hints)
-  - [Multiple Glossaries](#multiple-glossaries)
-  - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
-  - [List of Figures](#list-of-figures)
-  - [List of Tables](#list-of-tables)
-  - [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors)
-  - [Sorting your glossaries](#sorting-your-glossaries)
-  - [Node Support Matrix](#node-support-matrix)
-- [Options](#options)
-- [License](#license)
+
+## Table of Contents
 
 ## Install
 
 #### Option 1: Run in any directory:
-
 ```
 npm i -g glossarify-md
 ```
@@ -54,7 +36,6 @@ npx glossarify-md --config ./glossarify-md.conf.json
 or add as an npm-script to your `package.json`:
 
 *package.json*
-
 ```json
 scripts: {
   "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
@@ -64,6 +45,7 @@ scripts: {
 ```
 npm run glossarify
 ```
+
 
 ## Sample
 
@@ -107,6 +89,7 @@ This is a text which uses a glossary Term to describe something.
 ```
 
 Then run *glossarify-md* with a [glossarify-md.conf.json](#configuration).
+
 
 ## Results
 
@@ -182,8 +165,8 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
   "linking": "relative"
 }
 ```
-
 **Note:** All paths (except of `$schema`) must be relative to `baseDir`. `baseDir` itself is relative to the location of the config file.
+
 
 More options see [Additional Features](#additional-features) or [Options](#options) below.
 
@@ -192,32 +175,30 @@ More options see [Additional Features](#additional-features) or [Options](#optio
 Use `--shallow` or `--deep`
 
 1. to provide a configuration solely via command line
-1. to merge a configuration via command line with
+2. to merge a configuration via command line with
    - the implicit default configuration in `./node_modules/glossarify-md/conf.json.schema`
    - a configuration file (to modify it for a particular execution)
 
 *Example: Shallow-Merge with implicit default configuration*
-
-```
+~~~
 glossarify-md
   --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
-```
+~~~
 
 *Example: Override glossaries array in a config file via CLI*
-
-```
+~~~
 glossarify-md
   --config ./glossarify-md.conf.json
   --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
-```
+~~~
 
 *Example: Extend glossaries array in a config file via CLI*
-
-```
+~~~
 glossarify-md
   --config ./glossarify-md.conf.json
   --deep "{'glossaries': [{'file':'./extend.md'}] }"
-```
+~~~
+
 
 ## Additional Features
 
@@ -248,7 +229,6 @@ In the output files aliases will be linked to their related term:
 ### Term Hints
 
 *glossarify-md.conf.json*
-
 ```json
 "glossaries": [
     { "file": "./glossary.md", "termHint": "↴"},
@@ -258,10 +238,9 @@ In the output files aliases will be linked to their related term:
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries](#multiple-glossaries) to which one.
 
 > **Since v2.0.0**:
-> Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
+Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 
 ### Multiple Glossaries
-
 Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 
 *glossarify-md.conf.json*
@@ -312,7 +291,6 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 > - Alternatively read [Arbitrary Lists with Anchors](#arbitrary-lists-with-anchors) (since 3.5.0)
 
 *glossarify-md.conf.json*
-
 ```json
 "generateFiles": {
     "listOfFigures": { "file": "./figures.md", "title": "Figures" }
@@ -322,7 +300,6 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 This option will generate an index file `./figures.md` with a list of figures grouped by sections of occurrence. You can control heading depth for grouping and e.g. generate a flat list without any grouping using
 
 *glossarify-md.conf.json*
-
 ```json
 "indexing": {
     "groupByHeadingDepth": 0
@@ -338,7 +315,6 @@ This option will generate an index file `./figures.md` with a list of figures gr
 Generate a file `./tables.md` with a list of tables grouped by sections of occurrence. See [`groupByHeadingDepth`](#list-of-figures) to find out how to control grouping.
 
 *glossarify-md.conf.json*
-
 ```json
 "generateFiles": {
     "listOfTables": { "file": "./tables.md", "title": "Tables" }
@@ -405,7 +381,6 @@ You can generate arbitrary *List of ...* lists by using HTML anchors (`<a>`) and
 For example, to generate a *List of Tables* add
 
 *glossarify-md.conf.json*
-
 ```json
 "generateFiles": {
     "listOf": [
@@ -446,6 +421,7 @@ Hide anchors with a `title` attribute:
 1. Preceding section heading if `id` is just the list prefix (`<a id="prefix"></a>`)
 1. Filename if `id` is just the list prefix and there is no preceding section heading, either.
 
+
 ### Sorting your glossaries
 
 > **Since v3.6.0**
@@ -453,7 +429,6 @@ Hide anchors with a `title` attribute:
 Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want *glossarify-md* to sort them for you:
 
 *glossarify-md.conf.json*
-
 ```json
 "glossaries": [
     { "file":"./glossary.md", "termHint": "", "sort": "asc" }
@@ -463,7 +438,6 @@ Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want *gloss
 Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare` if the `Intl` API is missing. You can tweak collation by adding `i18n` options:
 
 *glossarify-md.conf.json*
-
 ```json
 "i18n": {
    "locale": "de",
@@ -482,7 +456,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 The term *support* refers to *runs on the given platform*. Compatibility is maintained with *best effort* and under the terms and conditions of [LICENSE](#license).
 
-| Node-Version | compatibility & support status                                                                                                                                        |
+| Node-Version |                                                                    compatibility & support status                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Current      | Tested. Should Node introduce breaking changes which affect *glossarify-md*, then we may choose to step back from supporting *Current* until it becomes the next LTS. |
 | 12.x LTS     | Tested + Supported                                                                                                                                                    |
@@ -503,13 +477,13 @@ In most situations, e.g. when hosting markdown files in a repository or
 processing markdown files with an MD to HTML converter omitting a pre-defined
 `baseUrl` and using `linking: "relative"` is likely to work better.
 
-#### \`baseDir\`\`
+#### `baseDir``
 
 - **Range:** `string`
 
 Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file.
 
-#### \`excludeFiles
+#### `excludeFiles
 
 - **Range:** `string[]`
 
@@ -647,5 +621,3 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 - and all the other great people publishing modules of value to the tool - directly or transitively.
 
 ## License
-
-[MIT](LICENSE) © [Andreas Martin](https://github.com/about-code)

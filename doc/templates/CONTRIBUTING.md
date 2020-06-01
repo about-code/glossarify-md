@@ -2,25 +2,15 @@
 
 ## Table of Contents
 
-- [Preparing for Contributions](#preparing-for-contributions)
-- [Installing](#installing)
-- [Running a particular configuration](#running-a-particular-configuration)
-- [Testing](#testing)
-  - [Directory Structure](#directory-structure)
-  - [Running the Test Suite](#running-the-test-suite)
-  - [Extending the Test Suite](#extending-the-test-suite)
-  - [Workflow Summary](#workflow-summary)
-- [Debugging](#debugging)
-
 ## Preparing for Contributions
 
 - Make yourself familiar with *[Collaborating with issues and pull requests](https://help.github.com/en/categories/collaborating-with-issues-and-pull-requests)* in the GitHub help, particularly with the *fork and pull* development model
 - **[Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repo on GitHub**
 
+
 ## Installing
 
 *Prerequisites*
-
 - [`git`](https://git-scm.com)
 - [`node` and `npm`](https://nodejs.org) - we aim to support the last two Node LTS releases ([Maintenance, Active](https://nodejs.org/en/about/releases/)) as well as the latest Non-LTS versions ([Current](https://nodejs.org/en/about/releases/))
 - Editor of your choice, e.g. [Atom](https://atom.io), [VSCode](https://code.visualstudio.com), etc.
@@ -40,17 +30,18 @@ npm install
 
 ## Running a particular configuration
 
-```
+~~~
 npm run config ./path/to/glossarify-md.conf.json
-```
+~~~
 
 Remote-debug a particular configuration with
 
-```
+~~~
 npm run dconfig ./path/to/glossarify-md.conf.json
-```
+~~~
 
 More notes on debugging see [Debugging](#debugging).
+
 
 ## Testing
 
@@ -119,7 +110,6 @@ A test case usually consists of
 > Each bugfix or feature should have its distinct glossary and document input files
 
 *./input/foo-test/glossarify-md.conf.json (sample)*
-
 ```json
 {
     "$schema": "../../../conf.schema.json",
@@ -158,45 +148,44 @@ If you followed the guide so far then tests will fail *but only because of your 
 1. **Carefully *review* the diff of the failing tests**.
 
    - There should not be any changes to other files apart from your input files.
-     Otherwise your change is likely to be a *major change* requiring a major
-     version update.
+   Otherwise your change is likely to be a *major change* requiring a major
+   version update.
 
    - The diff should be *minimal* and only change what you really *expected* to change.
 
 1. Tweak the implementation & rerun tests if necessary. Start careful reviewing again.
-
 1. Once the diff is okay
 
-   1. Commit changes to the implementation using [conventional commit messages](https://www.conventionalcommits.org/)
+    1. Commit changes to the implementation using [conventional commit messages](https://www.conventionalcommits.org/)
 
-      - the commit with the fix must have a message
+        - the commit with the fix must have a message
 
-          `fix: <issue-title>. Closes #<issue-nr>.`
+            `fix: <issue-title>. Closes #<issue-nr>.`
 
-      - the commit adding a new feature must have a message
+        - the commit adding a new feature must have a message
 
-          `feat: <description>. Closes #<issue-nr>.`
+            `feat: <description>. Closes #<issue-nr>.`
 
-   1. Commit changes to test inputs `git commit test/input/*`
+    1. Commit changes to test inputs `git commit test/input/*`
 
 1. create a new baseline from `./output-actual` with
 
-   ```
-   npm run new-baseline      (Linux, Mac, Unix)
-   npm run new-baseline-win  (Windows)
-   ```
+    ```
+    npm run new-baseline      (Linux, Mac, Unix)
+    npm run new-baseline-win  (Windows)
+    ```
 
 1. Commit a new baseline
 
-   ```
-   npm run commit-baseline
-   ```
+    ```
+    npm run commit-baseline
+    ```
 
-   > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
+    > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
 
 1. Push local history
-
 1. Open a *Pull Request* in the origin repository (use dedicated pull requests for different fixes or features)
+
 
 ## Debugging
 
@@ -259,7 +248,6 @@ The launch configuration example for [VSCode](https://code.visualstudio.com) bel
 1. VSCode internal debugging
 
 *${workspace}/.vscode/launch.json*
-
 ```json
 {
     "version": "0.2.0",

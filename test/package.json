@@ -8,8 +8,8 @@
   "main": "../bin/index.js",
   "scripts": {
     "config": "node ../bin/index.js --config",
+    "dconfig": "node --inspect-brk ../bin/index.js --config",
     "debug": "node --inspect-brk ../bin/index.js --config ./gitignore.conf.json",
-    "debug-cfg": "node --inspect-brk ../bin/index.js --config",
     "debug-diffcheck": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node --inspect-brk ../bin/test.js",
     "pretest": "rm -rf ./output-actual",
     "pretest-win": "del /Q .\\output-actual",
