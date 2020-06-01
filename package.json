@@ -43,7 +43,7 @@
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "mdast-builder": "^1.1.1",
@@ -62,12 +62,12 @@
     "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
+    "eslint": "^7.1.0",
     "remark-cli": "^8.0.0",
     "remark-comment-config": "^5.1.1",
     "remark-license": "^5.1.0",
     "remark-toc": "^7.0.0",
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.0"
   },
   "remarkConfig": {
     "settings": {
