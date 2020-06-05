@@ -1,5 +1,8 @@
 # glossarify-md
 
+![Tests](https://github.com/about-code/glossarify-md/workflows/Tests/badge.svg)
+![Dependency Check](https://github.com/about-code/glossarify-md/workflows/Dependency%20Check/badge.svg)
+
 *glossarify-md* is a command line tool to help Markdown writers with
 
 - **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
@@ -7,7 +10,6 @@
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
 [vuepress](https://vuepress.vuejs.org) users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
-
 
 
 ## Table of Contents
