@@ -1,4 +1,4 @@
-name: Dependency Check
+name: Tests (Latest)
 on:
   push:
   pull_request:
@@ -9,8 +9,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest]
-        node-version: [12.x]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node-version: [10.x, 12.x, 14.x]
     steps:
     - uses: actions/checkout@v1
     - name: Use Node.js ${{ matrix.node-version }}
@@ -20,10 +20,10 @@ jobs:
     - name: Test installation without package-lock.json
       shell: bash
       run: |
-        echo "| Regular tests against most current releases of dependencies"
-        echo "| within supported version range, which are installed on fresh"
-        echo "| installations without a package-lock.json. Tests aim to"
-        echo "| identify problems caused by deps violating semantic versioning."
+        echo "| Continuous tests against latest releases of dependencies"
+        echo "| within minor versions range. Tests mimic a fresh install"
+        echo "| without a package-lock.json. Tests aim to identify problems
+        echo "| caused by deps violating semantic versioning."
         mv package-lock.json package-lock-ignored.json
         npm install
         cd ./test
