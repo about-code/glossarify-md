@@ -1,4 +1,4 @@
-name: Dependency Tests
+name: Dependency Check
 on:
   push:
   pull_request:
