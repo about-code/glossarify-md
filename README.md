@@ -1,7 +1,6 @@
 # glossarify-md
 
 ![Tests](https://github.com/about-code/glossarify-md/workflows/Tests/badge.svg)
-![Dependency Check](https://github.com/about-code/glossarify-md/workflows/Dependency%20Check/badge.svg)
 
 *glossarify-md* is a command line tool to help Markdown writers with
 
