@@ -22,7 +22,7 @@ jobs:
       run: |
         echo "| Continuous tests against latest releases of dependencies"
         echo "| within minor versions ranges. Tests mimic a fresh install"
-        echo "| without a package-lock.json. Tests aim to identify problems
+        echo "| without a package-lock.json. Tests aim to identify problems"
         echo "| caused by deps violating semantic versioning."
         mv package-lock.json package-lock-ignored.json
         npm install
