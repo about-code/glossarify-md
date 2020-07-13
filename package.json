@@ -66,7 +66,7 @@
     "remark-comment-config": "^5.1.1",
     "remark-license": "^5.1.0",
     "remark-toc": "^7.0.0",
-    "standard-version": "^7.0.0"
+    "standard-version": "^8.0.1"
   },
   "remarkConfig": {
     "settings": {
