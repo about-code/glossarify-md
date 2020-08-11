@@ -97,10 +97,10 @@
             "default": ""
         },
         "outDirDropOld": {
-            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files.",
+            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true",
             "type": "boolean",
             "alias": "",
-            "default": false
+            "default": true
         },
         "reportNotMentioned": {
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
