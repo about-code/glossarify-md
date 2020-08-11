@@ -158,6 +158,7 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
   "$schema": "./node_modules/glossarify-md/conf.schema.json",
   "baseDir": "./src",
   "outDir": "../target",
+  "outDirDropOld": true,
   "glossaries": [
      { "file": "./glossary.md" },
   ],
@@ -482,7 +483,7 @@ processing markdown files with an MD to HTML converter omitting a pre-defined
 
 - **Range:** `string`
 
-Path to directory where to search for the glossary and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file.
+Path to directory where to search for the glossary and markdown files. All paths in a config file except for `$schema` will be relative to *baseDir*. *baseDir* itself and `$schema` are relative to the location of the config file.
 
 #### `excludeFiles
 
@@ -601,7 +602,7 @@ The directory where to write output files to.
 > **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
 > files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
 
-The recommendation is to write outputs to a separate directory such as `../out` or `../tmp`. or `../target`.
+The recommendation is to write outputs to a separate directory such as `../out` or `../glossarified`. or `../target`.
 
 #### `outDirDropOld`
 
