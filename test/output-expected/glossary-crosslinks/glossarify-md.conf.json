@@ -4,7 +4,6 @@
     "outDir": "../../output-actual/glossary-crosslinks",
     "includeFiles": ["."],
     "excludeFiles": [],
-    "experimentalFootnotes": true,
     "keepRawFiles": [],
     "glossaries": [
          { "file": "./glossary-g1.md", "termHint": "" }

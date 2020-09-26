@@ -2,6 +2,81 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0](https://github.com/about-code/glossarify-md/compare/v3.6.5...v4.0.0) (2020-09-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* `outDirDropOld` is now `true` by default. Previously `false`.
+* `experimentalFootnotes` is no longer required and no longer
+a valid configuration option. Please remove it.
+
+> Footnotes are still not official CommonMark. However they are also not really
+a feature of *glossarify-md*, thus the option doesn't provide any value and
+was removed.
+
+
+* `indexFile` option no longer supports a string value. Instead of
+
+  ~~~json
+  "generateFiles": {
+    "indexFile": "./book-index.md"
+  }
+  ~~~
+
+  write:
+
+  ~~~json
+  "generateFiles": {
+    "indexFile": {
+      "file": "./book-index.md",
+      "title": "Book Index"
+    }
+  }
+  ~~~
+
+
+* Command Line Interface (CLI) changed (#94).
+
+
+
+
+From the old set of arguments only `--config` and `--help` remain supported.
+`--config` is now *required*. Any other configuration options are being
+replaced by two new options `--shallow` and `--deep` which take a JSON
+string that is expected to match the configuration schema. As you may
+suggest from their names you can use them to merge a command-line provided
+configuration with the configuration provided in the configuration file.
+
+  Use those two options if you need to override particular configuration
+keys in a configuration file on a particular program execution.
+
+For example if you previously wrote
+
+~~~
+glossarify-md --config ./glossarify-md.conf.json --baseUrl "http://example.org"
+~~~
+
+you now write
+
+~~~
+glossarify-md --config ./glossarify-md.conf.json --shallow '{ "baseUrl": "http://example.org" }'
+~~~
+
+If you need to add another glossarify file write
+
+~~~
+glossarify-md --config ./glossarify-md.conf.json --deep '{ "glossaries": [{ "file": "./glossary2.md" }] }'
+~~~
+
+### Bug Fixes
+
+* bump lodash from 4.17.15 to 4.17.19 ([#102](https://github.com/about-code/glossarify-md/issues/102)) ([788379d](https://github.com/about-code/glossarify-md/commit/788379db20509b05b8a12a5d3e83cf9d8fb0eeb5))
+* Drop option 'experimentalFootnotes' ([5785aba](https://github.com/about-code/glossarify-md/commit/5785abae0b2c032d26472c211fc6361dfe99db6d)), closes [#x3](https://github.com/about-code/glossarify-md/issues/x3) [#90](https://github.com/about-code/glossarify-md/issues/90)
+* minimist-options 4.1.0 breaks glossarify-md ([#93](https://github.com/about-code/glossarify-md/issues/93)). ([0c1d2dd](https://github.com/about-code/glossarify-md/commit/0c1d2ddf7ad6dc7ab81c4639608ba9015e3221cb)), closes [#94](https://github.com/about-code/glossarify-md/issues/94)
+* Drop output directory by default. ([0b9c2dc](https://github.com/about-code/glossarify-md/commit/0b9c2dc6453c4af60535e0288f07186d93b42227))
+* 59 config option generate files indexfile drop support for value range string (#95) ([8449eda](https://github.com/about-code/glossarify-md/commit/8449edaa582c11f322d1aae399272849801a5eb5)), closes [#95](https://github.com/about-code/glossarify-md/issues/95) [#59](https://github.com/about-code/glossarify-md/issues/59)
+
 ### [3.6.5](https://github.com/about-code/glossarify-md/compare/v3.6.4...v3.6.5) (2020-05-23)
 
 *Same as 3.6.4 but replaces 2.1.2 hotfix release for v2 release branch on npm with another v3 release.*

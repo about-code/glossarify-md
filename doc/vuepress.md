@@ -4,7 +4,7 @@ Below we assume a *sample* project structure like this:
 
 ```
 ${root}
-   +- src/
+   +- docs/
    |   +- .vuepress/
    |   |   |- public/
    |   |   '- config.js
@@ -18,7 +18,7 @@ ${root}
    |   |
    |   '- glossary.md
    |
-   +- target/                  (Generated)
+   +- glossarified/                  (Generated)
    +- node_modules/
    |- glossarify-md.conf.json
    |- package.json
@@ -37,11 +37,11 @@ npm i --save glossarify-md
 ```json
 {
     "$schema": "./node_modules/glossarify-md/conf.schema.json",
-    "baseDir": "./src",
-    "outDir": "../target",
+    "baseDir": "./docs",
+    "outDir": "../glossarified",
+    "outDirDropOld": true,
     "includeFiles": ["."],
     "excludeFiles": ["**/*.exclude.md"],
-    "experimentalFootnotes": true,
     "keepRawFiles": ["**/*.raw.md"],
     "glossaries": [
         { "file": "./glossary.md", "termHint": "↴"},
@@ -56,7 +56,7 @@ npm i --save glossarify-md
 
 > **☛ Note:** Consider adding the target of `outDir` to *.gitignore*.
 
-> **☛ Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` (src) rather than being children of it. This reduces the number of files being copied from `baseDir` to `outDir` (target) and could improve build times if there are many static assets. Relative paths may just become a bit longer.
+> **☛ Tip:** You are free to choose a different structure, e.g. with `.vuepress/` or `images/` being siblings *next to* `baseDir` (docs) rather than being children of it. This reduces the number of files being copied from `baseDir` to `outDir` (glossarified) and could improve build times if there are many static assets. Relative paths may just become a bit longer.
 
 > **☛ Since v2.1.0** you can enable `experimentalFootnotes` if you use *vuepress* with [markdown-it-footnote](https://www.npmjs.com/package/markdown-it-footnote) plug-in.
 
@@ -104,16 +104,16 @@ module.exports = {
 
 "scripts": {
   "glossarify": "glossarify-md --config ./glossarify-md.conf.json",
-  "start": "vuepress dev src",
-  "glossarified": "npm run glossarify && vuepress dev target",
-  "build": "npm run glossarify && vuepress build target",
+  "start": "vuepress dev docs",
+  "glossarified": "npm run glossarify && vuepress dev glossarified",
+  "build": "npm run glossarify && vuepress build glossarified",
 }
 ```
-- `npm start` builds and serves files from `src/` with *live-reload*. This is
+- `npm start` builds and serves files from `docs/` with *live-reload*. This is
 what you probably want while writing. Since glossarified sources are written to
-a separate `target/` directory you won't see glossary terms linked in this build mode.
+a separate `glossarified/` directory you won't see glossary terms linked in this build mode.
 
-- `npm run glossarified` builds and serves the glossarified version from `target/` output directory. No live-reload if `src/` changes.
+- `npm run glossarified` builds and serves the glossarified version from `glossarified/` output directory. No live-reload if `docs/` changes.
 
 - `npm run build` just builds the glossarified version.
 

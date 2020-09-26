@@ -1,6 +1,6 @@
 #!/usr/bin/env node
-const buildOpts = require("minimist-options");
 const minimist = require("minimist");
+const merge = require("deepmerge");
 const fs = require("fs-extra");
 const path = require("path");
 const proc = require("process");
@@ -18,37 +18,49 @@ const banner =
 console.log(banner);
 
 // _/ CLI \_____________________________________________________________________
-const optsSchema = Object.assign({
+const cli = {
     "config": {
         alias: "c"
         ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
+        ,type: "string"
+        ,default: "./glossarify-md.conf.json"
     }
-    ,type: "string"
-    ,default: ""
+    ,"shallow": {
+        alias: ""
+        ,description: "Shallow-merge the given configuration string with the configuration file or default configuration. Shallow merging with replace nested property values. Use --deep to deep-merge."
+        ,type: "string"
+        ,default: ""
+    }
+    ,"deep": {
+        alias: ""
+        ,description: "Deeply merge the given configuration string with the configuration file or default configuration. This will with extend nested arrays and replace only those keys exactly matching with the given structure."
+        ,type: "string"
+        ,default: ""
+    }
     ,"help": {
         alias: "h"
         ,description: "Show this help."
         ,type: "boolean"
         ,default: false
     }
-}, confSchema);
-const optsDefault = minimist([], buildOpts(optsSchema));
-const optsCli  = minimist(proc.argv.slice(2));
-let optsFile = {};
+};
+const argv = minimist(proc.argv.slice(2), cli);
 
 // --help (or no args at all)
-if (optsCli.help || proc.argv.length === 2) {
-    printOpts(optsSchema);
+if (argv.help || proc.argv.length === 2) {
+    printOpts(cli);
+    process.exit(0);
 }
 
 // --config
 let confDir = "";
-let confPath = optsCli.config;
+let confPath = argv.config || "";
+let optsFile = {};
 if (confPath) {
     try {
         confPath = path.resolve(CWD, confPath);
-        optsFile = JSON.parse(fs.readFileSync(confPath));
         confDir = path.dirname(confPath);
+        optsFile = JSON.parse(fs.readFileSync(confPath));
     } catch (e) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
@@ -57,8 +69,33 @@ if (confPath) {
     confDir = CWD;
 }
 
-// Opts precedence: CLI over file over defaults
-const opts = Object.assign(optsDefault, optsFile, optsCli);
+const optsDefault = Object
+    .keys(confSchema)
+    .reduce((obj, key) => {
+        obj[key] = confSchema[key].default;
+        return obj;
+    }, {});
+
+let opts = Object.assign(optsDefault, optsFile);
+
+// --deep
+if (argv.deep) {
+    try {
+        opts = merge(opts, JSON.parse(argv.deep.replace(/'/g, "\"")));
+    } catch (e) {
+        console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
+        proc.exit(1);
+    }
+}
+// --shallow
+if (argv.shallow) {
+    try {
+        opts = Object.assign(opts, JSON.parse(argv.shallow.replace(/'/g, "\"")));
+    } catch (e) {
+        console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
+        proc.exit(1);
+    }
+}
 // Resolve 2nd arg paths relative to 1st arg paths...
 opts.baseDir = path.resolve(confDir, opts.baseDir);
 opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
@@ -116,5 +153,4 @@ function printOpts(parameters) {
             })
             .join("")
     );
-    process.exit(0);
 }

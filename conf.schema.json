@@ -25,12 +25,6 @@
             "alias": "e",
             "default": ["node_modules", ".git"]
         },
-        "experimentalFootnotes": {
-            "description": "Enable support for markdown footnotes as defined in https://pandoc.org/MANUAL.html#footnotes. Footnotes are considered 'experimental' until they become part of the CommonMark Specification at https://spec.commonmark.org.",
-            "type": "boolean",
-            "alias": "",
-            "default": false
-        },
         "force": {
             "description": "Choose true, only if you know the consequences.",
             "type": "boolean",
@@ -103,10 +97,10 @@
             "default": ""
         },
         "outDirDropOld": {
-            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files.",
+            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true",
             "type": "boolean",
             "alias": "",
-            "default": false
+            "default": true
         },
         "reportNotMentioned": {
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
@@ -126,14 +120,9 @@
             "properties": {
                 "indexFile": {
                     "description": "Generate a file with a list of glossary terms and where they have been used.",
-                    "oneOf": [{
-                        "type": "object",
-                        "$ref": "#/$defs/IndexFileOpts"
-                    },{
-                        "type": "string",
-                        "description": "String value range is deprecated and will be removed with v4. Use object notation instead."
-                    }],
-                    "default": ""
+                    "type": "object",
+                    "$ref": "#/$defs/IndexFileOpts",
+                    "default": {}
                 },
                 "listOf": {
                     "description": "Generate an arbitrary 'List of {x}' from HTML anchors with css class {x}. E.g. Generate a List of Listings from every <a class='listings' id='listing-1', title='Listing 1' /> and link to those anchors.",

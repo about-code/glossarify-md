@@ -1,0 +1,34 @@
+name: Tests
+on:
+  push:
+  pull_request:
+  schedule:
+  - cron: '0 12,23 * * *'
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+        node-version: [10.x, 12.x, 14.x]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: Test installation without package-lock.json
+      shell: bash
+      run: |
+        echo "| Continuous tests against latest releases of dependencies"
+        echo "| within minor versions ranges. Tests mimic a fresh install"
+        echo "| without a package-lock.json. Tests aim to identify problems"
+        echo "| caused by deps violating semantic versioning."
+        mv package-lock.json package-lock-ignored.json
+        npm install
+        cd ./test
+        npm install
+        cd ..
+        npm test
+      env:
+        CI: true
