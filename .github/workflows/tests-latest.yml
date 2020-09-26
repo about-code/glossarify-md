@@ -1,6 +1,5 @@
-name: Tests
+name: Tests (with latest deps)
 on:
-  push:
   pull_request:
   schedule:
   - cron: '0 12,23 * * *'
