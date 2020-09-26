@@ -38,17 +38,14 @@ was removed.
 
 * Command Line Interface (CLI) changed (#94).
 
-
-
-
 From the old set of arguments only `--config` and `--help` remain supported.
-`--config` is now *required*. Any other configuration options are being
-replaced by two new options `--shallow` and `--deep` which take a JSON
-string that is expected to match the configuration schema. As you may
-suggest from their names you can use them to merge a command-line provided
-configuration with the configuration provided in the configuration file.
+Any other configuration options are being replaced by two new options 
+`--shallow` and `--deep` which take a JSON string that is expected to match 
+the configuration schema. As you may recognise from their names you can use
+them to merge a command-line provided configuration with the configuration 
+provided in the configuration file.
 
-  Use those two options if you need to override particular configuration
+Use those two options if you need to override particular configuration
 keys in a configuration file on a particular program execution.
 
 For example if you previously wrote
