@@ -27,13 +27,13 @@ const cli = {
     }
     ,"shallow": {
         alias: ""
-        ,description: "Shallow-merge the given JSON configuration string with the configuration file or default configuration. Shallow merging with replace nested property values. Use --deep to deep-merge."
+        ,description: "A JSON serialized config object (e.g. \"{'baseDir': './input'}\") to shallow-merge with the default configuration or some configuration file provided with --config. Shallow merging replaces nested property values. Use --deep to deep-merge."
         ,type: "string"
         ,default: ""
     }
     ,"deep": {
         alias: ""
-        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will with extend nested arrays and replace only those keys exactly matching with the given structure."
+        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will extend nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
         ,type: "string"
         ,default: ""
     }
