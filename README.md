@@ -177,7 +177,7 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
   "baseDir": "./src",
   "outDir": "../target",
   "glossaries": [
-     { "file": "./glossary.md" },
+     { "file": "./glossary.md" }
   ],
   "includeFiles": ["."],
   "excludeFiles": ["node_modules"],
