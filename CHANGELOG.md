@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [4.0.1](https://github.com/about-code/glossarify-md/compare/v4.0.0...v4.0.1) (2020-10-18)
+
+
+### Bug Fixes
+
+* --force-Flag not working ([#103](https://github.com/about-code/glossarify-md/issues/103)) ([5084d36](https://github.com/about-code/glossarify-md/commit/5084d36b263b0a8f168aaf35be357bc2d05af79a))
+
 ## [4.0.0](https://github.com/about-code/glossarify-md/compare/v3.6.5...v4.0.0) (2020-09-26)
 
 
