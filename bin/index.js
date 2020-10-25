@@ -6,7 +6,7 @@ const path = require("path");
 const proc = require("process");
 const program = require("../lib/main");
 const confSchema = require("../conf.schema.json").properties;
-const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_NOT_DELETED} = require("../lib/cli/messages");
+const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_NOT_DELETED, OUTDIR_IS_BASEDIR_WITH_DROP} = require("../lib/cli/messages");
 const {version} = require("../package.json");
 
 const CWD = proc.cwd();
@@ -27,13 +27,13 @@ const cli = {
     }
     ,"shallow": {
         alias: ""
-        ,description: "Shallow-merge the given configuration string with the configuration file or default configuration. Shallow merging with replace nested property values. Use --deep to deep-merge."
+        ,description: "A JSON serialized config object (e.g. \"{'baseDir': './input'}\") to shallow-merge with the default configuration or some configuration file provided with --config. Shallow merging replaces nested property values. Use --deep to deep-merge."
         ,type: "string"
         ,default: ""
     }
     ,"deep": {
         alias: ""
-        ,description: "Deeply merge the given configuration string with the configuration file or default configuration. This will with extend nested arrays and replace only those keys exactly matching with the given structure."
+        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will extend nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
         ,type: "string"
         ,default: ""
     }
@@ -133,10 +133,16 @@ function validateOpts(conf) {
     console.log(`☛ Reading from: ${conf.baseDir}`);
     console.log(`☛ Writing to:   ${conf.outDir}\n`);
 
-    if (conf.outDir === conf.baseDir && !conf.force) {
-        console.log(OUTDIR_IS_BASEDIR);
-        console.log("ABORTED.\n");
-        proc.exit(0);
+    if (conf.outDir === conf.baseDir) {
+        if (conf.outDirDropOld) {
+            console.log(OUTDIR_IS_BASEDIR_WITH_DROP);
+            console.log("ABORTED.\n");
+            proc.exit(0);
+        } else if (!argv.force) {
+            console.log(OUTDIR_IS_BASEDIR);
+            console.log("ABORTED.\n");
+            proc.exit(0);
+        }
     }
 }
 
