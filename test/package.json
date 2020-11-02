@@ -16,6 +16,7 @@
     "test-win": "npm run suite",
     "test": "npm run suite",
     "suite": "npm-run-all test_*",
+    "at": "npm-run-all",
     "test_00": "node ./conf.spec.js",
     "test_01": "node ./path-tools.spec.js",
     "test_02": "npx . --config ./input/markdown/glossarify-md.conf.json",
@@ -56,6 +57,7 @@
     "test_37": "npx . --config ./input/config-listOf/glossarify-md.conf.json",
     "test_38": "npx . --config ./input/config-indexFile/issue-75-formatted-headings/glossarify-md.conf.json",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
+    "postat": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node ../bin/test.js",
     "new-baseline": "rm -r ./output-expected && mv ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
     "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'"
