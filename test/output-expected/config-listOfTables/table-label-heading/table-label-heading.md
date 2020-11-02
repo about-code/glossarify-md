@@ -8,6 +8,8 @@ WHEN the table's first row is all empty
 AND no user-defined label exists
 THEN in the generated output file the table MUST be linked to this section AND the link text MUST equal its preceding heading 'Label from Section Heading'.
 
+<a id="" class="table" title="" />
+
 |          |          |          |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |

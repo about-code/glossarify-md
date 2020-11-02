@@ -10,6 +10,8 @@ AND not terminated by a colon.
 
 _Label from paragraph:_
 
+<a id="label-from-paragraph" class="table" title="Label from paragraph" />
+
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |
@@ -23,6 +25,8 @@ WHEN text is NOT terminated by a colon
 THEN in the generated output file the table label MUST equal 'Column 1, Column 2, Column 3'
 
 _Label from paragraph_
+
+<a id="column-1-column-2-column-3" class="table" title="Column 1, Column 2, Column 3" />
 
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
@@ -39,6 +43,8 @@ AND not terminated by a colon.
 
 Paragraph with _Label from inlined text:_
 
+<a id="label-from-inlined-text" class="table" title="Label from inlined text" />
+
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |
@@ -54,7 +60,9 @@ THEN in the generated output file the table label MUST equal 'Column 1, Column 2
 
 Paragraph with _invalid inline label missing the terminating colon_
 
-| Column 1 | Column 2 | Column 3 |
+<a id="column-a-column-b-column-c" class="table" title="Column A, Column B, Column C" />
+
+| Column A | Column B | Column C |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |
 | Col1Row4 | Col2Row4 | Col3Row4 |

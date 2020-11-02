@@ -17,21 +17,21 @@
 1.  [Label from paragraph][5]
 2.  [Column 1, Column 2, Column 3][6]
 3.  [Label from inlined text][7]
-4.  [Column 1, Column 2, Column 3][8]  
+4.  [Column A, Column B, Column C][8]  
 
 
-[1]: ./table-label-comment/table-label-comment.md#test-case-comment-pattern-matches "Label from Comment"
+[1]: ./table-label-comment/table-label-comment.md#label-from-comment "Label from Comment"
 
-[2]: ./table-label-comment/table-label-comment.md#test-case-comment-pattern-misses-table "Column 1, Column 2, Column 3"
+[2]: ./table-label-comment/table-label-comment.md#column-1-column-2-column-3 "Column 1, Column 2, Column 3"
 
 [3]: ./table-label-file/table-label-file.md "table-label-file/table-label-file.md"
 
 [4]: ./table-label-heading/table-label-heading.md#label-from-section-heading "Label from Section Heading"
 
-[5]: ./table-label-text/table-label-text.md#test-case-separate-paragraph-match "Label from paragraph"
+[5]: ./table-label-text/table-label-text.md#label-from-paragraph "Label from paragraph"
 
-[6]: ./table-label-text/table-label-text.md#test-case-separate-paragraph-colon-missing "Column 1, Column 2, Column 3"
+[6]: ./table-label-text/table-label-text.md#column-1-column-2-column-3 "Column 1, Column 2, Column 3"
 
-[7]: ./table-label-text/table-label-text.md#test-case-inline-match "Label from inlined text"
+[7]: ./table-label-text/table-label-text.md#label-from-inlined-text "Label from inlined text"
 
-[8]: ./table-label-text/table-label-text.md#test-case-inline-colon-is-missing "Column 1, Column 2, Column 3"
+[8]: ./table-label-text/table-label-text.md#column-a-column-b-column-c "Column A, Column B, Column C"

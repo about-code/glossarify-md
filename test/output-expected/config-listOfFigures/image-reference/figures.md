@@ -10,6 +10,6 @@
 1.  [ref1][2]  
 
 
-[1]: ./document.md#image-reference-with-caption
+[1]: ./document.md#test-figure "Test Figure"
 
-[2]: ./document.md#image-reference-without-caption
+[2]: ./document.md#ref1 "ref1"
