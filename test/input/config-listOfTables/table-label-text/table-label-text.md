@@ -56,7 +56,7 @@ THEN in the generated output file the table label MUST equal 'Column 1, Column 2
 
 Paragraph with *invalid inline label missing the terminating colon*
 
-| Column 1 | Column 2 | Column 3 |
+| Column A | Column B | Column C |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |
 | Col1Row4 | Col2Row4 | Col3Row4 |
