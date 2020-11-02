@@ -125,24 +125,10 @@
                     "default": {}
                 },
                 "listOf": {
-                    "description": "Generate an arbitrary 'List of {x}' from HTML anchors with css class {x}. E.g. Generate a List of Listings from every <a class='listings' id='listing-1', title='Listing 1' /> and link to those anchors.",
+                    "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors <a class='listing' title='My Sample 1' id='sample-1'/> before your sample code blocks.",
                     "type": "array",
                     "items": {
-                        "type": "object",
-                        "properties": {
-                            "class": {
-                                "description": "The CSS class to look for in anchor elements",
-                                "type": "string"
-                            },
-                            "file": {
-                                "description": "Path relative to 'outDir' where to create the output file.",
-                                "type": "string"
-                            },
-                            "title": {
-                                "description": "The page title for the index file. If missing it's being inferred from the value of 'class'.",
-                                "type": "string"
-                            }
-                        }
+                        "$ref": "#/$defs/IndexFileOpts"
                     }
                 },
                 "listOfFigures": {
@@ -164,6 +150,10 @@
             "properties": {
                 "file":  {
                     "description": "Path relative to 'outDir' where to create the index markdown file.",
+                    "type": "string"
+                },
+                "class": {
+                    "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list.",
                     "type": "string"
                 },
                 "title": {
