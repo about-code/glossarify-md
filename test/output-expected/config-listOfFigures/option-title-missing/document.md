@@ -7,4 +7,4 @@ AND the default title MUST be "Figures".
 
 ![Figure 1 depth 1][1]
 
-[1]: ./figure1.png
+[1]: ./figure.png
