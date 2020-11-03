@@ -10,6 +10,8 @@ AND the link text MUST be "Label from Comment".
 
 <!-- table: Label from Comment -->
 
+<a id="label-from-comment" class="table" title="Label from Comment" />
+
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
 | Col1Row3 | Col2Row3 | Col3Row3 |
@@ -25,6 +27,8 @@ THEN in the generated output file the table MUST be linked to this file
 AND the link text MUST equal 'Column 1, Column 2, Column 3'.
 
 <!-- Invalid Label Comment -->
+
+<a id="column-1-column-2-column-3" class="table" title="Column 1, Column 2, Column 3" />
 
 | Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |

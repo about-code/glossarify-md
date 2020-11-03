@@ -5,6 +5,7 @@ AND config `generateFiles.listOfFigures.title` is `undefined`
 THEN a file `generateFiles.listOfFigures.file` MUST be generated successfully
 AND the default title MUST be "Figures".
 
+<a id="figure-1-depth-1" class="figure" title="Figure 1 depth 1"></a>
 ![Figure 1 depth 1][1]
 
-[1]: ./figure1.png
+[1]: ./figure.png
