@@ -2,8 +2,7 @@
 
 ## [Section with image detected by listOfFigures](#section-with-image-detected-by-listoffigures)
 
-<a id="test-image" class="my-figures" title="Test image"></a>
-![Test image][1]
+<a id="test-image" class="my-figures" title="Test image"></a>![Test image][1]
 
 ## [Section with image anchor detected by listOf](#section-with-image-anchor-detected-by-listof)
 

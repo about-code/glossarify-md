@@ -2,8 +2,7 @@
 
 ## [Image Reference Without Caption](#image-reference-without-caption)
 
-<a id="ref1" class="figure" title="ref1"></a>
-![ref1]
+<a id="ref1" class="figure" title="ref1"></a>![ref1]
 
 GIVEN a config option `generateFiles.listOfFigures`
 AND a document with
@@ -20,8 +19,7 @@ AND the link must refer to section `./document.md#image-reference-without-captio
 
 ## [Image Reference With Caption](#image-reference-with-caption)
 
-<a id="test-figure" class="figure" title="Test Figure"></a>
-![Test Figure][ref2]
+<a id="test-figure" class="figure" title="Test Figure"></a>![Test Figure][ref2]
 
 GIVEN a config option `generateFiles.listOfFigures`
 AND a document with
