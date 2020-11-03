@@ -325,22 +325,22 @@ You can generate arbitrary lists linked to particular elements in your content u
 ... and mark any position where you mention a person with an HTML anchor:
 
 ```md
-The general theory of relativity by <a id="einstein" class="people">Albert Einstein</a>
-was ground-breaking.
+The theory of general relativity by <a id="einstein" class="people">Albert Einstein</a>
+was groundbreaking.
 ```
 
 **Type less** by prefixing the anchor `id` with the anchor class:
 
 ```md
-The general theory of relativity by <a id="people-einstein">Albert Einstein</a>
-was ground-breaking.
+The theory of general relativity by <a id="people-einstein">Albert Einstein</a>
+was groundbreaking.
 ```
 
 **Hide anchors** using the `title` attribute as a link label in the list:
 
 ```md
-The general theory of relativity <a id="people-einstein" title="Albert Einstein"></a>
-was ground-breaking.
+The theory of general relativity <a id="people-einstein" title="Albert Einstein"></a>
+was groundbreaking.
 ```
 
 > **Link label extraction**
@@ -380,7 +380,8 @@ By default list items will be grouped by section of occurrence using the section
 Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). `listOfFigures` can only detect Markdown references. You need to explicitely annotate dynamic graphics like in the following input...
 
 ````md
-Markdown image reference ![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
+Markdown image reference ![Foo](./figure.png) and dynamically
+rendered diagramm annotated explicitely:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -391,10 +392,11 @@ Markdown image reference ![Foo](./figure.png) and dynamically rendered diagramm 
 ```
 ````
 
-... which will be translated to:
+... and `listOfFigures` will prepended a similar anchor to the markdown link:
 
 ````md
-Markdown image reference <a id="foo" class="figure" title="Foo"></a>![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
+Markdown image reference <a id="foo" class="figure" title="Foo"></a>
+![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -405,7 +407,7 @@ Markdown image reference <a id="foo" class="figure" title="Foo"></a>![Foo](./fig
 ```
 ````
 
-From the anchors sharing the (default) anchor class ***figure*** a common list of figures will be generated. The previous configuration is only a shorthand for this one (since v4.1.0) ...
+From the anchors sharing the same (default) anchor class ***figure*** a common list of figures will be generated. The previous [glossarify-md] configuration is only a shorthand for this one (since v4.1.0) ...
 
 *glossarify-md.conf.json*
 
