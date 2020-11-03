@@ -193,10 +193,8 @@ glossarify-md
   --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
 ~~~
 
-
 Use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:
 
-*Example: Extend glossaries array in a config file via CLI*
 ~~~
 glossarify-md
   --config ./glossarify-md.conf.json
@@ -321,7 +319,8 @@ was ground-breaking.
 **Hide anchors** using the `title` attribute as a link label in the list:
 
 ```md
-The general theory of relativity <a id="people-einstein" title="Albert Einstein"></a> was ground-breaking.
+The general theory of relativity <a id="people-einstein" title="Albert Einstein"></a>
+was ground-breaking.
 ```
 
 > **Link label extraction**
@@ -347,8 +346,8 @@ By default list items will be grouped by section of occurrence using the section
 ### List of Figures
 
 > **Since v3.3.0**
->
-> - **Since v4.1.0** `listOfFigures` annotates Markdown image references with HTML anchors allowing for direct navigation to images.
+
+> **Since v4.1.0** `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists).
 
 *glossarify-md.conf.json*
 ```json
@@ -357,12 +356,11 @@ By default list items will be grouped by section of occurrence using the section
 }
 ```
 
-**Since v4.1.0** `listOfFigures` prepends Markdown image references `![Foo](./figure.png)` with an HTML anchor using the conventional anchor class ***figure***.
-
-Let's say you have images referenced via Markdown syntax and images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). Then the following input...
+Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). `listOfFigures` can only detect Markdown references. You need to explicitely annotate dynamic graphics like in the following input...
 
 ~~~md
-Markdown image reference ![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
+Markdown image reference ![Foo](./figure.png) and dynamically
+rendered diagramm annotated explicitely:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -373,10 +371,11 @@ Markdown image reference ![Foo](./figure.png) and dynamically rendered diagramm 
 ```
 ~~~
 
-... will be translated into ...
+... which will be translated to:
 
 ~~~md
-Markdown image reference <a id="foo" class="figure" title="Foo"></a>![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
+Markdown image reference <a id="foo" class="figure" title="Foo"></a>
+![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -387,7 +386,7 @@ Markdown image reference <a id="foo" class="figure" title="Foo"></a>![Foo](./fig
 ```
 ~~~
 
-... which allows to generate a common list from the anchor class ***figure***. In fact the previous `listOfFigures` configuration can be considered shorthand for this one possible since v4.1.0:
+From the anchors sharing the (default) anchor class ***figure*** a common list of figures will be generated. The previous configuration is only a shorthand for this one (since v4.1.0) ...
 
 *glossarify-md.conf.json*
 ```json
@@ -398,16 +397,14 @@ Markdown image reference <a id="foo" class="figure" title="Foo"></a>![Foo](./fig
     ]
 }
 ```
-You can use such a configuration to replace the conventional anchor class ***figure*** with a shorter one, e.g. ***fig***.
-
-
-**Note: this fully applies to `listOfTables` and Markdown tables as well.**
+... which allows to replace the conventional anchor class ***figure*** with a shorter one, e.g. ***fig***.
+**Note: this applies to Markdown tables and `listOfTables`, similarily.**
 
 ### List of Tables
 
 > **Since v3.4.0**
->
-> - **Since v4.1.0** `listOfTables` annotates tables with HTML anchors using the information given in HTML comments as shown below. This allows for direct navigation to tables. See [Lists](./#lists) and [`listOfFigures`](./#list-of-figures) for more on anchor based lists.
+
+> **Since v4.1.0** `listOfTables` annotates tables with HTML anchors as shown in [Lists](#lists) using information given in HTML comments as shown below.
 
 *glossarify-md.conf.json*
 
@@ -418,7 +415,7 @@ You can use such a configuration to replace the conventional anchor class ***fig
 ```
 Generates a list of tables into `./tables.md`. Markdown tables have no inherent notion of a table caption. [glossarify-md] scans for two patterns of user-defined table labels and attempts to infer a table label otherwise:
 
-#### Invisible table label
+**1. HTML Comment (invisible):**
 
 ```md
 <!-- table: Average Prices by Article Category -->
@@ -429,9 +426,9 @@ Generates a list of tables into `./tables.md`. Markdown tables have no inherent 
 | 3        | Book        | $23.45     |
 ```
 
-#### Visible table label
+**2. Colon-Terminated Emphasized Paragraph Ending (visible):**
 
-A table label will be inferred from the last italic phrase terminated by a colon in the paragraph prior to the table. The phrase can be a distinct standalone emphasized paragraph...
+A caption can be inferred from a distinct paragraph...
 
 ```md
 [...] which we can see from the average price by article category.
@@ -445,7 +442,7 @@ A table label will be inferred from the last italic phrase terminated by a colon
 | 3        | Book        | $23.45     |
 ```
 
-... or an emphasized phrase at the end of the preceding paragraph:
+... or a colon-terminated emphasized phrase at the end of the preceding paragraph:
 
 ```md
 [...] which we can see from the *table of average prices by article category:*
