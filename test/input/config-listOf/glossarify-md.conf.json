@@ -9,9 +9,11 @@
     },
     "generateFiles": {
         "listOf": [
-            { "class": "prefix", "file": "./list-of-prefix.md", "title": "Test Case: List of 'prefix'" },
             { "class": "class-attr", "file": "./list-of-class-attr.md", "title": "Test Case: List of 'class-attr'" },
-            { "class": "label", "file": "./list-of-label.md", "title": "Test Suite: List of 'label'" }
+            { "class": "prefix", "file": "./list-of-prefix.md",  "title": "Test Case: List of 'prefix'" },
+            { "class": "label",  "file": "./list-of-label.md",   "title": "Test Suite: List of 'label'" },
+            { "class": "table",  "file": "./list-of-tabels.md",  "title": "Test Suite: List of 'table'" },
+            { "class": "figure", "file": "./list-of-figures.md", "title": "Test Suite: List of 'figure'" }
         ]
     },
     "glossaries": [

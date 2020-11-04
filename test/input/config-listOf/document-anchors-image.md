@@ -20,11 +20,7 @@ THEN the system MUST annotate input documents with anchors as follows
   ~~~
 
 - WITH a Markdown image reference
-- THEN the system MUST prepend an anchor such that the output document matches
-
-  ~~~md
-  Text without an HTML closely preceding <a id="figure1" class="figure" title="image-title1"></a>![image-title1](./image1.png)
-  ~~~
+- THEN the system MUST prepend an anchor
 
 #### Test Data
 
@@ -94,7 +90,7 @@ Text with an HTML anchor <a id="my-figure22" class="figure"></a> ![image-title22
   ~~~
 
 - WITH a Markdown image reference preceded by a paragraph ending with an HTML child
-- THEN the system MUST NOT prepend yet another anchor.
+- THEN the system MUST NOT prepend another anchor.
 
 #### Test Data
 
@@ -115,15 +111,7 @@ Previous paragraph ends with an HTML node <a id="my-figure32" class="figure"></a
 
 - WITH a paragraph with a single HTML child
 - AND a Markdown image reference preceded by text
-- THEN the system MUST prepend an anchor to the image node such that the output document matches
-
-#### Output Expected
-
-~~~md
-<a id="my-other-figure" class="figure"></a>
-
-Image embedded in text: <a id="figure33" class="figure" title="image-title33"></a>![image-title33](./image33.png)
-~~~
+- THEN the system MUST prepend an anchor to the image node
 
 #### Test Data
 
@@ -145,16 +133,7 @@ Image embedded in text: ![image-title33](./image33.png)
 - AND same image titles
 - THEN the system MUST prepend anchors with unique IDs
 
-#### Output Expected
-
-~~~md
-First  Image <a id="image-title4"   class="figure" title="image-title4"></a>![image-title4](./image4.png)
-Second Image <a id="image-title4-1" class="figure" title="image-title4"></a>![image-title4](./image4.png)
-~~~
-
 #### Test Data
 
-~~~md
 First  Image ![image-title4](./image4.png)
 Second Image ![image-title4](./image4.png)
-~~~
