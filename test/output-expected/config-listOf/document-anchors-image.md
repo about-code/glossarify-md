@@ -21,11 +21,7 @@ THEN the system MUST annotate input documents with anchors as follows
 
 -   WITH a Markdown image reference
 
--   THEN the system MUST prepend an anchor such that the output document matches
-
-    ```md
-    Text without an HTML closely preceding <a id="figure1" class="figure" title="image-title1"></a>![image-title1](./image1.png)
-    ```
+-   THEN the system MUST prepend an anchor
 
 #### [Test Data](#test-data)
 
@@ -95,11 +91,11 @@ Text with an HTML anchor <a id="my-figure22" class="figure"></a> ![image-title22
 
 -   WITH a Markdown image reference preceded by a paragraph ending with an HTML child
 
--   THEN the system MUST NOT prepend yet another anchor.
+-   THEN the system MUST NOT prepend another anchor.
 
 #### [Test Data](#test-data-4)
 
-Previous paragraph ends with an HTML node  <a id="my-figure32" class="figure"></a>
+Previous paragraph ends with an HTML node <a id="my-figure32" class="figure"></a>
 
 ![image-title32][5]
 
@@ -117,19 +113,33 @@ Previous paragraph ends with an HTML node  <a id="my-figure32" class="figure"></
 
 -   AND a Markdown image reference preceded by text
 
--   THEN the system MUST prepend an anchor to the image node such that the output document matches
-
-    ```md
-    <a id="my-other-figure" class="figure"></a>
-
-    Image embedded in text: <a id="figure33" class="figure" title="image-title33"></a>![image-title33](./image33.png)
-    ```
+-   THEN the system MUST prepend an anchor to the image node
 
 #### [Test Data](#test-data-5)
 
 <a id="my-other-figure" class="figure"></a>
 
 Image embedded in text: <a id="image-title33" class="figure" title="image-title33"></a>![image-title33][6]
+
+### [Test Case 4: Unique IDs](#test-case-4-unique-ids)
+
+-   GIVEN an input document
+
+    ```md
+    First  Image ![image-title4](./image4.png)
+    Second Image ![image-title4](./image4.png)
+    ```
+
+-   WITH two images
+
+-   AND same image titles
+
+-   THEN the system MUST prepend anchors with unique IDs
+
+#### [Test Data](#test-data-6)
+
+First  Image <a id="image-title4" class="figure" title="image-title4"></a>![image-title4][7]
+Second Image <a id="image-title4-1" class="figure" title="image-title4"></a>![image-title4][7]
 
 [1]: ./image.png
 
@@ -142,3 +152,5 @@ Image embedded in text: <a id="image-title33" class="figure" title="image-title3
 [5]: ./image32.png
 
 [6]: ./image33.png
+
+[7]: ./image4.png
