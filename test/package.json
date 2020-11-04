@@ -30,7 +30,7 @@
     "test_09": "npx . --config ./input/config-reportNotMentioned/false/glossarify-md.conf.json",
     "test_10": "npx . --config ./input/config-ignoreCase-true/glossarify-md.conf.json",
     "test_11": "npx . --config ./input/config-ignoreCase-false/glossarify-md.conf.json",
-    "test_12": "npx . --config ./input/config-glossaries/glossarify-md.conf.json",
+    "test_12": "npx . --config ./input/config-glossaries/default/glossarify-md.conf.json",
     "test_13": "npx . --config ./input/config-glossaries/sort-default/glossarify-md.conf.json",
     "test_14": "npx . --config ./input/config-glossaries/sort-i18n-compare-numeric/glossarify-md.conf.json",
     "test_15": "npx . --config ./input/config-glossaries/sort-i18n-de/glossarify-md.conf.json",
