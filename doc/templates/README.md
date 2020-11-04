@@ -1,6 +1,7 @@
 # glossarify-md
 
-![Tests](https://github.com/about-code/glossarify-md/workflows/Tests/badge.svg)
+![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20(Functional)/badge.svg)
+![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20(with%20latest%20deps)/badge.svg)
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
 

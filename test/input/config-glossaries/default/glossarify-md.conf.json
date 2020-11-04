@@ -20,7 +20,7 @@
     "linking": "relative",
     "ignoreCase": false,
     "dev": {
-        "termsFile": "../../output-actual/config-glossaries/default/terms.json",
+        "termsFile": "../../../output-actual/config-glossaries/default/terms.json",
         "printInputAst": false,
         "reproducablePaths": true,
         "printOutputAst": false
