@@ -138,14 +138,7 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 - Blockquotes
 - Preformatted blocks
 - (Markdown) links
-
-> **Important:** As of now, we can't prevent text between the opening and closing angle brackets of an HTML link to be linkified. In a markdown syntax tree something like `<a href="">term</a>` is represented as distinct HTML nodes with arbitrary complex markdown nodes in between. Therefore a term found between those HTML tags currently results in
->
-> ```
-> <a href="">[term][1]</a>
->
-> [1] ./glossary.md#term
-> ```
+- HTML
 
 > **Note:** Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
 
