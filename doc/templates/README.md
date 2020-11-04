@@ -483,10 +483,7 @@ Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare`
 "i18n": {
    "locale": "de",
    "ignorePunctuation": true
-},
-"glossaries": [
-    ...
-]
+}
 ```
 
 The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
