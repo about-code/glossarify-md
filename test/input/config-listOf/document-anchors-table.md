@@ -157,3 +157,47 @@
 | ------------- | ------------- |
 | Col1Row1      | Col2Row1      |
 | Col1Row2      | Col2Row2      |
+
+
+### Test Case: Unique anchor ids when column headers identical
+
+- GIVEN two tables without a caption
+- AND same column headers
+- THEN unique anchor ids must be generated
+
+#### Test Data
+
+Table 1:
+
+| Test5_Column1 | Test5_Column2 |
+| ------------- | ------------- |
+| Col1Row1      | Col2Row1      |
+| Col1Row2      | Col2Row2      |
+
+
+Table 2:
+
+| Test5_Column1 | Test5_Column2 |
+| ------------- | ------------- |
+| Col1Row1      | Col2Row1      |
+| Col1Row2      | Col2Row2      |
+
+
+### Test Case: Unique anchor ids when labels are ambiguous
+
+- GIVEN two tables with identical captions
+- THEN unique anchor ids must be generated.
+
+#### Test Data
+
+<!-- table: Ambiguous -->
+| Test6_Column1 | Test6_Column2 |
+| ------------- | ------------- |
+| Col1Row1      | Col2Row1      |
+| Col1Row2      | Col2Row2      |
+
+<!-- table: Ambiguous -->
+| Test6_Column1 | Test6_Column2 |
+| ------------- | ------------- |
+| Col1Row1      | Col2Row1      |
+| Col1Row2      | Col2Row2      |

@@ -98,7 +98,7 @@ Text with an HTML anchor <a id="my-figure22" class="figure"></a> ![image-title22
 
 #### Test Data
 
-Previous paragraph ends with an HTML node  <a id="my-figure32" class="figure"></a>
+Previous paragraph ends with an HTML node <a id="my-figure32" class="figure"></a>
 
 ![image-title32](./image32.png)
 
@@ -117,14 +117,44 @@ Previous paragraph ends with an HTML node  <a id="my-figure32" class="figure"></
 - AND a Markdown image reference preceded by text
 - THEN the system MUST prepend an anchor to the image node such that the output document matches
 
-  ~~~md
-  <a id="my-other-figure" class="figure"></a>
+#### Output Expected
 
-  Image embedded in text: <a id="figure33" class="figure" title="image-title33"></a>![image-title33](./image33.png)
-  ~~~
+~~~md
+<a id="my-other-figure" class="figure"></a>
+
+Image embedded in text: <a id="figure33" class="figure" title="image-title33"></a>![image-title33](./image33.png)
+~~~
 
 #### Test Data
 
 <a id="my-other-figure" class="figure"></a>
 
 Image embedded in text: ![image-title33](./image33.png)
+
+
+### Test Case 4: Unique IDs
+
+- GIVEN an input document
+
+  ~~~md
+  First  Image ![image-title4](./image4.png)
+  Second Image ![image-title4](./image4.png)
+  ~~~
+
+- WITH two images
+- AND same image titles
+- THEN the system MUST prepend anchors with unique IDs
+
+#### Output Expected
+
+~~~md
+First  Image <a id="image-title4"   class="figure" title="image-title4"></a>![image-title4](./image4.png)
+Second Image <a id="image-title4-1" class="figure" title="image-title4"></a>![image-title4](./image4.png)
+~~~
+
+#### Test Data
+
+~~~md
+First  Image ![image-title4](./image4.png)
+Second Image ![image-title4](./image4.png)
+~~~
