@@ -287,11 +287,11 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
 
-### Lists
+### Listings
 
 > **Since v3.5.0**
 
-You can generate arbitrary lists linked to particular elements in your content using HTML anchor (`<a>`) annotations and *classes*. For example, to generate a *List of People* you mentioned configure [glossarify-md] with `generateFiles.listOf`...
+You can generate arbitrary listings using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you mentioned or cited, configure [glossarify-md] with `generateFiles.listOf`...
 
 *glossarify-md.conf.json*
 
@@ -303,21 +303,22 @@ You can generate arbitrary lists linked to particular elements in your content u
 }
 ```
 
-... and mark any position where you mention a person with an HTML anchor:
+... and mark any position where you mention a person with an identifiable HTML
+element:
 
 ```md
-The theory of general relativity by <a id="einstein" class="people">Albert Einstein</a>
+The theory of general relativity by <cite id="einstein" class="people">Albert Einstein</cite>
 was groundbreaking.
 ```
 
-**Type less** by prefixing the anchor `id` with the anchor class:
+**Type less** by prefixing `id` with the list classifier:
 
 ```md
-The theory of general relativity by <a id="people-einstein">Albert Einstein</a>
+The theory of general relativity by <cite id="people-einstein">Albert Einstein</cite>
 was groundbreaking.
 ```
 
-**Hide anchors** using the `title` attribute as a link label in the list:
+**Hidden anchors** `<a>` may provide a `title` attribute to be used as a label in the list:
 
 ```md
 The theory of general relativity <a id="people-einstein" title="Albert Einstein"></a>
@@ -328,10 +329,10 @@ was groundbreaking.
 >
 > The link label for list items will be inferred in this order (first-match):
 >
-> 1. `title` attribute value (`<a id="..." "title"="label"></a>`)
-> 1. Inner text of anchor tag (`<a id="...">label</a>`)
-> 1. `id` attribute value, yet without list prefix (`<a id="prefix-label"></a>`)
-> 1. Preceding section heading if `id` is just the list prefix (`<a id="prefix"></a>`)
+> 1. `title` attribute value (`<tag id="..." "title"="label"></tag>`)
+> 1. Inner text of anchor tag (`<tag id="...">label</tag>`)
+> 1. `id` attribute value, yet without list prefix (`<tag id="prefix-label"></tag>`)
+> 1. Preceding section heading if `id` is just the list prefix (`<tag id="prefix"></tag>`)
 > 1. Filename if `id` is just the list prefix and there is no preceding section heading.
 
 #### List Item Grouping
@@ -348,7 +349,7 @@ By default list items will be grouped by section of occurrence using the section
 
 > **Since v3.3.0**
 
-> **Since v4.1.0** `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists).
+> **Since v5.0.0** `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists).
 
 *glossarify-md.conf.json*
 ```json
@@ -357,11 +358,11 @@ By default list items will be grouped by section of occurrence using the section
 }
 ```
 
-Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). `listOfFigures` can only detect Markdown references. You need to explicitely annotate dynamic graphics like in the following input...
+Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). `listOfFigures` can only detect Markdown image references. You need to manually annotate dynamic graphics like in the following input...
 
 ~~~md
 Markdown image reference ![Foo](./figure.png) and dynamically
-rendered diagramm annotated explicitely:
+rendered diagramm annotated manually:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -372,11 +373,11 @@ rendered diagramm annotated explicitely:
 ```
 ~~~
 
-... and `listOfFigures` will prepended a similar anchor to the markdown link:
+But `listOfFigures` will prepended an anchor automatically to the markdown reference:
 
 ~~~md
 Markdown image reference <a id="foo" class="figure" title="Foo"></a>
-![Foo](./figure.png) and dynamically rendered diagramm annotated explicitely:
+![Foo](./figure.png) and dynamically rendered diagramm annotated manually:
 
 <a id="generated" class="figure">Generated Diagramm</a>
 
@@ -387,7 +388,7 @@ Markdown image reference <a id="foo" class="figure" title="Foo"></a>
 ```
 ~~~
 
-From the anchors sharing the same (default) anchor class ***figure*** a common list of figures will be generated. The previous [glossarify-md] configuration is only a shorthand for this one (since v4.1.0) ...
+From both anchors sharing the same anchor class ***figure*** (default) a list of figures can be generated which contains both figures, the one found by Markdown syntax analysis and the one annotated manually. The [glossarify-md] configuration above is shorthand for this one (since v5.0.0) ...
 
 *glossarify-md.conf.json*
 ```json
@@ -398,14 +399,14 @@ From the anchors sharing the same (default) anchor class ***figure*** a common l
     ]
 }
 ```
-... which allows to replace the conventional anchor class ***figure*** with a shorter one, e.g. ***fig***.
+... which allows you to replace the default anchor class ***figure***, e.g. with a shorter one ***fig***.
 **Note: this applies to Markdown tables and `listOfTables`, similarily.**
 
 ### List of Tables
 
 > **Since v3.4.0**
 
-> **Since v4.1.0** `listOfTables` annotates tables with HTML anchors as shown in [Lists](#lists) using information given in HTML comments as shown below.
+> **Since v5.0.0** `listOfTables` annotates tables with HTML anchors as shown in [Lists](#lists) using information given in HTML comments as shown below.
 
 *glossarify-md.conf.json*
 

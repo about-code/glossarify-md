@@ -124,3 +124,19 @@ WITH a list item being a link OR link-reference similar to:
 ~~~md
 - [Test Case G: Fully formatted innerText](./document-infer-label.md#label-fully-formatted-text)
 ~~~
+
+
+## Test Case H: InnerText from arbitrary HTML element
+
+GIVEN arbitrary element <cite id="label-arbitrary-element">Test Case H: Arbitrary HTML element</cite>
+
+~~~md
+<cite id="label-arbitrary-element">Test Case H: Arbitrary HTML element</cite>
+~~~
+
+THEN a file `./list-of-label.md` MUST be generated
+WITH a list item being a link OR link-reference similar to:
+
+~~~md
+- [Test Case H: Arbitrary HTML element](./document-infer-label.md#label-arbitrary-element)
+~~~
