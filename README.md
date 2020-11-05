@@ -304,38 +304,43 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Since v3.5.0**
 
-You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you cited, configure [glossarify-md] with `generateFiles.listOf`...
+You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a list of *References* configure [glossarify-md] with `generateFiles.listOf`...
 
 *glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
     "listOf": [
-       { "class": "people", "file": "./people.md", "title": "List of People" }
+       { "class": "ref", "file": "./references.md", "title": "References" }
     ]
 }
 ```
 
-... and mark any position where you mention a person with an identifiable HTML
-element:
+... and mark any position where you cite a work with an identifiable HTML element belonging to class *ref*:
 
 ```md
-The theory of general relativity by <cite id="einstein" class="people">Albert Einstein</cite>
-was groundbreaking.
+The <cite id="togr" class="ref">Theory of General Relativity</cite>
+by Albert Einstein was groundbreaking.
 ```
 
 **Type less** by prefixing `id` with the list classifier:
 
 ```md
-The theory of general relativity by <cite id="people-einstein">Albert Einstein</cite>
-was groundbreaking.
+The <cite id="ref-togr">Theory of General Relativity</cite>
+by Albert Einstein was groundbreaking.
 ```
 
-**Hidden anchors** `<a>` may provide a `title` attribute to be used as a label in the list:
+**Alternative** list item labeling is possible with a `title` attribute.
 
 ```md
-The theory of general relativity <a id="people-einstein" title="Albert Einstein"></a>
-was groundbreaking.
+The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49, Seite 769-822.">Theory of General Relativity<cite> by Albert Einstein was groundbreaking.
+```
+
+The `title` attribute can also be useful to **hide anchors** used as link target.
+
+```md
+<a id="ref-togr" title="Theory of General Relativity"></a>
+The Theory of General Relativity by Albert Einstein was groundbreaking.
 ```
 
 > **Link label extraction**
