@@ -304,7 +304,7 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Since v3.5.0**
 
-You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you mentioned or cited, configure [glossarify-md] with `generateFiles.listOf`...
+You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you cited, configure [glossarify-md] with `generateFiles.listOf`...
 
 *glossarify-md.conf.json*
 
@@ -372,7 +372,7 @@ By default list items will be grouped by section of occurrence using the section
 }
 ```
 
-Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). `listOfFigures` can only detect Markdown image references. You need to manually annotate dynamic graphics like in the following input...
+Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). You need to manually annotate dynamic graphics like in the following input...
 
 ````md
 Markdown image reference ![Foo](./figure.png) and dynamically
@@ -387,7 +387,7 @@ rendered diagramm annotated manually:
 ```
 ````
 
-But `listOfFigures` will prepended an anchor automatically to the markdown reference:
+... and `listOfFigures` will prepend an anchor to the markdown reference:
 
 ````md
 Markdown image reference <a id="foo" class="figure" title="Foo"></a>
@@ -402,7 +402,7 @@ Markdown image reference <a id="foo" class="figure" title="Foo"></a>
 ```
 ````
 
-From both anchors sharing the same anchor class ***figure*** (default) a list of figures can be generated which contains both figures, the one found by Markdown syntax analysis and the one annotated manually. The [glossarify-md] configuration above is shorthand for this one (since v5.0.0) ...
+From both anchors sharing the same anchor class ***figure*** (default) a list of figures can be generated which contains both figures. The [glossarify-md] configuration above is shorthand for (since v5.0.0) ...
 
 *glossarify-md.conf.json*
 
