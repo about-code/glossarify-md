@@ -333,7 +333,10 @@ by Albert Einstein was groundbreaking.
 **Alternative** list item labeling is possible with a `title` attribute.
 
 ```md
-The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49, Seite 769-822.">Theory of General Relativity<cite> by Albert Einstein was groundbreaking.
+The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen
+der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
+Seite 769-822.">Theory of General Relativity<cite> by Albert
+Einstein was groundbreaking.
 ```
 
 The `title` attribute can also be useful to **hide anchors** used as link target.
@@ -392,7 +395,7 @@ rendered diagramm annotated manually:
 ```
 ````
 
-... and `listOfFigures` will prepend an anchor to the markdown reference:
+... but `listOfFigures` will prepend an anchor to the markdown reference:
 
 ````md
 Markdown image reference <a id="foo" class="figure" title="Foo"></a>
