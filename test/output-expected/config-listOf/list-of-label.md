@@ -7,6 +7,7 @@
 5.  [Test Case E: 'title'][5]
 6.  [Test Case F: Partly formatted innerText][6]
 7.  [Test Case G: Fully formatted innerText][7]
+8.  [Test Case H: Arbitrary HTML element][8]
 
 [1]: ./document-infer-label.md "./document-infer-label.md"
 
@@ -21,3 +22,5 @@
 [6]: ./document-infer-label.md#label-partly-formatted-text "Test Case F: Partly formatted innerText"
 
 [7]: ./document-infer-label.md#label-fully-formatted-text "Test Case G: Fully formatted innerText"
+
+[8]: ./document-infer-label.md#label-arbitrary-element "Test Case H: Arbitrary HTML element"
