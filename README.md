@@ -25,7 +25,7 @@
   - [Term Hints](#term-hints)
   - [Multiple Glossaries](#multiple-glossaries)
   - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
-  - [Listings](#listings)
+  - [Lists](#lists)
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
   - [Sorting your glossaries](#sorting-your-glossaries)
@@ -300,11 +300,11 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
 
-### Listings
+### Lists
 
 > **Since v3.5.0**
 
-You can generate arbitrary listings using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you mentioned or cited, configure [glossarify-md] with `generateFiles.listOf`...
+You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a *List of People* you mentioned or cited, configure [glossarify-md] with `generateFiles.listOf`...
 
 *glossarify-md.conf.json*
 
