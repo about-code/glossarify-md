@@ -335,7 +335,7 @@ by Albert Einstein was groundbreaking.
 ```md
 The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen
 der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
-Seite 769-822.">Theory of General Relativity<cite> by Albert
+Seite 769-822.">Theory of General Relativity</cite> by Albert
 Einstein was groundbreaking.
 ```
 
