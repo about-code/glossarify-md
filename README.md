@@ -323,6 +323,8 @@ The <cite id="togr" class="ref">Theory of General Relativity</cite>
 by Albert Einstein was groundbreaking.
 ```
 
+> See this [note](#cite-note-github) for `<cite>` in GitHub previews.
+
 **Type less** by prefixing `id` with the list classifier:
 
 ```md
@@ -355,6 +357,12 @@ The Theory of General Relativity by Albert Einstein was groundbreaking.
 > 1. `id` attribute value, yet without list prefix (`<tag id="prefix-label"></tag>`)
 > 1. Preceding section heading if `id` is just the list prefix (`<tag id="prefix"></tag>`)
 > 1. Filename if `id` is just the list prefix and there is no preceding section heading.
+
+<a id="cite-note-github"></a>
+
+> **Note:** On GitHub, scrolling to [semantic html elements](https://www.w3schools.com/html/html5_semantic_elements.asp) like `<cite>` or `<figure>` did *not* work ([Test Case H/I](https://github.com/about-code/glossarify-md/blob/master/test/output-expected/config-listOf/list-of-label.md)). GitHub's preview renderer strips off those tags. Use `<span>` or `<a>` as alternatives if you care for proper linking in a GitHub repository.
+>
+> However, there is no general restriction in standard HTML we are aware of and it should work well on GitHub Pages with Markdown being translated by a static site generator like [Jekyll](https://jekyllrb.com).
 
 #### List Item Grouping
 
