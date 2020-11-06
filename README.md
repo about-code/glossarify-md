@@ -323,7 +323,7 @@ The <cite id="togr" class="ref">Theory of General Relativity</cite>
 by Albert Einstein was groundbreaking.
 ```
 
-> See this [note](#cite-note-github) for `<cite>` in GitHub previews.
+> See [note](#cite-note-github) below on semantic HTML in GitHub previews.
 
 **Type less** by prefixing `id` with the list classifier:
 
