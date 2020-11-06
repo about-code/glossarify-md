@@ -142,9 +142,11 @@ WITH a list item being a link OR link-reference similar to:
 - [Test Case H: Cite HTML element](./document-infer-label.md#label-cite-element)
 ```
 
+AND **it can be observed that Browser-Scroll-To-Target DOES NOT work on GitHub**
+
 ## [Test Case I: InnerText from figure HTML element](#test-case-i-innertext-from-figure-html-element)
 
-GIVEN HTML element <figure id="label-figure-element">Test Case H: Figure HTML element</figure>
+GIVEN HTML element <figure id="label-figure-element">Test Case I: Figure HTML element</figure>
 
 ```md
 <figure id="label-figure-element">Test Case I: Figure HTML element</figure>
@@ -156,6 +158,8 @@ WITH a list item being a link OR link-reference similar to:
 ```md
 - [Test Case I: Figure HTML element](./document-infer-label.md#label-figure-element)
 ```
+
+AND **it can be observed that Browser-Scroll-To-Target DOES NOT work on GitHub**
 
 ## [Test Case J: InnerText from span HTML element](#test-case-j-innertext-from-span-html-element)
 
@@ -171,3 +175,5 @@ WITH a list item being a link OR link-reference similar to:
 ```md
 - [Test Case J: Span HTML element](./document-infer-label.md#label-span-element)
 ```
+
+AND **it can be observed that Browser-Scroll-To-Target DOES work on GitHub**

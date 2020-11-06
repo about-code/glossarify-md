@@ -8,7 +8,7 @@
 6.  [Test Case F: Partly formatted innerText][6]
 7.  [Test Case G: Fully formatted innerText][7]
 8.  [Test Case H: Cite HTML element][8]
-9.  [Test Case H: Figure HTML element][9]
+9.  [Test Case I: Figure HTML element][9]
 10. [Test Case J: Span HTML element][10]
 
 [1]: ./document-infer-label.md "./document-infer-label.md"
@@ -27,6 +27,6 @@
 
 [8]: ./document-infer-label.md#label-cite-element "Test Case H: Cite HTML element"
 
-[9]: ./document-infer-label.md#label-figure-element "Test Case H: Figure HTML element"
+[9]: ./document-infer-label.md#label-figure-element "Test Case I: Figure HTML element"
 
 [10]: ./document-infer-label.md#label-span-element "Test Case J: Span HTML element"
