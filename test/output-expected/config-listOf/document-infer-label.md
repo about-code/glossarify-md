@@ -127,17 +127,47 @@ WITH a list item being a link OR link-reference similar to:
 - [Test Case G: Fully formatted innerText](./document-infer-label.md#label-fully-formatted-text)
 ```
 
-## [Test Case H: InnerText from arbitrary HTML element](#test-case-h-innertext-from-arbitrary-html-element)
+## [Test Case H: InnerText from cite HTML element](#test-case-h-innertext-from-cite-html-element)
 
-GIVEN arbitrary element <cite id="label-arbitrary-element">Test Case H: Arbitrary HTML element</cite>
+GIVEN HTML element <cite id="label-cite-element">Test Case H: Cite HTML element</cite>
 
 ```md
-<cite id="label-arbitrary-element">Test Case H: Arbitrary HTML element</cite>
+<cite id="label-cite-element">Test Case H: Cite HTML element</cite>
 ```
 
 THEN a file `./list-of-label.md` MUST be generated
 WITH a list item being a link OR link-reference similar to:
 
 ```md
-- [Test Case H: Arbitrary HTML element](./document-infer-label.md#label-arbitrary-element)
+- [Test Case H: Cite HTML element](./document-infer-label.md#label-cite-element)
+```
+
+## [Test Case I: InnerText from figure HTML element](#test-case-i-innertext-from-figure-html-element)
+
+GIVEN HTML element <figure id="label-figure-element">Test Case H: Figure HTML element</figure>
+
+```md
+<figure id="label-figure-element">Test Case I: Figure HTML element</figure>
+```
+
+THEN a file `./list-of-label.md` MUST be generated
+WITH a list item being a link OR link-reference similar to:
+
+```md
+- [Test Case I: Figure HTML element](./document-infer-label.md#label-figure-element)
+```
+
+## [Test Case J: InnerText from span HTML element](#test-case-j-innertext-from-span-html-element)
+
+GIVEN HTML element <span id="label-span-element">Test Case J: Span HTML element</figure>
+
+```md
+<span id="label-span-element">Test Case J: Span HTML element</span>
+```
+
+THEN a file `./list-of-label.md` MUST be generated
+WITH a list item being a link OR link-reference similar to:
+
+```md
+- [Test Case J: Span HTML element](./document-infer-label.md#label-span-element)
 ```
