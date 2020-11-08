@@ -338,9 +338,7 @@ The Theory of General Relativity by Albert Einstein was groundbreaking.
 
 <a id="cite-note-github"></a>
 
-> **Note:** On GitHub, scrolling to [semantic html elements](https://www.w3schools.com/html/html5_semantic_elements.asp) like `<cite>` or `<figure>` did *not* work ([Test Case H/I](https://github.com/about-code/glossarify-md/blob/master/test/output-expected/config-listOf/list-of-label.md)). GitHub's preview renderer strips off those tags. Use `<span>` or `<a>` as alternatives if you care for proper linking in a GitHub repository.
->
-> However, there is no general restriction in standard HTML we are aware of and it should work well on GitHub Pages with Markdown being translated by a static site generator like [Jekyll](https://jekyllrb.com).
+> **Note:** On GitHub, scrolling to [semantic html elements](https://www.w3schools.com/html/html5_semantic_elements.asp) like `<cite>` or `<figure>` did *not* work ([Test Case H/I](https://github.com/about-code/glossarify-md/blob/master/test/output-expected/config-listOf/list-of-label.md)). GitHub's preview renderer strips off those tags. Use `<span>` or `<a>` as alternatives if you care for proper linking in a GitHub repository. However, there is no general restriction in standard HTML we are aware of and it should work well on GitHub Pages with Markdown being translated by a static site generator like [Jekyll](https://jekyllrb.com).
 
 #### List Item Grouping
 
@@ -371,7 +369,7 @@ Let's say you have images referenced via Markdown syntax *and* images generated 
 Markdown image reference ![Foo](./figure.png) and dynamically
 rendered diagramm annotated manually:
 
-<a id="generated" class="figure">Generated Diagramm</a>
+<a id="figure-gen">Generated Diagramm</a>
 
 ```plantuml
 @startuml
@@ -386,7 +384,7 @@ rendered diagramm annotated manually:
 Markdown image reference <a id="foo" class="figure" title="Foo"></a>
 ![Foo](./figure.png) and dynamically rendered diagramm annotated manually:
 
-<a id="generated" class="figure">Generated Diagramm</a>
+<a id="figure-gen">Generated Diagramm</a>
 
 ```plantuml
 @startuml
