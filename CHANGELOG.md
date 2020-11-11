@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-alpha.0](https://github.com/about-code/glossarify-md/compare/v4.0.1...v5.0.0-alpha.0) (2020-11-11)
+
+
+### ⚠ BREAKING CHANGES
+
+* Terms found in HTML markup won't be linkified any longer.
+
+### Features
+
+* Allow lists from arbitrary identifiable HTML nodes ([1342a69](https://github.com/about-code/glossarify-md/commit/1342a69da3e98c21717801f128d4e52369b0c7aa))
+* Anchors for direct navigation to images and tables and unified lists.. See also [README Section *Lists*](./README.md#lists) ([2175d8b](https://github.com/about-code/glossarify-md/commit/2175d8b01557df3b55b08b8b3cf4977d492c5eb7))
+* Improved performance ([2e9f9dc](https://github.com/about-code/glossarify-md/commit/2e9f9dc186bfba9d542f0944d2124049a5cae98c))
+
+
+### Bug Fixes
+
+* Linkification in embedded HTML markup ([#110](https://github.com/about-code/glossarify-md/issues/110)) ([5da4415](https://github.com/about-code/glossarify-md/commit/5da441505b5019a6612aaa2f8d64dc97956e29ac))
+
 ### [4.0.1](https://github.com/about-code/glossarify-md/compare/v4.0.0...v4.0.1) (2020-10-18)
 
 
@@ -46,10 +64,10 @@ was removed.
 * Command Line Interface (CLI) changed (#94).
 
 From the old set of arguments only `--config` and `--help` remain supported.
-Any other configuration options are being replaced by two new options 
-`--shallow` and `--deep` which take a JSON string that is expected to match 
+Any other configuration options are being replaced by two new options
+`--shallow` and `--deep` which take a JSON string that is expected to match
 the configuration schema. As you may recognise from their names you can use
-them to merge a command-line provided configuration with the configuration 
+them to merge a command-line provided configuration with the configuration
 provided in the configuration file.
 
 Use those two options if you need to override particular configuration
