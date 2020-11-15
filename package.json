@@ -52,6 +52,7 @@
     "remark-autolink-headings": "^6.0.1",
     "remark-burger": "^1.0.1",
     "remark-footnotes": "^2.0.0",
+    "remark-heading-id": "^1.0.0",
     "remark-parse": "^8.0.3",
     "remark-reference-links": "^5.0.0",
     "remark-slug": "^6.0.0",
