@@ -1,7 +1,6 @@
 [
   {
     "shortDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
-    "type": "term",
     "value": "#Hashtag",
     "hint": "",
     "longDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
@@ -19,7 +18,6 @@
   },
   {
     "shortDesc": "Testing German Umlauts.",
-    "type": "term",
     "value": "äöüß Term begins with Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -37,7 +35,6 @@
   },
   {
     "shortDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
-    "type": "term",
     "value": "Äquator",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
@@ -55,7 +52,6 @@
   },
   {
     "shortDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
-    "type": "term",
     "value": "bold-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -73,7 +69,6 @@
   },
   {
     "shortDesc": "Word ends with symbols",
-    "type": "term",
     "value": "China中国",
     "hint": "",
     "longDesc": "Word ends with symbols",
@@ -91,7 +86,6 @@
   },
   {
     "shortDesc": "Word contains symbols",
-    "type": "term",
     "value": "Chi中国na",
     "hint": "",
     "longDesc": "Word contains symbols",
@@ -109,7 +103,6 @@
   },
   {
     "shortDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
-    "type": "term",
     "value": "codespan-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -127,7 +120,6 @@
   },
   {
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.",
-    "type": "term",
     "value": "dense-definition",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.\nTHEN term, short and long description MUST still be extracted, correctly.",
@@ -145,7 +137,6 @@
   },
   {
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.",
-    "type": "term",
     "value": "dense-definition-with-alias",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.\nTHEN term, aliases, short and long description MUST still be extracted, correctly.",
@@ -165,7 +156,6 @@
   },
   {
     "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
-    "type": "term",
     "value": "Der Tod und das Mädchen",
     "hint": "",
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
@@ -183,7 +173,6 @@
   },
   {
     "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
-    "type": "term",
     "value": "Faß",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
@@ -201,7 +190,6 @@
   },
   {
     "shortDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
-    "type": "term",
     "value": "In parts formatted",
     "hint": "",
     "longDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
@@ -219,7 +207,6 @@
   },
   {
     "shortDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
-    "type": "term",
     "value": "italic-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -237,7 +224,6 @@
   },
   {
     "shortDesc": "Testing German Umlauts.",
-    "type": "term",
     "value": "Term contains äöüß Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -255,7 +241,6 @@
   },
   {
     "shortDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
-    "type": "term",
     "value": "Term Disjunct A",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
@@ -273,7 +258,6 @@
   },
   {
     "shortDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
-    "type": "term",
     "value": "Term Disjunct B",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
@@ -291,7 +275,6 @@
   },
   {
     "shortDesc": "Testing German Umlauts.",
-    "type": "term",
     "value": "Term ends with Umlauts äöüß",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -309,7 +292,6 @@
   },
   {
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
-    "type": "term",
     "value": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -327,7 +309,6 @@
   },
   {
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
-    "type": "term",
     "value": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -345,7 +326,6 @@
   },
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
-    "type": "term",
     "value": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -363,7 +343,6 @@
   },
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
-    "type": "term",
     "value": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -381,7 +360,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term-Hint-Prefix",
     "hint": "☛ ${term}",
     "longDesc": "",
@@ -399,7 +377,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term-Hint-Suffix",
     "hint": "${term} ☚",
     "longDesc": "",
@@ -417,7 +394,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term-Hint-Suffix-Default",
     "hint": "↴",
     "longDesc": "",
@@ -435,7 +411,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term-Hint-Wrapped",
     "hint": "☛ ${term} ☚",
     "longDesc": "",
@@ -453,7 +428,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Uppercase",
     "hint": "",
     "longDesc": "",
@@ -471,7 +445,6 @@
   },
   {
     "shortDesc": "China (spelling)",
-    "type": "term",
     "value": "zhōngguó",
     "hint": "",
     "longDesc": "China (spelling)",
@@ -489,7 +462,6 @@
   },
   {
     "shortDesc": "Word begins and ends with symbols",
-    "type": "term",
     "value": "中China国",
     "hint": "",
     "longDesc": "Word begins and ends with symbols",
@@ -507,7 +479,6 @@
   },
   {
     "shortDesc": "China",
-    "type": "term",
     "value": "中国",
     "hint": "",
     "longDesc": "China",
@@ -525,7 +496,6 @@
   },
   {
     "shortDesc": "Word begins with symbols",
-    "type": "term",
     "value": "中国China",
     "hint": "",
     "longDesc": "Word begins with symbols",

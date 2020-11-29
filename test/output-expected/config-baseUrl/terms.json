@@ -1,7 +1,6 @@
 [
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term1",
     "hint": "",
     "longDesc": "",
@@ -19,7 +18,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Term2",
     "hint": "",
     "longDesc": "",

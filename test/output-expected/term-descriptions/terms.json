@@ -1,7 +1,6 @@
 [
   {
     "shortDesc": "GIVEN short description partly formatted.",
-    "type": "term",
     "value": "Description Partly Formatted",
     "hint": "ⓕ",
     "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
@@ -19,7 +18,6 @@
   },
   {
     "shortDesc": "",
-    "type": "term",
     "value": "Formatted Term Definitions",
     "hint": "ⓕ",
     "longDesc": "",
@@ -37,7 +35,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN full description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -55,7 +52,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN long description has a link",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
@@ -73,7 +69,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN long description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -91,7 +86,6 @@
   },
   {
     "shortDesc": "THEN short description with a link MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description has a link",
     "hint": "ⓕ",
     "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
@@ -109,7 +103,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -127,7 +120,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description is bold WITH fullstop excluded",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -145,7 +137,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description is bold WITH fullstop included",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -163,7 +154,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description is italic WITH fullstop excluded",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -181,7 +171,6 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
-    "type": "term",
     "value": "GIVEN short description is italic WITH fullstop included",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -199,7 +188,6 @@
   },
   {
     "shortDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
-    "type": "term",
     "value": "Single sentence accross multiple lines",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
@@ -217,7 +205,6 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
-    "type": "term",
     "value": "Single sentence terminated by exclamation mark",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
@@ -235,7 +222,6 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
-    "type": "term",
     "value": "Single sentence terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
@@ -253,7 +239,6 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
-    "type": "term",
     "value": "Single sentence terminated by question mark",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
@@ -271,7 +256,6 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
-    "type": "term",
     "value": "Two sentences accross multiple lines terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
@@ -289,7 +273,6 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
-    "type": "term",
     "value": "Two sentences in a single line terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
@@ -307,7 +290,6 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
-    "type": "term",
     "value": "Two sentences in multiple lines terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
