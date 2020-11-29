@@ -15,15 +15,12 @@ Syntax Extensions MUST be put behind a config flag if markdown output produced b
 
 **Custom Node Type Naming Convention**
 
-- Node types extending custom Markdown syntax MUST follow the pattern `ext-[domain]-[name]-[class]`
+- Custom node types MUST use `Symbol()` or follow the pattern `ext-[domain]-[name]-[class]`
   - `domain` may be the name of a parser or company which popularized the syntax
   - `name` is the actual node type name
   - `class` might be an additional node type classification. It SHOULD use the same Classification as in the [CommonMark Deployed Extensions Catalogue][2].
 
   > Example: `"ext-markdown-it-toc-instruction"` for the [`[[toc]]` processing instruction][3]. *markdown-it* was used as the parser domain even though [markdown-it][5] doesn't support the instruction itself but because it popularized an extension mechansim which led to extensions such as [markdown-it-table-of-contents][6] or [markdown-it-toc-done-right][7].
-- Semantic node types which do not extend Markdown input or output syntax MAY use the `ext-*` pattern.
-
-
 
 [1]: https://spec.commonmark.org/0.29 "CommonMark v0.29"
 [2]: https://github.com/commonmark/commonmark-spec/wiki/Deployed-Extensions "CommonMark catalogue of Deployed Extensions"
