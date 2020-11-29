@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "",
-    "term": "In Glossary A and B",
+    "type": "term",
+    "value": "In Glossary A and B",
     "hint": "",
     "longDesc": "",
     "anchor": "#in-glossary-a-and-b",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "",
-    "term": "In Glossary A and B",
+    "type": "term",
+    "value": "In Glossary A and B",
     "hint": "",
     "longDesc": "",
     "anchor": "#in-glossary-a-and-b",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "",
-    "term": "Only in Glossary A",
+    "type": "term",
+    "value": "Only in Glossary A",
     "hint": "",
     "longDesc": "",
     "anchor": "#only-in-glossary-a",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "",
-    "term": "Only in Glossary B",
+    "type": "term",
+    "value": "Only in Glossary B",
     "hint": "",
     "longDesc": "",
     "anchor": "#only-in-glossary-b",

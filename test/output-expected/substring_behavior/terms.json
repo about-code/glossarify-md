@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
-    "term": "'ÄÖ'",
+    "type": "term",
+    "value": "'ÄÖ'",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "anchor": "#äö",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
-    "term": "'ÄÖÜ'",
+    "type": "term",
+    "value": "'ÄÖÜ'",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "anchor": "#äöü",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
-    "term": "A",
+    "type": "term",
+    "value": "A",
     "hint": "",
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "anchor": "#a",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
-    "term": "Ä",
+    "type": "term",
+    "value": "Ä",
     "hint": "",
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "anchor": "#ä",
@@ -69,7 +73,8 @@
   },
   {
     "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
-    "term": "AB",
+    "type": "term",
+    "value": "AB",
     "hint": "",
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "anchor": "#ab",
@@ -86,7 +91,8 @@
   },
   {
     "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
-    "term": "ABC",
+    "type": "term",
+    "value": "ABC",
     "hint": "",
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "anchor": "#abc",

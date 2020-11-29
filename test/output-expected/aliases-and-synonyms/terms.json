@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "",
-    "term": "Alias substring behavior",
+    "type": "term",
+    "value": "Alias substring behavior",
     "hint": "",
     "longDesc": "",
     "anchor": "#alias-substring-behavior",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
-    "term": "China",
+    "type": "term",
+    "value": "China",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
     "anchor": "#china",
@@ -40,7 +42,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "term": "FIELD",
+    "type": "term",
+    "value": "FIELD",
     "hint": "",
     "longDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "anchor": "#field",
@@ -59,7 +62,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
-    "term": "Flower",
+    "type": "term",
+    "value": "Flower",
     "hint": "",
     "longDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
     "anchor": "#flower",
@@ -78,7 +82,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
-    "term": "Friendship",
+    "type": "term",
+    "value": "Friendship",
     "hint": "",
     "longDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
     "anchor": "#friendship",
@@ -97,7 +102,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
-    "term": "Hopefully",
+    "type": "term",
+    "value": "Hopefully",
     "hint": "",
     "longDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
     "anchor": "#hopefully",
@@ -116,7 +122,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "term": "Issue",
+    "type": "term",
+    "value": "Issue",
     "hint": "",
     "longDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "anchor": "#issue",
@@ -135,7 +142,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "term": "OUR",
+    "type": "term",
+    "value": "OUR",
     "hint": "",
     "longDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "anchor": "#our",
@@ -154,7 +162,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
-    "term": "Term 1",
+    "type": "term",
+    "value": "Term 1",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "anchor": "#term-1",
@@ -175,7 +184,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
-    "term": "Term 2",
+    "type": "term",
+    "value": "Term 2",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "anchor": "#term-2",
@@ -196,7 +206,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
-    "term": "Term 3",
+    "type": "term",
+    "value": "Term 3",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
     "anchor": "#term-3",
@@ -217,7 +228,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
-    "term": "Term 4",
+    "type": "term",
+    "value": "Term 4",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
     "anchor": "#term-4",
@@ -238,7 +250,8 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
-    "term": "Term 5",
+    "type": "term",
+    "value": "Term 5",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
     "anchor": "#term-5",
@@ -258,7 +271,8 @@
   },
   {
     "shortDesc": "",
-    "term": "Unicode Support",
+    "type": "term",
+    "value": "Unicode Support",
     "hint": "",
     "longDesc": "",
     "anchor": "#unicode-support",

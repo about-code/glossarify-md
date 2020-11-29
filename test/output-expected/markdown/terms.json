@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "foo",
-    "term": "dolor",
+    "type": "term",
+    "value": "dolor",
     "hint": "↴",
     "longDesc": "foo",
     "anchor": "#dolor",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
-    "term": "Lorem ipsum",
+    "type": "term",
+    "value": "Lorem ipsum",
     "hint": "↴",
     "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
     "anchor": "#lorem-ipsum",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "",
-    "term": "sit",
+    "type": "term",
+    "value": "sit",
     "hint": "↴",
     "longDesc": "",
     "anchor": "#sit",

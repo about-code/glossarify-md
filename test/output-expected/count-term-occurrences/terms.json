@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
-    "term": "mention-one-once",
+    "type": "term",
+    "value": "mention-one-once",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
     "anchor": "#mention-one-once",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
-    "term": "mention-two-twice",
+    "type": "term",
+    "value": "mention-two-twice",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
     "anchor": "#mention-two-twice",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
-    "term": "Mentioned-in-document-once",
+    "type": "term",
+    "value": "Mentioned-in-document-once",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
     "anchor": "#mentioned-in-document-once",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
-    "term": "Mentioned-in-document-twice",
+    "type": "term",
+    "value": "Mentioned-in-document-twice",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
     "anchor": "#mentioned-in-document-twice",
@@ -69,7 +73,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
-    "term": "One",
+    "type": "term",
+    "value": "One",
     "hint": "",
     "longDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
     "anchor": "#one",
@@ -86,7 +91,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
-    "term": "Two",
+    "type": "term",
+    "value": "Two",
     "hint": "",
     "longDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
     "anchor": "#two",
@@ -103,7 +109,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
-    "term": "Zero",
+    "type": "term",
+    "value": "Zero",
     "hint": "",
     "longDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
     "anchor": "#zero",

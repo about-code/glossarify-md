@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
-    "term": "First-Level-Child",
+    "type": "term",
+    "value": "First-Level-Child",
     "hint": "",
     "longDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
     "anchor": "#first-level-child",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
-    "term": "First-Level-Parent",
+    "type": "term",
+    "value": "First-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
     "anchor": "#first-level-parent",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
-    "term": "Second-Level-Parent",
+    "type": "term",
+    "value": "Second-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
     "anchor": "#second-level-parent",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
-    "term": "Sibling",
+    "type": "term",
+    "value": "Sibling",
     "hint": "",
     "longDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
     "anchor": "#sibling",
