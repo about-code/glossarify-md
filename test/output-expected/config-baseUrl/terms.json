@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "",
-    "term": "Term1",
+    "type": "term",
+    "value": "Term1",
     "hint": "",
     "longDesc": "",
     "anchor": "#term1",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "",
-    "term": "Term2",
+    "type": "term",
+    "value": "Term2",
     "hint": "",
     "longDesc": "",
     "anchor": "#term2",

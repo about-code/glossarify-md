@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
-    "term": "Term A",
+    "type": "term",
+    "value": "Term A",
     "hint": "",
     "longDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
     "anchor": "#term-a",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
-    "term": "Term B",
+    "type": "term",
+    "value": "Term B",
     "hint": "",
     "longDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
     "anchor": "#term-b",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
-    "term": "Term C",
+    "type": "term",
+    "value": "Term C",
     "hint": "",
     "longDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
     "anchor": "#term-c",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
-    "term": "Term D",
+    "type": "term",
+    "value": "Term D",
     "hint": "",
     "longDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
     "anchor": "#term-d",
@@ -69,7 +73,8 @@
   },
   {
     "shortDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
-    "term": "Term E",
+    "type": "term",
+    "value": "Term E",
     "hint": "",
     "longDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
     "anchor": "#term-e",
@@ -86,7 +91,8 @@
   },
   {
     "shortDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
-    "term": "Term F",
+    "type": "term",
+    "value": "Term F",
     "hint": "",
     "longDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
     "anchor": "#term-f",

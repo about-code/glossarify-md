@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "",
-    "term": "all-lowercase",
+    "type": "term",
+    "value": "all-lowercase",
     "hint": "",
     "longDesc": "",
     "anchor": "#all-lowercase",
@@ -18,7 +19,8 @@
   },
   {
     "shortDesc": "",
-    "term": "ALL-UPPERCASE",
+    "type": "term",
+    "value": "ALL-UPPERCASE",
     "hint": "",
     "longDesc": "",
     "anchor": "#all-uppercase",
@@ -35,7 +37,8 @@
   },
   {
     "shortDesc": "",
-    "term": "fIRST-lOWERCASE",
+    "type": "term",
+    "value": "fIRST-lOWERCASE",
     "hint": "",
     "longDesc": "",
     "anchor": "#first-lowercase",
@@ -52,7 +55,8 @@
   },
   {
     "shortDesc": "",
-    "term": "First-Uppercase",
+    "type": "term",
+    "value": "First-Uppercase",
     "hint": "",
     "longDesc": "",
     "anchor": "#first-uppercase",
@@ -69,7 +73,8 @@
   },
   {
     "shortDesc": "",
-    "term": "MiXeD-CaSe",
+    "type": "term",
+    "value": "MiXeD-CaSe",
     "hint": "",
     "longDesc": "",
     "anchor": "#mixed-case",

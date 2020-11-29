@@ -1,7 +1,8 @@
 [
   {
     "shortDesc": "must not be referred to by excluded files.",
-    "term": "Term",
+    "type": "term",
+    "value": "Term",
     "hint": "",
     "longDesc": "must not be referred to by excluded files.",
     "anchor": "#term",
