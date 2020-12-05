@@ -5,9 +5,7 @@
     "outDir": "../../../output-actual/config-cli/deep-defaults",
     "includeFiles": ["."],
     "indexing": {},
-    "glossaries": [
-        { "file": "./glossary.md", "termHint": ""}
-    ],
+    "glossaries": [],
     "linking": "relative",
     "dev": {
         "effectiveConfFile": "./glossarify-md-effective.conf.json"
