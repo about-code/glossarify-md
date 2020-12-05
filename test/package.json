@@ -42,7 +42,7 @@
     "test_21": "npx . --config ./input/config-cli/arg-shallow/glossarify-md.conf.json --shallow \"{'baseUrl': 'cli://localhost', 'linking': 'absolute', 'glossaries':[{'file':'./glossary2.md'}] }\"",
     "test_22": "npx . --config ./input/config-cli/arg-deep/glossarify-md.conf.json --deep \"{'glossaries':[{'file':'./glossary2.md'}]}\"",
     "test_23": "npx . --config ./input/config-cli/deep-defaults/glossarify-md.conf.json",
-    "test_24": "npx . --init > ./input/config-cli/arg-init/conf.gitignore.json && npx . --config ./input/config-cli/arg-init/conf.gitignore.json --shallow '{ \"outDir\": \"../../../../output-actual/config-cli/arg-init/\" }'",
+    "test_24": "npx . --init > ./input/config-cli/arg-init/conf.gitignore.json && npx . --config ./input/config-cli/arg-init/conf.gitignore.json --shallow \"{ 'outDir': '../../../../output-actual/config-cli/arg-init/' }\"",
     "test_25": "npx . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_26": "npx . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
     "test_27": "npx . --config ./input/config-indexFile/term-link-to-section/glossarify-md.conf.json",
