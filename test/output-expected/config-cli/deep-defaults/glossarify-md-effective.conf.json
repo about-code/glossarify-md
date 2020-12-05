@@ -1,4 +1,5 @@
 {
+  "$schema": "../../../../conf.schema.json",
   "baseDir": "{CWD}/output-actual/config-cli/deep-defaults",
   "baseUrl": "file://localhost",
   "excludeFiles": [
@@ -34,6 +35,5 @@
   "reportNotMentioned": false,
   "dev": {
     "effectiveConfFile": "./glossarify-md-effective.conf.json"
-  },
-  "$schema": "../../../../conf.schema.json"
+  }
 }

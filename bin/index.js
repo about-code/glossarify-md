@@ -15,11 +15,16 @@ const banner =
 │   glossarify-md v${version}   │
 └──────────────────────────┘
 `;
-console.log(banner);
 
 // _/ CLI \_____________________________________________________________________
 const cli = {
-    "config": {
+    "init": {
+        alias: "new"
+        ,description: "Generate a complete configuration file with default values."
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"config": {
         alias: "c"
         ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
         ,type: "string"
@@ -46,10 +51,14 @@ const cli = {
 };
 const argv = minimist(proc.argv.slice(2), cli);
 
+if (!argv.init) {
+    // print banner only without --init to prevent writing banner to config.
+    console.log(banner);
+}
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
     printOpts(cli);
-    process.exit(0);
+    proc.exit(0);
 }
 
 // --config
@@ -103,9 +112,16 @@ opts = merge(optsDefault, opts, {
     }
 });
 
+// --init
+if (argv.init) {
+    console.log(JSON.stringify(opts, null, 2));
+    proc.exit(0);
+}
+
 // Resolve 2nd arg paths relative to 1st arg paths...
 opts.baseDir = path.resolve(confDir, opts.baseDir);
 opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
+
 validateOpts(opts);
 
 // _/ Drop old stuff \__________________________________________________________
