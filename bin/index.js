@@ -76,7 +76,7 @@ const optsDefault = Object
         return obj;
     }, {});
 
-let opts = Object.assign(optsDefault, optsFile);
+let opts = optsFile;
 
 // --deep
 if (argv.deep) {
@@ -96,6 +96,13 @@ if (argv.shallow) {
         proc.exit(1);
     }
 }
+opts = merge(optsDefault, opts, {
+    clone: false,
+    arrayMerge: (_default, curOpts) => {
+        return curOpts && curOpts.length > 0 ? curOpts : _default
+    }
+});
+
 // Resolve 2nd arg paths relative to 1st arg paths...
 opts.baseDir = path.resolve(confDir, opts.baseDir);
 opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
