@@ -97,9 +97,9 @@ if (argv.shallow) {
     }
 }
 opts = merge(optsDefault, opts, {
-    clone: false,
-    arrayMerge: (_default, curOpts) => {
-        return curOpts && curOpts.length > 0 ? curOpts : _default
+    clone: false
+    , arrayMerge: (_default, curOpts) => {
+        return curOpts && curOpts.length > 0 ? curOpts : _default;
     }
 });
 
