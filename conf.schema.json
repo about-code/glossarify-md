@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v3.4.0/conf.schema.json",
+    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf.schema.json",
     "type": "object",
     "properties": {
         "baseDir": {
@@ -33,7 +33,9 @@
         "generateFiles": {
             "description": "File generation options.",
             "$ref": "#/$defs/GenerateFilesOpts",
-            "default": {}
+            "default": {
+                "listOf": []
+            }
         },
         "glossaries": {
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
@@ -64,12 +66,16 @@
         "indexing": {
             "description": "Path or glob patterns of files to include for linking to glossaries.",
             "$ref": "#/$defs/IndexingOpts",
-            "default": {}
+            "default": {
+                "groupByHeadingDepth": 6
+            }
         },
         "i18n": {
             "description": "Internationalization and collation options. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator.",
             "$ref": "#/$defs/IntlOpts",
-            "default": {}
+            "default": {
+                "locale": "en"
+            }
         },
         "keepRawFiles": {
             "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
@@ -121,8 +127,7 @@
                 "indexFile": {
                     "description": "Generate a file with a list of glossary terms and where they have been used.",
                     "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts",
-                    "default": {}
+                    "$ref": "#/$defs/IndexFileOpts"
                 },
                 "listOf": {
                     "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors <a class='listing' title='My Sample 1' id='sample-1'/> before your sample code blocks.",
@@ -134,14 +139,12 @@
                 "listOfFigures": {
                     "description": "Generate a file with a list of figures and where they can be found.",
                     "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts",
-                    "default": ""
+                    "$ref": "#/$defs/IndexFileOpts"
                 },
                 "listOfTables": {
                     "description": "Generate a file with a list of tables and where they can be found.",
                     "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts",
-                    "default": ""
+                    "$ref": "#/$defs/IndexFileOpts"
                 }
             }
         },
@@ -169,8 +172,7 @@
                     "description": "Level of detail by which to group occurrences of terms or syntactic elements in generated files (Range [min, max]: [0, 6]). For example, use 0 to not group at all; 1 to group things at the level of document titles, etc. Configures the indexer. The option affects any files generated from the internal AST node index.",
                     "type": "number",
                     "minimum": 0,
-                    "maximum": 6,
-                    "default": 0
+                    "maximum": 6
                 }
             }
         },
@@ -250,6 +252,10 @@
                 },
                 "termsFile": {
                     "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component.",
+                    "type": "string"
+                },
+                "effectiveConfFile": {
+                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults.",
                     "type": "string"
                 }
             }

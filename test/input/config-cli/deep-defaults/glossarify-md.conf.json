@@ -1,0 +1,13 @@
+{
+    "$schema": "../../../../conf.schema.json",
+    "baseUrl": "file://localhost",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-cli/deep-defaults",
+    "includeFiles": ["."],
+    "indexing": {},
+    "glossaries": [],
+    "linking": "relative",
+    "dev": {
+        "effectiveConfFile": "./glossarify-md-effective.conf.json"
+    }
+}
