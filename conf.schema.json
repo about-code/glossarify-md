@@ -3,18 +3,20 @@
     "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf.schema.json",
     "type": "object",
     "properties": {
+        "$schema": {
+            "type": "string",
+            "default": "./node_modules/glossarify-md/conf.schema.json"
+        },
         "baseDir": {
             "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line.",
             "type": "string",
-            "alias": "d",
-            "default": ""
+            "default": "./docs"
         },
         "baseUrl": {
             "description": "The base url to use when creating absolute links to glossary.",
             "type": "string",
             "format": "url",
-            "alias": "b",
-            "default": "http://127.0.0.1"
+            "default": ""
         },
         "excludeFiles": {
             "description": "An array of files or file name patterns that should not be included in any processing.",
@@ -22,7 +24,6 @@
             "items": {
                 "type": "string"
             },
-            "alias": "e",
             "default": ["node_modules", ".git"]
         },
         "force": {
@@ -43,7 +44,6 @@
             "items": {
                 "$ref": "#/$defs/GlossariesOpts"
             },
-            "alias": "g",
             "default": [
                 { "file": "./glossary.md", "termHint": ""}
             ]
@@ -51,7 +51,6 @@
         "ignoreCase": {
             "description": "Find and link every occurrence of a term no matter how it is spelled.",
             "type": "boolean",
-            "alias": "i",
             "default": false
         },
         "includeFiles": {
@@ -60,7 +59,6 @@
             "items": {
                 "type": "string"
             },
-            "alias": "f",
             "default": ["."]
         },
         "indexing": {
@@ -83,7 +81,6 @@
             "items": {
                 "type": "string"
             },
-            "alias": "r",
             "default": []
         },
         "linking": {
@@ -93,25 +90,21 @@
                 "relative",
                 "absolute"
             ],
-            "alias": "l",
             "default": "relative"
         },
         "outDir": {
             "description": "Path to directory where to write processed files to.",
             "type": "string",
-            "alias": "o",
-            "default": ""
+            "default": "./docs-glossarified"
         },
         "outDirDropOld": {
             "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true",
             "type": "boolean",
-            "alias": "",
             "default": true
         },
         "reportNotMentioned": {
             "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
             "type": "boolean",
-            "alias": "",
             "default": false
         },
         "dev": {
