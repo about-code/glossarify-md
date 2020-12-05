@@ -148,6 +148,24 @@
                 }
             }
         },
+        "GlossariesOpts": {
+            "type": "object",
+            "properties": {
+                "file": {
+                    "description": "Name of the glossary file. Conventional default is 'glossary.md'",
+                    "type": "string"
+                },
+                "termHint": {
+                    "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
+                    "type": "string"
+                },
+                "sort": {
+                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options.",
+                    "type": "string",
+                    "enum": ["asc", "desc"]
+                }
+            }
+        },
         "IndexFileOpts": {
             "type": "object",
             "properties": {
@@ -210,24 +228,6 @@
                     "description": "Whether the comparison is for sorting or for searching for matching strings. Default: 'sort'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
                     "type": "string",
                     "enum": ["sort", "search"]
-                }
-            }
-        },
-        "GlossariesOpts": {
-            "type": "object",
-            "properties": {
-                "file": {
-                    "description": "Name of the glossary file. Conventional default is 'glossary.md'",
-                    "type": "string"
-                },
-                "termHint": {
-                    "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
-                    "type": "string"
-                },
-                "sort": {
-                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options.",
-                    "type": "string",
-                    "enum": ["asc", "desc"]
                 }
             }
         },
