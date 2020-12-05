@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v3.4.0/conf.schema.json",
+    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf.schema.json",
     "type": "object",
     "properties": {
         "baseDir": {
@@ -250,6 +250,10 @@
                 },
                 "termsFile": {
                     "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component.",
+                    "type": "string"
+                },
+                "effectiveConfFile": {
+                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults.",
                     "type": "string"
                 }
             }
