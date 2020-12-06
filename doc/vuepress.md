@@ -1,4 +1,4 @@
-# Using *glossarify-md* with [vuepress](https://vuepress.vuejs.org)
+# Using [glossarify-md] with [vuepress]
 
 Below we assume a *sample* project structure like this:
 
@@ -31,7 +31,7 @@ ${root}
 npm i --save glossarify-md
 ```
 
-## Configure *glossarify-md*
+## Configure [glossarify-md]
 
 *glossarify-md.conf.json*
 ```json
@@ -50,10 +50,7 @@ npm i --save glossarify-md
 > ☛ All relative paths inside the config file are being interpreted
 > relativ to `baseDir` except for `$schema` which is relative to the config file.
 
-## Configure *vuepress*
-
-More details on the reasoning behind changing vuepress's own slug algorithm can
-be found in [Appendix](#appendix).
+## Configure [vuepress]
 
 *.vuepress/config.js*
 ```js
@@ -66,11 +63,14 @@ module.exports = {
 };
 ```
 
+
+Details on why we have to change vuepress's own slug algorithm can be found in [Appendix](#appendix).
+
 > **Notes**
 >
 > ⚠ Changing the slug algorithm could be a **breaking change** for published docs. URLs or URL fragments could change. Bookmarks of your readers may no longer work as expected. If this is important to you or your readers verify the outcome carefully before you publish your changes.
 >
-> ⚠ For headings with unicode characters, e.g. `# Äquator` *vuepress* generates HTML anchors with *ASCII* characters which you'd refer to by links `[Äquator](#aquator)`. *glossarify-md* allows unicode characters in fragments and requires you to refer to the same heading by `[Äquator](#äquator)` so by a fragment beginning with #**ä**.
+> ⚠ For headings with unicode characters, e.g. `# Äquator` [vuepress] generates HTML anchors with *ASCII* characters which you'd refer to by links `[Äquator](#aquator)`. [glossarify-md] allows unicode characters in fragments and requires you to refer to the same heading by `[Äquator](#äquator)` so by a fragment beginning with #**ä**.
 
 ## Configure Build Scripts
 
@@ -97,13 +97,11 @@ More information see [README.md](../README.md).
 
 ## Appendix
 
-### Why glossarify-md requires vuepress to use its own Slugger
+### Why glossarify-md requires changing vuepress's slugify algorithm:
 
-*glossarify-md* uses a slug algorithm to create friendly URL fragments (#...) for section links. When *vuepress* translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([about-code/glossarify-md#27](https://github.com/about-code/glossarify-md/issues/27)).
+[glossarify-md] requires a slug algorithm to create friendly URL fragments (#...) for section links. When [vuepress] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27](https://github.com/about-code/glossarify-md/issues/27)). So it's best to configure [vuepress] to use the same slugger as [glossarify-md].
 
-Fortunately *vuepress* allows us to configure it to use the same slugger as *glossarify-md*.
-
-> **☛ Note:** If you decide to drop *glossarify-md* later you might not want to have slugs change again. *glossarify-md* uses [github-slugger](https://npmjs.com/package/github-slugger) internally. You can use it directly like so:
+> **☛ Note:** If you decide to drop [glossarify-md] later you might not want to have slugs change again. [glossarify-md] uses [github-slugger](https://npmjs.com/package/github-slugger) internally. You can use it directly like so:
 >
 >  *.vuepress/config.js*
 >  ```js
@@ -118,3 +116,6 @@ Fortunately *vuepress* allows us to configure it to use the same slugger as *glo
 >       }
 >   };
 >  ```
+
+[vuepress]: https://vuepress.vuejs.org
+[glossarify-md]: https://github.com/about-code/glossarify-md
