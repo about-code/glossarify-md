@@ -161,18 +161,17 @@ Having a configuration file is the recommended way of configuring [glossarify-md
 }
 ```
 
+> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
+>
+> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
+
 ### Generate a Config File with Default Values
 
 > **Since v5.0.0**
 
-You can generate a config file with default values by running the command:
 ~~~
 npx glossarify-md --init > glossarify-md.conf.json
 ~~~
-
-> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
->
-> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
 
 ### Configure via Command Line
 
@@ -524,24 +523,18 @@ The term *support* refers to *runs on the given platform*. Compatibility is main
 
 Show all options and default values.
 
-#### `baseDir``
+#### `baseDir`
 
 - **Range:** `string`
 
 Path to directory where to search for the glossary and markdown files. All paths in a config file except for `$schema` will be relative to *baseDir*. *baseDir* itself and `$schema` are relative to the location of the config file.
 
-#### `excludeFiles
+#### `excludeFiles`
 
 - **Range:** `string[]`
 
 Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
 want to ignore certain markdown files from being modified.
-
-#### `experimentalFootnotes`
-
-- **Range:** `boolean`
-
-Enable support for markdown footnote syntax as defined at <https://pandoc.org/MANUAL.html#footnotes>. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at <https://spec.commonmark.org>.
 
 #### `generateFiles.indexFile`
 
@@ -574,7 +567,7 @@ Generates a list of tables. See section [Additional Features](https://github.com
 #### `glossaries`
 
 - **Range:** `Array<{file: string, [termHint: string], [sort: string]}>`
-- **Default:** [{ "file": "./glossary.md", "termHint": "" }]
+- **Default:** `[{ "file": "./glossary.md", "termHint": "" }]`
 
 A list of glossary configuations, each with a path to the glossary file. Every
 glossary may have an optional *termHint*. A *termHint* is a symbol character
@@ -602,15 +595,12 @@ Paths or Glob-Patterns for files to include.
 
 This option affects outputs generated with `generateFiles`. By default when
 indexing terms and markdown elements they are being grouped by the heading of
-the section they've been found in. In larger books with a lot of sections and
-subsections this can lead to *Index* files or *Tables of X* to be generated with
-lots of low-level sections and much detail. Yet sometimes it may be preferable
-to only list the book chapter or high-level sections which some element has been
-found in. This option allows to set the depth by which indexed elements shall be
-grouped where `1` refers to chapters (`#` headings). Note that grouping by
-high-level sections doesn't mean that only links to the high-level sections are
-generated. Where it makes sense links to low-level sections of occurrence are
-just being shortened.
+the section they've been found in. In larger books with many sections and
+subsections this can lead to Index files or *Tables of X* with a lot of group
+headings (many representing sub- and subsubsections). Yet often it's enough for
+an Index to only list the chapter or higher-level sections where some term or
+element has been found in. This option allows to set the depth by which
+elements shall be grouped where `1` refers to chapters (`#` headings).
 
 #### `i18n`
 
@@ -648,9 +638,8 @@ processing markdown files with an MD to HTML converter omitting a pre-defined
 
 #### `linking.terms`
 
-> **Since v5.0.0**
-
 - **Range:** `"all" | "first-in-paragraph"`
+- **Since:** v5.0.0
 
 By default every occurrence of a term will be linkified. Sometimes this can
 result in too much links affecting readability. This option provides finer
