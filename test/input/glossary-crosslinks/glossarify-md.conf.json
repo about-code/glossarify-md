@@ -1,20 +1,31 @@
 {
-    "$schema": "../../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../../output-actual/glossary-crosslinks",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "keepRawFiles": [],
-    "glossaries": [
-         { "file": "./glossary-g1.md", "termHint": "" }
-        ,{ "file": "./glossary-g2.md", "termHint": "" }
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "termsFile": "../../output-actual/glossary-crosslinks/terms.json",
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/glossary-crosslinks",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "keepRawFiles": [],
+  "glossaries": [
+    {
+      "file": "./glossary-g1.md",
+      "termHint": ""
+    },
+    {
+      "file": "./glossary-g2.md",
+      "termHint": ""
     }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "termsFile": "../../output-actual/glossary-crosslinks/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

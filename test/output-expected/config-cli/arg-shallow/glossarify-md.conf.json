@@ -1,11 +1,18 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseUrl": "file://localhost",
-    "baseDir": ".",
-    "outDir": "../../../output-actual/config-cli/arg-shallow",
-    "includeFiles": ["."],
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
-    "linking": "relative"
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-cli/arg-shallow",
+  "includeFiles": [
+    "."
+  ],
+  "glossaries": [
+    {
+      "file": "./glossary.md"
+    }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all",
+    "baseUrl": "file://localhost"
+  }
 }

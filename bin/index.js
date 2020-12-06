@@ -5,10 +5,10 @@ const fs = require("fs-extra");
 const path = require("path");
 const proc = require("process");
 const program = require("../lib/main");
-const confSchema = require("../conf.schema.json").properties;
-const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_NOT_DELETED, OUTDIR_IS_BASEDIR_WITH_DROP} = require("../lib/cli/messages");
+const upgrade = require("../lib/cli/upgrade");
+const confSchema = require("../conf/v5/schema.json").properties;
+const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP} = require("../lib/cli/messages");
 const {version} = require("../package.json");
-
 const CWD = proc.cwd();
 const banner =
 `┌──────────────────────────┐
@@ -64,12 +64,16 @@ if (argv.help || proc.argv.length === 2) {
 // --config
 let confDir = "";
 let confPath = argv.config || "";
-let optsFile = {};
+let confData = {};
+let optsPromise = Promise.resolve({});
 if (confPath) {
     try {
         confPath = path.resolve(CWD, confPath);
         confDir = path.dirname(confPath);
-        optsFile = JSON.parse(fs.readFileSync(confPath));
+        confData = JSON.parse(fs.readFileSync(confPath));
+        if (!argv.noupgrade) {
+            optsPromise = upgrade(confData, confPath);
+        }
     } catch (e) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
         proc.exit(1);
@@ -78,65 +82,55 @@ if (confPath) {
     confDir = CWD;
 }
 
-const optsDefault = Object
-    .keys(confSchema)
-    .reduce((obj, key) => {
+optsPromise.then((opts) => {
+
+    // --deep custum opts
+    if (argv.deep) {
+        try {
+            opts = merge(opts, JSON.parse(argv.deep.replace(/'/g, "\"")));
+        } catch (e) {
+            console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
+        }
+    }
+    // --shallow custom opts
+    if (argv.shallow) {
+        try {
+            opts = Object.assign(opts, JSON.parse(argv.shallow.replace(/'/g, "\"")));
+        } catch (e) {
+            console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
+        }
+    }
+    // Merge custom opts with default opts
+    const optsDefault = Object.keys(confSchema).reduce((obj, key) => {
         obj[key] = confSchema[key].default;
         return obj;
     }, {});
+    opts = merge(optsDefault, opts, {
+        clone: false
+        , arrayMerge: (_default, curOpts) => {
+            return curOpts && curOpts.length > 0 ? curOpts : _default;
+        }
+    });
 
-let opts = optsFile;
+    // --init
+    if (argv.init) {
+        console.log(JSON.stringify(opts, null, 2));
+        proc.exit(0);
+    }
 
-// --deep
-if (argv.deep) {
-    try {
-        opts = merge(opts, JSON.parse(argv.deep.replace(/'/g, "\"")));
-    } catch (e) {
-        console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
-        proc.exit(1);
-    }
-}
-// --shallow
-if (argv.shallow) {
-    try {
-        opts = Object.assign(opts, JSON.parse(argv.shallow.replace(/'/g, "\"")));
-    } catch (e) {
-        console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
-        proc.exit(1);
-    }
-}
-opts = merge(optsDefault, opts, {
-    clone: false
-    , arrayMerge: (_default, curOpts) => {
-        return curOpts && curOpts.length > 0 ? curOpts : _default;
-    }
+    // Resolve baseDir relative to confDir and outDir relative to baseDir
+    opts.baseDir = path.resolve(confDir, opts.baseDir);
+    opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
+    validateOpts(opts);
+
+    // _/ Run \_____________________________________________________________________
+    program.run(opts);
+}).catch(error => {
+    console.error(error);
+    proc.exit(1);
 });
-
-// --init
-if (argv.init) {
-    console.log(JSON.stringify(opts, null, 2));
-    proc.exit(0);
-}
-
-// Resolve 2nd arg paths relative to 1st arg paths...
-opts.baseDir = path.resolve(confDir, opts.baseDir);
-opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
-
-validateOpts(opts);
-
-// _/ Drop old stuff \__________________________________________________________
-if (opts.outDirDropOld) {
-    try {
-        fs.removeSync(opts.outDir);
-    } catch (err) {
-        console.log(OUTDIR_NOT_DELETED,` Reason: ${err.code}
-    `);
-    }
-}
-
-
-// _/ Run \_____________________________________________________________________
-program.run(opts);
 
 // _/ Helpers \_________________________________________________________________
 function validateOpts(conf) {

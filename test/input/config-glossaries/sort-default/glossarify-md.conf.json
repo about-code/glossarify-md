@@ -1,18 +1,29 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../../../output-actual/config-glossaries/sort-default",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "glossaries": [
-        { "file": "./glossary-numbers-default-asc.md" , "sort": "asc" },
-        { "file": "./glossary-numbers-default-desc.md" , "sort": "desc" }
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/sort-default",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "glossaries": [
+    {
+      "file": "./glossary-numbers-default-asc.md",
+      "sort": "asc"
+    },
+    {
+      "file": "./glossary-numbers-default-desc.md",
+      "sort": "desc"
     }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

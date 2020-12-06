@@ -1,13 +1,18 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseUrl": "file://localhost",
-    "baseDir": ".",
-    "outDir": "../../../output-actual/config-cli/deep-defaults",
-    "includeFiles": ["."],
-    "indexing": {},
-    "glossaries": [],
-    "linking": "relative",
-    "dev": {
-        "effectiveConfFile": "./glossarify-md-effective.conf.json"
-    }
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-cli/deep-defaults",
+  "includeFiles": [
+    "."
+  ],
+  "indexing": {},
+  "glossaries": [],
+  "linking": {
+    "paths": "relative",
+    "terms": "all",
+    "baseUrl": "file://localhost"
+  },
+  "dev": {
+    "effectiveConfFile": "./glossarify-md-effective.conf.json"
+  }
 }

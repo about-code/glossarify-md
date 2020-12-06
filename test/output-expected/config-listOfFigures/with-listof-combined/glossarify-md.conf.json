@@ -1,23 +1,36 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseDir": ".",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "generateFiles": {
-        "listOfFigures": { "class": "my-figures" },
-        "listOf":[
-            { "class": "my-figures", "file": "./figures-combined.md", "title": "Combined List of Figures" }
-        ]
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "listOfFigures": {
+      "class": "my-figures"
     },
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
-    "ignoreCase": false,
-    "outDir": "../../../output-actual/config-listOfFigures/with-listof-combined",
-    "dev": {
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+    "listOf": [
+      {
+        "class": "my-figures",
+        "file": "./figures-combined.md",
+        "title": "Combined List of Figures"
+      }
+    ]
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md"
     }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-listOfFigures/with-listof-combined",
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

@@ -1,18 +1,26 @@
 {
-    "$schema": "../../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../../output-actual/copy-files",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "keepRawFiles": [],
-    "glossaries": [
-        {"file": "./glossary.md", "termHint": ""}
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/copy-files",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "keepRawFiles": [],
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": ""
     }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

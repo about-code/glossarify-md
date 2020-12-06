@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../../conf.schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
   "linking": {
     "paths": "relative",
