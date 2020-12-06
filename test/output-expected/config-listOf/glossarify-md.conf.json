@@ -1,29 +1,56 @@
 {
-    "$schema": "../../../conf.schema.json",
-    "baseDir": ".",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "indexing": {
-        "groupByHeadingDepth": 0
-    },
-    "generateFiles": {
-        "listOf": [
-            { "class": "class-attr", "file": "./list-of-class-attr.md", "title": "Test Case: List of 'class-attr'" },
-            { "class": "prefix", "file": "./list-of-prefix.md",  "title": "Test Case: List of 'prefix'" },
-            { "class": "label",  "file": "./list-of-label.md",   "title": "Test Suite: List of 'label'" },
-            { "class": "table",  "file": "./list-of-tabels.md",  "title": "Test Suite: List of 'table'" },
-            { "class": "figure", "file": "./list-of-figures.md", "title": "Test Suite: List of 'figure'" }
-        ]
-    },
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
-    "ignoreCase": false,
-    "outDir": "../../output-actual/config-listOf",
-    "dev": {
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "indexing": {
+    "groupByHeadingDepth": 0
+  },
+  "generateFiles": {
+    "listOf": [
+      {
+        "class": "class-attr",
+        "file": "./list-of-class-attr.md",
+        "title": "Test Case: List of 'class-attr'"
+      },
+      {
+        "class": "prefix",
+        "file": "./list-of-prefix.md",
+        "title": "Test Case: List of 'prefix'"
+      },
+      {
+        "class": "label",
+        "file": "./list-of-label.md",
+        "title": "Test Suite: List of 'label'"
+      },
+      {
+        "class": "table",
+        "file": "./list-of-tabels.md",
+        "title": "Test Suite: List of 'table'"
+      },
+      {
+        "class": "figure",
+        "file": "./list-of-figures.md",
+        "title": "Test Suite: List of 'figure'"
+      }
+    ]
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md"
     }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../output-actual/config-listOf",
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

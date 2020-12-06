@@ -1,21 +1,32 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../../../output-actual/config-glossaries/sort-i18n-compare-numeric",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "i18n": {
-        "numeric": true
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/sort-i18n-compare-numeric",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "i18n": {
+    "numeric": true
+  },
+  "glossaries": [
+    {
+      "file": "./glossary-i18n-compare-numeric-asc.md",
+      "sort": "asc"
     },
-    "glossaries": [
-        { "file": "./glossary-i18n-compare-numeric-asc.md" , "sort": "asc" },
-        { "file": "./glossary-i18n-compare-numeric-desc.md" , "sort": "desc" }
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+    {
+      "file": "./glossary-i18n-compare-numeric-desc.md",
+      "sort": "desc"
     }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

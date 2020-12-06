@@ -1,7 +1,6 @@
 {
-  "$schema": "../../../../conf.schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": "{CWD}/output-actual/config-cli/deep-defaults",
-  "baseUrl": "file://localhost",
   "excludeFiles": [
     "node_modules",
     ".git"
@@ -29,7 +28,11 @@
     "locale": "en"
   },
   "keepRawFiles": [],
-  "linking": "relative",
+  "linking": {
+    "baseUrl": "file://localhost",
+    "paths": "relative",
+    "terms": "all"
+  },
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",
   "outDirDropOld": true,
   "reportNotMentioned": false,

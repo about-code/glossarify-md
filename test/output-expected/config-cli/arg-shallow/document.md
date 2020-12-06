@@ -41,4 +41,4 @@ AND
 
 -   as a result the term '[Term][1]' MUST be linked absolutely to `cli://localhost/glossary2.md#term`.
 
-[1]: cli://localhost/glossary2.md#term
+[1]: #term
