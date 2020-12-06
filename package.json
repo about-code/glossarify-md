@@ -46,6 +46,7 @@
     "fs-extra": "^9.0.1",
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
+    "inquirer": "^7.3.3",
     "mdast-builder": "^1.1.1",
     "mdast-util-to-string": "^1.1.0",
     "minimist": "^1.2.5",

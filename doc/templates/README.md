@@ -524,15 +524,6 @@ The term *support* refers to *runs on the given platform*. Compatibility is main
 
 Show all options and default values.
 
-#### `baseUrl`
-
-- **Range:** `string`
-
-URL to prepend to links. Only effective with `linking: "absolute"`.
-In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter omitting a pre-defined
-`baseUrl` and using `linking: "relative"` is likely to work better.
-
 #### `baseDir``
 
 - **Range:** `string`
@@ -637,14 +628,33 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-#### `linking`
+#### `linking.paths`
 
 - **Range:** `"relative" | "absolute"`
 
 Whether to create absolute or relative link-urls to the glossary.
-The use of `"absolute"` may require a `baseUrl`.
+The use of `"absolute"` may require a `linking.baseUrl`.
 
-> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
+> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+
+#### `linking.baseUrl`
+
+- **Range:** `string`
+
+URL to prepend to links. Only effective with `linking.paths: "absolute"`.
+In most situations, e.g. when hosting markdown files in a repository or
+processing markdown files with an MD to HTML converter omitting a pre-defined
+`baseUrl` and using `linking.paths: "relative"` is likely to work better.
+
+#### `linking.terms`
+
+> **Since v5.0.0**
+
+- **Range:** `"all" | "first-in-paragraph"`
+
+By default every occurrence of a term will be linkified. Sometimes this can
+result in too much links affecting readability. This option provides finer
+control of linkify behavior.
 
 #### `outDir`
 
