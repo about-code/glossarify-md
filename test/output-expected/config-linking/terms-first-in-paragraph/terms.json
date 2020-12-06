@@ -1,0 +1,36 @@
+[
+  {
+    "shortDesc": "Test term",
+    "value": "Ipsum",
+    "hint": "",
+    "longDesc": "Test term",
+    "anchor": "#ipsum",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-linking/terms-first-in-paragraph/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-linking/terms-first-in-paragraph/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "Test term",
+    "value": "Lorem",
+    "hint": "",
+    "longDesc": "Test term",
+    "anchor": "#lorem",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "",
+      "basePath": "/{CWD}/output-actual/config-linking/terms-first-in-paragraph/glossary.md",
+      "outPath": "/{CWD}/output-actual/config-linking/terms-first-in-paragraph/glossary.md"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
+  }
+]
