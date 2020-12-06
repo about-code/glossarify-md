@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../../conf.schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "first-in-paragraph"
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-linking/terms-first-in-paragraph",
+  "dev": {
+    "termsFile": "../../../output-actual/config-linking/terms-first-in-paragraph/terms.json",
+    "reproducablePaths": true
+  }
+}

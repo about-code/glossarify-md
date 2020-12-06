@@ -85,11 +85,12 @@
         },
         "linking": {
             "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
-            "type": "string",
-            "enum": [
-                "relative",
-                "absolute"
-            ],
+            "oneOf": [{
+                "$ref": "#/$defs/LinkingOpts"
+            },{
+                "description": "Deprecated. Use linking: { \"paths\": \"...\" } with values \"relative\" or \"absolute\" instead.",
+                "$ref": "#/$defs/LinkPaths"
+            }],
             "default": "relative"
         },
         "outDir": {
@@ -223,6 +224,20 @@
                     "enum": ["sort", "search"]
                 }
             }
+        },
+        "LinkingOpts": {
+            "type": "object",
+            "properties": {
+                "paths": { "$ref": "#/$defs/LinkPaths" },
+                "terms": {
+                    "type": "string",
+                    "enum": ["all", "first-in-paragraph"]
+                }
+            }
+        },
+        "LinkPaths": {
+            "type": "string",
+            "enum": ["relative", "absolute"]
         },
         "DevOpts": {
             "type": "object",
