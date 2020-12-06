@@ -48,9 +48,7 @@ npm i --save glossarify-md
 > **Notes**
 >
 > ☛ All relative paths inside the config file are being interpreted
-> relativ to `baseDir`.
->
-> ☛ Consider adding your `outDir` to *.gitignore*.
+> relativ to `baseDir` except for `$schema` which is relative to the config file.
 
 ## Configure *vuepress*
 
