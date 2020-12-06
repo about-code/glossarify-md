@@ -3,9 +3,9 @@
   "baseDir": ".",
   "linking": {
     "paths": "absolute",
-    "terms": "all"
+    "terms": "all",
+    "baseUrl": "http://localhost"
   },
-  "baseUrl": "http://localhost",
   "includeFiles": [
     "."
   ],

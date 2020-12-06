@@ -1,6 +1,5 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
-  "baseUrl": "file://localhost",
   "baseDir": ".",
   "outDir": "../../../output-actual/config-cli/arg-deep",
   "includeFiles": [
@@ -13,6 +12,7 @@
   ],
   "linking": {
     "paths": "relative",
-    "terms": "all"
+    "terms": "all",
+    "baseUrl": "file://localhost"
   }
 }

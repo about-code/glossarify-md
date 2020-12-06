@@ -1,10 +1,10 @@
 {
   "$schema": "../../../conf/v5/schema.json",
   "baseDir": ".",
-  "baseUrl": "http://example.org",
   "linking": {
     "paths": "absolute",
-    "terms": "all"
+    "terms": "all",
+    "baseUrl": "http://example.org"
   },
   "outDir": "../../output-actual/config-baseUrl/",
   "includeFiles": [
