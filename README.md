@@ -315,7 +315,7 @@ This option will generate a file `./book-index.md` with a list of glossary terms
 
 > **Since v3.5.0**
 
-You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a list of *References* configure [glossarify-md] with `generateFiles.listOf`...
+You can generate arbitrary lists like *Lists of References*, *Lists of {you name it}* using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a list of *References* configure [glossarify-md] with `generateFiles.listOf`...
 
 *glossarify-md.conf.json*
 
@@ -334,7 +334,7 @@ The <cite id="togr" class="ref">Theory of General Relativity</cite>
 by Albert Einstein was groundbreaking.
 ```
 
-> See [note](#cite-note-github) below on semantic HTML in GitHub previews.
+> See [some quirks](#cite-note-github) below regarding *semantic HTML* in GitHub previews (only).
 
 **Type less** by prefixing `id` with the list classifier:
 
@@ -343,7 +343,7 @@ The <cite id="ref-togr">Theory of General Relativity</cite>
 by Albert Einstein was groundbreaking.
 ```
 
-**Alternative** list item labeling is possible with a `title` attribute.
+**Alternative list item labeling** is possible with a `title` attribute.
 
 ```md
 The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen
@@ -385,9 +385,7 @@ By default list items will be grouped by section of occurrence using the section
 
 ### List of Figures
 
-> **Since v3.3.0**
-
-> **Since v5.0.0** `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists).
+> **Since v3.3.0** (since v5.0.0 `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists)).
 
 *glossarify-md.conf.json*
 
