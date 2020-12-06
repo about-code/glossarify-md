@@ -1,22 +1,33 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseDir": ".",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "generateFiles": {
-        "indexFile": { "file": "./index.md" }
-    },
-    "glossaries": [
-        { "file": "./glossary-a.md"},
-        { "file": "./glossary-b.md"}
-    ],
-    "ignoreCase": false,
-    "outDir": "../../../output-actual/config-indexFile/multiple-glossaries",
-    "dev": {
-        "termsFile": "../../../output-actual/config-indexFile/multiple-glossaries/terms.json",
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "indexFile": {
+      "file": "./index.md"
     }
+  },
+  "glossaries": [
+    {
+      "file": "./glossary-a.md"
+    },
+    {
+      "file": "./glossary-b.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-indexFile/multiple-glossaries",
+  "dev": {
+    "termsFile": "../../../output-actual/config-indexFile/multiple-glossaries/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

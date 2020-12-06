@@ -1,18 +1,25 @@
 {
-    "$schema": "../../../conf.schema.json",
-    "baseDir": ".",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
-    "ignoreCase": true,
-    "outDir": "../../output-actual/config-ignoreCase-true",
-    "dev": {
-        "termsFile": "../../output-actual/config-ignoreCase-true/terms.json",
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "glossaries": [
+    {
+      "file": "./glossary.md"
     }
+  ],
+  "ignoreCase": true,
+  "outDir": "../../output-actual/config-ignoreCase-true",
+  "dev": {
+    "termsFile": "../../output-actual/config-ignoreCase-true/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

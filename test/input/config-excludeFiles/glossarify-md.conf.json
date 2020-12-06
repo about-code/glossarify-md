@@ -1,21 +1,29 @@
 {
-    "$schema": "../../../conf.schema.json",
-    "baseDir": ".",
-    "outDir": "../../output-actual/config-excludeFiles/",
-    "includeFiles": ["."],
-    "excludeFiles": [
-        "excludeFile*",
-        "**/exclude*/**"
-    ],
-    "glossaries": [
-        { "file": "glossary.md", "termHint": ""}
-    ],
-    "linking": "relative",
-    "ignoreCase": false,
-    "dev": {
-        "termsFile": "../../output-actual/config-excludeFiles/terms.json",
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/config-excludeFiles/",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [
+    "excludeFile*",
+    "**/exclude*/**"
+  ],
+  "glossaries": [
+    {
+      "file": "glossary.md",
+      "termHint": ""
     }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "termsFile": "../../output-actual/config-excludeFiles/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }

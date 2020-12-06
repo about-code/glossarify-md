@@ -1,21 +1,30 @@
 {
-    "$schema": "../../../../conf.schema.json",
-    "baseDir": ".",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "generateFiles": {
-        "indexFile": { "file": "./index.md" }
-    },
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
-    "ignoreCase": false,
-    "outDir": "../../../output-actual/config-indexFile/term-link-to-section",
-    "dev": {
-        "termsFile": "../../../output-actual/config-indexFile/term-link-to-section/terms.json",
-        "printInputAst": false,
-        "reproducablePaths": true,
-        "printOutputAst": false
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "indexFile": {
+      "file": "./index.md"
     }
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-indexFile/term-link-to-section",
+  "dev": {
+    "termsFile": "../../../output-actual/config-indexFile/term-link-to-section/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
 }
