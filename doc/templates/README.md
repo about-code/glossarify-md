@@ -155,17 +155,17 @@ Having a configuration file is the recommended way of configuring [glossarify-md
 
 ```json
 {
-  "$schema": "./node_modules/glossarify-md/conf.schema.json",
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./src",
   "outDir": "../target"
 }
 ```
 
-### Initialize with Default Values
+### Generate a Config File with Default Values
 
 > **Since v5.0.0**
 
-You can generate a config file with all options and default values by running the command:
+You can generate a config file with default values by running the command:
 ~~~
 npx glossarify-md --init > glossarify-md.conf.json
 ~~~

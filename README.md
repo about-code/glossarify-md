@@ -19,7 +19,9 @@
 - [Sample](#sample)
 - [Results](#results)
 - [Configuration](#configuration)
-  - [Overriding via Command Line](#overriding-via-command-line)
+  - [Minimal Example](#minimal-example)
+  - [Generate a Config File with Default Values](#generate-a-config-file-with-default-values)
+  - [Configure via Command Line](#configure-via-command-line)
 - [Additional Features](#additional-features)
   - [Aliases and Synonyms](#aliases-and-synonyms)
   - [Term Hints](#term-hints)
@@ -164,33 +166,44 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 
 Having a configuration file is the recommended way of configuring [glossarify-md]. A minimal configuration may look like:
 
-*glossarify-md.conf.json* (minimal):
+### Minimal Example
+
+> **Since v5.0.0**
+
+*glossarify-md.conf.json*
 
 ```json
 {
-  "$schema": "./node_modules/glossarify-md/conf.schema.json",
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./src",
-  "outDir": "../target",
-  "outDirDropOld": true,
-  "glossaries": [
-     { "file": "./glossary.md" },
-  ],
-  "includeFiles": ["."],
-  "excludeFiles": ["node_modules"],
-  "linking": "relative"
+  "outDir": "../target"
 }
 ```
 
-**Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`. `baseDir` itself is relative to the location of the config file or current working directory. More options see [Additional Features](#additional-features) or [Options](#options) below.
+### Generate a Config File with Default Values
 
-### Overriding via Command Line
+> **Since v5.0.0**
+
+You can generate a config file with default values by running the command:
+
+```
+npx glossarify-md --init > glossarify-md.conf.json
+```
+
+> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
+>
+> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
+
+### Configure via Command Line
+
+> **Since v4.0.0**
 
 Use `--shallow` or `--deep`
 
 1. to provide a configuration solely via command line
-1. to merge a configuration with your config file or the implicit default config in `./node_modules/glossarify-md/conf.json.schema`
+1. to merge a configuration with a config file
 
-Use `--shallow` to *replace* simple top-level options:
+*Example: use `--shallow` to *replace* simple top-level options:*
 
 ```
 glossarify-md
@@ -198,7 +211,7 @@ glossarify-md
   --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
 ```
 
-Use `--shallow` to *replace* complex nested options like `glossaries` alltogether:
+*Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
 
 ```
 glossarify-md
@@ -206,7 +219,7 @@ glossarify-md
   --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
 ```
 
-Use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:
+*Example: use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:*
 
 ```
 glossarify-md
@@ -540,15 +553,6 @@ The term *support* refers to *runs on the given platform*. Compatibility is main
 
 Show all options and default values.
 
-#### `baseUrl`
-
-- **Range:** `string`
-
-URL to prepend to links. Only effective with `linking: "absolute"`.
-In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter omitting a pre-defined
-`baseUrl` and using `linking: "relative"` is likely to work better.
-
 #### \`baseDir\`\`
 
 - **Range:** `string`
@@ -573,23 +577,7 @@ Enable support for markdown footnote syntax as defined at <https://pandoc.org/MA
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.0.0
 
-If available, generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
-
-> **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
-
-#### `generateFiles.listOfFigures`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.3.0
-
-If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
-
-#### `generateFiles.listOfTables`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.4.0
-
-If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
+Generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
 
 #### `generateFiles.listOf`
 
@@ -598,9 +586,24 @@ If available, generates a list of tables. See section [Additional Features](http
 
 If available, generates a list from HTML anchors exposing the configured `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#lists) for an example.
 
+#### `generateFiles.listOfFigures`
+
+- **Range:** `{file: string, [title: string, class: string]}`
+- **Since:** v3.3.0
+
+Generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
+
+#### `generateFiles.listOfTables`
+
+- **Range:** `{file: string, [title: string, class: string]}`
+- **Since:** v3.4.0
+
+Generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
+
 #### `glossaries`
 
 - **Range:** `Array<{file: string, [termHint: string], [sort: string]}>`
+- **Default:** [{ "file": "./glossary.md", "termHint": "" }]
 
 A list of glossary configuations, each with a path to the glossary file. Every
 glossary may have an optional *termHint*. A *termHint* is a symbol character
@@ -654,14 +657,33 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-#### `linking`
+#### `linking.paths`
 
 - **Range:** `"relative" | "absolute"`
 
 Whether to create absolute or relative link-urls to the glossary.
-The use of `"absolute"` may require a `baseUrl`.
+The use of `"absolute"` may require a `linking.baseUrl`.
 
-> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
+> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+
+#### `linking.baseUrl`
+
+- **Range:** `string`
+
+URL to prepend to links. Only effective with `linking.paths: "absolute"`.
+In most situations, e.g. when hosting markdown files in a repository or
+processing markdown files with an MD to HTML converter omitting a pre-defined
+`baseUrl` and using `linking.paths: "relative"` is likely to work better.
+
+#### `linking.terms`
+
+> **Since v5.0.0**
+
+- **Range:** `"all" | "first-in-paragraph"`
+
+By default every occurrence of a term will be linkified. Sometimes this can
+result in too much links affecting readability. This option provides finer
+control of linkify behavior.
 
 #### `outDir`
 
