@@ -5,7 +5,7 @@
     "properties": {
         "$schema": {
             "type": "string",
-            "default": "./node_modules/glossarify-md/conf.schema.json"
+            "default": "./node_modules/glossarify-md/conf/v5/schema.json"
         },
         "baseDir": {
             "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line.",
