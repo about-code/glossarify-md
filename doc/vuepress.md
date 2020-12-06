@@ -84,13 +84,12 @@ module.exports = {
   "build": "npm run glossarify && vuepress build docs-glossarified",
 }
 ```
-- `npm start` builds and serves files from `docs/` with *live-reload*. This is
-what you probably want while writing. Since glossarified sources are written to
-a separate `glossarified/` directory you won't see glossary terms linked in this build mode.
+- `npm start` builds and serves files with *live-reload* from `"baseDir": "./docs"`.
+This is what you probably want while writing.
 
-- `npm run glossarified` builds and serves the glossarified version from `glossarified/` output directory. No live-reload if `docs/` changes.
+- `npm run glossarified` builds and serves the glossarified version from `"outDir": "../docs-glossarified"`. There's no live-reload.
 
-- `npm run build` just builds the glossarified version.
+- `npm run build` just builds the glossarified version without running a server.
 
 More information see [README.md](../README.md).
 
@@ -98,9 +97,9 @@ More information see [README.md](../README.md).
 
 ## Appendix
 
-### Why glossarify-md requires vuepress to use its own slugger
+### Why glossarify-md requires vuepress to use its own Slugger
 
-*glossarify-md* uses a slug algorithms to create friendly URL fragments (#...) for section links. When *vuepress* translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms this implies the risk of generating different fragments which eventually breaks glossary links ([about-code/glossarify-md#27](https://github.com/about-code/glossarify-md/issues/27)).
+*glossarify-md* uses a slug algorithm to create friendly URL fragments (#...) for section links. When *vuepress* translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([about-code/glossarify-md#27](https://github.com/about-code/glossarify-md/issues/27)).
 
 Fortunately *vuepress* allows us to configure it to use the same slugger as *glossarify-md*.
 
