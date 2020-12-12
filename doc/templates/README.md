@@ -54,7 +54,7 @@ npm run glossarify
 
 Having a configuration file is the recommended way of configuring [glossarify-md].
 
-### Generate a Config File with Default Values
+### Generate
 
 > **Since v5.0.0**
 
@@ -64,7 +64,7 @@ npx glossarify-md --init > glossarify-md.conf.json
 
 A minimal configuration may look like:
 
-### Minimal Example
+### Minimal Configuration
 
 > **Since v5.0.0**
 
@@ -73,7 +73,7 @@ A minimal configuration may look like:
 ```json
 {
   "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
-  "baseDir": "./src",
+  "baseDir": "./docs",
   "outDir": "../target"
 }
 ```
@@ -83,7 +83,7 @@ A minimal configuration may look like:
 > `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
 
 
-### Configure via Command Line
+### Config CLI
 
 > **Since v4.0.0**
 
@@ -96,7 +96,7 @@ Use `--shallow` or `--deep`
 ~~~
 glossarify-md
   --config ./glossarify-md.conf.json
-  --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
+  --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
 ~~~
 
 *Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
@@ -122,7 +122,7 @@ We assume a sample project with the following structure:
 
 ```
 ${root}
-   +- src/
+   +- docs/
    |    +- pages/
    |    |    |- page1.md
    |    |    `- page2.md
@@ -131,13 +131,13 @@ ${root}
    |    |- requirements.md
    |    `- glossary.md
    |
-   +- target/  (Generated output directory)
+   +- docs-glossarified/  (Generated output directory)
    `- glossarify-md.conf.json
 ```
 
 Your original glossary is a file
 
-*src/glossary.md*
+*docs/glossary.md*
 
 ```md
 # Glossary
@@ -149,7 +149,7 @@ A glossary term has a short description. The full description contains both sent
 
 Your original files may just use the term *Term* anywhere in text:
 
-*src/pages/page1.md*
+*docs/pages/page1.md*
 
 ```md
 # Demo
@@ -160,11 +160,11 @@ This is a text which uses a glossary Term to describe something.
 Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration).
 
 
-## Results
+**Results**
 
 Augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
 
-*./target/glossary.md*:
+*./docs-glossarified/glossary.md*:
 
 ```md
 # [Glossary](#glossary)
@@ -182,7 +182,7 @@ A glossary term has a short description. The full description contains both sent
 
 ... and occurrences of the term in markdown files have been linked to the term definition in the glossary:
 
-*./target/pages/page1.md*
+*./docs-glossarified/pages/page1.md*
 
 ```md
 # [Demo](#demo)
@@ -225,7 +225,7 @@ Cats are cute, ...dogs are loyal.
 
 In the output files aliases will be linked to their related term:
 
-*./target/pages/page2.md*
+*./docs-glossarified/pages/page2.md*
 
 ```md
 # About Cats
@@ -371,7 +371,7 @@ Einstein was groundbreaking.
 ```
 
 
-*Result: target/references.md (generated)*
+*Result: docs-glossarified/references.md (generated)*
 > ## List of References
 > ----
 > - [Theory of General Relativity](#togr)
@@ -673,7 +673,7 @@ The directory where to write output files to.
 > **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
 > files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
 
-The recommendation is to write outputs to a separate directory such as `../out` or `../glossarified`. or `../target`.
+The recommendation is to write outputs to a separate directory such as `../out` or `../target` or `../docs-glossarified`.
 
 #### `outDirDropOld`
 
