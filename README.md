@@ -16,12 +16,12 @@
 ## Table of Contents
 
 - [Install](#install)
+- [Configuration](#configuration)
+  - [Generate a Config File with Default Values](#generate-a-config-file-with-default-values)
+  - [Minimal Example](#minimal-example)
+  - [Configure via Command Line](#configure-via-command-line)
 - [Sample](#sample)
 - [Results](#results)
-- [Configuration](#configuration)
-  - [Minimal Example](#minimal-example)
-  - [Generate a Config File with Default Values](#generate-a-config-file-with-default-values)
-  - [Configure via Command Line](#configure-via-command-line)
 - [Aliases and Synonyms](#aliases-and-synonyms)
 - [Term Hints](#term-hints)
 - [Multiple Glossaries](#multiple-glossaries)
@@ -69,6 +69,71 @@ scripts: {
 
 ```
 npm run glossarify
+```
+
+## Configuration
+
+Having a configuration file is the recommended way of configuring [glossarify-md].
+
+### Generate a Config File with Default Values
+
+> **Since v5.0.0**
+
+```
+npx glossarify-md --init > glossarify-md.conf.json
+```
+
+A minimal configuration may look like:
+
+### Minimal Example
+
+> **Since v5.0.0**
+
+*glossarify-md.conf.json*
+
+```json
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./src",
+  "outDir": "../target"
+}
+```
+
+> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
+>
+> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
+
+### Configure via Command Line
+
+> **Since v4.0.0**
+
+Use `--shallow` or `--deep`
+
+1. to provide a configuration solely via command line
+1. to merge a configuration with a config file
+
+*Example: use `--shallow` to *replace* simple top-level options:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
+```
+
+*Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
+```
+
+*Example: use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --deep "{'glossaries': [{'file':'./extend.md'}] }"
 ```
 
 ## Sample
@@ -161,69 +226,6 @@ Some syntactic positions of a term are **excluded** from being linked to the glo
 - HTML
 
 > **Note:** Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
-
-## Configuration
-
-Having a configuration file is the recommended way of configuring [glossarify-md]. A minimal configuration may look like:
-
-### Minimal Example
-
-> **Since v5.0.0**
-
-*glossarify-md.conf.json*
-
-```json
-{
-  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
-  "baseDir": "./src",
-  "outDir": "../target"
-}
-```
-
-> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
->
-> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
-
-### Generate a Config File with Default Values
-
-> **Since v5.0.0**
-
-```
-npx glossarify-md --init > glossarify-md.conf.json
-```
-
-### Configure via Command Line
-
-> **Since v4.0.0**
-
-Use `--shallow` or `--deep`
-
-1. to provide a configuration solely via command line
-1. to merge a configuration with a config file
-
-*Example: use `--shallow` to *replace* simple top-level options:*
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
-```
-
-*Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
-```
-
-*Example: use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:*
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --deep "{'glossaries': [{'file':'./extend.md'}] }"
-```
 
 ## Aliases and Synonyms
 
@@ -491,9 +493,9 @@ Like with `listOfFigures` there's a `listOfTables` option which can be combined 
 }
 ```
 
-...generates a List of Tables from the implicit `listOf` anchor class ***table***.
+...generates a *List of Tables* with the implicit `listOf` classifier ***table***.
 
-Markdown tables have no inherent notion of a table caption. [glossarify-md] tries to infer a caption from a paragraph ending with an *emphasized* phrase which itself is **terminated with a colon**, for example:
+Markdown tables have no notion of a table caption. To render a *List of Tables* list item [glossarify-md] can infer a link label from the paragraph preceding the table if it ends with an *emphasized* phrase. The phrase **must be terminated by a colon**, for example:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
@@ -507,7 +509,7 @@ Markdown tables have no inherent notion of a table caption. [glossarify-md] trie
 | 3        | Book        | $23.45     |
 ```
 
-But such a phrase could also be it's own distinct paragraph:
+The phrase could also be it's own distinct paragraph:
 
 <a id="average-prices-by-category"></a>
 
@@ -534,10 +536,10 @@ But such a phrase could also be it's own distinct paragraph:
 | 3        | Book        | $23.45     |
 ```
 
-Since **v5.0.0** all these variants will generate an HTML anchor, so you can use them interchangably with or replace them by an HTML anchor as well:
+Since **v5.0.0** all the previous variants will generate an invisible HTML anchor to integrate with `listOf`. You can use them interchangably with or replace them by an HTML anchor as well:
 
 ```md
-<a id="table-avg-prices" title="Average Prices by Article Category"></a>
+<a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
 
 | Category | Description | Price Avg. |
 | -------- | ----------- | ---------- |
@@ -546,7 +548,7 @@ Since **v5.0.0** all these variants will generate an HTML anchor, so you can use
 | 3        | Book        | $23.45     |
 ```
 
-If [glossarify-md] can't find a table caption by any of above means it will fall back to rendering a list item using the table headings separated by comma, the section of occurrence or the file name (in this order).
+If [glossarify-md] can't find a table caption by any of the above means it will fall back to rendering a list item using the table headings separated by comma, the section of occurrence or the file name (in this order).
 
 <!--
 1. **HTML anchor** see `listOf`
