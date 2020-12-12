@@ -362,7 +362,7 @@ You can **type less** by using an *id-prefix* and let [glossarify-md] infer the 
 ~~~
 
 <a id="ref-togr-work"></a>
-**Alternative or hidden list item labelling** is possible with a `title` attribute.
+**Alternative list item labels** are possible with the `title` attribute.
 
 ```md
 The <cite id="ref-togr-work" title="A. Einstein, 1916. Die Grundlagen
@@ -374,7 +374,7 @@ Einstein was groundbreaking.
 
 *Result: docs-glossarified/references.md (generated)*
 > ## List of References
-> ----
+>
 > - [Theory of General Relativity](#togr)
 > - [A. Einstein, 1916. Die Grundlagen
 der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
@@ -382,7 +382,7 @@ Seite 769-822.](#ref-togr-work)
 > - ...
 
 <a id="cite-note-github"></a>
-> **Note:** [GitHub]'s `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
+> **Note:** [GitHub] `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
 
 [GitHub]: https://github.com
 <!--
@@ -467,7 +467,7 @@ Like with `listOfFigures` there's a `listOfTables` option which can be combined 
 ```
 ...generates a *List of Tables* with the implicit `listOf` classifier ***table***.
 
-Markdown tables have no notion of a table caption. To render a *List of Tables* list item [glossarify-md] can infer a link label from the paragraph preceding the table if it ends with an *emphasized* phrase. The phrase **must be terminated by a colon**, for example:
+Markdown tables have no notion of a table caption. To render a list item [glossarify-md] can infer an item label from a paragraph preceding the table if it ends with an *emphasized* phrase. The phrase itself **must be terminated by a colon**. For example:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
