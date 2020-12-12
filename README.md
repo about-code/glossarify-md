@@ -18,9 +18,10 @@
 - [Install](#install)
 - [Configuration](#configuration)
   - [Generate](#generate)
-  - [Minimal Configuration](#minimal-configuration)
+  - [Minimal](#minimal)
   - [Config CLI](#config-cli)
 - [Sample](#sample)
+- [What's not Linked](#whats-not-linked)
 - [Aliases and Synonyms](#aliases-and-synonyms)
 - [Term Hints](#term-hints)
 - [Multiple Glossaries](#multiple-glossaries)
@@ -82,9 +83,7 @@ Having a configuration file is the recommended way of configuring [glossarify-md
 npx glossarify-md --init > glossarify-md.conf.json
 ```
 
-A minimal configuration may look like:
-
-### Minimal Configuration
+### Minimal
 
 > **Since v5.0.0**
 
@@ -154,6 +153,8 @@ ${root}
    `- glossarify-md.conf.json
 ```
 
+**Input**
+
 Your original glossary is a file
 
 *docs/glossary.md*
@@ -166,7 +167,7 @@ Your original glossary is a file
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-Your original files may just use the term *Term* anywhere in text:
+Your document files may just use the term *Term* anywhere in text:
 
 *docs/pages/page1.md*
 
@@ -178,7 +179,7 @@ This is a text which uses a glossary Term to describe something.
 
 Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration).
 
-**Results**
+**Output Results**
 
 Augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
 
@@ -216,15 +217,17 @@ This is a text which uses a glossary [Term ↴][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
-Some syntactic positions of a term are **excluded** from being linked to the glossary. These are
+## What's not Linked
 
-- Headlines
-- Blockquotes
-- Preformatted blocks
-- (Markdown) links
-- HTML
+Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. These are
 
-> **Note:** Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
+- Headlines `#`
+- Blockquotes `>`
+- Preformatted blocks ```` ```, ~~~ ````
+- (Markdown) links `[]()`
+- HTML `<a>text</a>`
+
+Terms found in Markdown blockquotes (`>`) aren't linked to a term definition based on the premise that a quoted source entity may not share the same definition of a term like the entity who quotes it. They could use a term in different semantic contexts.
 
 ## Aliases and Synonyms
 
