@@ -29,11 +29,11 @@
   
 1.  [Figure 7 depth 3][7]  
   
-####### [Heading 8 Depth 6](#heading-8-depth-6)  
+###### [Heading 8 Depth 6](#heading-8-depth-6)  
   
 1.  [Figure 8 depth 6][8]  
   
-####### [Heading 9 Depth 2](#heading-9-depth-2)  
+###### [Heading 9 Depth 2](#heading-9-depth-2)  
   
 1.  [Figure 9 depth 2][9]  
 

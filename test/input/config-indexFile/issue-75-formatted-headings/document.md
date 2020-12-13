@@ -19,6 +19,7 @@
     ```
 
 - AND MUST produce links with label
+
     ```
     ## Term
     [FooClass][9]

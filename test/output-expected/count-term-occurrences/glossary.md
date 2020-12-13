@@ -51,17 +51,17 @@ AND it is mentioned twice in a document
 AND not in the glossary
 THEN this term's occurrence count MUST be 2.
 
-[1]: #zero 'GIVEN a term "Zero"
-AND the term "Zero" is mentioned twice in its own definition
+[1]: #zero "GIVEN a term \"Zero\"
+AND the term \"Zero\" is mentioned twice in its own definition
 AND nowhere else
-THEN this term's occurrence count MUST be 0.'
+THEN this term's occurrence count MUST be 0."
 
-[2]: #one 'GIVEN a term "One"
+[2]: #one "GIVEN a term \"One\"
 AND the term is mentioned only once in a subsequent term definition
 AND nowhere else
-THEN this term's occurrence count MUST be 1.'
+THEN this term's occurrence count MUST be 1."
 
-[3]: #two 'GIVEN a term "Two"
+[3]: #two "GIVEN a term \"Two\"
 AND the term is mentioned term two times in a subsequent term definition
 AND nowhere else
-THEN this term's occurrence count MUST be 2.'
+THEN this term's occurrence count MUST be 2."

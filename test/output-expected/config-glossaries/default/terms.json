@@ -172,10 +172,10 @@
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
+    "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "value": "Faß",
     "hint": "",
-    "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
+    "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "anchor": "#faß",
     "glossary": {
       "file": "./unicode-glossary.md",

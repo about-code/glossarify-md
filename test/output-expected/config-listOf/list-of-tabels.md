@@ -4,9 +4,9 @@
 2.  [Table Comment][2]
 3.  [My id][3]
 4.  [My other table][4]
-5.  [Test4_Column1, Test4_Column2][5]
-6.  [Test5_Column1, Test5_Column2][6]
-7.  [Test5_Column1, Test5_Column2][7]
+5.  [Test4\_Column1, Test4\_Column2][5]
+6.  [Test5\_Column1, Test5\_Column2][6]
+7.  [Test5\_Column1, Test5\_Column2][7]
 8.  [Ambiguous][8]
 9.  [Ambiguous][9]
 

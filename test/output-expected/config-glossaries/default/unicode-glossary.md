@@ -27,8 +27,8 @@ THEN the linker MUST NOT link the compound with a glossary definition.
 
 GIVEN a compound term 'Faßöl'
 WITH '[Faß][2]' being a glossary term
- AND '[Faß][2]' ending with a non-ASCII character
- AND 'öl' beginning with a non-ASCII character
+AND '[Faß][2]' ending with a non-ASCII character
+AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
 AND 'Faßöl' MUST NOT be linked to the glossary definition of '[Faß][2]'.
 
@@ -62,6 +62,8 @@ Word contains symbols
 THEN the linker MUST NOT link the compound with a glossary definition."
 
 [2]: #faß "GIVEN a compound term 'Faßöl'
-WITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character
+WITH 'Faß' being a glossary term
+AND 'Faß' ending with a non-ASCII character
+AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
 AND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'."

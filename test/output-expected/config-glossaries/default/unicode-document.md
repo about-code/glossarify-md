@@ -20,8 +20,8 @@ THEN the linker MUST NOT link the compound with a glossary definition.
 
 GIVEN a compound term 'Faßöl'
 WITH '[Faß][6]' being a glossary term
- AND '[Faß][6]' ending with a non-ASCII character
- AND 'öl' beginning with a non-ASCII character
+AND '[Faß][6]' ending with a non-ASCII character
+AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
 AND 'Faßöl' MUST NOT be linked to the glossary definition of '[Faß][6]'.
 
@@ -57,7 +57,9 @@ THEN the linker MUST link the term with its glossary definition.
 THEN the linker MUST NOT link the compound with a glossary definition."
 
 [6]: ./unicode-glossary.md#faß "GIVEN a compound term 'Faßöl'
-WITH 'Faß' being a glossary term AND 'Faß' ending with a non-ASCII character AND 'öl' beginning with a non-ASCII character
+WITH 'Faß' being a glossary term
+AND 'Faß' ending with a non-ASCII character
+AND 'öl' beginning with a non-ASCII character
 THEN 'Faßöl' MUST NOT be split into two words
 AND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'."
 
