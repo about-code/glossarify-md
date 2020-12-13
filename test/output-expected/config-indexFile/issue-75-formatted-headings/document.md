@@ -13,7 +13,7 @@
 
         [9]: ./glossary.md#term ... a term
 
-      which subsequently cause error
+    which subsequently cause error
 
         TypeError: Cannot read property 'length' of undefined
         at Of.escape ({redacted}/glossarify-md/node_modules/remark-stringify/lib/escape.js:64:24)

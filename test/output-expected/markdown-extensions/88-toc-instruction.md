@@ -1,4 +1,4 @@
-# [[[toc]] processing instruction](#processing-instruction)
+# [[[toc]] processing instruction](#toc-processing-instruction)
 
 -   GIVEN an input document with `[[toc]]` processing instruction,
 

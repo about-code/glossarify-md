@@ -1,9 +1,9 @@
 [
   {
-    "shortDesc": "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section' AND a link label 'Section'.",
+    "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
     "value": "Term",
     "hint": "",
-    "longDesc": "GIVEN a term 'Term' AND a document with a heading 'Section' AND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section' AND a link label 'Section'.",
+    "longDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
     "anchor": "#term",
     "glossary": {
       "file": "./glossary.md",

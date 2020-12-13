@@ -111,26 +111,26 @@ GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'
 AND aliases contain unicode word characters
 THEN they MUST still be separated correctly
 
-[1]: #issue 'GIVEN a term "Issue"
-AND an alias "Issues" WHERE the alias begins with the term
-THEN the alias MUST still be linked to the term, correctly.'
+[1]: #issue "GIVEN a term \"Issue\"
+AND an alias \"Issues\" WHERE the alias begins with the term
+THEN the alias MUST still be linked to the term, correctly."
 
-[2]: #our 'GIVEN a term "OUR"
-AND an alias "FLOURISH" WHERE the alias includes the term
-THEN the alias MUST still be linked to the term, correctly.'
+[2]: #our "GIVEN a term \"OUR\"
+AND an alias \"FLOURISH\" WHERE the alias includes the term
+THEN the alias MUST still be linked to the term, correctly."
 
-[3]: #field 'GIVEN a term "FIELD"
-AND an alias "GREENFIELD" WHERE the alias ends with the term
-THEN the alias MUST still be linked to the term, correctly.'
+[3]: #field "GIVEN a term \"FIELD\"
+AND an alias \"GREENFIELD\" WHERE the alias ends with the term
+THEN the alias MUST still be linked to the term, correctly."
 
-[4]: #hopefully 'GIVEN a term "Hopefully"
-AND an alias "Hope" WHERE the term begins with the alias
-THEN the alias MUST still be linked to the term, correctly.'
+[4]: #hopefully "GIVEN a term \"Hopefully\"
+AND an alias \"Hope\" WHERE the term begins with the alias
+THEN the alias MUST still be linked to the term, correctly."
 
-[5]: #flower 'GIVEN a term "Flower"
-AND an alias "lower" WHERE the term ends with the alias
-THEN the alias MUST still be linked to the term, correctly.'
+[5]: #flower "GIVEN a term \"Flower\"
+AND an alias \"lower\" WHERE the term ends with the alias
+THEN the alias MUST still be linked to the term, correctly."
 
-[6]: #friendship 'GIVEN a term "Friendship"
-AND an alias "end" WHERE the term includes the alias
-THEN the alias MUST be linked to the term, correctly.'
+[6]: #friendship "GIVEN a term \"Friendship\"
+AND an alias \"end\" WHERE the term includes the alias
+THEN the alias MUST be linked to the term, correctly."

@@ -22,7 +22,7 @@ AND the link text MUST be "Label from Comment".
 GIVEN a config option `generateFiles.listOfTables`
 AND a markdown table
 WHEN preceded with an HTML comment `<!-- Invalid Label Comment -->`
-WITH comment missing the prefix `table: `
+WITH comment missing the prefix `table:`
 THEN in the generated output file the table MUST be linked to this file
 AND the link text MUST equal 'Column 1, Column 2, Column 3'.
 
