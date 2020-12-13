@@ -1,7 +1,7 @@
 # glossarify-md
 
-![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20(Functional)/badge.svg)
-![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20(with%20latest%20deps)/badge.svg)
+![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(Functional\)/badge.svg)
+![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(with%20latest%20deps\)/badge.svg)
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
 
@@ -223,7 +223,7 @@ Some syntactic positions of a term occurrence are **excluded** from being linked
 
 - Headlines `#`
 - Blockquotes `>`
-- Preformatted blocks ```` ```, ~~~ ````
+- Preformatted blocks ` ```, ~~~ `
 - (Markdown) links `[]()`
 - HTML `<a>text</a>`
 
@@ -406,7 +406,7 @@ Einstein was groundbreaking.
 
 <a id="cite-note-github"></a>
 
-> **Note:** [GitHub] `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
+> **Note:** [GitHub] `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5\_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
 
 [GitHub]: https://github.com
 
@@ -480,7 +480,8 @@ With this you could also choose a shorter classifier like ***fig***. If you like
 
 > **Since v3.4.0**
 
-Like with `listOfFigures` there's a `listOfTables` option which can be combined with or used instead of [`listOf`](#lists). It generates HTML anchors from Markdown table syntax. A configuration...
+Like with `listOfFigures` there's a `listOfTables` option which generates HTML anchors
+for a [list](#lists) from Markdown table syntax. The following configuration generates a *List of Tables* with the implicit `listOf` classifier ***table***:
 
 *glossarify-md.conf.json*
 
@@ -493,9 +494,7 @@ Like with `listOfFigures` there's a `listOfTables` option which can be combined 
 }
 ```
 
-...generates a *List of Tables* with the implicit `listOf` classifier ***table***.
-
-Markdown tables have no notion of a table caption. To render a list item [glossarify-md] can infer an item label from a paragraph preceding the table if it ends with an *emphasized* phrase. The phrase itself **must be terminated by a colon**. For example:
+Markdown tables have no notion of a table caption. To render a list item [glossarify-md] tries to infer an item label from a paragraph preceding the table. If it ends with an *emphasized* phrase and the phrase itself **is terminated by a colon**, then it uses that phrase as the item label:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
@@ -509,8 +508,13 @@ Markdown tables have no notion of a table caption. To render a list item [glossa
 | 3        | Book        | $23.45     |
 ```
 
-The phrase could also be it's own distinct paragraph:
+> ## List of Tables
+>
+> - [Table of average prices by article category](#table-of-average-prices-by-article-category)
+> - [Average prices by category](#average-prices-by-category)
+> - [Average Prices by Article Category](#avg-prices)
 
+The phrase could also be it's own distinct paragraph:
 <a id="average-prices-by-category"></a>
 
 ```md
@@ -526,6 +530,7 @@ The phrase could also be it's own distinct paragraph:
 ```
 
 **Since v3.4.0** there has also been support for *invisble* table captions using an *HTML comment syntax*:
+<a id="avg-prices"></a>
 
 ```md
 <!-- table: Average Prices by Article Category -->
@@ -563,7 +568,7 @@ If [glossarify-md] can't find a table caption by any of the above means it will 
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
 
-| Node-Version | compatibility & support status                                                                                                                                        |
+| Node-Version |                                                                    compatibility & support status                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Current      | Tested. Should Node introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
 | 12.x LTS     | Tested + Supported                                                                                                                                                    |
@@ -638,7 +643,7 @@ Paths or Glob-Patterns for files to include.
 
 #### `indexing.groupByHeadingDepth`
 
-- **Range:** `number` in [1-6]
+- **Range:** `number` in \[1-6]
 - **Since:** v3.4.0
 
 This option affects outputs generated with `generateFiles`. By default when
@@ -652,9 +657,9 @@ elements shall be grouped where `1` refers to chapters (`#` headings).
 
 #### `i18n`
 
-- **Range**:` { locale: string, [localeMatcher: string],
+- **Range**:`  { locale: string, [localeMatcher: string],
     [caseFirst: string], [ignorePunctuation: boolean],
-    [numeric: boolean], [sensitivity: string], [usage: string] }`
+    [numeric: boolean], [sensitivity: string], [usage: string] } `
 
 Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 

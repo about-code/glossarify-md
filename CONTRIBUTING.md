@@ -143,7 +143,7 @@ npm run test
 
 **If you followed the guide so far then tests are *expected to fail* at this point.**
 
- This is because
+This is because
 your new test inputs aren't part of the baseline yet. Before adding them to the
 baseline **carefully review the diff of failing tests**:
 

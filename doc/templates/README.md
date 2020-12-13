@@ -453,7 +453,8 @@ With this you could also choose a shorter classifier like ***fig***. If you like
 
 > **Since v3.4.0**
 
-Like with `listOfFigures` there's a `listOfTables` option which can be combined with or used instead of [`listOf`](#lists). It generates HTML anchors from Markdown table syntax. A configuration...
+Like with `listOfFigures` there's a `listOfTables` option which generates HTML anchors
+for a [list](#lists) from Markdown table syntax. The following configuration generates a *List of Tables* with the implicit `listOf` classifier ***table***:
 
 *glossarify-md.conf.json*
 
@@ -465,9 +466,8 @@ Like with `listOfFigures` there's a `listOfTables` option which can be combined 
     }
 }
 ```
-...generates a *List of Tables* with the implicit `listOf` classifier ***table***.
 
-Markdown tables have no notion of a table caption. To render a list item [glossarify-md] can infer an item label from a paragraph preceding the table if it ends with an *emphasized* phrase. The phrase itself **must be terminated by a colon**. For example:
+Markdown tables have no notion of a table caption. To render a list item [glossarify-md] tries to infer an item label from a paragraph preceding the table. If it ends with an *emphasized* phrase and the phrase itself **is terminated by a colon**, then it uses that phrase as the item label:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
@@ -481,9 +481,15 @@ Markdown tables have no notion of a table caption. To render a list item [glossa
 | 3        | Book        | $23.45     |
 ```
 
-The phrase could also be it's own distinct paragraph:
+> ## List of Tables
+>
+> - [Table of average prices by article category](#table-of-average-prices-by-article-category)
+> - [Average prices by category](#average-prices-by-category)
+> - [Average Prices by Article Category](#avg-prices)
 
+The phrase could also be it's own distinct paragraph:
 <a id="average-prices-by-category"></a>
+
 ```md
 [...] which we can see from the average price by article category.
 
@@ -497,6 +503,7 @@ The phrase could also be it's own distinct paragraph:
 ```
 
 **Since v3.4.0** there has also been support for *invisble* table captions using an *HTML comment syntax*:
+<a id="avg-prices"></a>
 
 ```md
 <!-- table: Average Prices by Article Category -->
