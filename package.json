@@ -68,8 +68,8 @@
   },
   "devDependencies": {
     "eslint": "^7.15.0",
-    "remark-cli": "^8.0.1",
-    "remark-comment-config": "^5.1.1",
+    "remark-cli": "^9.0.0",
+    "remark-comment-config": "^6.0.0",
     "remark-license": "^5.1.0",
     "remark-toc": "^7.0.0",
     "standard-version": "^9.0.0"
