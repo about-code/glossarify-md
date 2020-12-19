@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-alpha.2](https://github.com/about-code/glossarify-md/compare/v5.0.0-alpha.1...v5.0.0-alpha.2) (2020-12-19)
+
+
+### Bug Fixes
+
+* Include 'conf' directory in npm package ([280efef](https://github.com/about-code/glossarify-md/commit/280efefc0bf4a1ada9a42ff840ecc6e05f2af14f))
+
 ## [5.0.0-alpha.1](https://github.com/about-code/glossarify-md/compare/v4.0.1...v5.0.0-alpha.1) (2020-12-19)
 
 
