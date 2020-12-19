@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/file-glob",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "glossaries": [
+    {
+      "file": "./**/document.md",
+      "termHint": "~"
+    }
+  ],
+  "linking": {
+    "paths": "relative",
+    "terms": "all"
+  },
+  "ignoreCase": false
+}
