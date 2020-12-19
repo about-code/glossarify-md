@@ -295,12 +295,6 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ]
 ```
 
-> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - accross files!
->
-> **Note:** `termHint` will be ignored if `file` is a glob.
-
-[glob]: https://github.com/isaacs/node-glob#glob-primer
-
 *requirements.md*
 
 ```md
@@ -313,6 +307,12 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ```
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
+
+> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - accross files!
+>
+> **Note:** `termHint` will be ignored if `file` is a glob.
+
+[glob]: https://github.com/isaacs/node-glob#glob-primer
 
 ## Sorting your glossaries
 
