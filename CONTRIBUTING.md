@@ -122,15 +122,9 @@ A test case usually consists of
 
 ```json
 {
-    "$schema": "../../../conf.schema.json",
+    "$schema": "../../../conf/v5/schema.json",
     "baseDir": ".",
     "outDir": "../../output-actual/foo-test",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
     "dev": {
         "termsFile": "../../output-actual/foo-test/terms.json"
     }
@@ -149,7 +143,7 @@ npm run test
 
 **If you followed the guide so far then tests are *expected to fail* at this point.**
 
- This is because
+This is because
 your new test inputs aren't part of the baseline yet. Before adding them to the
 baseline **carefully review the diff of failing tests**:
 
@@ -220,15 +214,9 @@ ${workspace}/
 
 ```json
 {
-    "$schema": "../conf.schema.json",
+    "$schema": "../conf/v5/schema.json",
     "baseDir": "./input",
     "outDir": "../output",
-    "linking": "relative",
-    "includeFiles": ["."],
-    "excludeFiles": [],
-    "glossaries": [
-        { "file": "./glossary.md"}
-    ],
     "dev": {
         "termsFile": "../output/terms.json",
         "printInputAst": true

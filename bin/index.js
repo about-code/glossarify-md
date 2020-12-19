@@ -19,8 +19,8 @@ const banner =
 // _/ CLI \_____________________________________________________________________
 const cli = {
     "init": {
-        alias: "new"
-        ,description: "Generate a complete configuration file with default values."
+        alias: ""
+        ,description: "Generate a configuration file with default values. Usage: 'glossarify-md --init > glossarify-md.conf.json'"
         ,type: "boolean"
         ,default: false
     }
@@ -32,13 +32,13 @@ const cli = {
     }
     ,"shallow": {
         alias: ""
-        ,description: "A JSON serialized config object (e.g. \"{'baseDir': './input'}\") to shallow-merge with the default configuration or some configuration file provided with --config. Shallow merging replaces nested property values. Use --deep to deep-merge."
+        ,description: "A JSON string for an object to be shallow-merged with the default configuration or a configuration file provided with --config. Usage: `glossarify-md --shallow \"{'baseDir': './input'}\"`. Shallow merging _replaces_ nested property values. Use --deep to deep-merge."
         ,type: "string"
         ,default: ""
     }
     ,"deep": {
         alias: ""
-        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will extend nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
+        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will _extend_ nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
         ,type: "string"
         ,default: ""
     }
@@ -172,7 +172,7 @@ function printOpts(parameters) {
             .sort((a, b) => a.localeCompare(b, "en"))
             .map(key => {
                 const {alias, type, description, default:_default} = parameters[key];
-                return `--${key}${alias ? ", --" + alias : ""} (${type})\n  ${description}\n  Default: ${JSON.stringify(_default)}\n\n`;
+                return `--${key}${alias ? ", --" + alias : ""} (${type})\n  Default: ${JSON.stringify(_default)}\n\n${description}\n\n`;
             })
             .join("")
     );

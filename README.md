@@ -1,7 +1,7 @@
 # glossarify-md
 
-![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20(Functional)/badge.svg)
-![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20(with%20latest%20deps)/badge.svg)
+![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(Functional\)/badge.svg)
+![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(with%20latest%20deps\)/badge.svg)
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
 
@@ -16,20 +16,22 @@
 ## Table of Contents
 
 - [Install](#install)
-- [Sample](#sample)
-- [Results](#results)
 - [Configuration](#configuration)
-  - [Overriding via Command Line](#overriding-via-command-line)
-- [Additional Features](#additional-features)
-  - [Aliases and Synonyms](#aliases-and-synonyms)
-  - [Term Hints](#term-hints)
-  - [Multiple Glossaries](#multiple-glossaries)
-  - [Index of terms and where they have been used](#index-of-terms-and-where-they-have-been-used)
+  - [Generate](#generate)
+  - [Minimal](#minimal)
+  - [Config CLI](#config-cli)
+- [Sample](#sample)
+- [What's not Linked](#whats-not-linked)
+- [Aliases and Synonyms](#aliases-and-synonyms)
+- [Term Hints](#term-hints)
+- [Multiple Glossaries](#multiple-glossaries)
+- [Sorting your glossaries](#sorting-your-glossaries)
+- [Generating Files](#generating-files)
+  - [Index](#index)
   - [Lists](#lists)
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
-  - [Sorting your glossaries](#sorting-your-glossaries)
-  - [Node Support Matrix](#node-support-matrix)
+- [Node Support Matrix](#node-support-matrix)
 - [Options](#options)
 - [License](#license)
 
@@ -69,13 +71,76 @@ scripts: {
 npm run glossarify
 ```
 
+## Configuration
+
+Having a configuration file is the recommended way of configuring [glossarify-md].
+
+### Generate
+
+> **Since v5.0.0**
+
+```
+npx glossarify-md --init > glossarify-md.conf.json
+```
+
+### Minimal
+
+> **Since v5.0.0**
+
+*glossarify-md.conf.json*
+
+```json
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../target"
+}
+```
+
+> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
+>
+> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
+
+### Config CLI
+
+> **Since v4.0.0**
+
+Use `--shallow` or `--deep`
+
+1. to provide a configuration solely via command line
+1. to merge a configuration with a config file
+
+*Example: use `--shallow` to *replace* simple top-level options:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
+```
+
+*Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
+```
+
+*Example: use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:*
+
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --deep "{'glossaries': [{'file':'./extend.md'}] }"
+```
+
 ## Sample
 
 We assume a sample project with the following structure:
 
 ```
 ${root}
-   +- src/
+   +- docs/
    |    +- pages/
    |    |    |- page1.md
    |    |    `- page2.md
@@ -84,13 +149,15 @@ ${root}
    |    |- requirements.md
    |    `- glossary.md
    |
-   +- target/  (Generated output directory)
+   +- docs-glossarified/  (Generated output directory)
    `- glossarify-md.conf.json
 ```
 
+**Input**
+
 Your original glossary is a file
 
-*src/glossary.md*
+*docs/glossary.md*
 
 ```md
 # Glossary
@@ -100,9 +167,9 @@ Your original glossary is a file
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-Your original files may just use the term *Term* anywhere in text:
+Your document files may just use the term *Term* anywhere in text:
 
-*src/pages/page1.md*
+*docs/pages/page1.md*
 
 ```md
 # Demo
@@ -112,11 +179,11 @@ This is a text which uses a glossary Term to describe something.
 
 Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration).
 
-## Results
+**Output Results**
 
 Augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
 
-*./target/glossary.md*:
+*./docs-glossarified/glossary.md*:
 
 ```md
 # [Glossary](#glossary)
@@ -134,7 +201,7 @@ A glossary term has a short description. The full description contains both sent
 
 ... and occurrences of the term in markdown files have been linked to the term definition in the glossary:
 
-*./target/pages/page1.md*
+*./docs-glossarified/pages/page1.md*
 
 ```md
 # [Demo](#demo)
@@ -150,73 +217,19 @@ This is a text which uses a glossary [Term ↴][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
-Some syntactic positions of a term are **excluded** from being linked to the glossary. These are
+## What's not Linked
 
-- Headlines
-- Blockquotes
-- Preformatted blocks
-- (Markdown) links
-- HTML
+Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. These are
 
-> **Note:** Terms found in blockquotes are not automatically linked to a glossary definition since a quoted source entity may not share the same definition of a term as the entity who quotes it. It may use a term in a completely different semantic context.
+- Headlines `#`
+- Blockquotes `>`
+- Preformatted blocks ` ```, ~~~ `
+- (Markdown) links `[]()`
+- HTML `<a>text</a>`
 
-## Configuration
+Terms found in Markdown blockquotes (`>`) aren't linked to a term definition based on the premise that a quoted source entity may not share the same definition of a term like the entity who quotes it. They could use a term in different semantic contexts.
 
-Having a configuration file is the recommended way of configuring [glossarify-md]. A minimal configuration may look like:
-
-*glossarify-md.conf.json* (minimal):
-
-```json
-{
-  "$schema": "./node_modules/glossarify-md/conf.schema.json",
-  "baseDir": "./src",
-  "outDir": "../target",
-  "outDirDropOld": true,
-  "glossaries": [
-     { "file": "./glossary.md" },
-  ],
-  "includeFiles": ["."],
-  "excludeFiles": ["node_modules"],
-  "linking": "relative"
-}
-```
-
-**Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`. `baseDir` itself is relative to the location of the config file or current working directory. More options see [Additional Features](#additional-features) or [Options](#options) below.
-
-### Overriding via Command Line
-
-Use `--shallow` or `--deep`
-
-1. to provide a configuration solely via command line
-1. to merge a configuration with your config file or the implicit default config in `./node_modules/glossarify-md/conf.json.schema`
-
-Use `--shallow` to *replace* simple top-level options:
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'baseDir':'./src', 'outDir':'../target' }"
-```
-
-Use `--shallow` to *replace* complex nested options like `glossaries` alltogether:
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
-```
-
-Use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:
-
-```
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --deep "{'glossaries': [{'file':'./extend.md'}] }"
-```
-
-## Additional Features
-
-### Aliases and Synonyms
+## Aliases and Synonyms
 
 Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list of alternative terms.
 
@@ -232,7 +245,7 @@ Cats are cute, ...dogs are loyal.
 
 In the output files aliases will be linked to their related term:
 
-*./target/pages/page2.md*
+*./docs-glossarified/pages/page2.md*
 
 ```md
 # About Cats
@@ -240,7 +253,7 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
 ```
 
-### Term Hints
+## Term Hints
 
 *glossarify-md.conf.json*
 
@@ -255,7 +268,7 @@ Glossaries can be associated with *term hints*. Term hints may be used to indica
 > **Since v2.0.0**:
 > Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 
-### Multiple Glossaries
+## Multiple Glossaries
 
 Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 
@@ -281,221 +294,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
 
-### Index of terms and where they have been used
-
-> **Since v3.0.0**
-
-*glossarify-md.conf.json*
-
-```json
-"generateFiles": {
-    "indexFile": {
-       "file": "./book-index.md",
-       "title": "Book Index"
-    }
-}
-```
-
-This option will generate a file `./book-index.md` with a list of glossary terms and links to book sections in which they have been mentioned. The `title` argument is optional. If missing the value given in the example will be the default.
-
-> **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. You may want to choose another name.
-
-### Lists
-
-> **Since v3.5.0**
-
-You can generate arbitrary lists using HTML tags with an `id` attribute and a *classifier* to denote the target list. For example, to generate a list of *References* configure [glossarify-md] with `generateFiles.listOf`...
-
-*glossarify-md.conf.json*
-
-```json
-"generateFiles": {
-    "listOf": [
-       { "class": "ref", "file": "./references.md", "title": "References" }
-    ]
-}
-```
-
-... and mark any position where you cite a work with an identifiable HTML element belonging to class *ref*:
-
-```md
-The <cite id="togr" class="ref">Theory of General Relativity</cite>
-by Albert Einstein was groundbreaking.
-```
-
-> See [note](#cite-note-github) below on semantic HTML in GitHub previews.
-
-**Type less** by prefixing `id` with the list classifier:
-
-```md
-The <cite id="ref-togr">Theory of General Relativity</cite>
-by Albert Einstein was groundbreaking.
-```
-
-**Alternative** list item labeling is possible with a `title` attribute.
-
-```md
-The <cite id="ref-togr" title="A. Einstein, 1916. Die Grundlagen
-der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
-Seite 769-822.">Theory of General Relativity</cite> by Albert
-Einstein was groundbreaking.
-```
-
-The `title` attribute can also be useful to **hide anchors** used as link target.
-
-```md
-<a id="ref-togr" title="Theory of General Relativity"></a>
-The Theory of General Relativity by Albert Einstein was groundbreaking.
-```
-
-> **Link label extraction**
->
-> The link label for list items will be inferred in this order (first-match):
->
-> 1. `title` attribute value (`<tag id="..." "title"="label"></tag>`)
-> 1. Inner text of anchor tag (`<tag id="...">label</tag>`)
-> 1. `id` attribute value, yet without list prefix (`<tag id="prefix-label"></tag>`)
-> 1. Preceding section heading if `id` is just the list prefix (`<tag id="prefix"></tag>`)
-> 1. Filename if `id` is just the list prefix and there is no preceding section heading.
-
-<a id="cite-note-github"></a>
-
-> **Note:** On GitHub, scrolling to [semantic html elements](https://www.w3schools.com/html/html5_semantic_elements.asp) like `<cite>` or `<figure>` did *not* work ([Test Case H/I](https://github.com/about-code/glossarify-md/blob/master/test/output-expected/config-listOf/list-of-label.md)). GitHub's preview renderer strips off those tags. Use `<span>` or `<a>` as alternatives if you care for proper linking in a GitHub repository. However, there is no general restriction in standard HTML we are aware of and it should work well on GitHub Pages with Markdown being translated by a static site generator like [Jekyll](https://jekyllrb.com).
-
-#### List Item Grouping
-
-By default list items will be grouped by section of occurrence using the section heading as a group title. You can generate a flat list and disable grouping (affects any list generated):
-
-```json
-"indexing": {
-    "groupByHeadingDepth": 0
-}
-```
-
-### List of Figures
-
-> **Since v3.3.0**
-
-> **Since v5.0.0** `listOfFigures` annotates Markdown image references with HTML anchors as shown in [Lists](#lists).
-
-*glossarify-md.conf.json*
-
-```json
-"generateFiles": {
-    "listOfFigures": { "file": "./figures.md", "title": "Figures" }
-}
-```
-
-Let's say you have images referenced via Markdown syntax *and* images generated dynamically by an embedded script or some code block being sent to a rendering server (we're using [PlantUML](https://plantuml.com) as an example). You need to manually annotate dynamic graphics like in the following input...
-
-````md
-Markdown image reference ![Foo](./figure.png) and dynamically
-rendered diagramm annotated manually:
-
-<a id="figure-gen">Generated Diagramm</a>
-
-```plantuml
-@startuml
-... your PlantUML diagram code ...
-@enduml
-```
-````
-
-... but `listOfFigures` will prepend an anchor to the markdown reference:
-
-````md
-Markdown image reference <a id="foo" class="figure" title="Foo"></a>
-![Foo](./figure.png) and dynamically rendered diagramm annotated manually:
-
-<a id="figure-gen">Generated Diagramm</a>
-
-```plantuml
-@startuml
-... your PlantUML diagram code ...
-@enduml
-```
-````
-
-From both anchors sharing the same anchor class ***figure*** (default) a list of figures can be generated which contains both figures. The [glossarify-md] configuration above is shorthand for (since v5.0.0) ...
-
-*glossarify-md.conf.json*
-
-```json
-"generateFiles": {
-    "listOfFigures": { "class": "figure" },
-    "listOf": [
-        {"class": "figure", "file": "./figures.md", "title": "Figures" }
-    ]
-}
-```
-
-... which allows you to replace the default anchor class ***figure***, e.g. with a shorter one ***fig***.
-**Note: this applies to Markdown tables and `listOfTables`, similarily.**
-
-### List of Tables
-
-> **Since v3.4.0**
-
-> **Since v5.0.0** `listOfTables` annotates tables with HTML anchors as shown in [Lists](#lists) using information given in HTML comments as shown below.
-
-*glossarify-md.conf.json*
-
-```json
-"generateFiles": {
-    "listOfTables": { "file": "./tables.md", "title": "Tables" }
-}
-```
-
-Generates a list of tables into `./tables.md`. Markdown tables have no inherent notion of a table caption. [glossarify-md] scans for two patterns of user-defined table labels and attempts to infer a table label otherwise:
-
-**1. HTML Comment (invisible):**
-
-```md
-<!-- table: Average Prices by Article Category -->
-| Category | Description | Price Avg. |
-| -------- | ----------- | ---------- |
-| 1        | Video Game  | $35.66     |
-| 2        | Film        | $10.13     |
-| 3        | Book        | $23.45     |
-```
-
-**2. Colon-Terminated Emphasized Paragraph Ending (visible):**
-
-A caption can be inferred from a distinct paragraph...
-
-```md
-[...] which we can see from the average price by article category.
-
-*Average prices by article category:*
-
-| Category | Description | Price Avg. |
-| -------- | ----------- | ---------- |
-| 1        | Video Game  | $35.66     |
-| 2        | Film        | $10.13     |
-| 3        | Book        | $23.45     |
-```
-
-... or a colon-terminated emphasized phrase at the end of the preceding paragraph:
-
-```md
-[...] which we can see from the *table of average prices by article category:*
-
-| Category | Description | Price Avg. |
-| -------- | ----------- | ---------- |
-| 1        | Video Game  | $35.66     |
-| 2        | Film        | $10.13     |
-| 3        | Book        | $23.45     |
-```
-
-Otherwise labels for generated list items will be inferred in this order (first-match):
-
-1. **HTML comment** in the line above the table
-1. **emphasized text** at the end of the preceding paragraph
-1. **column headers** separated by comma, e.g. *Category, Description, Price Avg.*
-1. **preceding section heading** (tables without column headers)
-1. **filename** otherwise.
-
-### Sorting your glossaries
+## Sorting your glossaries
 
 > **Since v3.6.0**
 
@@ -522,13 +321,254 @@ Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare`
 
 The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
 
-### Node Support Matrix
+## Generating Files
+
+### Index
 
 > **Since v3.0.0**
 
-The term *support* refers to *runs on the given platform*. Compatibility is maintained with *best effort* and under the terms and conditions of [LICENSE](#license).
+*glossarify-md.conf.json*
 
-| Node-Version | compatibility & support status                                                                                                                                        |
+```json
+"generateFiles": {
+    "indexFile": {
+       "file": "./book-index.md",
+       "title": "Book Index"
+    }
+}
+```
+
+This option will generate a file `./book-index.md` with glossary terms and links to book sections in which they have been mentioned.
+
+> **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. It is recommended to choose another name.
+
+By default items will be grouped *by section of occurrence* using the section heading as a group title. You can disable or affect granularity of section-based grouping using:
+
+```json
+"indexing": {
+    "groupByHeadingDepth": 0
+}
+```
+
+> **Note**: This setting also affects grouping of list items in [Lists](#lists).
+
+### Lists
+
+> **Since v3.5.0**
+
+You can generate **arbitrary lists** like *Lists of References* from HTML elements with an `id` attribute and a *classifier*. For example in your documents you could use an *invisible* HTML anchor like
+
+<a id="togr"></a>
+
+```md
+<a id="togr" class="ref" title="Theory of General Relativity"></a> ...a citation of the work.
+```
+
+Then to generate a *List of References* configure `listOf`:
+
+*glossarify-md.conf.json*
+
+```json
+"generateFiles": {
+    "listOf": [{
+        "title": "References",
+        "file": "./references.md",
+        "class": "ref"
+    }]
+}
+```
+
+You can **type less** by using an *id-prefix* and let [glossarify-md] infer the list item label from the text between the HTML tags:
+
+```md
+<cite id="ref-togr">Theory of General Relativity</cite>
+```
+
+<a id="ref-togr-work"></a>
+**Alternative list item labels** are possible with the `title` attribute.
+
+```md
+The <cite id="ref-togr-work" title="A. Einstein, 1916. Die Grundlagen
+der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
+Seite 769-822.">Theory of General Relativity</cite> by Albert
+Einstein was groundbreaking.
+```
+
+*Result: docs-glossarified/references.md (generated)*
+
+> ## List of References
+>
+> - [Theory of General Relativity](#togr)
+> - [A. Einstein, 1916. Die Grundlagen
+>   der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
+>   Seite 769-822.](#ref-togr-work)
+> - ...
+
+<a id="cite-note-github"></a>
+
+> **Note:** [GitHub] `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5\_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
+
+[GitHub]: https://github.com
+
+<!--
+**Link label extraction**
+
+The link label for list items will be inferred in this order (first-match):
+
+> 1. `title` attribute value (`<tag id="..." "title"="label"></tag>`)
+> 1. Inner text of anchor tag (`<tag id="...">label</tag>`)
+> 1. `id` attribute value, yet without list prefix (`<tag id="prefix-label"></tag>`)
+> 1. Preceding section heading if `id` is just the list prefix (`<tag id="prefix"></tag>`)
+> 1. Filename if `id` is just the list prefix and there is no preceding section heading.
+-->
+
+### List of Figures
+
+> **Since v3.3.0**
+
+Since there is no standardized *Markdown anchor syntax* so far [`listOf`](#lists) requires you to use *HTML syntax* which can be tedious to write, though. `listOfFigures` generates navigable HTML from Markdown's image syntax:
+
+```md
+![List item Label](./figure.png)
+```
+
+You can still use HTML for dynamically rendered figures, e.g. a [PlantUML](https://plantuml.com) diagram:
+
+````md
+<figure id="figure-gen">Dynamically Rendered Diagram</figure>
+
+```plantuml
+@startuml
+... your PlantUML diagram code ...
+@enduml
+```
+````
+
+To add both figures to the same list one way to configure [glossarify-md] is to declare a *`listOf` class X* and telling `listOfFigures` to use the same class:
+
+*glossarify-md.conf.json* (since v5.0.0)
+
+```json
+"generateFiles": {
+    "listOf": [{
+        "class": "figure",
+        "title": "List of Figures",
+        "file": "./figures.md"
+    }],
+    "listOfFigures": {
+        "class": "figure"
+    }
+}
+```
+
+With this you could also choose a shorter classifier like ***fig***. If you like to stick with ***figure*** you can also use:
+
+*glossarify-md.conf.json*
+
+```json
+"generateFiles": {
+    "listOfFigures": {
+        "title": "Figures",
+        "file": "./figures.md"
+    }
+}
+```
+
+> **Note:** The short version has been available since v3.3.0 but generates navigable HTML since v5.0.0.
+
+### List of Tables
+
+> **Since v3.4.0**
+
+Like with `listOfFigures` there's a `listOfTables` option which generates HTML anchors
+for a [list](#lists) from Markdown table syntax. The following configuration generates a *List of Tables* with the implicit `listOf` classifier ***table***:
+
+*glossarify-md.conf.json*
+
+```json
+"generateFiles": {
+    "listOfTables": {
+        "title": "Tables",
+        "file": "./tables.md"
+    }
+}
+```
+
+Markdown tables have no notion of a table caption. To render a list item [glossarify-md] tries to infer an item label from a paragraph preceding the table. If it ends with an *emphasized* phrase and the phrase itself **is terminated by a colon**, then it uses that phrase as the item label:
+
+<a id="table-of-average-prices-by-article-category"></a>
+
+```md
+[...] which we can see from the *table of average prices by article category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+> ## List of Tables
+>
+> - [Table of average prices by article category](#table-of-average-prices-by-article-category)
+> - [Average prices by category](#average-prices-by-category)
+> - [Average Prices by Article Category](#avg-prices)
+
+The phrase could also be it's own distinct paragraph:
+<a id="average-prices-by-category"></a>
+
+```md
+[...] which we can see from the average price by article category.
+
+*Average prices by category:*
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+**Since v3.4.0** there has also been support for *invisble* table captions using an *HTML comment syntax*:
+<a id="avg-prices"></a>
+
+```md
+<!-- table: Average Prices by Article Category -->
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+Since **v5.0.0** all the previous variants will generate an invisible HTML anchor to integrate with `listOf`. You can use them interchangably with or replace them by an HTML anchor as well:
+
+```md
+<a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
+
+| Category | Description | Price Avg. |
+| -------- | ----------- | ---------- |
+| 1        | Video Game  | $35.66     |
+| 2        | Film        | $10.13     |
+| 3        | Book        | $23.45     |
+```
+
+If [glossarify-md] can't find a table caption by any of the above means it will fall back to rendering a list item using the table headings separated by comma, the section of occurrence or the file name (in this order).
+
+<!--
+1. **HTML anchor** see `listOf`
+1. **HTML comment** in the line above the table
+1. **emphasized text** at the end of the preceding paragraph
+1. **column headers** separated by comma, e.g. *Category, Description, Price Avg.*
+1. **preceding section heading** (tables without column headers)
+1. **filename** otherwise.
+-->
+
+## Node Support Matrix
+
+The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
+
+| Node-Version |                                                                    compatibility & support status                                                                     |
 | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Current      | Tested. Should Node introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
 | 12.x LTS     | Tested + Supported                                                                                                                                                    |
@@ -536,60 +576,25 @@ The term *support* refers to *runs on the given platform*. Compatibility is main
 
 ## Options
 
-#### `help`
-
-Show all options and default values.
-
-#### `baseUrl`
-
-- **Range:** `string`
-
-URL to prepend to links. Only effective with `linking: "absolute"`.
-In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter omitting a pre-defined
-`baseUrl` and using `linking: "relative"` is likely to work better.
-
-#### \`baseDir\`\`
+#### `baseDir`
 
 - **Range:** `string`
 
 Path to directory where to search for the glossary and markdown files. All paths in a config file except for `$schema` will be relative to *baseDir*. *baseDir* itself and `$schema` are relative to the location of the config file.
 
-#### \`excludeFiles
+#### `excludeFiles`
 
 - **Range:** `string[]`
 
 Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
 want to ignore certain markdown files from being modified.
 
-#### `experimentalFootnotes`
-
-- **Range:** `boolean`
-
-Enable support for markdown footnote syntax as defined at <https://pandoc.org/MANUAL.html#footnotes>. Footnotes will be considered an *experimental* feature until they become official part of the CommonMark Specification at <https://spec.commonmark.org>.
-
 #### `generateFiles.indexFile`
 
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.0.0
 
-If available, generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
-
-> **Important:** The `string` value range is *deprecated*. It will be kept throughout all versions of v3.x but is eventually going to be removed. Please use the object value range as shown in the example.
-
-#### `generateFiles.listOfFigures`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.3.0
-
-If available, generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
-
-#### `generateFiles.listOfTables`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.4.0
-
-If available, generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
+Generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
 
 #### `generateFiles.listOf`
 
@@ -598,9 +603,24 @@ If available, generates a list of tables. See section [Additional Features](http
 
 If available, generates a list from HTML anchors exposing the configured `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#lists) for an example.
 
+#### `generateFiles.listOfFigures`
+
+- **Range:** `{file: string, [title: string, class: string]}`
+- **Since:** v3.3.0
+
+Generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
+
+#### `generateFiles.listOfTables`
+
+- **Range:** `{file: string, [title: string, class: string]}`
+- **Since:** v3.4.0
+
+Generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
+
 #### `glossaries`
 
 - **Range:** `Array<{file: string, [termHint: string], [sort: string]}>`
+- **Default:** `[{ "file": "./glossary.md", "termHint": "" }]`
 
 A list of glossary configuations, each with a path to the glossary file. Every
 glossary may have an optional *termHint*. A *termHint* is a symbol character
@@ -623,26 +643,23 @@ Paths or Glob-Patterns for files to include.
 
 #### `indexing.groupByHeadingDepth`
 
-- **Range:** `number` in [1-6]
+- **Range:** `number` in \[1-6]
 - **Since:** v3.4.0
 
 This option affects outputs generated with `generateFiles`. By default when
 indexing terms and markdown elements they are being grouped by the heading of
-the section they've been found in. In larger books with a lot of sections and
-subsections this can lead to *Index* files or *Tables of X* to be generated with
-lots of low-level sections and much detail. Yet sometimes it may be preferable
-to only list the book chapter or high-level sections which some element has been
-found in. This option allows to set the depth by which indexed elements shall be
-grouped where `1` refers to chapters (`#` headings). Note that grouping by
-high-level sections doesn't mean that only links to the high-level sections are
-generated. Where it makes sense links to low-level sections of occurrence are
-just being shortened.
+the section they've been found in. In larger books with many sections and
+subsections this can lead to Index files or *Tables of X* with a lot of group
+headings (many representing sub- and subsubsections). Yet often it's enough for
+an Index to only list the chapter or higher-level sections where some term or
+element has been found in. This option allows to set the depth by which
+elements shall be grouped where `1` refers to chapters (`#` headings).
 
 #### `i18n`
 
-- **Range**:` { locale: string, [localeMatcher: string],
+- **Range**:`  { locale: string, [localeMatcher: string],
     [caseFirst: string], [ignorePunctuation: boolean],
-    [numeric: boolean], [sensitivity: string], [usage: string] }`
+    [numeric: boolean], [sensitivity: string], [usage: string] } `
 
 Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
@@ -654,14 +671,32 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-#### `linking`
+#### `linking.paths`
 
 - **Range:** `"relative" | "absolute"`
 
 Whether to create absolute or relative link-urls to the glossary.
-The use of `"absolute"` may require a `baseUrl`.
+The use of `"absolute"` may require a `linking.baseUrl`.
 
-> **Important:** Using `"absolute"` without a `"baseUrl"` will produce an absolute file system path which you might not want to publish.
+> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+
+#### `linking.baseUrl`
+
+- **Range:** `string`
+
+URL to prepend to links. Only effective with `linking.paths: "absolute"`.
+In most situations, e.g. when hosting markdown files in a repository or
+processing markdown files with an MD to HTML converter omitting a pre-defined
+`baseUrl` and using `linking.paths: "relative"` is likely to work better.
+
+#### `linking.terms`
+
+- **Range:** `"all" | "first-in-paragraph"`
+- **Since:** v5.0.0
+
+By default every occurrence of a term will be linkified. Sometimes this can
+result in too much links affecting readability. This option provides finer
+control of linkify behavior.
 
 #### `outDir`
 
@@ -672,7 +707,7 @@ The directory where to write output files to.
 > **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
 > files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
 
-The recommendation is to write outputs to a separate directory such as `../out` or `../glossarified`. or `../target`.
+The recommendation is to write outputs to a separate directory such as `../out` or `../target` or `../docs-glossarified`.
 
 #### `outDirDropOld`
 
