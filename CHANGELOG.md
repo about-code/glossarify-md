@@ -2,6 +2,65 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.0.0-alpha.1](https://github.com/about-code/glossarify-md/compare/v4.0.1...v5.0.0-alpha.1) (2020-12-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* Option `linking` has become `linking.paths`.
+Option `baseUrl` has become `linking.baseUrl`.
+
+  **An upgrade assistant will help with the migration.** From this version on configuration files must
+refer to a schema by means of a versioned path. This helps the upgrade assistant in future releases to find out what changes need to be applied
+to upgrade from an old schema.
+
+* Migrating to remark@13.0.0 with remark-parse@9.0.0 and new micromark parser (#132)
+
+  With remark-parse having switched to a
+  completely new yet CommonMark compatible markdown parser
+  there's a (minor) risk that output produced by glossarify-md
+  changed. Based on what we observed by comparing outputs with our previous baseline there were only marginal changes which make output even more compliant with CommonMark. These are the changes we accepted as part of our new test baseline:
+
+  **Indentation**: Remark strips leading spaces on new lines
+  either because there is no syntax construct which requires
+  them or to correct indentation, e.g. of list items.
+
+  **Headings**: Remark lifts headings at a depth > 6 into
+  the valid range of 1-6 according to CommonMark Spec v0.29.
+
+  **Quotation marks**: In the past it was possible to mix
+  double quotes and single quotes in a single sentence.
+  With this update single quotes will be converted into
+  double quotes. Where necessary quotation marks will be escaped.
+
+  **Escapes**: There may be a few changes to what is being
+  escaped by a leading backslash. See remark for details.
+
+  The remark changelog can be found here:
+  https://github.com/remarkjs/remark/releases/tag/13.0.0
+
+* test: Upgrade test configurations to v5 schema.
+* test: New baseline.
+* Terms found in HTML markup won't be linkified any longer.
+
+### Features
+
+* limiting the number of glossary links to once per paragraph ([#118](https://github.com/about-code/glossarify-md/issues/118)) ([0310e93](https://github.com/about-code/glossarify-md/commit/0310e9309b56276c8f659ace0fdf86d93eaf0c83)), closes [#117](https://github.com/about-code/glossarify-md/issues/117) [#127](https://github.com/about-code/glossarify-md/issues/127)
+* **cli:** New parameter --init to generate a config file with all options and defaults ([#126](https://github.com/about-code/glossarify-md/issues/126)) ([04894ce](https://github.com/about-code/glossarify-md/commit/04894ceeaaaf20e0c49bdb8b364ddaa3eb2c7c53))
+* Allow lists from arbitrary identifiable HTML nodes ([1342a69](https://github.com/about-code/glossarify-md/commit/1342a69da3e98c21717801f128d4e52369b0c7aa))
+* Anchors for direct navigation to images and tables and unified lists ([2175d8b](https://github.com/about-code/glossarify-md/commit/2175d8b01557df3b55b08b8b3cf4977d492c5eb7))
+* Improved performance ([2e9f9dc](https://github.com/about-code/glossarify-md/commit/2e9f9dc186bfba9d542f0944d2124049a5cae98c))
+* Support pandoc-style custom heading ids ([#112](https://github.com/about-code/glossarify-md/issues/112)) ([4ef0fe7](https://github.com/about-code/glossarify-md/commit/4ef0fe7d2e94eb80ad114f94570f1bc353489b9e))
+
+
+### Bug Fixes
+
+* Deeply merge configuration schema defaults ([#124](https://github.com/about-code/glossarify-md/issues/124)) ([1583ff0](https://github.com/about-code/glossarify-md/commit/1583ff087f3d696347dd2cb79b15e1a0f84264bc))
+* Linkification in embedded HTML markup ([#110](https://github.com/about-code/glossarify-md/issues/110)) ([5da4415](https://github.com/about-code/glossarify-md/commit/5da441505b5019a6612aaa2f8d64dc97956e29ac))
+
+
+* Conf schema upgrade and upgrade assistant (#128) ([1eb152f](https://github.com/about-code/glossarify-md/commit/1eb152f2871ead25800d265a6aed05fbfc97ca75)), closes [#128](https://github.com/about-code/glossarify-md/issues/128)
+
 ## [5.0.0-alpha.0](https://github.com/about-code/glossarify-md/compare/v4.0.1...v5.0.0-alpha.0) (2020-11-11)
 
 
