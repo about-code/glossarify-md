@@ -176,7 +176,26 @@ Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration).
 
 **Output Results**
 
-Augmented versions of the source files have been written to the output directory. Headings in glossary files have been made linkable...
+Augmented versions of the source files have been written to the output directory:
+
+*./docs-glossarified/pages/page1.md*
+
+```md
+# [Demo](#demo)
+
+This is a text which uses a glossary [Term ↴][1] to describe something.
+
+[1]: ../glossary.md#term "A glossary term has a short description."
+```
+
+> ## [Demo](#demo)
+>
+> This is a text which uses a glossary [Term ↴][1] to describe something.
+>
+> [1]: #term "A glossary term has a short description."
+
+
+Headings in glossary files have got an anchor ID and have been made linkable:
 
 *./docs-glossarified/glossary.md*:
 
@@ -194,23 +213,6 @@ A glossary term has a short description. The full description contains both sent
 >
 > A glossary term has a short description. The full description contains both sentences.
 
-... and occurrences of the term in markdown files have been linked to the term definition in the glossary:
-
-*./docs-glossarified/pages/page1.md*
-
-```md
-# [Demo](#demo)
-
-This is a text which uses a glossary [Term ↴][1] to describe something.
-
-[1]: ../glossary.md#term "A glossary term has a short description."
-```
-
-> ## [Demo](#demo)
->
-> This is a text which uses a glossary [Term ↴][1] to describe something.
->
-> [1]: #term "A glossary term has a short description."
 
 ## What's not Linked
 
