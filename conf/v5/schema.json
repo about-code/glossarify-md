@@ -139,7 +139,7 @@
             "type": "object",
             "properties": {
                 "file": {
-                    "description": "Name of the glossary file. Conventional default is 'glossary.md'",
+                    "description": "Name of the glossary file. Conventional default is 'glossary.md'. You can use a glob pattern to enable cross-linking of headings accross multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.",
                     "type": "string"
                 },
                 "termHint": {
