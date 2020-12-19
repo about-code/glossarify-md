@@ -18,33 +18,34 @@
 
 ## Install
 
-#### Option 1: Run in any directory:
-```
+#### Option 1: Install globally:
+
+~~~
 npm i -g glossarify-md
-```
+~~~
 
-```
+~~~
 glossarify-md --config ./glossarify-md.conf.json
-```
+~~~
 
-#### Option 2: Install locally to your project:
+#### Option 2: Install locally as a project dependency:
 
-```
+~~~
 npm i glossarify-md
-```
+~~~
 
-```
+~~~
 npx glossarify-md --config ./glossarify-md.conf.json
-```
+~~~
 
-or add as an npm-script to your `package.json`:
+... or add an npm-script to your `package.json`:
 
 *package.json*
-```json
+~~~json
 scripts: {
   "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
 }
-```
+~~~
 
 ```
 npm run glossarify
@@ -52,11 +53,11 @@ npm run glossarify
 
 ## Configuration
 
-Having a configuration file is the recommended way of configuring [glossarify-md].
-
 ### Generate
 
 > **Since v5.0.0**
+
+Generate a configuration file by running [glossarify-md] with the `--init` option and streaming the output to a file:
 
 ~~~
 npx glossarify-md --init > glossarify-md.conf.json
@@ -66,7 +67,9 @@ npx glossarify-md --init > glossarify-md.conf.json
 
 > **Since v5.0.0**
 
-*glossarify-md.conf.json*
+If you're fine with the default values the configuration can be as simple as this:
+
+*glossarify-md.conf.json (local install)*
 
 ```json
 {
@@ -76,9 +79,20 @@ npx glossarify-md --init > glossarify-md.conf.json
 }
 ```
 
+*glossarify-md.conf.json (global install)*
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../target"
+}
+```
+
+More options see [Options](#options) below.
+
 > **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
 >
-> `baseDir` itself is relative to the location of the config file or Current Working Directory (CWD). More options see [Additional Features](#additional-features) or [Options](#options) below.
+> `baseDir` itself, if relative, is being resolved relative to the location of the config file. It is relative to Current Working Directory (CWD) if being passed from the command line.
 
 
 ### Config CLI
@@ -259,6 +273,12 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
     { "file": "./requirements.md", "termHint": "★" }
 ]
 ```
+
+> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - accross files!
+>
+> **Note:** `termHint` will be ignored if `file` is a glob.
+
+[glob]: https://github.com/isaacs/node-glob#glob-primer
 
 *requirements.md*
 
