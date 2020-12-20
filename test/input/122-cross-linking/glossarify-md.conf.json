@@ -4,7 +4,7 @@
   "outDir": "../../output-actual/122-cross-linking",
   "linking": {
     "paths": "relative",
-    "terms": "all"
+    "mentions": "all"
   },
   "includeFiles": ["."],
   "excludeFiles": [],

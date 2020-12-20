@@ -3,7 +3,7 @@
   "baseDir": ".",
   "linking": {
     "paths": "relative",
-    "terms": "first-in-paragraph"
+    "mentions": "first-in-paragraph"
   },
   "glossaries": [
     {
@@ -11,9 +11,9 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-linking/terms-first-in-paragraph",
+  "outDir": "../../../output-actual/config-linking/mentions-first-in-paragraph",
   "dev": {
-    "termsFile": "../../../output-actual/config-linking/terms-first-in-paragraph/terms.json",
+    "termsFile": "../../../output-actual/config-linking/mentions-first-in-paragraph/terms.json",
     "reproducablePaths": true
   }
 }

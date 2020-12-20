@@ -3,7 +3,7 @@
   "baseDir": ".",
   "linking": {
     "paths": "absolute",
-    "terms": "all",
+    "mentions": "all",
     "baseUrl": "http://localhost"
   },
   "includeFiles": [

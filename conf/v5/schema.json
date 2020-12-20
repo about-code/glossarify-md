@@ -83,7 +83,7 @@
             "default": {
                 "baseUrl": "",
                 "paths": "relative",
-                "terms": "all"
+                "mentions": "all"
             }
         },
         "outDir": {
@@ -231,7 +231,7 @@
                     "type": "string",
                     "enum": ["relative", "absolute"]
                 },
-                "terms": {
+                "mentions": {
                     "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range.",
                     "type": "string",
                     "enum": ["all", "first-in-paragraph"]

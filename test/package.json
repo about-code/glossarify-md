@@ -38,7 +38,7 @@
     "test_18": "npx . --config ./input/config-excludeFiles/glossarify-md.conf.json",
     "test_19": "npx . --config ./input/config-linking/relative/glossarify-md.conf.json",
     "test_20": "npx . --config ./input/config-linking/absolute-baseUrl/glossarify-md.conf.json",
-    "test_21": "npx . --config ./input/config-linking/terms-first-in-paragraph/glossarify-md.conf.json",
+    "test_21": "npx . --config ./input/config-linking/mentions-first-in-paragraph/glossarify-md.conf.json",
     "test_22": "npx . --init > ./input/config-cli/arg-init/conf.gitignore.json && npx . --config ./input/config-cli/arg-init/conf.gitignore.json --shallow \"{ 'outDir': '../../../../output-actual/config-cli/arg-init/' }\"",
     "test_23": "npx . --shallow \"{'baseDir':'./input/config-cli/arg-config-skip', 'outDir':'../../../output-actual/config-cli/arg-config-skip', 'includeFiles':['.'], 'glossaries':[{'file':'./glossary.md'}] }\"",
     "test_24": "npx . --config ./input/config-cli/arg-shallow/glossarify-md.conf.json --shallow \"{'baseUrl': 'cli://localhost', 'linking': 'absolute', 'glossaries':[{'file':'./glossary2.md'}] }\"",
