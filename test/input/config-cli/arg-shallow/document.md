@@ -9,7 +9,6 @@ AND a config file:
 *./glossarify-md.conf.json*
 ```json
 {
-    "$schema": "../../../../conf.schema.json",
     "baseUrl": "file://localhost",
     "baseDir": ".",
     "outDir": "../../../output-actual/config-cli/arg-shallow",

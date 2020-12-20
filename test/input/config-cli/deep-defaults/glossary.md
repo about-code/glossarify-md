@@ -4,7 +4,7 @@
 
 - GIVEN a configuration schema WITH a complex option `glossaries` WITH a complex `default` value
 
-   *./node_modules/glossarify-md/conf.schema.json*:
+   *Schema*:
     ~~~json
     {
         "$id": "...",
@@ -24,7 +24,6 @@
    *Some partial user configuration*
     ~~~json
     {
-        "$schema": "./node_modules/glossarify-md/conf.schema.json",
         "glossaries": [],
         "...": "..."
     }
@@ -35,7 +34,6 @@
    *Expected config to apply*
     ~~~json
     {
-        "$schema": "./node_modules/glossarify-md/conf.schema.json",
         "glossaries": [
             { "file": "./glossary.md", "termHint": ""}
         ],

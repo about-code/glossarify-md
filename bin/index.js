@@ -6,7 +6,7 @@ const path = require("path");
 const proc = require("process");
 const program = require("../lib/main");
 const upgrade = require("../lib/cli/upgrade");
-const confSchema = require("../conf/v5/schema.json").properties;
+const confSchema = require("../conf/v5/schema.json");
 const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP} = require("../lib/cli/messages");
 const {version} = require("../package.json");
 const CWD = proc.cwd();
@@ -21,6 +21,12 @@ const cli = {
     "init": {
         alias: ""
         ,description: "Generate a configuration file with default values. Usage: 'glossarify-md --init > glossarify-md.conf.json'"
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"local": {
+        alias: ""
+        ,description: "When used with --init generates a configuration using a local node_modules path to the config schema."
         ,type: "boolean"
         ,default: false
     }
@@ -62,6 +68,13 @@ if (argv.help || proc.argv.length === 2) {
 }
 
 // --config
+const confSchemaProps = confSchema.properties;
+const confDefault = Object
+    .keys(confSchemaProps)
+    .reduce((obj, key) => {
+        obj[key] = confSchemaProps[key].default;
+        return obj;
+    }, { "$schema": confSchema.$id });
 let confDir = "";
 let confPath = argv.config || "";
 let confData = {};
@@ -72,7 +85,7 @@ if (confPath) {
         confDir = path.dirname(confPath);
         confData = JSON.parse(fs.readFileSync(confPath));
         if (!argv.noupgrade) {
-            confPromise = upgrade(confData, confPath);
+            confPromise = upgrade(confData, confPath, confDefault);
         }
     } catch (e) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
@@ -103,10 +116,6 @@ confPromise.then((conf) => {
         }
     }
     // Merge custom conf with default conf
-    const confDefault = Object.keys(confSchema).reduce((obj, key) => {
-        obj[key] = confSchema[key].default;
-        return obj;
-    }, {});
     conf = merge(confDefault, conf, {
         clone: false
         , arrayMerge: (_default, curConf) => {
@@ -116,6 +125,10 @@ confPromise.then((conf) => {
 
     // --init
     if (argv.init) {
+        if (argv.local) {
+            // append version path segment from schema URI to local path
+            conf.$schema = `./node_modules/glossarify-md/conf/${conf.$schema.split("/conf/")[1]}`;
+        }
         console.log(JSON.stringify(conf, null, 2));
         proc.exit(0);
     }
