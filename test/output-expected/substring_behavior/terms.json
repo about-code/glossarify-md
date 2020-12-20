@@ -7,9 +7,7 @@
     "anchor": "#äö",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#äöü",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#a",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#ä",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#ab",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -92,9 +82,7 @@
     "anchor": "#abc",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/substring_behavior/glossary.md",
-      "outPath": "/{CWD}/output-actual/substring_behavior/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

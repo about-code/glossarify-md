@@ -12,9 +12,7 @@
   "glossaries": [
     {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-cli/deep-defaults/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-cli/deep-defaults/glossary.md"
+      "termHint": ""
     }
   ],
   "ignoreCase": false,

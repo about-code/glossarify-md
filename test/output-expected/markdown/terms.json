@@ -7,9 +7,7 @@
     "anchor": "#dolor",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/markdown/glossary.md"
+      "termHint": "↴"
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#lorem-ipsum",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/markdown/glossary.md"
+      "termHint": "↴"
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#sit",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/markdown/glossary.md",
-      "outPath": "/{CWD}/output-actual/markdown/glossary.md"
+      "termHint": "↴"
     },
     "regex": {},
     "aliases": [],

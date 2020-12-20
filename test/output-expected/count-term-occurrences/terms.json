@@ -7,9 +7,7 @@
     "anchor": "#mention-one-once",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#mention-two-twice",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#mentioned-in-document-once",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#mentioned-in-document-twice",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#one",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -92,9 +82,7 @@
     "anchor": "#two",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -109,9 +97,7 @@
     "anchor": "#zero",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/count-term-occurrences/glossary.md",
-      "outPath": "/{CWD}/output-actual/count-term-occurrences/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

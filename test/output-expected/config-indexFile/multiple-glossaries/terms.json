@@ -7,9 +7,7 @@
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
       "file": "./glossary-a.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-a.md",
-      "outPath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-a.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
       "file": "./glossary-b.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-b.md",
-      "outPath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-b.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#only-in-glossary-a",
     "glossary": {
       "file": "./glossary-a.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-a.md",
-      "outPath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-a.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#only-in-glossary-b",
     "glossary": {
       "file": "./glossary-b.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-b.md",
-      "outPath": "/{CWD}/output-actual/config-indexFile/multiple-glossaries/glossary-b.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

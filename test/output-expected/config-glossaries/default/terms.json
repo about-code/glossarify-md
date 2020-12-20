@@ -7,9 +7,7 @@
     "anchor": "#hashtag",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#äöüß-term-begins-with-umlauts",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#äquator",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#bold-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#china中国",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -92,9 +82,7 @@
     "anchor": "#chi中国na",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -109,9 +97,7 @@
     "anchor": "#codespan-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -126,9 +112,7 @@
     "anchor": "#dense-definition",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -143,9 +127,7 @@
     "anchor": "#dense-definition-with-alias",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -162,9 +144,7 @@
     "anchor": "#der-tod-und-das-mädchen",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -179,9 +159,7 @@
     "anchor": "#faß",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -196,9 +174,7 @@
     "anchor": "#in-parts-formatted",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -213,9 +189,7 @@
     "anchor": "#italic-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/formatted-terms-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -230,9 +204,7 @@
     "anchor": "#term-contains-äöüß-umlauts",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -247,9 +219,7 @@
     "anchor": "#term-disjunct-a",
     "glossary": {
       "file": "./disjunct-terms-glossary-a.md",
-      "termHint": " (a/b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/disjunct-terms-glossary-a.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/disjunct-terms-glossary-a.md"
+      "termHint": " (a/b)"
     },
     "regex": {},
     "aliases": [],
@@ -264,9 +234,7 @@
     "anchor": "#term-disjunct-b",
     "glossary": {
       "file": "./disjunct-terms-glossary-b.md",
-      "termHint": " (a/b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/disjunct-terms-glossary-b.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/disjunct-terms-glossary-b.md"
+      "termHint": " (a/b)"
     },
     "regex": {},
     "aliases": [],
@@ -281,9 +249,7 @@
     "anchor": "#term-ends-with-umlauts-äöüß",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -298,9 +264,7 @@
     "anchor": "#term-shared-a",
     "glossary": {
       "file": "./shared-terms-glossary-a.md",
-      "termHint": " (a&b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-a.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-a.md"
+      "termHint": " (a&b)"
     },
     "regex": {},
     "aliases": [],
@@ -315,9 +279,7 @@
     "anchor": "#term-shared-a",
     "glossary": {
       "file": "./shared-terms-glossary-b.md",
-      "termHint": " (a&b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-b.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-b.md"
+      "termHint": " (a&b)"
     },
     "regex": {},
     "aliases": [],
@@ -332,9 +294,7 @@
     "anchor": "#term-shared-b",
     "glossary": {
       "file": "./shared-terms-glossary-a.md",
-      "termHint": " (a&b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-a.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-a.md"
+      "termHint": " (a&b)"
     },
     "regex": {},
     "aliases": [],
@@ -349,9 +309,7 @@
     "anchor": "#term-shared-b",
     "glossary": {
       "file": "./shared-terms-glossary-b.md",
-      "termHint": " (a&b)",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-b.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/shared-terms-glossary-b.md"
+      "termHint": " (a&b)"
     },
     "regex": {},
     "aliases": [],
@@ -366,9 +324,7 @@
     "anchor": "#term-hint-prefix",
     "glossary": {
       "file": "./term-hint-prefix-glossary.md",
-      "termHint": "☛ ${term}",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/term-hint-prefix-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/term-hint-prefix-glossary.md"
+      "termHint": "☛ ${term}"
     },
     "regex": {},
     "aliases": [],
@@ -383,9 +339,7 @@
     "anchor": "#term-hint-suffix",
     "glossary": {
       "file": "./term-hint-suffix-glossary.md",
-      "termHint": "${term} ☚",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/term-hint-suffix-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/term-hint-suffix-glossary.md"
+      "termHint": "${term} ☚"
     },
     "regex": {},
     "aliases": [],
@@ -400,9 +354,7 @@
     "anchor": "#term-hint-suffix-default",
     "glossary": {
       "file": "./term-hint-suffix-default-glossary.md",
-      "termHint": "↴",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/term-hint-suffix-default-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/term-hint-suffix-default-glossary.md"
+      "termHint": "↴"
     },
     "regex": {},
     "aliases": [],
@@ -417,9 +369,7 @@
     "anchor": "#term-hint-wrapped",
     "glossary": {
       "file": "./term-hint-wrapped-glossary.md",
-      "termHint": "☛ ${term} ☚",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/term-hint-wrapped-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/term-hint-wrapped-glossary.md"
+      "termHint": "☛ ${term} ☚"
     },
     "regex": {},
     "aliases": [],
@@ -434,9 +384,7 @@
     "anchor": "#uppercase",
     "glossary": {
       "file": "./Uppercase-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/Uppercase-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/Uppercase-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -451,9 +399,7 @@
     "anchor": "#zhōngguó",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -468,9 +414,7 @@
     "anchor": "#中china国",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -485,9 +429,7 @@
     "anchor": "#中国",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -502,9 +444,7 @@
     "anchor": "#中国china",
     "glossary": {
       "file": "./unicode-glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md",
-      "outPath": "/{CWD}/output-actual/config-glossaries/default/unicode-glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

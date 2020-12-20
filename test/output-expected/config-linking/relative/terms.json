@@ -7,9 +7,7 @@
     "anchor": "#first-level-child",
     "glossary": {
       "file": "./sub-1/glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-linking/relative/sub-1/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-linking/relative/sub-1/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#first-level-parent",
     "glossary": {
       "file": "./sub-1/glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-linking/relative/sub-1/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-linking/relative/sub-1/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#second-level-parent",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-linking/relative/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-linking/relative/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#sibling",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-linking/relative/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-linking/relative/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

@@ -7,9 +7,7 @@
     "anchor": "#term",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-indexFile/index-in-subdir/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-indexFile/index-in-subdir/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

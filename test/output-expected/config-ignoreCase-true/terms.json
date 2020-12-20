@@ -7,9 +7,7 @@
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md",
-      "outPath": "/{CWD}/output-actual/config-ignoreCase-true/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

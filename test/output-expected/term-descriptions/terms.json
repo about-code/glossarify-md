@@ -7,9 +7,7 @@
     "anchor": "#description-partly-formatted",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#formatted-term-definitions",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#given-full-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#given-long-description-has-a-link",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#given-long-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -92,9 +82,7 @@
     "anchor": "#given-short-description-has-a-link",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -109,9 +97,7 @@
     "anchor": "#given-short-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -126,9 +112,7 @@
     "anchor": "#given-short-description-is-bold-with-fullstop-excluded",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -143,9 +127,7 @@
     "anchor": "#given-short-description-is-bold-with-fullstop-included",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -160,9 +142,7 @@
     "anchor": "#given-short-description-is-italic-with-fullstop-excluded",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -177,9 +157,7 @@
     "anchor": "#given-short-description-is-italic-with-fullstop-included",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -194,9 +172,7 @@
     "anchor": "#single-sentence-accross-multiple-lines",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -211,9 +187,7 @@
     "anchor": "#single-sentence-terminated-by-exclamation-mark",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -228,9 +202,7 @@
     "anchor": "#single-sentence-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -245,9 +217,7 @@
     "anchor": "#single-sentence-terminated-by-question-mark",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -262,9 +232,7 @@
     "anchor": "#two-sentences-accross-multiple-lines-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -279,9 +247,7 @@
     "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],
@@ -296,9 +262,7 @@
     "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "ⓕ",
-      "basePath": "/{CWD}/output-actual/term-descriptions/glossary.md",
-      "outPath": "/{CWD}/output-actual/term-descriptions/glossary.md"
+      "termHint": "ⓕ"
     },
     "regex": {},
     "aliases": [],

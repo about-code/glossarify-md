@@ -1,5 +1,5 @@
 const process = require("process");
-const opts = require("../conf.schema.json").properties;
+const confProp = require("../conf.schema.json").properties;
 let errors = [];
 
 (function testNoDuplicateArgs() {
@@ -14,9 +14,9 @@ let errors = [];
         }
 
     }
-    Object.keys(opts)
+    Object.keys(confProp)
         .forEach(name => {
-            const alias = opts[name].alias;
+            const alias = confProp[name].alias;
             count(alias);
         });
 

@@ -7,9 +7,7 @@
     "anchor": "#term-a",
     "glossary": {
       "file": "./glossary-g1.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#term-b",
     "glossary": {
       "file": "./glossary-g1.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -41,9 +37,7 @@
     "anchor": "#term-c",
     "glossary": {
       "file": "./glossary-g1.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -58,9 +52,7 @@
     "anchor": "#term-d",
     "glossary": {
       "file": "./glossary-g2.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g2.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g2.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -75,9 +67,7 @@
     "anchor": "#term-e",
     "glossary": {
       "file": "./glossary-g1.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g1.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -92,9 +82,7 @@
     "anchor": "#term-f",
     "glossary": {
       "file": "./glossary-g2.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g2.md",
-      "outPath": "/{CWD}/output-actual/glossary-crosslinks/glossary-g2.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

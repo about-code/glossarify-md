@@ -7,9 +7,7 @@
     "anchor": "#alias-substring-behavior",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],
@@ -24,9 +22,7 @@
     "anchor": "#china",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -46,9 +42,7 @@
     "anchor": "#field",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -65,9 +59,7 @@
     "anchor": "#flower",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -84,9 +76,7 @@
     "anchor": "#friendship",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -103,9 +93,7 @@
     "anchor": "#hopefully",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -122,9 +110,7 @@
     "anchor": "#issue",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -141,9 +127,7 @@
     "anchor": "#our",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -160,9 +144,7 @@
     "anchor": "#term-1",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -181,9 +163,7 @@
     "anchor": "#term-2",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -202,9 +182,7 @@
     "anchor": "#term-3",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -223,9 +201,7 @@
     "anchor": "#term-4",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -244,9 +220,7 @@
     "anchor": "#term-5",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [
@@ -264,9 +238,7 @@
     "anchor": "#unicode-support",
     "glossary": {
       "file": "./glossary.md",
-      "termHint": "",
-      "basePath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md",
-      "outPath": "/{CWD}/output-actual/aliases-and-synonyms/glossary.md"
+      "termHint": ""
     },
     "regex": {},
     "aliases": [],

@@ -57,7 +57,7 @@ if (!argv.init) {
 }
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
-    printOpts(cli);
+    printConf(cli);
     proc.exit(0);
 }
 
@@ -65,14 +65,14 @@ if (argv.help || proc.argv.length === 2) {
 let confDir = "";
 let confPath = argv.config || "";
 let confData = {};
-let optsPromise = Promise.resolve({});
+let confPromise = Promise.resolve({});
 if (confPath) {
     try {
         confPath = path.resolve(CWD, confPath);
         confDir = path.dirname(confPath);
         confData = JSON.parse(fs.readFileSync(confPath));
         if (!argv.noupgrade) {
-            optsPromise = upgrade(confData, confPath);
+            confPromise = upgrade(confData, confPath);
         }
     } catch (e) {
         console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
@@ -82,58 +82,58 @@ if (confPath) {
     confDir = CWD;
 }
 
-optsPromise.then((opts) => {
+confPromise.then((conf) => {
 
-    // --deep custum opts
+    // --deep custum conf
     if (argv.deep) {
         try {
-            opts = merge(opts, JSON.parse(argv.deep.replace(/'/g, "\"")));
+            conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
         } catch (e) {
             console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
             proc.exit(1);
         }
     }
-    // --shallow custom opts
+    // --shallow custom conf
     if (argv.shallow) {
         try {
-            opts = Object.assign(opts, JSON.parse(argv.shallow.replace(/'/g, "\"")));
+            conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
         } catch (e) {
             console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
             proc.exit(1);
         }
     }
-    // Merge custom opts with default opts
-    const optsDefault = Object.keys(confSchema).reduce((obj, key) => {
+    // Merge custom conf with default conf
+    const confDefault = Object.keys(confSchema).reduce((obj, key) => {
         obj[key] = confSchema[key].default;
         return obj;
     }, {});
-    opts = merge(optsDefault, opts, {
+    conf = merge(confDefault, conf, {
         clone: false
-        , arrayMerge: (_default, curOpts) => {
-            return curOpts && curOpts.length > 0 ? curOpts : _default;
+        , arrayMerge: (_default, curConf) => {
+            return curConf && curConf.length > 0 ? curConf : _default;
         }
     });
 
     // --init
     if (argv.init) {
-        console.log(JSON.stringify(opts, null, 2));
+        console.log(JSON.stringify(conf, null, 2));
         proc.exit(0);
     }
 
     // Resolve baseDir relative to confDir and outDir relative to baseDir
-    opts.baseDir = path.resolve(confDir, opts.baseDir);
-    opts.outDir  = path.resolve(opts.baseDir, opts.outDir);
-    validateOpts(opts);
+    conf.baseDir = path.resolve(confDir, conf.baseDir);
+    conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
+    validateConf(conf);
 
     // _/ Run \_____________________________________________________________________
-    program.run(opts);
+    program.run(conf);
 }).catch(error => {
     console.error(error);
     proc.exit(1);
 });
 
 // _/ Helpers \_________________________________________________________________
-function validateOpts(conf) {
+function validateConf(conf) {
 
     if (conf.baseDir === "") {
         console.log(NO_BASEDIR);
@@ -163,7 +163,7 @@ function validateOpts(conf) {
     }
 }
 
-function printOpts(parameters) {
+function printConf(parameters) {
     console.log("Options:\n");
     console.log(
         Object
