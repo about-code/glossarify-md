@@ -41,9 +41,8 @@
 
 ```
 npm i -g glossarify-md
-```
 
-```
+glossarify-md --init > glossarify-md.conf.json
 glossarify-md --config ./glossarify-md.conf.json
 ```
 
@@ -51,9 +50,8 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ```
 npm i glossarify-md
-```
 
-```
+npx glossarify-md --local --init > glossarify-md.conf.json
 npx glossarify-md --config ./glossarify-md.conf.json
 ```
 
