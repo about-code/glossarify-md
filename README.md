@@ -716,6 +716,16 @@ By default every mention of a term will be linkified. Sometimes this can
 result in too much links affecting readability. This option provides finer
 control of linkify behavior.
 
+#### `linking.headingDepths`
+
+- **Range:** `number[]` in 1-6
+- **Since:** v5.0.0
+
+Use this option to select markdown heading depths which should be considered for
+searching and linking. E.g. to only consider headings `## text` (depth 2) or
+`### text` (depth 3) but not `#### text` (depth 4) provide an array `[2,3]`.
+Default is `[2,3,4,5,6]`.
+
 #### `outDir`
 
 - **Range:** `string`

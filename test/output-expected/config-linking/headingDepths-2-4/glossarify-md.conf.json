@@ -1,0 +1,8 @@
+{
+    "$schema": "../../../../conf/v5/schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-linking/headingDepths-2-4",
+    "linking": {
+      "headingDepths": [2,4]
+    }
+  }
