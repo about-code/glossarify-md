@@ -29,7 +29,7 @@
   "linking": {
     "baseUrl": "file://localhost",
     "paths": "relative",
-    "terms": "all"
+    "mentions": "all"
   },
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",
   "outDirDropOld": true,

@@ -4,7 +4,7 @@
 
 -   GIVEN a configuration schema WITH a complex option `glossaries` WITH a complex `default` value
 
-    _./node_modules/glossarify-md/conf.schema.json_:
+    _Schema_:
 
     ```json
     {
@@ -27,7 +27,6 @@
 
     ```json
     {
-        "$schema": "./node_modules/glossarify-md/conf.schema.json",
         "glossaries": [],
         "...": "..."
     }
@@ -39,7 +38,6 @@
 
     ```json
     {
-        "$schema": "./node_modules/glossarify-md/conf.schema.json",
         "glossaries": [
             { "file": "./glossary.md", "termHint": ""}
         ],

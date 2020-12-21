@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/122-cross-linking",
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "includeFiles": ["."],
+  "excludeFiles": [],
+  "glossaries": [{ "file": "./**/*.md" } ],
+  "ignoreCase": false
+}

@@ -3,7 +3,7 @@
   "baseDir": ".",
   "linking": {
     "paths": "absolute",
-    "terms": "all",
+    "mentions": "all",
     "baseUrl": "http://example.org"
   },
   "outDir": "../../output-actual/config-baseUrl/",

@@ -3,7 +3,7 @@
   "baseDir": ".",
   "linking": {
     "paths": "relative",
-    "terms": "all"
+    "mentions": "all"
   },
   "includeFiles": [
     "."

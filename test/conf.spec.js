@@ -1,5 +1,5 @@
 const process = require("process");
-const confProp = require("../conf.schema.json").properties;
+const confProp = require("../conf/v5/schema.json").properties;
 let errors = [];
 
 (function testNoDuplicateArgs() {

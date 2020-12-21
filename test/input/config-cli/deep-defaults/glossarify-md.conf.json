@@ -9,7 +9,7 @@
   "glossaries": [],
   "linking": {
     "paths": "relative",
-    "terms": "all",
+    "mentions": "all",
     "baseUrl": "file://localhost"
   },
   "dev": {

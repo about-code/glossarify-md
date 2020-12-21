@@ -22,9 +22,8 @@
 
 ~~~
 npm i -g glossarify-md
-~~~
 
-~~~
+glossarify-md --init > glossarify-md.conf.json
 glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
@@ -32,9 +31,8 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ~~~
 npm i glossarify-md
-~~~
 
-~~~
+npx glossarify-md --local --init > glossarify-md.conf.json
 npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
@@ -685,12 +683,12 @@ In most situations, e.g. when hosting markdown files in a repository or
 processing markdown files with an MD to HTML converter omitting a pre-defined
 `baseUrl` and using `linking.paths: "relative"` is likely to work better.
 
-#### `linking.terms`
+#### `linking.mentions`
 
 - **Range:** `"all" | "first-in-paragraph"`
 - **Since:** v5.0.0
 
-By default every occurrence of a term will be linkified. Sometimes this can
+By default every mention of a term will be linkified. Sometimes this can
 result in too much links affecting readability. This option provides finer
 control of linkify behavior.
 
