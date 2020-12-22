@@ -59,25 +59,21 @@ If your node type is a type that is only to be inserted as part of modifying or 
 
 For a deeper understanding of the different hooks familiarize yourself with [micromark] and the Common Markup State Machine ([CMSM]). We'll focus on the pipeline principles, for now. A [SyntaxExtension] "hook" must be associated with mappings of character codes onto syntax [Construct]s:
 
-*Example: SyntaxExtension [micromark-extension-footnote]*
+*Example: SyntaxExtension*
 ~~~js
 {
     // type: "SyntaxExtension"
     document: {
         91: {
             // type: "Construct"
-            tokenize: tokenizeDefinitionStart,
-            continuation: {
-                tokenize: tokenizeDefinitionContinuation
-            },
-            exit: footnoteDefinitionEnd
+            tokenize: function(effects, ok, nok) {...}
         }
     },
     ...
 }
 ~~~
 
-See also built-in [micromark-constructs].
+See also built-in [micromark-constructs]. A good example may also be [micromark-extension-footnote].
 
 The character code determines the first character participating in a syntax construct which when found causes the extension's `tokenize(effects, ok, nok)` function to be invoked. `tokenizer()` returns a [State] function representing the *initial state* of the syntax state machine (*state-as-a-function* pattern). State functions need access to `effects, ok, nok` so may be inner functions of `tokenizer`.
 
@@ -98,7 +94,7 @@ Given the character is an expected one a State function...
 1. ...consumes the *current character* using `effects.consume(code)`
 1. ...at some point enqueues an *End Token* using  `effects.exit()`
 
-*Example: [micromark-extension-footnote]:*
+*Example: Tokenizer in [micromark-extension-footnote]:*
 ~~~js
 function tokenizeDefinitionStart(effects, ok, nok) {
   // ... some initializations then return initial state function
