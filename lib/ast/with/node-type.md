@@ -18,7 +18,7 @@ MyNode.fromMarkdown = function() {}     // see mdast-util-from-markdown
 MyNode.toMarkdown = function() {}       // see mdast-util-to-markdown
 ~~~
 
-The interface reflects the overall process defined by [MicroMark] and implementation of those methods requires some deeper understanding of [Micromark] and related projects:
+The interface reflects the overall process defined by [micromark] and implementation of those methods requires some deeper understanding of [micromark] and related projects:
 
 *Figure 1: Parsing, Manipulating, Serializing*
 ~~~
@@ -43,7 +43,7 @@ The interface reflects the overall process defined by [MicroMark] and implementa
 
 ## `syntax()`
 
-If your node type is a type that is only to be inserted as part of modifying or extending an existing [AST] then there's nothing to implement here. Otherwise if the node type is to be created from parsing textual syntax in input documents then it must return an instance of a Micromark [SyntaxExtension]:
+If your node type is a type that is only to be inserted as part of modifying or extending an existing [AST] then there's nothing to implement here. Otherwise if the node type is to be created from parsing textual syntax in input documents then it must return an instance of a [micromark] [SyntaxExtension]:
 
 ~~~js
 {
@@ -57,7 +57,7 @@ If your node type is a type that is only to be inserted as part of modifying or 
 > *"A syntax extension is an object whose fields are the names of hooks,
 > referring to where constructs “hook” into."* Source: [micromark-syntax-extension]
 
-For a deeper understanding of the different hooks familiarize yourself with [MicroMark] and the Common Markup State Machine ([CMSM]). We'll focus on the pipeline principles, for now. A [SyntaxExtension] "hook" must be associated with mappings of character codes onto syntax [Construct]s:
+For a deeper understanding of the different hooks familiarize yourself with [micromark] and the Common Markup State Machine ([CMSM]). We'll focus on the pipeline principles, for now. A [SyntaxExtension] "hook" must be associated with mappings of character codes onto syntax [Construct]s:
 
 *Example: SyntaxExtension [micromark-extension-footnote]*
 ~~~js
@@ -194,10 +194,10 @@ in the [unified.processor][unified] context.
 [Node]: https://github.com/syntax-tree/unist#node
 [mdAST]: https://github.com/syntax-tree/mdast
 [CMSM]: https://github.com/micromark/common-markup-state-machine#6-parsing
-[MicroMark]: https://github.com/micromark/micromark
 [Construct]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L167
 [State]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L137
 [SyntaxExtension]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L210
+[micromark]: https://github.com/micromark/micromark
 [micromark-constructs]: https://github.com/micromark/micromark/blob/main/lib/constructs.mjs
 [micromark-syntax-extension]: https://github.com/micromark/micromark#syntaxextension
 [micromark-extension-footnote]: https://github.com/micromark/micromark-extension-footnote/blob/dd93aa5bdbe9eee0aeb70a264f918a04630bde82/index.js#L35
