@@ -114,7 +114,7 @@ function tokenizeDefinitionStart(effects, ok, nok) {
 
 1. ...return a [State] function to use for the next character
 
-1. ...should make sure, that the input character it receives is a character or character range it currently expects*. If not it should return the [NotOkay] state via `return nok(code)`.
+1. ...*need to make sure, that the input character they receive is a character or character range it expects*. If not it should return the [NotOkay] state via `return nok(code)`.
 
 1. ...must only return the [Okay] state if it is the final state
 
@@ -142,13 +142,14 @@ What we can not directly see from the example, but guess, is that those tokens e
 
 ## `fromMarkdown()`
 
+> If your node type is a node that is only to be inserted as part of modifying or extending an existing [AST], then there's nothing to implement! (Remind Figure 1 above).
+
 We have written our custom syntax tokens onto the token queue by implementing `syntax()`. If we want the tokens and data to make it into an [AST] we need some place which creates AST-[Node]s from the tokens. This is what an implementation of `fromMarkdown()` is concerned with. In particular it creates an [mdAST], that is, an [AST] *for Markdown*. For now we refer to [mdast-util-from-markdown] for any further examples.
 
-> Remind Figure 1 above: if your node type is a node that is only to be inserted as part of modifying or extending an existing [AST], then there's nothing to implement here!
 
 ## `toMarkdown()`
 
-This method returns an [mdast-util-to-markdown] options object. The method must be implemented for any node type in the [AST]. It must even be implemented for nodes that might not have any serialized representation. However, in the latter is the case an implementation is pretty simple:
+This method returns an [mdast-util-to-markdown] options object. The method must be implemented for any node type in the [AST]. It must even be implemented for nodes that might not have any serialized representation. However, in the latter case an implementation is pretty simple:
 
 ~~~js
 const SYMBOL = Symbol("myNode");
@@ -161,7 +162,7 @@ class MyNode {
 }
 ~~~
 
-Otherwise your [`handler`][mdast-util-to-markdown-handlers] was concerned with taking `node` which might be a subtree and serialize it into a string representation. Also have a look at the [`unsafe`][mdast-util-to-markdown-unsafe] option to register various characters that might be *unsafe* to use in the
+Otherwise your [`handler`][mdast-util-to-markdown-handlers] were concerned with taking `node` which might be a subtree and serialize it into a string representation. Also have a look at the [`unsafe`][mdast-util-to-markdown-unsafe] option to register various characters that might be *unsafe* to use in the
 context of your syntax construct.
 
 ## Register Custom Node Type
