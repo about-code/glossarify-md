@@ -75,24 +75,7 @@ For a deeper understanding of the different hooks familiarize yourself with [mic
 
 See also built-in [micromark-constructs]. A good example may also be [micromark-extension-footnote].
 
-The character code determines the first character participating in a syntax construct which when found causes the extension's `tokenize(effects, ok, nok)` function to be invoked. `tokenizer()` returns a [State] function representing the *initial state* of the syntax state machine (*state-as-a-function* pattern). State functions need access to `effects, ok, nok` so may be inner functions of `tokenizer`.
-
-Every [State] function...
-
-1. ...receives the *current input character* at the head of the *character input stream*. Initially this *should* be the character the whole [Construct] has been mapped onto, so `91` in the example above.
-
-1. ...returns a [State] function to use for the next character
-
-1. ...should make sure, that the input character it receives is a character it currently expects*. If not it should return the [NotOkay] state via `return nok(code)`.
-
-1. ...must only return the [Okay] state if it is the final state
-
-Given the character is an expected one a State function...
-
-1. ...enqueues a *Start Token* on the token queue using `effects.enter(token)`
-   - we recommend using `Symbol()` instead of strings to guarantee a unique name
-1. ...consumes the *current character* using `effects.consume(code)`
-1. ...at some point enqueues an *End Token* using  `effects.exit()`
+The character code determines the first character participating in a syntax construct which when found causes the extension's `tokenize(effects, ok, nok)` function to be invoked.
 
 *Example: Tokenizer in [micromark-extension-footnote]:*
 ~~~js
@@ -121,17 +104,38 @@ function tokenizeDefinitionStart(effects, ok, nok) {
 }
 ~~~
 
-To sum up: in the example above we see
+[Tokenize] functions...
 
-- a `tokenizer` function *tokenizeDefinitionStart*
-- two [State] function *start* and *labelStart*
-- how *start*
+- ...return a [State] function representing the *initial state* of the syntax state machine (*state-as-a-function* pattern). State functions need access to `effects, ok, nok` so may be realised as inner functions of `tokenize`.
+
+[State] functions...
+
+1. ...receive the *current input character* at the head of the *character input stream*. Initially this *should* be the character the whole [Construct] has been mapped onto, so `91` in the examples above.
+
+1. ...return a [State] function to use for the next character
+
+1. ...should make sure, that the input character it receives is a character or character range it currently expects*. If not it should return the [NotOkay] state via `return nok(code)`.
+
+1. ...must only return the [Okay] state if it is the final state
+
+Given the character is an expected one, then a State function...
+
+1. ...enqueues a *Start Token* on the token queue using `effects.enter(token)`
+   - we recommend using `Symbol()` instead of strings to guarantee a unique name
+1. ...consumes the *current character* using `effects.consume(code)`
+1. ...at some point enqueues an *End Token* using  `effects.exit()`
+
+So in the example above we see all this realized as...
+
+- a `tokenize` function *tokenizeDefinitionStart* which returns a `start()` [State] function
+- how `start()`
+  1. tests for the right character
   1. puts a `footnoteDefinitionLabelMarker` Start Token onto the queue
   1. then consumes a syntax control character
   1. then puts a `footnoteDefinitionLabelMarker` End Token onto the queue
-  1. then returns the [State] function *labelStart*
-- how *labelStart* continues consuming the *next* character from the input stream
-  1. and once again makes sure it is expected
+  1. eventually returns another [State] function `labelStart()`
+- how `labelStart()` continues consuming the *next* character from the input stream
+  1. and once again makes sure the character is one it expects
   1. and eventually returns yet another State function and so on...
 
 What we can not see from the example, but guess, is that those tokens entered but not yet exited will be exited at some point using `effects.exit(...)` and that eventually when processing the syntax construct is done `ok(code)` will be invoked.
@@ -190,13 +194,15 @@ in the [unified.processor][unified] context.
 [Node]: https://github.com/syntax-tree/unist#node
 [mdAST]: https://github.com/syntax-tree/mdast
 [CMSM]: https://github.com/micromark/common-markup-state-machine#6-parsing
-[Construct]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L167
-[State]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L137
-[SyntaxExtension]: https://github.com/micromark/micromark/blob/ac44b027357e36694efd2c59babba1b89515e73c/lib/shared-types.d.ts#L210
+[Construct]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L167
+[NotOkay]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L147
+[State]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L137
+[SyntaxExtension]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L210
+[Tokenize]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L165
 [micromark]: https://github.com/micromark/micromark
 [micromark-constructs]: https://github.com/micromark/micromark/blob/main/lib/constructs.mjs
 [micromark-syntax-extension]: https://github.com/micromark/micromark#syntaxextension
-[micromark-extension-footnote]: https://github.com/micromark/micromark-extension-footnote/blob/dd93aa5bdbe9eee0aeb70a264f918a04630bde82/index.js#L35
+[micromark-extension-footnote]: https://github.com/micromark/micromark-extension-footnote/blob/0.3.2/index.js#L35
 [mdast-util-from-markdown]: https://github.com/syntax-tree/mdast-util-from-markdown
 [mdast-util-to-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
 [mdast-util-to-markdown-handlers]: https://github.com/syntax-tree/mdast-util-to-markdown#optionshandlers
