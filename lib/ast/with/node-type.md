@@ -106,7 +106,7 @@ function tokenizeDefinitionStart(effects, ok, nok) {
 
 [Tokenize] functions...
 
-- ...return a [State] function representing the *initial state* of the syntax state machine (*state-as-a-function* pattern). State functions need access to `effects, ok, nok` so may be realised as inner functions of `tokenize`.
+- ...return a [State] function representing the *initial state* of the syntax state machine (*state-as-a-function* pattern). State functions need access to `effects, ok, nok` so may be realised as inner functions.
 
 [State] functions...
 
@@ -127,24 +127,24 @@ Given the character is an expected one, then a State function...
 
 So in the example above we see all this realized as...
 
-- a `tokenize` function *tokenizeDefinitionStart* which returns a `start()` [State] function
+- a [Tokenize] function `tokenizeDefinitionStart()` which returns a `start()` [State] function
 - how `start()`
   1. tests for the right character
-  1. puts a `footnoteDefinitionLabelMarker` Start Token onto the queue
+  1. puts a `"footnoteDefinitionLabelMarker"` *Start Token* onto the queue
   1. then consumes a syntax control character
-  1. then puts a `footnoteDefinitionLabelMarker` End Token onto the queue
+  1. then puts a `"footnoteDefinitionLabelMarker"` *End Token* onto the queue
   1. eventually returns another [State] function `labelStart()`
 - how `labelStart()` continues consuming the *next* character from the input stream
   1. and once again makes sure the character is one it expects
-  1. and eventually returns yet another State function and so on...
+  1. and eventually returns yet another [State] function and so on...
 
-What we can not see from the example, but guess, is that those tokens entered but not yet exited will be exited at some point using `effects.exit(...)` and that eventually when processing the syntax construct is done `ok(code)` will be invoked.
+What we can not directly see from the example, but guess, is that those tokens entered but not yet exited [will be exited at some point][micromark-extension-footnote] using `effects.exit(...)` and that eventually when processing the syntax construct is done `ok(code)` will be invoked.
 
 ## `fromMarkdown()`
 
-We have written our custom syntax tokens onto the token queue by implementing `syntax`. If we like Tokens and data to make it into an [AST] we need some place which creates [Node]s from the tokens. This is what an implementation of `fromMarkdown()` is concerned with. In particular it creates an [mdAST], that is, an [AST] *for Markdown*. For now we refer to [mdast-util-from-markdown] for any further examples.
+We have written our custom syntax tokens onto the token queue by implementing `syntax()`. If we want the tokens and data to make it into an [AST] we need some place which creates AST-[Node]s from the tokens. This is what an implementation of `fromMarkdown()` is concerned with. In particular it creates an [mdAST], that is, an [AST] *for Markdown*. For now we refer to [mdast-util-from-markdown] for any further examples.
 
-> Remind Figure 1 above: if your node type is a note that is only to be inserted as part of modifying or extending an existing [AST], then there's nothing to implement here!
+> Remind Figure 1 above: if your node type is a node that is only to be inserted as part of modifying or extending an existing [AST], then there's nothing to implement here!
 
 ## `toMarkdown()`
 
@@ -190,11 +190,12 @@ Internally `withNodeType` calls our Node Type's `syntax()`, `fromMarkdown()` and
 
 in the [unified.processor][unified] context.
 
-[AST]: https://github.com/syntax-tree/unist
+[AST]: https://github.com/syntax-tree/unist "Abstract Syntax Tree"
 [Node]: https://github.com/syntax-tree/unist#node
 [mdAST]: https://github.com/syntax-tree/mdast
 [CMSM]: https://github.com/micromark/common-markup-state-machine#6-parsing
 [Construct]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L167
+[Okay]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L142
 [NotOkay]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L147
 [State]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L137
 [SyntaxExtension]: https://github.com/micromark/micromark/blob/2.11.1/lib/shared-types.d.ts#L210
