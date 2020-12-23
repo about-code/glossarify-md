@@ -1,9 +1,26 @@
 [
   {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
     "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './sub/index.md'\nAND the glossary file is in './glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path '../glossary.md#term'.",
     "value": "Term",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './sub/index.md'\nAND the glossary file is in './glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path '../glossary.md#term'.",
+    "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
       "file": "./glossary.md",

@@ -1,9 +1,42 @@
 [
   {
     "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
     "value": "Term1",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term1",
     "glossary": {
       "file": "./glossary.md",
@@ -19,6 +52,7 @@
     "value": "Term2",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term2",
     "glossary": {
       "file": "./sub-1/glossary.md",

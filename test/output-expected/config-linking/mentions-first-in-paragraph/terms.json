@@ -1,9 +1,26 @@
 [
   {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
     "shortDesc": "Test term",
     "value": "Ipsum",
     "hint": "",
     "longDesc": "Test term",
+    "headingDepth": 2,
     "anchor": "#ipsum",
     "glossary": {
       "file": "./glossary.md",
@@ -19,6 +36,7 @@
     "value": "Lorem",
     "hint": "",
     "longDesc": "Test term",
+    "headingDepth": 2,
     "anchor": "#lorem",
     "glossary": {
       "file": "./glossary.md",

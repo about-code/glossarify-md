@@ -4,6 +4,7 @@
     "value": "Term",
     "hint": "",
     "longDesc": "must not be referred to by excluded files.",
+    "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
       "file": "glossary.md",
@@ -13,5 +14,21 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing option excludeFiles",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-option-excludefiles",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   }
 ]

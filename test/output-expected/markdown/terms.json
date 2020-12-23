@@ -4,6 +4,7 @@
     "value": "dolor",
     "hint": "↴",
     "longDesc": "foo",
+    "headingDepth": 2,
     "anchor": "#dolor",
     "glossary": {
       "file": "./glossary.md",
@@ -15,10 +16,27 @@
     "countOccurrenceTotal": 3
   },
   {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "↴",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "↴"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
     "value": "Lorem ipsum",
     "hint": "↴",
     "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "headingDepth": 2,
     "anchor": "#lorem-ipsum",
     "glossary": {
       "file": "./glossary.md",
@@ -34,6 +52,7 @@
     "value": "sit",
     "hint": "↴",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#sit",
     "glossary": {
       "file": "./glossary.md",
