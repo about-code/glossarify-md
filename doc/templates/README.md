@@ -649,6 +649,15 @@ an Index to only list the chapter or higher-level sections where some term or
 element has been found in. This option allows to set the depth by which
 elements shall be grouped where `1` refers to chapters (`#` headings).
 
+#### `indexing.headingDepth`
+
+- **Range:** `number[]` in 1-6
+- **Since:** v5.0.0
+
+An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually. Default is `[1,2,3,4,5,6]`.
+
+The relation to [`linking.headingDepths`](#linkingheadingdepths) is that *this* is about *knowing the link targets* whereas the latter is about *creating links automatically ...based on knowledge about link targets*. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.
+
 #### `i18n`
 
 - **Range**:` { locale: string, [localeMatcher: string],
@@ -702,6 +711,7 @@ searching and linking. E.g. to only consider headings `## text` (depth 2) or
 `### text` (depth 3) but not `#### text` (depth 4) provide an array `[2,3]`.
 Default is `[2,3,4,5,6]`.
 
+In case you have modified [`indexing.headingDepths`](#indexingheadingdepths), be aware that this option only makes sense if it is a *full subset* of the items in [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `outDir`
 
