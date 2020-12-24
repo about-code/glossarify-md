@@ -1,0 +1,11 @@
+{
+    "$schema": "../../../../conf/v5/schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-indexing/headingDepths-2-5",
+    "indexing": {
+      "headingDepths": [2,5]
+    },
+    "linking": {
+      "headingDepths": [2,3,4,5,6]
+    }
+  }
