@@ -1,12 +1,12 @@
 {
-  "$schema": "../../../conf/v5/schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
   "linking": {
     "paths": "absolute",
     "mentions": "all",
     "baseUrl": "http://example.org"
   },
-  "outDir": "../../output-actual/config-baseUrl/",
+  "outDir": "../../../output-actual/config-linking/baseUrl/",
   "includeFiles": [
     "."
   ],
@@ -23,7 +23,7 @@
   ],
   "ignoreCase": false,
   "dev": {
-    "termsFile": "../../output-actual/config-baseUrl/terms.json",
+    "termsFile": "../../../output-actual/config-linking/baseUrl/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

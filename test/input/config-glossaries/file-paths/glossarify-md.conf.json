@@ -1,7 +1,7 @@
 {
-  "$schema": "../../../conf/v5/schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/glossary-crosslinks",
+  "outDir": "../../../output-actual/config-glossaries/file-paths",
   "includeFiles": [
     "."
   ],
@@ -23,7 +23,7 @@
   },
   "ignoreCase": false,
   "dev": {
-    "termsFile": "../../output-actual/glossary-crosslinks/terms.json",
+    "termsFile": "../../../output-actual/config-glossaries/file-paths/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false
