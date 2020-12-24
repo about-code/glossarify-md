@@ -19,9 +19,9 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-linking/relative",
+  "outDir": "../../../output-actual/config-linking/paths-relative",
   "dev": {
-    "termsFile": "../../../output-actual/config-linking/relative/terms.json",
+    "termsFile": "../../../output-actual/config-linking/paths-relative/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

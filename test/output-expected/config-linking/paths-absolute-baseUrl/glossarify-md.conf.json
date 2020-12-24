@@ -19,9 +19,9 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-linking/absolute-baseUrl",
+  "outDir": "../../../output-actual/config-linking/paths-absolute-baseUrl",
   "dev": {
-    "termsFile": "../../../output-actual/config-linking/absolute-baseUrl/terms.json",
+    "termsFile": "../../../output-actual/config-linking/paths-absolute-baseUrl/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

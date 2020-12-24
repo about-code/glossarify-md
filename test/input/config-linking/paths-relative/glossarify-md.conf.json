@@ -2,9 +2,9 @@
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
   "linking": {
-    "paths": "absolute",
+    "paths": "relative",
     "mentions": "all",
-    "baseUrl": ""
+    "baseUrl": "http://localhost"
   },
   "includeFiles": [
     "."
@@ -13,12 +13,15 @@
   "glossaries": [
     {
       "file": "./glossary.md"
+    },
+    {
+      "file": "./sub-1/glossary.md"
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-linking/absolute-baseUrl-empty",
+  "outDir": "../../../output-actual/config-linking/paths-relative",
   "dev": {
-    "termsFile": "../../../output-actual/config-linking/absolute-baseUrl-empty/terms.json",
+    "termsFile": "../../../output-actual/config-linking/paths-relative/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

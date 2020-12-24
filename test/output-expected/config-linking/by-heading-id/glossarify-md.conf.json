@@ -1,7 +1,7 @@
 {
-  "$schema": "../../../conf/v5/schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/122-cross-linking",
+  "outDir": "../../../output-actual/config-linking/by-heading-id",
   "linking": {
     "paths": "relative",
     "mentions": "all"
