@@ -16,12 +16,28 @@
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "Test term",
-    "value": "Ipsum",
+    "shortDesc": "",
+    "value": "Glossary",
     "hint": "",
-    "longDesc": "Test term",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Term1",
+    "hint": "",
+    "longDesc": "",
     "headingDepth": 2,
-    "anchor": "#ipsum",
+    "anchor": "#term1",
     "glossary": {
       "file": "./glossary.md",
       "termHint": ""
@@ -32,19 +48,19 @@
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "Test term",
-    "value": "Lorem",
+    "shortDesc": "",
+    "value": "Term2",
     "hint": "",
-    "longDesc": "Test term",
+    "longDesc": "",
     "headingDepth": 2,
-    "anchor": "#lorem",
+    "anchor": "#term2",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "./sub-1/glossary.md",
       "termHint": ""
     },
     "regex": {},
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 1
   }
 ]

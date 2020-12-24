@@ -4,6 +4,7 @@
     "value": "all-lowercase",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#all-lowercase",
     "glossary": {
       "file": "./glossary.md",
@@ -19,6 +20,7 @@
     "value": "ALL-UPPERCASE",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#all-uppercase",
     "glossary": {
       "file": "./glossary.md",
@@ -34,6 +36,7 @@
     "value": "fIRST-lOWERCASE",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#first-lowercase",
     "glossary": {
       "file": "./glossary.md",
@@ -49,6 +52,7 @@
     "value": "First-Uppercase",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#first-uppercase",
     "glossary": {
       "file": "./glossary.md",
@@ -64,6 +68,7 @@
     "value": "MiXeD-CaSe",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#mixed-case",
     "glossary": {
       "file": "./glossary.md",
@@ -73,5 +78,21 @@
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing Config Option ignoreCase",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-config-option-ignorecase",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": true,
+    "countOccurrenceTotal": 0
   }
 ]

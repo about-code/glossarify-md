@@ -4,6 +4,7 @@
     "value": "First-Level-Child",
     "hint": "",
     "longDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
+    "headingDepth": 2,
     "anchor": "#first-level-child",
     "glossary": {
       "file": "./sub-1/glossary.md",
@@ -19,6 +20,7 @@
     "value": "First-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
+    "headingDepth": 2,
     "anchor": "#first-level-parent",
     "glossary": {
       "file": "./sub-1/glossary.md",
@@ -34,6 +36,7 @@
     "value": "Second-Level-Parent",
     "hint": "",
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
+    "headingDepth": 2,
     "anchor": "#second-level-parent",
     "glossary": {
       "file": "./glossary.md",
@@ -49,6 +52,7 @@
     "value": "Sibling",
     "hint": "",
     "longDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",
+    "headingDepth": 2,
     "anchor": "#sibling",
     "glossary": {
       "file": "./glossary.md",
@@ -58,5 +62,37 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing Config Option 'linking'",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-config-option-linking",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing Config Option 'linking'",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-config-option-linking",
+    "glossary": {
+      "file": "./sub-1/glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
   }
 ]

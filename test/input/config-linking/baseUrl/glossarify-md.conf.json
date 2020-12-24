@@ -4,21 +4,26 @@
   "linking": {
     "paths": "absolute",
     "mentions": "all",
-    "baseUrl": ""
+    "baseUrl": "http://example.org"
   },
+  "outDir": "../../../output-actual/config-linking/baseUrl/",
   "includeFiles": [
     "."
   ],
   "excludeFiles": [],
   "glossaries": [
     {
-      "file": "./glossary.md"
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    {
+      "file": "./sub-1/glossary.md",
+      "termHint": ""
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-linking/absolute-baseUrl-empty",
   "dev": {
-    "termsFile": "../../../output-actual/config-linking/absolute-baseUrl-empty/terms.json",
+    "termsFile": "../../../output-actual/config-linking/baseUrl/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

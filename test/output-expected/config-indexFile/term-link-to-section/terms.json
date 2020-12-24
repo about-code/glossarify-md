@@ -1,9 +1,26 @@
 [
   {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
     "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
     "value": "Term",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
+    "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
       "file": "./glossary.md",

@@ -4,6 +4,7 @@
     "value": "Description Partly Formatted",
     "hint": "ⓕ",
     "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
+    "headingDepth": 3,
     "anchor": "#description-partly-formatted",
     "glossary": {
       "file": "./glossary.md",
@@ -19,6 +20,7 @@
     "value": "Formatted Term Definitions",
     "hint": "ⓕ",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#formatted-term-definitions",
     "glossary": {
       "file": "./glossary.md",
@@ -34,6 +36,7 @@
     "value": "GIVEN full description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-full-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
@@ -49,6 +52,7 @@
     "value": "GIVEN long description has a link",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-long-description-has-a-link",
     "glossary": {
       "file": "./glossary.md",
@@ -64,6 +68,7 @@
     "value": "GIVEN long description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-long-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
@@ -79,6 +84,7 @@
     "value": "GIVEN short description has a link",
     "hint": "ⓕ",
     "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-has-a-link",
     "glossary": {
       "file": "./glossary.md",
@@ -94,6 +100,7 @@
     "value": "GIVEN short description is a blockquote",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-is-a-blockquote",
     "glossary": {
       "file": "./glossary.md",
@@ -109,6 +116,7 @@
     "value": "GIVEN short description is bold WITH fullstop excluded",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-excluded",
     "glossary": {
       "file": "./glossary.md",
@@ -124,6 +132,7 @@
     "value": "GIVEN short description is bold WITH fullstop included",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-included",
     "glossary": {
       "file": "./glossary.md",
@@ -139,6 +148,7 @@
     "value": "GIVEN short description is italic WITH fullstop excluded",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-excluded",
     "glossary": {
       "file": "./glossary.md",
@@ -154,6 +164,7 @@
     "value": "GIVEN short description is italic WITH fullstop included",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
+    "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-included",
     "glossary": {
       "file": "./glossary.md",
@@ -169,6 +180,7 @@
     "value": "Single sentence accross multiple lines",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "headingDepth": 2,
     "anchor": "#single-sentence-accross-multiple-lines",
     "glossary": {
       "file": "./glossary.md",
@@ -184,6 +196,7 @@
     "value": "Single sentence terminated by exclamation mark",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-exclamation-mark",
     "glossary": {
       "file": "./glossary.md",
@@ -199,6 +212,7 @@
     "value": "Single sentence terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
@@ -214,7 +228,24 @@
     "value": "Single sentence terminated by question mark",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-question-mark",
+    "glossary": {
+      "file": "./glossary.md",
+      "termHint": "ⓕ"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing Term Definition Extraction",
+    "hint": "ⓕ",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-term-definition-extraction",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "ⓕ"
@@ -229,6 +260,7 @@
     "value": "Two sentences accross multiple lines terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
+    "headingDepth": 2,
     "anchor": "#two-sentences-accross-multiple-lines-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
@@ -244,6 +276,7 @@
     "value": "Two sentences in a single line terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
+    "headingDepth": 2,
     "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
@@ -259,6 +292,7 @@
     "value": "Two sentences in multiple lines terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
+    "headingDepth": 2,
     "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",

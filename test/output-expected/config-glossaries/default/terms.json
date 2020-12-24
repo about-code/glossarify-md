@@ -4,6 +4,7 @@
     "value": "#Hashtag",
     "hint": "",
     "longDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
+    "headingDepth": 2,
     "anchor": "#hashtag",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -19,6 +20,7 @@
     "value": "äöüß Term begins with Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
+    "headingDepth": 2,
     "anchor": "#äöüß-term-begins-with-umlauts",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -34,6 +36,7 @@
     "value": "Äquator",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
+    "headingDepth": 2,
     "anchor": "#äquator",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -49,6 +52,7 @@
     "value": "bold-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "headingDepth": 2,
     "anchor": "#bold-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -64,6 +68,7 @@
     "value": "China中国",
     "hint": "",
     "longDesc": "Word ends with symbols",
+    "headingDepth": 2,
     "anchor": "#china中国",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -79,6 +84,7 @@
     "value": "Chi中国na",
     "hint": "",
     "longDesc": "Word contains symbols",
+    "headingDepth": 2,
     "anchor": "#chi中国na",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -94,6 +100,7 @@
     "value": "codespan-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "headingDepth": 2,
     "anchor": "#codespan-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -109,6 +116,7 @@
     "value": "dense-definition",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.\nTHEN term, short and long description MUST still be extracted, correctly.",
+    "headingDepth": 2,
     "anchor": "#dense-definition",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -124,6 +132,7 @@
     "value": "dense-definition-with-alias",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.\nTHEN term, aliases, short and long description MUST still be extracted, correctly.",
+    "headingDepth": 2,
     "anchor": "#dense-definition-with-alias",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -141,6 +150,7 @@
     "value": "Der Tod und das Mädchen",
     "hint": "",
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
+    "headingDepth": 2,
     "anchor": "#der-tod-und-das-mädchen",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -156,6 +166,7 @@
     "value": "Faß",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
+    "headingDepth": 2,
     "anchor": "#faß",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -167,10 +178,107 @@
     "countOccurrenceTotal": 3
   },
   {
+    "shortDesc": "",
+    "value": "Glossary",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "glossary": {
+      "file": "./Uppercase-glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary A",
+    "hint": " (a&b)",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary-a",
+    "glossary": {
+      "file": "./shared-terms-glossary-a.md",
+      "termHint": " (a&b)"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary A.",
+    "hint": " (a/b)",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary-a",
+    "glossary": {
+      "file": "./disjunct-terms-glossary-a.md",
+      "termHint": " (a/b)"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary B",
+    "hint": " (a/b)",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary-b",
+    "glossary": {
+      "file": "./disjunct-terms-glossary-b.md",
+      "termHint": " (a/b)"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary B",
+    "hint": " (a&b)",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary-b",
+    "glossary": {
+      "file": "./shared-terms-glossary-b.md",
+      "termHint": " (a&b)"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Glossary with markdown formatted term",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#glossary-with-markdown-formatted-term",
+    "glossary": {
+      "file": "./formatted-terms-glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
     "shortDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
     "value": "In parts formatted",
     "hint": "",
     "longDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
+    "headingDepth": 2,
     "anchor": "#in-parts-formatted",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -186,6 +294,7 @@
     "value": "italic-format",
     "hint": "",
     "longDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
+    "headingDepth": 2,
     "anchor": "#italic-format",
     "glossary": {
       "file": "./formatted-terms-glossary.md",
@@ -201,6 +310,7 @@
     "value": "Term contains äöüß Umlauts",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
+    "headingDepth": 2,
     "anchor": "#term-contains-äöüß-umlauts",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -216,6 +326,7 @@
     "value": "Term Disjunct A",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
+    "headingDepth": 2,
     "anchor": "#term-disjunct-a",
     "glossary": {
       "file": "./disjunct-terms-glossary-a.md",
@@ -231,6 +342,7 @@
     "value": "Term Disjunct B",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
+    "headingDepth": 2,
     "anchor": "#term-disjunct-b",
     "glossary": {
       "file": "./disjunct-terms-glossary-b.md",
@@ -246,6 +358,7 @@
     "value": "Term ends with Umlauts äöüß",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
+    "headingDepth": 2,
     "anchor": "#term-ends-with-umlauts-äöüß",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -261,6 +374,7 @@
     "value": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "headingDepth": 2,
     "anchor": "#term-shared-a",
     "glossary": {
       "file": "./shared-terms-glossary-a.md",
@@ -276,6 +390,7 @@
     "value": "Term Shared A",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "headingDepth": 2,
     "anchor": "#term-shared-a",
     "glossary": {
       "file": "./shared-terms-glossary-b.md",
@@ -291,6 +406,7 @@
     "value": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "headingDepth": 2,
     "anchor": "#term-shared-b",
     "glossary": {
       "file": "./shared-terms-glossary-a.md",
@@ -306,6 +422,7 @@
     "value": "Term Shared B",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
+    "headingDepth": 2,
     "anchor": "#term-shared-b",
     "glossary": {
       "file": "./shared-terms-glossary-b.md",
@@ -321,6 +438,7 @@
     "value": "Term-Hint-Prefix",
     "hint": "☛ ${term}",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term-hint-prefix",
     "glossary": {
       "file": "./term-hint-prefix-glossary.md",
@@ -336,6 +454,7 @@
     "value": "Term-Hint-Suffix",
     "hint": "${term} ☚",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term-hint-suffix",
     "glossary": {
       "file": "./term-hint-suffix-glossary.md",
@@ -351,6 +470,7 @@
     "value": "Term-Hint-Suffix-Default",
     "hint": "↴",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term-hint-suffix-default",
     "glossary": {
       "file": "./term-hint-suffix-default-glossary.md",
@@ -366,6 +486,7 @@
     "value": "Term-Hint-Wrapped",
     "hint": "☛ ${term} ☚",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#term-hint-wrapped",
     "glossary": {
       "file": "./term-hint-wrapped-glossary.md",
@@ -378,9 +499,90 @@
   },
   {
     "shortDesc": "",
+    "value": "Testing config option 'glossaries.termHint'",
+    "hint": "☛ ${term} ☚",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-config-option-glossariestermhint",
+    "glossary": {
+      "file": "./term-hint-wrapped-glossary.md",
+      "termHint": "☛ ${term} ☚"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing option 'glossaries.termHint'",
+    "hint": "☛ ${term}",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-option-glossariestermhint",
+    "glossary": {
+      "file": "./term-hint-prefix-glossary.md",
+      "termHint": "☛ ${term}"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing option 'glossaries.termHint'",
+    "hint": "↴",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-option-glossariestermhint",
+    "glossary": {
+      "file": "./term-hint-suffix-default-glossary.md",
+      "termHint": "↴"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Testing option 'glossaries.termHint'",
+    "hint": "${term} ☚",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#testing-option-glossariestermhint",
+    "glossary": {
+      "file": "./term-hint-suffix-glossary.md",
+      "termHint": "${term} ☚"
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
+    "value": "Unicode Tests",
+    "hint": "",
+    "longDesc": "",
+    "headingDepth": 1,
+    "anchor": "#unicode-tests",
+    "glossary": {
+      "file": "./unicode-glossary.md",
+      "termHint": ""
+    },
+    "regex": {},
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "shortDesc": "",
     "value": "Uppercase",
     "hint": "",
     "longDesc": "",
+    "headingDepth": 2,
     "anchor": "#uppercase",
     "glossary": {
       "file": "./Uppercase-glossary.md",
@@ -396,6 +598,7 @@
     "value": "zhōngguó",
     "hint": "",
     "longDesc": "China (spelling)",
+    "headingDepth": 2,
     "anchor": "#zhōngguó",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -411,6 +614,7 @@
     "value": "中China国",
     "hint": "",
     "longDesc": "Word begins and ends with symbols",
+    "headingDepth": 2,
     "anchor": "#中china国",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -426,6 +630,7 @@
     "value": "中国",
     "hint": "",
     "longDesc": "China",
+    "headingDepth": 2,
     "anchor": "#中国",
     "glossary": {
       "file": "./unicode-glossary.md",
@@ -441,6 +646,7 @@
     "value": "中国China",
     "hint": "",
     "longDesc": "Word begins with symbols",
+    "headingDepth": 2,
     "anchor": "#中国china",
     "glossary": {
       "file": "./unicode-glossary.md",

@@ -3,7 +3,6 @@
 ![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20(Functional)/badge.svg)
 ![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20(with%20latest%20deps)/badge.svg)
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
 
 [glossarify-md] is a command line tool to help Markdown writers with
 
@@ -11,8 +10,14 @@
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
-[vuepress](https://vuepress.vuejs.org) users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
+[vuepress] users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
+
+[glossarify-md]: https://github.com/about-code/glossarify-md
+[glob]: https://github.com/isaacs/node-glob#glob-primer
+[vuepress]: https://vuepress.vuejs.org
+[pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
+[CommonMark]: https://www.commonmark.org
 
 ## Table of Contents
 
@@ -86,7 +91,7 @@ If you're fine with the default values the configuration can be as simple as thi
 }
 ```
 
-More options see [Options](#options) below.
+More options see [Options] below.
 
 > **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
 >
@@ -127,6 +132,8 @@ glossarify-md
 
 
 ## Sample
+
+[Sample]:#sample
 
 We assume a sample project with the following structure:
 
@@ -226,6 +233,9 @@ Terms found in Markdown blockquotes (`>`) aren't linked to a term definition bas
 
 ## Aliases and Synonyms
 
+[alias]: #aliases-and-synonyms
+[aliases]: #aliases-and-synonyms
+
 Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list of alternative terms.
 
 *glossary.md*
@@ -257,12 +267,15 @@ In the output files aliases will be linked to their related term:
 ]
 ```
 
-Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries](#multiple-glossaries) to which one.
+Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one.
 
 > **Since v2.0.0**:
 Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 
 ## Multiple Glossaries
+
+[multiple-glossaries]:#multiple-glossaries
+
 Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
 
 *glossarify-md.conf.json*
@@ -291,9 +304,6 @@ By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *R
 >
 > **Note:** `termHint` will be ignored if `file` is a glob.
 
-[glob]: https://github.com/isaacs/node-glob#glob-primer
-
-
 ## Sorting your glossaries
 
 > **Since v3.6.0**
@@ -318,6 +328,80 @@ Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare`
 ```
 
 The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
+
+## Cross Linking
+
+[cross-linking]: #cross-linking
+
+> **Since: v5.0.0**
+
+### Term-Based Auto-Linking
+
+*Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term (*linkification*).
+
+**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with...
+
+```json
+"glossaries": [
+    { "file": "./**/*.md"}
+]
+```
+
+...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
+
+> **Note:** With `file` being a glob `termHint` and `sort` are being ignored. So you may still declare a dedicated glossary item with a `file` *path* if you need these options.
+
+**Too many links?**
+
+What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated.
+If this is an issue for you explore options like `linking.mentions` or `linking.headingDepths` and the other `linking.*` [options] to control linkify behavior.
+
+### ID-based Cross-Links
+
+If the same section heading exists more than once - for example you have multiple pages being structured by a certain template - then you might want to link to one heading in particular.
+<!--
+While [aliases] sometimes might be the better option, they also require you to use that particular phrase whenevery you refer to that
+-->
+Another feature we've added is support for [pandoc's heading ids][pandoc-heading-ids]. These allow you to assign anchor ids which do not depend on the heading phrase. That makes them more stable to use for references than auto-generated IDs (slugs).
+
+[Sample]: document `./pages/page1.md` declares a heading
+
+*/pages/page1.md*
+~~~md
+## User Story {#p1-story}
+~~~
+
+with heading-id `#p1-story`. **Given that `#p1-story` is *unique* accross all documents** you can have a link
+
+~~~md
+[any phrase](#p1-story)
+~~~
+
+in any file being processed. [glossarify-md] will resolve the id into a relative path to `page1.md`:
+
+*/README.md*
+~~~
+[any phrase](./pages/page1.md#p1-story)
+~~~
+
+*/pages/page2.md*
+~~~
+[any phrase](./page1.md#p1-story)
+~~~
+
+<!--
+If you are a technical writer and some pages follow a page template with the same standardized headings being used repeatedly, then this is similar to a term having dozens of definitions. By default, when [glossarify-md] finds the term in text it turns it into a link to one definition but adds superscript links to all of its definitions. You may not want this if you don't really care about terminology but term-based cross-linking, only. Therefore you can set a limit for superscript links or if that limit is negative, tell glossarify-md to not generate a link at all if there are more than -1 * limit definitions.
+-->
+
+
+<!--
+- **`linking.mentions`**
+  allows to control whether `"all"` mentions of a heading phrase should be turned into a link or only the `"first-in-paragraph"`, for example. Just keep in mind that a *paragraph* is to be understood as a *Markdown paragraph* as specified in [CommonMark].
+- **`linking.headingDepths`**
+  allows you to control which kind of headings to link up. A configuration `[1,2,3]` tells [glossarify-md] to only linkify headings of kind `# One`, `## Two` or `### Three` but not `#### Four`, `##### Five`, `###### Six`.
+- **`glossaries.file`**
+  if you have used a glob pattern you may be able to define a file name pattern to reduce the number of files participating in cross-linking
+-->
 
 ## Generating Files
 
@@ -569,6 +653,7 @@ The term *support* refers to *runs on the given platform* and is subject to the 
 
 ## Options
 
+[Options]: #options
 
 #### `baseDir`
 
@@ -649,6 +734,15 @@ an Index to only list the chapter or higher-level sections where some term or
 element has been found in. This option allows to set the depth by which
 elements shall be grouped where `1` refers to chapters (`#` headings).
 
+#### `indexing.headingDepth`
+
+- **Range:** `number[]` in 1-6
+- **Since:** v5.0.0
+
+An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually. Default is `[1,2,3,4,5,6]`.
+
+The relation to [`linking.headingDepths`](#linkingheadingdepths) is that *this* is about *knowing the link targets* whereas the latter is about *creating links automatically ...based on knowledge about link targets*. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.
+
 #### `i18n`
 
 - **Range**:` { locale: string, [localeMatcher: string],
@@ -702,6 +796,7 @@ searching and linking. E.g. to only consider headings `## text` (depth 2) or
 `### text` (depth 3) but not `#### text` (depth 4) provide an array `[2,3]`.
 Default is `[2,3,4,5,6]`.
 
+In case you have modified [`indexing.headingDepths`](#indexingheadingdepths), be aware that this option only makes sense if it is a *full subset* of the items in [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `outDir`
 

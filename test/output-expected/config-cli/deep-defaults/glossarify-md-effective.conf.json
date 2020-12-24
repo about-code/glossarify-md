@@ -20,7 +20,15 @@
     "."
   ],
   "indexing": {
-    "groupByHeadingDepth": 6
+    "groupByHeadingDepth": 6,
+    "headingDepths": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": true,
+      "6": true
+    }
   },
   "i18n": {
     "locale": "en"

@@ -2,6 +2,9 @@
     "$schema": "../../../../conf/v5/schema.json",
     "baseDir": ".",
     "outDir": "../../../output-actual/config-linking/headingDepths-2-4",
+    "indexing": {
+      "headingDepths": [1,2,3,4,5,6]
+    },
     "linking": {
       "headingDepths": [2,4]
     }
