@@ -18,6 +18,7 @@
 [vuepress]: https://vuepress.vuejs.org
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
 [CommonMark]: https://www.commonmark.org
+[GFM]: https://github.github.com/gfm/
 
 ## Table of Contents
 
@@ -815,6 +816,55 @@ If `true` remove old `outDir` before writing a new one, otherwise overwrite file
 - **Range:** `boolean`
 
 Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
+
+#### `unified`
+
+[unified]: https://unifiedjs.com
+[unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
+[remark]: https://github.com/remarkjs/remark
+[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
+[remark-footnotes]: https://npmjs.com/package/remark-footnotes
+[remark-plugins]: https://github.com/remarkjs/awesome-remark
+
+- **Range:** `{ rcPath: string } | { settings: object, plugins: object|array }`
+
+Extended [unified configuration][unified-config]. You may want to provide such a configuration for loading [remark plug-ins][remark-plugins] you've installed yourself. You likely require such plug-ins if your input files use third-party syntax which is not covered by the [CommonMark] specification. glossarify-md only supports [CommonMark], [GitHub Flavoured Markdown (GFM)][GFM] and [Footnotes][remark-footnotes] by default.
+
+> [unified] is an umbrella project around text file processing. [remark] is a [CommonMark] parser and compiler project within the [unified collective][unified].
+
+For example to support *[Frontmatter][remark-frontmatter]* syntax used by many static site generators run
+
+~~~
+npm install remark-frontmatter
+~~~
+
+Then let glossarify-md know about your [unified] configuration, e.g. via `rcPath`
+(remind that the path is relative to `baseDir`)
+
+*glossarify-md.conf.json*
+~~~json
+{
+  "unified": {
+    "rcPath": "../unified.conf.json"
+  }
+}
+~~~
+
+In your [unified] configuration write
+
+*unified.conf.json*
+~~~json
+{
+  "plugins": {
+    "remark-frontmatter": {
+      "type": "yaml",
+      "marker": "---"
+    }
+  }
+}
+~~~
+
+It's also possible to embed the unified configuration into *glossarify-md*. Just keep in mind, that [glossarify-md] considers anything under the key `unified` a [unified configuration][unified-config] and *not* part of its own config interface.
 
 #### Special Thanks go to
 
