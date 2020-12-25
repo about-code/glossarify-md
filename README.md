@@ -35,9 +35,8 @@
 - [Multiple Glossaries](#multiple-glossaries)
 - [Sorting your glossaries](#sorting-your-glossaries)
 - [Cross Linking](#cross-linking)
-  - [Term-Based Cross-Linking](#term-based-cross-linking)
-  - [Explicit Cross-Linking](#explicit-cross-linking)
-  - [Too many links](#too-many-links)
+  - [Term-Based Auto-Linking](#term-based-auto-linking)
+  - [Identifier-based Cross-Linking](#identifier-based-cross-linking)
 - [Generating Files](#generating-files)
   - [Index](#index)
   - [Lists](#lists)
@@ -379,57 +378,47 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 > **Note:** With `file` being a glob `termHint` and `sort` are being ignored. So you may still declare a dedicated glossary item with a `file` *path* if you need these options.
 
-**Too many links**
+**Too many links?**
 
-What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated.
-If this is an issue for you explore options like `linking.mentions` or `linking.headingDepths` and the other `linking.*` [options] to control linkify behavior.
+What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated. If this is an issue for you explore [`linking.*`][opt-linking] [options] like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
 
-### ID-based Cross-Links
+### Identifier-based Cross-Linking
 
-If the same section heading exists more than once - for example you have multiple pages being structured by a certain template - then you might want to link to one heading in particular.
-<!--
-While [aliases] sometimes might be the better option, they also require you to use that particular phrase whenevery you refer to that
--->
-Another feature we've added is support for [pandoc's heading ids][pandoc-heading-ids]. These allow you to assign anchor ids which do not depend on the heading phrase. That makes them more stable to use for references than auto-generated IDs (slugs).
+If the same section heading exists more than once then you might want to link to one heading in particular.
+While you should consider using an [alias] to make use of term-based auto-linking, there might be situations where you whish to have manually declared links.
+
+**Since v5.0.0** we've added support for manual cross-linking through [pandoc's concept of heading ids][pandoc-heading-ids]. These allow you to assign identifiers which are more stable for referencing than auto-generated IDs derived from the heading phrase (slugs).
+
+> **Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
 [Sample]: document `./pages/page1.md` declares a heading
 
 */pages/page1.md*
-~~~md
-## User Story {#p1-story}
-~~~
 
-with heading-id `#p1-story`. **Given that `#p1-story` is *unique* accross all documents** you can have a link
+```md
+## User Story {#s-241}
+```
 
-~~~md
-[any phrase](#p1-story)
-~~~
+with heading-id `#s-241`. **Given that `#s-241` is *unique* accross all documents** you can use it as a link reference
 
-in any file being processed. [glossarify-md] will resolve the id into a relative path to `page1.md`:
+```md
+[any phrase](#s-241)
+```
+
+in any file being processed and [glossarify-md] will resolve the relative path:
 
 */README.md*
-~~~
-[any phrase](./pages/page1.md#p1-story)
-~~~
+
+```
+[any phrase](./pages/page1.md#s-241)
+```
 
 */pages/page2.md*
-~~~
-[any phrase](./page1.md#p1-story)
-~~~
 
-<!--
-If you are a technical writer and some pages follow a page template with the same standardized headings being used repeatedly, then this is similar to a term having dozens of definitions. By default, when [glossarify-md] finds the term in text it turns it into a link to one definition but adds superscript links to all of its definitions. You may not want this if you don't really care about terminology but term-based cross-linking, only. Therefore you can set a limit for superscript links or if that limit is negative, tell glossarify-md to not generate a link at all if there are more than -1 * limit definitions.
--->
+```
+[any phrase](./page1.md#s-241)
+```
 
-
-<!--
-- **`linking.mentions`**
-  allows to control whether `"all"` mentions of a heading phrase should be turned into a link or only the `"first-in-paragraph"`, for example. Just keep in mind that a *paragraph* is to be understood as a *Markdown paragraph* as specified in [CommonMark].
-- **`linking.headingDepths`**
-  allows you to control which kind of headings to link up. A configuration `[1,2,3]` tells [glossarify-md] to only linkify headings of kind `# One`, `## Two` or `### Three` but not `#### Four`, `##### Five`, `###### Six`.
-- **`glossaries.file`**
-  if you have used a glob pattern you may be able to define a file name pattern to reduce the number of files participating in cross-linking
--->
 ## Generating Files
 
 ### Index
@@ -793,6 +782,8 @@ need to add those.
 
 #### `linking.paths`
 
+[opt-linking]: #linkingpaths
+
 - **Range:** `"relative" | "absolute"`
 
 Whether to create absolute or relative link-urls to the glossary.
@@ -829,6 +820,13 @@ searching and linking. E.g. to only consider headings `## text` (depth 2) or
 Default is `[2,3,4,5,6]`.
 
 In case you have modified [`indexing.headingDepths`](#indexingheadingdepths), be aware that this option only makes sense if it is a *full subset* of the items in [`indexing.headingDepths`](#indexingheadingdepths).
+
+#### `linking.limitByAlternatives`
+
+- **Range:** `number[]` in -95 - +95
+- **Since:** v5.0.0
+
+If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions *but no more than...*. If the number is negative then the numerical amount indicates to *not create a term-link at all once there are more than...* definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly "defined".
 
 #### `outDir`
 
