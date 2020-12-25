@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema"
     ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json"
     ,"type": "object"
+    ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
     ,"properties": {
         "baseDir": {
             "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line."
@@ -106,13 +107,7 @@
                 { "$ref": "#/$defs/UnifiedInternalOpts"}
                 ,{ "$ref": "#/$defs/UnifiedExternalOpts"}
             ]
-            ,"default": {
-                "settings": {
-                    "bullet": "-"
-                    ,"emphasis": "_"
-                    ,"quote": "\""
-                }
-            }
+            ,"default": {}
         }
         ,"dev": {
             "descriptions": "Options for testing and debugging"

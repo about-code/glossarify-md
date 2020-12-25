@@ -2,11 +2,11 @@
 
 ## [`FooClass`](#fooclass)
 
--   GIVEN a section with '[Term][1]' occurrence
+*   GIVEN a section with '[Term][1]' occurrence
 
--   AND the section title is formatted
+*   AND the section title is formatted
 
--   THEN the indexer MUST NOT produce links without label
+*   THEN the indexer MUST NOT produce links without label
 
         ## Term
         [][9]
@@ -18,7 +18,7 @@
         TypeError: Cannot read property 'length' of undefined
         at Of.escape ({redacted}/glossarify-md/node_modules/remark-stringify/lib/escape.js:64:24)
 
--   AND MUST produce links with label
+*   AND MUST produce links with label
 
         ## Term
         [FooClass][9]

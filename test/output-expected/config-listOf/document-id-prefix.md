@@ -13,7 +13,7 @@ GIVEN a configuration
 }
 ```
 
-AND a document _./document-id-prefix.md_
+AND a document *./document-id-prefix.md*
 
 WITH <a id="prefix-a" title="Title Prefix A">Anchor A</a>
 

@@ -50,13 +50,7 @@
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",
   "outDirDropOld": true,
   "reportNotMentioned": false,
-  "unified": {
-    "settings": {
-      "bullet": "-",
-      "emphasis": "_",
-      "quote": "\""
-    }
-  },
+  "unified": {},
   "dev": {
     "effectiveConfFile": "./glossarify-md-effective.conf.json"
   }

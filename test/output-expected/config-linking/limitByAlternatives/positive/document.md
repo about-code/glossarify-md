@@ -1,7 +1,7 @@
 # [Document](#document)
 
 GIVEN option `linking.limitByAlternatives: 5` WITH a positive limit
-AND a term _[Ambiguous][1][<sup>1)</sup>][1][<sup> 2)</sup>][2][<sup> 3)</sup>][3][<sup> 4)</sup>][4][<sup> 5)</sup>][5]<sup>...</sup>_ with more definitions than the positive limit
+AND a term *[Ambiguous][1][<sup>1)</sup>][1][<sup> 2)</sup>][2][<sup> 3)</sup>][3][<sup> 4)</sup>][4][<sup> 5)</sup>][5]<sup>...</sup>* with more definitions than the positive limit
 THEN there must only 5 alternative links be created
 AND existence of more alternatives MUST be indicated by '...'.
 

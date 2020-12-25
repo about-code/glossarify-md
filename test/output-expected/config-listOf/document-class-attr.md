@@ -13,7 +13,7 @@ GIVEN a configuration
 }
 ```
 
-AND a document _./document-class-attr.md_
+AND a document *./document-class-attr.md*
 
 WITH <a class="class-attr" id="a" title="Title Class-Attr A">Anchor A</a>
 

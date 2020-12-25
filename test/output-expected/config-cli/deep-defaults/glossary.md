@@ -2,9 +2,9 @@
 
 ## [Test Case](#test-case)
 
--   GIVEN a configuration schema WITH a complex option `glossaries` WITH a complex `default` value
+*   GIVEN a configuration schema WITH a complex option `glossaries` WITH a complex `default` value
 
-    _Schema_:
+    *Schema*:
 
     ```json
     {
@@ -21,9 +21,9 @@
     }
     ```
 
--   AND a configuration file with an incomplete _partial_ definition of the complex object `glossaries`
+*   AND a configuration file with an incomplete *partial* definition of the complex object `glossaries`
 
-    _Some partial user configuration_
+    *Some partial user configuration*
 
     ```json
     {
@@ -32,9 +32,9 @@
     }
     ```
 
--   THEN the default values MUST be _deep-merged_ into the configuration file such that the actual configuration applied is identical to a configuration file
+*   THEN the default values MUST be *deep-merged* into the configuration file such that the actual configuration applied is identical to a configuration file
 
-    _Expected config to apply_
+    *Expected config to apply*
 
     ```json
     {
