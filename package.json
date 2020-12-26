@@ -40,7 +40,8 @@
     "release-dry": "standard-version --dry-run",
     "release-stable": "standard-version",
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "readme": "remark doc/templates/README.md > README.md && remark doc/templates/CONTRIBUTING.md > CONTRIBUTING.md"
+    "docs": "node ./bin/index.js --config ./glossarify-md.conf.json",
+    "postdocs": "remark md/repo/README.md > README.md && remark md/repo/CONTRIBUTING.md > CONTRIBUTING.md"
   },
   "dependencies": {
     "deepmerge": "^4.2.2",

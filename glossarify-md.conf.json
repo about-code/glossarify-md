@@ -1,0 +1,11 @@
+{
+  "$schema": "./conf/v5/schema.json",
+  "baseDir": "./md/doc",
+  "outDir": "../../doc",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": "∗"
+    }
+  ]
+}
