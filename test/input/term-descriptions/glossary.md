@@ -16,9 +16,9 @@ GIVEN a single sentence terminated by an exclamation mark THEN short description
 
 GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.
 
-## Single sentence accross multiple lines
+## Single sentence across multiple lines
 
-GIVEN a single sentence accross multiple lines
+GIVEN a single sentence across multiple lines
 THEN short description must be extracted correctly
 AND long description MUST be the same.
 
@@ -27,7 +27,7 @@ AND long description MUST be the same.
 GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.
 AND long description MUST be the first and second sentence.
 
-## Two sentences accross multiple lines terminated by full stop
+## Two sentences across multiple lines terminated by full stop
 
 GIVEN two sentences terminated by fullstop THEN short description MUST be the
 first sentence. AND long description MUST be the first and

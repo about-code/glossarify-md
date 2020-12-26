@@ -176,12 +176,12 @@
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
-    "value": "Single sentence accross multiple lines",
+    "shortDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "value": "Single sentence across multiple lines",
     "hint": "ⓕ",
-    "longDesc": "GIVEN a single sentence accross multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "longDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
     "headingDepth": 2,
-    "anchor": "#single-sentence-accross-multiple-lines",
+    "anchor": "#single-sentence-across-multiple-lines",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "ⓕ"
@@ -257,11 +257,11 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
-    "value": "Two sentences accross multiple lines terminated by full stop",
+    "value": "Two sentences across multiple lines terminated by full stop",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
     "headingDepth": 2,
-    "anchor": "#two-sentences-accross-multiple-lines-terminated-by-full-stop",
+    "anchor": "#two-sentences-across-multiple-lines-terminated-by-full-stop",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "ⓕ"

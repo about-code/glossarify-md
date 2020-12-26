@@ -5,7 +5,7 @@ GIVEN broken html THEN <p><em>Lorem ipsum</p> MAY be linked.
 
 <!-- Begin Scenario-->
 
-GIVEN html accross multiple paragraphs<p>
+GIVEN html across multiple paragraphs<p>
 
 THEN "[Lorem ipsum↴][1]"
 

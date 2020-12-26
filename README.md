@@ -346,7 +346,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
 
-> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - accross files!
+> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - across files!
 >
 > **Note:** `termHint` will be ignored if `file` is a glob.
 
@@ -420,7 +420,7 @@ While you should consider using an [alias] to make use of term-based auto-linkin
 ## User Story {#s-241}
 ```
 
-with heading-id `#s-241`. **Given that `#s-241` is *unique* accross all documents** you can use it as a link reference
+with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference
 
 ```md
 [any phrase](#s-241)

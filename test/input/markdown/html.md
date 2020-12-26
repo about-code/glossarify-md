@@ -4,10 +4,9 @@ GIVEN html THEN <p><em>Lorem ipsum</em></p> MAY be linked.
 GIVEN broken html THEN <p><em>Lorem ipsum</p> MAY be linked.
 
 <!-- Begin Scenario-->
-GIVEN html accross multiple paragraphs<p>
+GIVEN html across multiple paragraphs<p>
 
 THEN "Lorem ipsum"
 
 </p>MAY be linked.
 <!-- End Scenario-->
-
