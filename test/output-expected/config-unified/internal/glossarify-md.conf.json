@@ -1,0 +1,13 @@
+{
+    "$schema": "../../../../conf/v5/schema.json"
+    ,"baseDir": "."
+    ,"outDir": "../../../output-actual/config-unified/internal"
+    ,"unified": {
+        "plugins": {
+            "remark-frontmatter": {
+                "type": "yaml"
+                ,"marker": "-"
+            }
+        }
+    }
+}
