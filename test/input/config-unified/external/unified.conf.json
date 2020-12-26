@@ -1,0 +1,8 @@
+{
+    "plugins": {
+        "remark-frontmatter": {
+            "type": "yaml"
+            ,"marker": "-"
+        }
+    }
+}

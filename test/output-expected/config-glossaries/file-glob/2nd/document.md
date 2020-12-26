@@ -7,7 +7,7 @@ Term at the second level in the folder hierarchy.
 ## [Test Case: Using a term from this document](#test-case-using-a-term-from-this-document)
 
 GIVEN a glob pattern to identify glossary files
-AND a term "[Second Level][1]" within _this_ document
+AND a term "[Second Level][1]" within *this* document
 THEN the term must be linked to the section in this document.
 
 ## [Test Case: Using a term from root level](#test-case-using-a-term-from-root-level)

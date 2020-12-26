@@ -4,7 +4,7 @@
 
 ### [Test Case: Table Comment in Distinct Paragraph](#test-case-table-comment-in-distinct-paragraph)
 
--   GIVEN an input document
+*   GIVEN an input document
 
     ```md
     <!-- table: Table Comment in Paragraph -->
@@ -15,11 +15,11 @@
     | Col1Row2      | Col2Row2      |
     ```
 
--   WITH a Markdown table
+*   WITH a Markdown table
 
--   AND an HTML table comment in a distinct paragraph
+*   AND an HTML table comment in a distinct paragraph
 
--   THEN the system MUST prepend a new anchor
+*   THEN the system MUST prepend a new anchor
 
 #### [Test Data](#test-data)
 
@@ -34,7 +34,7 @@
 
 ### [Test Case: Table Comment in same Paragraph](#test-case-table-comment-in-same-paragraph)
 
--   GIVEN an input document
+*   GIVEN an input document
 
     ```md
     <!-- table: Table Comment -->
@@ -44,11 +44,11 @@
     | Col1Row2      | Col2Row2      |
     ```
 
--   WITH a Markdown table
+*   WITH a Markdown table
 
--   AND an HTML table comment in the same paragraph as the table
+*   AND an HTML table comment in the same paragraph as the table
 
--   THEN the system SHOULD prepend a new anchor
+*   THEN the system SHOULD prepend a new anchor
 
 #### [Test Data](#test-data-1)
 
@@ -63,7 +63,7 @@
 
 ### [Test Case: HTML node in standalone Paragraph](#test-case-html-node-in-standalone-paragraph)
 
--   GIVEN an input document
+*   GIVEN an input document
 
     ```md
     <a id="my-id" class="table"></a>
@@ -74,11 +74,11 @@
     | Col1Row2      | Col2Row2      |
     ```
 
--   WITH a Markdown table
+*   WITH a Markdown table
 
--   AND a paragraph with a single child being an HTML node
+*   AND a paragraph with a single child being an HTML node
 
--   THEN the system MUST NOT prepend yet another anchor
+*   THEN the system MUST NOT prepend yet another anchor
 
 #### [Test Data](#test-data-2)
 
@@ -91,7 +91,7 @@
 
 ### [Test Case: 'html' node then 'text' node then 'table' node](#test-case-html-node-then-text-node-then-table-node)
 
--   GIVEN an input document
+*   GIVEN an input document
 
     ```md
     <a id="my-other-table" class="table"></a> followed by text
@@ -102,11 +102,11 @@
     | Col1Row2      | Col2Row2      |
     ```
 
--   WITH a Markdown table
+*   WITH a Markdown table
 
--   AND a paragraph terminated by a 'text' node
+*   AND a paragraph terminated by a 'text' node
 
--   THEN the system SHOULD prepend a new anchor
+*   THEN the system SHOULD prepend a new anchor
 
 #### [Test Data](#test-data-3)
 
@@ -121,9 +121,9 @@
 
 ### [Test Case: Unique anchor ids when column headers identical](#test-case-unique-anchor-ids-when-column-headers-identical)
 
--   GIVEN two tables without a caption
--   AND same column headers
--   THEN unique anchor ids MUST be generated
+*   GIVEN two tables without a caption
+*   AND same column headers
+*   THEN unique anchor ids MUST be generated
 
 #### [Test Data](#test-data-4)
 
@@ -147,8 +147,8 @@ Table 2:
 
 ### [Test Case: Unique anchor ids when labels are ambiguous](#test-case-unique-anchor-ids-when-labels-are-ambiguous)
 
--   GIVEN two tables with identical captions
--   THEN unique anchor ids must be generated.
+*   GIVEN two tables with identical captions
+*   THEN unique anchor ids must be generated.
 
 #### [Test Data](#test-data-5)
 

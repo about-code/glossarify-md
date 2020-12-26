@@ -1,11 +1,11 @@
 GIVEN command line
 
--   `--config "./glossarify-md.conf.json"`
--   `--shallow "{ 'baseUrl':'cli://localhost', 'linking':'absolute', 'glossaries':[{'file': './glossary2.md'}] }"`
+*   `--config "./glossarify-md.conf.json"`
+*   `--shallow "{ 'baseUrl':'cli://localhost', 'linking':'absolute', 'glossaries':[{'file': './glossary2.md'}] }"`
 
 AND a config file:
 
-_./glossarify-md.conf.json_
+*./glossarify-md.conf.json*
 
 ```json
 {
@@ -22,22 +22,22 @@ _./glossarify-md.conf.json_
 
 WITH
 
--   options `baseDir` and `outDir`  not present on the command-line
+*   options `baseDir` and `outDir`  not present on the command-line
 
 AND
 
--   options `baseUrl` and `linking` and `glossaries` present on the command-line _AND_ in the config-file
+*   options `baseUrl` and `linking` and `glossaries` present on the command-line *AND* in the config-file
 
 THEN
 
--   options `baseDir` and `outDir` MUST be read **from the config file**
+*   options `baseDir` and `outDir` MUST be read **from the config file**
 
 AND
 
--   options `baseUrl` and `linking` and `glossaries` MUST be read **from the command-line**
+*   options `baseUrl` and `linking` and `glossaries` MUST be read **from the command-line**
 
 AND
 
--   as a result the term '[Term][1]' MUST be linked absolutely to `cli://localhost/glossary2.md#term`.
+*   as a result the term '[Term][1]' MUST be linked absolutely to `cli://localhost/glossary2.md#term`.
 
 [1]: cli://localhost/glossary2.md#term

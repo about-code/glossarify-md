@@ -4,11 +4,11 @@
 
 GIVEN a config option `generateFiles.listOfTables`
 AND a markdown table preceded by a colon-terminated italic paragraph
-WITH text '_Label from paragraph:_'
+WITH text '*Label from paragraph:*'
 THEN in the generated output file the table MUST be linked to this section AND the link text MUST be 'Label from paragraph'
 AND not terminated by a colon.
 
-_Label from paragraph:_
+*Label from paragraph:*
 
 <a id="label-from-paragraph" class="table" title="Label from paragraph" />
 
@@ -20,11 +20,11 @@ _Label from paragraph:_
 ### [Test Case: Separate Paragraph Colon Missing](#test-case-separate-paragraph-colon-missing)
 
 GIVEN a config option `generateFiles.listOfTables`
-AND a markdown table preceded by an italic paragraph '_Label from paragraph_'
+AND a markdown table preceded by an italic paragraph '*Label from paragraph*'
 WHEN text is NOT terminated by a colon
 THEN in the generated output file the table label MUST equal 'Column 1, Column 2, Column 3'
 
-_Label from paragraph_
+*Label from paragraph*
 
 <a id="column-1-column-2-column-3" class="table" title="Column 1, Column 2, Column 3" />
 
@@ -37,11 +37,11 @@ _Label from paragraph_
 
 GIVEN a config option `generateFiles.listOfTables`
 AND a markdown table
-preceded with a colon-terminated italic text '_Label from inlined text:_'
+preceded with a colon-terminated italic text '*Label from inlined text:*'
 THEN in the generated output file the table MUST be linked to this section AND the link text MUST be 'Label from inlined text'
 AND not terminated by a colon.
 
-Paragraph with _Label from inlined text:_
+Paragraph with *Label from inlined text:*
 
 <a id="label-from-inlined-text" class="table" title="Label from inlined text" />
 
@@ -54,11 +54,11 @@ Paragraph with _Label from inlined text:_
 
 GIVEN a config option `generateFiles.listOfTables`
 AND a markdown table
-preceded with an italic text '_invalid inline label missing the terminating colon_'
+preceded with an italic text '*invalid inline label missing the terminating colon*'
 WHEN text is NOT terminated by colon
 THEN in the generated output file the table label MUST equal 'Column 1, Column 2, Column 3'
 
-Paragraph with _invalid inline label missing the terminating colon_
+Paragraph with *invalid inline label missing the terminating colon*
 
 <a id="column-a-column-b-column-c" class="table" title="Column A, Column B, Column C" />
 

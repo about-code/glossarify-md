@@ -1,6 +1,6 @@
 # [Testing file globs on unmatched files](#testing-file-globs-on-unmatched-files)
 
--   GIVEN a configuration
+*   GIVEN a configuration
 
     ```json
     glossaries: [{
@@ -9,17 +9,17 @@
     }]
     ```
 
--   WITH a **glob pattern**
+*   WITH a **glob pattern**
 
--   AND WITH a **termHint**
+*   AND WITH a **termHint**
 
--   AND this document NOT matching the glob pattern
+*   AND this document NOT matching the glob pattern
 
--   THEN
+*   THEN
 
-    -   all terms and headings in matched documents MUST be treated like terms
-    -   all terms and headings in unmatched documents MUST NOT be linked
-    -   term occurrences in unmatched documents MUST be linked with matched documents
+    *   all terms and headings in matched documents MUST be treated like terms
+    *   all terms and headings in unmatched documents MUST NOT be linked
+    *   term occurrences in unmatched documents MUST be linked with matched documents
 
 ## [Unmatched](#unmatched)
 

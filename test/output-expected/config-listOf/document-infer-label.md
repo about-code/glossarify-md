@@ -11,7 +11,7 @@ GIVEN a configuration
 }
 ```
 
-AND a document _./document-infer-label.md_
+AND a document *./document-infer-label.md*
 
 <!-- This anchor belongs to test case A but must be placed before headline -->
 
@@ -114,7 +114,7 @@ WITH a list item being a link OR link-reference similar to:
 
 ## [Test Case G: Fully formatted `innerText`](#test-case-g-fully-formatted-innertext)
 
-GIVEN anchor <a id="label-fully-formatted-text">_Test Case G: Fully formatted innerText_</a>
+GIVEN anchor <a id="label-fully-formatted-text">*Test Case G: Fully formatted innerText*</a>
 
 ```md
 <a id="label-fully-formatted-text">*Test Case G: Fully formatted innerText*</a>

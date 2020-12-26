@@ -12,12 +12,19 @@
 
 [vuepress] users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
 
-
-[glossarify-md]: https://github.com/about-code/glossarify-md
-[glob]: https://github.com/isaacs/node-glob#glob-primer
-[vuepress]: https://vuepress.vuejs.org
-[pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
 [CommonMark]: https://www.commonmark.org
+[GFM]: https://github.github.com/gfm/
+[glob]: https://github.com/isaacs/node-glob#glob-primer
+[glossarify-md]: https://github.com/about-code/glossarify-md
+[micromark]: https://github.com/micromark/
+[pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
+[remark]: https://github.com/remarkjs/remark
+[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
+[remark-footnotes]: https://npmjs.com/package/remark-footnotes
+[remark-plugins]: https://github.com/remarkjs/awesome-remark
+[unified]: https://unifiedjs.com
+[unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
+[vuepress]: https://vuepress.vuejs.org
 
 ## Table of Contents
 
@@ -627,6 +634,64 @@ If [glossarify-md] can't find a table caption by any of the above means it will 
 1. **filename** otherwise.
 -->
 
+## Markdown Syntax Extensions
+
+[syntax-extensions]: #markdown-syntax-extensions
+
+> **Since v5.0.0**
+
+[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown][GFM] (GFM). Syntax not covered by these specifications may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
+
+*Frontmatter Syntax*
+~~~
+---
+key: This is a frontmatter
+---
+~~~
+
+Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading slashes and that they contribute to syntax for a *frontmatter* we need to extend the parser.
+
+**Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additonal syntaxes and utilities.
+
+### Install Remark Plug-Ins
+
+*Example: Install a frontmatter plug-in*
+~~~
+npm install remark-frontmatter
+~~~
+
+### Configure Remark Plug-Ins
+*remark.conf.json (next to glossarify-md.conf.json):*
+~~~json
+{
+  "plugins": {
+    "remark-frontmatter": {
+      "type": "yaml",
+      "marker": "-"
+    }
+  }
+}
+~~~
+
+`remark-frontmatter` must be the name of the npm package you installed before. Any properties of the object are specific to the plug-in and need to be found in the plug-in docs.
+
+### Configure glossarify-md
+
+*glossarify-md.conf.json (with externalized plug-in config)*
+~~~json
+{
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified",
+  "unified": {
+    "rcPath": "../remark.conf.json"
+  }
+}
+~~~
+
+It's also possible to have all the configuration in a single *glossarify-md.conf.json*. What you should note, though, is that [glossarify-md] considers anything under the `unified` key a [unified configuration][unified-config] whose schema is *not* under our control.
+
+> **unified, remark, micromark, uhh..** [unified] is an umbrella project around *text file processing in general*. We use it with [remark] a parser and compiler project under this umbrella for *Markdown* text files in particular. [remark] has recently got a new core implementation called [micromark]. It can be easy to get a bit lost in these projects and their docs. Just remind for now that [remark plug-ins][remark-plugins] are what you typically need for syntax extensions.
+
 ## Node Support Matrix
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
@@ -816,7 +881,15 @@ If `true` remove old `outDir` before writing a new one, otherwise overwrite file
 
 Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
 
-#### Special Thanks go to
+#### `unified`
+
+[opt-unified]: #unified
+
+- **Range:** `{ rcPath: string } | { settings: object, plugins: object|array }`
+
+Extended [unified configuration][unified-config]. See also [Markdown Syntax Extensions][syntax-extensions].
+
+## Special Thanks go to
 
 - [John Gruber](https://daringfireball.net/projects/markdown/), author of the Markdown syntax
 - [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more

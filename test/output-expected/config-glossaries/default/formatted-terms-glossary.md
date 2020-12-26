@@ -5,9 +5,9 @@
 GIVEN a term heading being `codespan` formatted
 THEN term occurrences in the document must still be linked, correctly
 
-## [_italic-format_](#italic-format)
+## [*italic-format*](#italic-format)
 
-GIVEN a term heading being _italic_ formatted
+GIVEN a term heading being *italic* formatted
 THEN term occurrences in the document must still be linked, correctly
 
 ## [**bold-format**](#bold-format)
@@ -20,13 +20,13 @@ THEN term occurrences in the document must still be linked, correctly
 Given a term heading being in parts formatted
 THEN occurrences of the whole phrase in the document must still be linked, correctly
 
-## [_dense-definition_](#dense-definition)
+## [*dense-definition*](#dense-definition)
 
 GIVEN a term heading being formatted
 AND being followed by a description without an intermediate empty line.
 THEN term, short and long description MUST still be extracted, correctly.
 
-## [_dense-definition-with-alias_](#dense-definition-with-alias)
+## [*dense-definition-with-alias*](#dense-definition-with-alias)
 
 <!-- Aliases: dense-with-alias-->
 

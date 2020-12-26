@@ -2,7 +2,7 @@
 
 GIVEN this input file
 
--   AND a configuration
+*   AND a configuration
 
     ```json
     "i18n": {
@@ -14,11 +14,11 @@ GIVEN this input file
     }]
     ```
 
--   AND an alphabet
+*   AND an alphabet
     1.  aäbcoösßuüz
     2.  AÄBCOÖSUÜZ
 
--   THEN the system should behave equal to a default configuration of
+*   THEN the system should behave equal to a default configuration of
 
     ```json
     "i18n": {
@@ -32,7 +32,7 @@ GIVEN this input file
     }]
     ```
 
--   AND the following sections WITH a heading depth >= 2 MUST be sorted such that their numeric section bodies produce an **ascending** sequence
+*   AND the following sections WITH a heading depth >= 2 MUST be sorted such that their numeric section bodies produce an **ascending** sequence
 
 ## [a-Term](#a-term)
 

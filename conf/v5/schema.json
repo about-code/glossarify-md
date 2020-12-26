@@ -1,292 +1,337 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json",
-    "type": "object",
-    "properties": {
+    "$schema": "http://json-schema.org/draft-07/schema"
+    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json"
+    ,"type": "object"
+    ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
+    ,"properties": {
         "baseDir": {
-            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line.",
-            "type": "string",
-            "default": "./docs"
-        },
-        "excludeFiles": {
-            "description": "An array of files or file name patterns that should not be included in any processing.",
-            "type": "array",
-            "items": {
+            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line."
+            ,"type": "string"
+            ,"default": "./docs"
+        }
+        ,"excludeFiles": {
+            "description": "An array of files or file name patterns that should not be included in any processing."
+            ,"type": "array"
+            ,"items": {
                 "type": "string"
-            },
-            "default": ["node_modules", ".git"]
-        },
-        "force": {
-            "description": "Choose true, only if you know the consequences.",
-            "type": "boolean",
-            "default": false
-        },
-        "generateFiles": {
-            "description": "File generation options.",
-            "$ref": "#/$defs/GenerateFilesOpts",
-            "default": {
+            }
+            ,"default": ["node_modules", ".git"]
+        }
+        ,"force": {
+            "description": "Choose true, only if you know the consequences."
+            ,"type": "boolean"
+            ,"default": false
+        }
+        ,"generateFiles": {
+            "description": "File generation options."
+            ,"$ref": "#/$defs/GenerateFilesOpts"
+            ,"default": {
                 "listOf": []
             }
-        },
-        "glossaries": {
-            "description": "An array of glossaries. Allows for different kinds of glossaries and definitions.",
-            "type": "array",
-            "items": {
+        }
+        ,"glossaries": {
+            "description": "An array of glossaries. Allows for different kinds of glossaries and definitions."
+            ,"type": "array"
+            ,"items": {
                 "$ref": "#/$defs/GlossariesOpts"
-            },
-            "default": [
+            }
+            ,"default": [
                 { "file": "./glossary.md", "termHint": ""}
             ]
-        },
-        "ignoreCase": {
-            "description": "Find and link every occurrence of a term no matter how it is spelled.",
-            "type": "boolean",
-            "default": false
-        },
-        "includeFiles": {
-            "description": "Path or glob patterns of files to include for linking to glossaries.",
-            "type": "array",
-            "items": {
+        }
+        ,"ignoreCase": {
+            "description": "Find and link every occurrence of a term no matter how it is spelled."
+            ,"type": "boolean"
+            ,"default": false
+        }
+        ,"includeFiles": {
+            "description": "Path or glob patterns of files to include for linking to glossaries."
+            ,"type": "array"
+            ,"items": {
                 "type": "string"
-            },
-            "default": ["."]
-        },
-        "indexing": {
-            "description": "Path or glob patterns of files to include for linking to glossaries.",
-            "$ref": "#/$defs/IndexingOpts",
-            "default": {
+            }
+            ,"default": ["."]
+        }
+        ,"indexing": {
+            "description": "Path or glob patterns of files to include for linking to glossaries."
+            ,"$ref": "#/$defs/IndexingOpts"
+            ,"default": {
                 "groupByHeadingDepth": 6,
                 "headingDepths": [1,2,3,4,5,6]
             }
-        },
-        "i18n": {
-            "description": "Internationalization and collation options. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator.",
-            "$ref": "#/$defs/IntlOpts",
-            "default": {
+        }
+        ,"i18n": {
+            "description": "Internationalization and collation options. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator."
+            ,"$ref": "#/$defs/IntlOpts"
+            ,"default": {
                 "locale": "en"
             }
-        },
-        "keepRawFiles": {
-            "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways.",
-            "type": "array",
-            "items": {
+        }
+        ,"keepRawFiles": {
+            "description": "Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ignore by the linker. Non-markdown files will be ignored anyways."
+            ,"type": "array"
+            ,"items": {
                 "type": "string"
-            },
-            "default": []
-        },
-        "linking": {
-            "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'.",
-            "$ref": "#/$defs/LinkingOpts",
-            "default": {
+            }
+            ,"default": []
+        }
+        ,"linking": {
+            "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'."
+            ,"$ref": "#/$defs/LinkingOpts"
+            ,"default": {
                 "baseUrl": "",
                 "paths": "relative",
                 "mentions": "all",
                 "headingDepths": [2,3,4,5,6],
                 "limitByAlternatives": 10
             }
-        },
-        "outDir": {
-            "description": "Path to directory where to write processed files to.",
-            "type": "string",
-            "default": "./docs-glossarified"
-        },
-        "outDirDropOld": {
-            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true",
-            "type": "boolean",
-            "default": true
-        },
-        "reportNotMentioned": {
-            "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.",
-            "type": "boolean",
-            "default": false
-        },
-        "dev": {
-            "descriptions": "Options for testing and debugging",
-            "$ref": "#/$defs/DevOpts",
-            "default": {}
         }
-    },
-    "$defs": {
+        ,"outDir": {
+            "description": "Path to directory where to write processed files to."
+            ,"type": "string"
+            ,"default": "./docs-glossarified"
+        }
+        ,"outDirDropOld": {
+            "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true"
+            ,"type": "boolean"
+            ,"default": true
+        }
+        ,"reportNotMentioned": {
+            "description": "Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases."
+            ,"type": "boolean"
+            ,"default": false
+        }
+        ,"unified": {
+            "description": "Extended 'unified' and 'remark' configuration as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md\nYou may want to provide such a configuration for loading 'remark' plug-ins you've installed yourself. You likely require such plug-ins if your input files use third-party syntax which is not covered by the CommonMark specification. glossarify-md only supports CommonMark, GitHub Flavoured Markdown (GFM) and Footnotes by default. For additional remark plug-ins see https://github.com/remarkjs/awesome-remark\nNote that this configuration is not to be considered part of glossarify-md's own configuration interface! glossarify-md can not be held responsible for issues arising from loading additional plug-ins.\nIf you like to keep 'unified' configuration separate use e.g. '{ \"unified\": { \"rcPath\": \"../unified.conf.json\"}} to load a unified configuration from an external file."
+            ,"oneOf": [
+                { "$ref": "#/$defs/UnifiedInternalOpts"}
+                ,{ "$ref": "#/$defs/UnifiedExternalOpts"}
+            ]
+            ,"default": {}
+        }
+        ,"dev": {
+            "descriptions": "Options for testing and debugging"
+            ,"$ref": "#/$defs/DevOpts"
+            ,"default": {}
+        }
+    }
+    ,"$defs": {
         "GenerateFilesOpts": {
-            "type": "object",
-            "properties": {
+            "type": "object"
+            ,"properties": {
                 "indexFile": {
-                    "description": "Generate a file with a list of glossary terms and where they have been used.",
-                    "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts"
-                },
-                "listOf": {
-                    "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors <a class='listing' title='My Sample 1' id='sample-1'/> before your sample code blocks.",
-                    "type": "array",
-                    "items": {
+                    "description": "Generate a file with a list of glossary terms and where they have been used."
+                    ,"type": "object"
+                    ,"$ref": "#/$defs/IndexFileOpts"
+                }
+                ,"listOf": {
+                    "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors <a class='listing' title='My Sample 1' id='sample-1'/> before your sample code blocks."
+                    ,"type": "array"
+                    ,"items": {
                         "$ref": "#/$defs/IndexFileOpts"
                     }
-                },
-                "listOfFigures": {
-                    "description": "Generate a file with a list of figures and where they can be found.",
-                    "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts"
-                },
-                "listOfTables": {
-                    "description": "Generate a file with a list of tables and where they can be found.",
-                    "type": "object",
-                    "$ref": "#/$defs/IndexFileOpts"
+                }
+                ,"listOfFigures": {
+                    "description": "Generate a file with a list of figures and where they can be found."
+                    ,"type": "object"
+                    ,"$ref": "#/$defs/IndexFileOpts"
+                }
+                ,"listOfTables": {
+                    "description": "Generate a file with a list of tables and where they can be found."
+                    ,"type": "object"
+                    ,"$ref": "#/$defs/IndexFileOpts"
                 }
             }
-        },
-        "GlossariesOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"GlossariesOpts": {
+            "type": "object"
+            ,"properties": {
                 "file": {
-                    "description": "Name of the glossary file. Conventional default is 'glossary.md'. You can use a glob pattern to enable cross-linking of headings accross multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.",
-                    "type": "string"
-                },
-                "termHint": {
-                    "description": "A symbol to append to a link to denote that the term refers to a glossary term.",
-                    "type": "string"
-                },
-                "sort": {
-                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options.",
-                    "type": "string",
-                    "enum": ["asc", "desc"]
+                    "description": "Name of the glossary file. Conventional default is 'glossary.md'. You can use a glob pattern to enable cross-linking of headings accross multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."
+                    ,"type": "string"
+                }
+                ,"termHint": {
+                    "description": "A symbol to append to a link to denote that the term refers to a glossary term."
+                    ,"type": "string"
+                }
+                ,"sort": {
+                    "description": "If present, sort terms in output glossary. Default: None. See also i18n options."
+                    ,"type": "string"
+                    ,"enum": ["asc", "desc"]
                 }
             }
-        },
-        "IndexFileOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"IndexFileOpts": {
+            "type": "object"
+            ,"properties": {
                 "file":  {
-                    "description": "Path relative to 'outDir' where to create the index markdown file.",
-                    "type": "string"
-                },
-                "class": {
-                    "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list.",
-                    "type": "string"
-                },
-                "title": {
-                    "description": "The page title for the index file. If missing the application uses a default value.",
-                    "type": "string"
+                    "description": "Path relative to 'outDir' where to create the index markdown file."
+                    ,"type": "string"
+                }
+                ,"class": {
+                    "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list."
+                    ,"type": "string"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
+                    ,"type": "string"
                 }
             }
-        },
-        "IndexingOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"IndexingOpts": {
+            "type": "object"
+            ,"properties": {
                 "groupByHeadingDepth": {
-                    "description": "Level of detail by which to group occurrences of terms or syntactic elements in generated files (Range [min, max]: [0, 6]). For example, use 0 to not group at all; 1 to group things at the level of document titles, etc. Configures the indexer. The option affects any files generated from the internal AST node index.",
-                    "type": "integer",
-                    "minimum": 0,
-                    "maximum": 6
-                },
-                "headingDepths": {
-                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that *this* is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.",
-                    "type": "array",
-                    "items": {
+                    "description": "Level of detail by which to group occurrences of terms or syntactic elements in generated files (Range [min, max]: [0, 6]). For example, use 0 to not group at all; 1 to group things at the level of document titles, etc. Configures the indexer. The option affects any files generated from the internal AST node index."
+                    ,"type": "integer"
+                    ,"minimum": 0
+                    ,"maximum": 6
+                }
+                ,"headingDepths": {
+                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that *this* is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`."
+                    ,"type": "array"
+                    ,"items": {
                         "type": "integer",
                         "minimum": 1,
                         "maximum": 6
                     }
                 }
             }
-        },
-        "IntlOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"IntlOpts": {
+            "type": "object"
+            ,"properties": {
                 "caseFirst": {
-                    "description": "Whether upper case or lower case should sort first. Default: 'false' (Use locale's default). See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "string",
-                    "enum": ["upper", "lower", "false"]
-                },
-                "ignorePunctuation": {
-                    "description": "Whether punctuation should be ignored. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "boolean"
-                },
-                "locale": {
-                    "description": "The locale to use for operations such as sorting. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "string"
-                },
-                "localeMatcher": {
-                    "description": "The locale matching algorithm to use. Default: 'best fit'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "string",
-                    "enum": ["best fit", "lookup"]
-                },
-                "numeric": {
-                    "description": "Whether to use numeric collation. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "boolean"
-                },
-                "sensitivity": {
-                    "description": "Which differences in the strings should lead to non-zero result values. Default: 'variant' for sorts, locale dependent for searches. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "string",
-                    "enum": ["base", "accent", "case", "variant"]
-                },
-                "usage": {
-                    "description": "Whether the comparison is for sorting or for searching for matching strings. Default: 'sort'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator",
-                    "type": "string",
-                    "enum": ["sort", "search"]
+                    "description": "Whether upper case or lower case should sort first. Default: 'false' (Use locale's default). See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "string"
+                    ,"enum": ["upper", "lower", "false"]
+                }
+                ,"ignorePunctuation": {
+                    "description": "Whether punctuation should be ignored. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "boolean"
+                }
+                ,"locale": {
+                    "description": "The locale to use for operations such as sorting. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "string"
+                }
+                ,"localeMatcher": {
+                    "description": "The locale matching algorithm to use. Default: 'best fit'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "string"
+                    ,"enum": ["best fit", "lookup"]
+                }
+                ,"numeric": {
+                    "description": "Whether to use numeric collation. Default: false. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "boolean"
+                }
+                ,"sensitivity": {
+                    "description": "Which differences in the strings should lead to non-zero result values. Default: 'variant' for sorts, locale dependent for searches. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "string"
+                    ,"enum": ["base", "accent", "case", "variant"]
+                }
+                ,"usage": {
+                    "description": "Whether the comparison is for sorting or for searching for matching strings. Default: 'sort'. See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"
+                    ,"type": "string"
+                    ,"enum": ["sort", "search"]
                 }
             }
-        },
-        "LinkingOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"LinkingOpts": {
+            "type": "object"
+            ,"properties": {
                 "baseUrl": {
-                    "description": "The base url to use when creating absolute links to glossary.",
-                    "type": "string",
-                    "format": "url"
-                },
-                "paths": {
-                    "description": "Control how paths to linked documents will be constructed. Choosing \"absolute\" requires a \"baseUrl\" as well.",
-                    "type": "string",
-                    "enum": ["relative", "absolute"]
-                },
-                "mentions": {
-                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range.",
-                    "type": "string",
-                    "enum": ["all", "first-in-paragraph"]
-                },
-                "headingDepths": {
-                    "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'.",
-                    "type": "array",
-                    "items": {
+                    "description": "The base url to use when creating absolute links to glossary."
+                    ,"type": "string"
+                    ,"format": "url"
+                }
+                ,"paths": {
+                    "description": "Control how paths to linked documents will be constructed. Choosing \"absolute\" requires a \"baseUrl\" as well."
+                    ,"type": "string"
+                    ,"enum": ["relative", "absolute"]
+                }
+                ,"mentions": {
+                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
+                    ,"type": "string"
+                    ,"enum": ["all", "first-in-paragraph"]
+                }
+                ,"headingDepths": {
+                    "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'."
+                    ,"type": "array"
+                    ,"items": {
                         "type": "integer",
                         "minimum": 1,
                         "maximum": 6
                     }
-                },
-                "limitByAlternatives": {
-                    "description": "If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions *but no more than...*. If the number is negative then the numerical amount indicates to *not create a term-link at all once there are more than...* definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly defined.",
-                    "type": "integer",
-                    "minimum": "-95",
-                    "maximum": "+95"
+                }
+                ,"limitByAlternatives": {
+                    "description": "If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions *but no more than...*. If the number is negative then the numerical amount indicates to *not create a term-link at all once there are more than...* definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly defined."
+                    ,"type": "integer"
+                    ,"minimum": "-95"
+                    ,"maximum": "+95"
                 }
             }
-        },
-        "DevOpts": {
-            "type": "object",
-            "properties": {
+        }
+        ,"UnifiedExternalOpts": {
+            "type": "object"
+            ,"properties": {
+                "rcPath": {
+                    "description": "Path to an external 'unified' configuration file as documented under https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md. See description of 'unified' property why you may want such a configuration."
+                    ,"type": "string"
+                }
+            }
+            ,"required": ["rcPath"]
+            ,"additionalProperties": false
+        }
+        ,"UnifiedInternalOpts": {
+            "type": "object"
+            ,"properties": {
+                "plugins": {
+                    "description": "Object or array with names of 'unified' and 'remark' plug-ins and plug-in settings as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md\nNote that this configuration is not to be considered part of glossarify-md's own configuration interface!\nIf you like to keep 'unified' configuration separate use 'rcPath' to load a unified configuration from an external file."
+                    ,"oneOf": [{
+                        "type": "array"
+                        ,"items": {
+                            "oneOf": [
+                                { "type": "string" }
+                                ,{ "type": "object" }
+                            ]
+                        }
+                    },{
+                        "type": "object"
+                    }]
+                }
+                ,"settings": {
+                    "description": "Settings as defined in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md and https://github.com/remarkjs/remark/tree/main/packages/remark-stringify"
+                    ,"type": "object"
+                }
+
+            }
+            ,"additionalProperties": false
+        }
+        ,"DevOpts": {
+            "type": "object"
+            ,"properties": {
                 "printInputAst": {
-                    "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.",
-                    "type": ["boolean", "string"]
-                },
-                "printOutputAst": {
-                    "description": "Print the AST of scanned markdown documents after linkification. May be a Regex to only print AST for particular document.",
-                    "type": ["boolean", "string"]
-                },
-                "reportsFile": {
-                    "description": "File where to write console report output. Enables testing the report output generated  by the 'writer' component.",
-                    "type": "string"
-                },
-                "reproducablePaths": {
-                    "description": "Write system-independent paths into 'termsFile' to produce reproducable output accross environments.",
-                    "type": "boolean"
-                },
-                "termsFile": {
-                    "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component.",
-                    "type": "string"
-                },
-                "effectiveConfFile": {
-                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults.",
-                    "type": "string"
+                    "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document."
+                    ,"type": ["boolean", "string"]
+                }
+                ,"printOutputAst": {
+                    "description": "Print the AST of scanned markdown documents after linkification. May be a Regex to only print AST for particular document."
+                    ,"type": ["boolean", "string"]
+                }
+                ,"reportsFile": {
+                    "description": "File where to write console report output. Enables testing the report output generated  by the 'writer' component."
+                    ,"type": "string"
+                }
+                ,"reproducablePaths": {
+                    "description": "Write system-independent paths into 'termsFile' to produce reproducable output accross environments."
+                    ,"type": "boolean"
+                }
+                ,"termsFile": {
+                    "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component."
+                    ,"type": "string"
+                }
+                ,"effectiveConfFile": {
+                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults."
+                    ,"type": "string"
                 }
             }
         }

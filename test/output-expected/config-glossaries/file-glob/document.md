@@ -1,6 +1,6 @@
 # [Testing file globs](#testing-file-globs)
 
--   GIVEN a configuration
+*   GIVEN a configuration
 
     ```json
     glossaries: [{
@@ -9,16 +9,16 @@
     }]
     ```
 
--   WITH a **glob pattern**
+*   WITH a **glob pattern**
 
--   AND WITH a **termHint**
+*   AND WITH a **termHint**
 
--   AND multiple documents matching the glob pattern
+*   AND multiple documents matching the glob pattern
 
--   THEN
+*   THEN
 
-    -   all terms and headings in those documents MUST be treated like terms
-    -   AND `termHint` _CAN_ be ignored if it is too costly to find out whether a file is being processed as a glossary file due to this particular glob pattern
+    *   all terms and headings in those documents MUST be treated like terms
+    *   AND `termHint` *CAN* be ignored if it is too costly to find out whether a file is being processed as a glossary file due to this particular glob pattern
 
 ## [Root](#root)
 
@@ -40,8 +40,8 @@ THEN this term MUST be linkified.
 
 GIVEN a document "./unmatched.md"
 WITH a heading "Unmatched" of depth >= 2
-AND the term "Unmatched" being used in _this_ document
-WITH _this_ document matching the glob pattern
+AND the term "Unmatched" being used in *this* document
+WITH *this* document matching the glob pattern
 THEN the term from the unmatched document MUST NOT be linkified.
 
 [1]: ./2nd/document.md#second-level "Term at the second level in the folder hierarchy."

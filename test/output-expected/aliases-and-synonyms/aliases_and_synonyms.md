@@ -21,27 +21,27 @@ GIVEN there is the term's alias "[T4.Alias3][4]" THEN it MUST be replaced with a
 ## [Alias substring behavior](#alias-substring-behavior)
 
 GIVEN a term "[Issue][5]"
-AND an alias "[Issues][5]" WHERE _the alias_ begins with the term
+AND an alias "[Issues][5]" WHERE *the alias* begins with the term
 THEN the alias MUST still be linked to the term, correctly.
 
 GIVEN a term "[OUR][6]"
-AND an alias "[FLOURISH][6]" WHERE _the alias_ includes the term
+AND an alias "[FLOURISH][6]" WHERE *the alias* includes the term
 THEN the alias MUST still be linked to the term, correctly.
 
 GIVEN a term "[FIELD][7]"
-AND an alias "[GREENFIELD][7]" WHERE _the alias_ ends with the term
+AND an alias "[GREENFIELD][7]" WHERE *the alias* ends with the term
 THEN the alias MUST still be linked to the term, correctly.
 
 GIVEN a term "[Hopefully][8]"
-AND an alias "[Hope][8]" WHERE _the term_ begins with the alias
+AND an alias "[Hope][8]" WHERE *the term* begins with the alias
 THEN the alias MUST still be linked to the term, correctly.
 
 GIVEN a term "[Flower][9]"
-AND an alias "[lower][9]" WHERE _the term_ ends with the alias
+AND an alias "[lower][9]" WHERE *the term* ends with the alias
 THEN the alias MUST still be linked to the term, correctly.
 
 GIVEN a term "[Friendship][10]"
-AND an alias "[end][10]" WHERE _the term_ includes the alias
+AND an alias "[end][10]" WHERE *the term* includes the alias
 THEN the alias MUST be linked to the term, correctly.
 
 ## [Unicode behavior](#unicode-behavior)
