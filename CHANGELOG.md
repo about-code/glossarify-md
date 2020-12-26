@@ -2,6 +2,47 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+[CommonMark]: https://commonmark.org
+
+## [5.0.0-beta.0](https://github.com/about-code/glossarify-md/compare/v5.0.0-alpha.2...v5.0.0-beta.0) (2020-12-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* For unordered lists glossarify-md now writes the star marker "*". Previously it wrote dashes "-". For emphasis it now uses the star marker as well. Previously it used underscores.
+  > Since both is equally Markdown this is **only a breaking change in terms of output similarity not in terms of Markdown rendering**. We therefore do not provide any upgrade assistance to keep results the same. If you still care you can restore previous results by adding below snippet to your glossary-md.conf.json. However, we do not give any guarantees about *identical* outputs in the next major release, anyway.
+
+    ~~~json
+    "unified": {
+      "settings": {
+        "bullet": "-",
+        "emphasis": "_"
+      }
+    }
+    ~~~
+
+* Renamed option `linking.terms` into `linking.mentions`. Affects users of `v5.0.0-alpha.1` and `v5.0.0-alpha.2`. Please rename the option in your config file.
+   * Due to a mistake we published `v5.0.0-alpha-*` releases too soon with the npm dist tag `latest` when we actually wanted to keep v4.0.1 tagged `latest` until 5.0 release. This should mostly have affected users who installed glossarify-md for the first time and got an alpha release. If you are affected by this breaking change we like to apologize. In case you are still on v4.0.1 we recommend to stay there and use the upgrade assistant once v5.0 is out. Beginning with this `v5.0.0-beta.0` we do not have plans to add more breaking changes anymore.
+
+### Features
+
+* Markdown syntax extensions via plug-ins.
+  * New option `unified` for extended markdown processing configuration ([#140](https://github.com/about-code/glossarify-md/issues/140)) ([49a2dce](https://github.com/about-code/glossarify-md/commit/49a2dce82eb844eaa222127fc338b248563e2054)).
+  This opens up a whole lot of new possibilities and enables using glossarify-md on Markdown inputs not strictly adhering to [CommonMark]. Make sure to read the [README.md](./README.md#markdown-syntax-extensions).
+* Cross linking
+  * glossary file globs ([#133](https://github.com/about-code/glossarify-md/issues/133)) ([705f9a0](https://github.com/about-code/glossarify-md/commit/705f9a067f3555bec3e23d0243e7acfc6b8cb6ac))
+  * identifier-based cross-linking with pandoc-style custom-heading-ids ([#122](https://github.com/about-code/glossarify-md/issues/122)) ([949c815](https://github.com/about-code/glossarify-md/commit/949c815d1f5f93192aa3611d7a8ad9c664f5e5a0))
+  * New option `linking.headingDepths`. Select heading depths to generate term-based links for. ([#136](https://github.com/about-code/glossarify-md/issues/136)) ([d4c8646](https://github.com/about-code/glossarify-md/commit/d4c86462c4d2b7db8c455c3b7ed82a65e40b67ca))
+  * New option `linking.limitByAlternatives` ([#137](https://github.com/about-code/glossarify-md/issues/137)) ([98cb9d0](https://github.com/about-code/glossarify-md/commit/98cb9d08cb96a92dffa149881015c6f67e8bfb82))
+  * New option `indexing.headingDepths` ([#139](https://github.com/about-code/glossarify-md/issues/139)) ([37c7b1e](https://github.com/about-code/glossarify-md/commit/37c7b1edeb7344de06e15dd9352cea71cec90287)), closes [#136](https://github.com/about-code/glossarify-md/issues/136)
+  * New [README.md section on Cross Linking](./README.md#cross-linking)
+
+### Bug Fixes
+
+* fix(upgrade): Fix race condition which causes upgrade assistant to write new config to backup file. ([f419aa7](https://github.com/about-code/glossarify-md/commit/f419aa7a4627b9f8eacaa8ae60b2596dd7453386))
+* fix(upgrade): Make sure to only upgrade to versions compatible with default schema
+* Being more robust if no glossary file is available.
+
 ## [5.0.0-alpha.2](https://github.com/about-code/glossarify-md/compare/v5.0.0-alpha.1...v5.0.0-alpha.2) (2020-12-19)
 
 
@@ -35,11 +76,6 @@ to upgrade from an old schema.
   **Headings**: Remark lifts headings at a depth > 6 into
   the valid range of 1-6 according to CommonMark Spec v0.29.
 
-  **Quotation marks**: In the past it was possible to mix
-  double quotes and single quotes in a single sentence.
-  With this update single quotes will be converted into
-  double quotes. Where necessary quotation marks will be escaped.
-
   **Escapes**: There may be a few changes to what is being
   escaped by a leading backslash. See remark for details.
 
@@ -52,7 +88,7 @@ to upgrade from an old schema.
 
 ### Features
 
-* limiting the number of glossary links to once per paragraph ([#118](https://github.com/about-code/glossarify-md/issues/118)) ([0310e93](https://github.com/about-code/glossarify-md/commit/0310e9309b56276c8f659ace0fdf86d93eaf0c83)), closes [#117](https://github.com/about-code/glossarify-md/issues/117) [#127](https://github.com/about-code/glossarify-md/issues/127)
+* New option `linking.terms`. Limiting the number of glossary links to once per paragraph ([#118](https://github.com/about-code/glossarify-md/issues/118)) ([0310e93](https://github.com/about-code/glossarify-md/commit/0310e9309b56276c8f659ace0fdf86d93eaf0c83)), closes [#117](https://github.com/about-code/glossarify-md/issues/117) [#127](https://github.com/about-code/glossarify-md/issues/127)
 * **cli:** New parameter --init to generate a config file with all options and defaults ([#126](https://github.com/about-code/glossarify-md/issues/126)) ([04894ce](https://github.com/about-code/glossarify-md/commit/04894ceeaaaf20e0c49bdb8b364ddaa3eb2c7c53))
 * Allow lists from arbitrary identifiable HTML nodes ([1342a69](https://github.com/about-code/glossarify-md/commit/1342a69da3e98c21717801f128d4e52369b0c7aa))
 * Anchors for direct navigation to images and tables and unified lists ([2175d8b](https://github.com/about-code/glossarify-md/commit/2175d8b01557df3b55b08b8b3cf4977d492c5eb7))
