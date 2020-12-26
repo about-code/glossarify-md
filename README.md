@@ -346,9 +346,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
 
-> **Since v5.0.0**: `file` can be a [glob] pattern. You can use a glob-pattern `./**/*.md` to make every file behave like a glossary and every heading in it behave like a term. That is: mentions of heading phrases turn into a link to that section - across files!
->
-> **Note:** `termHint` will be ignored if `file` is a glob.
+> **Since v5.0.0**: `file` can be a [glob] pattern. More see [Cross-Linking].
 
 ## Sorting your glossaries
 
@@ -397,11 +395,11 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **Note:** With `file` being a glob `termHint` and `sort` are being ignored. So you may still declare a dedicated glossary item with a `file` *path* if you need these options.
+> **Note:** If `file` is a glob pattern other options like `termHint` or `sort` are being ignored. You need to declare a glossary item with a `file` *path* if you need these options specific to a single file.
 
 **Too many links?**
 
-What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated. If this is an issue for you explore [`linking.*`][opt-linking] [options] like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
+What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
 
 ### Identifier-based Cross-Linking
 
@@ -699,7 +697,7 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading slashes and that they contribute to syntax for a *frontmatter* we need to extend the parser.
+Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading dashes and that they contribute to syntax for a *frontmatter* we need to extend the parser.
 
 **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additonal syntaxes and utilities.
 
