@@ -5,7 +5,7 @@
   "glossaries": [
     {
       "file": "./glossary.md",
-      "termHint": "∗"
+      "termHint": "↴"
     }
   ]
 }

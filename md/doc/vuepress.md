@@ -2,6 +2,8 @@
 
 Below we assume a *sample* project structure like this:
 
+[CommonMark]: https://www.commonmark.org
+
 ```
 ${root}
    +- docs/
@@ -64,7 +66,7 @@ module.exports = {
 ```
 
 
-Details on why we have to change vuepress's own slug algorithm can be found in [Appendix](#appendix).
+Details on why we have to use a modified slug algorithm with vuepress can be found in [Appendix](#appendix).
 
 > **Notes**
 >
@@ -93,7 +95,29 @@ This is what you probably want while writing.
 
 More information see [README.md](../README.md).
 
+## Markdown Extensions
 
+Vuepress lists a few [Markdown Extensions](https://vuepress.vuejs.org/guide/markdown.html) like *Frontmatter*, *Emojis* etc.
+Make sure to read [Markdown Syntax Extensions](../README.md#markdown-syntax-extensions), if your input files contain syntax sugar not covered by the [CommonMark] spec.
+Below is a list of remark plug-ins you may consider:
+
+|      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                    |
+| ------------------------------------- | ------------------------------------------------------------------------------- |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter](http://unifiedjs.com/explore/package/remark-frontmatter/)  |
+| [Custom Containers][vp-cc]            | [remark-directive](https://github.com/remarkjs/remark-directive)                |
+| [GitHub Style Tables][vp-gh-tables]   | None (glossarify-md loads [remark-gfm](https://github.com/remarkjs/remark-gfm)) |
+| [Table of Contents][vp-toc] `[[toc]]` | None                                                                            |
+| [Emoji][vp-emoji]                     | None                                                                            |
+| [Line Highlighting Codeblocks][vp-lh] | None                                                                            |
+| [Import Code Snippets][vp-code]       | None                                                                            |
+
+[vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
+[vp-gh-tables]: https://vuepress.vuejs.org/guide/markdown.html#github-style-tables
+[vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
+[vp-emoji]: https://vuepress.vuejs.org/guide/markdown.html#emoji
+[vp-toc]: https://vuepress.vuejs.org/guide/markdown.html#table-of-contents
+[vp-lh]: https://vuepress.vuejs.org/guide/markdown.html#line-highlighting-in-code-blocks
+[vp-code]: https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets
 
 ## Appendix
 
