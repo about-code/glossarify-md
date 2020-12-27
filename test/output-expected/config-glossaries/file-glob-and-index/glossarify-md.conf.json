@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/file-glob-and-index",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "indexFile": { "file": "./index/generated.md"}
+  },
+  "glossaries": [
+    {
+      "file": "./**/glossary*.md",
+      "termHint": "~"
+    }
+  ],
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "ignoreCase": false
+}
