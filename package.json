@@ -41,7 +41,7 @@
     "release-stable": "standard-version",
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
     "docs": "node ./bin/index.js --config ./glossarify-md.conf.json",
-    "postdocs": "remark md/repo/README.md > README.md && remark md/repo/CONTRIBUTING.md > CONTRIBUTING.md"
+    "postdocs": "remark md/README.md > README.md && remark md/CONTRIBUTING.md > CONTRIBUTING.md"
   },
   "dependencies": {
     "deepmerge": "^4.2.2",

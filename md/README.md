@@ -638,7 +638,7 @@ If [glossarify-md] can't find a table caption by any of the above means it will 
 
 > **Since v5.0.0**
 
-[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown][GFM] (GFM). Syntax not covered by these specifications may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
+[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
 
 *Frontmatter Syntax*
 ~~~
@@ -647,9 +647,21 @@ key: This is a frontmatter
 ---
 ~~~
 
-Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading dashes and that they contribute to syntax for a *frontmatter* we need to extend the parser.
+Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading dashes and that they contribute to syntax for a *frontmatter* we need to extend the parser ([remark]). **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools.
 
-**Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additonal syntaxes and utilities.
+> **Note:** glossarify-md must not be held responsible for issues arising due to installing additional plug-ins.
+
+### Configure glossarify-md
+
+*Add this to your glossarify-md.conf.json*
+~~~json
+{
+  "unified": {
+    "rcPath": "../remark.conf.json"
+  }
+}
+~~~
+The file path is relative to `baseDir`.
 
 ### Install Remark Plug-Ins
 
@@ -658,8 +670,9 @@ Without special support for it a Markdown parser will recognise the line of trai
 npm install remark-frontmatter
 ~~~
 
-### Configure Remark Plug-Ins
-*remark.conf.json (next to glossarify-md.conf.json):*
+### Load and Configure Remark Plug-Ins
+
+*remark.conf.json:*
 ~~~json
 {
   "plugins": {
@@ -671,24 +684,16 @@ npm install remark-frontmatter
 }
 ~~~
 
-`remark-frontmatter` must be the name of the npm package you installed before. Any properties of the object are specific to the plug-in and need to be found in the plug-in docs.
+The schema follows the [unified configuration][unified-config] schema. `remark-frontmatter` must be the name of the npm package you installed before. Any properties of the object are specific to the plug-in.
 
-### Configure glossarify-md
+It's also possible to have this configuration inside a *glossarify-md.conf.json* but keep in mind that anything under the `unified` key is a [unified configuration][unified-config] whose schema is *not* subject to the [glossarify-md] config schema.
 
-*glossarify-md.conf.json (with externalized plug-in config)*
-~~~json
-{
-  "baseDir": "./docs",
-  "outDir": "../docs-glossarified",
-  "unified": {
-    "rcPath": "../remark.conf.json"
-  }
-}
-~~~
+> **[unified], [remark], [micromark], uhh..**
+>
+> tl;dr: Just remember that you need [remark plug-ins][remark-plugins] to extend [glossarify-md]'s markdown processing.
+>
+> [glossarify-md] builds on [unified], an umbrella project around *text file processing in general*. We configure it with [remark], a *processor* for *Markdown text files in particular*. [remark] has recently switched *its* base layer which is now called [micromark]. You are likely to come across that project as well but unless written otherwise, you won't have to install anything related to [micromark] yourself.
 
-It's also possible to have all the configuration in a single *glossarify-md.conf.json*. What you should note, though, is that [glossarify-md] considers anything under the `unified` key a [unified configuration][unified-config] whose schema is *not* under our control.
-
-> **unified, remark, micromark, uhh..** [unified] is an umbrella project around *text file processing in general*. We use it with [remark] a parser and compiler project under this umbrella for *Markdown* text files in particular. [remark] has recently got a new core implementation called [micromark]. It can be easy to get a bit lost in these projects and their docs. Just remind for now that [remark plug-ins][remark-plugins] are what you typically need for syntax extensions.
 
 ## Node Support Matrix
 

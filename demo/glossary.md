@@ -1,5 +1,11 @@
 # Glossary
 
+This is a glossary with terms to be processed by *glossarify-md* using this
+[glossarify-md.conf.json](../glossarify-md.conf.json) configuration in the root
+of this repo. Some terms may be mentioned in other documents in the `./demo`
+directory. Glossarified outputs will then be written to [`../doc/`](../doc/).
+Term links created from this glossary can be recognised by a *term hint*.
+
 ## unified
 
 [unified] is an umbrella project around *text file processing in general*.
@@ -14,15 +20,20 @@
 
 ## vuepress
 
-[vuepress] is a static website generator translating markdown files into a [vuejs]-powered site.
+[vuepress] is a static website generator translating markdown files into a website powered by [vuejs].
 
-[vue]: https://vuejs.org
+[vuejs]: https://vuejs.org
 [vuepress]: https://vuepress.vuejs.org
 
 ## slug
 
 URLs have a structure `scheme://domain.tld/path/#fragment?query&query`.
 A slug - by this definition - is a URL-friendly identifier that can be used within URL fragments to address content in a web page, e.g sections.
+
+## Term Hint
+
+An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link.
+See glossarify-md configuration options for details.
 
 ## Linkification
 
