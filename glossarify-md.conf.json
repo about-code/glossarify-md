@@ -1,0 +1,12 @@
+{
+  "$schema": "./conf/v5/schema.json",
+  "baseDir": "./demo",
+  "outDir": "../doc",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": "↴"
+    }
+  ],
+  "ignoreCase": true
+}
