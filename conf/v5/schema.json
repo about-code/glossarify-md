@@ -56,8 +56,8 @@
             "description": "Path or glob patterns of files to include for linking to glossaries."
             ,"$ref": "#/$defs/IndexingOpts"
             ,"default": {
-                "groupByHeadingDepth": 6,
-                "headingDepths": [1,2,3,4,5,6]
+                "groupByHeadingDepth": 6
+                ,"headingDepths": [1,2,3,4,5,6]
             }
         }
         ,"i18n": {
@@ -79,17 +79,17 @@
             "description": "Whether to use relative or absolute links. Choosing 'absolute' requires a 'baseUrl'."
             ,"$ref": "#/$defs/LinkingOpts"
             ,"default": {
-                "baseUrl": "",
-                "paths": "relative",
-                "mentions": "all",
-                "headingDepths": [2,3,4,5,6],
-                "limitByAlternatives": 10
+                "baseUrl": ""
+                ,"paths": "relative"
+                ,"mentions": "all"
+                ,"headingDepths": [2,3,4,5,6]
+                ,"limitByAlternatives": 10
             }
         }
         ,"outDir": {
             "description": "Path to directory where to write processed files to."
             ,"type": "string"
-            ,"default": "./docs-glossarified"
+            ,"default": "../docs-glossarified"
         }
         ,"outDirDropOld": {
             "description": "If true, remove old 'outDir' before creating a new one. Otherwise just overwrite old files. Default: true"
@@ -191,9 +191,9 @@
                     "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that _this_ is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`."
                     ,"type": "array"
                     ,"items": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 6
+                        "type": "integer"
+                        ,"minimum": 1
+                        ,"maximum": 6
                     }
                 }
             }
@@ -257,9 +257,9 @@
                     "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'."
                     ,"type": "array"
                     ,"items": {
-                        "type": "integer",
-                        "minimum": 1,
-                        "maximum": 6
+                        "type": "integer"
+                        ,"minimum": 1
+                        ,"maximum": 6
                     }
                 }
                 ,"limitByAlternatives": {
