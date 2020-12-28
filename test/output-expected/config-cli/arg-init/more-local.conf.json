@@ -1,0 +1,54 @@
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "excludeFiles": [
+    "node_modules",
+    ".git"
+  ],
+  "force": false,
+  "generateFiles": {
+    "listOf": []
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": ""
+    }
+  ],
+  "ignoreCase": false,
+  "includeFiles": [
+    "."
+  ],
+  "indexing": {
+    "groupByHeadingDepth": 6,
+    "headingDepths": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "i18n": {
+    "locale": "en"
+  },
+  "keepRawFiles": [],
+  "linking": {
+    "baseUrl": "",
+    "paths": "relative",
+    "mentions": "all",
+    "headingDepths": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "limitByAlternatives": 10
+  },
+  "outDir": "../docs-glossarified",
+  "outDirDropOld": true,
+  "reportNotMentioned": false,
+  "unified": {}
+}

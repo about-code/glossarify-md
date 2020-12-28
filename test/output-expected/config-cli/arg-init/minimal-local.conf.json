@@ -1,0 +1,5 @@
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified"
+}

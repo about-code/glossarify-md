@@ -35,7 +35,7 @@
 ~~~
 npm i -g glossarify-md
 
-glossarify-md --init > glossarify-md.conf.json
+glossarify-md --init --new
 glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
@@ -44,7 +44,7 @@ glossarify-md --config ./glossarify-md.conf.json
 ~~~
 npm i glossarify-md
 
-npx glossarify-md --local --init > glossarify-md.conf.json
+npx glossarify-md --local --init --new
 npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
@@ -63,46 +63,41 @@ npm run glossarify
 
 ## Configuration
 
-### Generate
-
 > **Since v5.0.0**
 
-Generate a configuration file by running [glossarify-md] with the `--init` option and streaming the output to a file:
+Generate a configuration with the `--init` option:
 
 ~~~
 npx glossarify-md --init > glossarify-md.conf.json
 ~~~
 
-### Minimal
+*glossarify-md.conf.json (minimal)*
+```json
+{
+  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified"
+}
+```
+- use `--init --new` to generate a config and the default files and folders
+- add `--more` to generate a config with more [options] and default values
+- add `--local` to load the config schema from the `node_modules` directory
 
-> **Since v5.0.0**
-
-If you're fine with the default values the configuration can be as simple as this:
-
-*glossarify-md.conf.json (local install)*
+*glossarify-md.conf.json* (`--local`)
 
 ```json
 {
   "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./docs",
-  "outDir": "../target"
+  "outDir": "../docs-glossarified"
 }
 ```
 
-*glossarify-md.conf.json (global install)*
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json",
-  "baseDir": "./docs",
-  "outDir": "../target"
-}
-```
-
-More options see [Options] below.
-
-> **Note:** All paths (except of `$schema`) are interpreted relative to `baseDir`.
+> **Paths**
 >
-> `baseDir` itself, if relative, is being resolved relative to the location of the config file. It is relative to Current Working Directory (CWD) if being passed from the command line.
+> 1. `baseDir` and `$schema` are resolved relative to the config file or current working directory (when passed via CLI)
+> 1. all other paths  are resolved relative to `baseDir`
+> 1. `outDir` *must not* be in `baseDir`so, if relative, must step out of `baseDir`
 
 
 ### Config CLI

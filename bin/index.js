@@ -30,6 +30,18 @@ const cli = {
         ,type: "boolean"
         ,default: false
     }
+    ,"more": {
+        alias: ""
+        ,description: "When used with --init generates an extended configuration with default values otherwise applied in the background."
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"new": {
+        alias: ""
+        ,description: "When used with --init generates a file ./docs/glossary.md"
+        ,type: "boolean"
+        ,default: false
+    }
     ,"config": {
         alias: "c"
         ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
@@ -63,7 +75,7 @@ if (!argv.init) {
 }
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
-    printConf(cli);
+    printHelp(cli);
     proc.exit(0);
 }
 
@@ -125,11 +137,7 @@ confPromise.then((conf) => {
 
     // --init
     if (argv.init) {
-        if (argv.local) {
-            // append version path segment from schema URI to local path
-            conf.$schema = `./node_modules/glossarify-md/conf/${conf.$schema.split("/conf/")[1]}`;
-        }
-        console.log(JSON.stringify(conf, null, 2));
+        writeInitialConf(conf, argv);
         proc.exit(0);
     }
 
@@ -176,7 +184,44 @@ function validateConf(conf) {
     }
 }
 
-function printConf(parameters) {
+// --init
+function writeInitialConf(conf, argv) {
+    const file = path.resolve(conf.baseDir, "../glossarify-md.conf.json");
+    let fileOpts = null;
+    let replacer = null;
+
+    // --local
+    if (argv.local) {
+        // append version path segment from schema URI to local path
+        conf.$schema = `./node_modules/glossarify-md/conf/${conf.$schema.split("/conf/")[1]}`;
+    }
+    // --more
+    if (argv.more) {
+        delete conf.dev;
+        fileOpts = { spaces: 2 };
+    } else {
+        // generate a minimal configuration
+        replacer = (that, keyVal) => {
+            if (typeof keyVal === "object") {
+                const {$schema, baseDir, outDir} = keyVal;
+                return {$schema, baseDir, outDir};
+            } else {
+                return keyVal;
+            }
+        };
+        fileOpts = { spaces: 2, replacer };
+    }
+
+    // --new
+    if (argv.new) {
+        fs.outputFileSync(path.resolve(conf.baseDir, "glossary.md"), "# Glossary", "utf8");
+        fs.writeJsonSync(file, conf, fileOpts);
+    } else {
+        console.log(JSON.stringify(conf, replacer, 2));
+    }
+}
+
+function printHelp(parameters) {
     console.log("Options:\n");
     console.log(
         Object
