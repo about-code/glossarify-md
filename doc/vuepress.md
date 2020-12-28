@@ -62,7 +62,13 @@ module.exports = {
 };
 ```
 
-Details on why we have to use a modified [slug↴][1] algorithm with [vuepress↴][2] can be found in [Appendix][3].
+Details on why we have to use a modified [slug↴][1] algorithm with [vuepress↴][2] and can be found in [Appendix][3].
+
+> **Warnings**
+>
+> ⚠ Changing the slug algorithm might be a breaking change in *published* docs. URLs, especially URL fragments may change. Bookmarks of your readers may become outdated.
+>
+> ⚠ For headings with unicode characters, e.g. `# Äquator` vuepress generates lowercase slugs with ASCII characters, only, which you might referred to by links `[Äquator](#aquator)`. [glossarify-md]'s slugger keeps non-ASCII characters and requires you to refer to the same heading by `[Äquator](#äquator)`, so by a lowercase slug with **ä**.
 
 ## [Configure Build Scripts](#configure-build-scripts)
 
@@ -115,26 +121,23 @@ Below is a list of [remark↴][7] plug-ins you may consider:
 
 ## [Appendix](#appendix)
 
-### [Why glossarify-md requires changing vuepress's slugify algorithm:](#why-glossarify-md-requires-changing-vuepresss-slugify-algorithm)
-
 [glossarify-md] requires a [slug↴][1] algorithm to create friendly [URL fragments↴][11] (#...) for section links. When [vuepress↴][2] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different [slug↴][1] algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27][12]). So it's best to configure [vuepress↴][2] to use the same slugger as [glossarify-md].
 
-> **☛ Note:** If you decide to drop [glossarify-md] later you might not want to have slugs change again. [glossarify-md] uses [github-slugger][13] internally. You can use it directly like so:
->
-> *.vuepress/config.js*
->
-> ```js
->  const GitHubSlugger = require("github-slugger");
->  module.exports = {
->      /* ... */
->      markdown: {
->        slugify: (value) => {
->          const slugifier = new GitHubSlugger();
->          return slugifier.slug(value);
->        }
->      }
->  };
-> ```
+[glossarify-md] uses [github-slugger][13] internally. In case you no longer want to use [glossarify-md] you might not want to have slugs change again. Then you can use the slugger directly with [vuepress↴][2], too:
+
+```js
+//.vuepress/config.js
+const GitHubSlugger = require("github-slugger");
+module.exports = {
+  /* ... */
+  markdown: {
+    slugify: (value) => {
+      const slugifier = new GitHubSlugger();
+      return slugifier.slug(value);
+    }
+  }
+};
+```
 
 [vuepress]: https://vuepress.vuejs.org
 
