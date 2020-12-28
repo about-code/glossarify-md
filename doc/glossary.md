@@ -28,8 +28,13 @@ Term links created from this glossary can be recognised by a *[term hint↴][3]*
 
 ## [slug](#slug)
 
-URLs have a structure `scheme://domain.tld/path/#fragment?query&query`.
-A [slug↴][5] - by this definition - is a URL-friendly identifier that can be used within URL fragments to address content in a web page, e.g sections.
+A [slug↴][5] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL fragments↴][6] to address headings / sections on a page.
+
+## [URL fragment](#url-fragment)
+
+<!-- Aliases: URL fragments -->
+
+URLs have a structure `scheme://domain.topleveldomain[/path][#fragment][?query[&query]]`. The fragment is the part follwing the `#` (URL hash).
 
 ## [Term Hint](#term-hint)
 
@@ -50,4 +55,6 @@ onto the term definition in *document B*.
 
 [4]: #unified "unified is an umbrella project around text file processing in general."
 
-[5]: #slug "URLs have a structure scheme://domain.tld/path/#fragment?query&query."
+[5]: #slug "A slug by our definition is a URL-friendly identifier created from arbitrary text that can be used within URL fragments to address headings / sections on a page."
+
+[6]: #url-fragment "URLs have a structure scheme://domain.topleveldomain[/path][#fragment][?query[&query]]."

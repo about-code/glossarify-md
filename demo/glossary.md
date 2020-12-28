@@ -27,8 +27,12 @@ Term links created from this glossary can be recognised by a *term hint*.
 
 ## slug
 
-URLs have a structure `scheme://domain.tld/path/#fragment?query&query`.
-A slug - by this definition - is a URL-friendly identifier that can be used within URL fragments to address content in a web page, e.g sections.
+A slug by our definition is a URL-friendly identifier created from arbitrary text that can be used within URL fragments to address headings / sections on a page.
+
+## URL fragment
+<!-- Aliases: URL fragments -->
+
+URLs have a structure `scheme://domain.topleveldomain[/path][#fragment][?query[&query]]`. The fragment is the part follwing the `#` (URL hash).
 
 ## Term Hint
 

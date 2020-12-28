@@ -5,7 +5,7 @@
     ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
     ,"properties": {
         "baseDir": {
-            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to *baseDir*. *baseDir* itself is relative to the location of the config file or the current working directory when provided via command line."
+            "description": "Path to directory where to search for the glossary file and markdown files. All paths in a config file will be relative to 'baseDir' while 'baseDir' itself, when relative, must be relative to the location of the config file - or the current working directory when provided via command line."
             ,"type": "string"
             ,"default": "./docs"
         }
@@ -188,7 +188,7 @@
                     ,"maximum": 6
                 }
                 ,"headingDepths": {
-                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that *this* is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`."
+                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that _this_ is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`."
                     ,"type": "array"
                     ,"items": {
                         "type": "integer",
@@ -263,7 +263,7 @@
                     }
                 }
                 ,"limitByAlternatives": {
-                    "description": "If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions *but no more than...*. If the number is negative then the numerical amount indicates to *not create a term-link at all once there are more than...* definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly defined."
+                    "description": "If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions _but no more than..._. If the number is negative then the numerical amount indicates to _not create a term-link at all once there are more than..._ definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly defined."
                     ,"type": "integer"
                     ,"minimum": "-95"
                     ,"maximum": "+95"
@@ -299,7 +299,7 @@
                     }]
                 }
                 ,"settings": {
-                    "description": "Settings as defined in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md and https://github.com/remarkjs/remark/tree/main/packages/remark-stringify"
+                    "description": "Unified _processor_ settings as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md . glossarify-md uses the \"remark\" Markdown processor. To customize Markdown output style you can apply any _formatting options_ documented at https://github.com/syntax-tree/mdast-util-to-markdown#formatting-options which is the module used by 'remark-stringify' to serialize (compile) the Markdown Abstract Syntax Tree that was created from Markdown text input back into Markdown text output."
                     ,"type": "object"
                 }
 
