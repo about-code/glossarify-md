@@ -186,7 +186,7 @@ function validateConf(conf) {
 
 // --init
 function writeInitialConf(conf, argv) {
-    const file = path.resolve(conf.baseDir, "../glossarify-md.conf.json");
+
     let fileOpts = null;
     let replacer = null;
 
@@ -214,8 +214,18 @@ function writeInitialConf(conf, argv) {
 
     // --new
     if (argv.new) {
-        fs.outputFileSync(path.resolve(conf.baseDir, "glossary.md"), "# Glossary", "utf8");
-        fs.writeJsonSync(file, conf, fileOpts);
+        const glossaryFile = path.resolve(conf.baseDir, "glossary.md");
+        const configFile = path.resolve(conf.baseDir, "../glossarify-md.conf.json");
+        if (fs.pathExists(glossaryFile)) {
+            console.log(`⚠ Warning: ${glossaryFile} already exists. Nothing written.`);
+        } else {
+            fs.outputFileSync(glossaryFile, "# Glossary", "utf8");
+        }
+        if (fs.pathExistsSync(configFile)) {
+            console.log(`⚠ Warning: ${configFile} already exists. Nothing written.`);
+        } else {
+            fs.writeJsonSync(configFile, conf, fileOpts);
+        }
     } else {
         console.log(JSON.stringify(conf, replacer, 2));
     }
