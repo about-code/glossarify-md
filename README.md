@@ -746,11 +746,12 @@ It's also possible to have this configuration inside a *glossarify-md.conf.json*
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
 
-| Node-Version |                                                                    compatibility & support status                                                                     |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Current      | Tested. Should Node introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
-| 12.x LTS     | Tested + Supported                                                                                                                                                    |
-| 10.x LTS     | Tested + Supported                                                                                                                                                    |
+|  NodeJS  |                                                                      compatibility & support status                                                                      |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Current  | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
+| 14.x LTS | Tested + Supported                                                                                                                                                       |
+| 12.x LTS | Tested + Supported                                                                                                                                                       |
+| 10.x LTS | glossarify-md <= v4                                                                                                                                                      |
 
 ## Options
 
