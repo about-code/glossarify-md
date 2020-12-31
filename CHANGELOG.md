@@ -2,7 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-[CommonMark]: https://commonmark.org
+## [5.0.0](https://github.com/about-code/glossarify-md/compare/v5.0.0-beta.0...v5.0.0) (2020-12-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **NodeJS 10.x will no longer be supported** for glossarify-md versions `>= 5.0.0`. While `v5.0.0-alpha.*` and `v5.0.0-beta.0` have been continuously tested on NodeJS 10.x beginning with the release of gossarify-md v5 tests will target NodeJS 12.x (LTS), 14.x (LTS) and 15.x (Current), only. Updates to `glossarify-md >= 5.0.0` may break on NodeJS 10 without explictly notifying about a breaking change.
+* File extension "mkdown" no longer supported. Aligning with GitHub-supported file extensions.
+
+### Features
+
+* New node support matrix ([#145](https://github.com/about-code/glossarify-md/issues/145)) ([07b95b0](https://github.com/about-code/glossarify-md/commit/07b95b05ab50bface1dc03855e6ec330f8945c54))
+* **cli:** New options `--new` and `--more` usable with `--init`. See [README.md](./README.md#Install) for details. ([02240d3](https://github.com/about-code/glossarify-md/commit/02240d34ae9a6da00cdb8c4bb30551440191d5fe))
+* **docs:** Demonstrate glossarify-md in the docs by generating ./doc/ from ./demo ([#143](https://github.com/about-code/glossarify-md/issues/143)) ([88a8b96](https://github.com/about-code/glossarify-md/commit/88a8b967f337224d31e3bfad44753a447fc633e7))
+
+
+### Bug Fixes
+
+* Default Config Values: 'outDir' being in default 'baseDir' ([ea0a144](https://github.com/about-code/glossarify-md/commit/ea0a1447bb9f9728e986a3a5ffc30111ac037dcb))
+* Wrong link to glossary definition in generated index file when `glossaries[i].file` config is a glob. ([4ada56f](https://github.com/about-code/glossarify-md/commit/4ada56ff5dbb9b1484af897e6d34ca3ecd25f549)), closes [#133](https://github.com/about-code/glossarify-md/issues/133)
+* Use GitHub set of supported Markdown file extensions. ([745fd82](https://github.com/about-code/glossarify-md/commit/745fd82ae700ebaeae24fec2cd6c514f4ab59ab5))
 
 ## [5.0.0-beta.0](https://github.com/about-code/glossarify-md/compare/v5.0.0-alpha.2...v5.0.0-beta.0) (2020-12-26)
 
