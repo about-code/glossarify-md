@@ -1,6 +1,6 @@
 # [Document 0](#document-0)
 
-[https\://github.com/about-code/glossarify-md/issues/122][1]
+[https://github.com/about-code/glossarify-md/issues/122][1]
 
 ## [Test Case 1: Cross-Linking from nested files to this section](#section-0-1)
 
