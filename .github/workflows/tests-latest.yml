@@ -1,5 +1,6 @@
 name: Tests (with latest deps)
 on:
+  workflow_dispatch:
   pull_request:
   schedule:
   - cron: '0 12,23 * * *'
