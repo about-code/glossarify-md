@@ -119,11 +119,12 @@ npx glossarify-md --init > glossarify-md.conf.json
 }
 ```
 
-- use `--init --new` to generate a config and the default files and folders
-- add `--more` to generate a config with more [options] and default values
-- add `--local` to load the config schema from the `node_modules` directory
+- use `--init` to generate a config\`
+  - add `--new`  to create a `./docs/glossarify.md` and write config into `./glossarify-md.conf.json`
+  - add `--more` to generate a config with more [options] and default values
+  - add `--local` to load the config schema from the `node_modules` directory
 
-*glossarify-md.conf.json* (`--local`)
+*glossarify-md.conf.json* (`glossarify-md --init --local`)
 
 ```json
 {
