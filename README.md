@@ -57,9 +57,6 @@
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
 - [Markdown Syntax Extensions](#markdown-syntax-extensions)
-  - [Configure glossarify-md](#configure-glossarify-md)
-  - [Install Remark Plug-Ins](#install-remark-plug-ins)
-  - [Load and Configure Remark Plug-Ins](#load-and-configure-remark-plug-ins)
 - [Node Support Matrix](#node-support-matrix)
 - [Options](#options)
 - [Special Thanks go to](#special-thanks-go-to)
@@ -468,59 +465,66 @@ By default items will be grouped *by section of occurrence* using the section he
 
 > **Since v3.5.0**
 
-You can generate **arbitrary lists** like *Lists of References* from HTML elements with an `id` attribute and a *classifier*. For example in your documents you could use an *invisible* HTML anchor like
+You can generate **arbitrary lists from HTML elements with an `id` attribute** and an element *classifier* to compile similar elements into the same list.
 
-<a id="togr"></a>
+<a id="video-tutorial-part-one"></a>
+Example: Generate a list of videos:
 
 ```md
-<a id="togr" class="ref" title="Theory of General Relativity"></a> ...a citation of the work.
+<video
+  src="tutorial-1.mp4"
+  id="tutorial-part-1"
+  class="video"
+  title="Tutorial Part 1">
+</video>
 ```
 
-Then to generate a *List of References* configure `listOf`:
-
-*glossarify-md.conf.json*
+Then to generate a *List of Video Tutorials* add to your *glossarify-md.conf.json*:
 
 ```json
 "generateFiles": {
     "listOf": [{
-        "title": "References",
-        "file": "./references.md",
-        "class": "ref"
+        "class": "video",
+        "title": "List of Video Tutorials",
+        "file": "./videos.md"
     }]
 }
 ```
 
-You can **type less** by using an *id-prefix* and let [glossarify-md] infer the list item label from the text between the HTML tags:
+After running glossarify-md there will be a file:
 
-```md
-<cite id="ref-togr">Theory of General Relativity</cite>
-```
+*docs-glossarified/videos.md (generated)*
 
-<a id="ref-togr-work"></a>
-**Alternative list item labels** are possible with the `title` attribute.
-
-```md
-The <cite id="ref-togr-work" title="A. Einstein, 1916. Die Grundlagen
-der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
-Seite 769-822.">Theory of General Relativity</cite> by Albert
-Einstein was groundbreaking.
-```
-
-*Result: docs-glossarified/references.md (generated)*
-
-> ## List of References
+> ## List of Video Tutorials
 >
-> - [Theory of General Relativity](#togr)
-> - [A. Einstein, 1916. Die Grundlagen
->   der Allgemeinen Relativitätstheorie. Annalen der Physik, Band 49,
->   Seite 769-822.](#ref-togr-work)
-> - ...
+> - [Tutorial Part 1](#video-tutorial-part-1)
 
-<a id="cite-note-github"></a>
+You can **type less** when prefixing ids with your list classifier:
 
-> **Note:** [GitHub] `.md` file preview sanitizes files before rendering them and strips off [semantic html tags](https://www.w3schools.com/html/html5\_semantic_elements) like `<cite>`. Thus, when navigating a GitHub repo from the `.md` preview of a list generated from `<cite>`, like in the example above, the browser *can't* sroll to the correct target location of `<cite>`. Use `<span>` or `<a>` tags if you care.
+```md
+<video
+  src="tutorial-1.mp4"
+  id="video-tutorial-part-1"
+  title="Tutorial Part 1">
+</video>
+```
 
-[GitHub]: https://github.com
+Without a `title` attribute the tool attempts to derive a list item title from an elements text content:
+
+```md
+<video src="tutorial-1.mp4" id="mylist-foo">
+   Tutorial Part 1
+</video>
+```
+
+Use *invisible* HTML anchors to generate lists from and navigate to text content:
+
+```md
+<a id="mylist-target-foo" title="Foo"></a>
+This paragraph can be navigated to from a list item 'Foo'.
+```
+
+> **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md]).
 
 <!--
 **Link label extraction**
@@ -538,13 +542,14 @@ The link label for list items will be inferred in this order (first-match):
 
 > **Since v3.3.0**
 
-Since there is no standardized *Markdown anchor syntax* so far [`listOf`](#lists) requires you to use *HTML syntax* which can be tedious to write, though. `listOfFigures` generates navigable HTML from Markdown's image syntax:
+So far we used [`listOf`](#lists) to generate a lists from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is special Markdown syntax for similar elements. This is where
+`listOfFigures` fits in. It is a shortcut which makes [glossarify-md] generate the HTML anchor elements for `listOf` based on Markdown's image syntax, such that you can simply write:
 
 ```md
 ![List item Label](./figure.png)
 ```
 
-You can still use HTML for dynamically rendered figures, e.g. a [PlantUML](https://plantuml.com) diagram:
+Then you may only need to use HTML for dynamically rendered figures, e.g. a [PlantUML](https://plantuml.com) diagram:
 
 ````md
 <figure id="figure-gen">Dynamically Rendered Diagram</figure>
@@ -556,7 +561,7 @@ You can still use HTML for dynamically rendered figures, e.g. a [PlantUML](https
 ```
 ````
 
-To add both figures to the same list one way to configure [glossarify-md] is to declare a *`listOf` class X* and telling `listOfFigures` to use the same class:
+To compile both figures into the same list one way to configure [glossarify-md] is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
 
 *glossarify-md.conf.json* (since v5.0.0)
 
@@ -573,27 +578,24 @@ To add both figures to the same list one way to configure [glossarify-md] is to 
 }
 ```
 
-With this you could also choose a shorter classifier like ***fig***. If you like to stick with ***figure*** you can also use:
+Such a config, for example, would allow you to also choose a shorter classifier like *fig*. However, if you are fine with ***figure* as the default classifier** you can omit `listOf` and just use:
 
 *glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
     "listOfFigures": {
-        "title": "Figures",
+        "title": "List of Figures",
         "file": "./figures.md"
     }
 }
 ```
 
-> **Note:** The short version has been available since v3.3.0 but generates navigable HTML since v5.0.0.
-
 ### List of Tables
 
 > **Since v3.4.0**
 
-Like with `listOfFigures` there's a `listOfTables` option which generates HTML anchors
-for a [list](#lists) from Markdown table syntax. The following configuration generates a *List of Tables* with the implicit `listOf` classifier ***table***:
+Like with `listOfFigures` above, there's also a `listOfTables` shortcut for [GFM] Markdown table syntax. It implicitely uses the [`listOf`](#lists) classifier ***table*** when configured this way:
 
 *glossarify-md.conf.json*
 
@@ -606,7 +608,7 @@ for a [list](#lists) from Markdown table syntax. The following configuration gen
 }
 ```
 
-Markdown tables have no notion of a table caption. To render a list item [glossarify-md] tries to infer an item label from a paragraph preceding the table. If it ends with an *emphasized* phrase and the phrase itself **is terminated by a colon**, then it uses that phrase as the item label:
+In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md] tries to infer a list item label from a **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon**, then the tool uses that phrase as the item label:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
@@ -620,13 +622,7 @@ Markdown tables have no notion of a table caption. To render a list item [glossa
 | 3        | Book        | $23.45     |
 ```
 
-> ## List of Tables
->
-> - [Table of average prices by article category](#table-of-average-prices-by-article-category)
-> - [Average prices by category](#average-prices-by-category)
-> - [Average Prices by Article Category](#avg-prices)
-
-The phrase could also be it's own distinct paragraph:
+But the phrase could also be it's own distinct paragraph:
 <a id="average-prices-by-category"></a>
 
 ```md
@@ -641,7 +637,7 @@ The phrase could also be it's own distinct paragraph:
 | 3        | Book        | $23.45     |
 ```
 
-**Since v3.4.0** there has also been support for *invisble* table captions using an *HTML comment syntax*:
+**Since v3.4.0** there has also been support for *invisble* table captions using *HTML comment syntax*:
 <a id="avg-prices"></a>
 
 ```md
@@ -653,7 +649,15 @@ The phrase could also be it's own distinct paragraph:
 | 3        | Book        | $23.45     |
 ```
 
-Since **v5.0.0** all the previous variants will generate an invisible HTML anchor to integrate with `listOf`. You can use them interchangably with or replace them by an HTML anchor as well:
+The result for the tables above will be:
+
+> ## List of Tables
+>
+> - [Table of average prices by article category](#table-of-average-prices-by-article-category)
+> - [Average prices by category](#average-prices-by-category)
+> - [Average Prices by Article Category](#avg-prices)
+
+Since **v5.0.0** and the introduction of `listOf` all the previous examples will make [glossarify-md] annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
 
 ```md
 <a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
@@ -665,7 +669,7 @@ Since **v5.0.0** all the previous variants will generate an invisible HTML ancho
 | 3        | Book        | $23.45     |
 ```
 
-If [glossarify-md] can't find a table caption by any of the above means it will fall back to rendering a list item using the table headings separated by comma, the section of occurrence or the file name (in this order).
+> **Note:** If [glossarify-md] can't find a table caption by any of the above means it will fall back to rendering a list item using the table headings separated by comma, or if none, the closest section heading, or if none, the file name (in this order).
 
 <!--
 1. **HTML anchor** see `listOf`
@@ -692,11 +696,7 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for it a Markdown parser will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware of the leading dashes and that they contribute to syntax for a *frontmatter* we need to extend the parser ([remark]). **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools.
-
-> **Note:** glossarify-md must not be held responsible for issues arising due to installing additional plug-ins.
-
-### Configure glossarify-md
+Without special support for it our Markdown parser ([remark]) will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that the leading dashes contribute to syntax for a *frontmatter* we need to extend it. Therefore **since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
 
 *Add this to your glossarify-md.conf.json*
 
@@ -708,19 +708,13 @@ Without special support for it a Markdown parser will recognise the line of trai
 }
 ```
 
-The file path is relative to `baseDir`.
-
-### Install Remark Plug-Ins
-
-*Example: Install a frontmatter plug-in*
+The file path is relative to `baseDir`. Then install a remark plug-in
 
 ```
 npm install remark-frontmatter
 ```
 
-### Load and Configure Remark Plug-Ins
-
-*remark.conf.json:*
+and make remark load the plug-in by adding to your *remark.conf.json*:
 
 ```json
 {
@@ -733,15 +727,18 @@ npm install remark-frontmatter
 }
 ```
 
-The schema follows the [unified configuration][unified-config] schema. `remark-frontmatter` must be the name of the npm package you installed before. Any properties of the object are specific to the plug-in.
+> **Note:** glossarify-md must not be held responsible for issues arising due to installing and using additional plug-ins.
 
-It's also possible to have this configuration inside a *glossarify-md.conf.json* but keep in mind that anything under the `unified` key is a [unified configuration][unified-config] whose schema is *not* subject to the [glossarify-md] config schema.
+`remark.conf.json` follows the [unified configuration][unified-config] schema:
 
-> **[unified], [remark], [micromark], uhh..**
+- `remark-frontmatter` must be the name of the npm package you installed before.
+- Any properties of the object are specific to the plug-in.
+
+The configuration could also be embedded into a *glossarify-md.conf.json*. But keep in mind that anything under the `unified` key is a [unified configuration][unified-config] whose schema is *not* subject to the [glossarify-md] config schema.
+
+> **[unified], [remark], uhh..**
 >
-> tl;dr: Just remember that you need [remark plug-ins][remark-plugins] to extend [glossarify-md]'s markdown processing.
->
-> [glossarify-md] builds on [unified], an umbrella project around *text file processing in general*. We configure it with [remark], a *processor* for *Markdown text files in particular*. [remark] has recently switched *its* base layer which is now called [micromark]. You are likely to come across that project as well but unless written otherwise, you won't have to install anything related to [micromark] yourself.
+> Read more on how these projects relate to glossarify-md and to each other in our [Addendum: unified, remark, uhh..](https://github.com/about-code/glossarify-md/blob/master/doc/unified.md)
 
 ## Node Support Matrix
 
