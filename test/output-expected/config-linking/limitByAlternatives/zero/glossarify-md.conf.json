@@ -1,11 +1,11 @@
 {
   "$schema": "../../../../../conf/v5/schema.json",
   "baseDir": "./",
-  "outDir": "../../../../output-actual/config-linking/limitByAlternatives/positive",
+  "outDir": "../../../../output-actual/config-linking/limitByAlternatives/zero",
   "glossaries": [
     {"file": "./*.md" }
   ],
   "linking": {
-    "limitByAlternatives": 1
+    "limitByAlternatives": 0
   }
 }

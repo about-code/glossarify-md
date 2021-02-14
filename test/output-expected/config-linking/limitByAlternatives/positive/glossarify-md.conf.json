@@ -6,6 +6,6 @@
     {"file": "./*.md" }
   ],
   "linking": {
-    "limitByAlternatives": 5
+    "limitByAlternatives": 1
   }
 }

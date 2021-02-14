@@ -2,4 +2,4 @@
 
 ## [Ambiguous](#ambiguous)
 
-Definition 6
+Definition 3

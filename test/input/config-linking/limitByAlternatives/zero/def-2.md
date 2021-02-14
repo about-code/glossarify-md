@@ -2,4 +2,4 @@
 
 ## Ambiguous
 
-Definition 6
+Definition 2
