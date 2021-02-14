@@ -1,4 +1,4 @@
-# [Addendum: [unified], [remark], uhh..](#addendum-unified-remark-uhh)
+# [Addendum: unified, remark, uhh..](#addendum-unified-remark-uhh)
 
 *Projects and conceptual layers they operate on*
 

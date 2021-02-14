@@ -698,7 +698,7 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for it our Markdown parser ([remark]) will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that the leading dashes contribute to syntax for a *frontmatter* we need to extend it. Therefore **since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
+Without special support for it our Markdown parser ([remark]) will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that they contribute to syntax for a *frontmatter* we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
 
 *Add this to your glossarify-md.conf.json*
 
