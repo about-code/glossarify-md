@@ -263,7 +263,7 @@
                     }
                 }
                 ,"limitByAlternatives": {
-                    "description": "If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions _but no more than..._. If the number is negative then the numerical amount indicates to _not create a term-link at all once there are more than..._ definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly defined."
+                    "description": "This option can be used to limit the number of links, if there are multiple definitions of a term. When using a positive value, then the system creates links _no more than ..._ alternative links. If the number is negative then the absolute amount indicates to _not link a term at all once there are at least ..._ alternative definitions. For example: \n 1 linkifies the term in text and adds a link to 1 alternative definition (superscript),\n 0 only linkifies the term in text but adds 0 links to alternative definitions,\n -1 does not linkify a term in text once there is at least 1 alternative definition.\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain template and thus repeatedly declare the same heading (= term)."
                     ,"type": "integer"
                     ,"minimum": "-95"
                     ,"maximum": "+95"
