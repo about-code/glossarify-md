@@ -39,7 +39,7 @@ AND
 AND (
 
 *   options `glossaries` MUST be **merged**
-*   the term '[Term][1][<sup>1)</sup>][1][<sup> 2)</sup>][2]' MUST be linked absolutely to
+*   the term '[Term][1][<sup>2)</sup>][2]' MUST be linked absolutely to
     *   `cli://localhost/glossary.md#term`
     *   `cli://localhost/glossary2.md#term`
 
