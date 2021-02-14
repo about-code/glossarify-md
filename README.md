@@ -468,9 +468,11 @@ By default items will be grouped *by section of occurrence* using the section he
 You can generate **arbitrary lists from HTML elements with an `id` attribute** and an element *classifier* to compile similar elements into the same list.
 
 <a id="video-tutorial-part-one"></a>
-Example: Generate a list of videos:
+*Example: Markdown document with a video element*
 
 ```md
+More details see our video tutorial:
+
 <video
   src="tutorial-1.mp4"
   id="tutorial-part-1"
@@ -479,13 +481,13 @@ Example: Generate a list of videos:
 </video>
 ```
 
-Then to generate a *List of Video Tutorials* add to your *glossarify-md.conf.json*:
+Then to generate a *List of Videos* add to your *glossarify-md.conf.json*:
 
 ```json
 "generateFiles": {
     "listOf": [{
         "class": "video",
-        "title": "List of Video Tutorials",
+        "title": "List of Videos",
         "file": "./videos.md"
     }]
 }
@@ -495,7 +497,7 @@ After running glossarify-md there will be a file:
 
 *docs-glossarified/videos.md (generated)*
 
-> ## List of Video Tutorials
+> ## List of Videos
 >
 > - [Tutorial Part 1](#video-tutorial-part-1)
 
@@ -542,7 +544,7 @@ The link label for list items will be inferred in this order (first-match):
 
 > **Since v3.3.0**
 
-So far we used [`listOf`](#lists) to generate a lists from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is special Markdown syntax for similar elements. This is where
+So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is special Markdown syntax for similar elements. This is where
 `listOfFigures` fits in. It is a shortcut which makes [glossarify-md] generate the HTML anchor elements for `listOf` based on Markdown's image syntax, such that you can simply write:
 
 ```md
