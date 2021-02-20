@@ -738,7 +738,7 @@ The configuration could also be embedded into a *glossarify-md.conf.json*. But k
 
 > **[unified], [remark], uhh..**
 >
-> Read more on how these projects relate to glossarify-md and to each other in our [Addendum: unified, remark, uhh..](https://github.com/about-code/glossarify-md/blob/master/doc/unified.md)
+> Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
 
 ## Node Support Matrix
 
