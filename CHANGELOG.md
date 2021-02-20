@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.0.1](https://github.com/about-code/glossarify-md/compare/v5.0.0...v5.0.1) (2021-02-20)
+
+
+### Bug Fixes
+
+* Clarify semantics of option 'linking.limitByAlternatives'. ([6a1842e](https://github.com/about-code/glossarify-md/commit/6a1842ec56e73f347bbfca2d07dd43f307fb3c0f))
+* Escaping of link labels (particularly if link label is an URL). ([e5074a8](https://github.com/about-code/glossarify-md/commit/e5074a8cb3f9f7d6b8a30c31a3e6b0a848ffb590))
+* Linker sometimes adds '...' when there are no alternative definitions (Closes [#148](https://github.com/about-code/glossarify-md/issues/148)) ([24f26c0](https://github.com/about-code/glossarify-md/commit/24f26c031ed6d7feaf563388bdcc66ded2faeecb))
+
+
+### Documentation Updates
+
+* New config docs in conf/v5/doc directly generated from JSON Schema. ([06a629b](https://github.com/about-code/glossarify-md/commit/06a629bc5f9b6db349622b9df5720e86645ebc99))
+* fix schema opts ([3d1d6fd](https://github.com/about-code/glossarify-md/commit/3d1d6fda0146e2ebf8e0ef4eff41b0bfc59af0e9))
+* Rename unified addendum into Conceptual Layers ([444af60](https://github.com/about-code/glossarify-md/commit/444af60f1ed5177f49c541c1af9cab86f0dce325))
+
 ## [5.0.0](https://github.com/about-code/glossarify-md/compare/v5.0.0-beta.0...v5.0.0) (2020-12-31)
 
 
