@@ -1,13 +1,13 @@
-# Development Properties
+# dev Properties
 
-| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                |
-| :-------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [printInputAst](#printinputast)         | Multiple  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-printinputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/printInputAst")         |
-| [printOutputAst](#printoutputast)       | Multiple  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-printoutputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/printOutputAst")       |
-| [reportsFile](#reportsfile)             | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-reportsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/reportsFile")             |
-| [reproducablePaths](#reproducablepaths) | `boolean` | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-reproducablepaths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/reproducablePaths") |
-| [termsFile](#termsfile)                 | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-termsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/termsFile")                 |
-| [effectiveConfFile](#effectiveconffile) | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-dev-properties-effectiveconffile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/effectiveConfFile") |
+| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                              |
+| :-------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [printInputAst](#printinputast)         | Multiple  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-printinputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/printInputAst")         |
+| [printOutputAst](#printoutputast)       | Multiple  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-printoutputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/printOutputAst")       |
+| [reportsFile](#reportsfile)             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-reportsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/reportsFile")             |
+| [reproducablePaths](#reproducablepaths) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-reproducablepaths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/reproducablePaths") |
+| [termsFile](#termsfile)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-termsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/termsFile")                 |
+| [effectiveConfFile](#effectiveconffile) | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-effectiveconffile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/effectiveConfFile") |
 
 ## printInputAst
 
@@ -17,7 +17,7 @@ Print the AST of scanned markdown documents prior to linkification. May be a Reg
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-printinputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/printInputAst")
+*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
 
 ## printOutputAst
 
@@ -27,7 +27,7 @@ Print the AST of scanned markdown documents after linkification. May be a Regex 
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-printoutputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/printOutputAst")
+*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
 
 ## reportsFile
 
@@ -37,7 +37,7 @@ File where to write console report output. Enables testing the report output gen
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-reportsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/reportsFile")
+*   Type: `string`
 
 ## reproducablePaths
 
@@ -47,7 +47,7 @@ Write system-independent paths into 'termsFile' to produce reproducable output a
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-reproducablepaths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/reproducablePaths")
+*   Type: `boolean`
 
 ## termsFile
 
@@ -57,7 +57,7 @@ File where to write term book to. Enables testing the term extraction results of
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-termsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/termsFile")
+*   Type: `string`
 
 ## effectiveConfFile
 
@@ -67,4 +67,4 @@ File where to write the configuration that is applied effectively after merging 
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-dev-properties-effectiveconffile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Development/properties/effectiveConfFile")
+*   Type: `string`

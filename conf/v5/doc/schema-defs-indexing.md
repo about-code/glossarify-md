@@ -1,9 +1,9 @@
-# Indexing Properties
+# indexing Properties
 
-| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                      |
-| :------------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [groupByHeadingDepth](#groupbyheadingdepth) | `integer` | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-indexing-properties-groupbyheadingdepth.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Indexing/properties/groupByHeadingDepth") |
-| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-indexing-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Indexing/properties/headingDepths")             |
+| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                            |
+| :------------------------------------------ | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [groupByHeadingDepth](#groupbyheadingdepth) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-groupbyheadingdepth.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing/properties/groupByHeadingDepth") |
+| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing/properties/headingDepths")             |
 
 ## groupByHeadingDepth
 
@@ -13,7 +13,7 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-indexing-properties-groupbyheadingdepth.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Indexing/properties/groupByHeadingDepth")
+*   Type: `integer`
 
 ### groupByHeadingDepth Constraints
 
@@ -30,4 +30,4 @@ The relation to 'linking.headingDepths' is that *this* is about "knowing the lin
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-indexing-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Indexing/properties/headingDepths")
+*   Type: `integer[]`

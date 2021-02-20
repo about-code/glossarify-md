@@ -20,13 +20,13 @@ The default value is:
 
 # linking Properties
 
-| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                    |
-| :------------------------------------------ | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [baseUrl](#baseurl)                         | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/baseUrl")                         |
-| [paths](#paths)                             | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/paths")                             |
-| [mentions](#mentions)                       | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/mentions")                       |
-| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/headingDepths")             |
-| [limitByAlternatives](#limitbyalternatives) | `integer` | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/limitByAlternatives") |
+| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                          |
+| :------------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [baseUrl](#baseurl)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/baseUrl")                         |
+| [paths](#paths)                             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/paths")                             |
+| [mentions](#mentions)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/mentions")                       |
+| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/headingDepths")             |
+| [limitByAlternatives](#limitbyalternatives) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/limitByAlternatives") |
 
 ## baseUrl
 
@@ -36,7 +36,7 @@ The base url to use when creating absolute links to glossary.
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/baseUrl")
+*   Type: `string`
 
 ### baseUrl Constraints
 
@@ -50,7 +50,7 @@ Control how paths to linked documents will be constructed. Choosing "absolute" r
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/paths")
+*   Type: `string`
 
 ### paths Constraints
 
@@ -69,7 +69,7 @@ Control the link density and whether every occurrence of a term in your document
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/mentions")
+*   Type: `string`
 
 ### mentions Constraints
 
@@ -88,7 +88,7 @@ An array of numerical values each in a range of 1-6 denoting the depths of headi
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/headingDepths")
+*   Type: `integer[]`
 
 ## limitByAlternatives
 
@@ -102,4 +102,4 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Linking/properties/limitByAlternatives")
+*   Type: `integer`

@@ -10,15 +10,15 @@ The default value is:
 
 # i18n Properties
 
-| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                                          |
-| :-------------------------------------- | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseFirst](#casefirst)                 | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-casefirst.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/caseFirst")                 |
-| [ignorePunctuation](#ignorepunctuation) | `boolean` | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-ignorepunctuation.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/ignorePunctuation") |
-| [locale](#locale)                       | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-locale.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/locale")                       |
-| [localeMatcher](#localematcher)         | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-localematcher.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/localeMatcher")         |
-| [numeric](#numeric)                     | `boolean` | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-numeric.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/numeric")                     |
-| [sensitivity](#sensitivity)             | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-sensitivity.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/sensitivity")             |
-| [usage](#usage)                         | `string`  | Optional | cannot be null | [glossarify-md.conf.json Schema](schema-defs-i18n-properties-usage.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/usage")                         |
+| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                |
+| :-------------------------------------- | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [caseFirst](#casefirst)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-casefirst.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/caseFirst")                 |
+| [ignorePunctuation](#ignorepunctuation) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-ignorepunctuation.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/ignorePunctuation") |
+| [locale](#locale)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-locale.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/locale")                       |
+| [localeMatcher](#localematcher)         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-localematcher.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/localeMatcher")         |
+| [numeric](#numeric)                     | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-numeric.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/numeric")                     |
+| [sensitivity](#sensitivity)             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-sensitivity.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/sensitivity")             |
+| [usage](#usage)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-usage.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/usage")                         |
 
 ## caseFirst
 
@@ -28,7 +28,7 @@ Whether upper case or lower case should sort first. Default: 'false' (Use locale
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-casefirst.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/caseFirst")
+*   Type: `string`
 
 ### caseFirst Constraints
 
@@ -48,7 +48,7 @@ Whether punctuation should be ignored. Default: false. See <https://developer.mo
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-ignorepunctuation.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/ignorePunctuation")
+*   Type: `boolean`
 
 ## locale
 
@@ -58,7 +58,7 @@ The locale to use for operations such as sorting. See <https://developer.mozilla
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-locale.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/locale")
+*   Type: `string`
 
 ## localeMatcher
 
@@ -68,7 +68,7 @@ The locale matching algorithm to use. Default: 'best fit'. See <https://develope
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-localematcher.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/localeMatcher")
+*   Type: `string`
 
 ### localeMatcher Constraints
 
@@ -87,7 +87,7 @@ Whether to use numeric collation. Default: false. See <https://developer.mozilla
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-numeric.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/numeric")
+*   Type: `boolean`
 
 ## sensitivity
 
@@ -97,7 +97,7 @@ Which differences in the strings should lead to non-zero result values. Default:
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-sensitivity.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/sensitivity")
+*   Type: `string`
 
 ### sensitivity Constraints
 
@@ -118,7 +118,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 
 *   is optional
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-i18n-properties-usage.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/Internationalization/properties/usage")
+*   Type: `string`
 
 ### usage Constraints
 

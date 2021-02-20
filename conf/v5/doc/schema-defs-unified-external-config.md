@@ -1,8 +1,8 @@
 # UnifiedExternalConfig Properties
 
-| Property          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                                        |
-| :---------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [rcPath](#rcpath) | `string` | Required | cannot be null | [glossarify-md.conf.json Schema](schema-defs-unified-external-config-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig/properties/rcPath") |
+| Property          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                              |
+| :---------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [rcPath](#rcpath) | `string` | Required | cannot be null | [Configuration Schema](schema-defs-unified-external-config-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig/properties/rcPath") |
 
 ## rcPath
 
@@ -12,4 +12,4 @@ Path to an external 'unified' configuration file as documented under <https://gi
 
 *   is required
 
-*   defined in: [glossarify-md.conf.json Schema](schema-defs-unified-external-config-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig/properties/rcPath")
+*   Type: `string`
