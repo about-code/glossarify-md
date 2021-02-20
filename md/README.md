@@ -729,6 +729,19 @@ Path to directory where to search for the glossary and markdown files. All paths
 Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
 want to ignore certain markdown files from being modified.
 
+#### `generateFiles`
+
+- **Range:** `Object`
+~~~
+{
+  indexFile: {},
+  listOf: [],
+  listOfFigures: {},
+  listOfTables: {},
+}`
+
+~~~
+
 #### `generateFiles.indexFile`
 
 - **Range:** `{file: string, [title: string]}`
@@ -781,9 +794,20 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 Paths or Glob-Patterns for files to include.
 
+#### `indexing`
+
+- **Range:** `Object`
+~~~
+{
+  headingDepths: number[],
+  groupByHeadingDepth: number,
+}
+~~~
+
 #### `indexing.groupByHeadingDepth`
 
 - **Range:** `number` in [1-6]
+- **Default:** 6
 - **Since:** v3.4.0
 
 This option affects outputs generated with `generateFiles`. By default when
@@ -795,9 +819,10 @@ an Index to only list the chapter or higher-level sections where some term or
 element has been found in. This option allows to set the depth by which
 elements shall be grouped where `1` refers to chapters (`#` headings).
 
-#### `indexing.headingDepth`
+#### `indexing.headingDepths`
 
 - **Range:** `number[]` in 1-6
+- **Default:** `[1,2,3,4,5,6]`
 - **Since:** v5.0.0
 
 An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually. Default is `[1,2,3,4,5,6]`.
@@ -806,9 +831,18 @@ The relation to [`linking.headingDepths`](#linkingheadingdepths) is that *this* 
 
 #### `i18n`
 
-- **Range**:` { locale: string, [localeMatcher: string],
-    [caseFirst: string], [ignorePunctuation: boolean],
-    [numeric: boolean], [sensitivity: string], [usage: string] }`
+- **Range**: `Object`
+~~~
+{
+  locale: string,
+  [localeMatcher: string],
+  [caseFirst: string],
+  [ignorePunctuation: boolean],
+  [numeric: boolean],
+  [sensitivity: string],
+  [usage: string]
+}`
+~~~
 
 Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
@@ -820,29 +854,41 @@ Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
 glossarification and linking. Non-markdown files will always be kept as is so no
 need to add those.
 
-#### `linking.paths`
+#### `linking`
 
-[opt-linking]: #linkingpaths
+- **Range:** `Object`
 
-- **Range:** `"relative" | "absolute"`
-
-Whether to create absolute or relative link-urls to the glossary.
-The use of `"absolute"` may require a `linking.baseUrl`.
-
-> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+~~~
+{
+  baseUrl: string,
+  paths: "relative" | "absolute",
+  mentions: "all" | "first-in-paragraph",
+  headingDepths: number[],
+  limitByAlternatives: number
+}
+~~~
 
 #### `linking.baseUrl`
 
 - **Range:** `string`
 
-URL to prepend to links. Only effective with `linking.paths: "absolute"`.
-In most situations, e.g. when hosting markdown files in a repository or
-processing markdown files with an MD to HTML converter omitting a pre-defined
-`baseUrl` and using `linking.paths: "relative"` is likely to work better.
+URL to prepend to links. Only effective with `linking.paths: "absolute"`. In most situations, e.g. when hosting markdown files in a repository or processing markdown files with an HTML converter omitting a pre-defined `baseUrl` and using `linking.paths: "relative"` is likely to work better.
+
+#### `linking.paths`
+
+[opt-linking]: #linkingpaths
+
+- **Range:** `"relative" | "absolute"`
+- **Default:** `"relative"`
+
+Whether to create absolute or relative link-urls to the glossary.
+
+> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
 
 #### `linking.mentions`
 
 - **Range:** `"all" | "first-in-paragraph"`
+- **Default:** `"all"`
 - **Since:** v5.0.0
 
 By default every mention of a term will be linkified. Sometimes this can
@@ -852,21 +898,24 @@ control of linkify behavior.
 #### `linking.headingDepths`
 
 - **Range:** `number[]` in 1-6
+- **Default:** `[2,3,4,5,6]`
 - **Since:** v5.0.0
 
-Use this option to select markdown heading depths which should be considered for
-searching and linking. E.g. to only consider headings `## text` (depth 2) or
-`### text` (depth 3) but not `#### text` (depth 4) provide an array `[2,3]`.
-Default is `[2,3,4,5,6]`.
+Use this option to select markdown heading depths which should be considered terms or sections for cross-linking. For example, to only consider headings `## text` at depth 2 or `### text` at depth 3 but not at depths 1 and 4-6 provide an array `[2,3]`
 
-In case you have modified [`indexing.headingDepths`](#indexingheadingdepths), be aware that this option only makes sense if it is a *full subset* of the items in [`indexing.headingDepths`](#indexingheadingdepths).
+> **Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `linking.limitByAlternatives`
 
 - **Range:** `number[]` in -95 - +95
+- **Default:** 95
 - **Since:** v5.0.0
 
-If there are multiple definitions of a term or heading then this option can be used to limit the number of links to alternative definitions. When using a positive value, then the system creates links to alternative definitions *but no more than...*. If the number is negative then the numerical amount indicates to *not create a term-link at all once there are more than...* definitions of a term. This option may be helpful in certain cases where terms appear to have many alternative definitions but just because they are headings of pages that follow a certain page template and thus are repeatedly "defined".
+Control how a term occurrence is linkified if there are *multiple  definitions* of a term:
+
+- **positive value**: the system *creates links to alternative definitions but no more than `x` links*.
+- **negative value**: the system does *not create a term-link at all once there are more than `x` alternative definitions* of a term or heading.
+- **zero**: create a link but to a single out of all definitions, only
 
 #### `outDir`
 
