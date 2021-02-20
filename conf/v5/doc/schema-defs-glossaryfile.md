@@ -1,4 +1,4 @@
-# glossariesItem Properties
+# glossaryFile Properties
 
 
 
