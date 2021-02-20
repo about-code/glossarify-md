@@ -656,7 +656,9 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for it our Markdown parser ([remark]) will recognise the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that they contribute to syntax for a *frontmatter* we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
+Without special support for it our Markdown parser ([remark]) will interpret the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that they contribute to syntax for a *frontmatter* we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
+
+> **Note:** glossarify-md must not be held responsible for issues arising due to installing and using additional plug-ins.
 
 *Add this to your glossarify-md.conf.json*
 
@@ -687,18 +689,17 @@ and make remark load the plug-in by adding to your *remark.conf.json*:
 }
 ```
 
-> **Note:** glossarify-md must not be held responsible for issues arising due to installing and using additional plug-ins.
-
 `remark.conf.json` follows the [unified configuration][unified-config] schema:
 
 - `remark-frontmatter` must be the name of the npm package you installed before.
 - Any properties of the object are specific to the plug-in.
 
-The configuration could also be embedded into a *glossarify-md.conf.json*. But keep in mind that anything under the `unified` key is a [unified configuration][unified-config] whose schema is *not* subject to the [glossarify-md] config schema.
+You could also embed the configuration in a *glossarify-md.conf.json*. But keep in mind that anything under the `unified` key is a different schema and *not* subject to the [glossarify-md] config schema.
 
-> **[unified], [remark], uhh..**
+> **[remark], [unified], uhh... ?**
 >
 > Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
+
 
 
 ## Node Support Matrix
