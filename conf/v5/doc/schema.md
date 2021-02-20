@@ -268,10 +268,10 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 
 ## unified
 
-Extended 'unified' and 'remark' configuration as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
-You may want to provide such a configuration for loading 'remark' plug-ins you've installed yourself. You likely require such plug-ins if your input files use third-party syntax which is not covered by the CommonMark specification. glossarify-md only supports CommonMark, GitHub Flavoured Markdown (GFM) and Footnotes by default. For additional remark plug-ins see <https://github.com/remarkjs/awesome-remark>
+Extended *unified* and *remark* configuration as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
+You may want to provide such a configuration for loading *remark* plug-ins you've installed yourself. You likely require such plug-ins if your input files use third-party syntax which is not covered by the CommonMark specification. glossarify-md only supports CommonMark, GitHub Flavoured Markdown (GFM) and Footnotes by default. For additional remark plug-ins see <https://github.com/remarkjs/awesome-remark>
 Note that this configuration is not to be considered part of glossarify-md's own configuration interface! glossarify-md can not be held responsible for issues arising from loading additional plug-ins.
-If you like to keep 'unified' configuration separate use e.g. '{ "unified": { "rcPath": "../unified.conf.json"}} to load a unified configuration from an external file.
+If you like to keep *unified* configuration separate use e.g. '{ "unified": { "rcPath": "../unified.conf.json"}} to load a unified configuration from an external file.
 
 `unified`
 
@@ -700,7 +700,7 @@ Reference this group by using
 
 ### rcPath
 
-Path to an external 'unified' configuration file as documented under <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>. See description of 'unified' property why you may want such a configuration.
+Path to an external *unified* configuration file as documented under <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>. See description of *unified* property why you may want such a configuration.
 
 `rcPath`
 
@@ -720,9 +720,9 @@ Reference this group by using
 
 ### plugins
 
-Object or array with names of 'unified' and 'remark' plug-ins and plug-in settings as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
+Object or array with names of *unified* and *remark* plug-ins and plug-in settings as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
 Note that this configuration is not to be considered part of glossarify-md's own configuration interface!
-If you like to keep 'unified' configuration separate use 'rcPath' to load a unified configuration from an external file.
+If you like to keep *unified* configuration separate use 'rcPath' to load a unified configuration from an external file.
 
 `plugins`
 

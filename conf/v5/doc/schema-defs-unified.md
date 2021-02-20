@@ -4,9 +4,9 @@
 
 ## plugins
 
-Object or array with names of 'unified' and 'remark' plug-ins and plug-in settings as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
+Object or array with names of *unified* and *remark* plug-ins and plug-in settings as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>
 Note that this configuration is not to be considered part of glossarify-md's own configuration interface!
-If you like to keep 'unified' configuration separate use 'rcPath' to load a unified configuration from an external file.
+If you like to keep *unified* configuration separate use 'rcPath' to load a unified configuration from an external file.
 
 `plugins`
 
