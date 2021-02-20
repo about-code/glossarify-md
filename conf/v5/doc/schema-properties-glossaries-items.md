@@ -1,10 +1,6 @@
 # items Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                  |
-| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [file](#file)         | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/file")         |
-| [termHint](#termhint) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-termhint.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/termHint") |
-| [sort](#sort)         | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-sort.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/sort")         |
+
 
 ## file
 

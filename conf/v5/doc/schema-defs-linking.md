@@ -1,12 +1,6 @@
 # linking Properties
 
-| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                          |
-| :------------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [baseUrl](#baseurl)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/baseUrl")                         |
-| [paths](#paths)                             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/paths")                             |
-| [mentions](#mentions)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/mentions")                       |
-| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/headingDepths")             |
-| [limitByAlternatives](#limitbyalternatives) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/limitByAlternatives") |
+
 
 ## baseUrl
 

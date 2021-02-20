@@ -1,8 +1,6 @@
 # 1 Properties
 
-| Property          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                              |
-| :---------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [rcPath](#rcpath) | `string` | Required | cannot be null | [Configuration Schema](schema-defs-unified-external-config-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig/properties/rcPath") |
+
 
 ## rcPath
 

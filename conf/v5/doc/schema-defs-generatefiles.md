@@ -1,11 +1,6 @@
 # generateFiles Properties
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                            |
-| :------------------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [indexFile](#indexfile)         | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/indexFile")                    |
-| [listOf](#listof)               | `array`  | Optional | cannot be null | [Configuration Schema](schema-defs-generatefiles-properties-listof.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOf") |
-| [listOfFigures](#listoffigures) | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOfFigures")                |
-| [listOfTables](#listoftables)   | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOfTables")                 |
+
 
 ## indexFile
 

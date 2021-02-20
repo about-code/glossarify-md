@@ -1,4 +1,4 @@
-# indexFile Properties
+# listOfFigures Properties
 
 
 

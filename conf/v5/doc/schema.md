@@ -1,23 +1,6 @@
 # Configuration Schema Properties
 
-| Property                                  | Type      | Required | Nullable       | Defined by                                                                                                                                                                             |
-| :---------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [baseDir](#basedir)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-properties-basedir.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/baseDir")                       |
-| [excludeFiles](#excludefiles)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-properties-excludefiles.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/excludeFiles")             |
-| [force](#force)                           | `boolean` | Optional | cannot be null | [Configuration Schema](schema-properties-force.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/force")                           |
-| [generateFiles](#generatefiles)           | `object`  | Optional | cannot be null | [Configuration Schema](schema-properties-generatefiles.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/generateFiles")           |
-| [glossaries](#glossaries)                 | `array`   | Optional | cannot be null | [Configuration Schema](schema-properties-glossaries.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/glossaries")                 |
-| [ignoreCase](#ignorecase)                 | `boolean` | Optional | cannot be null | [Configuration Schema](schema-properties-ignorecase.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/ignoreCase")                 |
-| [includeFiles](#includefiles)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-properties-includefiles.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/includeFiles")             |
-| [indexing](#indexing)                     | `object`  | Optional | cannot be null | [Configuration Schema](schema-properties-indexing.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/indexing")                     |
-| [i18n](#i18n)                             | `object`  | Optional | cannot be null | [Configuration Schema](schema-properties-i18n.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/i18n")                             |
-| [keepRawFiles](#keeprawfiles)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-properties-keeprawfiles.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/keepRawFiles")             |
-| [linking](#linking)                       | `object`  | Optional | cannot be null | [Configuration Schema](schema-properties-linking.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/linking")                       |
-| [outDir](#outdir)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-properties-outdir.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/outDir")                         |
-| [outDirDropOld](#outdirdropold)           | `boolean` | Optional | cannot be null | [Configuration Schema](schema-properties-outdirdropold.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/outDirDropOld")           |
-| [reportNotMentioned](#reportnotmentioned) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-properties-reportnotmentioned.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/reportNotMentioned") |
-| [unified](#unified)                       | Merged    | Optional | cannot be null | [Configuration Schema](schema-properties-unified.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/unified")                       |
-| [dev](#dev)                               | `object`  | Optional | cannot be null | [Configuration Schema](schema-properties-dev.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/properties/dev")                               |
+
 
 ## baseDir
 
@@ -332,12 +315,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
-| Property                        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                          |
-| :------------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [indexFile](#indexfile)         | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-generatefiles-properties-indexfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/indexFile")         |
-| [listOf](#listof)               | `array`  | Optional | cannot be null | [Configuration Schema](schema-defs-generatefiles-properties-listof.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOf")               |
-| [listOfFigures](#listoffigures) | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-generatefiles-properties-listoffigures.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOfFigures") |
-| [listOfTables](#listoftables)   | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-generatefiles-properties-listoftables.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles/properties/listOfTables")   |
+
 
 ### indexFile
 
@@ -387,11 +365,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem"}
 ```
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                  |
-| :-------------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [file](#file)         | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/file")         |
-| [termHint](#termhint) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-termhint.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/termHint") |
-| [sort](#sort)         | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossariesitem-properties-sort.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem/properties/sort")         |
+
 
 ### file
 
@@ -440,11 +414,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
-| Property        | Type     | Required | Nullable       | Defined by                                                                                                                                                                                  |
-| :-------------- | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [file](#file-1) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexFile/properties/file")   |
-| [class](#class) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-class.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexFile/properties/class") |
-| [title](#title) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-title.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexFile/properties/title") |
+
 
 ### file
 
@@ -484,10 +454,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing"}
 ```
 
-| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                            |
-| :------------------------------------------ | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [groupByHeadingDepth](#groupbyheadingdepth) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-groupbyheadingdepth.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing/properties/groupByHeadingDepth") |
-| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing/properties/headingDepths")             |
+
 
 ### groupByHeadingDepth
 
@@ -524,15 +491,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n"}
 ```
 
-| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                |
-| :-------------------------------------- | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseFirst](#casefirst)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-casefirst.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/caseFirst")                 |
-| [ignorePunctuation](#ignorepunctuation) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-ignorepunctuation.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/ignorePunctuation") |
-| [locale](#locale)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-locale.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/locale")                       |
-| [localeMatcher](#localematcher)         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-localematcher.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/localeMatcher")         |
-| [numeric](#numeric)                     | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-numeric.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/numeric")                     |
-| [sensitivity](#sensitivity)             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-sensitivity.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/sensitivity")             |
-| [usage](#usage)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-usage.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/usage")                         |
+
 
 ### caseFirst
 
@@ -651,13 +610,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking"}
 ```
 
-| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                          |
-| :------------------------------------------ | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [baseUrl](#baseurl)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/baseUrl")                         |
-| [paths](#paths)                             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/paths")                             |
-| [mentions](#mentions)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/mentions")                       |
-| [headingDepths](#headingdepths-1)           | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/headingDepths")             |
-| [limitByAlternatives](#limitbyalternatives) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking/properties/limitByAlternatives") |
+
 
 ### baseUrl
 
@@ -743,9 +696,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig"}
 ```
 
-| Property          | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                              |
-| :---------------- | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [rcPath](#rcpath) | `string` | Required | cannot be null | [Configuration Schema](schema-defs-unified-external-config-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig/properties/rcPath") |
+
 
 ### rcPath
 
@@ -765,10 +716,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified"}
 ```
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                    |
-| :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [plugins](#plugins)   | Merged   | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-plugins.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified/properties/plugins")   |
-| [settings](#settings) | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-settings.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified/properties/settings") |
+
 
 ### plugins
 
@@ -800,14 +748,7 @@ Reference this group by using
 {"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev"}
 ```
 
-| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                              |
-| :-------------------------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [printInputAst](#printinputast)         | Multiple  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-printinputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/printInputAst")         |
-| [printOutputAst](#printoutputast)       | Multiple  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-printoutputast.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/printOutputAst")       |
-| [reportsFile](#reportsfile)             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-reportsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/reportsFile")             |
-| [reproducablePaths](#reproducablepaths) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-reproducablepaths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/reproducablePaths") |
-| [termsFile](#termsfile)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-termsfile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/termsFile")                 |
-| [effectiveConfFile](#effectiveconffile) | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-dev-properties-effectiveconffile.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev/properties/effectiveConfFile") |
+
 
 ### printInputAst
 

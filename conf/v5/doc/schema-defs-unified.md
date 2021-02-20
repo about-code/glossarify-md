@@ -1,9 +1,6 @@
 # unified Properties
 
-| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                    |
-| :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [plugins](#plugins)   | Merged   | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-plugins.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified/properties/plugins")   |
-| [settings](#settings) | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-settings.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified/properties/settings") |
+
 
 ## plugins
 

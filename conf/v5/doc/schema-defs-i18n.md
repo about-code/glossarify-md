@@ -1,14 +1,6 @@
 # i18n Properties
 
-| Property                                | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                |
-| :-------------------------------------- | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [caseFirst](#casefirst)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-casefirst.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/caseFirst")                 |
-| [ignorePunctuation](#ignorepunctuation) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-ignorepunctuation.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/ignorePunctuation") |
-| [locale](#locale)                       | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-locale.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/locale")                       |
-| [localeMatcher](#localematcher)         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-localematcher.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/localeMatcher")         |
-| [numeric](#numeric)                     | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-numeric.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/numeric")                     |
-| [sensitivity](#sensitivity)             | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-sensitivity.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/sensitivity")             |
-| [usage](#usage)                         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-i18n-properties-usage.md "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n/properties/usage")                         |
+
 
 ## caseFirst
 
