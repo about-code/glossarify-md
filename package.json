@@ -25,35 +25,38 @@
     "glossarify-md": "bin/index.js"
   },
   "scripts": {
+    "changelog": "standard-version --dry-run",
     "config": "node ./bin/index.js --config",
     "dconfig": "node --inspect-brk ./bin/index.js --config",
     "debug": "node --inspect-brk ./bin/index.js --config ./debug/glossarify-md.conf.json",
     "debug-config": "npm run dconfig",
+    "docs": "npm-run-all docs-*",
+    "docs-doc": "node ./bin/index.js --config ./glossarify-md.conf.json",
+    "docs-schema": "jsonschema2md -n -d ./conf/v5 -e json -o ./conf/v5/doc -x - -h=false -s typefact -s nullablefact -s typesection",
+    "docs-repo": "remark md/README.md > README.md && remark md/CONTRIBUTING.md > CONTRIBUTING.md",
     "fix": "eslint . --fix",
     "linter": "eslint .",
+    "prepare-release": "npm run docs && npm run changelog",
     "pretest": "eslint .",
     "pretest-win": "eslint .",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
     "release-alpha": "standard-version --prerelease alpha",
     "release-beta": "standard-version --prerelease beta",
-    "release-dry": "standard-version --dry-run",
-    "release-stable": "standard-version",
-    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json",
-    "docs": "node ./bin/index.js --config ./glossarify-md.conf.json",
-    "postdocs": "remark md/README.md > README.md && remark md/CONTRIBUTING.md > CONTRIBUTING.md"
+    "release": "standard-version",
+    "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^9.1.0",
     "github-slugger": "^1.0.0",
     "glob": "^7.0.3",
     "inquirer": "^7.3.3",
     "mdast-builder": "^1.1.1",
-    "mdast-util-to-markdown": "^0.6.2",
+    "mdast-util-to-markdown": "^0.6.5",
     "mdast-util-to-string": "^2.0.0",
     "mdast-util-wiki-link": "0.0.1",
-    "micromark-extension-wiki-link": "0.0.2",
+    "micromark-extension-wiki-link": "0.0.4",
     "minimist": "^1.2.5",
     "remark-autolink-headings": "^6.0.1",
     "remark-footnotes": "^3.0.0",
@@ -69,12 +72,14 @@
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
-    "eslint": "^7.15.0",
+    "@adobe/jsonschema2md": "^5.0.2",
+    "eslint": "^7.20.0",
+    "npm-run-all": "^4.1.5",
     "remark-cli": "^9.0.0",
     "remark-comment-config": "^6.0.0",
     "remark-license": "^5.1.0",
-    "remark-toc": "^7.0.0",
-    "standard-version": "^9.0.0"
+    "remark-toc": "^7.1.0",
+    "standard-version": "^9.1.1"
   },
   "remarkConfig": {
     "settings": {
