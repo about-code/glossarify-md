@@ -34,7 +34,7 @@
             "description": "An array of glossaries. Allows for different kinds of glossaries and definitions."
             ,"type": "array"
             ,"items": {
-                "$ref": "#/$defs/glossariesItem"
+                "$ref": "#/$defs/glossaryFile"
             }
             ,"default": [
                 { "file": "./glossary.md", "termHint": ""}
@@ -144,7 +144,7 @@
                 }
             }
         }
-        ,"glossariesItem": {
+        ,"glossaryFile": {
             "type": "object"
             ,"properties": {
                 "file": {

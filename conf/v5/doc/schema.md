@@ -357,12 +357,12 @@ Generate a file with a list of tables and where they can be found.
 
 *   Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
 
-## Definitions group glossariesItem
+## Definitions group glossaryFile
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossariesItem"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
