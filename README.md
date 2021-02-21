@@ -526,7 +526,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 This paragraph can be navigated to from a list item 'Foo'.
 ```
 
-> **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md]).
+> **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
 
 <!--
 **Link label extraction**
