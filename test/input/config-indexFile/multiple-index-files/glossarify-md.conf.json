@@ -1,0 +1,34 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "indexFiles": [
+      {
+        "title": "Index A", "file": "./index-a.md", "glossary": "./glossary-a.md"
+      },
+      {
+        "title": "Index B", "file": "./index-b.md", "glossary": "./glossary-b.md"
+      }
+    ]
+  },
+  "glossaries": [
+    {
+      "file": "./glossary-*.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-indexFile/multiple-index-files",
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
+}
