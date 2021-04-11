@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#"
-    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json"
+    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json"
     ,"type": "object"
     ,"title": "Configuration Schema"
     ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
@@ -125,22 +125,29 @@
                     ,"type": "object"
                     ,"$ref": "#/$defs/indexFile"
                 }
-                ,"listOf": {
-                    "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors `<a class='listing' title='My Sample 1' id='sample-1'/>` before your sample code blocks."
+                ,"indexFiles": {
+                    "description": "An Array to generate multiple distinct index documents from particular glossaries."
                     ,"type": "array"
                     ,"items": {
                         "$ref": "#/$defs/indexFile"
                     }
                 }
+                ,"listOf": {
+                    "description": "Generate an arbitrary list of links into your documents. For example, to generate a List of code samples configure a class 'listing' and add anchors `<a class='listing' title='My Sample 1' id='sample-1'/>` before your sample code blocks."
+                    ,"type": "array"
+                    ,"items": {
+                        "$ref": "#/$defs/listOfItemsFile"
+                    }
+                }
                 ,"listOfFigures": {
                     "description": "Generate a file with a list of figures and where they can be found."
                     ,"type": "object"
-                    ,"$ref": "#/$defs/indexFile"
+                    ,"$ref": "#/$defs/listOfItemsFile"
                 }
                 ,"listOfTables": {
                     "description": "Generate a file with a list of tables and where they can be found."
                     ,"type": "object"
-                    ,"$ref": "#/$defs/indexFile"
+                    ,"$ref": "#/$defs/listOfItemsFile"
                 }
             }
         }
@@ -177,6 +184,10 @@
                     "description": "The page title for the index file. If missing the application uses a default value."
                     ,"type": "string"
                 }
+                ,"glossary": {
+                    "description": "Path to a particular glossary file with terms to restrict the index document to. Only affects Index generation with 'indexFiles' property. Since v5.1.0."
+                    ,"type": "string"
+                }
             }
         }
         ,"indexing": {
@@ -196,6 +207,23 @@
                         ,"minimum": 1
                         ,"maximum": 6
                     }
+                }
+            }
+        }
+        ,"listOfItemsFile": {
+            "type": "object"
+            ,"properties": {
+                "file":  {
+                    "description": "Path relative to 'outDir' where to create the index markdown file."
+                    ,"type": "string"
+                }
+                ,"class": {
+                    "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list."
+                    ,"type": "string"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
+                    ,"type": "string"
                 }
             }
         }
