@@ -126,7 +126,7 @@
                     ,"$ref": "#/$defs/indexFile"
                 }
                 ,"indexFiles": {
-                    "description": "An Array to generate multiple distinct index documents from particular glossaries."
+                    "description": "Similar to 'indexFile' but allows you to split terms from multiple glossaries into distinct book indexes. Useful if you have multiple 'glossaries' or when you're using the 'glossaries' option with a file glob. In the latter case it helps you to restrict which terms should become part of the book index."
                     ,"type": "array"
                     ,"items": {
                         "$ref": "#/$defs/indexFile"

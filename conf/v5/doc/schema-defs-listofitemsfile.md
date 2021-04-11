@@ -1,4 +1,4 @@
-# indexFile Properties
+# listOfItemsFile Properties
 
 
 
@@ -27,16 +27,6 @@ The class is used to compile lists of content elements. Elements with a common c
 The page title for the index file. If missing the application uses a default value.
 
 `title`
-
-*   is optional
-
-*   Type: `string`
-
-## glossary
-
-Path to a particular glossary file with terms to restrict the index document to. Only affects Index generation with 'indexFiles' property. Since v5.1.0.
-
-`glossary`
 
 *   is optional
 

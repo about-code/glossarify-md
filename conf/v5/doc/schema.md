@@ -312,7 +312,7 @@ The default value is:
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/generateFiles"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
 
@@ -326,6 +326,16 @@ Generate a file with a list of glossary terms and where they have been used.
 *   is optional
 
 *   Type: `object` ([Details](schema-defs-generatefiles-properties-indexfile.md))
+
+### indexFiles
+
+Similar to 'indexFile' but allows you to split terms from multiple glossaries into distinct book indexes. Useful if you have multiple 'glossaries' or when you're using the 'glossaries' option with a file glob. In the latter case it helps you to restrict which terms should become part of the book index.
+
+`indexFiles`
+
+*   is optional
+
+*   Type: `object[]` ([Details](schema-defs-generatefiles-properties-indexfiles-items.md))
 
 ### listOf
 
@@ -362,7 +372,7 @@ Generate a file with a list of tables and where they can be found.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/glossaryFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
@@ -411,7 +421,7 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
 
@@ -446,12 +456,22 @@ The page title for the index file. If missing the application uses a default val
 
 *   Type: `string`
 
+### glossary
+
+Path to a particular glossary file with terms to restrict the index document to. Only affects Index generation with 'indexFiles' property. Since v5.1.0.
+
+`glossary`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group indexing
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/indexing"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/indexing"}
 ```
 
 
@@ -483,12 +503,52 @@ The relation to 'linking.headingDepths' is that *this* is about "knowing the lin
 
 *   Type: `integer[]`
 
+## Definitions group listOfItemsFile
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/listOfItemsFile"}
+```
+
+
+
+### file
+
+Path relative to 'outDir' where to create the index markdown file.
+
+`file`
+
+*   is optional
+
+*   Type: `string`
+
+### class
+
+The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list.
+
+`class`
+
+*   is optional
+
+*   Type: `string`
+
+### title
+
+The page title for the index file. If missing the application uses a default value.
+
+`title`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group i18n
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/i18n"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/i18n"}
 ```
 
 
@@ -607,7 +667,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/linking"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/linking"}
 ```
 
 
@@ -693,7 +753,7 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig"}
 ```
 
 
@@ -713,7 +773,7 @@ Path to an external *unified* configuration file as documented under <https://gi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/unified"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -745,7 +805,7 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json#/$defs/dev"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/dev"}
 ```
 
 
