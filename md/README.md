@@ -74,7 +74,7 @@ npx glossarify-md --init > glossarify-md.conf.json
 *glossarify-md.conf.json (minimal)*
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json",
+  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json",
   "baseDir": "./docs",
   "outDir": "../docs-glossarified"
 }
