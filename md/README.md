@@ -762,28 +762,35 @@ want to ignore certain markdown files from being modified.
 - **Range:** `{file: string, [title: string]}`
 - **Since:** v3.0.0
 
-Generates an index of glossary terms with links to files in which they have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#index-of-terms-and-where-they-have-been-used) for a configuration example.
+Generates an index of glossary terms with links to files in which they have been mentioned.
+
+#### `generateFiles.indexFiles`
+
+- **Range:** `Array<{file: string, glossary: string, [title: string]}>`
+- **Since:** v3.0.0
+
+Similar to `indexFile` but allows for generating an index per glossary.
 
 #### `generateFiles.listOf`
 
 - **Range:** `Array<{class: string, file: string, [title: string]}>`
 - **Since:** v3.5.0
 
-If available, generates a list from HTML anchors exposing the configured `class` attribute. See section [Additional Features](https://github.com/about-code/glossarify-md#lists) for an example.
+If available, generates a list from HTML anchors exposing the configured `class` attribute.
 
 #### `generateFiles.listOfFigures`
 
 - **Range:** `{file: string, [title: string, class: string]}`
 - **Since:** v3.3.0
 
-Generates a list of figures with links to sections where the figures have been mentioned. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-figures) for a configuration example.
+Generates a list of figures with links to sections where the figures have been mentioned.
 
 #### `generateFiles.listOfTables`
 
 - **Range:** `{file: string, [title: string, class: string]}`
 - **Since:** v3.4.0
 
-Generates a list of tables. See section [Additional Features](https://github.com/about-code/glossarify-md#list-of-tables) for an example.
+Generates a list of tables.
 
 #### `glossaries`
 
