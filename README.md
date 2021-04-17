@@ -154,7 +154,7 @@ glossarify-md
   --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
 ```
 
-*Example: use `--shallow` to *replace* complex nested options like `glossaries` alltogether:*
+*Example: use `--shallow` to *replace* nested object-like options like `glossaries` alltogether:*
 
 ```
 glossarify-md
@@ -162,7 +162,7 @@ glossarify-md
   --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
 ```
 
-*Example: use `--deep` to *extend* complex nested options, e.g. to *add* another array item to `glossaries` in the config file write:*
+*Example: use `--deep` to *extend* nested object-like options, e.g. to **add** another array item to `glossaries` in the config file write:*
 
 ```
 glossarify-md
