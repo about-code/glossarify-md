@@ -66,7 +66,7 @@
     "test_46": "node . --config ./input/config-indexFile/multiple-glossaries/glossarify-md.conf.json",
     "test_47": "node . --config ./input/config-indexFile/config-title/glossarify-md.conf.json",
     "test_48": "node . --config ./input/config-indexFile/issue-75-formatted-headings/glossarify-md.conf.json",
-    "test_49": "node . --config ./input/config-indexFile/multiple-index-files/glossarify-md.conf.json",
+    "test_49": "node . --config ./input/config-indexFiles/flat-dir/glossarify-md.conf.json",
     "test_50": "node . --config ./input/count-term-occurrences/glossarify-md.conf.json",
     "test_51": "node . --config ./input/config-listOfFigures/image-reference/glossarify-md.conf.json",
     "test_52": "node . --config ./input/config-listOfFigures/option-title-missing/glossarify-md.conf.json",

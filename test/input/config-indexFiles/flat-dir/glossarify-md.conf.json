@@ -25,7 +25,7 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../output-actual/config-indexFile/multiple-index-files",
+  "outDir": "../../../output-actual/config-indexFiles/flat-dir",
   "dev": {
     "printInputAst": false,
     "reproducablePaths": true,
