@@ -1,0 +1,37 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "generateFiles": {
+    "indexFiles": [
+      {
+        "title": "Index A", "file": "./index-a.md", "glossary": "./glossary-a.md"
+      },
+      {
+        "title": "Index B", "file": "./index-b.md", "glossary": "./sub1/glossary-b.md"
+      },
+      {
+        "title": "Index C", "file": "./index-c.md", "glossary": "./sub1/sub2/glossary-c.md"
+      }
+    ]
+  },
+  "glossaries": [
+    {
+      "file": "./**/glossary-*.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../output-actual/config-indexFiles/154-deep-dir",
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
+}
