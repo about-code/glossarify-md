@@ -290,6 +290,8 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ]
 ```
 
+**Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
+
 *requirements.md*
 
 ```md
@@ -301,9 +303,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ...
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. Read on to find out how to generate an index in order to answer the question in which particular sections those requirements got mentioned.
-
-> **Since v5.0.0**: `file` can be a [glob] pattern. More see [Cross-Linking].
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can choose to generate a [Book Index](#book-index).
 
 ## Sorting your glossaries
 
@@ -354,7 +354,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 **Too many links?**
 
-What may happen with term-based linking and *globs* is, that once a lot of headings become terms, there might be *too many links* generated. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
+What might happen with*globs* is, that once a lot of headings become terms, you might feel that *too many links* are being generated, disturbing the reading experience. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
 
 ### Identifier-based Cross-Linking
 
