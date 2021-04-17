@@ -10,16 +10,18 @@ GIVEN two glossaries glossary-a and glossary-b WITH a set of terms
 
 AND a configuration
 
-```js
-generateFiles: {
-    indexFiles: [
-        { title: "Index A", file: "./index-a.md", glossary: "./glossary-a.md"},
-        { title: "Index B", file: "./index-b.md", glossary: "./glossary-b.md"}
+```json
+{
+  "generateFiles": {
+    "indexFiles": [
+      { "title": "Index A", "file": "./index-a.md", "glossary": "./glossary-a.md" },
+      { "title": "Index B", "file": "./index-b.md", "glossary": "./glossary-b.md" }
     ]
-},
-glossaries: [
+  },
+  "glossaries": [
     { "file": "./glossary-*.md" }
-]
+  ],
+}
 ```
 
 THEN the system MUST generate two files

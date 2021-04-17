@@ -1,0 +1,55 @@
+# [Testing config `indexFiles` with multiple index files](#testing-config-indexfiles-with-multiple-index-files)
+
+GIVEN thre glossaries glossary-a, glossary-b and glossary-c WITH a set of terms
+
+*   [GlossaryA_Term1][1],
+*   [GlossaryA_Term2][2],
+*   [GlossaryB_Term1][3],
+*   [GlossaryB_Term2][4],
+*   [GlossaryC_Term1][5],
+*   [GlossaryC_Term2][6],
+*   [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9] (all three)
+
+AND a configuration
+
+```json
+{
+  "generateFiles": {
+    "indexFiles": [
+      { "title": "Index A", "file": "./index-a.md", "glossary": "./glossary-a.md" },
+      { "title": "Index B", "file": "./index-b.md", "glossary": "./sub1/glossary-b.md" },
+      { "title": "Index C", "file": "./index-c.md", "glossary": "./sub1/sub2/glossary-c.md" }
+    ]
+  },
+  "glossaries": [
+    { "file": "./**/glossary-*.md" }
+  ]
+}
+```
+
+THEN the system MUST generate three files
+
+*   index-a.md
+    *   WITH terms [GlossaryA_Term1][1], [GlossaryA_Term2][2], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+*   index-b.md
+    *   WITH terms [GlossaryB_Term1][3], [GlossaryB_Term2][4], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+*   index-c.md
+    *   WITH terms [GlossaryC_Term1][5], [GlossaryC_Term2][6], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+
+[1]: ./glossary-a.md#glossarya_term1
+
+[2]: ./glossary-a.md#glossarya_term2
+
+[3]: ./sub1/glossary-b.md#glossaryb_term1
+
+[4]: ./sub1/glossary-b.md#glossaryb_term2
+
+[5]: ./sub1/sub2/glossary-c.md#glossaryc_term1
+
+[6]: ./sub1/sub2/glossary-c.md#glossaryc_term2
+
+[7]: ./glossary-a.md#glossaryabc_term3
+
+[8]: ./sub1/glossary-b.md#glossaryabc_term3
+
+[9]: ./sub1/sub2/glossary-c.md#glossaryabc_term3
