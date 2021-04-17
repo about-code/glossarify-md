@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.1.2](https://github.com/about-code/glossarify-md/compare/v5.1.1...v5.1.2) (2021-04-17)
+
+
+### Bug Fixes
+
+* Option `indexFiles`: Incorrect path from index to section of occurrence. ([#156](https://github.com/about-code/glossarify-md/issues/156)) ([41e59ad](https://github.com/about-code/glossarify-md/commit/41e59ad449e29fa53b5d483d86ccbbf0e98a2027))
+
+
 ### [5.1.1](https://github.com/about-code/glossarify-md/compare/v5.1.0...v5.1.1) (2021-04-17)
 
 ### Bug Fixes
