@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.1.1](https://github.com/about-code/glossarify-md/compare/v5.1.0...v5.1.1) (2021-04-17)
+
+### Bug Fixes
+
+* Option `indexFiles`: Empty files generated on windows (#154) ([0353f0e](https://github.com/about-code/glossarify-md/commit/0353f0e19c3ef347f62637f4ff804614a042c4b6))
+
 ## [5.1.0](https://github.com/about-code/glossarify-md/compare/v5.0.1...v5.1.0) (2021-04-11)
 
 
