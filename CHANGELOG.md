@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [5.1.3](https://github.com/about-code/glossarify-md/compare/v5.1.2...v5.1.3) (2021-05-27)
+
+* This is minor release which updates the list of dependencies to include new minor versions with security fixes. If you've installed glossarify-md for the first time, then you should already have got newer versions of dependencies due to version range specifiers used within glossarify's `package.json`. Otherwise you should have been able to install fixed dependencies yourself using `npm audit fix`.
+
 ### [5.1.2](https://github.com/about-code/glossarify-md/compare/v5.1.1...v5.1.2) (2021-04-17)
 
 
