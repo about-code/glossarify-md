@@ -93,19 +93,17 @@ More information see [README.md](../README.md).
 
 ## Markdown Extensions
 
-Vuepress lists a few [Markdown Extensions](https://vuepress.vuejs.org/guide/markdown.html) like *Frontmatter*, *Emojis* etc.
-Make sure to read [Markdown Syntax Extensions](../README.md#markdown-syntax-extensions), if your input files contain syntax sugar not covered by the [CommonMark] spec.
-Below is a list of remark plug-ins you may consider:
+Vuepress has a few [Markdown Extensions](https://vuepress.vuejs.org/guide/markdown.html). Most of them work out of the box. Though, *Frontmatter* requires a plug-in to work with glossarify-md. Read [Markdown Syntax Extensions](../README.md#markdown-syntax-extensions), for using glossarify-md with Markdown syntax not covered by the [CommonMark] Spec.
 
-|      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                    |
-| ------------------------------------- | ------------------------------------------------------------------------------- |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter](http://unifiedjs.com/explore/package/remark-frontmatter/)  |
-| [Custom Containers][vp-cc]            | [remark-directive](https://github.com/remarkjs/remark-directive)                |
-| [GitHub Style Tables][vp-gh-tables]   | None (glossarify-md loads [remark-gfm](https://github.com/remarkjs/remark-gfm)) |
-| [Table of Contents][vp-toc] `[[toc]]` | None                                                                            |
-| [Emoji][vp-emoji]                     | None                                                                            |
-| [Line Highlighting Codeblocks][vp-lh] | None                                                                            |
-| [Import Code Snippets][vp-code]       | None                                                                            |
+|      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                   |
+| ------------------------------------- | ------------------------------------------------------------------------------ |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter](http://unifiedjs.com/explore/package/remark-frontmatter/) |
+| [Custom Containers][vp-cc]            | None                                                                           |
+| [GitHub Style Tables][vp-gh-tables]   | None                                                                           |
+| [Table of Contents][vp-toc] `[[toc]]` | None                                                                           |
+| [Emoji][vp-emoji]                     | None                                                                           |
+| [Line Highlighting Codeblocks][vp-lh] | None                                                                           |
+| [Import Code Snippets][vp-code]       | None                                                                           |
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 [vp-gh-tables]: https://vuepress.vuejs.org/guide/markdown.html#github-style-tables
