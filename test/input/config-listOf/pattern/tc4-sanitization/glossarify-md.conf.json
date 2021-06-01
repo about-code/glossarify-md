@@ -1,0 +1,47 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "indexing": {
+    "groupByHeadingDepth": 0
+  },
+  "generateFiles": {
+    "listOf": [
+      {
+        "class": "test-quotes",
+        "file": "./list-quotes.md",
+        "title": "Test Case",
+        "pattern": "Text with [\"]*quotes[\"]*"
+      },{
+        "class": "test-angle-brackets",
+        "file": "./list-angle-brackets.md",
+        "title": "Test Case",
+        "pattern": "Text with [<>]*angle brackets[<>]*"
+      },{
+        "class": "test-regexp",
+        "file": "./list-regexp.md",
+        "title": "Test Case",
+        "pattern": "RegExp with (.*)"
+      }
+    ]
+  },
+  "glossaries": [
+    {
+      "file": "./glossary.md"
+    }
+  ],
+  "ignoreCase": false,
+  "outDir": "../../../../output-actual/config-listOf/pattern/tc4-sanitization",
+  "dev": {
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
+}
