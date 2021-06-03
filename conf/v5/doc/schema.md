@@ -543,6 +543,16 @@ The page title for the index file. If missing the application uses a default val
 
 *   Type: `string`
 
+### pattern
+
+A regular expression which when matching against text will generate an entry in the given list. The expression may contain a capture group which extracts a list item title. A match will result in an URL-addressable HTML node being added to the output.
+
+`pattern`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group i18n
 
 Reference this group by using

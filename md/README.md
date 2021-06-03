@@ -16,6 +16,7 @@
 [GFM]: https://github.github.com/gfm/
 [glob]: https://github.com/isaacs/node-glob#glob-primer
 [glossarify-md]: https://github.com/about-code/glossarify-md
+[mdast]: https://github.com/syntax-tree/mdast
 [micromark]: https://github.com/micromark/
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
 [remark]: https://github.com/remarkjs/remark
@@ -71,7 +72,13 @@ Generate a configuration with the `--init` option:
 npx glossarify-md --init > glossarify-md.conf.json
 ~~~
 
-*glossarify-md.conf.json (minimal)*
+- use `--init` to generate a config.
+  - add `--new`  to create a `./docs/glossarify.md` and write config into `./glossarify-md.conf.json`
+  - add `--more` to generate a config with more [options] and default values
+  - add `--local` to load the config schema from the `node_modules` directory
+
+
+*glossarify-md.conf.json (`glossarify-md --init`)*
 ```json
 {
   "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json",
@@ -79,10 +86,6 @@ npx glossarify-md --init > glossarify-md.conf.json
   "outDir": "../docs-glossarified"
 }
 ```
-- use `--init` to generate a config`
-  - add `--new`  to create a `./docs/glossarify.md` and write config into `./glossarify-md.conf.json`
-  - add `--more` to generate a config with more [options] and default values
-  - add `--local` to load the config schema from the `node_modules` directory
 
 *glossarify-md.conf.json* (`glossarify-md --init --local`)
 
@@ -354,7 +357,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 **Too many links?**
 
-What might happen with*globs* is, that once a lot of headings become terms, you might feel that *too many links* are being generated, disturbing the reading experience. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
+What might happen with *globs* is, that once a lot of headings exist, you might feel that *too many links* are being generated, disturbing the reading experience. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
 
 ### Identifier-based Cross-Linking
 
@@ -453,7 +456,7 @@ More details see our video tutorial:
   title="Tutorial Part 1">
 </video>
 ```
-Then to generate a *List of Videos* add to your *glossarify-md.conf.json*:
+Then to generate a *List of Videos* from all elements of `class="video"` add to your *glossarify-md.conf.json*:
 
 ```json
 "generateFiles": {
@@ -476,16 +479,16 @@ You can **type less** when prefixing ids with your list classifier:
 
 ~~~md
 <video
-  src="tutorial-1.mp4"
   id="video-tutorial-part-1"
-  title="Tutorial Part 1">
+  title="Tutorial Part 1"
+  src="tutorial-1.mp4">
 </video>
 ~~~
 
-Without a `title` attribute the tool attempts to derive a list item title from an elements text content:
+Without a `title` attribute the tool attempts to derive a list item label from an elements inner text content:
 
 ~~~md
-<video src="tutorial-1.mp4" id="mylist-foo">
+<video id="video-tutorial-part-1" src="tutorial-1.mp4">
    Tutorial Part 1
 </video>
 ~~~
@@ -493,8 +496,8 @@ Without a `title` attribute the tool attempts to derive a list item title from a
 Use *invisible* HTML anchors to generate lists from and navigate to text content:
 
 ~~~md
-<a id="mylist-target-foo" title="Foo"></a>
-This paragraph can be navigated to from a list item 'Foo'.
+<a id="tutorial-part-1" title="Tutorial Part 1"></a>
+This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials ans uses the classifier *tutorial*.
 ~~~
 
 > **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
@@ -515,8 +518,8 @@ The link label for list items will be inferred in this order (first-match):
 
 > **Since v3.3.0**
 
-So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is special Markdown syntax for similar elements. This is where
-`listOfFigures` fits in. It is a shortcut which makes [glossarify-md] generate the HTML anchor elements for `listOf` based on Markdown's image syntax, such that you can simply write:
+So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
+`listOfFigures` and [`listOfTables`](#list-of-tables) fits in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
 
 ```md
 ![List item Label](./figure.png)
@@ -551,7 +554,7 @@ To compile both figures into the same list one way to configure [glossarify-md] 
 }
 ```
 
-Such a config, for example, would allow you to also choose a shorter classifier like *fig*. However, if you are fine with ***figure* as the default classifier** you can omit `listOf` and just use:
+This configuration which would allow you to also choose a shorter classifier like *fig* is the default, though. Therefore, if you are fine with ***figure* as the default classifier** you can omit `listOf` and just use:
 
 *glossarify-md.conf.json*
 
@@ -568,7 +571,7 @@ Such a config, for example, would allow you to also choose a shorter classifier 
 
 > **Since v3.4.0**
 
-Like with `listOfFigures` above, there's also a `listOfTables` shortcut for [GFM] Markdown table syntax. It implicitely uses the [`listOf`](#lists) classifier ***table*** when configured this way:
+`listOfTables` like [`listOfFigures`](#list-of-figures) is a shortcut alternative to HTML anchors with a default [`listOf`](#lists) classifier ***table***:
 
 *glossarify-md.conf.json*
 
@@ -581,7 +584,9 @@ Like with `listOfFigures` above, there's also a `listOfTables` shortcut for [GFM
 }
 ```
 
-In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md] tries to infer a list item label from a **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon**, then the tool uses that phrase as the item label:
+In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md] tries to infer a list item label.
+
+One such inference looks at the **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon** then the tool uses that phrase as the item label:
 
 <a id="table-of-average-prices-by-article-category"></a>
 
@@ -643,7 +648,10 @@ Since **v5.0.0** and the introduction of `listOf` all the previous examples will
 | 3        | Book        | $23.45     |
 ```
 
-> **Note:** If [glossarify-md] can't find a table caption by any of the above means it will fall back to rendering a list item using the table headings separated by comma, or if none, the closest section heading, or if none, the file name (in this order).
+> **Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
+> 1. using the table headers separated by comma,
+> 1. or if no headers, using the closest section heading
+> 1. or if no section heading, using the file name.
 
 <!--
 1. **HTML anchor** see `listOf`
@@ -654,13 +662,48 @@ Since **v5.0.0** and the introduction of `listOf` all the previous examples will
 1. **filename** otherwise.
 -->
 
+### Lists from Regular Expressions
+
+**Since v5.2.0** you can use `listOf` with a regular expression pattern. Like `listOfFigures` and `listOfTables` it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself.
+
+Let's assume you are writing a book with tasks to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern to begin tasks with:
+
+*Document.md*
+~~~md
+Some text [...]
+
+**Task:** Clap your hands.
+~~~
+
+You can then generate a *List of Tasks* with a configuration like this:
+~~~md
+{
+  "generateFiles": {
+    "listOf": [
+      {
+        "class": "task",
+        "title": "Tasks in this Book",
+        "file": "./list-of-tasks.md",
+        "pattern": "Task: ([a-zA-Z0-9].*)\."
+      }
+    ]
+  }
+}
+~~~
+
+The regular expression makes [glossarify-md] search a paragraph's *plaintext*. When the pattern is found *the paragraph* will be annotated with HTML elements required by `listOf`.
+
+Optionally you can choose to use a single RegExp Capture Group in braces `()` to extract a particular part of the matched expression for the list item label. The example would extract *Clap your hands* without `Task:` and the fullstop (in the RegExp escaped by `\.`).
+
+> **When (not) to include syntax elements in the pattern?** Markdown syntax which isn't supported by [CommonMark] or [GFM] doesn't have a representation in glossarify's default [Abstract Syntax Tree][mdast]. Unsupported syntax likely appears to be plaintext. In those cases your pattern may need to include syntactic markup to correctly match. See also [Markdown Syntax Extensions](#markdown-syntax-extensions) below.
+
 ## Markdown Syntax Extensions
 
 [syntax-extensions]: #markdown-syntax-extensions
 
 > **Since v5.0.0**
 
-[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
+[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may have a wrong or no particular representation in the tool's default [Abstract Syntax Tree][mdast] at all. If it has got a wrong representation it may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
 
 *Frontmatter Syntax*
 
@@ -670,9 +713,9 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for it our Markdown parser ([remark]) will interpret the line of trailing dashes as Markdown syntax for a *heading*. To make it aware that they contribute to syntax for a *frontmatter* we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
+Without special support for this syntax the line of trailing dashes may look to (any) [CommonMark] parser like a *heading*. It is definitely the case for our Markdown parser ([remark]). To make it aware of frontmatter syntax we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
 
-> **Note:** glossarify-md must not be held responsible for issues arising due to installing and using additional plug-ins.
+> **Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional plug-ins.
 
 *Add this to your glossarify-md.conf.json*
 
@@ -705,10 +748,10 @@ and make remark load the plug-in by adding to your *remark.conf.json*:
 
 `remark.conf.json` follows the [unified configuration][unified-config] schema:
 
-- `remark-frontmatter` must be the name of the npm package you installed before.
-- Any properties of the object are specific to the plug-in.
+- `remark-frontmatter` must be the name of the npm package you installed before
+- any properties of the object are specific to the plug-in.
 
-You could also embed the configuration in a *glossarify-md.conf.json*. But keep in mind that anything under the `unified` key is a different schema and *not* subject to the [glossarify-md] config schema.
+You could also embed the configuration into a *glossarify-md.conf.json* using the `unified` key. But keep in mind that anything under that key is a different config schema and *not* subject to the [glossarify-md] config schema.
 
 > **[remark], [unified], uhh... ?**
 >
@@ -741,8 +784,7 @@ Path to directory where to search for the glossary and markdown files. All paths
 
 - **Range:** `string[]`
 
-Paths or Glob-Patterns of files to exclude. Use `keepRawFiles` if you just
-want to ignore certain markdown files from being modified.
+Paths or Glob-Patterns of files to exclude. Excluded files will be excluded from being copied to `outDir` where they would be processed. Use [`keepRawFiles`](#keeprawfiles) if you want to have them copied to `outDir` but *ignored* by glossarify-md.
 
 #### `generateFiles`
 
@@ -814,7 +856,7 @@ When true any occurrence of a term will be linked no matter how it was spelled.
 
 - **Range:** `string[]`
 
-Paths or Glob-Patterns for files to include.
+Paths or Glob-Patterns for files to include. Default: `.` (includes all Markdown files within the current directory and its subdirectories). See also [`excludeFiles`](#excludefiles) and ([`keepRawFiles`](#keeprawfiles)).
 
 #### `indexing`
 
@@ -872,9 +914,8 @@ Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collat
 
 - **Range:** `string[]`
 
-Paths or Glob-Patterns for (markdown) files to copy to `outDir` but ignore in
-glossarification and linking. Non-markdown files will always be kept as is so no
-need to add those.
+Paths or Glob-Patterns for Markdown files to copy to `outDir` but keep there as they are without
+glossarifying and linking. Non-markdown files won't be processed anyways, so need to add those.
 
 #### `linking`
 
