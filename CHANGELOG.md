@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [5.2.0](https://github.com/about-code/glossarify-md/compare/v5.1.3...v5.2.0) (2021-06-04)
+
+
+### Features
+
+* Generate lists from RegExp patterns ([#161](https://github.com/about-code/glossarify-md/issues/161)) ([c99d5c6](https://github.com/about-code/glossarify-md/commit/c99d5c67fc022311109d84b6857f498d30982cd6))
+
+
+### Documentation Updates
+
+* Fix vuepress plugin requirements. ([4cfef24](https://github.com/about-code/glossarify-md/commit/4cfef24630b57de89523ee5471d457d428b7ebfa))
+
 ### [5.1.3](https://github.com/about-code/glossarify-md/compare/v5.1.2...v5.1.3) (2021-05-27)
 
 * This is minor release which updates the list of dependencies to include new minor versions with security fixes. If you've installed glossarify-md for the first time, then you should already have got newer versions of dependencies due to version range specifiers used within glossarify's `package.json`. Otherwise you should have been able to install fixed dependencies yourself using `npm audit fix`.
