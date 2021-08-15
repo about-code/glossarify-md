@@ -666,13 +666,13 @@ Since **v5.0.0** and the introduction of `listOf` all the previous examples will
 
 **Since v5.2.0** you can use `listOf` with a regular expression pattern. Like `listOfFigures` and `listOfTables` it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself.
 
-Let's assume you are writing a book with tasks to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern to begin tasks with:
+Let's assume you are writing a book with tasks to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern which prefixes tasks with a phrase **Task:** and ends them with an exclamation mark *!*
 
 *Document.md*
 ~~~md
 Some text [...]
 
-**Task:** Clap your hands.
+**Task:** Clap your hands!
 ~~~
 
 You can then generate a *List of Tasks* with a configuration like this:
@@ -684,18 +684,18 @@ You can then generate a *List of Tasks* with a configuration like this:
         "class": "task",
         "title": "Tasks in this Book",
         "file": "./list-of-tasks.md",
-        "pattern": "Task: ([a-zA-Z0-9].*)\."
+        "pattern": "Task: ([a-zA-Z0-9].*)!"
       }
     ]
   }
 }
 ~~~
 
-The regular expression makes [glossarify-md] search a paragraph's *plaintext*. When the pattern is found *the paragraph* will be annotated with HTML elements required by `listOf`.
+If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegExp has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
 
-Optionally you can choose to use a single RegExp Capture Group in braces `()` to extract a particular part of the matched expression for the list item label. The example would extract *Clap your hands* without `Task:` and the fullstop (in the RegExp escaped by `\.`).
-
-> **When (not) to include syntax elements in the pattern?** Markdown syntax which isn't supported by [CommonMark] or [GFM] doesn't have a representation in glossarify's default [Abstract Syntax Tree][mdast]. Unsupported syntax likely appears to be plaintext. In those cases your pattern may need to include syntactic markup to correctly match. See also [Markdown Syntax Extensions](#markdown-syntax-extensions) below.
+> **Which syntax to include in the RegExp**:
+>
+> You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on  see next).
 
 ## Markdown Syntax Extensions
 
@@ -703,7 +703,7 @@ Optionally you can choose to use a single RegExp Capture Group in braces `()` to
 
 > **Since v5.0.0**
 
-[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may have a wrong or no particular representation in the tool's default [Abstract Syntax Tree][mdast] at all. If it has got a wrong representation it may not make it correctly into output documents. For example *Frontmatter* syntax is such an extension popularized by many static site generators:
+[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may have no - or worse - a wrong representation in the tool's [Abstract Syntax Tree][mdast]. If it has got a wrong representation it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
 
 *Frontmatter Syntax*
 
@@ -713,7 +713,9 @@ key: This is a frontmatter
 ---
 ```
 
-Without special support for this syntax the line of trailing dashes may look to (any) [CommonMark] parser like a *heading*. It is definitely the case for our Markdown parser ([remark]). To make it aware of frontmatter syntax we need to enhance the parser. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
+Without special support for it [CommonMark] compliant parsers will interpret the line of trailing dashes as *heading* markers and the text before as *heading text*.
+
+To make our parser ([remark]) aware of frontmatter syntax we need to enhance it. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
 
 > **Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional plug-ins.
 
