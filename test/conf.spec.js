@@ -1,5 +1,6 @@
-const process = require("process");
-const confProp = require("../conf/v5/schema.json").properties;
+import fs from "fs-extra";
+import process from "node:process";
+const confProp = JSON.parse(fs.readFileSync("../conf/v5/schema.json")).properties;
 let errors = [];
 
 (function testNoDuplicateArgs() {

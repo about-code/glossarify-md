@@ -1,6 +1,6 @@
-const process = require("process");
-const path = require("path");
-const fs = require("fs");
+import fs from "node:fs";
+import path from "node:path";
+import process from "node:process";
 
 let hasDiff = false;
 process.stdin.setEncoding("utf8");

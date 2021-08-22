@@ -1,11 +1,15 @@
 {
   "private": true,
   "name": "glossarify-md-testsuite",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "glossarify-md test scripts",
   "author": "Andreas Martin",
   "license": "MIT",
   "main": "../bin/index.js",
+  "type": "module",
+  "engines": {
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+  },
   "scripts": {
     "config": "node ../bin/index.js --config",
     "dconfig": "node --inspect-brk ../bin/index.js --config",

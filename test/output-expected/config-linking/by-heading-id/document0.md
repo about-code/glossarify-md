@@ -41,12 +41,9 @@ AND WITH document file `depth2/document2.md`
 THEN
 
 *   any [link with anchor `#section-1-2`][2] in `document0.md` MUST
-
-resolve to `./depth1/document1.md#section-1-2`
-
+    resolve to `./depth1/document1.md#section-1-2`
 *   AND any [link with anchor `#section-2-2`][3] in `document0.md` MUST
-
-resolve to `./depth1/depth2/document2.md#section-2-2`
+    resolve to `./depth1/depth2/document2.md#section-2-2`
 
 [1]: https://github.com/about-code/glossarify-md/issues/122
 

@@ -1,14 +1,18 @@
 #!/usr/bin/env node
-const minimist = require("minimist");
-const merge = require("deepmerge");
-const fs = require("fs-extra");
-const path = require("path");
-const proc = require("process");
-const program = require("../lib/main");
-const upgrade = require("../lib/cli/upgrade");
-const confSchema = require("../conf/v5/schema.json");
-const {NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP} = require("../lib/cli/messages");
-const {version} = require("../package.json");
+import merge from "deepmerge";
+import fs from "fs-extra";
+import minimist from "minimist";
+import { createRequire } from "node:module";
+import path from "node:path";
+import proc from "node:process";
+import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
+import { upgrade } from "../lib/cli/upgrade.js";
+import * as program from "../lib/main.js";
+
+const require_ = createRequire(import.meta.url);
+const confSchema = require_("../conf/v5/schema.json");
+const packageJson = require_("../package.json");
+const version = packageJson.version;
 const CWD = proc.cwd();
 const banner =
 `┌──────────────────────────┐
