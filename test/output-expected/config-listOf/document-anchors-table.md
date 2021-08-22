@@ -27,10 +27,10 @@
 
 <a id="table-comment-in-paragraph" class="table" title="Table Comment in Paragraph" />
 
-| Test1_Column1 | Test1_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test1\_Column1 | Test1\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 ### [Test Case: Table Comment in same Paragraph](#test-case-table-comment-in-same-paragraph)
 
@@ -56,10 +56,10 @@
 
 <a id="table-comment" class="table" title="Table Comment" />
 
-| Test2_Column1 | Test2_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test2\_Column1 | Test2\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 ### [Test Case: HTML node in standalone Paragraph](#test-case-html-node-in-standalone-paragraph)
 
@@ -84,10 +84,10 @@
 
 <a id="my-id" class="table"></a>
 
-| Test3_Column1 | Test3_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test3\_Column1 | Test3\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 ### [Test Case: 'html' node then 'text' node then 'table' node](#test-case-html-node-then-text-node-then-table-node)
 
@@ -114,10 +114,10 @@
 
 <a id="test4_column1-test4_column2" class="table" title="Test4_Column1, Test4_Column2" />
 
-| Test4_Column1 | Test4_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test4\_Column1 | Test4\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 ### [Test Case: Unique anchor ids when column headers identical](#test-case-unique-anchor-ids-when-column-headers-identical)
 
@@ -131,19 +131,19 @@ Table 1:
 
 <a id="test5_column1-test5_column2" class="table" title="Test5_Column1, Test5_Column2" />
 
-| Test5_Column1 | Test5_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test5\_Column1 | Test5\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 Table 2:
 
 <a id="test5_column1-test5_column2-1" class="table" title="Test5_Column1, Test5_Column2" />
 
-| Test5_Column1 | Test5_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test5\_Column1 | Test5\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 ### [Test Case: Unique anchor ids when labels are ambiguous](#test-case-unique-anchor-ids-when-labels-are-ambiguous)
 
@@ -156,16 +156,16 @@ Table 2:
 
 <a id="ambiguous" class="table" title="Ambiguous" />
 
-| Test6_Column1 | Test6_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test6\_Column1 | Test6\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
 
 <!-- table: Ambiguous -->
 
 <a id="ambiguous-1" class="table" title="Ambiguous" />
 
-| Test6_Column1 | Test6_Column2 |
-| ------------- | ------------- |
-| Col1Row1      | Col2Row1      |
-| Col1Row2      | Col2Row2      |
+| Test6\_Column1 | Test6\_Column2 |
+| -------------- | -------------- |
+| Col1Row1       | Col2Row1       |
+| Col1Row2       | Col2Row2       |
