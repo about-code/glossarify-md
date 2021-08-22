@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "glossarify-md-testsuite",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "glossarify-md test scripts",
   "author": "Andreas Martin",
   "license": "MIT",
