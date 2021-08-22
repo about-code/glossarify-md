@@ -1,4 +1,4 @@
-const {relativeFromTo, toSystemSlash} = require("../lib/path/tools");
+import { relativeFromTo, toSystemSlash } from "../lib/path/tools.js";
 const errors = [];
 
 (function testWhenFromAndToInDifferentBranch() {

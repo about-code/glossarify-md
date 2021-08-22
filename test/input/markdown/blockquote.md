@@ -1,3 +1,5 @@
+Assume the blockquote is not the first thing in a file:
+
 > GIVEN a blockquote THEN "Lorem ipsum" MUST NOT be linked to a glossary.
 
 <!--
