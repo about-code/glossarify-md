@@ -68,7 +68,6 @@
     "remark-heading-id": "^1.0.0",
     "remark-parse": "^10.0.0",
     "remark-reference-links": "^6.0.0",
-    "remark-slug": "^7.0.0",
     "remark-stringify": "^10.0.0",
     "unified": "^10.1.0",
     "unified-engine": "^9.0.3",
