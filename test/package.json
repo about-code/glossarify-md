@@ -64,7 +64,7 @@
     "test_40": "node . --config ./input/config-linking/limitByAlternatives/positive/glossarify-md.conf.json",
     "test_41": "node . --config ./input/config-linking/limitByAlternatives/negative/glossarify-md.conf.json",
     "test_42": "node . --config ./input/config-linking/limitByAlternatives/zero/glossarify-md.conf.json",
-    "skiptest_43": "node . --config ./input/config-linking/heading-id-algorithm/md5/ambiguous-term/glossarify-md.conf.json",
+    "test_43": "node . --config ./input/config-linking/heading-id-algorithm/md5/ambiguous-term/glossarify-md.conf.json",
     "test_44": "node . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_45": "node . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
     "test_46": "node . --config ./input/config-indexFile/term-link-to-section/glossarify-md.conf.json",
