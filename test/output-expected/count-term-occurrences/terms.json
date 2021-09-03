@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
+    "id": "mention-one-once",
     "value": "mention-one-once",
     "valueHash": "4df2b5d5",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
+    "id": "mention-two-twice",
     "value": "mention-two-twice",
     "valueHash": "f16bec56",
     "hint": "",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
+    "id": "mentioned-in-document-once",
     "value": "Mentioned-in-document-once",
     "valueHash": "a036883c",
     "hint": "",
@@ -69,6 +73,7 @@
   },
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
+    "id": "mentioned-in-document-twice",
     "value": "Mentioned-in-document-twice",
     "valueHash": "d6bf35c6",
     "hint": "",
@@ -86,6 +91,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
+    "id": "one",
     "value": "One",
     "valueHash": "06c2cea1",
     "hint": "",
@@ -103,6 +109,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
+    "id": "two",
     "value": "Two",
     "valueHash": "aada29da",
     "hint": "",
@@ -120,6 +127,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
+    "id": "zero",
     "value": "Zero",
     "valueHash": "d7ed4ee1",
     "hint": "",

@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "Test term",
+    "id": "ipsum",
     "value": "Ipsum",
     "valueHash": "1034a44d",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "Test term",
+    "id": "lorem",
     "value": "Lorem",
     "valueHash": "db6ff2ff",
     "hint": "",

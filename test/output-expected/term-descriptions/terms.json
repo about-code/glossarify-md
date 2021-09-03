@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "GIVEN short description partly formatted.",
+    "id": "description-partly-formatted",
     "value": "Description Partly Formatted",
     "valueHash": "54fe0721",
     "hint": "ⓕ",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "formatted-term-definitions",
     "value": "Formatted Term Definitions",
     "valueHash": "bc4374c3",
     "hint": "ⓕ",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-full-description-is-a-blockquote",
     "value": "GIVEN full description is a blockquote",
     "valueHash": "a8f71a97",
     "hint": "ⓕ",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-long-description-has-a-link",
     "value": "GIVEN long description has a link",
     "valueHash": "b64791c2",
     "hint": "ⓕ",
@@ -69,6 +73,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-long-description-is-a-blockquote",
     "value": "GIVEN long description is a blockquote",
     "valueHash": "558435d9",
     "hint": "ⓕ",
@@ -86,6 +91,7 @@
   },
   {
     "shortDesc": "THEN short description with a link MUST be detected completely.",
+    "id": "given-short-description-has-a-link",
     "value": "GIVEN short description has a link",
     "valueHash": "cb1e14ac",
     "hint": "ⓕ",
@@ -103,6 +109,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-a-blockquote",
     "value": "GIVEN short description is a blockquote",
     "valueHash": "c90cacfd",
     "hint": "ⓕ",
@@ -120,6 +127,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-bold-with-fullstop-excluded",
     "value": "GIVEN short description is bold WITH fullstop excluded",
     "valueHash": "2a37979a",
     "hint": "ⓕ",
@@ -137,6 +145,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-bold-with-fullstop-included",
     "value": "GIVEN short description is bold WITH fullstop included",
     "valueHash": "f1c01d68",
     "hint": "ⓕ",
@@ -154,6 +163,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-italic-with-fullstop-excluded",
     "value": "GIVEN short description is italic WITH fullstop excluded",
     "valueHash": "cb74321f",
     "hint": "ⓕ",
@@ -171,6 +181,7 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-italic-with-fullstop-included",
     "value": "GIVEN short description is italic WITH fullstop included",
     "valueHash": "56bdbcb5",
     "hint": "ⓕ",
@@ -188,6 +199,7 @@
   },
   {
     "shortDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "id": "single-sentence-across-multiple-lines",
     "value": "Single sentence across multiple lines",
     "valueHash": "93103716",
     "hint": "ⓕ",
@@ -205,6 +217,7 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "id": "single-sentence-terminated-by-exclamation-mark",
     "value": "Single sentence terminated by exclamation mark",
     "valueHash": "db8b4d6a",
     "hint": "ⓕ",
@@ -222,6 +235,7 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "id": "single-sentence-terminated-by-full-stop",
     "value": "Single sentence terminated by full stop",
     "valueHash": "5bba307e",
     "hint": "ⓕ",
@@ -239,6 +253,7 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "id": "single-sentence-terminated-by-question-mark",
     "value": "Single sentence terminated by question mark",
     "valueHash": "b562a5ec",
     "hint": "ⓕ",
@@ -256,6 +271,7 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-term-definition-extraction",
     "value": "Testing Term Definition Extraction",
     "valueHash": "d19bc82e",
     "hint": "ⓕ",
@@ -273,6 +289,7 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
+    "id": "two-sentences-across-multiple-lines-terminated-by-full-stop",
     "value": "Two sentences across multiple lines terminated by full stop",
     "valueHash": "2705b83f",
     "hint": "ⓕ",
@@ -290,6 +307,7 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "id": "two-sentences-in-a-single-line-terminated-by-full-stop",
     "value": "Two sentences in a single line terminated by full stop",
     "valueHash": "32bc9175",
     "hint": "ⓕ",
@@ -307,6 +325,7 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "id": "two-sentences-in-multiple-lines-terminated-by-full-stop",
     "value": "Two sentences in multiple lines terminated by full stop",
     "valueHash": "e41211fc",
     "hint": "ⓕ",

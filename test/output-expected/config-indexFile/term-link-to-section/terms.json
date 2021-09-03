@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
+    "id": "term",
     "value": "Term",
     "valueHash": "cf5f3091",
     "hint": "",

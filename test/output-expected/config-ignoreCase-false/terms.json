@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "all-lowercase",
     "value": "all-lowercase",
     "valueHash": "7d4b9ec5",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "all-uppercase",
     "value": "ALL-UPPERCASE",
     "valueHash": "7123afe0",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "",
+    "id": "first-lowercase",
     "value": "fIRST-lOWERCASE",
     "valueHash": "4dc4af85",
     "hint": "",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "",
+    "id": "first-uppercase",
     "value": "First-Uppercase",
     "valueHash": "a6710ef4",
     "hint": "",
@@ -69,6 +73,7 @@
   },
   {
     "shortDesc": "",
+    "id": "mixed-case",
     "value": "MiXeD-CaSe",
     "valueHash": "fa8f9783",
     "hint": "",
@@ -86,6 +91,7 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-ignorecase",
     "value": "Testing Config Option ignoreCase",
     "valueHash": "faeeca2f",
     "hint": "",

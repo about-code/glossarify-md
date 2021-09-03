@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './sub/index.md'\nAND the glossary file is in './glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path '../glossary.md#term'.",
+    "id": "term",
     "value": "Term",
     "valueHash": "cf5f3091",
     "hint": "",

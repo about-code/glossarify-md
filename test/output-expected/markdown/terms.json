@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "foo",
+    "id": "dolor",
     "value": "dolor",
     "valueHash": "a98931d1",
     "hint": "↴",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "↴",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
+    "id": "lorem-ipsum",
     "value": "Lorem ipsum",
     "valueHash": "0956d2fb",
     "hint": "↴",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "",
+    "id": "sit",
     "value": "sit",
     "valueHash": "87d4eeb7",
     "hint": "↴",

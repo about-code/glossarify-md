@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
     "valueHash": "31d109d1",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "",
+    "id": "term1",
     "value": "Term1",
     "valueHash": "73edc568",
     "hint": "",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "",
+    "id": "term2",
     "value": "Term2",
     "valueHash": "0a61dcb4",
     "hint": "",

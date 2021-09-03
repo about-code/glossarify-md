@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "alias-substring-behavior",
     "value": "Alias substring behavior",
     "valueHash": "e8688195",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "aliases-and-synonyms",
     "value": "Aliases and Synonyms",
     "valueHash": "6576f2d7",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
+    "id": "china",
     "value": "China",
     "valueHash": "ae54a5c0",
     "hint": "",
@@ -57,6 +60,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "id": "field",
     "value": "FIELD",
     "valueHash": "552a5418",
     "hint": "",
@@ -76,6 +80,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "id": "flower",
     "value": "Flower",
     "valueHash": "338d1f80",
     "hint": "",
@@ -95,6 +100,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
+    "id": "friendship",
     "value": "Friendship",
     "valueHash": "a31816a0",
     "hint": "",
@@ -114,6 +120,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "id": "hopefully",
     "value": "Hopefully",
     "valueHash": "efc57f4f",
     "hint": "",
@@ -133,6 +140,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "id": "issue",
     "value": "Issue",
     "valueHash": "642facf6",
     "hint": "",
@@ -152,6 +160,7 @@
   },
   {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "id": "our",
     "value": "OUR",
     "valueHash": "1f14b053",
     "hint": "",
@@ -171,6 +180,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "id": "term-1",
     "value": "Term 1",
     "valueHash": "f4b70a17",
     "hint": "",
@@ -192,6 +202,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "id": "term-2",
     "value": "Term 2",
     "valueHash": "638f18ca",
     "hint": "",
@@ -213,6 +224,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
+    "id": "term-3",
     "value": "Term 3",
     "valueHash": "3b1ce349",
     "hint": "",
@@ -234,6 +246,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
+    "id": "term-4",
     "value": "Term 4",
     "valueHash": "5ec3b229",
     "hint": "",
@@ -255,6 +268,7 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
+    "id": "term-5",
     "value": "Term 5",
     "valueHash": "33434f11",
     "hint": "",
@@ -275,6 +289,7 @@
   },
   {
     "shortDesc": "",
+    "id": "unicode-support",
     "value": "Unicode Support",
     "valueHash": "bde525aa",
     "hint": "",

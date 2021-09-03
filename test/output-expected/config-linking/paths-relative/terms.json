@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
+    "id": "first-level-child",
     "value": "First-Level-Child",
     "valueHash": "890f2eb1",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
+    "id": "first-level-parent",
     "value": "First-Level-Parent",
     "valueHash": "17a5382d",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
+    "id": "second-level-parent",
     "value": "Second-Level-Parent",
     "valueHash": "3bb5a2d5",
     "hint": "",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
+    "id": "sibling",
     "value": "Sibling",
     "valueHash": "ba3f6a55",
     "hint": "",
@@ -69,6 +73,7 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-linking",
     "value": "Testing config option 'linking'",
     "valueHash": "2a07b1b6",
     "hint": "",
@@ -86,6 +91,7 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-linking",
     "value": "Testing Config Option 'linking'",
     "valueHash": "673553af",
     "hint": "",

@@ -1,6 +1,7 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary-a",
     "value": "Glossary A",
     "valueHash": "ecedfece",
     "hint": "",
@@ -18,6 +19,7 @@
   },
   {
     "shortDesc": "",
+    "id": "glossary-b",
     "value": "Glossary B",
     "valueHash": "58f80f50",
     "hint": "",
@@ -35,6 +37,7 @@
   },
   {
     "shortDesc": "",
+    "id": "in-glossary-a-and-b",
     "value": "In Glossary A and B",
     "valueHash": "ddbddb78",
     "hint": "",
@@ -52,6 +55,7 @@
   },
   {
     "shortDesc": "",
+    "id": "in-glossary-a-and-b",
     "value": "In Glossary A and B",
     "valueHash": "ddbddb78",
     "hint": "",
@@ -69,6 +73,7 @@
   },
   {
     "shortDesc": "",
+    "id": "only-in-glossary-a",
     "value": "Only in Glossary A",
     "valueHash": "3f37f840",
     "hint": "",
@@ -86,6 +91,7 @@
   },
   {
     "shortDesc": "",
+    "id": "only-in-glossary-b",
     "value": "Only in Glossary B",
     "valueHash": "f9f30195",
     "hint": "",
