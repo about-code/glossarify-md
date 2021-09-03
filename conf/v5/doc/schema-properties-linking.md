@@ -14,6 +14,7 @@ The default value is:
     5,
     6
   ],
+  "headingIdAlgorithm": "github",
   "limitByAlternatives": 10
 }
 ```
@@ -54,6 +55,7 @@ Control how paths to linked documents will be constructed. Choosing "absolute" r
 | :----------- | :---------- |
 | `"relative"` |             |
 | `"absolute"` |             |
+| `"none"`     |             |
 
 ## mentions
 
@@ -83,6 +85,25 @@ An array of numerical values each in a range of 1-6 denoting the depths of headi
 *   is optional
 
 *   Type: `integer[]`
+
+## headingIdAlgorithm
+
+Algorithm to use for generating heading IDs. The 'github' algorithm (default) may only guarantee uniqueness per file. Use a cryptographic algorithm to have IDs be unique across all output files. The latter may be required when concatenating output files with tools like pandoc ( <https://pandoc.org> ).
+
+`headingIdAlgorithm`
+
+*   is optional
+
+*   Type: unknown
+
+### headingIdAlgorithm Constraints
+
+**enum**: the value of this property must be equal to one of the following values:
+
+| Value      | Explanation |
+| :--------- | :---------- |
+| `"github"` |             |
+| `"md5"`    |             |
 
 ## limitByAlternatives
 
