@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../../output-actual/pandoc/config-linking/heading-id-algorithm/mixed-with-pandoc-ids",
+  "linking": {
+    "paths": "relative",
+    "headingIdAlgorithm": "md5"
+  },
+  "glossaries": [
+    { "file": "./glossary.md" }
+  ]
+}
