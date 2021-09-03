@@ -67,7 +67,7 @@ An array of numerical values each in a range of 1-6 denoting the depths of headi
 
 ## headingIdAlgorithm
 
-Algorithm to use for generating heading IDs. The 'github' algorithm (default) may only guarantee uniqueness per file. Use a cryptographic algorithm to have IDs be unique across all output files. The latter may be required when concatenating output files with tools like pandoc ( <https://pandoc.org> ).
+Algorithm to use for generating heading IDs. The "github" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( <https://pandoc.org> ).
 
 `headingIdAlgorithm`
 
@@ -83,6 +83,7 @@ Algorithm to use for generating heading IDs. The 'github' algorithm (default) ma
 | :--------- | :---------- |
 | `"github"` |             |
 | `"md5"`    |             |
+| `"sha256"` |             |
 
 ## limitByAlternatives
 

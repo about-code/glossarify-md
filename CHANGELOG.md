@@ -18,7 +18,7 @@ Upgrading to new major versions of dependencies.
 
 * Migrate to ECMAScript Modules (ESM) ([#164](https://github.com/about-code/glossarify-md/issues/164)) ([36e6289](https://github.com/about-code/glossarify-md/commit/36e62891d80fb828aaaf3ca4c9cb1135c9314359))
 * New option value `"none"` for option `linking.paths`. ([a0fc951](https://github.com/about-code/glossarify-md/commit/a0fc951b80065ca609eb035d3ea8adbb5be8c1b0))
-* Unique Heading Identifiers based on MD5 or SHA256. ([ab61b6c](https://github.com/about-code/glossarify-md/commit/ab61b6cbfa5400c809e9755338dee27ecb56173a))
+* New option `linking.headingIdAlgorithm` for unique heading identifiers based on MD5 or SHA256. ([ab61b6c](https://github.com/about-code/glossarify-md/commit/ab61b6cbfa5400c809e9755338dee27ecb56173a))
 
 
 ### Bug Fixes
