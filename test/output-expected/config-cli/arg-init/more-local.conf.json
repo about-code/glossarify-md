@@ -45,6 +45,7 @@
       5,
       6
     ],
+    "headingIdAlgorithm": "github",
     "limitByAlternatives": 10
   },
   "outDir": "../docs-glossarified",

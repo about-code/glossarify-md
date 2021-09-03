@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary",
+    "valueHash": "31d109d1",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -18,6 +19,7 @@
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
     "value": "mention-one-once",
+    "valueHash": "4df2b5d5",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
     "headingDepth": 4,
@@ -34,6 +36,7 @@
   {
     "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
     "value": "mention-two-twice",
+    "valueHash": "f16bec56",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
     "headingDepth": 4,
@@ -50,6 +53,7 @@
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
     "value": "Mentioned-in-document-once",
+    "valueHash": "a036883c",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
     "headingDepth": 2,
@@ -66,6 +70,7 @@
   {
     "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
     "value": "Mentioned-in-document-twice",
+    "valueHash": "d6bf35c6",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
     "headingDepth": 2,
@@ -82,6 +87,7 @@
   {
     "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
     "value": "One",
+    "valueHash": "06c2cea1",
     "hint": "",
     "longDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
     "headingDepth": 2,
@@ -98,6 +104,7 @@
   {
     "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
     "value": "Two",
+    "valueHash": "aada29da",
     "hint": "",
     "longDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
     "headingDepth": 2,
@@ -114,6 +121,7 @@
   {
     "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
     "value": "Zero",
+    "valueHash": "d7ed4ee1",
     "hint": "",
     "longDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
     "headingDepth": 2,

@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary G1",
+    "valueHash": "05dfcbd8",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -18,6 +19,7 @@
   {
     "shortDesc": "",
     "value": "Glossary G2",
+    "valueHash": "3673bfbe",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -34,6 +36,7 @@
   {
     "shortDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
     "value": "Term A",
+    "valueHash": "f68c2c2d",
     "hint": "",
     "longDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
     "headingDepth": 2,
@@ -50,6 +53,7 @@
   {
     "shortDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
     "value": "Term B",
+    "valueHash": "96d7775e",
     "hint": "",
     "longDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
     "headingDepth": 2,
@@ -66,6 +70,7 @@
   {
     "shortDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
     "value": "Term C",
+    "valueHash": "83fa0a16",
     "hint": "",
     "longDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
     "headingDepth": 2,
@@ -82,6 +87,7 @@
   {
     "shortDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
     "value": "Term D",
+    "valueHash": "3cecf20b",
     "hint": "",
     "longDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
     "headingDepth": 2,
@@ -98,6 +104,7 @@
   {
     "shortDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
     "value": "Term E",
+    "valueHash": "f133db7d",
     "hint": "",
     "longDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
     "headingDepth": 2,
@@ -114,6 +121,7 @@
   {
     "shortDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
     "value": "Term F",
+    "valueHash": "f8a25fec",
     "hint": "",
     "longDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
     "headingDepth": 2,

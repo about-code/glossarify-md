@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary A",
+    "valueHash": "ecedfece",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -18,6 +19,7 @@
   {
     "shortDesc": "",
     "value": "Glossary B",
+    "valueHash": "58f80f50",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -34,6 +36,7 @@
   {
     "shortDesc": "",
     "value": "In Glossary A and B",
+    "valueHash": "ddbddb78",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -50,6 +53,7 @@
   {
     "shortDesc": "",
     "value": "In Glossary A and B",
+    "valueHash": "ddbddb78",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -66,6 +70,7 @@
   {
     "shortDesc": "",
     "value": "Only in Glossary A",
+    "valueHash": "3f37f840",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -82,6 +87,7 @@
   {
     "shortDesc": "",
     "value": "Only in Glossary B",
+    "valueHash": "f9f30195",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
