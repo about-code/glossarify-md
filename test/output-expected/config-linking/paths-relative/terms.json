@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
+    "id": "first-level-child",
     "value": "First-Level-Child",
+    "valueHash8": "890f2eb1",
     "hint": "",
     "longDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
     "headingDepth": 2,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
+    "id": "first-level-parent",
     "value": "First-Level-Parent",
+    "valueHash8": "17a5382d",
     "hint": "",
     "longDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
     "headingDepth": 2,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
+    "id": "second-level-parent",
     "value": "Second-Level-Parent",
+    "valueHash8": "3bb5a2d5",
     "hint": "",
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
     "headingDepth": 2,
@@ -49,7 +55,9 @@
   },
   {
     "shortDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
+    "id": "sibling",
     "value": "Sibling",
+    "valueHash8": "ba3f6a55",
     "hint": "",
     "longDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
     "headingDepth": 2,
@@ -65,7 +73,9 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-linking",
     "value": "Testing config option 'linking'",
+    "valueHash8": "2a07b1b6",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -81,7 +91,9 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-linking",
     "value": "Testing Config Option 'linking'",
+    "valueHash8": "673553af",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,

@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "must not be referred to by excluded files.",
+    "id": "term",
     "value": "Term",
+    "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "must not be referred to by excluded files.",
     "headingDepth": 2,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-option-excludefiles",
     "value": "Testing option excludeFiles",
+    "valueHash8": "27f18772",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,

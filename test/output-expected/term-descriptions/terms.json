@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "GIVEN short description partly formatted.",
+    "id": "description-partly-formatted",
     "value": "Description Partly Formatted",
+    "valueHash8": "54fe0721",
     "hint": "ⓕ",
     "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
     "headingDepth": 3,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "",
+    "id": "formatted-term-definitions",
     "value": "Formatted Term Definitions",
+    "valueHash8": "bc4374c3",
     "hint": "ⓕ",
     "longDesc": "",
     "headingDepth": 2,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-full-description-is-a-blockquote",
     "value": "GIVEN full description is a blockquote",
+    "valueHash8": "a8f71a97",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -49,7 +55,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-long-description-has-a-link",
     "value": "GIVEN long description has a link",
+    "valueHash8": "b64791c2",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
     "headingDepth": 3,
@@ -65,7 +73,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-long-description-is-a-blockquote",
     "value": "GIVEN long description is a blockquote",
+    "valueHash8": "558435d9",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -81,7 +91,9 @@
   },
   {
     "shortDesc": "THEN short description with a link MUST be detected completely.",
+    "id": "given-short-description-has-a-link",
     "value": "GIVEN short description has a link",
+    "valueHash8": "cb1e14ac",
     "hint": "ⓕ",
     "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -97,7 +109,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-a-blockquote",
     "value": "GIVEN short description is a blockquote",
+    "valueHash8": "c90cacfd",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -113,7 +127,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-bold-with-fullstop-excluded",
     "value": "GIVEN short description is bold WITH fullstop excluded",
+    "valueHash8": "2a37979a",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -129,7 +145,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-bold-with-fullstop-included",
     "value": "GIVEN short description is bold WITH fullstop included",
+    "valueHash8": "f1c01d68",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -145,7 +163,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-italic-with-fullstop-excluded",
     "value": "GIVEN short description is italic WITH fullstop excluded",
+    "valueHash8": "cb74321f",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -161,7 +181,9 @@
   },
   {
     "shortDesc": "THEN short description MUST be detected completely.",
+    "id": "given-short-description-is-italic-with-fullstop-included",
     "value": "GIVEN short description is italic WITH fullstop included",
+    "valueHash8": "56bdbcb5",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "headingDepth": 3,
@@ -177,7 +199,9 @@
   },
   {
     "shortDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
+    "id": "single-sentence-across-multiple-lines",
     "value": "Single sentence across multiple lines",
+    "valueHash8": "93103716",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
     "headingDepth": 2,
@@ -193,7 +217,9 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
+    "id": "single-sentence-terminated-by-exclamation-mark",
     "value": "Single sentence terminated by exclamation mark",
+    "valueHash8": "db8b4d6a",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
     "headingDepth": 2,
@@ -209,7 +235,9 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
+    "id": "single-sentence-terminated-by-full-stop",
     "value": "Single sentence terminated by full stop",
+    "valueHash8": "5bba307e",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
     "headingDepth": 2,
@@ -225,7 +253,9 @@
   },
   {
     "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
+    "id": "single-sentence-terminated-by-question-mark",
     "value": "Single sentence terminated by question mark",
+    "valueHash8": "b562a5ec",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
     "headingDepth": 2,
@@ -241,7 +271,9 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-term-definition-extraction",
     "value": "Testing Term Definition Extraction",
+    "valueHash8": "d19bc82e",
     "hint": "ⓕ",
     "longDesc": "",
     "headingDepth": 1,
@@ -257,7 +289,9 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
+    "id": "two-sentences-across-multiple-lines-terminated-by-full-stop",
     "value": "Two sentences across multiple lines terminated by full stop",
+    "valueHash8": "2705b83f",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
     "headingDepth": 2,
@@ -273,7 +307,9 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "id": "two-sentences-in-a-single-line-terminated-by-full-stop",
     "value": "Two sentences in a single line terminated by full stop",
+    "valueHash8": "32bc9175",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
     "headingDepth": 2,
@@ -289,7 +325,9 @@
   },
   {
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
+    "id": "two-sentences-in-multiple-lines-terminated-by-full-stop",
     "value": "Two sentences in multiple lines terminated by full stop",
+    "valueHash8": "e41211fc",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
     "headingDepth": 2,

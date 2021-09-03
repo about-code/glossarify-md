@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
+    "id": "äö",
     "value": "'ÄÖ'",
+    "valueHash8": "3664f3c6",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "headingDepth": 2,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
+    "id": "äöü",
     "value": "'ÄÖÜ'",
+    "valueHash8": "e30b8f2e",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "headingDepth": 2,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
+    "id": "a",
     "value": "A",
+    "valueHash8": "7fc56270",
     "hint": "",
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "headingDepth": 2,
@@ -49,7 +55,9 @@
   },
   {
     "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
+    "id": "ä",
     "value": "Ä",
+    "valueHash8": "b66491b0",
     "hint": "",
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "headingDepth": 2,
@@ -65,7 +73,9 @@
   },
   {
     "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
+    "id": "ab",
     "value": "AB",
+    "valueHash8": "b86fc6b0",
     "hint": "",
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "headingDepth": 2,
@@ -81,7 +91,9 @@
   },
   {
     "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
+    "id": "abc",
     "value": "ABC",
+    "valueHash8": "902fbdd2",
     "hint": "",
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "headingDepth": 2,
@@ -97,7 +109,9 @@
   },
   {
     "shortDesc": "",
+    "id": "substring-test-glossary",
     "value": "Substring Test Glossary",
+    "valueHash8": "29d63fdc",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,

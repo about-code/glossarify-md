@@ -1,6 +1,6 @@
 {
   "name": "glossarify-md",
-  "version": "6.0.0",
+  "version": "6.0.0-alpha.1",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "author": {
     "name": "Andreas Martin"
@@ -68,7 +68,6 @@
     "remark-heading-id": "^1.0.0",
     "remark-parse": "^10.0.0",
     "remark-reference-links": "^6.0.0",
-    "remark-slug": "^7.0.0",
     "remark-stringify": "^10.0.0",
     "unified": "^10.1.0",
     "unified-engine": "^9.0.3",

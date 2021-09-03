@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../../output-actual/config-linking/heading-id-algorithm/md5/ambiguous-term",
+  "linking": {
+    "paths": "relative",
+    "headingIdAlgorithm": "md5"
+  },
+  "glossaries": [{ "file": "./**/*.md" } ],
+  "generateFiles": {
+    "indexFile": {
+      "title": "Index",
+      "file": "./md5-index.md"
+    }
+  }
+}

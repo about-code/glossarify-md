@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "",
+    "id": "all-lowercase",
     "value": "all-lowercase",
+    "valueHash8": "7d4b9ec5",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "",
+    "id": "all-uppercase",
     "value": "ALL-UPPERCASE",
+    "valueHash8": "7123afe0",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "",
+    "id": "first-lowercase",
     "value": "fIRST-lOWERCASE",
+    "valueHash8": "4dc4af85",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -49,7 +55,9 @@
   },
   {
     "shortDesc": "",
+    "id": "first-uppercase",
     "value": "First-Uppercase",
+    "valueHash8": "a6710ef4",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -65,7 +73,9 @@
   },
   {
     "shortDesc": "",
+    "id": "mixed-case",
     "value": "MiXeD-CaSe",
+    "valueHash8": "fa8f9783",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -81,7 +91,9 @@
   },
   {
     "shortDesc": "",
+    "id": "testing-config-option-ignorecase",
     "value": "Testing Config Option ignoreCase",
+    "valueHash8": "faeeca2f",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,

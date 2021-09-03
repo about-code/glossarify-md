@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
+    "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
+    "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "",
+    "id": "term1",
     "value": "Term1",
+    "valueHash8": "73edc568",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,
@@ -49,7 +55,9 @@
   },
   {
     "shortDesc": "",
+    "id": "term2",
     "value": "Term2",
+    "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "",
     "headingDepth": 2,

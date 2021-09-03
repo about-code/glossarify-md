@@ -45,6 +45,7 @@
       "5": true,
       "6": true
     },
+    "headingIdAlgorithm": "github",
     "limitByAlternatives": 10
   },
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",

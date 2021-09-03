@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
+    "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "Test term",
+    "id": "ipsum",
     "value": "Ipsum",
+    "valueHash8": "1034a44d",
     "hint": "",
     "longDesc": "Test term",
     "headingDepth": 2,
@@ -33,7 +37,9 @@
   },
   {
     "shortDesc": "Test term",
+    "id": "lorem",
     "value": "Lorem",
+    "valueHash8": "db6ff2ff",
     "hint": "",
     "longDesc": "Test term",
     "headingDepth": 2,

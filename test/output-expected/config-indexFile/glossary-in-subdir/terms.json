@@ -1,7 +1,9 @@
 [
   {
     "shortDesc": "",
+    "id": "glossary",
     "value": "Glossary",
+    "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
     "headingDepth": 1,
@@ -17,7 +19,9 @@
   },
   {
     "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
+    "id": "term",
     "value": "Term",
+    "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
     "headingDepth": 2,
