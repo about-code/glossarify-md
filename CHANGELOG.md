@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.1](https://github.com/about-code/glossarify-md/compare/v5.2.0...v6.0.0-alpha.1) (2021-09-03)
+
+
+### ⚠ BREAKING CHANGES
+
+* Requires Node >= 12.20.
+Upgrading to new major versions of dependencies.
+
+* chore(deps): Migrating to remark v14 and unified v10.
+* chore(refactor): Bump package version to v6.0.0.
+* test: New baseline.
+
+### Features
+
+* Migrate to ECMAScript Modules (ESM) ([#164](https://github.com/about-code/glossarify-md/issues/164)) ([36e6289](https://github.com/about-code/glossarify-md/commit/36e62891d80fb828aaaf3ca4c9cb1135c9314359))
+* New option value `"none"` for option `linking.paths`. ([a0fc951](https://github.com/about-code/glossarify-md/commit/a0fc951b80065ca609eb035d3ea8adbb5be8c1b0))
+* Unique Heading Identifiers based on MD5 or SHA256. ([ab61b6c](https://github.com/about-code/glossarify-md/commit/ab61b6cbfa5400c809e9755338dee27ecb56173a))
+
+
+### Bug Fixes
+
+* **perf:** Unnecessary "unwrap" iterations. ([2b0aa2f](https://github.com/about-code/glossarify-md/commit/2b0aa2f3f8b417cd7304bb0f8d6629ede2615095))
+* **perf:** Unnecessary duplicate writes. ([f92db19](https://github.com/about-code/glossarify-md/commit/f92db19281194d096b6f137df327a5eaf5fabb5a))
+* Access error when processing all-empty files ([aeaaf1d](https://github.com/about-code/glossarify-md/commit/aeaaf1d9ccd70190f3e58bbf39313f7fd784cbe2))
+
+
+### Documentation Updates
+
+* Clarify pattern anchorization ([bf7f98f](https://github.com/about-code/glossarify-md/commit/bf7f98f02aa72e48efd529e8b0f4cfa4b87bddd1))
+
 ## [5.2.0](https://github.com/about-code/glossarify-md/compare/v5.1.3...v5.2.0) (2021-06-04)
 
 
