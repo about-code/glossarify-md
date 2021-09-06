@@ -46,6 +46,9 @@
       "6": true
     },
     "headingIdAlgorithm": "github",
+    "headingIdPandoc": false,
+    "headingAsLink": true,
+    "byReference": true,
     "limitByAlternatives": 10
   },
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",

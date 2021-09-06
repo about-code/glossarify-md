@@ -217,6 +217,9 @@ The default value is:
     6
   ],
   "headingIdAlgorithm": "github",
+  "headingIdPandoc": false,
+  "headingAsLink": true,
+  "byReference": true,
   "limitByAlternatives": 10
 }
 ```
@@ -760,11 +763,33 @@ Algorithm to use for generating heading IDs. The "github" algorithm (default) pr
 
 **enum**: the value of this property must be equal to one of the following values:
 
-| Value      | Explanation |
-| :--------- | :---------- |
-| `"github"` |             |
-| `"md5"`    |             |
-| `"sha256"` |             |
+| Value        | Explanation |
+| :----------- | :---------- |
+| `"github"`   |             |
+| `"md5"`      |             |
+| `"md5-7"`    |             |
+| `"sha256"`   |             |
+| `"sha256-7"` |             |
+
+### headingAsLink
+
+Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes.
+
+`headingAsLink`
+
+*   is optional
+
+*   Type: `boolean`
+
+### headingIdPandoc
+
+When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id.
+
+`headingIdPandoc`
+
+*   is optional
+
+*   Type: `boolean`
 
 ### limitByAlternatives
 
@@ -779,6 +804,16 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 *   is optional
 
 *   Type: `integer`
+
+### byReference
+
+When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on <http://commonmark.org>.
+
+`byReference`
+
+*   is optional
+
+*   Type: `boolean`
 
 ## Definitions group UnifiedExternalConfig
 

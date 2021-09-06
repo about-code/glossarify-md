@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/headingIdPandoc/true/",
+  "linking": {
+    "paths": "relative",
+    "headingIdPandoc": true
+  },
+  "glossaries": [{ "file": "./glossary.md" } ]
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/headingAsLink/false/",
+  "linking": {
+    "paths": "relative",
+    "headingAsLink": false
+  },
+  "glossaries": [{ "file": "./glossary.md" } ]
+}
