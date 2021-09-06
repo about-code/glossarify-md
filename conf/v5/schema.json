@@ -85,6 +85,9 @@
                 ,"mentions": "all"
                 ,"headingDepths": [2,3,4,5,6]
                 ,"headingIdAlgorithm": "github"
+                ,"headingIdPandoc": false
+                ,"headingAsLink": true
+                ,"byReference": true
                 ,"limitByAlternatives": 10
             }
         }
@@ -298,13 +301,25 @@
                 }
                 ,"headingIdAlgorithm": {
                     "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org ).",
-                    "enum": ["github", "md5", "sha256"]
+                    "enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
+                }
+                ,"headingAsLink": {
+                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes.",
+                    "type": "boolean"
+                }
+                ,"headingIdPandoc": {
+                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id.",
+                    "type": "boolean"
                 }
                 ,"limitByAlternatives": {
                     "description": "This option can be used to limit the number of links, if there are multiple definitions of a term. When using a positive value, then the system creates links _no more than ..._ alternative links. If the number is negative then the absolute amount indicates to _not link a term at all once there are at least ..._ alternative definitions. For example: \n 1 linkifies the term in text and adds a link to 1 alternative definition (superscript),\n 0 only linkifies the term in text but adds 0 links to alternative definitions,\n -1 does not linkify a term in text once there is at least 1 alternative definition.\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain template and thus repeatedly declare the same heading (= term)."
                     ,"type": "integer"
                     ,"minimum": "-95"
                     ,"maximum": "+95"
+                }
+                ,"byReference": {
+                    "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
+                    ,"type": "boolean"
                 }
             }
         }
