@@ -37,6 +37,11 @@
   "linking": {
     "baseUrl": "file://localhost",
     "paths": "relative",
+    "pathComponents": [
+      "path",
+      "file",
+      "ext"
+    ],
     "mentions": "all",
     "headingDepths": {
       "2": true,

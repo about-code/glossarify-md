@@ -37,6 +37,11 @@
   "linking": {
     "baseUrl": "",
     "paths": "relative",
+    "pathComponents": [
+      "path",
+      "file",
+      "ext"
+    ],
     "mentions": "all",
     "headingDepths": [
       2,
