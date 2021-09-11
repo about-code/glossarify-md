@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../../../conf/v5/schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
   "linking": {
     "paths": "relative",
@@ -28,7 +28,7 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../../../output-actual/config-listOf/pattern/tc2-formatted-paragraph",
+  "outDir": "../../../output-actual/config-listOf/pattern-tc2-formatted-paragraph",
   "dev": {
     "printInputAst": false,
     "reproducablePaths": true,
