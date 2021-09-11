@@ -1,0 +1,23 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/paths-absolute-pathComponents/path",
+  "linking": {
+    "baseUrl": "http://localhost/",
+    "paths": "absolute",
+    "pathComponents": ["path"]
+  },
+  "generateFiles": {
+    "listOfTables": {
+      "file": "./tables.md"
+    },
+    "listOfFigures": {
+      "file": "./figures.md"
+    },
+    "listOf": [{
+      "class": "foo",
+      "file": "./foo.md"
+    }]
+  },
+  "glossaries": [{ "file": "./glossary.md" } ]
+}
