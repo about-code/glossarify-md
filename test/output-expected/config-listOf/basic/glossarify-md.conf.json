@@ -1,5 +1,5 @@
 {
-  "$schema": "../../../conf/v5/schema.json",
+  "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
   "linking": {
     "paths": "relative",
@@ -47,7 +47,7 @@
     }
   ],
   "ignoreCase": false,
-  "outDir": "../../output-actual/config-listOf",
+  "outDir": "../../../output-actual/config-listOf/basic",
   "dev": {
     "printInputAst": false,
     "reproducablePaths": true,
