@@ -1,7 +1,7 @@
 {
   "$schema": "../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/aliases-and-synonyms",
+  "outDir": "../../output-actual/term-substring-dissection",
   "includeFiles": [
     "."
   ],
@@ -19,7 +19,7 @@
   },
   "ignoreCase": false,
   "dev": {
-    "termsFile": "../../output-actual/aliases-and-synonyms/terms.json",
+    "termsFile": "../../output-actual/term-substring-dissection/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false

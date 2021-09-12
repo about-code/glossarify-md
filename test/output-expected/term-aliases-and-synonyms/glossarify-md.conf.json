@@ -1,7 +1,7 @@
 {
   "$schema": "../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/substring_behavior",
+  "outDir": "../../output-actual/term-aliases-and-synonyms",
   "includeFiles": [
     "."
   ],
@@ -19,7 +19,7 @@
   },
   "ignoreCase": false,
   "dev": {
-    "termsFile": "../../output-actual/substring_behavior/terms.json",
+    "termsFile": "../../output-actual/term-aliases-and-synonyms/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false
