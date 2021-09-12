@@ -224,7 +224,7 @@ The default value is:
   "headingIdAlgorithm": "github",
   "headingIdPandoc": false,
   "headingAsLink": true,
-  "byReference": true,
+  "byReferenceDefinition": true,
   "limitByAlternatives": 10
 }
 ```
@@ -824,11 +824,11 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 
 *   Type: `integer`
 
-### byReference
+### byReferenceDefinition
 
 When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on <http://commonmark.org>.
 
-`byReference`
+`byReferenceDefinition`
 
 *   is optional
 
