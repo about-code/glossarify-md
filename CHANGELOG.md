@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.3](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.2...v6.0.0-alpha.3) (2021-09-12)
+
+
+### ⚠ BREAKING CHANGES
+
+* **compatibility:** Dropping use of deprecated `url.parse()` NodeJS-API.
+Unfortunately, there is no replacement for the old API that is fully compatible.
+As a consequence you *may* observe that path encoding has changed. Previously
+all paths (relative or absolute) have been passed through
+`url.parse(path).format()` and thereby got URL-encoded. With this change
+(differently) encoded URLs are only created for option `paths: "absolute"` in
+combination with a `baseUrl` other than `"/"`. Values for `baseUrl` (if present)
+now must be `"/"` *or* must be a URL which conforms to WHATWG URL specification
+and which can be passed as a *base* parameter to Node's URL implementation (see
+also https://docs.nodejs.org/api/url.html).
+
+### Features
+
+* **compatibility:** Drop deprecated `url.parse()` NodeJS-API. ([#178](https://github.com/about-code/glossarify-md/issues/178)) ([ed8ffc8](https://github.com/about-code/glossarify-md/commit/ed8ffc8b6ffdd25cad13153b5133d3a37a1ce54f))
+* New option `linking.pathComponents` ([#173](https://github.com/about-code/glossarify-md/issues/173)) ([1a2fdd6](https://github.com/about-code/glossarify-md/commit/1a2fdd6af4bcc37f12d2c2e5c535e593c0458b45))
+* Rename option `linking.byReference` to `linking.byReferenceDefinition`. ([#174](https://github.com/about-code/glossarify-md/issues/174)) ([7950a17](https://github.com/about-code/glossarify-md/commit/7950a17a73f1b7a65797271a22c37fc8b049cf12))
+
 ## [6.0.0-alpha.2](https://github.com/about-code/glossarify-md/compare/v5.2.0...v6.0.0-alpha.2) (2021-09-06)
 
 
