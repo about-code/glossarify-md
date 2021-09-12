@@ -53,7 +53,7 @@
     "headingIdAlgorithm": "github",
     "headingIdPandoc": false,
     "headingAsLink": true,
-    "byReference": true,
+    "byReferenceDefinition": true,
     "limitByAlternatives": 10
   },
   "outDir": "../docs-glossarified",
