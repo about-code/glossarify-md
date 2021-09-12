@@ -82,6 +82,7 @@
             ,"default": {
                 "baseUrl": ""
                 ,"paths": "relative"
+                ,"pathComponents": ["path", "file", "ext"]
                 ,"mentions": "all"
                 ,"headingDepths": [2,3,4,5,6]
                 ,"headingIdAlgorithm": "github"
@@ -281,9 +282,18 @@
                     ,"format": "url"
                 }
                 ,"paths": {
-                    "description": "Control how paths to linked documents will be constructed. Choosing \"absolute\" requires a \"baseUrl\" as well."
+                    "description": "Control how paths to linked documents will be constructed. When choosing \"absolute\" you may set a \"baseUrl\" as well. Without a base URL absolute file system paths will be generated."
                     ,"type": "string"
                     ,"enum": ["relative", "absolute", "none"]
+                }
+                ,"pathComponents": {
+                    "description": "With path templates and template variables {path}, {file}, {ext} you are able to adjust which path components details (see also \"paths\" option). Note that path templates must not contain \"..\" to construct relative-upward paths."
+                    ,"type": "array"
+                    ,"maxItems": 3
+                    ,"items": {
+                        "type": "string",
+                        "enum": ["path", "file", "ext"]
+                    }
                 }
                 ,"mentions": {
                     "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
