@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../../../output-actual/config-linking/heading-id-algorithm/md5/ambiguous-term",
+  "outDir": "../../../../../output-actual/config-linking/headingIdAlgorithm/md5/ambiguous-term",
   "linking": {
     "paths": "relative",
     "headingIdAlgorithm": "md5"
