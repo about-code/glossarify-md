@@ -88,7 +88,7 @@
                 ,"headingIdAlgorithm": "github"
                 ,"headingIdPandoc": false
                 ,"headingAsLink": true
-                ,"byReference": true
+                ,"byReferenceDefinition": true
                 ,"limitByAlternatives": 10
             }
         }
@@ -327,7 +327,7 @@
                     ,"minimum": "-95"
                     ,"maximum": "+95"
                 }
-                ,"byReference": {
+                ,"byReferenceDefinition": {
                     "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
                     ,"type": "boolean"
                 }
