@@ -1,7 +1,7 @@
 {
   "$schema": "../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/count-term-occurrences",
+  "outDir": "../../output-actual/term-count-occurrences",
   "includeFiles": [
     "."
   ],
@@ -19,7 +19,7 @@
   },
   "ignoreCase": false,
   "dev": {
-    "termsFile": "../../output-actual/count-term-occurrences/terms.json",
+    "termsFile": "../../output-actual/term-count-occurrences/terms.json",
     "printInputAst": false,
     "reproducablePaths": true,
     "printOutputAst": false
