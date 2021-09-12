@@ -3,7 +3,7 @@
 ## Section
 
 GIVEN a document *Document* mentioning glossary term *Term*
-AND a configuration `linking.byReference: false`
+AND a configuration `linking.byReferenceDefinition: false`
 THEN links MUST be placed inline similar to
 
 ~~~md

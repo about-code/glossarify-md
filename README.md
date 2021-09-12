@@ -965,7 +965,7 @@ Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collat
 - **Range:** `string[]`
 
 Paths or Glob-Patterns for Markdown files to copy to `outDir` but keep there as they are without
-glossarifying and linking. Non-markdown files won't be processed anyways, so need to add those.
+glossarifying and linking. Non-markdown files won't be processed anyways, so no need to add those.
 
 #### `linking`
 
@@ -974,7 +974,7 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so nee
 ```
 {
   baseUrl: string,
-  byReference: boolean,
+  byReferenceDefinition: boolean,
   paths: "relative" | "absolute",
   pathComponents: ["path", "file", "ext"],
   mentions: "all" | "first-in-paragraph",
