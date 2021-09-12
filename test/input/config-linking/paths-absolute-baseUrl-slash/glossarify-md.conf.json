@@ -1,10 +1,10 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../output-actual/config-linking/paths-absolute-baseUrl-blank",
+  "outDir": "../../../output-actual/config-linking/paths-absolute-baseUrl-slash",
   "glossaries": [{ "file": "./**/*.md" } ],
   "linking": {
     "paths": "absolute",
-    "baseUrl": " "
+    "baseUrl": "/"
   }
 }

@@ -77,7 +77,7 @@
     "test_45": "node . --config ./input/config-linking/paths-none/glossarify-md.conf.json",
     "test_46": "node . --config ./input/config-linking/paths-relative/glossarify-md.conf.json",
     "test_47": "node . --config ./input/config-linking/paths-absolute-baseUrl/glossarify-md.conf.json",
-    "test_48": "node . --config ./input/config-linking/paths-absolute-baseUrl-blank/glossarify-md.conf.json",
+    "test_48": "node . --config ./input/config-linking/paths-absolute-baseUrl-slash/glossarify-md.conf.json",
     "test_49": "node . --config ./input/config-linking/paths-absolute-pathComponents/path/glossarify-md.conf.json",
     "test_50": "node . --config ./input/config-linking/paths-absolute-pathComponents/path-file/glossarify-md.conf.json",
     "test_51": "node . --config ./input/config-linking/paths-absolute-pathComponents/path-file-ext/glossarify-md.conf.json",
