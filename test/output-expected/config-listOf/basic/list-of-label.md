@@ -13,7 +13,7 @@
 
 [1]: ./document-infer-label.md "./document-infer-label.md"
 
-[2]: ./document-infer-label.md#label-test-Case-B:-Label-from-%27id%27 "Test Case B: Label from 'id'"
+[2]: ./document-infer-label.md#label-test-Case-B:-Label-from-'id' "Test Case B: Label from 'id'"
 
 [3]: ./document-infer-label.md#label-no-title-but-text "Test Case C: 'innerText'"
 
