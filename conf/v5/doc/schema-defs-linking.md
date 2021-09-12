@@ -18,7 +18,7 @@ The base url to use when creating absolute links to glossary.
 
 ## paths
 
-Control how paths to linked documents will be constructed. Choosing "absolute" requires a "baseUrl" as well.
+Control how paths to linked documents will be constructed. When choosing "absolute" you may set a "baseUrl" as well. Without a base URL absolute file system paths will be generated.
 
 `paths`
 
@@ -35,6 +35,20 @@ Control how paths to linked documents will be constructed. Choosing "absolute" r
 | `"relative"` |             |
 | `"absolute"` |             |
 | `"none"`     |             |
+
+## pathComponents
+
+With path templates and template variables {path}, {file}, {ext} you are able to adjust which path components details (see also "paths" option). Note that path templates must not contain ".." to construct relative-upward paths.
+
+`pathComponents`
+
+*   is optional
+
+*   Type: `string[]`
+
+### pathComponents Constraints
+
+**maximum number of items**: the maximum number of items for this array is: `3`
 
 ## mentions
 
