@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/pandoc/config-linking/headingIdPandoc",
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "includeFiles": ["."],
+  "excludeFiles": [],
+  "glossaries": [{ "file": "./**/*.md" } ],
+  "ignoreCase": false
+}

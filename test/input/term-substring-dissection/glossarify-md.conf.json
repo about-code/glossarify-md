@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/term-substring-dissection",
+  "includeFiles": [
+    "."
+  ],
+  "excludeFiles": [],
+  "keepRawFiles": [],
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": ""
+    }
+  ],
+  "linking": {
+    "paths": "relative",
+    "mentions": "all"
+  },
+  "ignoreCase": false,
+  "dev": {
+    "termsFile": "../../output-actual/term-substring-dissection/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
+}
