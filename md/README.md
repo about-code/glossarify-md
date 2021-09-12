@@ -16,8 +16,10 @@
 [GFM]: https://github.github.com/gfm/
 [glob]: https://github.com/isaacs/node-glob#glob-primer
 [glossarify-md]: https://github.com/about-code/glossarify-md
+[link reference definitions]: https://spec.commonmark.org/0.30/#link-reference-definition
 [mdast]: https://github.com/syntax-tree/mdast
 [micromark]: https://github.com/micromark/
+[pandoc]: https://pandoc.org
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
 [remark]: https://github.com/remarkjs/remark
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
@@ -926,9 +928,14 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so nee
 ~~~
 {
   baseUrl: string,
+  byReference: boolean,
   paths: "relative" | "absolute",
+  pathComponents: ["path", "file", "ext"],
   mentions: "all" | "first-in-paragraph",
+  headingAsLink: boolean,
   headingDepths: number[],
+  headingIdAlgorithm: "github" | "md5" | "md5-7" | "sha256" | "sha256-7",
+  headingIdPandoc: boolean,
   limitByAlternatives: number
 }
 ~~~
@@ -939,26 +946,25 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so nee
 
 URL to prepend to links. Only effective with `linking.paths: "absolute"`. In most situations, e.g. when hosting markdown files in a repository or processing markdown files with an HTML converter omitting a pre-defined `baseUrl` and using `linking.paths: "relative"` is likely to work better.
 
-#### `linking.paths`
+#### `linking.byReferenceDefinition`
 
-[opt-linking]: #linkingpaths
+- **Range:** `boolean`
+- **Default:** `true`,
+- **Since:** v6.0.0
 
-- **Range:** `"relative" | "absolute"`
-- **Default:** `"relative"`
+Whether to convert inline-links to [link reference definitions] (size-efficient).
 
-Whether to create absolute or relative link-urls to the glossary.
+#### `linking.headingAsLink`
 
-> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+- **Range:** `boolean`
+- **Default:** `true`
+- **Since:** v6.0.0
 
-#### `linking.mentions`
+Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like [pandoc] don't care about linkification but presence of additional syntax.
 
-- **Range:** `"all" | "first-in-paragraph"`
-- **Default:** `"all"`
-- **Since:** v5.0.0
+See also
 
-By default every mention of a term will be linkified. Sometimes this can
-result in too much links affecting readability. This option provides finer
-control of linkify behavior.
+- [`linking.headingIdPandoc`](#linkingheadingidpandoc)
 
 #### `linking.headingDepths`
 
@@ -969,6 +975,30 @@ control of linkify behavior.
 Use this option to select markdown heading depths which should be considered terms or sections for cross-linking. For example, to only consider headings `## text` at depth 2 or `### text` at depth 3 but not at depths 1 and 4-6 provide an array `[2,3]`
 
 > **Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
+
+
+#### `linking.headingIdAlgorithm`
+
+- **Range:** `"github" | "md5" | "md5-7" | "sha256" |"sha256-7"`
+- **Default:** `"github"`
+- **Since:** v6.0.0
+
+Algorithm to use for generating heading identifiers (slugs). `"github"` will only guarantee *unique-per file* IDs. The MD5 and SHA256 options will make [glossarify-md] calculate a hash over file path and heading phrase. So they are able to guarantee *unique-in-fileset* IDs given that a particular heading phrase occurs *once only* within a file. For brevity the `*-7` options truncate hashes to a maximum length of 7. They will still be unlikely to collide in a typical project. You'll need *unique-in-fileset* IDs if plan on concatenating output files, e.g. with [pandoc]. Otherwise links in the final result aren't guaranteed to reference the correct target anymore.
+
+#### `linking.headingIdPandoc`
+
+- **Range:** `boolean`
+- **Default:** false
+- **Since:** v6.0.0
+
+Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with [pandoc].
+
+> **Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+
+See also
+
+- [`linking.headingIdAlgorithm`](#linkingheadingidalgorithm)
+- [`linking.paths`](#linkingpaths)
 
 #### `linking.limitByAlternatives`
 
@@ -982,6 +1012,42 @@ Control how a term occurrence is linkified if there are *multiple  definitions* 
 - **negative value**: the system does *not create a term-link at all once there are more than `x` alternative definitions* of a term or heading.
 - **zero**: create a link but to a single out of all definitions, only
 
+
+#### `linking.mentions`
+
+- **Range:** `"all" | "first-in-paragraph"`
+- **Default:** `"all"`
+- **Since:** v5.0.0
+
+By default every mention of a term will be linkified. Sometimes this can
+result in too much links affecting readability. This option provides finer
+control of linkify behavior.
+
+
+#### `linking.paths`
+
+[opt-linking]: #linkingpaths
+
+- **Range:** `"relative" | "absolute" | "none" `
+- **Default:** `"relative"`
+
+Whether to create absolute or relative link-urls to the glossary.
+
+> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
+
+#### `linking.pathComponents`
+
+- **Range:** `string[] with "path", "file", "ext"`
+- **Default:** `["path", "file", "ext"]`
+- **Since:** v6.0.0
+
+Allows to tweak which components of a file path should make it into auto-generated links. Examples:
+
+- `["path", "file", "ext"]` => `./glossary/default.md#term`
+- `["path", "file"]` => `./glossary/default#term`
+- `["file"]` => `default#term`
+
+
 #### `outDir`
 
 - **Range:** `string`
@@ -992,6 +1058,7 @@ The directory where to write output files to.
 > files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
 
 The recommendation is to write outputs to a separate directory such as `../out` or `../target` or `../docs-glossarified`.
+
 
 #### `outDirDropOld`
 
