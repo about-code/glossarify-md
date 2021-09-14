@@ -566,7 +566,7 @@ The link label for list items will be inferred in this order (first-match):
 > **Since v3.3.0**
 
 So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
-`listOfFigures` and [`listOfTables`](#list-of-tables) fits in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
+`listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
 
 ```md
 ![List item Label](./figure.png)
@@ -742,7 +742,7 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 
 > **Which syntax to include in the RegExp**:
 >
-> You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on  see next).
+> You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on syntax extensions below).
 
 ## Markdown Syntax Extensions
 
@@ -965,7 +965,7 @@ Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collat
 - **Range:** `string[]`
 
 Paths or Glob-Patterns for Markdown files to copy to `outDir` but keep there as they are without
-glossarifying and linking. Non-markdown files won't be processed anyways, so need to add those.
+glossarifying and linking. Non-markdown files won't be processed anyways, so no need to add those.
 
 #### `linking`
 
@@ -974,7 +974,7 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so nee
 ```
 {
   baseUrl: string,
-  byReference: boolean,
+  byReferenceDefinition: boolean,
   paths: "relative" | "absolute",
   pathComponents: ["path", "file", "ext"],
   mentions: "all" | "first-in-paragraph",

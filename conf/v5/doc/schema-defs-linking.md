@@ -38,7 +38,7 @@ Control how paths to linked documents will be constructed. When choosing "absolu
 
 ## pathComponents
 
-With path templates and template variables {path}, {file}, {ext} you are able to adjust which path components details (see also "paths" option). Note that path templates must not contain ".." to construct relative-upward paths.
+Adjust which path components should make it into auto-generated links. glossarify-md won't rewrite your own links.
 
 `pathComponents`
 
