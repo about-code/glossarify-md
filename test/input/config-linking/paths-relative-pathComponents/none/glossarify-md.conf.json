@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/paths-relative-pathComponents/none",
+  "linking": {
+    "paths": "relative",
+    "pathComponents": []
+  },
+  "generateFiles": {
+    "listOfTables": {
+      "file": "./tables.md"
+    },
+    "listOfFigures": {
+      "file": "./figures.md"
+    },
+    "listOf": [{
+      "class": "foo",
+      "file": "./foo.md"
+    }]
+  },
+  "glossaries": [{ "file": "./glossary.md" } ]
+}
