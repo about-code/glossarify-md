@@ -960,9 +960,9 @@ Whether to convert inline-links to [link reference definitions] (size-efficient)
 - **Default:** `true`
 - **Since:** v6.0.0
 
-Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like [pandoc] don't care about linkification but presence of additional syntax.
+Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like [pandoc] don't need linkified headings but special syntax.
 
-See also
+See also:
 
 - [`linking.headingIdPandoc`](#linkingheadingidpandoc)
 
@@ -983,7 +983,7 @@ Use this option to select markdown heading depths which should be considered ter
 - **Default:** `"github"`
 - **Since:** v6.0.0
 
-Algorithm to use for generating heading identifiers (slugs). `"github"` will only guarantee *unique-per file* IDs. The MD5 and SHA256 options will make [glossarify-md] calculate a hash over file path and heading phrase. So they are able to guarantee *unique-in-fileset* IDs given that a particular heading phrase occurs *once only* within a file. For brevity the `*-7` options truncate hashes to a maximum length of 7. They will still be unlikely to collide in a typical project. You'll need *unique-in-fileset* IDs if plan on concatenating output files, e.g. with [pandoc]. Otherwise links in the final result aren't guaranteed to reference the correct target anymore.
+Algorithm to use for generating heading identifiers (slugs). `"github"` will only guarantee *unique-per file* IDs. The MD5 and SHA256 options will make [glossarify-md] calculate a hash over file path and heading phrase. So they are able to guarantee *unique-in-fileset* IDs given that a particular heading phrase occurs *once only* within a file. For brevity the `*-7` options truncate hashes to a maximum length of 7. They will still be unlikely to collide in a typical project. You'll need *unique-in-fileset* IDs if you plan on concatenating output files, e.g. with [pandoc]. Otherwise links in the final result aren't guaranteed to reference the correct target anymore.
 
 #### `linking.headingIdPandoc`
 
