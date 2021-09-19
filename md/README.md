@@ -1047,6 +1047,7 @@ Allows to tweak which components of a file path should make it into auto-generat
 - `["path", "file"]` => `./glossary/default#term`
 - `["file"]` => `default#term`
 
+Use `linking.paths: "none"` if you would like to have a fragment (`#`) but no path components.
 
 #### `outDir`
 
