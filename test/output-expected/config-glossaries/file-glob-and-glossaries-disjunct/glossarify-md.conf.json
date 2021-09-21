@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/file-glob-and-glossaries-disjunct",
+  "glossaries": [
+    { "file": "./documents/**/document-*.md" },
+    { "file": "./glossaries/glossary-a.md", "termHint": "🄰 ${term}" },
+    { "file": "./glossaries/glossary-b.md", "termHint": "🄱 ${term}" }
+  ]
+}
