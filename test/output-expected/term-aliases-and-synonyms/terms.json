@@ -1,11 +1,11 @@
 [
   {
     "shortDesc": "",
-    "id": "alias-substring-behavior",
     "value": "Alias substring behavior",
     "valueHash8": "e8688195",
     "hint": "",
     "longDesc": "",
+    "headingId": "alias-substring-behavior",
     "headingDepth": 2,
     "anchor": "#alias-substring-behavior",
     "glossary": {
@@ -19,11 +19,11 @@
   },
   {
     "shortDesc": "",
-    "id": "aliases-and-synonyms",
     "value": "Aliases and Synonyms",
     "valueHash8": "6576f2d7",
     "hint": "",
     "longDesc": "",
+    "headingId": "aliases-and-synonyms",
     "headingDepth": 1,
     "anchor": "#aliases-and-synonyms",
     "glossary": {
@@ -37,11 +37,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
-    "id": "china",
     "value": "China",
     "valueHash8": "ae54a5c0",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
+    "headingId": "china",
     "headingDepth": 3,
     "anchor": "#china",
     "glossary": {
@@ -60,11 +60,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "id": "field",
     "value": "FIELD",
     "valueHash8": "552a5418",
     "hint": "",
     "longDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "headingId": "field",
     "headingDepth": 3,
     "anchor": "#field",
     "glossary": {
@@ -80,11 +80,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
-    "id": "flower",
     "value": "Flower",
     "valueHash8": "338d1f80",
     "hint": "",
     "longDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "headingId": "flower",
     "headingDepth": 3,
     "anchor": "#flower",
     "glossary": {
@@ -100,11 +100,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
-    "id": "friendship",
     "value": "Friendship",
     "valueHash8": "a31816a0",
     "hint": "",
     "longDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
+    "headingId": "friendship",
     "headingDepth": 3,
     "anchor": "#friendship",
     "glossary": {
@@ -120,11 +120,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
-    "id": "hopefully",
     "value": "Hopefully",
     "valueHash8": "efc57f4f",
     "hint": "",
     "longDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
+    "headingId": "hopefully",
     "headingDepth": 3,
     "anchor": "#hopefully",
     "glossary": {
@@ -140,11 +140,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "id": "issue",
     "value": "Issue",
     "valueHash8": "642facf6",
     "hint": "",
     "longDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "headingId": "issue",
     "headingDepth": 3,
     "anchor": "#issue",
     "glossary": {
@@ -160,11 +160,11 @@
   },
   {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
-    "id": "our",
     "value": "OUR",
     "valueHash8": "1f14b053",
     "hint": "",
     "longDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
+    "headingId": "our",
     "headingDepth": 3,
     "anchor": "#our",
     "glossary": {
@@ -180,11 +180,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
-    "id": "term-1",
     "value": "Term 1",
     "valueHash8": "f4b70a17",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "headingId": "term-1",
     "headingDepth": 2,
     "anchor": "#term-1",
     "glossary": {
@@ -202,11 +202,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
-    "id": "term-2",
     "value": "Term 2",
     "valueHash8": "638f18ca",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
+    "headingId": "term-2",
     "headingDepth": 2,
     "anchor": "#term-2",
     "glossary": {
@@ -224,11 +224,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
-    "id": "term-3",
     "value": "Term 3",
     "valueHash8": "3b1ce349",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
+    "headingId": "term-3",
     "headingDepth": 2,
     "anchor": "#term-3",
     "glossary": {
@@ -246,11 +246,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
-    "id": "term-4",
     "value": "Term 4",
     "valueHash8": "5ec3b229",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
+    "headingId": "term-4",
     "headingDepth": 2,
     "anchor": "#term-4",
     "glossary": {
@@ -268,11 +268,11 @@
   },
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
-    "id": "term-5",
     "value": "Term 5",
     "valueHash8": "33434f11",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
+    "headingId": "term-5",
     "headingDepth": 2,
     "anchor": "#term-5",
     "glossary": {
@@ -289,11 +289,11 @@
   },
   {
     "shortDesc": "",
-    "id": "unicode-support",
     "value": "Unicode Support",
     "valueHash8": "bde525aa",
     "hint": "",
     "longDesc": "",
+    "headingId": "unicode-support",
     "headingDepth": 2,
     "anchor": "#unicode-support",
     "glossary": {

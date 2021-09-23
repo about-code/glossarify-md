@@ -1,11 +1,11 @@
 [
   {
     "shortDesc": "",
-    "id": "glossary",
     "value": "Glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
@@ -19,11 +19,11 @@
   },
   {
     "shortDesc": "Test term",
-    "id": "ipsum",
     "value": "Ipsum",
     "valueHash8": "1034a44d",
     "hint": "",
     "longDesc": "Test term",
+    "headingId": "ipsum",
     "headingDepth": 2,
     "anchor": "#ipsum",
     "glossary": {
@@ -37,11 +37,11 @@
   },
   {
     "shortDesc": "Test term",
-    "id": "lorem",
     "value": "Lorem",
     "valueHash8": "db6ff2ff",
     "hint": "",
     "longDesc": "Test term",
+    "headingId": "lorem",
     "headingDepth": 2,
     "anchor": "#lorem",
     "glossary": {

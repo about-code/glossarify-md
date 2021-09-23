@@ -1,11 +1,11 @@
 [
   {
     "shortDesc": "",
-    "id": "all-lowercase",
     "value": "all-lowercase",
     "valueHash8": "7d4b9ec5",
     "hint": "",
     "longDesc": "",
+    "headingId": "all-lowercase",
     "headingDepth": 2,
     "anchor": "#all-lowercase",
     "glossary": {
@@ -19,11 +19,11 @@
   },
   {
     "shortDesc": "",
-    "id": "all-uppercase",
     "value": "ALL-UPPERCASE",
     "valueHash8": "7123afe0",
     "hint": "",
     "longDesc": "",
+    "headingId": "all-uppercase",
     "headingDepth": 2,
     "anchor": "#all-uppercase",
     "glossary": {
@@ -37,11 +37,11 @@
   },
   {
     "shortDesc": "",
-    "id": "first-lowercase",
     "value": "fIRST-lOWERCASE",
     "valueHash8": "4dc4af85",
     "hint": "",
     "longDesc": "",
+    "headingId": "first-lowercase",
     "headingDepth": 2,
     "anchor": "#first-lowercase",
     "glossary": {
@@ -55,11 +55,11 @@
   },
   {
     "shortDesc": "",
-    "id": "first-uppercase",
     "value": "First-Uppercase",
     "valueHash8": "a6710ef4",
     "hint": "",
     "longDesc": "",
+    "headingId": "first-uppercase",
     "headingDepth": 2,
     "anchor": "#first-uppercase",
     "glossary": {
@@ -73,11 +73,11 @@
   },
   {
     "shortDesc": "",
-    "id": "mixed-case",
     "value": "MiXeD-CaSe",
     "valueHash8": "fa8f9783",
     "hint": "",
     "longDesc": "",
+    "headingId": "mixed-case",
     "headingDepth": 2,
     "anchor": "#mixed-case",
     "glossary": {
@@ -91,11 +91,11 @@
   },
   {
     "shortDesc": "",
-    "id": "testing-config-option-ignorecase",
     "value": "Testing Config Option ignoreCase",
     "valueHash8": "faeeca2f",
     "hint": "",
     "longDesc": "",
+    "headingId": "testing-config-option-ignorecase",
     "headingDepth": 1,
     "anchor": "#testing-config-option-ignorecase",
     "glossary": {

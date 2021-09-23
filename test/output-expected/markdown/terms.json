@@ -1,11 +1,11 @@
 [
   {
     "shortDesc": "foo",
-    "id": "dolor",
     "value": "dolor",
     "valueHash8": "a98931d1",
     "hint": "↴",
     "longDesc": "foo",
+    "headingId": "dolor",
     "headingDepth": 2,
     "anchor": "#dolor",
     "glossary": {
@@ -19,11 +19,11 @@
   },
   {
     "shortDesc": "",
-    "id": "glossary",
     "value": "Glossary",
     "valueHash8": "31d109d1",
     "hint": "↴",
     "longDesc": "",
+    "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
@@ -37,11 +37,11 @@
   },
   {
     "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
-    "id": "lorem-ipsum",
     "value": "Lorem ipsum",
     "valueHash8": "0956d2fb",
     "hint": "↴",
     "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "headingId": "lorem-ipsum",
     "headingDepth": 2,
     "anchor": "#lorem-ipsum",
     "glossary": {
@@ -55,11 +55,11 @@
   },
   {
     "shortDesc": "",
-    "id": "sit",
     "value": "sit",
     "valueHash8": "87d4eeb7",
     "hint": "↴",
     "longDesc": "",
+    "headingId": "sit",
     "headingDepth": 2,
     "anchor": "#sit",
     "glossary": {

@@ -1,11 +1,11 @@
 [
   {
     "shortDesc": "",
-    "id": "glossary-a",
     "value": "Glossary A",
     "valueHash8": "ecedfece",
     "hint": "",
     "longDesc": "",
+    "headingId": "glossary-a",
     "headingDepth": 1,
     "anchor": "#glossary-a",
     "glossary": {
@@ -19,11 +19,11 @@
   },
   {
     "shortDesc": "",
-    "id": "glossary-b",
     "value": "Glossary B",
     "valueHash8": "58f80f50",
     "hint": "",
     "longDesc": "",
+    "headingId": "glossary-b",
     "headingDepth": 1,
     "anchor": "#glossary-b",
     "glossary": {
@@ -37,11 +37,11 @@
   },
   {
     "shortDesc": "",
-    "id": "in-glossary-a-and-b",
     "value": "In Glossary A and B",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
+    "headingId": "in-glossary-a-and-b",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
@@ -55,11 +55,11 @@
   },
   {
     "shortDesc": "",
-    "id": "in-glossary-a-and-b",
     "value": "In Glossary A and B",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
+    "headingId": "in-glossary-a-and-b",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
@@ -73,11 +73,11 @@
   },
   {
     "shortDesc": "",
-    "id": "only-in-glossary-a",
     "value": "Only in Glossary A",
     "valueHash8": "3f37f840",
     "hint": "",
     "longDesc": "",
+    "headingId": "only-in-glossary-a",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-a",
     "glossary": {
@@ -91,11 +91,11 @@
   },
   {
     "shortDesc": "",
-    "id": "only-in-glossary-b",
     "value": "Only in Glossary B",
     "valueHash8": "f9f30195",
     "hint": "",
     "longDesc": "",
+    "headingId": "only-in-glossary-b",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-b",
     "glossary": {
