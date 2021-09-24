@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/uri-and-generated-heading-id",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": "~",
+      "uri": "https://my.org/vocab/#"
+    }
+  ],
+  "linking": {
+    "paths": "relative"
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}
