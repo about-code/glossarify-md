@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary A",
+    "uri": "#glossary-a",
     "valueHash8": "ecedfece",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "",
     "value": "Glossary B",
+    "uri": "#glossary-b",
     "valueHash8": "58f80f50",
     "hint": "",
     "longDesc": "",
@@ -38,6 +40,7 @@
   {
     "shortDesc": "",
     "value": "In Glossary A and B",
+    "uri": "#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
@@ -56,6 +59,7 @@
   {
     "shortDesc": "",
     "value": "In Glossary A and B",
+    "uri": "#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
@@ -74,6 +78,7 @@
   {
     "shortDesc": "",
     "value": "Only in Glossary A",
+    "uri": "#only-in-glossary-a",
     "valueHash8": "3f37f840",
     "hint": "",
     "longDesc": "",
@@ -92,6 +97,7 @@
   {
     "shortDesc": "",
     "value": "Only in Glossary B",
+    "uri": "#only-in-glossary-b",
     "valueHash8": "f9f30195",
     "hint": "",
     "longDesc": "",

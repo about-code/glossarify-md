@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary",
+    "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
     "value": "Term",
+    "uri": "#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",

@@ -2,6 +2,7 @@
   {
     "shortDesc": "must not be referred to by excluded files.",
     "value": "Term",
+    "uri": "#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "must not be referred to by excluded files.",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "",
     "value": "Testing option excludeFiles",
+    "uri": "#testing-option-excludefiles",
     "valueHash8": "27f18772",
     "hint": "",
     "longDesc": "",

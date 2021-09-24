@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary",
+    "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "Test term",
     "value": "Ipsum",
+    "uri": "#ipsum",
     "valueHash8": "1034a44d",
     "hint": "",
     "longDesc": "Test term",
@@ -38,6 +40,7 @@
   {
     "shortDesc": "Test term",
     "value": "Lorem",
+    "uri": "#lorem",
     "valueHash8": "db6ff2ff",
     "hint": "",
     "longDesc": "Test term",

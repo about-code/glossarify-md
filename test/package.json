@@ -99,7 +99,7 @@
     "test_67": "node . --config ./input/config-listOfFigures/image-reference/glossarify-md.conf.json",
     "test_68": "node . --config ./input/config-listOfFigures/option-title-missing/glossarify-md.conf.json",
     "test_69": "node . --config ./input/config-listOfFigures/option-with-listOf-combined/glossarify-md.conf.json",
-    "test_80": "node . --config ./input/config-listOfTables/glossarify-md.conf.json",
+    "test_70": "node . --config ./input/config-listOfTables/glossarify-md.conf.json",
     "test_71": "node . --config ./input/config-listOf/basic/glossarify-md.conf.json",
     "test_72": "node . --config ./input/config-listOf/pattern-tc1-text-paragraph/glossarify-md.conf.json",
     "test_73": "node . --config ./input/config-listOf/pattern-tc2-formatted-paragraph/glossarify-md.conf.json",

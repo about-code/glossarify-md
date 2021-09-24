@@ -2,6 +2,7 @@
   {
     "shortDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
     "value": "#Hashtag",
+    "uri": "#hashtag",
     "valueHash8": "896623e6",
     "hint": "",
     "longDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "Testing German Umlauts.",
     "value": "äöüß Term begins with Umlauts",
+    "uri": "#äöüß-term-begins-with-umlauts",
     "valueHash8": "6522ba09",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -38,6 +40,7 @@
   {
     "shortDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
     "value": "Äquator",
+    "uri": "#äquator",
     "valueHash8": "e9641aed",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
@@ -56,6 +59,7 @@
   {
     "shortDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "value": "bold-format",
+    "uri": "#bold-format",
     "valueHash8": "84c03e70",
     "hint": "",
     "longDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -74,6 +78,7 @@
   {
     "shortDesc": "Word ends with symbols",
     "value": "China中国",
+    "uri": "#china中国",
     "valueHash8": "39dc6cc0",
     "hint": "",
     "longDesc": "Word ends with symbols",
@@ -92,6 +97,7 @@
   {
     "shortDesc": "Word contains symbols",
     "value": "Chi中国na",
+    "uri": "#chi中国na",
     "valueHash8": "bd46218a",
     "hint": "",
     "longDesc": "Word contains symbols",
@@ -110,6 +116,7 @@
   {
     "shortDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "value": "codespan-format",
+    "uri": "#codespan-format",
     "valueHash8": "31e07118",
     "hint": "",
     "longDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -128,6 +135,7 @@
   {
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.",
     "value": "dense-definition",
+    "uri": "#dense-definition",
     "valueHash8": "5108ecbd",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.\nTHEN term, short and long description MUST still be extracted, correctly.",
@@ -146,6 +154,7 @@
   {
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.",
     "value": "dense-definition-with-alias",
+    "uri": "#dense-definition-with-alias",
     "valueHash8": "009d6898",
     "hint": "",
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.\nTHEN term, aliases, short and long description MUST still be extracted, correctly.",
@@ -166,6 +175,7 @@
   {
     "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
     "value": "Der Tod und das Mädchen",
+    "uri": "#der-tod-und-das-mädchen",
     "valueHash8": "71ec658f",
     "hint": "",
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
@@ -184,6 +194,7 @@
   {
     "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "value": "Faß",
+    "uri": "#faß",
     "valueHash8": "d77b79e8",
     "hint": "",
     "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
@@ -202,6 +213,7 @@
   {
     "shortDesc": "",
     "value": "Glossary",
+    "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -220,6 +232,7 @@
   {
     "shortDesc": "",
     "value": "Glossary A",
+    "uri": "#glossary-a",
     "valueHash8": "ecedfece",
     "hint": " (a&b)",
     "longDesc": "",
@@ -238,6 +251,7 @@
   {
     "shortDesc": "",
     "value": "Glossary A.",
+    "uri": "#glossary-a",
     "valueHash8": "5384015c",
     "hint": " (a/b)",
     "longDesc": "",
@@ -256,6 +270,7 @@
   {
     "shortDesc": "",
     "value": "Glossary B",
+    "uri": "#glossary-b",
     "valueHash8": "58f80f50",
     "hint": " (a/b)",
     "longDesc": "",
@@ -274,6 +289,7 @@
   {
     "shortDesc": "",
     "value": "Glossary B",
+    "uri": "#glossary-b",
     "valueHash8": "58f80f50",
     "hint": " (a&b)",
     "longDesc": "",
@@ -292,6 +308,7 @@
   {
     "shortDesc": "",
     "value": "Glossary with markdown formatted term",
+    "uri": "#glossary-with-markdown-formatted-term",
     "valueHash8": "1c3c8a93",
     "hint": "",
     "longDesc": "",
@@ -310,6 +327,7 @@
   {
     "shortDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
     "value": "In parts formatted",
+    "uri": "#in-parts-formatted",
     "valueHash8": "8244485f",
     "hint": "",
     "longDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
@@ -328,6 +346,7 @@
   {
     "shortDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "value": "italic-format",
+    "uri": "#italic-format",
     "valueHash8": "94502241",
     "hint": "",
     "longDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
@@ -346,6 +365,7 @@
   {
     "shortDesc": "Testing German Umlauts.",
     "value": "Term contains äöüß Umlauts",
+    "uri": "#term-contains-äöüß-umlauts",
     "valueHash8": "72836284",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -364,6 +384,7 @@
   {
     "shortDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
     "value": "Term Disjunct A",
+    "uri": "#term-disjunct-a",
     "valueHash8": "53fd6259",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
@@ -382,6 +403,7 @@
   {
     "shortDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
     "value": "Term Disjunct B",
+    "uri": "#term-disjunct-b",
     "valueHash8": "66c3bc6f",
     "hint": " (a/b)",
     "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
@@ -400,6 +422,7 @@
   {
     "shortDesc": "Testing German Umlauts.",
     "value": "Term ends with Umlauts äöüß",
+    "uri": "#term-ends-with-umlauts-äöüß",
     "valueHash8": "cf37c0af",
     "hint": "",
     "longDesc": "Testing German Umlauts.",
@@ -418,6 +441,7 @@
   {
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "value": "Term Shared A",
+    "uri": "#term-shared-a",
     "valueHash8": "91088f26",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -436,6 +460,7 @@
   {
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "value": "Term Shared A",
+    "uri": "#term-shared-a",
     "valueHash8": "91088f26",
     "hint": " (a&b)",
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -454,6 +479,7 @@
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "value": "Term Shared B",
+    "uri": "#term-shared-b",
     "valueHash8": "efa71da4",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -472,6 +498,7 @@
   {
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "value": "Term Shared B",
+    "uri": "#term-shared-b",
     "valueHash8": "efa71da4",
     "hint": " (a&b)",
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
@@ -490,6 +517,7 @@
   {
     "shortDesc": "",
     "value": "Term-Hint-Prefix",
+    "uri": "#term-hint-prefix",
     "valueHash8": "cc7167b9",
     "hint": "☛ ${term}",
     "longDesc": "",
@@ -508,6 +536,7 @@
   {
     "shortDesc": "",
     "value": "Term-Hint-Suffix",
+    "uri": "#term-hint-suffix",
     "valueHash8": "584b7a58",
     "hint": "${term} ☚",
     "longDesc": "",
@@ -526,6 +555,7 @@
   {
     "shortDesc": "",
     "value": "Term-Hint-Suffix-Default",
+    "uri": "#term-hint-suffix-default",
     "valueHash8": "1fa3de7e",
     "hint": "↴",
     "longDesc": "",
@@ -544,6 +574,7 @@
   {
     "shortDesc": "",
     "value": "Term-Hint-Wrapped",
+    "uri": "#term-hint-wrapped",
     "valueHash8": "8a77a7e1",
     "hint": "☛ ${term} ☚",
     "longDesc": "",
@@ -562,6 +593,7 @@
   {
     "shortDesc": "",
     "value": "Testing config option 'glossaries.termHint'",
+    "uri": "#testing-config-option-glossariestermhint",
     "valueHash8": "ca304b73",
     "hint": "☛ ${term} ☚",
     "longDesc": "",
@@ -580,6 +612,7 @@
   {
     "shortDesc": "",
     "value": "Testing option 'glossaries.termHint'",
+    "uri": "#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
     "hint": "☛ ${term}",
     "longDesc": "",
@@ -598,6 +631,7 @@
   {
     "shortDesc": "",
     "value": "Testing option 'glossaries.termHint'",
+    "uri": "#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
     "hint": "↴",
     "longDesc": "",
@@ -616,6 +650,7 @@
   {
     "shortDesc": "",
     "value": "Testing option 'glossaries.termHint'",
+    "uri": "#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
     "hint": "${term} ☚",
     "longDesc": "",
@@ -634,6 +669,7 @@
   {
     "shortDesc": "",
     "value": "Unicode Tests",
+    "uri": "#unicode-tests",
     "valueHash8": "c8aa6018",
     "hint": "",
     "longDesc": "",
@@ -652,6 +688,7 @@
   {
     "shortDesc": "",
     "value": "Uppercase",
+    "uri": "#uppercase",
     "valueHash8": "621e7b8e",
     "hint": "",
     "longDesc": "",
@@ -670,6 +707,7 @@
   {
     "shortDesc": "China (spelling)",
     "value": "zhōngguó",
+    "uri": "#zhōngguó",
     "valueHash8": "07df4f2f",
     "hint": "",
     "longDesc": "China (spelling)",
@@ -688,6 +726,7 @@
   {
     "shortDesc": "Word begins and ends with symbols",
     "value": "中China国",
+    "uri": "#中china国",
     "valueHash8": "0bb8cf81",
     "hint": "",
     "longDesc": "Word begins and ends with symbols",
@@ -706,6 +745,7 @@
   {
     "shortDesc": "China",
     "value": "中国",
+    "uri": "#中国",
     "valueHash8": "c13dceab",
     "hint": "",
     "longDesc": "China",
@@ -724,6 +764,7 @@
   {
     "shortDesc": "Word begins with symbols",
     "value": "中国China",
+    "uri": "#中国china",
     "valueHash8": "cfe5ada5",
     "hint": "",
     "longDesc": "Word begins with symbols",

@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Glossary",
+    "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './sub/index.md'\nAND the glossary file is in './glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path '../glossary.md#term'.",
     "value": "Term",
+    "uri": "#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './sub/index.md'\nAND the glossary file is in './glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path '../glossary.md#term'.",

@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "all-lowercase",
+    "uri": "#all-lowercase",
     "valueHash8": "7d4b9ec5",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "",
     "value": "ALL-UPPERCASE",
+    "uri": "#all-uppercase",
     "valueHash8": "7123afe0",
     "hint": "",
     "longDesc": "",
@@ -38,6 +40,7 @@
   {
     "shortDesc": "",
     "value": "fIRST-lOWERCASE",
+    "uri": "#first-lowercase",
     "valueHash8": "4dc4af85",
     "hint": "",
     "longDesc": "",
@@ -56,6 +59,7 @@
   {
     "shortDesc": "",
     "value": "First-Uppercase",
+    "uri": "#first-uppercase",
     "valueHash8": "a6710ef4",
     "hint": "",
     "longDesc": "",
@@ -74,6 +78,7 @@
   {
     "shortDesc": "",
     "value": "MiXeD-CaSe",
+    "uri": "#mixed-case",
     "valueHash8": "fa8f9783",
     "hint": "",
     "longDesc": "",
@@ -92,6 +97,7 @@
   {
     "shortDesc": "",
     "value": "Testing Config Option ignoreCase",
+    "uri": "#testing-config-option-ignorecase",
     "valueHash8": "faeeca2f",
     "hint": "",
     "longDesc": "",

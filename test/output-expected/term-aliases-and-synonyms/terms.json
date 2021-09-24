@@ -2,6 +2,7 @@
   {
     "shortDesc": "",
     "value": "Alias substring behavior",
+    "uri": "#alias-substring-behavior",
     "valueHash8": "e8688195",
     "hint": "",
     "longDesc": "",
@@ -20,6 +21,7 @@
   {
     "shortDesc": "",
     "value": "Aliases and Synonyms",
+    "uri": "#aliases-and-synonyms",
     "valueHash8": "6576f2d7",
     "hint": "",
     "longDesc": "",
@@ -38,6 +40,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
     "value": "China",
+    "uri": "#china",
     "valueHash8": "ae54a5c0",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND aliases contain unicode word characters\nTHEN they MUST still be separated correctly",
@@ -61,6 +64,7 @@
   {
     "shortDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "value": "FIELD",
+    "uri": "#field",
     "valueHash8": "552a5418",
     "hint": "",
     "longDesc": "GIVEN a term \"FIELD\"\nAND an alias \"GREENFIELD\" WHERE the alias ends with the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -81,6 +85,7 @@
   {
     "shortDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
     "value": "Flower",
+    "uri": "#flower",
     "valueHash8": "338d1f80",
     "hint": "",
     "longDesc": "GIVEN a term \"Flower\"\nAND an alias \"lower\" WHERE the term ends with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -101,6 +106,7 @@
   {
     "shortDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
     "value": "Friendship",
+    "uri": "#friendship",
     "valueHash8": "a31816a0",
     "hint": "",
     "longDesc": "GIVEN a term \"Friendship\"\nAND an alias \"end\" WHERE the term includes the alias\nTHEN the alias MUST be linked to the term, correctly.",
@@ -121,6 +127,7 @@
   {
     "shortDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
     "value": "Hopefully",
+    "uri": "#hopefully",
     "valueHash8": "efc57f4f",
     "hint": "",
     "longDesc": "GIVEN a term \"Hopefully\"\nAND an alias \"Hope\" WHERE the term begins with the alias\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -141,6 +148,7 @@
   {
     "shortDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "value": "Issue",
+    "uri": "#issue",
     "valueHash8": "642facf6",
     "hint": "",
     "longDesc": "GIVEN a term \"Issue\"\nAND an alias \"Issues\" WHERE the alias begins with the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -161,6 +169,7 @@
   {
     "shortDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
     "value": "OUR",
+    "uri": "#our",
     "valueHash8": "1f14b053",
     "hint": "",
     "longDesc": "GIVEN a term \"OUR\"\nAND an alias \"FLOURISH\" WHERE the alias includes the term\nTHEN the alias MUST still be linked to the term, correctly.",
@@ -181,6 +190,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "value": "Term 1",
+    "uri": "#term-1",
     "valueHash8": "f4b70a17",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -203,6 +213,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
     "value": "Term 2",
+    "uri": "#term-2",
     "valueHash8": "638f18ca",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated words MUST be detected as the term's aliases.",
@@ -225,6 +236,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
     "value": "Term 3",
+    "uri": "#term-3",
     "valueHash8": "3b1ce349",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' THEN the\nsubsequent comma-separated lines of words MUST be detected as the term's aliases.",
@@ -247,6 +259,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
     "value": "Term 4",
+    "uri": "#term-4",
     "valueHash8": "5ec3b229",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-multi-line-comment beginning with 'Aliases:' and an empty\nline THEN the subsequent comma-separated lines of words MUST be detected as the\nterm's aliases.",
@@ -269,6 +282,7 @@
   {
     "shortDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
     "value": "Term 5",
+    "uri": "#term-5",
     "valueHash8": "33434f11",
     "hint": "",
     "longDesc": "GIVEN there is an HTML-single-line-comment beginning with 'Aliases:'\nAND the comment ends with a trailing comma\nTHEN this MUST NOT result in an infinite loop or out-of-memory error\nas has been reported in #26",
@@ -290,6 +304,7 @@
   {
     "shortDesc": "",
     "value": "Unicode Support",
+    "uri": "#unicode-support",
     "valueHash8": "bde525aa",
     "hint": "",
     "longDesc": "",
