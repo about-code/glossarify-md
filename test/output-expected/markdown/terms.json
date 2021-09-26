@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "foo",
     "value": "dolor",
     "uri": "#dolor",
     "valueHash8": "a98931d1",
     "hint": "↴",
     "longDesc": "foo",
+    "shortDesc": "foo",
     "headingId": "dolor",
     "headingDepth": 2,
     "anchor": "#dolor",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": "↴"
     },
-    "regex": {},
+    "regex": "/(dolor)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 3
   },
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "↴",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -32,18 +32,18 @@
       "file": "./glossary.md",
       "termHint": "↴"
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
     "value": "Lorem ipsum",
     "uri": "#lorem-ipsum",
     "valueHash8": "0956d2fb",
     "hint": "↴",
     "longDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense. It's\nthe best of literature. A poem dedicated to space - space that's seamingly\nwaiting to be filled with something meaningful even though Lorem ipsum is\nalready meaningful because it only exists due to space being already filled\nwith life on a tiny planet earth.",
+    "shortDesc": "Lorem ipsum is the worlds most famous, most beloved piece of nonsense.",
     "headingId": "lorem-ipsum",
     "headingDepth": 2,
     "anchor": "#lorem-ipsum",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": "↴"
     },
-    "regex": {},
+    "regex": "/(Lorem ipsum)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 8
   },
   {
-    "shortDesc": "",
     "value": "sit",
     "uri": "#sit",
     "valueHash8": "87d4eeb7",
     "hint": "↴",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "sit",
     "headingDepth": 2,
     "anchor": "#sit",
@@ -70,7 +70,7 @@
       "file": "./glossary.md",
       "termHint": "↴"
     },
-    "regex": {},
+    "regex": "/(sit)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 3

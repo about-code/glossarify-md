@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -32,18 +32,18 @@
       "file": "./sub-1/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Term1",
     "uri": "#term1",
     "valueHash8": "73edc568",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "term1",
     "headingDepth": 2,
     "anchor": "#term1",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term1)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "",
     "value": "Term2",
     "uri": "#term2",
     "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "term2",
     "headingDepth": 2,
     "anchor": "#term2",
@@ -70,7 +70,7 @@
       "file": "./sub-1/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term2)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1

@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -13,18 +13,18 @@
       "file": "./sub/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
     "value": "Term",
     "uri": "#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
+    "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
     "headingId": "term",
     "headingDepth": 2,
     "anchor": "#term",
@@ -32,7 +32,7 @@
       "file": "./sub/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0

@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "all-lowercase",
     "uri": "#all-lowercase",
     "valueHash8": "7d4b9ec5",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "all-lowercase",
     "headingDepth": 2,
     "anchor": "#all-lowercase",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(all-lowercase)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "",
     "value": "ALL-UPPERCASE",
     "uri": "#all-uppercase",
     "valueHash8": "7123afe0",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "all-uppercase",
     "headingDepth": 2,
     "anchor": "#all-uppercase",
@@ -32,18 +32,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(ALL-UPPERCASE)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "",
     "value": "fIRST-lOWERCASE",
     "uri": "#first-lowercase",
     "valueHash8": "4dc4af85",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "first-lowercase",
     "headingDepth": 2,
     "anchor": "#first-lowercase",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(fIRST-lOWERCASE)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "",
     "value": "First-Uppercase",
     "uri": "#first-uppercase",
     "valueHash8": "a6710ef4",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "first-uppercase",
     "headingDepth": 2,
     "anchor": "#first-uppercase",
@@ -70,18 +70,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(First-Uppercase)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "",
     "value": "MiXeD-CaSe",
     "uri": "#mixed-case",
     "valueHash8": "fa8f9783",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "mixed-case",
     "headingDepth": 2,
     "anchor": "#mixed-case",
@@ -89,18 +89,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(MiXeD-CaSe)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "",
     "value": "Testing Config Option ignoreCase",
     "uri": "#testing-config-option-ignorecase",
     "valueHash8": "faeeca2f",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "testing-config-option-ignorecase",
     "headingDepth": 1,
     "anchor": "#testing-config-option-ignorecase",
@@ -108,7 +108,7 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Testing Config Option ignoreCase)/iu",
     "aliases": [],
     "ignoreCase": true,
     "countOccurrenceTotal": 0

@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
     "value": "mention-one-once",
     "uri": "#mention-one-once",
     "valueHash8": "4df2b5d5",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
+    "shortDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
     "headingId": "mention-one-once",
     "headingDepth": 4,
     "anchor": "#mention-one-once",
@@ -32,18 +32,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(mention-one-once)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
     "value": "mention-two-twice",
     "uri": "#mention-two-twice",
     "valueHash8": "f16bec56",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
+    "shortDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
     "headingId": "mention-two-twice",
     "headingDepth": 4,
     "anchor": "#mention-two-twice",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(mention-two-twice)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
     "value": "Mentioned-in-document-once",
     "uri": "#mentioned-in-document-once",
     "valueHash8": "a036883c",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
+    "shortDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
     "headingId": "mentioned-in-document-once",
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-once",
@@ -70,18 +70,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Mentioned-in-document-once)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
     "value": "Mentioned-in-document-twice",
     "uri": "#mentioned-in-document-twice",
     "valueHash8": "d6bf35c6",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
+    "shortDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
     "headingId": "mentioned-in-document-twice",
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-twice",
@@ -89,18 +89,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Mentioned-in-document-twice)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
     "value": "One",
     "uri": "#one",
     "valueHash8": "06c2cea1",
     "hint": "",
     "longDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
+    "shortDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
     "headingId": "one",
     "headingDepth": 2,
     "anchor": "#one",
@@ -108,18 +108,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(One)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
     "value": "Two",
     "uri": "#two",
     "valueHash8": "aada29da",
     "hint": "",
     "longDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
+    "shortDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
     "headingId": "two",
     "headingDepth": 2,
     "anchor": "#two",
@@ -127,18 +127,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Two)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2
   },
   {
-    "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
     "value": "Zero",
     "uri": "#zero",
     "valueHash8": "d7ed4ee1",
     "hint": "",
     "longDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
+    "shortDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",
     "headingId": "zero",
     "headingDepth": 2,
     "anchor": "#zero",
@@ -146,7 +146,7 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Zero)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0

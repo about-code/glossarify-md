@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary A",
     "uri": "#glossary-a",
     "valueHash8": "ecedfece",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary-a",
     "headingDepth": 1,
     "anchor": "#glossary-a",
@@ -13,18 +13,18 @@
       "file": "./glossary-a.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Glossary B",
     "uri": "#glossary-b",
     "valueHash8": "58f80f50",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary-b",
     "headingDepth": 1,
     "anchor": "#glossary-b",
@@ -32,18 +32,18 @@
       "file": "./glossary-b.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "In Glossary A and B",
     "uri": "#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "in-glossary-a-and-b",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
@@ -51,18 +51,18 @@
       "file": "./glossary-a.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(In Glossary A and B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "",
     "value": "In Glossary A and B",
     "uri": "#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "in-glossary-a-and-b",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
@@ -70,18 +70,18 @@
       "file": "./glossary-b.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(In Glossary A and B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "",
     "value": "Only in Glossary A",
     "uri": "#only-in-glossary-a",
     "valueHash8": "3f37f840",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "only-in-glossary-a",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-a",
@@ -89,18 +89,18 @@
       "file": "./glossary-a.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Only in Glossary A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "",
     "value": "Only in Glossary B",
     "uri": "#only-in-glossary-b",
     "valueHash8": "f9f30195",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "only-in-glossary-b",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-b",
@@ -108,7 +108,7 @@
       "file": "./glossary-b.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Only in Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1

@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "https://my.org/vocab/#glossary",
     "valueHash8": "31d109d1",
     "hint": "~",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": "~"
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#phrase-with-spaces",
     "value": "Phrase with Spaces",
     "uri": "https://my.org/vocab/#phrase-with-spaces",
     "valueHash8": "30d29ade",
     "hint": "~",
     "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#phrase-with-spaces",
+    "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#phrase-with-spaces",
     "headingId": "phrase-with-spaces",
     "headingDepth": 2,
     "anchor": "#phrase-with-spaces",
@@ -32,18 +32,18 @@
       "file": "./glossary.md",
       "termHint": "~"
     },
-    "regex": {},
+    "regex": "/(Phrase with Spaces)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#term",
     "value": "Term",
     "uri": "https://my.org/vocab/#term",
     "valueHash8": "cf5f3091",
     "hint": "~",
     "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#term",
+    "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#term",
     "headingId": "term",
     "headingDepth": 2,
     "anchor": "#term",
@@ -51,7 +51,7 @@
       "file": "./glossary.md",
       "termHint": "~"
     },
-    "regex": {},
+    "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1

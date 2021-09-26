@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "value": "'ÄÖ'",
     "uri": "#äö",
     "valueHash8": "3664f3c6",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
+    "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "headingId": "äö",
     "headingDepth": 2,
     "anchor": "#äö",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/('ÄÖ')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9
   },
   {
-    "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "value": "'ÄÖÜ'",
     "uri": "#äöü",
     "valueHash8": "e30b8f2e",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
+    "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "headingId": "äöü",
     "headingDepth": 2,
     "anchor": "#äöü",
@@ -32,18 +32,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/('ÄÖÜ')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9
   },
   {
-    "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "value": "A",
     "uri": "#a",
     "valueHash8": "7fc56270",
     "hint": "",
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
+    "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "headingId": "a",
     "headingDepth": 2,
     "anchor": "#a",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 11
   },
   {
-    "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "value": "Ä",
     "uri": "#ä",
     "valueHash8": "b66491b0",
     "hint": "",
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
+    "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "headingId": "ä",
     "headingDepth": 2,
     "anchor": "#ä",
@@ -70,18 +70,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Ä)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 11
   },
   {
-    "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "value": "AB",
     "uri": "#ab",
     "valueHash8": "b86fc6b0",
     "hint": "",
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
+    "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "headingId": "ab",
     "headingDepth": 2,
     "anchor": "#ab",
@@ -89,18 +89,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(AB)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9
   },
   {
-    "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "value": "ABC",
     "uri": "#abc",
     "valueHash8": "902fbdd2",
     "hint": "",
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
+    "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "headingId": "abc",
     "headingDepth": 2,
     "anchor": "#abc",
@@ -108,18 +108,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(ABC)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9
   },
   {
-    "shortDesc": "",
     "value": "Substring Test Glossary",
     "uri": "#substring-test-glossary",
     "valueHash8": "29d63fdc",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "substring-test-glossary",
     "headingDepth": 1,
     "anchor": "#substring-test-glossary",
@@ -127,7 +127,7 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Substring Test Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0

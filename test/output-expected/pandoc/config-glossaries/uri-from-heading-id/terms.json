@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "GIVEN a term with a custom pandoc heading-ID\nAND a glossary with a glossary URI https://my.org/vocab/#\nTHEN the system must generate an URI https://my.org/vocab/#custom",
     "value": "Custom",
     "uri": "https://my.org/vocab/#custom",
     "valueHash8": "90589c47",
     "hint": "~",
     "longDesc": "GIVEN a term with a custom pandoc heading-ID\nAND a glossary with a glossary URI https://my.org/vocab/#\nTHEN the system must generate an URI https://my.org/vocab/#custom",
+    "shortDesc": "GIVEN a term with a custom pandoc heading-ID\nAND a glossary with a glossary URI https://my.org/vocab/#\nTHEN the system must generate an URI https://my.org/vocab/#custom",
     "headingId": "custom",
     "headingDepth": 2,
     "anchor": "#custom",
@@ -13,18 +13,18 @@
       "file": "./glossary.md",
       "termHint": "~"
     },
-    "regex": {},
+    "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Glossary",
     "uri": "https://my.org/vocab/#glossary",
     "valueHash8": "31d109d1",
     "hint": "~",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary",
     "headingDepth": 1,
     "anchor": "#glossary",
@@ -32,7 +32,7 @@
       "file": "./glossary.md",
       "termHint": "~"
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0

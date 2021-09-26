@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
     "value": "First-Level-Child",
     "uri": "#first-level-child",
     "valueHash8": "890f2eb1",
     "hint": "",
     "longDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
+    "shortDesc": "must be referred to in '../document.md' with './sub-1/glossary.md#first-level-child'",
     "headingId": "first-level-child",
     "headingDepth": 2,
     "anchor": "#first-level-child",
@@ -13,18 +13,18 @@
       "file": "./sub-1/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(First-Level-Child)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
     "value": "First-Level-Parent",
     "uri": "#first-level-parent",
     "valueHash8": "17a5382d",
     "hint": "",
     "longDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
+    "shortDesc": "must be referred to in './sub-2/document.md' with '../glossary.md#first-level-parent'",
     "headingId": "first-level-parent",
     "headingDepth": 2,
     "anchor": "#first-level-parent",
@@ -32,18 +32,18 @@
       "file": "./sub-1/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(First-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
     "value": "Second-Level-Parent",
     "uri": "#second-level-parent",
     "valueHash8": "3bb5a2d5",
     "hint": "",
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
+    "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '../../glossary.md#second-level-parent'",
     "headingId": "second-level-parent",
     "headingDepth": 2,
     "anchor": "#second-level-parent",
@@ -51,18 +51,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Second-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
     "value": "Sibling",
     "uri": "#sibling",
     "valueHash8": "ba3f6a55",
     "hint": "",
     "longDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
+    "shortDesc": "must be referred to in './document.md' with 'glossary.md#sibling'",
     "headingId": "sibling",
     "headingDepth": 2,
     "anchor": "#sibling",
@@ -70,18 +70,18 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Sibling)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "",
     "value": "Testing config option 'linking'",
     "uri": "#testing-config-option-linking",
     "valueHash8": "2a07b1b6",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "testing-config-option-linking",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
@@ -89,18 +89,18 @@
       "file": "./sub-1/glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Testing config option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Testing Config Option 'linking'",
     "uri": "#testing-config-option-linking",
     "valueHash8": "673553af",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "testing-config-option-linking",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
@@ -108,7 +108,7 @@
       "file": "./glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Testing Config Option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0

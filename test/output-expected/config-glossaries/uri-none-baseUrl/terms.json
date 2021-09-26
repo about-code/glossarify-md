@@ -1,11 +1,11 @@
 [
   {
-    "shortDesc": "",
     "value": "Glossary 1",
     "uri": "https://base.url/vocab/glossary-1",
     "valueHash8": "4cb8c916",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary-1",
     "headingDepth": 1,
     "anchor": "#glossary-1",
@@ -13,18 +13,18 @@
       "file": "./glossary1.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary 1)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "",
     "value": "Glossary 2",
     "uri": "https://glossary.uri/vocab/#glossary-2",
     "valueHash8": "296178d4",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
     "headingId": "glossary-2",
     "headingDepth": 1,
     "anchor": "#glossary-2",
@@ -32,18 +32,18 @@
       "file": "./glossary2.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary 2)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
     "value": "Phrase1 with Spaces",
     "uri": "https://base.url/vocab/phrase1-with-spaces",
     "valueHash8": "29d583c9",
     "hint": "",
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
+    "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
     "headingId": "phrase1-with-spaces",
     "headingDepth": 2,
     "anchor": "#phrase1-with-spaces",
@@ -51,18 +51,18 @@
       "file": "./glossary1.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Phrase1 with Spaces)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
     "value": "Phrase2 with Spaces",
     "uri": "https://glossary.uri/vocab/#phrase2-with-spaces",
     "valueHash8": "27664729",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
+    "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
     "headingId": "phrase2-with-spaces",
     "headingDepth": 2,
     "anchor": "#phrase2-with-spaces",
@@ -70,18 +70,18 @@
       "file": "./glossary2.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Phrase2 with Spaces)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
     "value": "Term1",
     "uri": "https://base.url/vocab/term1",
     "valueHash8": "73edc568",
     "hint": "",
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
+    "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
     "headingId": "term1",
     "headingDepth": 2,
     "anchor": "#term1",
@@ -89,18 +89,18 @@
       "file": "./glossary1.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term1)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
     "value": "Term2",
     "uri": "https://glossary.uri/vocab/#term2",
     "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
+    "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
     "headingId": "term2",
     "headingDepth": 2,
     "anchor": "#term2",
@@ -108,7 +108,7 @@
       "file": "./glossary2.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term2)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
