@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary",
-    "uri": "#glossary",
+    "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Ipsum",
-    "uri": "#ipsum",
+    "uri": "glossary.md#ipsum",
     "valueHash8": "1034a44d",
     "hint": "",
     "longDesc": "Test term",
@@ -39,7 +39,7 @@
   },
   {
     "value": "Lorem",
-    "uri": "#lorem",
+    "uri": "glossary.md#lorem",
     "valueHash8": "db6ff2ff",
     "hint": "",
     "longDesc": "Test term",

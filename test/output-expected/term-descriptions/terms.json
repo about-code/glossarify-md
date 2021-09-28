@@ -1,7 +1,7 @@
 [
   {
     "value": "Description Partly Formatted",
-    "uri": "#description-partly-formatted",
+    "uri": "glossary.md#description-partly-formatted",
     "valueHash8": "54fe0721",
     "hint": "ⓕ",
     "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Formatted Term Definitions",
-    "uri": "#formatted-term-definitions",
+    "uri": "glossary.md#formatted-term-definitions",
     "valueHash8": "bc4374c3",
     "hint": "ⓕ",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "GIVEN full description is a blockquote",
-    "uri": "#given-full-description-is-a-blockquote",
+    "uri": "glossary.md#given-full-description-is-a-blockquote",
     "valueHash8": "a8f71a97",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -58,7 +58,7 @@
   },
   {
     "value": "GIVEN long description has a link",
-    "uri": "#given-long-description-has-a-link",
+    "uri": "glossary.md#given-long-description-has-a-link",
     "valueHash8": "b64791c2",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
@@ -77,7 +77,7 @@
   },
   {
     "value": "GIVEN long description is a blockquote",
-    "uri": "#given-long-description-is-a-blockquote",
+    "uri": "glossary.md#given-long-description-is-a-blockquote",
     "valueHash8": "558435d9",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -96,7 +96,7 @@
   },
   {
     "value": "GIVEN short description has a link",
-    "uri": "#given-short-description-has-a-link",
+    "uri": "glossary.md#given-short-description-has-a-link",
     "valueHash8": "cb1e14ac",
     "hint": "ⓕ",
     "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
@@ -115,7 +115,7 @@
   },
   {
     "value": "GIVEN short description is a blockquote",
-    "uri": "#given-short-description-is-a-blockquote",
+    "uri": "glossary.md#given-short-description-is-a-blockquote",
     "valueHash8": "c90cacfd",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -134,7 +134,7 @@
   },
   {
     "value": "GIVEN short description is bold WITH fullstop excluded",
-    "uri": "#given-short-description-is-bold-with-fullstop-excluded",
+    "uri": "glossary.md#given-short-description-is-bold-with-fullstop-excluded",
     "valueHash8": "2a37979a",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -153,7 +153,7 @@
   },
   {
     "value": "GIVEN short description is bold WITH fullstop included",
-    "uri": "#given-short-description-is-bold-with-fullstop-included",
+    "uri": "glossary.md#given-short-description-is-bold-with-fullstop-included",
     "valueHash8": "f1c01d68",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -172,7 +172,7 @@
   },
   {
     "value": "GIVEN short description is italic WITH fullstop excluded",
-    "uri": "#given-short-description-is-italic-with-fullstop-excluded",
+    "uri": "glossary.md#given-short-description-is-italic-with-fullstop-excluded",
     "valueHash8": "cb74321f",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -191,7 +191,7 @@
   },
   {
     "value": "GIVEN short description is italic WITH fullstop included",
-    "uri": "#given-short-description-is-italic-with-fullstop-included",
+    "uri": "glossary.md#given-short-description-is-italic-with-fullstop-included",
     "valueHash8": "56bdbcb5",
     "hint": "ⓕ",
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
@@ -210,7 +210,7 @@
   },
   {
     "value": "Single sentence across multiple lines",
-    "uri": "#single-sentence-across-multiple-lines",
+    "uri": "glossary.md#single-sentence-across-multiple-lines",
     "valueHash8": "93103716",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
@@ -229,7 +229,7 @@
   },
   {
     "value": "Single sentence terminated by exclamation mark",
-    "uri": "#single-sentence-terminated-by-exclamation-mark",
+    "uri": "glossary.md#single-sentence-terminated-by-exclamation-mark",
     "valueHash8": "db8b4d6a",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
@@ -248,7 +248,7 @@
   },
   {
     "value": "Single sentence terminated by full stop",
-    "uri": "#single-sentence-terminated-by-full-stop",
+    "uri": "glossary.md#single-sentence-terminated-by-full-stop",
     "valueHash8": "5bba307e",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
@@ -267,7 +267,7 @@
   },
   {
     "value": "Single sentence terminated by question mark",
-    "uri": "#single-sentence-terminated-by-question-mark",
+    "uri": "glossary.md#single-sentence-terminated-by-question-mark",
     "valueHash8": "b562a5ec",
     "hint": "ⓕ",
     "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
@@ -286,7 +286,7 @@
   },
   {
     "value": "Testing Term Definition Extraction",
-    "uri": "#testing-term-definition-extraction",
+    "uri": "glossary.md#testing-term-definition-extraction",
     "valueHash8": "d19bc82e",
     "hint": "ⓕ",
     "longDesc": "",
@@ -305,7 +305,7 @@
   },
   {
     "value": "Two sentences across multiple lines terminated by full stop",
-    "uri": "#two-sentences-across-multiple-lines-terminated-by-full-stop",
+    "uri": "glossary.md#two-sentences-across-multiple-lines-terminated-by-full-stop",
     "valueHash8": "2705b83f",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
@@ -324,7 +324,7 @@
   },
   {
     "value": "Two sentences in a single line terminated by full stop",
-    "uri": "#two-sentences-in-a-single-line-terminated-by-full-stop",
+    "uri": "glossary.md#two-sentences-in-a-single-line-terminated-by-full-stop",
     "valueHash8": "32bc9175",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
@@ -343,7 +343,7 @@
   },
   {
     "value": "Two sentences in multiple lines terminated by full stop",
-    "uri": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
+    "uri": "glossary.md#two-sentences-in-multiple-lines-terminated-by-full-stop",
     "valueHash8": "e41211fc",
     "hint": "ⓕ",
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",

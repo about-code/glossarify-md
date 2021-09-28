@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary",
-    "uri": "#glossary",
+    "uri": "http://example.org/glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Glossary",
-    "uri": "#glossary",
+    "uri": "http://example.org/sub-1/glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "Term1",
-    "uri": "#term1",
+    "uri": "http://example.org/glossary.md#term1",
     "valueHash8": "73edc568",
     "hint": "",
     "longDesc": "",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Term2",
-    "uri": "#term2",
+    "uri": "http://example.org/sub-1/glossary.md#term2",
     "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "",

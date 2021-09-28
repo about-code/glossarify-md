@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary A",
-    "uri": "#glossary-a",
+    "uri": "glossary-a.md#glossary-a",
     "valueHash8": "ecedfece",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Glossary B",
-    "uri": "#glossary-b",
+    "uri": "glossary-b.md#glossary-b",
     "valueHash8": "58f80f50",
     "hint": "",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "In Glossary A and B",
-    "uri": "#in-glossary-a-and-b",
+    "uri": "glossary-a.md#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
@@ -58,7 +58,7 @@
   },
   {
     "value": "In Glossary A and B",
-    "uri": "#in-glossary-a-and-b",
+    "uri": "glossary-b.md#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
     "hint": "",
     "longDesc": "",
@@ -77,7 +77,7 @@
   },
   {
     "value": "Only in Glossary A",
-    "uri": "#only-in-glossary-a",
+    "uri": "glossary-a.md#only-in-glossary-a",
     "valueHash8": "3f37f840",
     "hint": "",
     "longDesc": "",
@@ -96,7 +96,7 @@
   },
   {
     "value": "Only in Glossary B",
-    "uri": "#only-in-glossary-b",
+    "uri": "glossary-b.md#only-in-glossary-b",
     "valueHash8": "f9f30195",
     "hint": "",
     "longDesc": "",

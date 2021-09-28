@@ -1,7 +1,7 @@
 [
   {
     "value": "'ÄÖ'",
-    "uri": "#äö",
+    "uri": "glossary.md#äö",
     "valueHash8": "3664f3c6",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
@@ -20,7 +20,7 @@
   },
   {
     "value": "'ÄÖÜ'",
-    "uri": "#äöü",
+    "uri": "glossary.md#äöü",
     "valueHash8": "e30b8f2e",
     "hint": "",
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
@@ -39,7 +39,7 @@
   },
   {
     "value": "A",
-    "uri": "#a",
+    "uri": "glossary.md#a",
     "valueHash8": "7fc56270",
     "hint": "",
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Ä",
-    "uri": "#ä",
+    "uri": "glossary.md#ä",
     "valueHash8": "b66491b0",
     "hint": "",
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
@@ -77,7 +77,7 @@
   },
   {
     "value": "AB",
-    "uri": "#ab",
+    "uri": "glossary.md#ab",
     "valueHash8": "b86fc6b0",
     "hint": "",
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
@@ -96,7 +96,7 @@
   },
   {
     "value": "ABC",
-    "uri": "#abc",
+    "uri": "glossary.md#abc",
     "valueHash8": "902fbdd2",
     "hint": "",
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
@@ -115,7 +115,7 @@
   },
   {
     "value": "Substring Test Glossary",
-    "uri": "#substring-test-glossary",
+    "uri": "glossary.md#substring-test-glossary",
     "valueHash8": "29d63fdc",
     "hint": "",
     "longDesc": "",

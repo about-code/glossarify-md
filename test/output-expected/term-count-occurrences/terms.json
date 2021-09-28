@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary",
-    "uri": "#glossary",
+    "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "mention-one-once",
-    "uri": "#mention-one-once",
+    "uri": "glossary.md#mention-one-once",
     "valueHash8": "4df2b5d5",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"One\" once\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 1\nAND this term's occurrence count MUST be 0.",
@@ -39,7 +39,7 @@
   },
   {
     "value": "mention-two-twice",
-    "uri": "#mention-two-twice",
+    "uri": "glossary.md#mention-two-twice",
     "valueHash8": "f16bec56",
     "hint": "",
     "longDesc": "GIVEN this definition\nAND it mentions another term \"Two\" Two times\nAND itself is being mentioned nowhere else\nTHEN the other term's occurrence count MUST be 2\nAND this term's occurrence count MUST be 0.",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Mentioned-in-document-once",
-    "uri": "#mentioned-in-document-once",
+    "uri": "glossary.md#mentioned-in-document-once",
     "valueHash8": "a036883c",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned once in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 1.",
@@ -77,7 +77,7 @@
   },
   {
     "value": "Mentioned-in-document-twice",
-    "uri": "#mentioned-in-document-twice",
+    "uri": "glossary.md#mentioned-in-document-twice",
     "valueHash8": "d6bf35c6",
     "hint": "",
     "longDesc": "GIVEN a term\nAND it is mentioned twice in a document\nAND not in the glossary\nTHEN this term's occurrence count MUST be 2.",
@@ -96,7 +96,7 @@
   },
   {
     "value": "One",
-    "uri": "#one",
+    "uri": "glossary.md#one",
     "valueHash8": "06c2cea1",
     "hint": "",
     "longDesc": "GIVEN a term \"One\"\nAND the term is mentioned only once in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 1.",
@@ -115,7 +115,7 @@
   },
   {
     "value": "Two",
-    "uri": "#two",
+    "uri": "glossary.md#two",
     "valueHash8": "aada29da",
     "hint": "",
     "longDesc": "GIVEN a term \"Two\"\nAND the term is mentioned term two times in a subsequent term definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 2.",
@@ -134,7 +134,7 @@
   },
   {
     "value": "Zero",
-    "uri": "#zero",
+    "uri": "glossary.md#zero",
     "valueHash8": "d7ed4ee1",
     "hint": "",
     "longDesc": "GIVEN a term \"Zero\"\nAND the term \"Zero\" is mentioned twice in its own definition\nAND nowhere else\nTHEN this term's occurrence count MUST be 0.",

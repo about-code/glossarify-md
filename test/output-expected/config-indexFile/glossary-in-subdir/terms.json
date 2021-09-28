@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary",
-    "uri": "#glossary",
+    "uri": "sub/glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Term",
-    "uri": "#term",
+    "uri": "sub/glossary.md#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",

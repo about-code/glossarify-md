@@ -6,7 +6,7 @@
     {
       "file": "./glossary.md",
       "termHint": "~",
-      "uri": "https://my.org/vocab/#"
+      "uri": "https://my.org/vocab/"
     }
   ],
   "linking": {

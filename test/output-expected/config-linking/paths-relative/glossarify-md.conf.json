@@ -4,7 +4,7 @@
   "linking": {
     "paths": "relative",
     "mentions": "all",
-    "baseUrl": "http://localhost"
+    "baseUrl": "http://localhost/"
   },
   "includeFiles": [
     "."

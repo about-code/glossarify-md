@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary 1",
-    "uri": "https://base.url/vocab/glossary-1",
+    "uri": "https://base.url/vocab/glossary1.md#glossary-1",
     "valueHash8": "4cb8c916",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Glossary 2",
-    "uri": "https://glossary.uri/vocab/#glossary-2",
+    "uri": "https://glossary.uri/vocab/glossary2.md#glossary-2",
     "valueHash8": "296178d4",
     "hint": "",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "Phrase1 with Spaces",
-    "uri": "https://base.url/vocab/phrase1-with-spaces",
+    "uri": "https://base.url/vocab/glossary1.md#phrase1-with-spaces",
     "valueHash8": "29d583c9",
     "hint": "",
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Phrase2 with Spaces",
-    "uri": "https://glossary.uri/vocab/#phrase2-with-spaces",
+    "uri": "https://glossary.uri/vocab/glossary2.md#phrase2-with-spaces",
     "valueHash8": "27664729",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
@@ -77,7 +77,7 @@
   },
   {
     "value": "Term1",
-    "uri": "https://base.url/vocab/term1",
+    "uri": "https://base.url/vocab/glossary1.md#term1",
     "valueHash8": "73edc568",
     "hint": "",
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
@@ -96,7 +96,7 @@
   },
   {
     "value": "Term2",
-    "uri": "https://glossary.uri/vocab/#term2",
+    "uri": "https://glossary.uri/vocab/glossary2.md#term2",
     "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",

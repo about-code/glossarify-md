@@ -1,4 +1,4 @@
-# [Document 1](#id-b7ff7da825896b57edf7b8771ef5e8f1)
+# [Document 1](#md5-28a08c48cf61dc558f5b7be4f3a5af52)
 
 GIVEN two documents *Document 1* and *Document 2*, both mentioning term [Alpha][1][<sup>2)</sup>][2]
 AND a configuration `linking.headingIdAlgorithm: "md5"`
@@ -11,6 +11,6 @@ THEN in the generated index file
 AND output must be the same as if processed by `linking.headingIdAlgorithm: "github"`
 EXCEPT for a hash being used as a link target identifier.
 
-[1]: ./glossary-1.md#id-1a319298ee8172465c1b9a7c00a454bb "First definition."
+[1]: ./glossary-1.md#md5-3fe7e58515badf3165ce27ab603e44c5 "First definition."
 
-[2]: ./glossary-2.md#id-2014cd002823f23a930ec129344581c3 "Second definition."
+[2]: ./glossary-2.md#md5-1aaccf078645d4412a50c269899f8c80 "Second definition."

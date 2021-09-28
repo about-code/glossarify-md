@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary",
-    "uri": "https://my.org/vocab/#glossary",
+    "uri": "https://my.org/vocab/glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "~",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Phrase with Spaces",
-    "uri": "https://my.org/vocab/#phrase-with-spaces",
+    "uri": "https://my.org/vocab/glossary.md#phrase-with-spaces",
     "valueHash8": "30d29ade",
     "hint": "~",
     "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#phrase-with-spaces",
@@ -39,7 +39,7 @@
   },
   {
     "value": "Term",
-    "uri": "https://my.org/vocab/#term",
+    "uri": "https://my.org/vocab/glossary.md#term",
     "valueHash8": "cf5f3091",
     "hint": "~",
     "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#term",

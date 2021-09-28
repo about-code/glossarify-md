@@ -1,7 +1,7 @@
 [
   {
     "value": "Glossary G1",
-    "uri": "#glossary-g1",
+    "uri": "glossary-g1.md#glossary-g1",
     "valueHash8": "05dfcbd8",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "Glossary G2",
-    "uri": "#glossary-g2",
+    "uri": "glossary-g2.md#glossary-g2",
     "valueHash8": "3673bfbe",
     "hint": "",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "Term A",
-    "uri": "#term-a",
+    "uri": "glossary-g1.md#term-a",
     "valueHash8": "f68c2c2d",
     "hint": "",
     "longDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Term B",
-    "uri": "#term-b",
+    "uri": "glossary-g1.md#term-b",
     "valueHash8": "96d7775e",
     "hint": "",
     "longDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
@@ -77,7 +77,7 @@
   },
   {
     "value": "Term C",
-    "uri": "#term-c",
+    "uri": "glossary-g1.md#term-c",
     "valueHash8": "83fa0a16",
     "hint": "",
     "longDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
@@ -96,7 +96,7 @@
   },
   {
     "value": "Term D",
-    "uri": "#term-d",
+    "uri": "glossary-g2.md#term-d",
     "valueHash8": "3cecf20b",
     "hint": "",
     "longDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
@@ -115,7 +115,7 @@
   },
   {
     "value": "Term E",
-    "uri": "#term-e",
+    "uri": "glossary-g1.md#term-e",
     "valueHash8": "f133db7d",
     "hint": "",
     "longDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
@@ -134,7 +134,7 @@
   },
   {
     "value": "Term F",
-    "uri": "#term-f",
+    "uri": "glossary-g2.md#term-f",
     "valueHash8": "f8a25fec",
     "hint": "",
     "longDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",

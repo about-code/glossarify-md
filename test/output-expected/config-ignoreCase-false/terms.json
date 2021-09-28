@@ -1,7 +1,7 @@
 [
   {
     "value": "all-lowercase",
-    "uri": "#all-lowercase",
+    "uri": "glossary.md#all-lowercase",
     "valueHash8": "7d4b9ec5",
     "hint": "",
     "longDesc": "",
@@ -20,7 +20,7 @@
   },
   {
     "value": "ALL-UPPERCASE",
-    "uri": "#all-uppercase",
+    "uri": "glossary.md#all-uppercase",
     "valueHash8": "7123afe0",
     "hint": "",
     "longDesc": "",
@@ -39,7 +39,7 @@
   },
   {
     "value": "fIRST-lOWERCASE",
-    "uri": "#first-lowercase",
+    "uri": "glossary.md#first-lowercase",
     "valueHash8": "4dc4af85",
     "hint": "",
     "longDesc": "",
@@ -58,7 +58,7 @@
   },
   {
     "value": "First-Uppercase",
-    "uri": "#first-uppercase",
+    "uri": "glossary.md#first-uppercase",
     "valueHash8": "a6710ef4",
     "hint": "",
     "longDesc": "",
@@ -77,7 +77,7 @@
   },
   {
     "value": "MiXeD-CaSe",
-    "uri": "#mixed-case",
+    "uri": "glossary.md#mixed-case",
     "valueHash8": "fa8f9783",
     "hint": "",
     "longDesc": "",
@@ -96,7 +96,7 @@
   },
   {
     "value": "Testing Config Option ignoreCase",
-    "uri": "#testing-config-option-ignorecase",
+    "uri": "glossary.md#testing-config-option-ignorecase",
     "valueHash8": "faeeca2f",
     "hint": "",
     "longDesc": "",
