@@ -5,7 +5,7 @@
   "baseUrl": "https://base.url/vocab/",
   "glossaries": [
     { "file": "./glossary1.md" },
-    { "file": "./glossary2.md", "uri": "https://glossary.uri/vocab/#" }
+    { "file": "./glossary2.md", "uri": "https://glossary.uri/vocab/" }
   ],
   "linking": {
     "paths": "relative"

@@ -4,7 +4,7 @@
   "linking": {
     "paths": "absolute",
     "mentions": "all",
-    "baseUrl": "http://example.org"
+    "baseUrl": "http://example.org/"
   },
   "outDir": "../../../output-actual/config-linking/baseUrl/",
   "includeFiles": [
