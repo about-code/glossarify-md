@@ -20,7 +20,7 @@
   },
   {
     "value": "Glossary 2",
-    "uri": "https://glossary.uri/vocab/glossary2.md#glossary-2",
+    "uri": "https://glossary.uri/vocab/#glossary-2",
     "valueHash8": "296178d4",
     "hint": "",
     "longDesc": "",
@@ -58,7 +58,7 @@
   },
   {
     "value": "Phrase2 with Spaces",
-    "uri": "https://glossary.uri/vocab/glossary2.md#phrase2-with-spaces",
+    "uri": "https://glossary.uri/vocab/#phrase2-with-spaces",
     "valueHash8": "27664729",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
@@ -96,7 +96,7 @@
   },
   {
     "value": "Term2",
-    "uri": "https://glossary.uri/vocab/glossary2.md#term2",
+    "uri": "https://glossary.uri/vocab/#term2",
     "valueHash8": "0a61dcb4",
     "hint": "",
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
