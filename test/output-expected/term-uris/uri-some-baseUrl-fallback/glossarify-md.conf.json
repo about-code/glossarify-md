@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../output-actual/term-uris/uri-none-baseUrl",
+  "outDir": "../../../output-actual/term-uris/uri-some-baseUrl-fallback",
   "linking": {
     "baseUrl": "https://base.url/vocab/",
     "paths": "relative"
