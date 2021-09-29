@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": "./",
+  "outDir": "../../../output-actual/term-uris/paths-absolute-baseUrl-none/",
+  "glossaries": [{
+      "file": "./sub-1/sub-2/glossary.md"
+  }],
+  "linking": {
+    "paths": "absolute",
+    "pathComponents": ["path", "file"]
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}
