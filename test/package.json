@@ -112,6 +112,7 @@
     "test_79": "node . --config ./input/pandoc/config-glossaries/uri-from-heading-id/glossarify-md.conf.json",
     "test_80": "node . --config ./input/term-uris/uri-and-generated-heading-id/glossarify-md.conf.json",
     "test_81": "node . --config ./input/term-uris/uri-none-baseUrl/glossarify-md.conf.json",
+    "test_82": "node . --config ./input/term-uris/paths-absolute-baseUrl-none/glossarify-md.conf.json",
     "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
     "postat": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
     "new-baseline": "rm -r ./output-expected && cp -r ./output-actual ./output-expected",
