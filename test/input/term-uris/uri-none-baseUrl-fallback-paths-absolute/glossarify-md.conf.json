@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": "./",
-  "outDir": "../../../output-actual/term-uris/paths-absolute-baseUrl-fallback/",
+  "outDir": "../../../output-actual/term-uris/uri-none-baseUrl-fallback-paths-absolute/",
   "glossaries": [{
       "file": "./sub-1/sub-2/glossary.md"
   }],
