@@ -1,0 +1,59 @@
+[
+  {
+    "value": "Custom",
+    "uri": "https://base.url/vocab/sub-1/sub-2/glossary#custom",
+    "valueHash8": "90589c47",
+    "hint": "",
+    "longDesc": "...\nAND this heading has a custom pandoc-style heading ID\nTHEN in terms.json the term's URI MUST be https://base.url/vocab/sub-1/sub-2/glossary#custom\nAND MUST NOT contain.md file extension (e.g. ... /glossary.md#custom)",
+    "shortDesc": "...",
+    "headingId": "custom",
+    "headingDepth": 2,
+    "anchor": "#custom",
+    "glossary": {
+      "file": "./sub-1/sub-2/glossary.md",
+      "termHint": ""
+    },
+    "regex": "/(Custom)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "value": "Glossary without URI but fallback to baseUrl",
+    "uri": "https://base.url/vocab/sub-1/sub-2/glossary#glossary-without-uri-but-fallback-to-baseurl",
+    "valueHash8": "47057769",
+    "hint": "",
+    "longDesc": "GIVEN this glossary has no URI\nAND option 'linking.baseUrl' is \"https://base.url/vocab/\"\nAND option 'linking.paths: \"absolute\"'\nAND option 'linking.pathComponents: [\"path\", \"file\"]'\nAND option dev.termsFile: \"terms.json\" writes a file terms.json...",
+    "shortDesc": "GIVEN this glossary has no URI\nAND option 'linking.baseUrl' is \"https://base.url/vocab/\"\nAND option 'linking.paths: \"absolute\"'\nAND option 'linking.pathComponents: [\"path\", \"file\"]'\nAND option dev.termsFile: \"terms.json\" writes a file terms.json...",
+    "headingId": "glossary-without-uri-but-fallback-to-baseurl",
+    "headingDepth": 1,
+    "anchor": "#glossary-without-uri-but-fallback-to-baseurl",
+    "glossary": {
+      "file": "./sub-1/sub-2/glossary.md",
+      "termHint": ""
+    },
+    "regex": "/(Glossary without URI but fallback to baseUrl)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Term",
+    "uri": "https://base.url/vocab/sub-1/sub-2/glossary#term",
+    "valueHash8": "cf5f3091",
+    "hint": "",
+    "longDesc": "...\nTHEN in terms.json the term's URI MUST be https://base.url/vocab/sub-1/sub-2/glossary#term\nAND MUST NOT contain.md file extension (e.g. ... /glossary.md#term)",
+    "shortDesc": "...",
+    "headingId": "term",
+    "headingDepth": 2,
+    "anchor": "#term",
+    "glossary": {
+      "file": "./sub-1/sub-2/glossary.md",
+      "termHint": ""
+    },
+    "regex": "/(Term)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]

@@ -16,7 +16,7 @@
     "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 1
   },
   {
     "value": "Glossary Without URI",
@@ -54,6 +54,6 @@
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 1
   }
 ]
