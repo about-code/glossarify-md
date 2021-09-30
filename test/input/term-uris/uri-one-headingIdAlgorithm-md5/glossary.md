@@ -3,9 +3,9 @@
 ## Term
 
 GIVEN a single term
-THEN the system must generate an URI https://my.org/vocab/#md5-3501cd3
+THEN the system must generate an URI https://my.org/vocab/#{hash}
 
 ## Phrase with Spaces
 
 GIVEN a phrase with spaces
-THEN the system must generate an URI https://my.org/vocab/#md5-b1b3a5f
+THEN the system must generate an URI https://my.org/vocab/#{hash}

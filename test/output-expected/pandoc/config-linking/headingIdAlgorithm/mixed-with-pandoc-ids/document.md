@@ -1,4 +1,4 @@
-# [Document](#md5-2986946ec8cb3db51d9d8fd8237d1498)
+# [Document](#md5:9a6dcfaad59049db6e262eb2fa080820)
 
 GIVEN a term `HashId` without an explict heading id
 AND a term `PandocId` with an explicit heading id {#pandoc-id}
@@ -9,7 +9,7 @@ THEN
 *   the term *[PandocId][2]* MUST be linkified AND MUST use the #pandoc-id fragment
 *   a link *[arbitrary][3]* MUST be linked to the definition of *[PandocId][2]*
 
-[1]: ./glossary.md#md5-248f8262c302ee60e754694adae92d88 "A term which expects an id hash to be generated."
+[1]: ./glossary.md#md5:5e740a24628bd5771ff3da39c4cc4f54 "A term which expects an id hash to be generated."
 
 [2]: ./glossary.md#pandoc-id "A term with a custom pandoc-id"
 

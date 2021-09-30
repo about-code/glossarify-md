@@ -1,14 +1,14 @@
 [
   {
     "value": "Glossary",
-    "uri": "https://my.org/vocab/#md5-9a79ec7",
+    "uri": "https://my.org/vocab/#md5:4546d08",
     "valueHash8": "31d109d1",
     "hint": "~",
     "longDesc": "",
     "shortDesc": "",
-    "headingId": "md5-9a79ec7",
+    "headingId": "md5:4546d08",
     "headingDepth": 1,
-    "anchor": "#md5-9a79ec7",
+    "anchor": "#md5:4546d08",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "~"
@@ -20,14 +20,14 @@
   },
   {
     "value": "Phrase with Spaces",
-    "uri": "https://my.org/vocab/#md5-b1b3a5f",
+    "uri": "https://my.org/vocab/#md5:cbafc15",
     "valueHash8": "30d29ade",
     "hint": "~",
-    "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#md5-b1b3a5f",
-    "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#md5-b1b3a5f",
-    "headingId": "md5-b1b3a5f",
+    "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "headingId": "md5:cbafc15",
     "headingDepth": 2,
-    "anchor": "#md5-b1b3a5f",
+    "anchor": "#md5:cbafc15",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "~"
@@ -39,14 +39,14 @@
   },
   {
     "value": "Term",
-    "uri": "https://my.org/vocab/#md5-3501cd3",
+    "uri": "https://my.org/vocab/#md5:22285b0",
     "valueHash8": "cf5f3091",
     "hint": "~",
-    "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#md5-3501cd3",
-    "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#md5-3501cd3",
-    "headingId": "md5-3501cd3",
+    "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "headingId": "md5:22285b0",
     "headingDepth": 2,
-    "anchor": "#md5-3501cd3",
+    "anchor": "#md5:22285b0",
     "glossary": {
       "file": "./glossary.md",
       "termHint": "~"
