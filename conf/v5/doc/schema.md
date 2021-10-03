@@ -427,7 +427,7 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 
 ### uri
 
-A namespace or vocabulary identifier used as a base URI to construct URIs for glossary terms. Term URIs may be used to identify a term or concept within the semantic web or locate a web page with a human readable definition.
+A namespace or vocabulary identifier used as a prefix to construct URIs for glossary terms. Term URIs may be used to identify a concept within a Semantic Web or Linked Data Context or just to locate an external web page with a human readable definition. See also option `linking.baseUrl`.
 
 `uri`
 
@@ -707,7 +707,7 @@ Reference this group by using
 
 ### baseUrl
 
-The base url to use when creating absolute links to glossary.
+The base URL to use for (web-)linking. Use `paths: "absolute"` to (cross-)link terms by their term URLs rather than by relative file paths. A term URL is a combination of `baseUrl` + `path,file,ext` + `#term-fragment` where `path,file,ext` can be customized using `linking.pathComponents`. Linked Data URIs: A term URL will be considered a term's (vocabulary) URI, too. However, if the term URL can not be guaranteed to be a *long lasting* identifier for the term's definition or doesn't match its predefined URI, then you might want to declare a dedicated URI per glossary. It will be used as an URI prefix to the glossary's terms (see also option `glossaries[i].uri`).
 
 `baseUrl`
 
