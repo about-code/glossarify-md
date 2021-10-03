@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/pandoc/config-glossaries/uri-from-heading-id",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": "~",
+      "uri": "https://my.org/vocab/"
+    }
+  ],
+  "linking": {
+    "paths": "relative"
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}

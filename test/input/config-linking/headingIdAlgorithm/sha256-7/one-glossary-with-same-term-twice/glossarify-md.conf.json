@@ -1,0 +1,19 @@
+{
+  "$schema": "../../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../../output-actual/config-linking/headingIdAlgorithm/sha256-7/one-glossary-with-same-term-twice",
+  "linking": {
+    "paths": "relative",
+    "headingIdAlgorithm": "sha256-7"
+  },
+  "glossaries": [{ "file": "./**/*.md" } ],
+  "generateFiles": {
+    "indexFile": {
+      "title": "Index",
+      "file": "./sha256-index.md"
+    }
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}

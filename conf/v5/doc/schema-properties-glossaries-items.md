@@ -40,3 +40,17 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 | :------- | :---------- |
 | `"asc"`  |             |
 | `"desc"` |             |
+
+## uri
+
+A namespace or vocabulary identifier used as a prefix to construct URIs for glossary terms. Term URIs may be used to identify a concept within a Semantic Web or Linked Data Context or just to locate an external web page with a human readable definition. See also option `linking.baseUrl`.
+
+`uri`
+
+*   is optional
+
+*   Type: `string`
+
+### uri Constraints
+
+**URI**: the string must be a URI, according to [RFC 3986](https://tools.ietf.org/html/rfc3986 "check the specification")

@@ -1,7 +1,7 @@
-# [Glossary](#id-99791f6)
+# [Glossary](#md5:4546d08)
 
-## [Term](#id-ac82d4c)
+## [Term](#md5:22285b0)
 
 [Term][1] definition.
 
-[1]: #id-ac82d4c "Term definition."
+[1]: #md5:22285b0 "Term definition."

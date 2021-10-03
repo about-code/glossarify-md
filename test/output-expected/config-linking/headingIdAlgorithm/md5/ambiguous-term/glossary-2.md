@@ -1,5 +1,5 @@
-# [Glossary 2](#id-172c1b1cfddbadf2861b698889e3c9fb)
+# [Glossary 2](#md5:76bb891beea996ab8fd8c6ebd806a446)
 
-## [Alpha](#id-2014cd002823f23a930ec129344581c3)
+## [Alpha](#md5:069dc1a0f28ef56508b16a61ca7cd681)
 
 Second definition.

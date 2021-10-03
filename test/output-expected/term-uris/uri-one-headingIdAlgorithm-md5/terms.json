@@ -1,0 +1,62 @@
+[
+  {
+    "value": "Glossary",
+    "uri": "https://my.org/vocab/#md5:4546d08",
+    "valueHash8": "31d109d1",
+    "hint": "~",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "md5:4546d08",
+    "headingIdPlain": "term://glossarify.md/glossary#glossary",
+    "headingDepth": 1,
+    "anchor": "#md5:4546d08",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": "~"
+    },
+    "regex": "/(Glossary)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Phrase with Spaces",
+    "uri": "https://my.org/vocab/#md5:cbafc15",
+    "valueHash8": "30d29ade",
+    "hint": "~",
+    "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "headingId": "md5:cbafc15",
+    "headingIdPlain": "term://glossarify.md/glossary#phrase-with-spaces",
+    "headingDepth": 2,
+    "anchor": "#md5:cbafc15",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": "~"
+    },
+    "regex": "/(Phrase with Spaces)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  },
+  {
+    "value": "Term",
+    "uri": "https://my.org/vocab/#md5:22285b0",
+    "valueHash8": "cf5f3091",
+    "hint": "~",
+    "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
+    "headingId": "md5:22285b0",
+    "headingIdPlain": "term://glossarify.md/glossary#term",
+    "headingDepth": 2,
+    "anchor": "#md5:22285b0",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": "~"
+    },
+    "regex": "/(Term)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]

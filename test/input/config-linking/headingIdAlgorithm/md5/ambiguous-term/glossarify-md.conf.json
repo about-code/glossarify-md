@@ -12,5 +12,8 @@
       "title": "Index",
       "file": "./md5-index.md"
     }
+  },
+  "dev": {
+    "termsFile": "./terms.json"
   }
 }

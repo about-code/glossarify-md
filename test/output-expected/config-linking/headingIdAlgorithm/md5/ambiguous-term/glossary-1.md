@@ -1,5 +1,5 @@
-# [Glossary 1](#id-12d8d5745b8afae6949c0a18bd187bbb)
+# [Glossary 1](#md5:96a4ec2398c60994d273835e4d2d908e)
 
-## [Alpha](#id-1a319298ee8172465c1b9a7c00a454bb)
+## [Alpha](#md5:90620a4d9e83ed5d23be37255071123d)
 
 First definition.

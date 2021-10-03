@@ -1,5 +1,5 @@
 import fs from "fs-extra";
-import process from "node:process";
+import proc from "node:process";
 const confProp = JSON.parse(fs.readFileSync("../conf/v5/schema.json")).properties;
 let errors = [];
 
@@ -31,5 +31,5 @@ let errors = [];
 if (errors.length > 0) {
     console.log(errors);
     console.log("Tests failed with errors.");
-    process.exit(1);
+    proc.exit(1);
 }

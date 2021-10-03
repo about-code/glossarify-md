@@ -1,54 +1,60 @@
 [
   {
-    "shortDesc": "",
-    "id": "glossary",
     "value": "Glossary",
+    "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
+    "headingId": "glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "Test term",
-    "id": "ipsum",
     "value": "Ipsum",
+    "uri": "glossary.md#ipsum",
     "valueHash8": "1034a44d",
     "hint": "",
     "longDesc": "Test term",
+    "shortDesc": "Test term",
+    "headingId": "ipsum",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ipsum",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Ipsum)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1
   },
   {
-    "shortDesc": "Test term",
-    "id": "lorem",
     "value": "Lorem",
+    "uri": "glossary.md#lorem",
     "valueHash8": "db6ff2ff",
     "hint": "",
     "longDesc": "Test term",
+    "shortDesc": "Test term",
+    "headingId": "lorem",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#lorem",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Lorem)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4

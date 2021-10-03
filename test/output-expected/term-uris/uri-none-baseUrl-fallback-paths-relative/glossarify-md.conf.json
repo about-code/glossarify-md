@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": "./",
+  "outDir": "../../../output-actual/term-uris/uri-none-baseUrl-fallback-paths-relative/",
+  "glossaries": [{
+      "file": "./sub-1/sub-2/glossary.md"
+  }],
+  "linking": {
+    "baseUrl": "https://base.url/vocab/",
+    "paths": "absolute",
+    "pathComponents": ["path", "file"]
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "value": "Glossary",
+    "uri": "glossary.md#md5:4546d08",
+    "valueHash8": "31d109d1",
+    "hint": "",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "md5:4546d08",
+    "headingIdPlain": "term://glossarify.md/glossary#glossary",
+    "headingDepth": 1,
+    "anchor": "#md5:4546d08",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": ""
+    },
+    "regex": "/(Glossary)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Term",
+    "uri": "glossary.md#md5:22285b0",
+    "valueHash8": "cf5f3091",
+    "hint": "",
+    "longDesc": "Term definition.",
+    "shortDesc": "Term definition.",
+    "headingId": "md5:22285b0",
+    "headingIdPlain": "term://glossarify.md/glossary#term",
+    "headingDepth": 2,
+    "anchor": "#md5:22285b0",
+    "glossary": {
+      "file": "glossary.md",
+      "termHint": ""
+    },
+    "regex": "/(Term)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 1
+  }
+]

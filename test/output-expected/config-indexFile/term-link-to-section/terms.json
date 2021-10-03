@@ -1,36 +1,40 @@
 [
   {
-    "shortDesc": "",
-    "id": "glossary",
     "value": "Glossary",
+    "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
+    "shortDesc": "",
+    "headingId": "glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0
   },
   {
-    "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
-    "id": "term",
     "value": "Term",
+    "uri": "glossary.md#term",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
+    "shortDesc": "GIVEN a term 'Term'\nAND a document with a heading 'Section'\nAND the term is mentioned in that section\nTHEN in the index the term MUST be linked with a path './with-section-heading.md#section'\nAND a link label 'Section'.",
+    "headingId": "term",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
-    "regex": {},
+    "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2

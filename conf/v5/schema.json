@@ -172,6 +172,12 @@
                     ,"type": "string"
                     ,"enum": ["asc", "desc"]
                 }
+                ,"uri": {
+                    "description": "A namespace or vocabulary identifier used as a prefix to construct URIs for glossary terms. Term URIs may be used to identify a concept within a Semantic Web or Linked Data Context or just to locate an external web page with a human readable definition. See also option `linking.baseUrl`."
+                    ,"type": "string"
+                    ,"format": "uri"
+                    ,"since": "6.0.0"
+                }
             }
         }
         ,"indexFile": {
@@ -277,7 +283,7 @@
             "type": "object"
             ,"properties": {
                 "baseUrl": {
-                    "description": "The base url to use when creating absolute links to glossary."
+                    "description": "The base URL to use for (web-)linking. Use `paths: \"absolute\"` to (cross-)link terms by their term URLs rather than by relative file paths. A term URL is a combination of `baseUrl` + `path,file,ext` + `#term-fragment` where `path,file,ext` can be customized using `linking.pathComponents`. Linked Data URIs: A term URL will be considered a term's (vocabulary) URI, too. However, if the term URL can not be guaranteed to be a _long lasting_ identifier for the term's definition or doesn't match its predefined URI, then you might want to declare a dedicated URI per glossary. It will be used as an URI prefix to the glossary's terms (see also option `glossaries[i].uri`)."
                     ,"type": "string"
                     ,"format": "url"
                 }
@@ -294,6 +300,7 @@
                         "type": "string",
                         "enum": ["path", "file", "ext"]
                     }
+                    ,"since": "6.0.0"
                 }
                 ,"mentions": {
                     "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
@@ -310,16 +317,19 @@
                     }
                 }
                 ,"headingIdAlgorithm": {
-                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org ).",
-                    "enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
+                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org )."
+                    ,"enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
+                    ,"since": "6.0.0"
                 }
                 ,"headingAsLink": {
-                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes.",
-                    "type": "boolean"
+                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
                 }
                 ,"headingIdPandoc": {
-                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id.",
-                    "type": "boolean"
+                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
                 }
                 ,"limitByAlternatives": {
                     "description": "This option can be used to limit the number of links, if there are multiple definitions of a term. When using a positive value, then the system creates links _no more than ..._ alternative links. If the number is negative then the absolute amount indicates to _not link a term at all once there are at least ..._ alternative definitions. For example: \n 1 linkifies the term in text and adds a link to 1 alternative definition (superscript),\n 0 only linkifies the term in text but adds 0 links to alternative definitions,\n -1 does not linkify a term in text once there is at least 1 alternative definition.\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain template and thus repeatedly declare the same heading (= term)."
@@ -330,6 +340,7 @@
                 ,"byReferenceDefinition": {
                     "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
                     ,"type": "boolean"
+                    ,"since": "6.0.0"
                 }
             }
         }
