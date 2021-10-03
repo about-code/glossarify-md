@@ -1,30 +1,30 @@
 import fs from "node:fs";
 import path from "node:path";
-import process from "node:process";
+import proc from "node:process";
 
 let hasDiff = false;
-process.stdin.setEncoding("utf8");
-process.stdin.on("readable", () => {
+proc.stdin.setEncoding("utf8");
+proc.stdin.on("readable", () => {
     let chunk;
     // Use a loop to make sure we read all available data.
-    while ((chunk = process.stdin.read()) !== null) {
-        process.stdout.write(chunk);
+    while ((chunk = proc.stdin.read()) !== null) {
+        proc.stdout.write(chunk);
         hasDiff = true;
     }
 });
 
-process.stdin.on("end", () => {
+proc.stdin.on("end", () => {
     let hasMessage = "";
-    if (!fs.existsSync(path.resolve(process.cwd(), "./output-actual"))) {
+    if (!fs.existsSync(path.resolve(proc.cwd(), "./output-actual"))) {
         hasMessage += "No directory './output-actual'\n";
     }
 
-    if (!fs.existsSync(path.resolve(process.cwd(), "./output-expected"))) {
+    if (!fs.existsSync(path.resolve(proc.cwd(), "./output-expected"))) {
         hasMessage += "No directory './output-expected'\n";
     }
 
     if (hasDiff || hasMessage) {
-        process.stdout.write(`${hasMessage}
+        proc.stdout.write(`${hasMessage}
 ┌──────────────────────────────────────────────────────────────────────────┐
 │ TESTS FAILED: Actual output (green*) does not match expected             │
 │ output (red). Please review the diff before committing.                  │
@@ -44,9 +44,9 @@ process.stdin.on("end", () => {
 │ must include a line  'test: New baseline.'                               │
 └──────────────────────────────────────────────────────────────────────────┘
 `);
-        process.exit(1);
+        proc.exit(1);
     } else {
-        process.stdout.write(`
+        proc.stdout.write(`
 ┌──────────────┐
 │ TESTS PASSED │
 └──────────────┘
