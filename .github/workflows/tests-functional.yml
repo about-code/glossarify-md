@@ -1,6 +1,9 @@
 name: Tests (Functional)
 on:
   workflow_dispatch:
+  push:
+    branches:
+    - master
   pull_request:
 #  schedule:
 #  - cron: '0 23 * * *'
