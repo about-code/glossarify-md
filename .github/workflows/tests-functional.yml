@@ -1,7 +1,6 @@
 name: Tests (Functional)
 on:
   workflow_dispatch:
-  push:
   pull_request:
 #  schedule:
 #  - cron: '0 23 * * *'
