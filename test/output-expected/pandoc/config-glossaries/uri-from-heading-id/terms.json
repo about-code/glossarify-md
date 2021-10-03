@@ -10,7 +10,7 @@
     "headingDepth": 2,
     "anchor": "#custom",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "~"
     },
     "regex": "/(Custom)/u",
@@ -30,7 +30,7 @@
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "~"
     },
     "regex": "/(Glossary)/u",

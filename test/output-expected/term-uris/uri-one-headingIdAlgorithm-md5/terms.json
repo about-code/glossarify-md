@@ -11,7 +11,7 @@
     "headingDepth": 1,
     "anchor": "#md5:4546d08",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "~"
     },
     "regex": "/(Glossary)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 2,
     "anchor": "#md5:cbafc15",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "~"
     },
     "regex": "/(Phrase with Spaces)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#md5:22285b0",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "~"
     },
     "regex": "/(Term)/u",

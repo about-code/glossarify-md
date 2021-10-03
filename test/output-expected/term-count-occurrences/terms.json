@@ -11,7 +11,7 @@
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Glossary)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 4,
     "anchor": "#mention-one-once",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(mention-one-once)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 4,
     "anchor": "#mention-two-twice",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(mention-two-twice)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-once",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Mentioned-in-document-once)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-twice",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Mentioned-in-document-twice)/u",
@@ -111,7 +111,7 @@
     "headingDepth": 2,
     "anchor": "#one",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(One)/u",
@@ -131,7 +131,7 @@
     "headingDepth": 2,
     "anchor": "#two",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Two)/u",
@@ -151,7 +151,7 @@
     "headingDepth": 2,
     "anchor": "#zero",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Zero)/u",

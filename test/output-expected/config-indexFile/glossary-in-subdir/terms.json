@@ -11,7 +11,7 @@
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./sub/glossary.md",
+      "file": "sub/glossary.md",
       "termHint": ""
     },
     "regex": "/(Glossary)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
-      "file": "./sub/glossary.md",
+      "file": "sub/glossary.md",
       "termHint": ""
     },
     "regex": "/(Term)/u",

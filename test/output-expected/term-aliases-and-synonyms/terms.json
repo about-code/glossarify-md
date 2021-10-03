@@ -11,7 +11,7 @@
     "headingDepth": 2,
     "anchor": "#alias-substring-behavior",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Alias substring behavior)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 1,
     "anchor": "#aliases-and-synonyms",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Aliases and Synonyms)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 3,
     "anchor": "#china",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(中国zhōngguó|zhōngguó中国|中zhōngguó国|zhōng中国guó|China)/u",
@@ -76,7 +76,7 @@
     "headingDepth": 3,
     "anchor": "#field",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(GREENFIELD|FIELD)/u",
@@ -98,7 +98,7 @@
     "headingDepth": 3,
     "anchor": "#flower",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Flower|lower)/u",
@@ -120,7 +120,7 @@
     "headingDepth": 3,
     "anchor": "#friendship",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Friendship|end)/u",
@@ -142,7 +142,7 @@
     "headingDepth": 3,
     "anchor": "#hopefully",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Hopefully|Hope)/u",
@@ -164,7 +164,7 @@
     "headingDepth": 3,
     "anchor": "#issue",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Issues|Issue)/u",
@@ -186,7 +186,7 @@
     "headingDepth": 3,
     "anchor": "#our",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(FLOURISH|OUR)/u",
@@ -208,7 +208,7 @@
     "headingDepth": 2,
     "anchor": "#term-1",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(T1\\.Alias3|T1 Alias1|T1-Alias2|Term 1)/u",
@@ -232,7 +232,7 @@
     "headingDepth": 2,
     "anchor": "#term-2",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(T2\\.Alias3|T2 Alias1|T2-Alias2|Term 2)/u",
@@ -256,7 +256,7 @@
     "headingDepth": 2,
     "anchor": "#term-3",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(T3\\.Alias3|T3 Alias1|T3-Alias2|Term 3)/u",
@@ -280,7 +280,7 @@
     "headingDepth": 2,
     "anchor": "#term-4",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(T4\\.Alias3|T4 Alias1|T4-Alias2|Term 4)/u",
@@ -304,7 +304,7 @@
     "headingDepth": 2,
     "anchor": "#term-5",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(T5-Alias1|T5-Alias2|Term 5)/u",
@@ -327,7 +327,7 @@
     "headingDepth": 2,
     "anchor": "#unicode-support",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Unicode Support)/u",

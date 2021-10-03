@@ -11,7 +11,7 @@
     "headingDepth": 1,
     "anchor": "#glossary-g1",
     "glossary": {
-      "file": "./glossary-g1.md",
+      "file": "glossary-g1.md",
       "termHint": ""
     },
     "regex": "/(Glossary G1)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 1,
     "anchor": "#glossary-g2",
     "glossary": {
-      "file": "./glossary-g2.md",
+      "file": "glossary-g2.md",
       "termHint": ""
     },
     "regex": "/(Glossary G2)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#term-a",
     "glossary": {
-      "file": "./glossary-g1.md",
+      "file": "glossary-g1.md",
       "termHint": ""
     },
     "regex": "/(Term A)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#term-b",
     "glossary": {
-      "file": "./glossary-g1.md",
+      "file": "glossary-g1.md",
       "termHint": ""
     },
     "regex": "/(Term B)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 2,
     "anchor": "#term-c",
     "glossary": {
-      "file": "./glossary-g1.md",
+      "file": "glossary-g1.md",
       "termHint": ""
     },
     "regex": "/(Term C)/u",
@@ -111,7 +111,7 @@
     "headingDepth": 2,
     "anchor": "#term-d",
     "glossary": {
-      "file": "./glossary-g2.md",
+      "file": "glossary-g2.md",
       "termHint": ""
     },
     "regex": "/(Term D)/u",
@@ -131,7 +131,7 @@
     "headingDepth": 2,
     "anchor": "#term-e",
     "glossary": {
-      "file": "./glossary-g1.md",
+      "file": "glossary-g1.md",
       "termHint": ""
     },
     "regex": "/(Term E)/u",
@@ -151,7 +151,7 @@
     "headingDepth": 2,
     "anchor": "#term-f",
     "glossary": {
-      "file": "./glossary-g2.md",
+      "file": "glossary-g2.md",
       "termHint": ""
     },
     "regex": "/(Term F)/u",

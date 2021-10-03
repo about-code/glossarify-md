@@ -10,7 +10,7 @@
     "headingDepth": 2,
     "anchor": "#custom",
     "glossary": {
-      "file": "./sub-1/sub-2/glossary.md",
+      "file": "sub-1/sub-2/glossary.md",
       "termHint": ""
     },
     "regex": "/(Custom)/u",
@@ -30,7 +30,7 @@
     "headingDepth": 1,
     "anchor": "#glossary-without-uri-but-fallback-to-baseurl",
     "glossary": {
-      "file": "./sub-1/sub-2/glossary.md",
+      "file": "sub-1/sub-2/glossary.md",
       "termHint": ""
     },
     "regex": "/(Glossary without URI but fallback to baseUrl)/u",
@@ -50,7 +50,7 @@
     "headingDepth": 2,
     "anchor": "#term",
     "glossary": {
-      "file": "./sub-1/sub-2/glossary.md",
+      "file": "sub-1/sub-2/glossary.md",
       "termHint": ""
     },
     "regex": "/(Term)/u",

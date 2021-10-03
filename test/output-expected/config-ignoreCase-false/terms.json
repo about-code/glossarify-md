@@ -11,7 +11,7 @@
     "headingDepth": 2,
     "anchor": "#all-lowercase",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(all-lowercase)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 2,
     "anchor": "#all-uppercase",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(ALL-UPPERCASE)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#first-lowercase",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(fIRST-lOWERCASE)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#first-uppercase",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(First-Uppercase)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 2,
     "anchor": "#mixed-case",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(MiXeD-CaSe)/u",
@@ -111,7 +111,7 @@
     "headingDepth": 1,
     "anchor": "#testing-config-option-ignorecase",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Testing Config Option ignoreCase)/u",

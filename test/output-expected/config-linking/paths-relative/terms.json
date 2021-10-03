@@ -11,7 +11,7 @@
     "headingDepth": 2,
     "anchor": "#first-level-child",
     "glossary": {
-      "file": "./sub-1/glossary.md",
+      "file": "sub-1/glossary.md",
       "termHint": ""
     },
     "regex": "/(First-Level-Child)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 2,
     "anchor": "#first-level-parent",
     "glossary": {
-      "file": "./sub-1/glossary.md",
+      "file": "sub-1/glossary.md",
       "termHint": ""
     },
     "regex": "/(First-Level-Parent)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#second-level-parent",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Second-Level-Parent)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#sibling",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Sibling)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
     "glossary": {
-      "file": "./sub-1/glossary.md",
+      "file": "sub-1/glossary.md",
       "termHint": ""
     },
     "regex": "/(Testing config option 'linking')/u",
@@ -111,7 +111,7 @@
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Testing Config Option 'linking')/u",

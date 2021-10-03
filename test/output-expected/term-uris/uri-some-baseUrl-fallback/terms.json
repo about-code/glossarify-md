@@ -11,7 +11,7 @@
     "headingDepth": 1,
     "anchor": "#glossary-1",
     "glossary": {
-      "file": "./glossary1.md",
+      "file": "glossary1.md",
       "termHint": ""
     },
     "regex": "/(Glossary 1)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 1,
     "anchor": "#glossary-2",
     "glossary": {
-      "file": "./glossary2.md",
+      "file": "glossary2.md",
       "termHint": ""
     },
     "regex": "/(Glossary 2)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#phrase1-with-spaces",
     "glossary": {
-      "file": "./glossary1.md",
+      "file": "glossary1.md",
       "termHint": ""
     },
     "regex": "/(Phrase1 with Spaces)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#phrase2-with-spaces",
     "glossary": {
-      "file": "./glossary2.md",
+      "file": "glossary2.md",
       "termHint": ""
     },
     "regex": "/(Phrase2 with Spaces)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 2,
     "anchor": "#term1",
     "glossary": {
-      "file": "./glossary1.md",
+      "file": "glossary1.md",
       "termHint": ""
     },
     "regex": "/(Term1)/u",
@@ -111,7 +111,7 @@
     "headingDepth": 2,
     "anchor": "#term2",
     "glossary": {
-      "file": "./glossary2.md",
+      "file": "glossary2.md",
       "termHint": ""
     },
     "regex": "/(Term2)/u",

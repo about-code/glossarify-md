@@ -11,7 +11,7 @@
     "headingDepth": 2,
     "anchor": "#äö",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/('ÄÖ')/u",
@@ -31,7 +31,7 @@
     "headingDepth": 2,
     "anchor": "#äöü",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/('ÄÖÜ')/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#a",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(A)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#ä",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Ä)/u",
@@ -91,7 +91,7 @@
     "headingDepth": 2,
     "anchor": "#ab",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(AB)/u",
@@ -111,7 +111,7 @@
     "headingDepth": 2,
     "anchor": "#abc",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(ABC)/u",
@@ -131,7 +131,7 @@
     "headingDepth": 1,
     "anchor": "#substring-test-glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     },
     "regex": "/(Substring Test Glossary)/u",

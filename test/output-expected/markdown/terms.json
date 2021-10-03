@@ -11,7 +11,7 @@
     "headingDepth": 2,
     "anchor": "#dolor",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "↴"
     },
     "regex": "/(dolor)/u",
@@ -31,7 +31,7 @@
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "↴"
     },
     "regex": "/(Glossary)/u",
@@ -51,7 +51,7 @@
     "headingDepth": 2,
     "anchor": "#lorem-ipsum",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "↴"
     },
     "regex": "/(Lorem ipsum)/u",
@@ -71,7 +71,7 @@
     "headingDepth": 2,
     "anchor": "#sit",
     "glossary": {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": "↴"
     },
     "regex": "/(sit)/u",
