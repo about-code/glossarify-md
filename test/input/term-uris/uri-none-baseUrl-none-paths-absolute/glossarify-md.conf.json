@@ -10,6 +10,7 @@
     "pathComponents": ["path", "file"]
   },
   "dev": {
-    "termsFile": "./terms.json"
+    "termsFile": "./terms.json",
+    "reproducablePaths": true
   }
 }
