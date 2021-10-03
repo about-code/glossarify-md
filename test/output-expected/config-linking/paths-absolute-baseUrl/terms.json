@@ -7,6 +7,7 @@
     "longDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
     "shortDesc": "must be referred to in '../document.md' with '${baseUrl}/sub-1/glossary.md#first-leve-child'",
     "headingId": "first-level-child",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-child",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
     "shortDesc": "must be referred to in './sub-2/document.md' with '${baseUrl}/sub-1/glossary.md#first-level-parent'",
     "headingId": "first-level-parent",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-parent",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
     "shortDesc": "must be referred to in './sub-1/sub-2/document.md' with '${baseUrl}/glossary.md#second-level-parent'",
     "headingId": "second-level-parent",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#second-level-parent",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",
     "shortDesc": "must be referred to in './document.md' with '${baseUrl}/glossary.md#sibling'",
     "headingId": "sibling",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#sibling",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-config-option-linking",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-config-option-linking",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
     "glossary": {

@@ -7,6 +7,7 @@
     "longDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
     "shortDesc": "GIVEN a term definition with a hashtag\nTHEN term occurrences in the document must still be linked, correctly",
     "headingId": "hashtag",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#hashtag",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "Testing German Umlauts.",
     "shortDesc": "Testing German Umlauts.",
     "headingId": "äöüß-term-begins-with-umlauts",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äöüß-term-begins-with-umlauts",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
     "shortDesc": "GIVEN a compound term 'Äquatorregion' AND GIVEN 'Äquator' is a glossary term\nTHEN the linker MUST NOT link the compound with a glossary definition.",
     "headingId": "äquator",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äquator",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "shortDesc": "GIVEN a term heading being bold formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "headingId": "bold-format",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#bold-format",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "Word ends with symbols",
     "shortDesc": "Word ends with symbols",
     "headingId": "china中国",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#china中国",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "Word contains symbols",
     "shortDesc": "Word contains symbols",
     "headingId": "chi中国na",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#chi中国na",
     "glossary": {
@@ -121,6 +127,7 @@
     "longDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "shortDesc": "GIVEN a term heading being codespan formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "headingId": "codespan-format",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#codespan-format",
     "glossary": {
@@ -140,6 +147,7 @@
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.\nTHEN term, short and long description MUST still be extracted, correctly.",
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by a description without an intermediate empty line.",
     "headingId": "dense-definition",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dense-definition",
     "glossary": {
@@ -159,6 +167,7 @@
     "longDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.\nTHEN term, aliases, short and long description MUST still be extracted, correctly.",
     "shortDesc": "GIVEN a term heading being formatted\nAND being followed by HTML aliases\nAND being followed by a description all without an intermediate empty line.",
     "headingId": "dense-definition-with-alias",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dense-definition-with-alias",
     "glossary": {
@@ -180,6 +189,7 @@
     "longDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
     "shortDesc": "Classical composition by Franz Schubert (The Death and the Maiden).",
     "headingId": "der-tod-und-das-mädchen",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#der-tod-und-das-mädchen",
     "glossary": {
@@ -199,6 +209,7 @@
     "longDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "shortDesc": "GIVEN a compound term 'Faßöl'\nWITH 'Faß' being a glossary term\nAND 'Faß' ending with a non-ASCII character\nAND 'öl' beginning with a non-ASCII character\nTHEN 'Faßöl' MUST NOT be split into two words\nAND 'Faßöl' MUST NOT be linked to the glossary definition of 'Faß'.",
     "headingId": "faß",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#faß",
     "glossary": {
@@ -218,6 +229,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
@@ -237,6 +249,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-a",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
     "glossary": {
@@ -256,6 +269,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-a",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
     "glossary": {
@@ -275,6 +289,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-b",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
     "glossary": {
@@ -294,6 +309,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-b",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
     "glossary": {
@@ -313,6 +329,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-with-markdown-formatted-term",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-with-markdown-formatted-term",
     "glossary": {
@@ -332,6 +349,7 @@
     "longDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
     "shortDesc": "Given a term heading being in parts formatted\nTHEN occurrences of the whole phrase in the document must still be linked, correctly",
     "headingId": "in-parts-formatted",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-parts-formatted",
     "glossary": {
@@ -351,6 +369,7 @@
     "longDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "shortDesc": "GIVEN a term heading being italic formatted\nTHEN term occurrences in the document must still be linked, correctly",
     "headingId": "italic-format",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#italic-format",
     "glossary": {
@@ -370,6 +389,7 @@
     "longDesc": "Testing German Umlauts.",
     "shortDesc": "Testing German Umlauts.",
     "headingId": "term-contains-äöüß-umlauts",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-contains-äöüß-umlauts",
     "glossary": {
@@ -389,6 +409,7 @@
     "longDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
     "shortDesc": "'Term Disjunct A' MUST be linked WITH 'Glossary A', only.",
     "headingId": "term-disjunct-a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-disjunct-a",
     "glossary": {
@@ -408,6 +429,7 @@
     "longDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
     "shortDesc": "'Term Disjunct B' MUST be linked WITH 'Glossary B', only.",
     "headingId": "term-disjunct-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-disjunct-b",
     "glossary": {
@@ -427,6 +449,7 @@
     "longDesc": "Testing German Umlauts.",
     "shortDesc": "Testing German Umlauts.",
     "headingId": "term-ends-with-umlauts-äöüß",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-ends-with-umlauts-äöüß",
     "glossary": {
@@ -446,6 +469,7 @@
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "headingId": "term-shared-a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-a",
     "glossary": {
@@ -465,6 +489,7 @@
     "longDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "shortDesc": "'Term Shared A' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "headingId": "term-shared-a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-a",
     "glossary": {
@@ -484,6 +509,7 @@
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "headingId": "term-shared-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-b",
     "glossary": {
@@ -503,6 +529,7 @@
     "longDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "shortDesc": "'Term Shared B' MUST be linked WITH both glossaries 'Glossary A' AND 'Glossary B'.",
     "headingId": "term-shared-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-b",
     "glossary": {
@@ -522,6 +549,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "term-hint-prefix",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-prefix",
     "glossary": {
@@ -541,6 +569,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "term-hint-suffix",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-suffix",
     "glossary": {
@@ -560,6 +589,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "term-hint-suffix-default",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-suffix-default",
     "glossary": {
@@ -579,6 +609,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "term-hint-wrapped",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-wrapped",
     "glossary": {
@@ -598,6 +629,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-config-option-glossariestermhint",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-glossariestermhint",
     "glossary": {
@@ -617,6 +649,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-option-glossariestermhint",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
     "glossary": {
@@ -636,6 +669,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-option-glossariestermhint",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
     "glossary": {
@@ -655,6 +689,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-option-glossariestermhint",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
     "glossary": {
@@ -674,6 +709,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "unicode-tests",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#unicode-tests",
     "glossary": {
@@ -693,6 +729,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "uppercase",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#uppercase",
     "glossary": {
@@ -712,6 +749,7 @@
     "longDesc": "China (spelling)",
     "shortDesc": "China (spelling)",
     "headingId": "zhōngguó",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#zhōngguó",
     "glossary": {
@@ -731,6 +769,7 @@
     "longDesc": "Word begins and ends with symbols",
     "shortDesc": "Word begins and ends with symbols",
     "headingId": "中china国",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中china国",
     "glossary": {
@@ -750,6 +789,7 @@
     "longDesc": "China",
     "shortDesc": "China",
     "headingId": "中国",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中国",
     "glossary": {
@@ -769,6 +809,7 @@
     "longDesc": "Word begins with symbols",
     "shortDesc": "Word begins with symbols",
     "headingId": "中国china",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中国china",
     "glossary": {

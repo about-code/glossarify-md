@@ -7,6 +7,7 @@
     "longDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "shortDesc": "GIVEN a term 'ÄÖ' WITH term 'Ä' being a substring of it and itself being substring of 'ÄÖÜ'",
     "headingId": "äö",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äö",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "shortDesc": "GIVEN a term 'ÄÖÜ' WITH terms 'ÄÖ' and 'Ä' being substrings of it",
     "headingId": "äöü",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äöü",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "shortDesc": "GIVEN an atomic term 'A' WITH term 'A' being a substring of 'AB' and 'ABC'",
     "headingId": "a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#a",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "shortDesc": "GIVEN an atomic non-ASCII term 'Ä' WITH term 'Ä' being a substring of 'ÄÖ' and 'ÄÖÜ'",
     "headingId": "ä",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ä",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "shortDesc": "GIVEN a term 'AB' WITH term A being a substring of it and itself being substring of 'ABC'",
     "headingId": "ab",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ab",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "shortDesc": "GIVEN a term 'ABC' WITH terms 'AB' and A being substrings of it",
     "headingId": "abc",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#abc",
     "glossary": {
@@ -121,6 +127,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "substring-test-glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#substring-test-glossary",
     "glossary": {

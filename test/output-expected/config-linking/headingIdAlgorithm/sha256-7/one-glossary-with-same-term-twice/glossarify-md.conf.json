@@ -12,5 +12,8 @@
       "title": "Index",
       "file": "./sha256-index.md"
     }
+  },
+  "dev": {
+    "termsFile": "./terms.json"
   }
 }

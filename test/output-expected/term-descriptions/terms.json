@@ -7,6 +7,7 @@
     "longDesc": "GIVEN short description partly formatted. AND long description being partly formatted, too.\nTHEN short AND long description MUST still be extracted, correctly.",
     "shortDesc": "GIVEN short description partly formatted.",
     "headingId": "description-partly-formatted",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#description-partly-formatted",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "formatted-term-definitions",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#formatted-term-definitions",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-full-description-is-a-blockquote",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-full-description-is-a-blockquote",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description with a link MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-long-description-has-a-link",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-long-description-has-a-link",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-long-description-is-a-blockquote",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-long-description-is-a-blockquote",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "THEN short description with a link MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description with a link MUST be detected completely.",
     "headingId": "given-short-description-has-a-link",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-has-a-link",
     "glossary": {
@@ -121,6 +127,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-short-description-is-a-blockquote",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-a-blockquote",
     "glossary": {
@@ -140,6 +147,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-short-description-is-bold-with-fullstop-excluded",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-excluded",
     "glossary": {
@@ -159,6 +167,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-short-description-is-bold-with-fullstop-included",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-included",
     "glossary": {
@@ -178,6 +187,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-short-description-is-italic-with-fullstop-excluded",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-excluded",
     "glossary": {
@@ -197,6 +207,7 @@
     "longDesc": "THEN short description MUST be detected completely. AND long description MUST be complete, too.",
     "shortDesc": "THEN short description MUST be detected completely.",
     "headingId": "given-short-description-is-italic-with-fullstop-included",
+    "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-included",
     "glossary": {
@@ -216,6 +227,7 @@
     "longDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
     "shortDesc": "GIVEN a single sentence across multiple lines\nTHEN short description must be extracted correctly\nAND long description MUST be the same.",
     "headingId": "single-sentence-across-multiple-lines",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-across-multiple-lines",
     "glossary": {
@@ -235,6 +247,7 @@
     "longDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
     "shortDesc": "GIVEN a single sentence terminated by an exclamation mark THEN short description AND long description MUST be the same!",
     "headingId": "single-sentence-terminated-by-exclamation-mark",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-exclamation-mark",
     "glossary": {
@@ -254,6 +267,7 @@
     "longDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
     "shortDesc": "GIVEN a single sentence terminated by a fullstop THEN short description AND long description MUST be the same.",
     "headingId": "single-sentence-terminated-by-full-stop",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-full-stop",
     "glossary": {
@@ -273,6 +287,7 @@
     "longDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
     "shortDesc": "GIVEN a single sentence terminated by a question mark THEN short description AND long description MUST be the same?",
     "headingId": "single-sentence-terminated-by-question-mark",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-question-mark",
     "glossary": {
@@ -292,6 +307,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-term-definition-extraction",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-term-definition-extraction",
     "glossary": {
@@ -311,6 +327,7 @@
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence. AND long description MUST be the first and\nsecond sentence.",
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the\nfirst sentence.",
     "headingId": "two-sentences-across-multiple-lines-terminated-by-full-stop",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-across-multiple-lines-terminated-by-full-stop",
     "glossary": {
@@ -330,6 +347,7 @@
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence. AND long description MUST be the first and second sentence.",
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
     "headingId": "two-sentences-in-a-single-line-terminated-by-full-stop",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
     "glossary": {
@@ -349,6 +367,7 @@
     "longDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.\nAND long description MUST be the first and second sentence.",
     "shortDesc": "GIVEN two sentences terminated by fullstop THEN short description MUST be the first sentence.",
     "headingId": "two-sentences-in-multiple-lines-terminated-by-full-stop",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
     "glossary": {

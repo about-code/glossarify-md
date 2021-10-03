@@ -26,6 +26,7 @@
     "longDesc": "GIVEN this glossary has no URI\nAND option 'linking.baseUrl' is \"https://base.url/vocab/\"\nAND option 'linking.paths: \"absolute\"'\nAND option 'linking.pathComponents: [\"path\", \"file\"]'\nAND option dev.termsFile: \"terms.json\" writes a file terms.json...",
     "shortDesc": "GIVEN this glossary has no URI\nAND option 'linking.baseUrl' is \"https://base.url/vocab/\"\nAND option 'linking.paths: \"absolute\"'\nAND option 'linking.pathComponents: [\"path\", \"file\"]'\nAND option dev.termsFile: \"terms.json\" writes a file terms.json...",
     "headingId": "glossary-without-uri-but-fallback-to-baseurl",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-without-uri-but-fallback-to-baseurl",
     "glossary": {
@@ -45,6 +46,7 @@
     "longDesc": "...\nTHEN in terms.json the term's URI MUST be https://base.url/vocab/sub-1/sub-2/glossary#term\nAND MUST NOT contain.md file extension (e.g. ... /glossary.md#term)",
     "shortDesc": "...",
     "headingId": "term",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
     "glossary": {

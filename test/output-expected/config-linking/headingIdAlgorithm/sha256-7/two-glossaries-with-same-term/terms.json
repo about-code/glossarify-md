@@ -1,0 +1,122 @@
+[
+  {
+    "value": "Alpha",
+    "uri": "glossary-1.md#sha256:f6b4226",
+    "valueHash8": "6132295f",
+    "hint": "",
+    "longDesc": "First definition.",
+    "shortDesc": "First definition.",
+    "headingId": "sha256:f6b4226",
+    "headingIdPlain": "term://glossarify.md/glossary-1#alpha",
+    "headingDepth": 2,
+    "anchor": "#sha256:f6b4226",
+    "glossary": {
+      "file": "./glossary-1.md",
+      "termHint": ""
+    },
+    "regex": "/(Alpha)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
+  },
+  {
+    "value": "Alpha",
+    "uri": "glossary-2.md#sha256:b693f13",
+    "valueHash8": "6132295f",
+    "hint": "",
+    "longDesc": "Second definition.",
+    "shortDesc": "Second definition.",
+    "headingId": "sha256:b693f13",
+    "headingIdPlain": "term://glossarify.md/glossary-2#alpha",
+    "headingDepth": 2,
+    "anchor": "#sha256:b693f13",
+    "glossary": {
+      "file": "./glossary-2.md",
+      "termHint": ""
+    },
+    "regex": "/(Alpha)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 4
+  },
+  {
+    "value": "Document 1",
+    "uri": "document-1.md#sha256:075afa5",
+    "valueHash8": "f08a4cd1",
+    "hint": "",
+    "longDesc": "GIVEN two glossaries with a term Alpha\nAND two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"sha256-7\"\nTHEN in the glossary files both terms MUST have a different hash value AND in document files links MUST use a SHA256 URL fragment as a link target identifier AND in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that entry",
+    "shortDesc": "GIVEN two glossaries with a term Alpha\nAND two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"sha256-7\"\nTHEN in the glossary files both terms MUST have a different hash value AND in document files links MUST use a SHA256 URL fragment as a link target identifier AND in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that entry",
+    "headingId": "sha256:075afa5",
+    "headingIdPlain": "term://glossarify.md/document-1#document-1",
+    "headingDepth": 1,
+    "anchor": "#sha256:075afa5",
+    "glossary": {
+      "file": "./document-1.md",
+      "termHint": ""
+    },
+    "regex": "/(Document 1)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Document 2",
+    "uri": "document-2.md#sha256:0704629",
+    "valueHash8": "f41f3325",
+    "hint": "",
+    "longDesc": "GIVEN two glossaries with a term Alpha\nAND two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"sha256-7\"\nTHEN in the glossary files both terms MUST have a different hash value AND in document files links MUST use a SHA256 URL fragment as a link target identifier AND in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that entry",
+    "shortDesc": "GIVEN two glossaries with a term Alpha\nAND two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"sha256-7\"\nTHEN in the glossary files both terms MUST have a different hash value AND in document files links MUST use a SHA256 URL fragment as a link target identifier AND in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that entry",
+    "headingId": "sha256:0704629",
+    "headingIdPlain": "term://glossarify.md/document-2#document-2",
+    "headingDepth": 1,
+    "anchor": "#sha256:0704629",
+    "glossary": {
+      "file": "./document-2.md",
+      "termHint": ""
+    },
+    "regex": "/(Document 2)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Glossary 1",
+    "uri": "glossary-1.md#sha256:ffcee78",
+    "valueHash8": "4cb8c916",
+    "hint": "",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "sha256:ffcee78",
+    "headingIdPlain": "term://glossarify.md/glossary-1#glossary-1",
+    "headingDepth": 1,
+    "anchor": "#sha256:ffcee78",
+    "glossary": {
+      "file": "./glossary-1.md",
+      "termHint": ""
+    },
+    "regex": "/(Glossary 1)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  },
+  {
+    "value": "Glossary 2",
+    "uri": "glossary-2.md#sha256:5d4bbe1",
+    "valueHash8": "296178d4",
+    "hint": "",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "sha256:5d4bbe1",
+    "headingIdPlain": "term://glossarify.md/glossary-2#glossary-2",
+    "headingDepth": 1,
+    "anchor": "#sha256:5d4bbe1",
+    "glossary": {
+      "file": "./glossary-2.md",
+      "termHint": ""
+    },
+    "regex": "/(Glossary 2)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0
+  }
+]

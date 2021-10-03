@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "md5:4546d08",
+    "headingIdPlain": "term://glossarify.md/glossary#glossary",
     "headingDepth": 1,
     "anchor": "#md5:4546d08",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
     "shortDesc": "GIVEN a phrase with spaces\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
     "headingId": "md5:cbafc15",
+    "headingIdPlain": "term://glossarify.md/glossary#phrase-with-spaces",
     "headingDepth": 2,
     "anchor": "#md5:cbafc15",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
     "shortDesc": "GIVEN a single term\nTHEN the system must generate an URI https://my.org/vocab/#{hash}",
     "headingId": "md5:22285b0",
+    "headingIdPlain": "term://glossarify.md/glossary#term",
     "headingDepth": 2,
     "anchor": "#md5:22285b0",
     "glossary": {

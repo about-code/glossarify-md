@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "Test term",
     "shortDesc": "Test term",
     "headingId": "ipsum",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ipsum",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "Test term",
     "shortDesc": "Test term",
     "headingId": "lorem",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#lorem",
     "glossary": {

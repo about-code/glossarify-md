@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-1",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-1",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-2",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-2",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
     "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://base.url/vocab/phrase1-with-spaces.",
     "headingId": "phrase1-with-spaces",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#phrase1-with-spaces",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
     "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a phrase with spaces\nTHEN the system must generate an URI https://glossary.uri/vocab/#phrase2-with-spaces.",
     "headingId": "phrase2-with-spaces",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#phrase2-with-spaces",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
     "shortDesc": "GIVEN a glossary without a glossary URI\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://base.url/vocab/term1.",
     "headingId": "term1",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term1",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
     "shortDesc": "GIVEN a glossary with a glossary URI \"https://glossary.uri/vocab/#\"\nAND a configuration with a baseUrl \"https://base.url/vocab/\"\nAND a single term\nTHEN the system must generate an URI https://glossary.uri/vocab/#term2.",
     "headingId": "term2",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term2",
     "glossary": {

@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "all-lowercase",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#all-lowercase",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "all-uppercase",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#all-uppercase",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "first-lowercase",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-lowercase",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "first-uppercase",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-uppercase",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "mixed-case",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#mixed-case",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "testing-config-option-ignorecase",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-ignorecase",
     "glossary": {

@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
     "shortDesc": "GIVEN a term 'Term'\nAND option 'indexFile' is './index.md'\nAND the glossary file is in './sub/glossary.md'\nAND config option 'linking' is 'relative'\nTHEN the term MUST be linked with a path './sub/glossary.md#term'.",
     "headingId": "term",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
     "glossary": {

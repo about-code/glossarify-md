@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-a",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-b",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "in-glossary-a-and-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "in-glossary-a-and-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "only-in-glossary-a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-a",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "only-in-glossary-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-b",
     "glossary": {

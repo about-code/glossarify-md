@@ -7,6 +7,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-g1",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-g1",
     "glossary": {
@@ -26,6 +27,7 @@
     "longDesc": "",
     "shortDesc": "",
     "headingId": "glossary-g2",
+    "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-g2",
     "glossary": {
@@ -45,6 +47,7 @@
     "longDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
     "shortDesc": "\"Term A\" only exists for the sake of being linked to from within this glossary.",
     "headingId": "term-a",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-a",
     "glossary": {
@@ -64,6 +67,7 @@
     "longDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
     "shortDesc": "GIVEN a term \"Term A\" AND a definition of \"Term B\" in the same glossary G1\nTHEN any occurrence of \"Term A\" in the definition of \"Term B\" MUST be linked\nto the definition of \"Term A\".",
     "headingId": "term-b",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-b",
     "glossary": {
@@ -83,6 +87,7 @@
     "longDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
     "shortDesc": "GIVEN a term \"Term C\" in glossary G1 AND a term \"Term D\" in another glossary G2\nTHEN any occurrence of \"Term D\" in glossary G1 MUST be linked to the definition\nof \"Term D\".",
     "headingId": "term-c",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-c",
     "glossary": {
@@ -102,6 +107,7 @@
     "longDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
     "shortDesc": "\"Term D\" only exists for the sake of being linked to by the definition of\n\"Term C\" in Glossary G1.",
     "headingId": "term-d",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-d",
     "glossary": {
@@ -121,6 +127,7 @@
     "longDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
     "shortDesc": "\"Term E\" only exists for the sake of being linked to from glossary G2.",
     "headingId": "term-e",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-e",
     "glossary": {
@@ -140,6 +147,7 @@
     "longDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
     "shortDesc": "GIVEN a term \"Term F\" in glossary G2 AND a term \"Term E\" in another glossary G1\nTHEN any occurrence of \"Term E\" in glossary G2 MUST be linked to the definition\nof \"Term E\".",
     "headingId": "term-f",
+    "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-f",
     "glossary": {
