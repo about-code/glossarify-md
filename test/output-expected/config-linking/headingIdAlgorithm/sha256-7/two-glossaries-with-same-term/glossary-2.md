@@ -1,5 +1,5 @@
-# [Glossary 2](#sha256:5d4bbe1)
+# [Glossary 2](#sha256:7655d97)
 
-## [Alpha](#sha256:b693f13)
+## [Alpha](#sha256:9c50dbf)
 
 Second definition.

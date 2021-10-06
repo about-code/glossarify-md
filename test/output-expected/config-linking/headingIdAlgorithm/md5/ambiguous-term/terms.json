@@ -1,15 +1,15 @@
 [
   {
     "value": "Alpha",
-    "uri": "glossary-1.md#md5:90620a4d9e83ed5d23be37255071123d",
+    "uri": "glossary-1.md#md5:ba8f4f1932828457d5bb2a5559f24ba5",
     "valueHash8": "6132295f",
     "hint": "",
     "longDesc": "First definition.",
     "shortDesc": "First definition.",
-    "headingId": "md5:90620a4d9e83ed5d23be37255071123d",
-    "headingIdPlain": "term://glossarify.md/glossary-1#alpha",
+    "headingId": "md5:ba8f4f1932828457d5bb2a5559f24ba5",
+    "headingIdPlain": "term://127.0.0.1/glossary-1#alpha",
     "headingDepth": 2,
-    "anchor": "#md5:90620a4d9e83ed5d23be37255071123d",
+    "anchor": "#md5:ba8f4f1932828457d5bb2a5559f24ba5",
     "glossary": {
       "file": "./glossary-1.md",
       "termHint": ""
@@ -21,15 +21,15 @@
   },
   {
     "value": "Alpha",
-    "uri": "glossary-2.md#md5:069dc1a0f28ef56508b16a61ca7cd681",
+    "uri": "glossary-2.md#md5:f4f4e0e4c388bc462cfd125dae54b6f5",
     "valueHash8": "6132295f",
     "hint": "",
     "longDesc": "Second definition.",
     "shortDesc": "Second definition.",
-    "headingId": "md5:069dc1a0f28ef56508b16a61ca7cd681",
-    "headingIdPlain": "term://glossarify.md/glossary-2#alpha",
+    "headingId": "md5:f4f4e0e4c388bc462cfd125dae54b6f5",
+    "headingIdPlain": "term://127.0.0.1/glossary-2#alpha",
     "headingDepth": 2,
-    "anchor": "#md5:069dc1a0f28ef56508b16a61ca7cd681",
+    "anchor": "#md5:f4f4e0e4c388bc462cfd125dae54b6f5",
     "glossary": {
       "file": "./glossary-2.md",
       "termHint": ""
@@ -41,15 +41,15 @@
   },
   {
     "value": "Document 1",
-    "uri": "document-1.md#md5:2ee7430571fbf0131068a132b86a58f8",
+    "uri": "document-1.md#md5:911e6454442a1e980ad1eeebf7fc19fc",
     "valueHash8": "f08a4cd1",
     "hint": "",
     "longDesc": "GIVEN two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"md5\"\nTHEN in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that AND output must be the same as if processed by linking.headingIdAlgorithm: \"github\"\nEXCEPT for a hash being used as a link target identifier.",
     "shortDesc": "GIVEN two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"md5\"\nTHEN in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that AND output must be the same as if processed by linking.headingIdAlgorithm: \"github\"\nEXCEPT for a hash being used as a link target identifier.",
-    "headingId": "md5:2ee7430571fbf0131068a132b86a58f8",
-    "headingIdPlain": "term://glossarify.md/document-1#document-1",
+    "headingId": "md5:911e6454442a1e980ad1eeebf7fc19fc",
+    "headingIdPlain": "term://127.0.0.1/document-1#document-1",
     "headingDepth": 1,
-    "anchor": "#md5:2ee7430571fbf0131068a132b86a58f8",
+    "anchor": "#md5:911e6454442a1e980ad1eeebf7fc19fc",
     "glossary": {
       "file": "./document-1.md",
       "termHint": ""
@@ -61,15 +61,15 @@
   },
   {
     "value": "Document 2",
-    "uri": "document-2.md#md5:27be6482878cad00745bfe5f3666d823",
+    "uri": "document-2.md#md5:765ab5bc8d9f670188c34e86e6b88743",
     "valueHash8": "f41f3325",
     "hint": "",
     "longDesc": "GIVEN two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"md5\"\nTHEN in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that AND output must be the same as if processed by linking.headingIdAlgorithm: \"github\"\nEXCEPT for a hash being used as a link target identifier.",
     "shortDesc": "GIVEN two documents Document 1 and Document 2, both mentioning term Alpha\nAND a configuration linking.headingIdAlgorithm: \"md5\"\nTHEN in the generated index file there MUST be one entry for the term AND there MUST be two glossaries linked under that entry AND there MUST be two documents linked under that AND output must be the same as if processed by linking.headingIdAlgorithm: \"github\"\nEXCEPT for a hash being used as a link target identifier.",
-    "headingId": "md5:27be6482878cad00745bfe5f3666d823",
-    "headingIdPlain": "term://glossarify.md/document-2#document-2",
+    "headingId": "md5:765ab5bc8d9f670188c34e86e6b88743",
+    "headingIdPlain": "term://127.0.0.1/document-2#document-2",
     "headingDepth": 1,
-    "anchor": "#md5:27be6482878cad00745bfe5f3666d823",
+    "anchor": "#md5:765ab5bc8d9f670188c34e86e6b88743",
     "glossary": {
       "file": "./document-2.md",
       "termHint": ""
@@ -81,15 +81,15 @@
   },
   {
     "value": "Glossary 1",
-    "uri": "glossary-1.md#md5:96a4ec2398c60994d273835e4d2d908e",
+    "uri": "glossary-1.md#md5:7f31a16b4a6da7404ab0bfc1f165137e",
     "valueHash8": "4cb8c916",
     "hint": "",
     "longDesc": "",
     "shortDesc": "",
-    "headingId": "md5:96a4ec2398c60994d273835e4d2d908e",
-    "headingIdPlain": "term://glossarify.md/glossary-1#glossary-1",
+    "headingId": "md5:7f31a16b4a6da7404ab0bfc1f165137e",
+    "headingIdPlain": "term://127.0.0.1/glossary-1#glossary-1",
     "headingDepth": 1,
-    "anchor": "#md5:96a4ec2398c60994d273835e4d2d908e",
+    "anchor": "#md5:7f31a16b4a6da7404ab0bfc1f165137e",
     "glossary": {
       "file": "./glossary-1.md",
       "termHint": ""
@@ -101,15 +101,15 @@
   },
   {
     "value": "Glossary 2",
-    "uri": "glossary-2.md#md5:76bb891beea996ab8fd8c6ebd806a446",
+    "uri": "glossary-2.md#md5:527fa13e251d2703bbd1025a6a5bbec0",
     "valueHash8": "296178d4",
     "hint": "",
     "longDesc": "",
     "shortDesc": "",
-    "headingId": "md5:76bb891beea996ab8fd8c6ebd806a446",
-    "headingIdPlain": "term://glossarify.md/glossary-2#glossary-2",
+    "headingId": "md5:527fa13e251d2703bbd1025a6a5bbec0",
+    "headingIdPlain": "term://127.0.0.1/glossary-2#glossary-2",
     "headingDepth": 1,
-    "anchor": "#md5:76bb891beea996ab8fd8c6ebd806a446",
+    "anchor": "#md5:527fa13e251d2703bbd1025a6a5bbec0",
     "glossary": {
       "file": "./glossary-2.md",
       "termHint": ""
