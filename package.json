@@ -6,7 +6,11 @@
     "name": "Andreas Martin"
   },
   "license": "MIT",
-  "exports": "lib/main.js",
+  "exports": {
+    "import": "./lib/main.js",
+    "require": "./cjs/main.js"
+  },
+  "main": "./cjs/main.js",
   "type": "module",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
