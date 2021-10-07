@@ -1,13 +1,13 @@
-# [Index](#sha256:323f1ff)
+# [Index](#sha256:e0f2f2c)
 
-## [Alpha](#sha256:0dd0250)  
+## [Alpha](#sha256:db87f91)  
   
 [Glossary 1][1] ○ [Glossary 1][2] ○ [Document 1][3] ○ [Document 2][4]
 
-[1]: ./glossary.md#sha256:d39235f "First definition."
+[1]: ./glossary.md#sha256:04ac362 "First definition."
 
-[2]: ./glossary.md#sha256:13fa052 "Second definition."
+[2]: ./glossary.md#sha256:9580085 "Second definition."
 
-[3]: ./document-1.md#sha256:075afa5
+[3]: ./document-1.md#sha256:2405b49
 
-[4]: ./document-2.md#sha256:0704629
+[4]: ./document-2.md#sha256:cdfbad2

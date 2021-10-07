@@ -1,15 +1,15 @@
 [
   {
     "value": "Glossary",
-    "uri": "glossary.md#md5:4546d08",
+    "uri": "glossary.md#md5:17d8aa2",
     "valueHash8": "31d109d1",
     "hint": "",
     "longDesc": "",
     "shortDesc": "",
-    "headingId": "md5:4546d08",
-    "headingIdPlain": "term://glossarify.md/glossary#glossary",
+    "headingId": "md5:17d8aa2",
+    "headingIdPlain": "term://127.0.0.1/glossary#glossary",
     "headingDepth": 1,
-    "anchor": "#md5:4546d08",
+    "anchor": "#md5:17d8aa2",
     "glossary": {
       "file": "glossary.md",
       "termHint": ""
@@ -21,15 +21,15 @@
   },
   {
     "value": "Term",
-    "uri": "glossary.md#md5:22285b0",
+    "uri": "glossary.md#md5:8b3b1b8",
     "valueHash8": "cf5f3091",
     "hint": "",
     "longDesc": "Term definition.",
     "shortDesc": "Term definition.",
-    "headingId": "md5:22285b0",
-    "headingIdPlain": "term://glossarify.md/glossary#term",
+    "headingId": "md5:8b3b1b8",
+    "headingIdPlain": "term://127.0.0.1/glossary#term",
     "headingDepth": 2,
-    "anchor": "#md5:22285b0",
+    "anchor": "#md5:8b3b1b8",
     "glossary": {
       "file": "glossary.md",
       "termHint": ""
