@@ -4,7 +4,7 @@ const GitHubSlugger = require("github-slugger");
  * Provide internally used slugifier to allow for better integration with vuepress
  * See also https://github.com/about-code/glossarify-md/issues/27.
  */
- function getSlugger() {
+function getSlugger() {
     return (url) => {
         const slugger = new GitHubSlugger();
         return slugger.slug(url);

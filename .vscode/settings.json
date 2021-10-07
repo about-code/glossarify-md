@@ -4,7 +4,6 @@
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "npm.fetchOnlinePackageInfo": false,
-    "extensions.showRecommendationsOnlyOnDemand": true,
     "typescript.disableAutomaticTypeAcquisition": true,
     "typescript.tsdk": "./node_modules/typescript/lib"
 }
