@@ -1,5 +1,14 @@
 # Configuration
 
+- [Config Format v5](./doc/schema.md).
+
+## Config Format Versions
+
+Versions in this directory reflect config *format* versions. A config format version corresponds to the major version of some glossarify-md release *which
+introduced breaking changes* to the config format.
+
+The `v5` format was introduced with `glossarify-md@5.0.0`. Newer versions of `glossarify-md` continue publishing the latest schema revision in a `v5` directory until there are breaking changes to the structure of the config format which require a new format version.
+
 ## Editor Support and Schema Compatibility
 
 Many JSON editors provide assistance when referring to a JSON-Schema from within
@@ -18,13 +27,8 @@ you installed. A local reference may look like
 }
 ~~~
 
-Version `v5` in the path reflects the last major version of glossarify-md *which
-introduced breaking changes* to the config *format*. So it is *not* the actual
-schema version but a format version. For example, given  `glossarify-md@^6.0.0`
-only adds new optional config properties, then it will come with the latest
-schema but keep on reading it from a `v5` path. If some `glossarify-md@^7.0.0`
-introduced breaking changes glossarify-md would try to assist you in upgrading
-to a new `v7` config format and path.
+In case of breaking changes *glossarify-md* assists in upgrading to a newer version.
+
 
 #### Web References
 
@@ -41,7 +45,7 @@ Unlike local references they may not only contain a config format version (`v5`)
 but also a glossarify-md release version (`v5.1.0`). When installing a newer
 glossarify-md release (say `v5.2.0`) above configuration keeps on referring to
 the previous release. This is guaranteed to work but your editor may not provide
-support for the latest options. To make it do so use `latest`:
+support for the latest options. To make it do so use `latest` release version:
 
 *glossarify-md.conf.json*
 ~~~
@@ -50,7 +54,15 @@ support for the latest options. To make it do so use `latest`:
 }
 ~~~
 
-Like [Local References](#local-references) such a reference will keep on
-working for all newer releases compatible with the `v5` config format.
+> **Note:** If your editor doesn't validate against the latest version it may have cached an older version.
 
-> **Note:** If your editor doesn't offer the latest options consider that it may cached an older version.
+<!--
+IMPORTANT:
+When introducing a new config format version KEEP the previous format's /conf/v.. folder.
+Otherwise moving the 'latest' tag forward onto a new revision which misses the old folder would
+cause $schema-URLs onto the old path to break, although still widely in public use:
+
+https://raw.githubusercontent.com/about-code/glossarify-md/latest/conf/---BREAKING--/schema.json
+
+We may only remove versions after they phased out and will no longer be supported.
+-->
