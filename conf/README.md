@@ -1,6 +1,6 @@
 # Configuration
 
-- [Config Format v5](./doc/schema.md).
+- [Config Format v5](./v5/doc/schema.md).
 
 ## Config Format Versions
 
