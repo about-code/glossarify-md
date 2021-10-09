@@ -159,18 +159,23 @@
         ,"glossaryFile": {
             "type": "object"
             ,"properties": {
-                "file": {
-                    "description": "Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."
+                "export": {
+                    "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS."
                     ,"type": "string"
+                    ,"since": "6.0.0"
                 }
-                ,"termHint": {
-                    "description": "A symbol to append to a link to denote that the term refers to a glossary term."
+                ,"file": {
+                    "description": "Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."
                     ,"type": "string"
                 }
                 ,"sort": {
                     "description": "If present, sort terms in output glossary. Default: None. See also i18n options."
                     ,"type": "string"
                     ,"enum": ["asc", "desc"]
+                }
+                ,"termHint": {
+                    "description": "A symbol to append to a link to denote that the term refers to a glossary term."
+                    ,"type": "string"
                 }
                 ,"uri": {
                     "description": "A namespace or vocabulary identifier used as a prefix to construct URIs for glossary terms. Term URIs may be used to identify a concept within a Semantic Web or Linked Data Context or just to locate an external web page with a human readable definition. See also option `linking.baseUrl`."
