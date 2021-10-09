@@ -44,14 +44,15 @@
     "docs-repo": "remark md/README.md > README.md && remark md/CONTRIBUTING.md > CONTRIBUTING.md",
     "fix": "eslint . --fix",
     "linter": "eslint .",
-    "prepare-release": "npm run docs && npm run changelog",
     "pretest": "eslint .",
     "pretest-win": "eslint .",
     "test": "cd ./test && npm test",
     "test-win": "cd .\\test && npm run test-win",
+    "prepare-release": "npm run docs && npm run changelog",
+    "release": "standard-version",
+    "commit-release": "git add -u && git commit && git tag -D latest && git tag latest",
     "release-alpha": "standard-version --prerelease alpha",
     "release-beta": "standard-version --prerelease beta",
-    "release": "standard-version",
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
   },
   "dependencies": {
