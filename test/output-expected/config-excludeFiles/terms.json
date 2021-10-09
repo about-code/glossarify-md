@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Term",
     "uri": "glossary.md#term",
     "valueHash8": "cf5f3091",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 1
   },
   {
+    "type": "term-definition",
     "value": "Testing option excludeFiles",
     "uri": "glossary.md#testing-option-excludefiles",
     "valueHash8": "27f18772",

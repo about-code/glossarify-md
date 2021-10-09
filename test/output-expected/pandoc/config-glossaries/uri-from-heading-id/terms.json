@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Custom",
     "uri": "https://my.org/vocab/custom",
     "valueHash8": "90589c47",
@@ -19,6 +20,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "https://my.org/vocab/glossary",
     "valueHash8": "31d109d1",

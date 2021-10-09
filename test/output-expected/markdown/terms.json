@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "dolor",
     "uri": "glossary.md#dolor",
     "valueHash8": "a98931d1",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 3
   },
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Lorem ipsum",
     "uri": "glossary.md#lorem-ipsum",
     "valueHash8": "0956d2fb",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 8
   },
   {
+    "type": "term-definition",
     "value": "sit",
     "uri": "glossary.md#sit",
     "valueHash8": "87d4eeb7",

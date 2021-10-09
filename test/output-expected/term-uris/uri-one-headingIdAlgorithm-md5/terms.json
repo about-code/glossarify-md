@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "https://my.org/vocab/#md5:17d8aa2",
     "valueHash8": "31d109d1",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Phrase with Spaces",
     "uri": "https://my.org/vocab/#md5:da83c5a",
     "valueHash8": "30d29ade",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 1
   },
   {
+    "type": "term-definition",
     "value": "Term",
     "uri": "https://my.org/vocab/#md5:8b3b1b8",
     "valueHash8": "cf5f3091",

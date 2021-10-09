@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "'ÄÖ'",
     "uri": "glossary.md#äö",
     "valueHash8": "3664f3c6",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 9
   },
   {
+    "type": "term-definition",
     "value": "'ÄÖÜ'",
     "uri": "glossary.md#äöü",
     "valueHash8": "e30b8f2e",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 9
   },
   {
+    "type": "term-definition",
     "value": "A",
     "uri": "glossary.md#a",
     "valueHash8": "7fc56270",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 11
   },
   {
+    "type": "term-definition",
     "value": "Ä",
     "uri": "glossary.md#ä",
     "valueHash8": "b66491b0",
@@ -80,6 +84,7 @@
     "countOccurrenceTotal": 11
   },
   {
+    "type": "term-definition",
     "value": "AB",
     "uri": "glossary.md#ab",
     "valueHash8": "b86fc6b0",
@@ -100,6 +105,7 @@
     "countOccurrenceTotal": 9
   },
   {
+    "type": "term-definition",
     "value": "ABC",
     "uri": "glossary.md#abc",
     "valueHash8": "902fbdd2",
@@ -120,6 +126,7 @@
     "countOccurrenceTotal": 9
   },
   {
+    "type": "term-definition",
     "value": "Substring Test Glossary",
     "uri": "glossary.md#substring-test-glossary",
     "valueHash8": "29d63fdc",

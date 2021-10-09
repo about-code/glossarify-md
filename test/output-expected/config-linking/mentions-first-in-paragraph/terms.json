@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Ipsum",
     "uri": "glossary.md#ipsum",
     "valueHash8": "1034a44d",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 1
   },
   {
+    "type": "term-definition",
     "value": "Lorem",
     "uri": "glossary.md#lorem",
     "valueHash8": "db6ff2ff",

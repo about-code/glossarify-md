@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "http://example.org/glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "http://example.org/sub-1/glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Term1",
     "uri": "http://example.org/glossary.md#term1",
     "valueHash8": "73edc568",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 1
   },
   {
+    "type": "term-definition",
     "value": "Term2",
     "uri": "http://example.org/sub-1/glossary.md#term2",
     "valueHash8": "0a61dcb4",

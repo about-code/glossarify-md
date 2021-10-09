@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary G1",
     "uri": "glossary-g1.md#glossary-g1",
     "valueHash8": "05dfcbd8",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary G2",
     "uri": "glossary-g2.md#glossary-g2",
     "valueHash8": "3673bfbe",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Term A",
     "uri": "glossary-g1.md#term-a",
     "valueHash8": "f68c2c2d",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 3
   },
   {
+    "type": "term-definition",
     "value": "Term B",
     "uri": "glossary-g1.md#term-b",
     "valueHash8": "96d7775e",
@@ -80,6 +84,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Term C",
     "uri": "glossary-g1.md#term-c",
     "valueHash8": "83fa0a16",
@@ -100,6 +105,7 @@
     "countOccurrenceTotal": 1
   },
   {
+    "type": "term-definition",
     "value": "Term D",
     "uri": "glossary-g2.md#term-d",
     "valueHash8": "3cecf20b",
@@ -120,6 +126,7 @@
     "countOccurrenceTotal": 3
   },
   {
+    "type": "term-definition",
     "value": "Term E",
     "uri": "glossary-g1.md#term-e",
     "valueHash8": "f133db7d",
@@ -140,6 +147,7 @@
     "countOccurrenceTotal": 3
   },
   {
+    "type": "term-definition",
     "value": "Term F",
     "uri": "glossary-g2.md#term-f",
     "valueHash8": "f8a25fec",

@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-1.md#md5:ba8f4f1932828457d5bb2a5559f24ba5",
     "valueHash8": "6132295f",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-2.md#md5:f4f4e0e4c388bc462cfd125dae54b6f5",
     "valueHash8": "6132295f",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "Document 1",
     "uri": "document-1.md#md5:911e6454442a1e980ad1eeebf7fc19fc",
     "valueHash8": "f08a4cd1",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Document 2",
     "uri": "document-2.md#md5:765ab5bc8d9f670188c34e86e6b88743",
     "valueHash8": "f41f3325",
@@ -80,6 +84,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "glossary-1.md#md5:7f31a16b4a6da7404ab0bfc1f165137e",
     "valueHash8": "4cb8c916",
@@ -100,6 +105,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary 2",
     "uri": "glossary-2.md#md5:527fa13e251d2703bbd1025a6a5bbec0",
     "valueHash8": "296178d4",

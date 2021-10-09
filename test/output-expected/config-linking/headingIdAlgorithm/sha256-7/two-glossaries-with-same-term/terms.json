@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-1.md#sha256:12fca02",
     "valueHash8": "6132295f",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 4
   },
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-2.md#sha256:9c50dbf",
     "valueHash8": "6132295f",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 4
   },
   {
+    "type": "term-definition",
     "value": "Document 1",
     "uri": "document-1.md#sha256:2405b49",
     "valueHash8": "f08a4cd1",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Document 2",
     "uri": "document-2.md#sha256:cdfbad2",
     "valueHash8": "f41f3325",
@@ -80,6 +84,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "glossary-1.md#sha256:0c0ce95",
     "valueHash8": "4cb8c916",
@@ -100,6 +105,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Glossary 2",
     "uri": "glossary-2.md#sha256:7655d97",
     "valueHash8": "296178d4",

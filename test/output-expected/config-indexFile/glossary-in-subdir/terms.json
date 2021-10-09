@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "sub/glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 0
   },
   {
+    "type": "term-definition",
     "value": "Term",
     "uri": "sub/glossary.md#term",
     "valueHash8": "cf5f3091",

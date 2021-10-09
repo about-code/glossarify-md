@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "all-lowercase",
     "uri": "glossary.md#all-lowercase",
     "valueHash8": "7d4b9ec5",
@@ -20,6 +21,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "ALL-UPPERCASE",
     "uri": "glossary.md#all-uppercase",
     "valueHash8": "7123afe0",
@@ -40,6 +42,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "fIRST-lOWERCASE",
     "uri": "glossary.md#first-lowercase",
     "valueHash8": "4dc4af85",
@@ -60,6 +63,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "First-Uppercase",
     "uri": "glossary.md#first-uppercase",
     "valueHash8": "a6710ef4",
@@ -80,6 +84,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "MiXeD-CaSe",
     "uri": "glossary.md#mixed-case",
     "valueHash8": "fa8f9783",
@@ -100,6 +105,7 @@
     "countOccurrenceTotal": 2
   },
   {
+    "type": "term-definition",
     "value": "Testing Config Option ignoreCase",
     "uri": "glossary.md#testing-config-option-ignorecase",
     "valueHash8": "faeeca2f",
