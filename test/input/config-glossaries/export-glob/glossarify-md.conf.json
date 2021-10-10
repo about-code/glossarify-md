@@ -1,0 +1,21 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/export-glob",
+  "glossaries": [
+    {
+      "uri": "https://my.org/vocab/inc/#",
+      "export": "./inc.json",
+      "file": "./glossary-inc*.md"
+    },
+    {
+      "uri": "https://my.org/vocab/include/#",
+      "export": "./include.json",
+      "file": "./glossary-include*.md"
+    },
+    {
+      "uri": "https://my.org/vocab/exclude/#",
+      "file": "./glossary-exclude.md"
+    }
+  ]
+}
