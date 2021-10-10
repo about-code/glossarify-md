@@ -5,8 +5,8 @@
   
 1.  [Label from Comment][1]
 2.  [Column 1, Column 2, Column 3][2]  
-1.  [table-label-file/table-label-file.md][3]
-2.  [table-label-file/table-label-file.md][3]  
+1.  [./table-label-file/table-label-file.md][3]
+2.  [./table-label-file/table-label-file.md][3]  
   
 ## [Inferred Table Label from Section Heading](#inferred-table-label-from-section-heading)  
   
@@ -24,7 +24,7 @@
 
 [2]: ./table-label-comment/table-label-comment.md#column-1-column-2-column-3 "Column 1, Column 2, Column 3"
 
-[3]: ./table-label-file/table-label-file.md "table-label-file/table-label-file.md"
+[3]: ./table-label-file/table-label-file.md "./table-label-file/table-label-file.md"
 
 [4]: ./table-label-heading/table-label-heading.md#label-from-section-heading "Label from Section Heading"
 

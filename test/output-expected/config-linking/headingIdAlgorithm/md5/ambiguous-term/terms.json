@@ -15,7 +15,8 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
-    "file": "./glossary-1.md"
+    "file": "glossary-1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -33,7 +34,8 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
-    "file": "./glossary-2.md"
+    "file": "glossary-2.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -51,7 +53,8 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
-    "file": "./document-1.md"
+    "file": "document-1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -69,7 +72,8 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
-    "file": "./document-2.md"
+    "file": "document-2.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -87,7 +91,8 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
-    "file": "./glossary-1.md"
+    "file": "glossary-1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -105,6 +110,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
-    "file": "./glossary-2.md"
+    "file": "glossary-2.md",
+    "termHint": ""
   }
 ]
