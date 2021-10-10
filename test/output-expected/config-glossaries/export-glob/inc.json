@@ -26,13 +26,13 @@
     "@language": "en"
   },
   "type": "Glossary",
-  "uri": "https://my.org/vocabulary/#",
-  "title": "Knowledge Organization Systems (KOS)",
+  "uri": "https://my.org/vocab/inc/#",
+  "title": "Knowledge Organization Systems (1)",
   "language": "en",
   "terms": {
-    "https://my.org/vocabulary/#glossary": {
+    "https://my.org/vocab/inc/#glossary": {
       "type": "Term",
-      "uri": "https://my.org/vocabulary/#glossary",
+      "uri": "https://my.org/vocab/inc/#glossary",
       "label": "Glossary",
       "definition": "Glossaries are collections of terms and their definitions.",
       "abstract": "Glossaries are collections of terms and their definitions.",
@@ -40,20 +40,28 @@
         "Vocabulary"
       ]
     },
-    "https://my.org/vocabulary/#taxonomy": {
+    "https://my.org/vocab/inc/#taxonomy": {
       "type": "Term",
-      "uri": "https://my.org/vocabulary/#taxonomy",
+      "uri": "https://my.org/vocab/inc/#taxonomy",
       "label": "Taxonomy",
       "definition": "Taxonomies are classification schemes. Terms in a taxonomy give names to sets of things. Classes are often put into relation via hierarchical relation ships to express super and subclasses of things.",
       "abstract": "Taxonomies are classification schemes.",
       "aliases": []
     },
-    "https://my.org/vocabulary/#thesaurus": {
+    "https://my.org/vocab/inc/#thesaurus": {
       "type": "Term",
-      "uri": "https://my.org/vocabulary/#thesaurus",
+      "uri": "https://my.org/vocab/inc/#thesaurus",
       "label": "Thesaurus",
       "definition": "Thesauri are word nets. They are informal sets of terms which are put into relation.",
       "abstract": "Thesauri are word nets.",
+      "aliases": []
+    },
+    "https://my.org/vocab/inc/#ontology": {
+      "type": "Term",
+      "uri": "https://my.org/vocab/inc/#ontology",
+      "label": "Ontology",
+      "definition": "A (formal) ontology in Semantic Web is a collection of concepts, properties\nand strictly logical formal rules..",
+      "abstract": "A (formal) ontology in Semantic Web is a collection of concepts, properties\nand strictly logical formal rules..",
       "aliases": []
     }
   }
