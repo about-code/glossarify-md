@@ -394,7 +394,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **Note:** If `file` is a glob pattern other options like `termHint` or `sort` are being ignored. You need to declare a glossary item with a `file` *path* if you need these options specific to a single file.
+> **Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior gets increasingly hard to reason about.
 
 **Too many links?**
 
