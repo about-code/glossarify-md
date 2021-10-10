@@ -11,14 +11,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#hashtag",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(#Hashtag)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -32,14 +30,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äöüß-term-begins-with-umlauts",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(äöüß Term begins with Umlauts)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -53,14 +49,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äquator",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Äquator)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -74,14 +68,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#bold-format",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(bold-format)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -95,14 +87,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#china中国",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(China中国)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -116,14 +106,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#chi中国na",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Chi中国na)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -137,14 +125,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#codespan-format",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(codespan-format)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -158,14 +144,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dense-definition",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(dense-definition)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -179,16 +163,14 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dense-definition-with-alias",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(dense-definition-with-alias|dense-with-alia)/u",
     "aliases": [
       "dense-with-alia"
     ],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -202,14 +184,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#der-tod-und-das-mädchen",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Der Tod und das Mädchen)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -223,14 +203,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#faß",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Faß)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -244,14 +222,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "Uppercase-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "Uppercase-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -265,14 +241,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
-    "glossary": {
-      "file": "shared-terms-glossary-a.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Glossary A)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "shared-terms-glossary-a.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -286,14 +260,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
-    "glossary": {
-      "file": "disjunct-terms-glossary-a.md",
-      "termHint": " (a/b)"
-    },
     "regex": "/(Glossary A\\.)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "disjunct-terms-glossary-a.md",
+    "termHint": " (a/b)"
   },
   {
     "type": "term-definition",
@@ -307,14 +279,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
-    "glossary": {
-      "file": "disjunct-terms-glossary-b.md",
-      "termHint": " (a/b)"
-    },
     "regex": "/(Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "disjunct-terms-glossary-b.md",
+    "termHint": " (a/b)"
   },
   {
     "type": "term-definition",
@@ -328,14 +298,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
-    "glossary": {
-      "file": "shared-terms-glossary-b.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "shared-terms-glossary-b.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -349,14 +317,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-with-markdown-formatted-term",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary with markdown formatted term)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -370,14 +336,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-parts-formatted",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(In parts formatted)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -391,14 +355,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#italic-format",
-    "glossary": {
-      "file": "formatted-terms-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(italic-format)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "formatted-terms-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -412,14 +374,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-contains-äöüß-umlauts",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Term contains äöüß Umlauts)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -433,14 +393,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-disjunct-a",
-    "glossary": {
-      "file": "disjunct-terms-glossary-a.md",
-      "termHint": " (a/b)"
-    },
     "regex": "/(Term Disjunct A)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "disjunct-terms-glossary-a.md",
+    "termHint": " (a/b)"
   },
   {
     "type": "term-definition",
@@ -454,14 +412,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-disjunct-b",
-    "glossary": {
-      "file": "disjunct-terms-glossary-b.md",
-      "termHint": " (a/b)"
-    },
     "regex": "/(Term Disjunct B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "disjunct-terms-glossary-b.md",
+    "termHint": " (a/b)"
   },
   {
     "type": "term-definition",
@@ -475,14 +431,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-ends-with-umlauts-äöüß",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Term ends with Umlauts äöüß)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -496,14 +450,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-a",
-    "glossary": {
-      "file": "shared-terms-glossary-a.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Term Shared A)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 4,
+    "file": "shared-terms-glossary-a.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -517,14 +469,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-a",
-    "glossary": {
-      "file": "shared-terms-glossary-b.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Term Shared A)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 4,
+    "file": "shared-terms-glossary-b.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -538,14 +488,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-b",
-    "glossary": {
-      "file": "shared-terms-glossary-a.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Term Shared B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "shared-terms-glossary-a.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -559,14 +507,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-shared-b",
-    "glossary": {
-      "file": "shared-terms-glossary-b.md",
-      "termHint": " (a&b)"
-    },
     "regex": "/(Term Shared B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "shared-terms-glossary-b.md",
+    "termHint": " (a&b)"
   },
   {
     "type": "term-definition",
@@ -580,14 +526,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-prefix",
-    "glossary": {
-      "file": "term-hint-prefix-glossary.md",
-      "termHint": "☛ ${term}"
-    },
     "regex": "/(Term-Hint-Prefix)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "term-hint-prefix-glossary.md",
+    "termHint": "☛ ${term}"
   },
   {
     "type": "term-definition",
@@ -601,14 +545,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-suffix",
-    "glossary": {
-      "file": "term-hint-suffix-glossary.md",
-      "termHint": "${term} ☚"
-    },
     "regex": "/(Term-Hint-Suffix)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "term-hint-suffix-glossary.md",
+    "termHint": "${term} ☚"
   },
   {
     "type": "term-definition",
@@ -622,14 +564,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-suffix-default",
-    "glossary": {
-      "file": "term-hint-suffix-default-glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Term-Hint-Suffix-Default)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "term-hint-suffix-default-glossary.md",
+    "termHint": "↴"
   },
   {
     "type": "term-definition",
@@ -643,14 +583,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-hint-wrapped",
-    "glossary": {
-      "file": "term-hint-wrapped-glossary.md",
-      "termHint": "☛ ${term} ☚"
-    },
     "regex": "/(Term-Hint-Wrapped)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "term-hint-wrapped-glossary.md",
+    "termHint": "☛ ${term} ☚"
   },
   {
     "type": "term-definition",
@@ -664,14 +602,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-glossariestermhint",
-    "glossary": {
-      "file": "term-hint-wrapped-glossary.md",
-      "termHint": "☛ ${term} ☚"
-    },
     "regex": "/(Testing config option 'glossaries\\.termHint')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "term-hint-wrapped-glossary.md",
+    "termHint": "☛ ${term} ☚"
   },
   {
     "type": "term-definition",
@@ -685,14 +621,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
-    "glossary": {
-      "file": "term-hint-prefix-glossary.md",
-      "termHint": "☛ ${term}"
-    },
     "regex": "/(Testing option 'glossaries\\.termHint')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "term-hint-prefix-glossary.md",
+    "termHint": "☛ ${term}"
   },
   {
     "type": "term-definition",
@@ -706,14 +640,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
-    "glossary": {
-      "file": "term-hint-suffix-default-glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Testing option 'glossaries\\.termHint')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "term-hint-suffix-default-glossary.md",
+    "termHint": "↴"
   },
   {
     "type": "term-definition",
@@ -727,14 +659,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-option-glossariestermhint",
-    "glossary": {
-      "file": "term-hint-suffix-glossary.md",
-      "termHint": "${term} ☚"
-    },
     "regex": "/(Testing option 'glossaries\\.termHint')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "term-hint-suffix-glossary.md",
+    "termHint": "${term} ☚"
   },
   {
     "type": "term-definition",
@@ -748,14 +678,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#unicode-tests",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Unicode Tests)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -769,14 +697,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#uppercase",
-    "glossary": {
-      "file": "Uppercase-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Uppercase)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "Uppercase-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -790,14 +716,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#zhōngguó",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(zhōngguó)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -811,14 +735,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中china国",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(中China国)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -832,14 +754,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中国",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(中国)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -853,13 +773,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#中国china",
-    "glossary": {
-      "file": "unicode-glossary.md",
-      "termHint": ""
-    },
     "regex": "/(中国China)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "unicode-glossary.md",
+    "termHint": ""
   }
 ]

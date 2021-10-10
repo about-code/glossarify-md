@@ -11,14 +11,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dolor",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(dolor)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
     "type": "term-definition",
@@ -32,14 +30,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
     "type": "term-definition",
@@ -53,14 +49,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#lorem-ipsum",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Lorem ipsum)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 8
+    "countOccurrenceTotal": 8,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
     "type": "term-definition",
@@ -74,13 +68,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#sit",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(sit)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary.md",
+    "termHint": "↴"
   }
 ]

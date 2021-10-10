@@ -11,14 +11,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-child",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(First-Level-Child)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -32,14 +30,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-parent",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(First-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -53,14 +49,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#second-level-parent",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Second-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -74,14 +68,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#sibling",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Sibling)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -95,14 +87,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Testing Config Option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -116,13 +106,11 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Testing Config Option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   }
 ]

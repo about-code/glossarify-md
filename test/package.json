@@ -115,8 +115,9 @@
     "pll:test_89": "node . --config ./input/term-uris/uri-none-baseUrl-fallback-paths-absolute/glossarify-md.conf.json",
     "pll:test_90": "node . --config ./input/term-uris/uri-one-headingIdAlgorithm-md5/glossarify-md.conf.json",
     "pll:test_91": "node . --config ./input/term-uris/uri-some-baseUrl-fallback/glossarify-md.conf.json",
-    "postsuite": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
-    "postat": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
+    "postsuite": "npm run diff",
+    "postat": "npm run diff",
+    "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
     "new-baseline": "rm -r ./output-expected && cp -r ./output-actual ./output-expected",
     "new-baseline-win": "del /Q .\\output-expected && rename .\\output-actual .\\output-expected",
     "commit-baseline": "npm test && git reset && git add './package.json' './input' './output-expected' && git commit -m 'test: New baseline.'"

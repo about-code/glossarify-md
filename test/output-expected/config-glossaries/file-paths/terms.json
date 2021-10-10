@@ -11,14 +11,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-g1",
-    "glossary": {
-      "file": "glossary-g1.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary G1)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-g1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -32,14 +30,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-g2",
-    "glossary": {
-      "file": "glossary-g2.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary G2)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-g2.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -53,14 +49,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-a",
-    "glossary": {
-      "file": "glossary-g1.md",
-      "termHint": ""
-    },
     "regex": "/(Term A)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary-g1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -74,14 +68,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-b",
-    "glossary": {
-      "file": "glossary-g1.md",
-      "termHint": ""
-    },
     "regex": "/(Term B)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-g1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -95,14 +87,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-c",
-    "glossary": {
-      "file": "glossary-g1.md",
-      "termHint": ""
-    },
     "regex": "/(Term C)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary-g1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -116,14 +106,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-d",
-    "glossary": {
-      "file": "glossary-g2.md",
-      "termHint": ""
-    },
     "regex": "/(Term D)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary-g2.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -137,14 +125,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-e",
-    "glossary": {
-      "file": "glossary-g1.md",
-      "termHint": ""
-    },
     "regex": "/(Term E)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary-g1.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -158,13 +144,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-f",
-    "glossary": {
-      "file": "glossary-g2.md",
-      "termHint": ""
-    },
     "regex": "/(Term F)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-g2.md",
+    "termHint": ""
   }
 ]

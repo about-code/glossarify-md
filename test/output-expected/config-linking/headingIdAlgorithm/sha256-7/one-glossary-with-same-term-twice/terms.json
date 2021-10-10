@@ -11,14 +11,11 @@
     "headingIdPlain": "term://127.0.0.1/glossary#alpha",
     "headingDepth": 2,
     "anchor": "#sha256:04ac362",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 4,
+    "file": "./glossary.md"
   },
   {
     "type": "term-definition",
@@ -32,14 +29,11 @@
     "headingIdPlain": "term://127.0.0.1/glossary#alpha-1",
     "headingDepth": 2,
     "anchor": "#sha256:9580085",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 4,
+    "file": "./glossary.md"
   },
   {
     "type": "term-definition",
@@ -53,14 +47,11 @@
     "headingIdPlain": "term://127.0.0.1/document-1#document-1",
     "headingDepth": 1,
     "anchor": "#sha256:2405b49",
-    "glossary": {
-      "file": "./document-1.md",
-      "termHint": ""
-    },
     "regex": "/(Document 1)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "./document-1.md"
   },
   {
     "type": "term-definition",
@@ -74,14 +65,11 @@
     "headingIdPlain": "term://127.0.0.1/document-2#document-2",
     "headingDepth": 1,
     "anchor": "#sha256:cdfbad2",
-    "glossary": {
-      "file": "./document-2.md",
-      "termHint": ""
-    },
     "regex": "/(Document 2)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "./document-2.md"
   },
   {
     "type": "term-definition",
@@ -95,13 +83,10 @@
     "headingIdPlain": "term://127.0.0.1/glossary#glossary-1",
     "headingDepth": 1,
     "anchor": "#sha256:ffdd0bf",
-    "glossary": {
-      "file": "./glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary 1)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "./glossary.md"
   }
 ]

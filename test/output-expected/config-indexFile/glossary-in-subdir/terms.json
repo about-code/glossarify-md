@@ -11,14 +11,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "sub/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "sub/glossary.md",
+    "termHint": ""
   },
   {
     "type": "term-definition",
@@ -32,13 +30,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
-    "glossary": {
-      "file": "sub/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "sub/glossary.md",
+    "termHint": ""
   }
 ]
