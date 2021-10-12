@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/export-and-uri-none",
+  "glossaries": [{
+    "file": "./glossary.md",
+    "export": "./glossary.json"
+  },{
+    "file": "./glossary-2.md"
+  }],
+  "linking": {
+    "paths": "relative"
+  },
+  "ignoreCase": false
+}
