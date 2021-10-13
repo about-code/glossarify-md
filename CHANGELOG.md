@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.7](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.6...v6.0.0-alpha.7) (2021-10-13)
+
+
+### Bug Fixes
+
+* CommonJS interop. Package entry module with npm package archives. ([5898b5c](https://github.com/about-code/glossarify-md/commit/5898b5c16bf423edfd402b41181a579f8ac63bca))
+
 ## [6.0.0-alpha.6](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.5...v6.0.0-alpha.6) (2021-10-13)
 
 
