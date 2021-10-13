@@ -376,6 +376,36 @@ Generate a file with a list of tables and where they can be found.
 
 *   Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
 
+## Definitions group exportFile
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/exportFile"}
+```
+
+
+
+### file
+
+The filename to write output to. Recommended extension is '.json'.
+
+`file`
+
+*   is optional
+
+*   Type: `string`
+
+### context
+
+File name of a custom JSON-LD context document to embed. Should end with `.jsonld`.  May also be JSON-LD document URL starting with `https://`.
+
+`context`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group glossaryFile
 
 Reference this group by using
@@ -395,6 +425,16 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 *   is optional
 
 *   Type: `string`
+
+### exports
+
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
+
+`exports`
+
+*   is optional
+
+*   Type: `object[]` ([Details](schema-defs-glossaryfile-properties-exports-items.md))
 
 ### file
 

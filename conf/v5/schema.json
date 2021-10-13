@@ -156,6 +156,19 @@
                 }
             }
         }
+        ,"exportFile": {
+            "type": "object",
+            "properties": {
+                "file": {
+                    "description": "The filename to write output to. Recommended extension is '.json'."
+                    ,"type": "string"
+                }
+                ,"context": {
+                    "description": "File name of a custom JSON-LD context document to embed. Should end with `.jsonld`.  May also be JSON-LD document URL starting with `https://`."
+                    ,"type": "string"
+                }
+            }
+        }
         ,"glossaryFile": {
             "type": "object"
             ,"properties": {
@@ -163,6 +176,14 @@
                     "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS."
                     ,"type": "string"
                     ,"since": "6.0.0"
+                }
+                ,"exports": {
+                    "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`."
+                    ,"type": "array"
+                    ,"since": "6.0.0"
+                    ,"items": {
+                        "$ref": "#/$defs/exportFile"
+                    }
                 }
                 ,"file": {
                     "description": "Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."

@@ -12,6 +12,16 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 *   Type: `string`
 
+## exports
+
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
+
+`exports`
+
+*   is optional
+
+*   Type: `object[]` ([Details](schema-defs-exportfile.md))
+
 ## file
 
 Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.
