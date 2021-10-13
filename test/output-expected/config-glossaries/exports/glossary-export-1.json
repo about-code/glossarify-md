@@ -1,0 +1,42 @@
+{
+  "@context": {
+    "@vocab": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "title": "dc:title",
+    "terms": {
+      "@container": "@index",
+      "@reverse": "skos:inScheme"
+    },
+    "Glossary": "skos:ConceptScheme",
+    "Term": {
+      "@id": "skos:Concept",
+      "@context": {
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "aliases": {
+          "@id": "skos:altLabel",
+          "@container": "@set"
+        },
+        "abstract": "dc:abstract"
+      }
+    },
+    "@language": "en"
+  },
+  "type": "Glossary",
+  "uri": "https://my.org/vocabulary/#",
+  "title": "Glossary 1",
+  "language": "en",
+  "terms": {
+    "https://my.org/vocabulary/#export": {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#export",
+      "label": "Export",
+      "definition": "This MUST be exported.",
+      "abstract": "This MUST be exported.",
+      "aliases": []
+    }
+  }
+}
