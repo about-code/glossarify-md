@@ -699,6 +699,37 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 >
 > You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on syntax extensions below).
 
+## Structured Export
+[SKOS]: https://w3.org/skos
+
+**Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
+
+*glossarify-md.conf.json*
+~~~json
+{
+  "glossaries": [{
+    "uri": "http://basic.org/vocabulary/#",
+    "file": "./glossary-1.md",
+    "export": "./glossary-1.json"
+  }]
+}
+~~~
+
+When exporting term data, every term and its definition (term semantics) should have some unique identifier. glossarify-md constructs term URIs by combining the glossary's vocabulary URI with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). The output format will be semantically annotated to be interoperable for tools which support [SKOS] vocabulary metadata terms and JSON-LD. You can embed your own JSON_LD context like this:
+
+~~~json
+{
+  "glossaries": [{
+      "uri": "http://advanced.org/vocabulary/",
+      "file": "./glossary.md",
+      "exports": [{
+        "file": "./glossary.json",
+        "context": "./embed.jsonld"
+      }]
+  }]
+}
+~~~
+
 ## Markdown Syntax Extensions
 
 [syntax-extensions]: #markdown-syntax-extensions
@@ -760,8 +791,6 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 > **[remark], [unified], uhh... ?**
 >
 > Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
-
-
 
 ## Node Support Matrix
 
@@ -849,6 +878,20 @@ being appended to term occurrences in order to indicate which glossary or
 category a term belongs to. A term hint may be any UTF-8 character or character
 sequence. If you would like to have the glossary sorted provide a *sort* direction
 `"asc"` or `"desc"`.
+
+#### `glossaries[].export`
+
+- **Range:** `string`
+- **Since:** v6.0.0
+
+Path to a JSON file where to write terms in a structured format. See [Structured Exports][#structured-export].
+
+#### `glossaries[].exports`
+
+- **Range:** `Array<{ file: string [, context: string]}>`
+- **Since:** v6.0.0
+
+Like `export` but intended to be used to write export file(s) with custom JSON-LD `context` document(s) embedded.
 
 #### `ignoreCase`
 
@@ -978,6 +1021,8 @@ Use this option to select markdown heading depths which should be considered ter
 
 
 #### `linking.headingIdAlgorithm`
+
+[headingIdAlgorithm]: #linkingheadingidalgorithm
 
 - **Range:** `"github" | "md5" | "md5-7" | "sha256" |"sha256-7"`
 - **Default:** `"github"`
