@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.6](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.5...v6.0.0-alpha.6) (2021-10-13)
+
+
+### Bug Fixes
+
+* Add missing dependency vfile. ([df8afc2](https://github.com/about-code/glossarify-md/commit/df8afc204b0e25239585d7450fcc9bd508348f35))
+
 ## [6.0.0-alpha.5](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.4...v6.0.0-alpha.5) (2021-10-13)
 
 
