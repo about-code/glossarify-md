@@ -75,7 +75,8 @@
     "unified": "^10.1.0",
     "unified-engine": "^9.0.3",
     "unist-util-flatmap": "^1.0.0",
-    "unist-util-visit": "^4.0.0"
+    "unist-util-visit": "^4.0.0",
+    "vfile": "^5.1.1"
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^6.1.1",
