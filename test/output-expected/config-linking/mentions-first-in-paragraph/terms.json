@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -10,16 +11,15 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Ipsum",
     "uri": "glossary.md#ipsum",
     "valueHash8": "1034a44d",
@@ -30,16 +30,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ipsum",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Ipsum)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Lorem",
     "uri": "glossary.md#lorem",
     "valueHash8": "db6ff2ff",
@@ -50,13 +49,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#lorem",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Lorem)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 4
+    "countOccurrenceTotal": 4,
+    "file": "glossary.md",
+    "termHint": ""
   }
 ]

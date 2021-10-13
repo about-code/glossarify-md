@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "dolor",
     "uri": "glossary.md#dolor",
     "valueHash8": "a98931d1",
@@ -10,16 +11,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dolor",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(dolor)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -30,16 +30,15 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
+    "type": "term-definition",
     "value": "Lorem ipsum",
     "uri": "glossary.md#lorem-ipsum",
     "valueHash8": "0956d2fb",
@@ -50,16 +49,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#lorem-ipsum",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(Lorem ipsum)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 8
+    "countOccurrenceTotal": 8,
+    "file": "glossary.md",
+    "termHint": "↴"
   },
   {
+    "type": "term-definition",
     "value": "sit",
     "uri": "glossary.md#sit",
     "valueHash8": "87d4eeb7",
@@ -70,13 +68,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#sit",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "↴"
-    },
     "regex": "/(sit)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 3
+    "countOccurrenceTotal": 3,
+    "file": "glossary.md",
+    "termHint": "↴"
   }
 ]

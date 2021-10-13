@@ -6,7 +6,7 @@ const errors = [];
     const to   = "/home/user/lorem/ipsum/dolor.md";
     const expected = toSystemSlash("../../lorem/ipsum/dolor.md");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }
@@ -18,7 +18,7 @@ const errors = [];
     const to   = "/home/user/dolor.md";
     const expected = toSystemSlash("../dolor.md");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }
@@ -30,7 +30,7 @@ const errors = [];
     const to   = "/home/user/dolor.md";
     const expected = toSystemSlash("../../dolor.md");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }
@@ -42,7 +42,7 @@ const errors = [];
     const to   = "/home/user/lorem/ipsum/dolor.md";
     const expected = toSystemSlash("./lorem/ipsum/dolor.md");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }
@@ -54,7 +54,7 @@ const errors = [];
     const to   = "/home/user/bar.md";
     const expected = toSystemSlash("./bar.md");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }
@@ -66,7 +66,7 @@ const errors = [];
     const to   = "/home/user/lorem/ipsum/dolor.md";
     const expected = toSystemSlash("./");
 
-    const actual = relativeFromTo(from, to);
+    const actual = toSystemSlash(relativeFromTo(from, to));
     if (actual !== expected) {
         errors.push(new Error(`Expected is "${expected}" but actual is "${actual}"`));
     }

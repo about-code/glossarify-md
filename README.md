@@ -63,6 +63,7 @@
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
   - [Lists from Regular Expressions](#lists-from-regular-expressions)
+- [Structured Export](#structured-export)
 - [Markdown Syntax Extensions](#markdown-syntax-extensions)
 - [Node Support Matrix](#node-support-matrix)
 - [Options](#options)
@@ -394,7 +395,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **Note:** If `file` is a glob pattern other options like `termHint` or `sort` are being ignored. You need to declare a glossary item with a `file` *path* if you need these options specific to a single file.
+> **Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior gets increasingly hard to reason about.
 
 **Too many links?**
 
@@ -744,6 +745,39 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 >
 > You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on syntax extensions below).
 
+## Structured Export
+
+[SKOS]: https://w3.org/skos
+
+**Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
+
+*glossarify-md.conf.json*
+
+```json
+{
+  "glossaries": [{
+    "uri": "http://basic.org/vocabulary/#",
+    "file": "./glossary-1.md",
+    "export": "./glossary-1.json"
+  }]
+}
+```
+
+When exporting term data, every term and its definition (term semantics) should have some unique identifier. glossarify-md constructs term URIs by combining the glossary's vocabulary URI with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). The output format will be semantically annotated to be interoperable for tools which support [SKOS] vocabulary metadata terms and JSON-LD. You can embed your own JSON_LD context like this:
+
+```json
+{
+  "glossaries": [{
+      "uri": "http://advanced.org/vocabulary/",
+      "file": "./glossary.md",
+      "exports": [{
+        "file": "./glossary.json",
+        "context": "./embed.jsonld"
+      }]
+  }]
+}
+```
+
 ## Markdown Syntax Extensions
 
 [syntax-extensions]: #markdown-syntax-extensions
@@ -894,6 +928,20 @@ category a term belongs to. A term hint may be any UTF-8 character or character
 sequence. If you would like to have the glossary sorted provide a *sort* direction
 `"asc"` or `"desc"`.
 
+#### `glossaries[].export`
+
+- **Range:** `string`
+- **Since:** v6.0.0
+
+Path to a JSON file where to write terms in a structured format. See \[Structured Exports]\[#structured-export].
+
+#### `glossaries[].exports`
+
+- **Range:** `Array<{ file: string [, context: string]}>`
+- **Since:** v6.0.0
+
+Like `export` but intended to be used to write export file(s) with custom JSON-LD `context` document(s) embedded.
+
 #### `ignoreCase`
 
 - **Range:** `boolean`
@@ -1023,6 +1071,8 @@ Use this option to select markdown heading depths which should be considered ter
 > **Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `linking.headingIdAlgorithm`
+
+[headingIdAlgorithm]: #linkingheadingidalgorithm
 
 - **Range:** `"github" | "md5" | "md5-7" | "sha256" |"sha256-7"`
 - **Default:** `"github"`

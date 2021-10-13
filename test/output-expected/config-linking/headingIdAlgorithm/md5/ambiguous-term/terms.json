@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-1.md#md5:ba8f4f1932828457d5bb2a5559f24ba5",
     "valueHash8": "6132295f",
@@ -10,16 +11,15 @@
     "headingIdPlain": "term://127.0.0.1/glossary-1#alpha",
     "headingDepth": 2,
     "anchor": "#md5:ba8f4f1932828457d5bb2a5559f24ba5",
-    "glossary": {
-      "file": "./glossary-1.md",
-      "termHint": ""
-    },
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "glossary-1.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-2.md#md5:f4f4e0e4c388bc462cfd125dae54b6f5",
     "valueHash8": "6132295f",
@@ -30,16 +30,15 @@
     "headingIdPlain": "term://127.0.0.1/glossary-2#alpha",
     "headingDepth": 2,
     "anchor": "#md5:f4f4e0e4c388bc462cfd125dae54b6f5",
-    "glossary": {
-      "file": "./glossary-2.md",
-      "termHint": ""
-    },
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "glossary-2.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Document 1",
     "uri": "document-1.md#md5:911e6454442a1e980ad1eeebf7fc19fc",
     "valueHash8": "f08a4cd1",
@@ -50,16 +49,15 @@
     "headingIdPlain": "term://127.0.0.1/document-1#document-1",
     "headingDepth": 1,
     "anchor": "#md5:911e6454442a1e980ad1eeebf7fc19fc",
-    "glossary": {
-      "file": "./document-1.md",
-      "termHint": ""
-    },
     "regex": "/(Document 1)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "document-1.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Document 2",
     "uri": "document-2.md#md5:765ab5bc8d9f670188c34e86e6b88743",
     "valueHash8": "f41f3325",
@@ -70,16 +68,15 @@
     "headingIdPlain": "term://127.0.0.1/document-2#document-2",
     "headingDepth": 1,
     "anchor": "#md5:765ab5bc8d9f670188c34e86e6b88743",
-    "glossary": {
-      "file": "./document-2.md",
-      "termHint": ""
-    },
     "regex": "/(Document 2)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "document-2.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "glossary-1.md#md5:7f31a16b4a6da7404ab0bfc1f165137e",
     "valueHash8": "4cb8c916",
@@ -90,16 +87,15 @@
     "headingIdPlain": "term://127.0.0.1/glossary-1#glossary-1",
     "headingDepth": 1,
     "anchor": "#md5:7f31a16b4a6da7404ab0bfc1f165137e",
-    "glossary": {
-      "file": "./glossary-1.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary 1)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-1.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Glossary 2",
     "uri": "glossary-2.md#md5:527fa13e251d2703bbd1025a6a5bbec0",
     "valueHash8": "296178d4",
@@ -110,13 +106,11 @@
     "headingIdPlain": "term://127.0.0.1/glossary-2#glossary-2",
     "headingDepth": 1,
     "anchor": "#md5:527fa13e251d2703bbd1025a6a5bbec0",
-    "glossary": {
-      "file": "./glossary-2.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary 2)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary-2.md",
+    "termHint": ""
   }
 ]

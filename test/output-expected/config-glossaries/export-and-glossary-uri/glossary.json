@@ -1,0 +1,60 @@
+{
+  "@context": {
+    "@vocab": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "title": "dc:title",
+    "terms": {
+      "@container": "@index",
+      "@reverse": "skos:inScheme"
+    },
+    "Glossary": "skos:ConceptScheme",
+    "Term": {
+      "@id": "skos:Concept",
+      "@context": {
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "aliases": {
+          "@id": "skos:altLabel",
+          "@container": "@set"
+        },
+        "abstract": "dc:abstract"
+      }
+    },
+    "@language": "en"
+  },
+  "type": "Glossary",
+  "uri": "https://my.org/vocabulary/#",
+  "title": "Knowledge Organization Systems (KOS)",
+  "language": "en",
+  "terms": {
+    "https://my.org/vocabulary/#glossary": {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#glossary",
+      "label": "Glossary",
+      "definition": "Glossaries are collections of terms and their definitions.",
+      "abstract": "Glossaries are collections of terms and their definitions.",
+      "aliases": [
+        "Vocabulary"
+      ]
+    },
+    "https://my.org/vocabulary/#taxonomy": {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#taxonomy",
+      "label": "Taxonomy",
+      "definition": "Taxonomies are classification schemes. Terms in a taxonomy give names to sets of things. Classes are often put into relation via hierarchical relation ships to express super and subclasses of things.",
+      "abstract": "Taxonomies are classification schemes.",
+      "aliases": []
+    },
+    "https://my.org/vocabulary/#thesaurus": {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#thesaurus",
+      "label": "Thesaurus",
+      "definition": "Thesauri are word nets. They are informal sets of terms which are put into relation.",
+      "abstract": "Thesauri are word nets.",
+      "aliases": []
+    }
+  }
+}

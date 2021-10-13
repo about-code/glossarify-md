@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -10,16 +11,15 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "mention-one-once",
     "uri": "glossary.md#mention-one-once",
     "valueHash8": "4df2b5d5",
@@ -30,16 +30,15 @@
     "headingIdPlain": "",
     "headingDepth": 4,
     "anchor": "#mention-one-once",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(mention-one-once)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "mention-two-twice",
     "uri": "glossary.md#mention-two-twice",
     "valueHash8": "f16bec56",
@@ -50,16 +49,15 @@
     "headingIdPlain": "",
     "headingDepth": 4,
     "anchor": "#mention-two-twice",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(mention-two-twice)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Mentioned-in-document-once",
     "uri": "glossary.md#mentioned-in-document-once",
     "valueHash8": "a036883c",
@@ -70,16 +68,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-once",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Mentioned-in-document-once)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Mentioned-in-document-twice",
     "uri": "glossary.md#mentioned-in-document-twice",
     "valueHash8": "d6bf35c6",
@@ -90,16 +87,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#mentioned-in-document-twice",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Mentioned-in-document-twice)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "One",
     "uri": "glossary.md#one",
     "valueHash8": "06c2cea1",
@@ -110,16 +106,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#one",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(One)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Two",
     "uri": "glossary.md#two",
     "valueHash8": "aada29da",
@@ -130,16 +125,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Two)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 2
+    "countOccurrenceTotal": 2,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Zero",
     "uri": "glossary.md#zero",
     "valueHash8": "d7ed4ee1",
@@ -150,13 +144,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#zero",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Zero)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   }
 ]

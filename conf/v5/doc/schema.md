@@ -376,6 +376,36 @@ Generate a file with a list of tables and where they can be found.
 
 *   Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
 
+## Definitions group exportFile
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/exportFile"}
+```
+
+
+
+### file
+
+The filename to write output to. Recommended extension is '.json'.
+
+`file`
+
+*   is optional
+
+*   Type: `string`
+
+### context
+
+File name of a custom JSON-LD context document to embed. Should end with `.jsonld`.  May also be JSON-LD document URL starting with `https://`.
+
+`context`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group glossaryFile
 
 Reference this group by using
@@ -386,21 +416,31 @@ Reference this group by using
 
 
 
-### file
+### export
 
-Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS.
 
-`file`
+`export`
 
 *   is optional
 
 *   Type: `string`
 
-### termHint
+### exports
 
-A symbol to append to a link to denote that the term refers to a glossary term.
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
 
-`termHint`
+`exports`
+
+*   is optional
+
+*   Type: `object[]` ([Details](schema-defs-glossaryfile-properties-exports-items.md))
+
+### file
+
+Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.
+
+`file`
 
 *   is optional
 
@@ -424,6 +464,16 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 | :------- | :---------- |
 | `"asc"`  |             |
 | `"desc"` |             |
+
+### termHint
+
+A symbol to append to a link to denote that the term refers to a glossary term.
+
+`termHint`
+
+*   is optional
+
+*   Type: `string`
 
 ### uri
 

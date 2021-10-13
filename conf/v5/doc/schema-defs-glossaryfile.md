@@ -2,21 +2,31 @@
 
 
 
-## file
+## export
 
-Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS.
 
-`file`
+`export`
 
 *   is optional
 
 *   Type: `string`
 
-## termHint
+## exports
 
-A symbol to append to a link to denote that the term refers to a glossary term.
+Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
 
-`termHint`
+`exports`
+
+*   is optional
+
+*   Type: `object[]` ([Details](schema-defs-exportfile.md))
+
+## file
+
+Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern.
+
+`file`
 
 *   is optional
 
@@ -40,6 +50,16 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 | :------- | :---------- |
 | `"asc"`  |             |
 | `"desc"` |             |
+
+## termHint
+
+A symbol to append to a link to denote that the term refers to a glossary term.
+
+`termHint`
+
+*   is optional
+
+*   Type: `string`
 
 ## uri
 

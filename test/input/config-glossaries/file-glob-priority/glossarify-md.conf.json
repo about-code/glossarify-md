@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/file-glob-priority",
+  "glossaries": [
+    { "file": "./glossary*.md",   "termHint": "==C"  },
+    { "file": "./glossary-a*.md", "termHint": "==AB" },
+    { "file": "./glossary-a.md",  "termHint": "==A"  },
+    { "file": "./glossary-b*.md", "termHint": "==B"  }
+  ]
+}

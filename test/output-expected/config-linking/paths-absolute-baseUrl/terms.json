@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "First-Level-Child",
     "uri": "http://localhost/sub-1/glossary.md#first-level-child",
     "valueHash8": "890f2eb1",
@@ -10,16 +11,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-child",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(First-Level-Child)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "First-Level-Parent",
     "uri": "http://localhost/sub-1/glossary.md#first-level-parent",
     "valueHash8": "17a5382d",
@@ -30,16 +30,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#first-level-parent",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(First-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Second-Level-Parent",
     "uri": "http://localhost/glossary.md#second-level-parent",
     "valueHash8": "3bb5a2d5",
@@ -50,16 +49,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#second-level-parent",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Second-Level-Parent)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Sibling",
     "uri": "http://localhost/glossary.md#sibling",
     "valueHash8": "ba3f6a55",
@@ -70,16 +68,15 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#sibling",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Sibling)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Testing Config Option 'linking'",
     "uri": "http://localhost/glossary.md#testing-config-option-linking",
     "valueHash8": "673553af",
@@ -90,16 +87,15 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Testing Config Option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Testing Config Option 'linking'",
     "uri": "http://localhost/sub-1/glossary.md#testing-config-option-linking",
     "valueHash8": "673553af",
@@ -110,13 +106,11 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-config-option-linking",
-    "glossary": {
-      "file": "sub-1/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Testing Config Option 'linking')/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "sub-1/glossary.md",
+    "termHint": ""
   }
 ]

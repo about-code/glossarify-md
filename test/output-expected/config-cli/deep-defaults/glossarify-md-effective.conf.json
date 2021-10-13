@@ -11,7 +11,7 @@
   },
   "glossaries": [
     {
-      "file": "./glossary.md",
+      "file": "glossary.md",
       "termHint": ""
     }
   ],

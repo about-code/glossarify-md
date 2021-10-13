@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Custom",
     "uri": "sub-1/sub-2/glossary#custom",
     "valueHash8": "90589c47",
@@ -9,16 +10,15 @@
     "headingId": "custom",
     "headingDepth": 2,
     "anchor": "#custom",
-    "glossary": {
-      "file": "sub-1/sub-2/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/sub-2/glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Glossary Without URI",
     "uri": "sub-1/sub-2/glossary#glossary-without-uri",
     "valueHash8": "fc496985",
@@ -29,16 +29,15 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-without-uri",
-    "glossary": {
-      "file": "sub-1/sub-2/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary Without URI)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "sub-1/sub-2/glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Term",
     "uri": "sub-1/sub-2/glossary#term",
     "valueHash8": "cf5f3091",
@@ -49,13 +48,11 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
-    "glossary": {
-      "file": "sub-1/sub-2/glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "sub-1/sub-2/glossary.md",
+    "termHint": ""
   }
 ]

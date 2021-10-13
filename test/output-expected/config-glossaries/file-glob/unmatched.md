@@ -29,7 +29,7 @@ THEN the term being used their MUST NOT be linked to this heading.
 
 ## [Test Case](#test-case)
 
-GIVEN a matched document "document.md" WITH a term "[Root][1]"
+GIVEN a matched document "document.md" WITH a term "[Root\~][1]"
 AND this document NOT matching the glob pattern
 THEN the term MUST still be linkified.
 

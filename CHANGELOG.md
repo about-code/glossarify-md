@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.5](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.4...v6.0.0-alpha.5) (2021-10-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* Option `linking.baseUrl` now requires values to have a trailing slash.
+* Hashes generated with `headingIdAlgorithm` other than `"github"` change (only affects users of previous 6.0.0-alpha).
+
+### Features
+
+* Apply options like `termHint` and `sort` on glossaries selected with `glob` pattern. ([1030b78](https://github.com/about-code/glossarify-md/commit/1030b7821db989fecc9eb60f79378436f276c60e))
+* New config option `glossaries[].uri` ([699f01e](https://github.com/about-code/glossarify-md/commit/699f01eaabca75336e71260093dab90fbd713bee))
+* New config option `glossaries[].export` and `glossaries[].exports`: Structured interoperable export. ([6d68976](https://github.com/about-code/glossarify-md/commit/6d689762b1b5882f6f94efa8884efc368b8b5363))
+  * Support multiple exports with different JSON-LD context mappings. ([4cfcdc3](https://github.com/about-code/glossarify-md/commit/4cfcdc3396b46b4a8af1e549c79af20f7881ca99))
+
+
+### Bug Fixes
+
+* Provide CommonJS export of getSlugger() for vuepress v1 compatibility ([#189](https://github.com/about-code/glossarify-md/issues/189)) ([101b768](https://github.com/about-code/glossarify-md/commit/101b768b3ca3f1cd3d824cdfc9fa85cfdab00313))
+
 ## [6.0.0-alpha.4](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.3...v6.0.0-alpha.4) (2021-09-21)
 
 

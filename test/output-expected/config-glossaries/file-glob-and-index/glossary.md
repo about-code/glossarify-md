@@ -15,7 +15,7 @@
 
 *   AND `glossaries.file` being a glob pattern
 
-*   AND this document mentioning term *[Second Level][1]*
+*   AND this document mentioning term *[Second Level\~][1]*
 
 *   AND document `./2nd/glossary.md` mentioning `Third Level`
 

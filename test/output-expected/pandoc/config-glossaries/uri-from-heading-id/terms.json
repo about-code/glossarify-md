@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Custom",
     "uri": "https://my.org/vocab/custom",
     "valueHash8": "90589c47",
@@ -9,16 +10,15 @@
     "headingId": "custom",
     "headingDepth": 2,
     "anchor": "#custom",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "~"
-    },
     "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": "~"
   },
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "https://my.org/vocab/glossary",
     "valueHash8": "31d109d1",
@@ -29,13 +29,11 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": "~"
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": "~"
   }
 ]

@@ -1,5 +1,6 @@
 [
   {
+    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#md5:17d8aa2",
     "valueHash8": "31d109d1",
@@ -10,16 +11,15 @@
     "headingIdPlain": "term://127.0.0.1/glossary#glossary",
     "headingDepth": 1,
     "anchor": "#md5:17d8aa2",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 0
+    "countOccurrenceTotal": 0,
+    "file": "glossary.md",
+    "termHint": ""
   },
   {
+    "type": "term-definition",
     "value": "Term",
     "uri": "glossary.md#md5:8b3b1b8",
     "valueHash8": "cf5f3091",
@@ -30,13 +30,11 @@
     "headingIdPlain": "term://127.0.0.1/glossary#term",
     "headingDepth": 2,
     "anchor": "#md5:8b3b1b8",
-    "glossary": {
-      "file": "glossary.md",
-      "termHint": ""
-    },
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1
+    "countOccurrenceTotal": 1,
+    "file": "glossary.md",
+    "termHint": ""
   }
 ]
