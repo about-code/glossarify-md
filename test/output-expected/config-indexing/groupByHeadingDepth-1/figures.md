@@ -1,8 +1,8 @@
 # [Figures](#figures)
 
-  
-## [Testing option generateFiles.listOfFigures](#testing-option-generatefileslistoffigures)  
-  
+
+## [Testing option generateFiles.listOfFigures](#testing-option-generatefileslistoffigures)
+
 1.  [Figure 1 depth 1][1]
 2.  [Figure 2 depth 2][2]
 3.  [Figure 3 depth 3][3]
@@ -11,7 +11,7 @@
 6.  [Figure 6 depth 2][6]
 7.  [Figure 7 depth 3][7]
 8.  [Figure 8 depth 6][8]
-9.  [Figure 9 depth 2][9]  
+9.  [Figure 9 depth 2][9]
 
 
 [1]: ./document-figures.md#figure-1-depth-1 "Figure 1 depth 1"

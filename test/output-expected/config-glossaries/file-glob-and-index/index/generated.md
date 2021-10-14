@@ -1,11 +1,11 @@
 # [Book Index](#book-index)
 
-## [Second Level~](#second-level)  
-  
+## [Second Level~](#second-level)
+
 [Glossary 2][1] ○ [Testing Index generation for glossaries file glob][2]
 
-## [Third Level~](#third-level)  
-  
+## [Third Level~](#third-level)
+
 [Glossary 3][3] ○ [Second Level][4]
 
 [1]: ../2nd/glossary2.md#second-level "Test: Mentioning term Third Level"
