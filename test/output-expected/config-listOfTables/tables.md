@@ -1,23 +1,23 @@
 # [List of Tables](#list-of-tables)
 
-  
-## [User-Defined Invisible Table Label Comments](#user-defined-invisible-table-label-comments)  
-  
+
+## [User-Defined Invisible Table Label Comments](#user-defined-invisible-table-label-comments)
+
 1.  [Label from Comment][1]
-2.  [Column 1, Column 2, Column 3][2]  
+2.  [Column 1, Column 2, Column 3][2]
 1.  [./table-label-file/table-label-file.md][3]
-2.  [./table-label-file/table-label-file.md][3]  
-  
-## [Inferred Table Label from Section Heading](#inferred-table-label-from-section-heading)  
-  
-1.  [Label from Section Heading][4]  
-  
-## [User-Defined Visible Table Labels](#user-defined-visible-table-labels)  
-  
+2.  [./table-label-file/table-label-file.md][3]
+
+## [Inferred Table Label from Section Heading](#inferred-table-label-from-section-heading)
+
+1.  [Label from Section Heading][4]
+
+## [User-Defined Visible Table Labels](#user-defined-visible-table-labels)
+
 1.  [Label from paragraph][5]
 2.  [Column 1, Column 2, Column 3][6]
 3.  [Label from inlined text][7]
-4.  [Column A, Column B, Column C][8]  
+4.  [Column A, Column B, Column C][8]
 
 
 [1]: ./table-label-comment/table-label-comment.md#label-from-comment "Label from Comment"

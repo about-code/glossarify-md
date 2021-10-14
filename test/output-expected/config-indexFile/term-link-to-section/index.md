@@ -1,7 +1,7 @@
 # [Book Index](#book-index)
 
-## [Term](#term)  
-  
+## [Term](#term)
+
 [Glossary][1] ○ [Term][2] ○ [Section][3] ○ [./without-section-heading.md][4]
 
 [1]: ./glossary.md#term "GIVEN a term 'Term'

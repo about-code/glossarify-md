@@ -1,7 +1,7 @@
 # [Index](#index)
 
-## [Alpha](#alpha)  
-  
+## [Alpha](#alpha)
+
 [Glossary 1][1] ○ [Glossary 2][2] ○ [Document 1][3] ○ [Document 2][4]
 
 [1]: ./glossary-1.md#alpha "First definition."

@@ -1,11 +1,11 @@
 # [Book Index](#book-index)
 
-## [Term1](#term1)  
-  
+## [Term1](#term1)
+
 [Glossary][1] ○ [Document][2]<sub> [1 ][3][2 ][4][3 ][5][4 ][6][5 ][7][6 ][8][7 ][9][8 ][10][9 ][11]</sub>
 
-## [Term2](#term2)  
-  
+## [Term2](#term2)
+
 [Glossary][12] ○ [Document][2]<sub> [1 ][4][2 ][5][3 ][6][4 ][7][5 ][8][6 ][9][7 ][10][8 ][11]</sub>
 
 [1]: ./glossary.md#term1 "Term1 description."

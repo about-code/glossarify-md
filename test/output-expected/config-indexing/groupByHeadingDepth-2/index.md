@@ -1,11 +1,11 @@
 # [Book Index](#book-index)
 
-## [Term1](#term1)  
-  
+## [Term1](#term1)
+
 [Glossary][1] ○ [Document][2] ○ [Heading 2 Depth 2][3]<sub> [1 ][4][2 ][5][3 ][6]</sub> ○ [Heading 6 Depth 2][7]<sub> [1 ][8][2 ][9][3 ][10]</sub> ○ [Term1][11]
 
-## [Term2](#term2)  
-  
+## [Term2](#term2)
+
 [Glossary][12] ○ [Heading 2 Depth 2][3]<sub> [1 ][4][2 ][5][3 ][6]</sub> ○ [Heading 6 Depth 2][7]<sub> [1 ][8][2 ][9][3 ][10]</sub> ○ [Term2][13]
 
 [1]: ./glossary.md#term1 "Term1 description."
