@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/term-uris/uri-none-headingIdAlgorithm-md5",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": "~"
+    }
+  ],
+  "linking": {
+    "paths": "relative",
+    "headingIdAlgorithm": "md5-7"
+  },
+  "dev": {
+    "termsFile": "./terms.json"
+  }
+}
