@@ -1,6 +1,6 @@
 *gitignore.*
-.vscode/launch.json
 node_modules
 **/dist
 output-actual
+experiment
 debug

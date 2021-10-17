@@ -34,14 +34,109 @@ npm install
 npm run config ./path/to/glossarify-md.conf.json
 ~~~
 
-Remote-debug a particular configuration with
+There's an equivalent for running a debug session with a config
 
 ~~~
 npm run dconfig ./path/to/glossarify-md.conf.json
 ~~~
 
-More notes on debugging see [Debugging](#debugging).
+Since these commands can become cumbersome to write over and over again continue reading on [Experiments](#experiments).
 
+## Experiments
+
+Should you need to try or debug changes to *glossarify-md source code* then never change the test suite for this. Instead set up an *experiment* with a configuration like this:
+
+~~~
+${workspace}/
+   |- bin
+   |- doc
+   |- experiment/          <-- create
+   |   |- input/
+   |   |   |- document.md
+   |   |   |- glossary.md
+   |   |- output/
+   |   |- glossarify-md.conf.json
+   |- ...
+   `- package.json
+~~~
+
+*glossarify-md.conf.json*
+
+~~~json
+{
+    "$schema": "../conf/v5/schema.json",
+    "baseDir": "./input",
+    "outDir": "../output",
+    "dev": {
+        "termsFile": "../output/terms.json"
+    }
+}
+~~~
+
+Then to run the experiment use the shortcut
+
+~~~
+npm run experiment
+~~~
+
+> **☛ Note**: If you need to create files outside the `experiment/` folder, consider using a \*.gitignore.\* pattern. Those files will be excluded from revision control and may not be accidentally committed.
+
+## Debugging
+
+~~~
+npm run dconfig ./path/to/glossarify-md.conf.json
+~~~
+
+starts a "remote" debug session at `127.0.0.1:9229`. Remote debugging allows any debugger frontend speaking the Remote Debug Protocol to connect to the process. For example you can connect with
+
+- *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
+- *VSCode* by attaching as a remote debugger
+- others
+
+If you are coding in [VSCode](https://code.visualstudio.com) then you can use `Debug External` from our [Launch Configuration](./.vscode/launch.json) to debug *arbitrary* configurations after having issued `npm run dconfig ...` on a terminal.
+
+**Debugging Experiments**:
+
+In VSCode use the `Debug Experiment` launch configuration to debug experiments with the internal debugger (does not require `npm run debug`). Otherwise you may find
+
+~~~
+npm run debug
+~~~
+
+handy to launch a remote debug session for an experiment.
+
+*VSCode Launch Configuration in ${workspace}/.vscode/launch.json*
+
+~~~json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Debug Experiment",
+            "program": "${workspaceFolder}/bin/index.js",
+            "runtimeArgs": [
+                "--preserve-symlinks",
+                "--preserve-symlinks-main",
+            ],
+            "runtimeVersion": "16.0.0",
+            "args": [
+                "--config",
+                "./experiment/glossarify-md.conf.json"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "attach",
+            "name": "Debug External",
+            "address": "127.0.0.1",
+            "port": 9229,
+            "localRoot": "${workspaceFolder}"
+        }
+    ]
+}
+~~~
 
 ## Testing
 
@@ -180,89 +275,3 @@ Tweak the implementation & rerun tests as necessary. Start careful reviewing aga
 
 1. Push local history
 1. Open a *Pull Request* in the origin repository (use dedicated pull requests for different fixes or features)
-
-
-## Debugging
-
-Should you need to analyse your implementation avoid changing the test suite for the sake of the analysis. Instead set up a *debug* folder and a configuration as follows:
-
-```
-${workspace}/
-   |- bin
-   |- debug/        <-- create
-   |   |- input/
-   |   |   |- document.md
-   |   |   |- glossary.md
-   |   |- output/
-   |   |- glossarify-md.conf.json
-   |- doc
-   |- ...
-   `- package.json
-```
-
-*glossarify-md.conf.json*
-
-```json
-{
-    "$schema": "../conf/v5/schema.json",
-    "baseDir": "./input",
-    "outDir": "../output",
-    "dev": {
-        "termsFile": "../output/terms.json",
-        "printInputAst": true
-    }
-}
-```
-
-To debug `${workspace}/debug/glossarify-md.conf.json` type
-
-```
-npm run debug
-```
-
-This starts a remote debug session at `127.0.0.1:9229`. To debug a configuration
-in another directory type:
-
-```
-npm run dconfig ./path/to/glossarify-md.conf.json
-```
-
-You can now connect e.g. with
-
-- *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
-- *VSCode* (attaching as a remote debugger)
-
-The launch configuration example for [VSCode](https://code.visualstudio.com) below offers two debug options:
-
-1. VSCode connecting as a remote debugger
-1. VSCode internal debugging
-
-*${workspace}/.vscode/launch.json*
-```json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug (internal)",
-            "program": "${workspaceFolder}/bin/index.js",
-            "args": [
-                "--config",
-                "./debug/glossarify-md.conf.json"
-            ]
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "Debug (remote)",
-            "address": "127.0.0.1",
-            "port": 9229,
-            "localRoot": "${workspaceFolder}",
-            "remoteRoot": "${workspaceFolder}/bin/index.js"
-        }
-    ]
-}
-```
-
-> **☛ Note**: If you need to create files outside the `debug/` folder, consider using a \*.gitignore.\* pattern. Those files will be excluded from revision control and may not be accidentally committed.
