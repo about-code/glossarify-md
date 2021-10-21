@@ -158,16 +158,16 @@
             ,"properties": {
                 "export": {
                     "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS."
-                    ,"type": "string"
                     ,"since": "6.0.0"
-                }
-                ,"exports": {
-                    "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`."
-                    ,"type": "array"
-                    ,"since": "6.0.0"
-                    ,"items": {
-                        "$ref": "#/$defs/glossaryFileExports"
-                    }
+                    ,"oneOf": [
+                        {
+                            "$ref": "#/$defs/glossaryFileExport"
+                        },
+                        {
+                            "type": "array"
+                            ,"items": { "$ref": "#/$defs/glossaryFileExport" }
+                        }
+                    ]
                 }
                 ,"file": {
                     "description": "Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."
@@ -175,15 +175,7 @@
                 }
                 ,"import": {
                     "description": "Import a JSON glossary (see 'export'). Generates a glossary markdown file from imported terms. Advanced: if the optional 'jsonld' library is installed glossarify-md will assume the JSON file to be a JSON-LD file. If it contains mappings of its custom attribute names onto well-known names from the W3C SKOS vocabulary then glossarify-md may understand the file even if it has a different structure than files exported by glossarify-md itself."
-                    ,"oneOf": [
-                        {
-                            "$ref": "#/$defs/glossaryFileImport"
-                        }
-                        ,{
-                            "type": "array",
-                            "items": { "$ref": "#/$defs/glossaryFileImport" }
-                        }
-                    ]
+                    ,"$ref": "#/$defs/glossaryFileImport"
                     ,"since": "6.0.0"
                 }
                 ,"linkUris": {
@@ -207,6 +199,7 @@
                     ,"since": "6.0.0"
                 }
             }
+            ,"required": ["file"]
             ,"not": {
                 "anyOf": [
                     { "required": ["import", "export"] }
@@ -215,18 +208,20 @@
                 ]
             }
         }
-        ,"glossaryFileExports": {
+        ,"glossaryFileExport": {
             "type": "object",
             "properties": {
                 "file": {
                     "description": "A JSON file name to write exported terms to. Recommended file extension is '.json' or '.jsonld'"
                     ,"type": "string"
+                    ,"default": ""
                 }
                 ,"context": {
                     "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
                     ,"type": "string"
                 }
             }
+            ,"required": ["file"]
         }
         ,"glossaryFileImport": {
             "type": "object",
@@ -234,8 +229,10 @@
                 "file": {
                     "description": "The JSON file to import terms from."
                     ,"type": "string"
+                    ,"default": ""
                 }
             }
+            ,"required": ["file"]
         }
         ,"indexFile": {
             "type": "object"
