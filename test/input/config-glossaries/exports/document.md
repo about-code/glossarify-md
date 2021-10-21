@@ -7,7 +7,7 @@ GIVEN a configuration
   "glossaries": [{
     "uri": "https://my.org/vocabulary/#",
     "file": "./glossary-1.md",
-    "exports": [{
+    "export": [{
       "file": "./glossary-1-export-1.json"
     },{
       "file": "./glossary-1-export-2.json"

@@ -4,7 +4,7 @@
   "outDir": "../../../output-actual/config-glossaries/export-and-uri-none",
   "glossaries": [{
     "file": "./glossary.md",
-    "export": "./glossary.json"
+    "export": { "file": "./glossary.json" }
   },{
     "file": "./glossary-2.md"
   }],

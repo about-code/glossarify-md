@@ -5,7 +5,7 @@
   "glossaries": [{
     "uri": "https://my.org/vocabulary/#",
     "file": "./glossary-1.md",
-    "exports": [{
+    "export": [{
       "file": "./glossary-export-1.json"
       },{
       "file": "./glossary-export-2.json"
