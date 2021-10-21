@@ -8,6 +8,6 @@ The JSON file to import terms from.
 
 `file`
 
-*   is optional
+*   is required
 
 *   Type: `string`

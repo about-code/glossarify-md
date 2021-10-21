@@ -8,7 +8,7 @@ A JSON file name to write exported terms to. Recommended file extension is '.jso
 
 `file`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 

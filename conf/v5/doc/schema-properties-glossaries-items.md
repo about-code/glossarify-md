@@ -10,17 +10,7 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 *   is optional
 
-*   Type: `string`
-
-## exports
-
-Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
-
-`exports`
-
-*   is optional
-
-*   Type: `object[]` ([Details](schema-defs-glossaryfile-properties-exports-items.md))
+*   Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
 
 ## file
 
@@ -28,7 +18,7 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 
 `file`
 
-*   is optional
+*   is required
 
 *   Type: `string`
 
@@ -40,7 +30,7 @@ Import a JSON glossary (see 'export'). Generates a glossary markdown file from i
 
 *   is optional
 
-*   Type: merged type ([Details](schema-defs-glossaryfile-properties-import.md))
+*   Type: `object` ([Details](schema-defs-glossaryfile-properties-import.md))
 
 ## linkUris
 

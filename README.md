@@ -758,22 +758,24 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
   "glossaries": [{
     "uri": "http://basic.org/vocabulary/#",
     "file": "./glossary-1.md",
-    "export": "./glossary-1.json"
+    "export": { "file": "./glossary-1.json" }
   }]
 }
 ```
 
-When exporting term data, every term and its definition (term semantics) should have some unique identifier. glossarify-md constructs term URIs by combining the glossary's vocabulary URI with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). The output format will be semantically annotated to be interoperable for tools which support [SKOS] vocabulary metadata terms and JSON-LD. You can embed your own JSON_LD context like this:
+When exporting term data, every term and its definition (term semantics) should have some unique identifier. glossarify-md constructs term URIs by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]).
+
+**Advanced:** glossarify-md will map its own export model terminology onto W3C's [SKOS] terms such that the export file will be interoperable with tools supporting JSON-LD and [SKOS]. You can also embed a customized JSON-LD context for tools supporting JSON-LD but *not* "speaking" [SKOS] (rare use case). It's also possible to export multiple files using different JSON-LD contexts and vocabularies or to keep an [SKOS] export while also supporting other dialects.
 
 ```json
 {
   "glossaries": [{
       "uri": "http://advanced.org/vocabulary/",
       "file": "./glossary.md",
-      "exports": [{
+      "export": {
         "file": "./glossary.json",
         "context": "./embed.jsonld"
-      }]
+      }
   }]
 }
 ```
