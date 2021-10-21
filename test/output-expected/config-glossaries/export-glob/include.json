@@ -5,22 +5,25 @@
     "dc": "http://purl.org/dc/terms/",
     "uri": "@id",
     "type": "@type",
-    "title": "dc:title",
-    "terms": {
-      "@container": "@index",
-      "@reverse": "skos:inScheme"
+    "Glossary": {
+      "@id": "skos:ConceptScheme",
+      "@context": {
+        "title": "dc:title",
+        "terms": {
+          "@container": "@index"
+        }
+      }
     },
-    "Glossary": "skos:ConceptScheme",
     "Term": {
       "@id": "skos:Concept",
       "@context": {
-        "label": "skos:prefLabel",
+        "value": "skos:prefLabel",
         "definition": "skos:definition",
+        "abstract": "dc:abstract",
         "aliases": {
           "@id": "skos:altLabel",
           "@container": "@set"
-        },
-        "abstract": "dc:abstract"
+        }
       }
     },
     "@language": "en"
@@ -33,7 +36,7 @@
     "https://my.org/vocab/include/#car": {
       "type": "Term",
       "uri": "https://my.org/vocab/include/#car",
-      "label": "Car",
+      "value": "Car",
       "definition": "Belongs to include.json",
       "abstract": "Belongs to include.json",
       "aliases": []
@@ -41,7 +44,7 @@
     "https://my.org/vocab/include/#bobby-car": {
       "type": "Term",
       "uri": "https://my.org/vocab/include/#bobby-car",
-      "label": "Bobby Car",
+      "value": "Bobby Car",
       "definition": "Belongs to include.json",
       "abstract": "Belongs to include.json",
       "aliases": []

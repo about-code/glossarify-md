@@ -11,7 +11,7 @@
     "https://my.org/vocabulary/#export": {
       "type": "Term",
       "uri": "https://my.org/vocabulary/#export",
-      "label": "Export",
+      "value": "Export",
       "definition": "This MUST be exported.",
       "abstract": "This MUST be exported.",
       "aliases": []

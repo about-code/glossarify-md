@@ -5,22 +5,25 @@
     "dc": "http://purl.org/dc/terms/",
     "uri": "@id",
     "type": "@type",
-    "title": "dc:title",
-    "terms": {
-      "@container": "@index",
-      "@reverse": "skos:inScheme"
+    "Glossary": {
+      "@id": "skos:ConceptScheme",
+      "@context": {
+        "title": "dc:title",
+        "terms": {
+          "@container": "@index"
+        }
+      }
     },
-    "Glossary": "skos:ConceptScheme",
     "Term": {
       "@id": "skos:Concept",
       "@context": {
-        "label": "skos:prefLabel",
+        "value": "skos:prefLabel",
         "definition": "skos:definition",
+        "abstract": "dc:abstract",
         "aliases": {
           "@id": "skos:altLabel",
           "@container": "@set"
-        },
-        "abstract": "dc:abstract"
+        }
       }
     },
     "@language": "en"
@@ -33,7 +36,7 @@
     "https://my.org/vocabulary/#export": {
       "type": "Term",
       "uri": "https://my.org/vocabulary/#export",
-      "label": "Export",
+      "value": "Export",
       "definition": "This MUST be exported.",
       "abstract": "This MUST be exported.",
       "aliases": []
