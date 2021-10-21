@@ -64,6 +64,8 @@
     "test_p10__10": "node . --config ./input/config-glossaries/export-and-uri-none/glossarify-md.conf.json",
     "test_p10__11": "node . --config ./input/config-glossaries/export-glob/glossarify-md.conf.json",
     "test_p10__12": "node . --config ./input/config-glossaries/exports/glossarify-md.conf.json",
+    "test_p10__13": "node . --config ./input/config-glossaries/linkUris/glossarify-md.conf.json",
+    "test_p10__14": "node . --config ./input/config-glossaries/linkUris-glob/glossarify-md.conf.json",
     "test_p11__00": "node . --config ./input/config-linking/headingDepths-2-4/glossarify-md.conf.json",
     "test_p11__01": "node . --config ./input/config-linking/baseUrl/glossarify-md.conf.json",
     "test_p11__02": "node . --config ./input/config-linking/byReferenceDefinition/false/glossarify-md.conf.json",
