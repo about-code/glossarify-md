@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/linkUris-with-term-attributes",
+  "glossaries": [
+    {
+      "file": "./glossary*.md",
+      "linkUris": true
+    }
+  ]
+}
