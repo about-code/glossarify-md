@@ -2,6 +2,16 @@
 
 
 
+## rcPath
+
+Path to an external *unified* configuration file as documented under <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>. See description of *unified* property why you may want such a configuration.
+
+`rcPath`
+
+*   is optional
+
+*   Type: `string`
+
 ## plugins
 
 Object or array with names of *unified* and *remark* plug-ins and plug-in settings as described in <https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md>

@@ -1,4 +1,4 @@
-# items Properties
+# glossaryFileExports Properties
 
 
 

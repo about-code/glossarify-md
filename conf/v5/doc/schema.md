@@ -286,7 +286,7 @@ If you like to keep *unified* configuration separate use e.g. '{ "unified": { "r
 
 *   is optional
 
-*   Type: merged type ([Details](schema-properties-unified.md))
+*   Type: `object` ([Details](schema-properties-unified.md))
 
 ### unified Default Value
 
@@ -376,36 +376,6 @@ Generate a file with a list of tables and where they can be found.
 
 *   Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
 
-## Definitions group exportFile
-
-Reference this group by using
-
-```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/exportFile"}
-```
-
-
-
-### file
-
-The filename to write output to. Recommended extension is '.json'.
-
-`file`
-
-*   is optional
-
-*   Type: `string`
-
-### context
-
-File name of a custom JSON-LD context document to embed. Should end with `.jsonld`.  May also be JSON-LD document URL starting with `https://`.
-
-`context`
-
-*   is optional
-
-*   Type: `string`
-
 ## Definitions group glossaryFile
 
 Reference this group by using
@@ -445,6 +415,16 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 *   is optional
 
 *   Type: `string`
+
+### import
+
+Import a JSON glossary (see 'export'). Generates a glossary markdown file from imported terms. Advanced: if the optional 'jsonld' library is installed glossarify-md will assume the JSON file to be a JSON-LD file. If it contains mappings of its custom attribute names onto well-known names from the W3C SKOS vocabulary then glossarify-md may understand the file even if it has a different structure than files exported by glossarify-md itself.
+
+`import`
+
+*   is optional
+
+*   Type: merged type ([Details](schema-defs-glossaryfile-properties-import.md))
 
 ### linkUris
 
@@ -498,6 +478,56 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 #### uri Constraints
 
 **URI**: the string must be a URI, according to [RFC 3986](https://tools.ietf.org/html/rfc3986 "check the specification")
+
+## Definitions group glossaryFileExports
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFileExports"}
+```
+
+
+
+### file
+
+A JSON file name to write exported terms to. Recommended file extension is '.json' or '.jsonld'
+
+`file`
+
+*   is optional
+
+*   Type: `string`
+
+### context
+
+File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application.
+
+`context`
+
+*   is optional
+
+*   Type: `string`
+
+## Definitions group glossaryFileImport
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFileImport"}
+```
+
+
+
+### file
+
+The JSON file to import terms from.
+
+`file`
+
+*   is optional
+
+*   Type: `string`
 
 ## Definitions group indexFile
 
@@ -908,12 +938,12 @@ When 'true' replaces markdown inline links with numbered references to a link re
 
 *   Type: `boolean`
 
-## Definitions group UnifiedExternalConfig
+## Definitions group unified
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/UnifiedExternalConfig"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -924,19 +954,9 @@ Path to an external *unified* configuration file as documented under <https://gi
 
 `rcPath`
 
-*   is required
+*   is optional
 
 *   Type: `string`
-
-## Definitions group unified
-
-Reference this group by using
-
-```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/unified"}
-```
-
-
 
 ### plugins
 

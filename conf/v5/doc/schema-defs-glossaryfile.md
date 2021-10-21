@@ -20,7 +20,7 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 *   is optional
 
-*   Type: `object[]` ([Details](schema-defs-exportfile.md))
+*   Type: `object[]` ([Details](schema-defs-glossaryfileexports.md))
 
 ## file
 
@@ -31,6 +31,16 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 *   is optional
 
 *   Type: `string`
+
+## import
+
+Import a JSON glossary (see 'export'). Generates a glossary markdown file from imported terms. Advanced: if the optional 'jsonld' library is installed glossarify-md will assume the JSON file to be a JSON-LD file. If it contains mappings of its custom attribute names onto well-known names from the W3C SKOS vocabulary then glossarify-md may understand the file even if it has a different structure than files exported by glossarify-md itself.
+
+`import`
+
+*   is optional
+
+*   Type: merged type ([Details](schema-defs-glossaryfile-properties-import.md))
 
 ## linkUris
 
