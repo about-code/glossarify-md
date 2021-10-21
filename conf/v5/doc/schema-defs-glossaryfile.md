@@ -32,6 +32,16 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 
 *   Type: `string`
 
+## linkUris
+
+Set this to true to hyperlink occurrences of a term to an 'authoritative' web glossary using a term's URI as lookup URL (default: false). May be used together with a glossary's 'uri' option. When 'linkUris' is 'true' glossarify-md uses the glossary markdown file as a source of link titles (tooltips) or for other internal processing, only, but won't generate links from documents to the markdown glossary, anymore, but from documents to an external web page.
+
+`linkUris`
+
+*   is optional
+
+*   Type: `boolean`
+
 ## sort
 
 If present, sort terms in output glossary. Default: None. See also i18n options.
