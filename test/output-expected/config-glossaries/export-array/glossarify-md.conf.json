@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../output-actual/config-glossaries/exports",
+  "outDir": "../../../output-actual/config-glossaries/export-array",
   "glossaries": [{
     "uri": "https://my.org/vocabulary/#",
     "file": "./glossary-1.md",
