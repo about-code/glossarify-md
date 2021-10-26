@@ -68,7 +68,7 @@
     "test_p10__14": "node . --config ./input/config-glossaries/linkUris-glob/glossarify-md.conf.json",
     "test_p10__15": "node . --config ./input/config-glossaries/import/glossarify-md.conf.json",
     "test_p10__16": "node . --config ./input/config-glossaries/import-glob-not-allowed/glossarify-md.conf.json",
-    "test_p10__17": "node . --config ./input/config-glossaries/import-with-external-context-only/glossarify-md.conf.json",
+    "test_p10__17": "node . --config ./input/config-glossaries/import-with-external-context/glossarify-md.conf.json",
     "test_p11__00": "node . --config ./input/config-linking/headingDepths-2-4/glossarify-md.conf.json",
     "test_p11__01": "node . --config ./input/config-linking/baseUrl/glossarify-md.conf.json",
     "test_p11__02": "node . --config ./input/config-linking/byReferenceDefinition/false/glossarify-md.conf.json",
