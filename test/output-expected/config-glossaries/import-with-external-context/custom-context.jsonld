@@ -17,7 +17,7 @@
       "@id": "skos:Concept",
       "@context": {
         "label": "skos:prefLabel",
-        "definition": "skos:definition",
+        "longDef": "skos:definition",
         "shortDef": "dc:abstract",
         "aliases": {
           "@id": "skos:altLabel",

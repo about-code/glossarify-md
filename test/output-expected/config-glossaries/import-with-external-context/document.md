@@ -8,7 +8,7 @@ GIVEN a configuration
     "file": "glossary.md",
     "import": {
       "file": "./glossary.json",
-      "context": "./context.jsonld"
+      "context": "./custom-context.jsonld"
     }
   }]
 }
@@ -22,7 +22,7 @@ AND file `glossary.json` existing as a glossary in a custom format
     *   *[Glossary][1]*
     *   *[Taxonomy][2]*
     *   *[Thesaurus][3]*
-        AND file `context.jsonld` existing as a JSON-LD context with mappings of the custom format onto SKOS and DC
+        AND file `custom-context.jsonld` existing as a JSON-LD context with mappings of the custom format onto SKOS and DC
 
 THEN
 

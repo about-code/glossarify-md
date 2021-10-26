@@ -6,7 +6,7 @@
     "file": "glossary.md",
     "import": {
       "file": "./glossary.json",
-      "context": "./context.jsonld"
+      "context": "./custom-context.jsonld"
     }
   }]
 }
