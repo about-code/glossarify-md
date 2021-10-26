@@ -2,14 +2,14 @@
 
 GIVEN terms
 
-*   [A_lphabet==A][1]
-*   [A_stonishing==A][2]
-*   [AB_solute==AB][3]
-*   [AB_normal==AB][4]
-*   [AB_sent==AB][5]
-*   [AB_igale==AB][6]
-*   [C_olosseum==C][7]
-*   [C_omission==C][8]
+*   [A\_lphabet==A][1]
+*   [A\_stonishing==A][2]
+*   [AB\_solute==AB][3]
+*   [AB\_normal==AB][4]
+*   [AB\_sent==AB][5]
+*   [AB\_igale==AB][6]
+*   [C\_olosseum==C][7]
+*   [C\_omission==C][8]
 
 THEN these terms MUST get a term hint matching their initial letters.
 

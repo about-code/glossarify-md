@@ -24,11 +24,11 @@ AND this glossary matches glob patterns (file sets)
 THEN for terms of *this* glossary when found in [document.md][1]
 the `termHint` of file set marked with `X` MUST be used ("LAST WINS").
 
-## [C_olosseum](#c_olosseum)
+## [C\_olosseum](#c\_olosseum)
 
 Expect termHint '==C'
 
-## [C_omission](#c_omission)
+## [C\_omission](#c\_omission)
 
 Expect termHint '==C'
 

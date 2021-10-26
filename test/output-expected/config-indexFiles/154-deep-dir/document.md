@@ -2,13 +2,13 @@
 
 GIVEN thre glossaries glossary-a, glossary-b and glossary-c WITH a set of terms
 
-*   [GlossaryA_Term1][1],
-*   [GlossaryA_Term2][2],
-*   [GlossaryB_Term1][3],
-*   [GlossaryB_Term2][4],
-*   [GlossaryC_Term1][5],
-*   [GlossaryC_Term2][6],
-*   [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9] (all three)
+*   [GlossaryA\_Term1][1],
+*   [GlossaryA\_Term2][2],
+*   [GlossaryB\_Term1][3],
+*   [GlossaryB\_Term2][4],
+*   [GlossaryC\_Term1][5],
+*   [GlossaryC\_Term2][6],
+*   [GlossaryABC\_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9] (all three)
 
 AND a configuration
 
@@ -38,11 +38,11 @@ AND a configuration
 THEN the system MUST generate three files
 
 *   index-a.md
-    *   WITH terms [GlossaryA_Term1][1], [GlossaryA_Term2][2], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+    *   WITH terms [GlossaryA\_Term1][1], [GlossaryA\_Term2][2], [GlossaryABC\_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
 *   sub1-index/index-b.md
-    *   WITH terms [GlossaryB_Term1][3], [GlossaryB_Term2][4], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+    *   WITH terms [GlossaryB\_Term1][3], [GlossaryB\_Term2][4], [GlossaryABC\_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
 *   sub1-index/sub2-index/index-c.md
-    *   WITH terms [GlossaryC_Term1][5], [GlossaryC_Term2][6], [GlossaryABC_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
+    *   WITH terms [GlossaryC\_Term1][5], [GlossaryC\_Term2][6], [GlossaryABC\_Term3][7][<sup>2)</sup>][8][<sup> 3)</sup>][9], only
 
 AND
 

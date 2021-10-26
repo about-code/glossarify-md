@@ -12,7 +12,7 @@ Conceptual layers and projects contributing to the layer
 
 [glossarify-md] is built on [unified], an umbrella project for *text file processing in general*. We use [unified↴][1] with [remark], which in conceptual terms of [unified↴][1] is a *processor* for *Markdown text files in particular*. [remark↴][2] itself only supports the [CommonMark] specification via its *internal* [micromark] parser/tokenizer.
 
-That's why you need to install additional [remark plug-ins][remark-plugins] when you need extended Markdown syntax. Those plug-ins then usually install and depend on a [micromark] extension to parse and tokenize that syntax. We omitted for simplicity that [glossarify-md] already installs [remark-gfm] to also support popular [GitHub Flavoured Markdown][GFM] syntax (e.g. tables) and [remark-footnotes] (footnotes).
+That's why you need to install additional [remark plug-ins][remark-plugins] when you need extended Markdown syntax. Those plug-ins then usually install and depend on a [micromark] extension to parse and tokenize that syntax. We omitted for simplicity that [glossarify-md] already installs [remark-gfm] to also support popular [GitHub Flavoured Markdown][GFM] syntax (e.g. tables and footnotes).
 
 Unless told you by any [remark plug-in][remark-plugins] you won't likely have to install any micromark extensions yourself when using [glossarify-md]. Just stick with [remark plug-ins][remark-plugins] on layer 2. They should declare their [micromark] requirements for themselves.
 
@@ -31,8 +31,6 @@ Unless told you by any [remark plug-in][remark-plugins] you won't likely have to
 [CommonMark]: https://commonmark.org
 
 [GFM]: https://github.github.com/gfm/
-
-[remark-footnotes]: https://npmjs.com/package/remark-footnotes
 
 [1]: ./glossary.md#unified "unified is an umbrella project around text file processing in general."
 

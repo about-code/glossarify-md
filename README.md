@@ -33,8 +33,6 @@
 
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 
-[remark-footnotes]: https://npmjs.com/package/remark-footnotes
-
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
 
 [unified]: https://unifiedjs.com
