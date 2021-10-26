@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "TEST": "http://expect.this/context-to-be-used",
+    "@vocab": "http://foo.org/format/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "heading": "dc:title",
+    "Glossary": {
+      "@id": "skos:ConceptScheme",
+      "@context": {
+        "title": "dc:title",
+        "terms": { "@container": "@set" }
+      }
+    },
+    "Term": {
+      "@id": "skos:Concept",
+      "@context": {
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "shortDef": "dc:abstract",
+        "aliases": {
+          "@id": "skos:altLabel",
+          "@container": "@set"
+        }
+      }
+    },
+    "@language": "en"
+  }
+}
