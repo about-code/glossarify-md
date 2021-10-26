@@ -17,7 +17,7 @@
     "Term": {
       "@id": "skos:Concept",
       "@context": {
-        "value": "skos:prefLabel",
+        "label": "skos:prefLabel",
         "definition": "skos:definition",
         "abstract": "dc:abstract",
         "aliases": {
@@ -36,7 +36,7 @@
     "https://my.org/vocabulary/#export": {
       "type": "Term",
       "uri": "https://my.org/vocabulary/#export",
-      "value": "Export",
+      "label": "Export",
       "definition": "This MUST be exported.",
       "abstract": "This MUST be exported.",
       "aliases": []

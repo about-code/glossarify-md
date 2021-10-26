@@ -17,7 +17,7 @@
     "Term": {
       "@id": "skos:Concept",
       "@context": {
-        "value": "skos:prefLabel",
+        "label": "skos:prefLabel",
         "definition": "skos:definition",
         "abstract": "dc:abstract",
         "aliases": {
@@ -36,7 +36,7 @@
     "glossary.md#glossary": {
       "type": "Term",
       "uri": "glossary.md#glossary",
-      "value": "Glossary",
+      "label": "Glossary",
       "definition": "Glossaries are collections of terms and their definitions.",
       "abstract": "Glossaries are collections of terms and their definitions.",
       "aliases": [
@@ -46,7 +46,7 @@
     "glossary.md#taxonomy": {
       "type": "Term",
       "uri": "glossary.md#taxonomy",
-      "value": "Taxonomy",
+      "label": "Taxonomy",
       "definition": "Taxonomies are classification schemes. Terms in a taxonomy give names to sets of things. Classes are often put into relation via hierarchical relation ships to express super and subclasses of things.",
       "abstract": "Taxonomies are classification schemes.",
       "aliases": []
@@ -54,7 +54,7 @@
     "glossary.md#thesaurus": {
       "type": "Term",
       "uri": "glossary.md#thesaurus",
-      "value": "Thesaurus",
+      "label": "Thesaurus",
       "definition": "Thesauri are word nets. They are informal sets of terms which are put into relation.",
       "abstract": "Thesauri are word nets.",
       "aliases": []

@@ -17,7 +17,7 @@
     "Term": {
       "@id": "skos:Concept",
       "@context": {
-        "value": "skos:prefLabel",
+        "label": "skos:prefLabel",
         "definition": "skos:definition",
         "abstract": "dc:abstract",
         "aliases": {
@@ -36,7 +36,7 @@
     "https://my.org/vocab/include/#car": {
       "type": "Term",
       "uri": "https://my.org/vocab/include/#car",
-      "value": "Car",
+      "label": "Car",
       "definition": "Belongs to include.json",
       "abstract": "Belongs to include.json",
       "aliases": []
@@ -44,7 +44,7 @@
     "https://my.org/vocab/include/#bobby-car": {
       "type": "Term",
       "uri": "https://my.org/vocab/include/#bobby-car",
-      "value": "Bobby Car",
+      "label": "Bobby Car",
       "definition": "Belongs to include.json",
       "abstract": "Belongs to include.json",
       "aliases": []
