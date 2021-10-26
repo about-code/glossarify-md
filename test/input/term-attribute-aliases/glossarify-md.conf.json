@@ -1,0 +1,18 @@
+{
+  "$schema": "../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../output-actual/term-attribute-aliases",
+  "glossaries": [
+    {
+      "file": "./glossary.md",
+      "termHint": ""
+    }
+  ],
+  "ignoreCase": false,
+  "dev": {
+    "termsFile": "../../output-actual/term-attribute-aliases/terms.json",
+    "printInputAst": false,
+    "reproducablePaths": true,
+    "printOutputAst": false
+  }
+}
