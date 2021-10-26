@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.8](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.7...v6.0.0-alpha.8) (2021-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **refactor:** Affects users of 6.0.0-alpha.7 only:
+`export: "string"` and `exports: [...]` are no longer
+supported. Use `export: { "file": "string" }` or
+`export: [{ "file": "string" }]` instead.
+
+* Making `outDir` current working directory (CWD):
+This might only affect you if you have used glossarify-md
+with third-party remark plug-ins which require file path configurations
+and assume paths relative to 'process.cwd()'.
+
+### Features
+
+* Structured imports. ([4447f72](https://github.com/about-code/glossarify-md/commit/4447f727732ce7d04d1a48dd570fa8bfe30dd1c3))
+* Make outdir current working dir ([#196](https://github.com/about-code/glossarify-md/issues/196)) ([241d59d](https://github.com/about-code/glossarify-md/commit/241d59d2271f4a7527b6cb7f4d9b6e76f4a26a1a))
+* New option `glossaries.linkUris`. ([8d8f78b](https://github.com/about-code/glossarify-md/commit/8d8f78b9e145c1af0364657ec410a46ef6d15b46))
+* New JSONish term attributes syntax (Aliases, etc.) ([e6e9f45](https://github.com/about-code/glossarify-md/commit/e6e9f453b8300ebaa236175ddb55707f198ecb3e))
+
+### Bug Fixes
+
+* Spaces causing many `&#x20;` being rendered in index files and lists ([#195](https://github.com/about-code/glossarify-md/issues/195)) ([65d5290](https://github.com/about-code/glossarify-md/commit/65d529077484dbf57167751adfc9d6a65a54a926)), closes [#x20](https://github.com/about-code/glossarify-md/issues/x20)
+
+
+* **refactor:** Align `export` option with `import` option. ([427de35](https://github.com/about-code/glossarify-md/commit/427de35c79df0f459808f1c3fb45760b103d5bc6))
+
 ## [6.0.0-alpha.7](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.6...v6.0.0-alpha.7) (2021-10-13)
 
 

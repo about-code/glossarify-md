@@ -1,0 +1,12 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-with-external-context",
+  "glossaries": [{
+    "file": "glossary.md",
+    "import": {
+      "file": "./glossary.json",
+      "context": "./custom-context.jsonld"
+    }
+  }]
+}

@@ -1,0 +1,34 @@
+{
+  "@context": {
+    "TEST": "http://empty.context/to-fail-when-this-context-was-used-instead-of_custom-context.jsonld"
+  },
+  "type": "Glossary",
+  "uri": "https://my.org/vocabulary/#",
+  "heading": "Custom Import Format",
+  "terms": [
+    {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#glossary",
+      "label": "Glossary",
+      "longDef": "Glossaries are collections of terms and their definitions.",
+      "shortDef": "Glossaries are collections of terms and their definitions.",
+      "aliases": [
+        "Vocabulary"
+      ]
+    },{
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#taxonomy",
+      "label": "Taxonomy",
+      "longDef": "Taxonomies are classification schemes. Terms in a taxonomy give names to sets of things. Classes are often put into relation via hierarchical relation ships to express super and subclasses of things.",
+      "shortDef": "Taxonomies are classification schemes.",
+      "aliases": []
+    },{
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#thesaurus",
+      "label": "Thesaurus",
+      "longDef": "Thesauri are word nets. They are informal sets of terms which are put into relation.",
+      "shortDef": "Thesauri are word nets.",
+      "aliases": []
+    }
+  ]
+}

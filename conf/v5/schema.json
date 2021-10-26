@@ -37,7 +37,7 @@
                 "$ref": "#/$defs/glossaryFile"
             }
             ,"default": [
-                { "file": "./glossary.md", "termHint": ""}
+                { "file": "./glossary.md", "termHint": "" }
             ]
         }
         ,"ignoreCase": {
@@ -109,10 +109,7 @@
         }
         ,"unified": {
             "description": "Extended *unified* and *remark* configuration as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md\nYou may want to provide such a configuration for loading *remark* plug-ins you've installed yourself. You likely require such plug-ins if your input files use third-party syntax which is not covered by the CommonMark specification. glossarify-md only supports CommonMark, GitHub Flavoured Markdown (GFM) and Footnotes by default. For additional remark plug-ins see https://github.com/remarkjs/awesome-remark\nNote that this configuration is not to be considered part of glossarify-md's own configuration interface! glossarify-md can not be held responsible for issues arising from loading additional plug-ins.\nIf you like to keep *unified* configuration separate use e.g. '{ \"unified\": { \"rcPath\": \"../unified.conf.json\"}} to load a unified configuration from an external file."
-            ,"oneOf": [
-                { "$ref": "#/$defs/unified"}
-                ,{ "$ref": "#/$defs/UnifiedExternalConfig"}
-            ]
+            ,"$ref": "#/$defs/unified"
             ,"default": {}
         }
         ,"dev": {
@@ -156,38 +153,35 @@
                 }
             }
         }
-        ,"exportFile": {
-            "type": "object",
-            "properties": {
-                "file": {
-                    "description": "The filename to write output to. Recommended extension is '.json'."
-                    ,"type": "string"
-                }
-                ,"context": {
-                    "description": "File name of a custom JSON-LD context document to embed. Should end with `.jsonld`.  May also be JSON-LD document URL starting with `https://`."
-                    ,"type": "string"
-                }
-            }
-        }
         ,"glossaryFile": {
             "type": "object"
             ,"properties": {
                 "export": {
                     "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS."
-                    ,"type": "string"
                     ,"since": "6.0.0"
-                }
-                ,"exports": {
-                    "description": "Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto http://w3.org/skos for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`."
-                    ,"type": "array"
-                    ,"since": "6.0.0"
-                    ,"items": {
-                        "$ref": "#/$defs/exportFile"
-                    }
+                    ,"oneOf": [
+                        {
+                            "$ref": "#/$defs/glossaryFileExport"
+                        },
+                        {
+                            "type": "array"
+                            ,"items": { "$ref": "#/$defs/glossaryFileExport" }
+                        }
+                    ]
                 }
                 ,"file": {
                     "description": "Name of the glossary file. Conventional default is *glossary.md*. You can use a glob pattern to enable cross-linking of headings across multiple files. Note that 'termHint' and 'title' will be ignored if 'file' is a glob pattern."
                     ,"type": "string"
+                }
+                ,"import": {
+                    "description": "Import a JSON glossary (see 'export'). Generates a glossary markdown file from imported terms. Advanced: if the optional 'jsonld' library is installed glossarify-md will assume the JSON file to be a JSON-LD file. If it contains mappings of its custom attribute names onto well-known names from the W3C SKOS vocabulary then glossarify-md may understand the file even if it has a different structure than files exported by glossarify-md itself."
+                    ,"$ref": "#/$defs/glossaryFileImport"
+                    ,"since": "6.0.0"
+                }
+                ,"linkUris": {
+                    "description": "Set this to true to hyperlink occurrences of a term to an 'authoritative' web glossary using a term's URI as lookup URL (default: false). May be used together with a glossary's 'uri' option. When 'linkUris' is 'true' glossarify-md uses the glossary markdown file as a source of link titles (tooltips) or for other internal processing, only, but won't generate links from documents to the markdown glossary, anymore, but from documents to an external web page."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
                 }
                 ,"sort": {
                     "description": "If present, sort terms in output glossary. Default: None. See also i18n options."
@@ -205,6 +199,40 @@
                     ,"since": "6.0.0"
                 }
             }
+            ,"required": ["file"]
+            ,"not": {
+                "anyOf": [
+                    { "required": ["import", "export"] }
+                    ,{ "required": ["import", "exports"] }
+                    ,{ "required": ["export", "exports"] }
+                ]
+            }
+        }
+        ,"glossaryFileExport": {
+            "type": "object",
+            "properties": {
+                "file": {
+                    "description": "A JSON file name to write exported terms to. Recommended file extension is '.json' or '.jsonld'"
+                    ,"type": "string"
+                    ,"default": ""
+                }
+                ,"context": {
+                    "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
+                    ,"type": "string"
+                }
+            }
+            ,"required": ["file"]
+        }
+        ,"glossaryFileImport": {
+            "type": "object",
+            "properties": {
+                "file": {
+                    "description": "The JSON file to import terms from."
+                    ,"type": "string"
+                    ,"default": ""
+                }
+            }
+            ,"required": ["file"]
         }
         ,"indexFile": {
             "type": "object"
@@ -370,22 +398,14 @@
                 }
             }
         }
-        ,"UnifiedExternalConfig": {
+        ,"unified": {
             "type": "object"
-            ,"title": "unified (external config)"
             ,"properties": {
                 "rcPath": {
                     "description": "Path to an external *unified* configuration file as documented under https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md. See description of *unified* property why you may want such a configuration."
                     ,"type": "string"
                 }
-            }
-            ,"required": ["rcPath"]
-            ,"additionalProperties": false
-        }
-        ,"unified": {
-            "type": "object"
-            ,"properties": {
-                "plugins": {
+                ,"plugins": {
                     "description": "Object or array with names of *unified* and *remark* plug-ins and plug-in settings as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md\nNote that this configuration is not to be considered part of glossarify-md's own configuration interface!\nIf you like to keep *unified* configuration separate use 'rcPath' to load a unified configuration from an external file."
                     ,"oneOf": [{
                         "type": "array"
@@ -407,7 +427,9 @@
                 }
 
             }
-            ,"additionalProperties": false
+            ,"not": {
+                "required": ["plugins", "rcPath"]
+            }
         }
         ,"dev": {
             "type": "object"

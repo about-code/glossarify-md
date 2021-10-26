@@ -10,17 +10,7 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 *   is optional
 
-*   Type: `string`
-
-## exports
-
-Export terms from the markdown file as a JSON glossary. Output will contain JSON-LD mappings onto <http://w3.org/skos> for interoperability with knowledge organization systems supporting SKOS. Other JSON-LD context files may be embedded using `context`.
-
-`exports`
-
-*   is optional
-
-*   Type: `object[]` ([Details](schema-defs-glossaryfile-properties-exports-items.md))
+*   Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
 
 ## file
 
@@ -28,9 +18,29 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 
 `file`
 
-*   is optional
+*   is required
 
 *   Type: `string`
+
+## import
+
+Import a JSON glossary (see 'export'). Generates a glossary markdown file from imported terms. Advanced: if the optional 'jsonld' library is installed glossarify-md will assume the JSON file to be a JSON-LD file. If it contains mappings of its custom attribute names onto well-known names from the W3C SKOS vocabulary then glossarify-md may understand the file even if it has a different structure than files exported by glossarify-md itself.
+
+`import`
+
+*   is optional
+
+*   Type: `object` ([Details](schema-defs-glossaryfile-properties-import.md))
+
+## linkUris
+
+Set this to true to hyperlink occurrences of a term to an 'authoritative' web glossary using a term's URI as lookup URL (default: false). May be used together with a glossary's 'uri' option. When 'linkUris' is 'true' glossarify-md uses the glossary markdown file as a source of link titles (tooltips) or for other internal processing, only, but won't generate links from documents to the markdown glossary, anymore, but from documents to an external web page.
+
+`linkUris`
+
+*   is optional
+
+*   Type: `boolean`
 
 ## sort
 

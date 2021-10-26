@@ -9,12 +9,12 @@ GIVEN
     "glossaries": [
       {
         "uri": "https://my.org/vocab/inc/#",
-        "export": "./inc.json",
+        "export": { "file": "./inc.json" },
         "file": "./glossary-inc*.md"
       },
       {
         "uri": "https://my.org/vocab/include/#",
-        "export": "./include.json",
+        "export": { "file": "./include.json" },
         "file": "./glossary-include*.md"
       },
       {
