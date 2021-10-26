@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../output-actual/config-glossaries/import-with-context-arrays",
+  "outDir": "../../../output-actual/config-glossaries/import-with-embedded-context-array",
   "glossaries": [{
     "file": "glossary.md",
     "import": {
