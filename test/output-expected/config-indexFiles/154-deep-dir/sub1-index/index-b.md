@@ -1,14 +1,14 @@
 # [Index B](#index-b)
 
-## [GlossaryABC_Term3](#glossaryabc_term3)
+## [GlossaryABC\_Term3](#glossaryabc\_term3)
 
 [Glossary A][1] ○ [Glossary B][2] ○ [Glossary C][3] ○ [Testing config indexFiles with multiple index files][4]
 
-## [GlossaryB_Term1](#glossaryb_term1)
+## [GlossaryB\_Term1](#glossaryb\_term1)
 
 [Glossary B][5] ○ [Testing config indexFiles with multiple index files][4]
 
-## [GlossaryB_Term2](#glossaryb_term2)
+## [GlossaryB\_Term2](#glossaryb\_term2)
 
 [Glossary B][6] ○ [Testing config indexFiles with multiple index files][4]
 

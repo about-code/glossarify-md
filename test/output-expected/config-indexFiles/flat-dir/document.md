@@ -2,11 +2,11 @@
 
 GIVEN two glossaries glossary-a and glossary-b WITH a set of terms
 
-*   [GlossaryA_Term1][1],
-*   [GlossaryA_Term2][2],
-*   [GlossaryB_Term1][3],
-*   [GlossaryB_Term2][4],
-*   [GlossaryAB_Term3][5][<sup>2)</sup>][6] (both)
+*   [GlossaryA\_Term1][1],
+*   [GlossaryA\_Term2][2],
+*   [GlossaryB\_Term1][3],
+*   [GlossaryB\_Term2][4],
+*   [GlossaryAB\_Term3][5][<sup>2)</sup>][6] (both)
 
 AND a configuration
 
@@ -27,9 +27,9 @@ AND a configuration
 THEN the system MUST generate two files
 
 *   index-a.md
-    *   WITH terms [GlossaryA_Term1][1], [GlossaryA_Term2][2], [GlossaryAB_Term3][5][<sup>2)</sup>][6], only
+    *   WITH terms [GlossaryA\_Term1][1], [GlossaryA\_Term2][2], [GlossaryAB\_Term3][5][<sup>2)</sup>][6], only
 *   index-b.md
-    *   WITH terms [GlossaryB_Term1][3], [GlossaryB_Term2][4], [GlossaryAB_Term3][5][<sup>2)</sup>][6], only
+    *   WITH terms [GlossaryB\_Term1][3], [GlossaryB\_Term2][4], [GlossaryAB\_Term3][5][<sup>2)</sup>][6], only
 
 [1]: ./glossary-a.md#glossarya_term1
 
