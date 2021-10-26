@@ -1,0 +1,18 @@
+{
+  "@context": {
+    "TEST": "http://expect.this/context-to-be-used-and-appended",
+    "Term": {
+      "@id": "skos:Concept",
+      "@context": {
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "shortDef": "dc:abstract",
+        "aliases": {
+          "@id": "skos:altLabel",
+          "@container": "@set"
+        }
+      }
+    },
+    "@language": "en"
+  }
+}

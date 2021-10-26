@@ -1,0 +1,48 @@
+{
+  "@context": [{
+    "TEST": "http://expect.this/context-to-be-used-and-extended-with-custom-context.jsonld/",
+    "@vocab": "http://foo.org/format/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "heading": "dc:title"
+  },{
+    "Glossary": {
+      "@id": "skos:ConceptScheme",
+      "@context": {
+        "title": "dc:title",
+        "terms": { "@container": "@set" }
+      }
+    }
+  }],
+  "type": "Glossary",
+  "uri": "https://my.org/vocabulary/#",
+  "heading": "Custom Import Format",
+  "terms": [
+    {
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#glossary",
+      "label": "Glossary",
+      "definition": "Glossaries are collections of terms and their definitions.",
+      "shortDef": "Glossaries are collections of terms and their definitions.",
+      "aliases": [
+        "Vocabulary"
+      ]
+    },{
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#taxonomy",
+      "label": "Taxonomy",
+      "definition": "Taxonomies are classification schemes. Terms in a taxonomy give names to sets of things. Classes are often put into relation via hierarchical relation ships to express super and subclasses of things.",
+      "shortDef": "Taxonomies are classification schemes.",
+      "aliases": []
+    },{
+      "type": "Term",
+      "uri": "https://my.org/vocabulary/#thesaurus",
+      "label": "Thesaurus",
+      "definition": "Thesauri are word nets. They are informal sets of terms which are put into relation.",
+      "shortDef": "Thesauri are word nets.",
+      "aliases": []
+    }
+  ]
+}
