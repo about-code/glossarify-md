@@ -10,8 +10,11 @@
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
-[vuepress] users might be interested in learning [how to use the tool with vuepress](https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md).
+[vuepress] users might be interested in learning [how to use the tool with vuepress][doc-vuepress].
 
+[doc-vocabulary-uris]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md
+[doc-skos-interop]: https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md
+[doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md
 [CommonMark]: https://www.commonmark.org
 [GFM]: https://github.github.com/gfm/
 [glob]: https://github.com/isaacs/node-glob#glob-primer
@@ -23,7 +26,6 @@
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
 [remark]: https://github.com/remarkjs/remark
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
-[remark-footnotes]: https://npmjs.com/package/remark-footnotes
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
 [unified]: https://unifiedjs.com
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
@@ -699,39 +701,6 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 >
 > You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on syntax extensions below).
 
-## Structured Export
-[SKOS]: https://w3.org/skos
-
-**Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
-
-*glossarify-md.conf.json*
-~~~json
-{
-  "glossaries": [{
-    "uri": "http://basic.org/vocabulary/#",
-    "file": "./glossary-1.md",
-    "export": { "file": "./glossary-1.json" }
-  }]
-}
-~~~
-
-When exporting term data, every term and its definition (term semantics) should have some unique identifier. glossarify-md constructs term URIs by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]).
-
-
-**Advanced:** glossarify-md will map its own export model terminology onto W3C's [SKOS] terms such that the export file will be interoperable with tools supporting JSON-LD and [SKOS]. You can also embed a customized JSON-LD context for tools supporting JSON-LD but *not* "speaking" [SKOS] (rare use case). It's also possible to export multiple files using different JSON-LD contexts and vocabularies or to keep an [SKOS] export while also supporting other dialects.
-
-~~~json
-{
-  "glossaries": [{
-      "uri": "http://advanced.org/vocabulary/",
-      "file": "./glossary.md",
-      "export": {
-        "file": "./glossary.json",
-        "context": "./embed.jsonld"
-      }
-  }]
-}
-~~~
 
 ## Markdown Syntax Extensions
 
@@ -795,6 +764,43 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 >
 > Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
 
+## Structured Exports and imports
+[SKOS]: https://w3.org/skos
+
+**Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
+
+*glossarify-md.conf.json* (generates ./glossary.json)
+~~~json
+{
+  "glossaries": [{
+    "uri": "http://basic.org/vocabulary/#",
+    "file": "./glossary.md",
+    "export": {
+      "file": "./glossary.json"
+    }
+  }]
+}
+~~~
+
+When using a glob pattern for the markdown `file` it is possible to export terms from multiple files into a single JSON file. Consider declaring a glossary `uri`. [glossarify-md] will assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]
+
+You can import terms the same way using `import` instead.
+
+*glossarify-md.conf.json* (generates ./glossary.md):
+~~~json
+{
+  "glossaries": [{
+    "uri": "http://basic.org/vocabulary/#",
+    "file": "./glossary.md",
+    "import": {
+      "file": "./glossary.json"
+    }
+  }]
+}
+~~~
+
+More advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
+
 ## Node Support Matrix
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
@@ -830,9 +836,8 @@ Paths or Glob-Patterns of files to exclude. Excluded files will be excluded from
   indexFile: {},
   listOf: [],
   listOfFigures: {},
-  listOfTables: {},
-}`
-
+  listOfTables: {}
+}
 ~~~
 
 #### `generateFiles.indexFile`
@@ -872,7 +877,20 @@ Generates a list of tables.
 
 #### `glossaries`
 
-- **Range:** `Array<{file: string, [termHint: string], [sort: string]}>`
+- **Range:** `Array`
+~~~
+[
+  {
+    file: string,
+    termHint: string,
+    sort: string],
+    uri: string,
+    linkUri: string,
+    import: {},
+    export: {},
+  }
+]
+~~~
 - **Default:** `[{ "file": "./glossary.md", "termHint": "" }]`
 
 A list of glossary configuations, each with a path to the glossary file. Every
@@ -884,17 +902,25 @@ sequence. If you would like to have the glossary sorted provide a *sort* directi
 
 #### `glossaries[].export`
 
-- **Range:** `string`
+- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>`
 - **Since:** v6.0.0
 
-Path to a JSON file where to write terms in a structured format. See [Structured Exports][#structured-export].
+Export markdown terms in a structured JSON format.
 
-#### `glossaries[].exports`
+#### `glossaries[].import`
 
-- **Range:** `Array<{ file: string [, context: string]}>`
+- **Range:** `{ file: string [, context: string]}`
 - **Since:** v6.0.0
 
-Like `export` but intended to be used to write export file(s) with custom JSON-LD `context` document(s) embedded.
+Import terms from a structured JSON format and generate a markdown glossary from it.
+
+#### `glossaries[].linkUris`
+
+- **Range:** `boolean`
+- **Default:** `false`
+- **Since:** v6.0.0
+
+When true, occurrences of glossary terms found in text will no longer be linked with the markdown glossary file but with an external definition on the web using a term's URI. The given glossary file will serve as a data source for a link title providing a short tooltip and may still be found from [indexFiles](#generatefilesindexfiles).
 
 #### `ignoreCase`
 
