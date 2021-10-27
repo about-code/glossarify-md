@@ -20,7 +20,7 @@
 
 > Readers Level: Advanced
 
-[SKOS↴][1] is a modeling language developed by the W3C to share Simple Knowledge Organization Systems ([KOS↴][2]) like Glossaries, Word Nets, Thesauri, Taxonomies, etc.
+[SKOS🟉][1] is a modeling language developed by the W3C to share Simple Knowledge Organization Systems ([KOS🟉][2]) like Glossaries, Word Nets, Thesauri, Taxonomies, etc.
 
 ### [Exporting SKOS](#exporting-skos)
 
@@ -43,7 +43,7 @@
 }
 ```
 
-The document maps glossarify-md's own *export model* terminology onto [SKOS↴][1] and Dublin Core model terms for interoperability with tools supporting [SKOS↴][1], (Dublin Core) and [JSON-LD↴][3]. You can embed a different [JSON-LD↴][3] `@context` document should you need to:
+The document maps glossarify-md's own *export model* terminology onto [SKOS🟉][1] and Dublin Core model terms for interoperability with tools supporting [SKOS🟉][1], (Dublin Core) and [JSON-LD🟉][3]. You can embed a different [JSON-LD🟉][3] `@context` document should you need to:
 
 ```json
 {
@@ -62,7 +62,7 @@ The document maps glossarify-md's own *export model* terminology onto [SKOS↴][
 
 ### [Importing SKOS](#importing-skos)
 
-By default [glossarify-md] can only understand and import its own JSON export format. However you can `npm install` [jsonld] and when glossarify-md detects it, it will try to parse an imported JSON file using [JSON-LD↴][3] which enables other data formats, too, given they embed [JSON-LD↴][3] mappings onto [SKOS↴][1], as well. If not you could write and provide your own mappings, externally, using an import `context`:
+By default [glossarify-md] can only understand and import its own JSON export format. However you can `npm install` [jsonld] and when glossarify-md detects it, it will try to parse an imported JSON file using [JSON-LD🟉][3] which enables other data formats, too, given they embed [JSON-LD🟉][3] mappings onto [SKOS🟉][1], as well. If not you could write and provide your own mappings, externally, using an import `context`:
 
 ```json
 {
@@ -76,7 +76,7 @@ By default [glossarify-md] can only understand and import its own JSON export fo
 }
 ```
 
-**Note:** glossarify-md only evaluates the [SKOS↴][1] terms that can be found in its export format, as well.
+**Note:** glossarify-md only evaluates the [SKOS🟉][1] terms that can be found in its export format, as well.
 
 [1]: ./glossary.md#skos "With SKOS the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 

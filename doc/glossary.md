@@ -4,7 +4,7 @@ This is a glossary of terms helpful when working with glossarify-md or reading i
 
 ## [JSON-LD](#json-ld)
 
-[JSON-LD↴][2] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With [JSON-LD↴][2] it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS↴][3] is one such vocabulary supported by [glossarify-md]
+[JSON-LD🟉][2] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With [JSON-LD🟉][2] it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS🟉][3] is one such vocabulary supported by [glossarify-md]
 
 ## [KOS (Knowledge Organization Systems)](#kos-knowledge-organization-systems)
 
@@ -24,9 +24,9 @@ This is a glossary of terms helpful when working with glossarify-md or reading i
 
 [OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
 
-Glossaries are considered a kind of *Knowledge Organisation System ([KOS↴][4])* which organizes knowledge as a list of terms and term definitions. There are other [KOS↴][4] like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal [KOS↴][4] the W3C has developed [SKOS↴][3].
+Glossaries are considered a kind of *Knowledge Organisation System ([KOS🟉][4])* which organizes knowledge as a list of terms and term definitions. There are other [KOS🟉][4] like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal [KOS🟉][4] the W3C has developed [SKOS🟉][3].
 
-[Formal Ontologies][vocabularies] are graph-like [KOS↴][4] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the [*Web Ontology Language* OWL][OWL]. [SKOS↴][3] was built on top of OWL.
+[Formal Ontologies][vocabularies] are graph-like [KOS🟉][4] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the [*Web Ontology Language* OWL][OWL]. [SKOS🟉][3] was built on top of OWL.
 
 ## [Linkification](#linkification)
 
@@ -36,7 +36,7 @@ onto the term definition in *document B*.
 
 ## [remark](#remark)
 
-[remark] is a parser and compiler project under the [unified↴][5] umbrella for *Markdown* text files in particular.
+[remark] is a parser and compiler project under the [unified🟉][5] umbrella for *Markdown* text files in particular.
 
 [remark]: https://github.com/remarkjs/remark
 
@@ -48,13 +48,13 @@ With [SKOS][6] the World Wide Web Consortium (W3C) has standardized a (meta-)voc
 
 <!--{ "aliases": "slugs" }-->
 
-A [slug↴][7] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL↴][8] fragments to address headings / sections on a page.
+A [slug🟉][7] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL🟉][8] fragments to address headings / sections on a page.
 
 ## [Term Attributes](#term-attributes)
 
 <!--{ "uri": "term attribute, term-attribute" }-->
 
-[Term Attributes↴][9] are properties passed to glossarify-md using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
+[Term Attributes🟉][9] are properties passed to glossarify-md using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
 
 *glossary.md*
 
@@ -81,7 +81,7 @@ See glossarify-md configuration options for details.
 
 <!-- Aliases: URL fragments -->
 
-The fragment is the part follwing the `#` in a [URL↴][8].
+The fragment is the part follwing the `#` in a [URL🟉][8].
 
 ## [URI](#uri)
 

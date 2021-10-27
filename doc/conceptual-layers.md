@@ -1,16 +1,16 @@
-# [Addendum: Conceptual Layers](#addendum-conceptual-layers)
+# [Internals: Conceptual Layers](#internals-conceptual-layers)
 
 Conceptual layers and projects contributing to the layer
 
-| Layer | Project         | Conceptual purpose                                                          |
-| ----- | --------------- | --------------------------------------------------------------------------- |
-| 4     | [glossarify-md] | cross-linking multiple markdown files                                       |
-| 3     | [unified]       | umbrella project for *text file processing in general*                      |
-| 2     | [remark]        | [unified↴][1] *processor* for *markdown text file processing in particular* |
-| 1     | [micromark]     | remarks internal markdown syntax tokenizer                                  |
-| 0     | [CommonMark]    | Informal Markdown Syntax Specification                                      |
+| Layer | Project         | Conceptual purpose                                                           |
+| ----- | --------------- | ---------------------------------------------------------------------------- |
+| 4     | [glossarify-md] | cross-linking multiple markdown files                                        |
+| 3     | [unified]       | umbrella project for *text file processing in general*                       |
+| 2     | [remark]        | [unified🟉][1] *processor* for *markdown text file processing in particular* |
+| 1     | [micromark]     | remarks internal markdown syntax tokenizer                                   |
+| 0     | [CommonMark]    | Informal Markdown Syntax Specification                                       |
 
-[glossarify-md] is built on [unified], an umbrella project for *text file processing in general*. We use [unified↴][1] with [remark], which in conceptual terms of [unified↴][1] is a *processor* for *Markdown text files in particular*. [remark↴][2] itself only supports the [CommonMark] specification via its *internal* [micromark] parser/tokenizer.
+[glossarify-md] is built on [unified], an umbrella project for *text file processing in general*. We use [unified🟉][1] with [remark], which in conceptual terms of [unified🟉][1] is a *processor* for *Markdown text files in particular*. [remark🟉][2] itself only supports the [CommonMark] specification via its *internal* [micromark] parser/tokenizer.
 
 That's why you need to install additional [remark plug-ins][remark-plugins] when you need extended Markdown syntax. Those plug-ins then usually install and depend on a [micromark] extension to parse and tokenize that syntax. We omitted for simplicity that [glossarify-md] already installs [remark-gfm] to also support popular [GitHub Flavoured Markdown][GFM] syntax (e.g. tables and footnotes).
 

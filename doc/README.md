@@ -34,7 +34,7 @@ Known Issues
 
 [1]: ./vocabulary-uris.md
 
-[2]: ./import-export-skos.md
+[2]: ./skos-interop.md
 
 [3]: ./glossary.md
 

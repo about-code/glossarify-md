@@ -62,7 +62,7 @@ module.exports = {
 };
 ```
 
-Details on why we have to use a modified [slug↴][1] algorithm with [vuepress↴][2] and can be found in [Appendix][3].
+Details on why we have to use a modified [slug🟉][1] algorithm with [vuepress🟉][2] and can be found in [Appendix][3].
 
 > **Warnings**
 >
@@ -91,17 +91,17 @@ More information see [README.md][4].
 
 ## [Markdown Extensions](#markdown-extensions)
 
-[Vuepress↴][2] has a few [Markdown Extensions][5]. Most of them work out of the box. Though, *Frontmatter* requires a plug-in to work with glossarify-md. Read [Markdown Syntax Extensions][6], for using glossarify-md with Markdown syntax not covered by the [CommonMark] Spec.
+[Vuepress🟉][2] has a few [Markdown Extensions][5]. Most of them work out of the box. Though, *Frontmatter* requires a plug-in to work with glossarify-md. Read [Markdown Syntax Extensions][6], for using glossarify-md with Markdown syntax not covered by the [CommonMark] Spec.
 
-| [Vuepress↴][2] Markdown Extension     | [remark↴][7] plug-in required with glossarify-md |
-| ------------------------------------- | ------------------------------------------------ |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][8]                          |
-| [Custom Containers][vp-cc]            | None                                             |
-| [GitHub Style Tables][vp-gh-tables]   | None                                             |
-| [Table of Contents][vp-toc] `[[toc]]` | None                                             |
-| [Emoji][vp-emoji]                     | None                                             |
-| [Line Highlighting Codeblocks][vp-lh] | None                                             |
-| [Import Code Snippets][vp-code]       | None                                             |
+| [Vuepress🟉][2] Markdown Extension    | [remark🟉][7] plug-in required with glossarify-md |
+| ------------------------------------- | ------------------------------------------------- |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][8]                           |
+| [Custom Containers][vp-cc]            | None                                              |
+| [GitHub Style Tables][vp-gh-tables]   | None                                              |
+| [Table of Contents][vp-toc] `[[toc]]` | None                                              |
+| [Emoji][vp-emoji]                     | None                                              |
+| [Line Highlighting Codeblocks][vp-lh] | None                                              |
+| [Import Code Snippets][vp-code]       | None                                              |
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 
@@ -119,9 +119,9 @@ More information see [README.md][4].
 
 ## [Appendix](#appendix)
 
-[glossarify-md] requires a [slug↴][1] algorithm to create friendly [URL↴][9] fragments (#...) for section links. When [vuepress↴][2] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different [slug↴][1] algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27][10]). So it's best to configure [vuepress↴][2] to use the same slugger as [glossarify-md].
+[glossarify-md] requires a [slug🟉][1] algorithm to create friendly [URL🟉][9] fragments (#...) for section links. When [vuepress🟉][2] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different [slug🟉][1] algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27][10]). So it's best to configure [vuepress🟉][2] to use the same slugger as [glossarify-md].
 
-[glossarify-md] uses [github-slugger][11] internally. In case you no longer want to use [glossarify-md] you might not want to have [slugs↴][1] change again. Then you can use the slugger directly with [vuepress↴][2], too:
+[glossarify-md] uses [github-slugger][11] internally. In case you no longer want to use [glossarify-md] you might not want to have [slugs🟉][1] change again. Then you can use the slugger directly with [vuepress🟉][2], too:
 
 ```js
 //.vuepress/config.js
