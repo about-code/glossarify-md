@@ -26,9 +26,6 @@ With the `uri` option [glossarify-md] maps terms onto identifiers using the voca
 Term with an individual URI.
 ~~~
 
-If you are interested in the rationale behind URIs enjoy reading on.
-
-
 ## Identifiers for *Definitions of Meaning*
 
 Consider bankers and IT professionals talking about *security*. Since the term is used differently in the banking domain than it is used in computer science its *ambiguity* can cause some confusion among these people. As a consequence the term demands *clarification* of its particular meaning when being used. That's what glossaries are meant for, of course. Technically such kind of clarification can be achieved using IDs to uniquely identify *one particular definition of meaning*.
@@ -37,9 +34,11 @@ Uniform Resource Identifiers (URIs) do fit very well for that purpose. For examp
 
 While anyone could use any domain name in an URI and make it the identifier of something, only the legitimate domain name owner as registered by the domain name system can claim authority in case of disputes over some definition.
 
-While not a requirement as a *publisher* you might enjoy that URIs could be used to *locate and retrieve* technical representations of a term definition over a network protocol like HTTP. For example a web browser could be used to locate and retrieve an HTML representation that can be rendered in the browser. Other possible representations (data formats) are possible, of course, e.g.
+While not a requirement as a *publisher* you might enjoy that URIs could be used to *locate and retrieve* technical representations of a term definition over a network protocol like HTTP. For example a web browser could be used to locate and retrieve an HTML representation that can be rendered in the browser. Other representations (data formats) are possible, of course, e.g.
 
   - a plain text representation
   - a Markdown text representation
   - a structured JSON representation
   - and so forth...
+
+If you have a background in Linked Data and Semantic Web technologies you might also interested in reading about [SKOS Interoperability with JSON-LD](./skos-interop.md).

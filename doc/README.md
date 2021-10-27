@@ -17,7 +17,7 @@
 Concepts
 
 *   [Vocabulary and Term URIs][1]
-*   [Importing and Exporting SKOS vocabularies][2]
+*   [SKOS Interoperability with JSON-LD][2]
 *   [Glossary of glossarify-md][3]
 
 Integrations

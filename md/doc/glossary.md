@@ -56,7 +56,7 @@ Term Attributes are properties passed to glossarify-md using an HTML comment syn
 ## Term Hint
 <!--{ "aliases": "term hint, term-hint" }-->
 
-An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link.
+An optional (symbol-) character like for example `🟉` decorating a term link to distinguish it from a regular link.
 See glossarify-md configuration options for details.
 
 

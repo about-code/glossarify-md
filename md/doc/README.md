@@ -10,7 +10,7 @@
 
 Concepts
 - [Vocabulary and Term URIs](./vocabulary-uris.md)
-- [Importing and Exporting SKOS vocabularies](./skos-interop.md)
+- [SKOS Interoperability with JSON-LD](./skos-interop.md)
 - [Glossary of glossarify-md](./glossary.md)
 
 Integrations

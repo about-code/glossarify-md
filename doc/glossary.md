@@ -68,7 +68,7 @@ A [slug🟉][7] by our definition is a URL-friendly identifier created from arbi
 
 <!--{ "aliases": "term hint, term-hint" }-->
 
-An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link.
+An optional (symbol-) character like for example `🟉` decorating a term link to distinguish it from a regular link.
 See glossarify-md configuration options for details.
 
 ## [unified](#unified)
