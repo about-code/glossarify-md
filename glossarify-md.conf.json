@@ -12,7 +12,7 @@
   "linking": {
     "baseUrl": "",
     "paths": "relative",
-    "mentions": "all",
+    "mentions": "first-in-paragraph",
     "headingDepths": [
       2,
       3,

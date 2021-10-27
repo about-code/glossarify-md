@@ -15,7 +15,7 @@
 }
 ```
 
-With the `uri` option [glossarify-md] maps terms onto identifiers using the vocabulary [URI🟉][1] as a base [URI🟉][1] for appending a term's heading ID (see [headingidalgorithm]). Exceptions to this rule are possible with the `uri` term attribute:
+With the `uri` option [glossarify-md] maps terms onto identifiers using the vocabulary [URI🟉][1] as a base URI for appending a term's heading ID (see [headingidalgorithm]). Exceptions to this rule are possible with the `uri` term attribute:
 
 *glossary.md*
 
