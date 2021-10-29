@@ -57,8 +57,10 @@ npx glossarify-md --config ./glossarify-md.conf.json
 
 *package.json*
 ~~~json
-scripts: {
-  "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
+{
+  "scripts": {
+    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
+  }
 }
 ~~~
 

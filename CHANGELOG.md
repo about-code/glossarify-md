@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-alpha.9](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.8...v6.0.0-alpha.9) (2021-10-29)
+
+
+### Features
+
+* New option 'glossaries[].showUris' ([48b5585](https://github.com/about-code/glossarify-md/commit/48b5585784ecc599670998427f4902bcf6c943be))
+
 ## [6.0.0-alpha.8](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.7...v6.0.0-alpha.8) (2021-10-21)
 
 
