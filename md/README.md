@@ -501,7 +501,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 
 ~~~md
 <a id="tutorial-part-1" title="Tutorial Part 1"></a>
-This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials ans uses the classifier *tutorial*.
+This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials and uses the classifier *tutorial*.
 ~~~
 
 > **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
@@ -764,7 +764,7 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 >
 > Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
 
-## Structured Exports and imports
+## Structured Export and Import
 [SKOS]: https://w3.org/skos
 
 **Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
@@ -782,7 +782,7 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 }
 ~~~
 
-When using a glob pattern for the markdown `file` it is possible to export terms from multiple files into a single JSON file. Consider declaring a glossary `uri`. [glossarify-md] will assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]
+When using a glob pattern for the markdown `file` it is possible to export terms from multiple files into a single JSON file. Consider declaring a glossary `uri`. [glossarify-md] will assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris].
 
 You can import terms the same way using `import` instead.
 
