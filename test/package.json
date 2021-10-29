@@ -73,6 +73,8 @@
     "test_p10__19": "node . --config ./input/config-glossaries/import-with-embedded-context-array/glossarify-md.conf.json",
     "test_p10__20": "node . --config ./input/config-glossaries/import-with-external-context-array/glossarify-md.conf.json",
     "test_p10__21": "node . --config ./input/config-glossaries/import-with-context-arrays/glossarify-md.conf.json",
+    "test_p10__22": "node . --config ./input/config-glossaries/import-with-showUris-true/glossarify-md.conf.json",
+    "test_p10__23": "node . --config ./input/config-glossaries/import-with-showUris-string/glossarify-md.conf.json",
     "test_p11__00": "node . --config ./input/config-linking/headingDepths-2-4/glossarify-md.conf.json",
     "test_p11__01": "node . --config ./input/config-linking/baseUrl/glossarify-md.conf.json",
     "test_p11__02": "node . --config ./input/config-linking/byReferenceDefinition/false/glossarify-md.conf.json",

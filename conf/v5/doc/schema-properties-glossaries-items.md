@@ -61,6 +61,16 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 | `"asc"`  |             |
 | `"desc"` |             |
 
+## showUris
+
+Whether to render a term's URI in the glossary (currently for imported glossaries, only).
+
+`showUris`
+
+*   is optional
+
+*   Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
+
 ## termHint
 
 A symbol to append to a link to denote that the term refers to a glossary term.

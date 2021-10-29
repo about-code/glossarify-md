@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-with-showUris-string",
+  "glossaries": [{
+    "file": "glossary.md",
+    "import": { "file": "./glossary.json" },
+    "showUris": "- ${uri}"
+  }]
+}
