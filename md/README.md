@@ -765,6 +765,7 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 > Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
 
 ## Structured Export and Import
+[doc-export-import]: #structured-export-and-import
 [SKOS]: https://w3.org/skos
 
 **Since v6.0.0** terms in a markdown glossary can be exported to a structured JSON format.
@@ -885,7 +886,8 @@ Generates a list of tables.
     termHint: string,
     sort: string],
     uri: string,
-    linkUri: string,
+    linkUris: boolean,
+    showUris: boolean|string,
     import: {},
     export: {},
   }
@@ -905,14 +907,14 @@ sequence. If you would like to have the glossary sorted provide a *sort* directi
 - **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>`
 - **Since:** v6.0.0
 
-Export markdown terms in a structured JSON format.
+Export markdown terms in a structured JSON format. More read [here][doc-export-import].
 
 #### `glossaries[].import`
 
 - **Range:** `{ file: string [, context: string]}`
 - **Since:** v6.0.0
 
-Import terms from a structured JSON format and generate a markdown glossary from it.
+Import terms from a structured JSON format and generate a markdown glossary from it. More read [here][doc-export-import].
 
 #### `glossaries[].linkUris`
 
@@ -920,7 +922,15 @@ Import terms from a structured JSON format and generate a markdown glossary from
 - **Default:** `false`
 - **Since:** v6.0.0
 
-When true, occurrences of glossary terms found in text will no longer be linked with the markdown glossary file but with an external definition on the web using a term's URI. The given glossary file will serve as a data source for a link title providing a short tooltip and may still be found from [indexFiles](#generatefilesindexfiles).
+When `true`, occurrences of glossary terms found in text will no longer be linked with the markdown glossary file but with an external definition on the web using a term's URI. The given glossary file will serve as a data source for a link title providing a short tooltip and may still be found from [indexFiles](#generatefilesindexfiles).
+
+#### `glossaries[].showUris`
+
+- **Range:** `boolean|string`
+- **Default:** `false`
+- **Since:** v6.0.0
+
+When being `true` or being a template string with a placeholder `${uri}` then render term URIs in glossaries generated from [imported][doc-export-import] terms.
 
 #### `ignoreCase`
 

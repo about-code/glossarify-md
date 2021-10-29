@@ -24,7 +24,7 @@
 
 ### [Exporting SKOS](#exporting-skos)
 
-[glossarify-md's][glossarify-md] export format embeds a [JSON-LD] `@context` document, by default. It maps glossarify-md's own *export model* terminology onto [SKOS] and [Dublin Core][DC] model terms for interoperability with tools supporting [SKOS🟉][2], Dublin Core (optional) and [JSON-LD🟉][1]. You can embed your own JSON-LD `@context` mappings if you need to, though, using `export` with `context`:
+[glossarify-md's][glossarify-md] export format embeds a [JSON-LD] `@context` document, by default. It maps glossarify-md's own *export model* terminology onto [SKOS] and [Dublin Core][DC] model terms for interoperability with tools supporting [SKOS🟉][2], Dublin Core (optional) and [JSON-LD🟉][1]. You can embed your own JSON-LD `@context` mappings if you need to using `export` with `context`:
 
 ```json
 {

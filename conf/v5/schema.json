@@ -188,6 +188,14 @@
                     ,"type": "string"
                     ,"enum": ["asc", "desc"]
                 }
+                ,"showUris": {
+                    "description": "Whether to render a term's URI in the glossary (currently for imported glossaries, only)."
+                    ,"oneOf": [
+                        { "type": "boolean"}
+                        ,{ "type": "string" }
+                    ]
+                    ,"since": "6.0.0"
+                }
                 ,"termHint": {
                     "description": "A symbol to append to a link to denote that the term refers to a glossary term."
                     ,"type": "string"
