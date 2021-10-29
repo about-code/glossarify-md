@@ -939,7 +939,8 @@ Generates a list of tables.
     termHint: string,
     sort: string],
     uri: string,
-    linkUri: string,
+    linkUris: boolean,
+    showUris: boolean|string,
     import: {},
     export: {},
   }
