@@ -1,4 +1,4 @@
-# Addendum: Lists in GitHub Repos
+# Known Issues: Lists in GitHub Repos
 
 Addendum to [Section *Lists* in README.md](../README.md#lists)
 

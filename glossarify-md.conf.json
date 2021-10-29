@@ -5,14 +5,14 @@
   "glossaries": [
     {
       "file": "./glossary.md",
-      "termHint": "↴"
+      "termHint": "🟉"
     }
   ],
   "ignoreCase": true,
   "linking": {
     "baseUrl": "",
     "paths": "relative",
-    "mentions": "all",
+    "mentions": "first-in-paragraph",
     "headingDepths": [
       2,
       3,

@@ -1,4 +1,4 @@
-# Addendum: Conceptual Layers
+# Internals: Conceptual Layers
 
 Conceptual layers and projects contributing to the layer
 
