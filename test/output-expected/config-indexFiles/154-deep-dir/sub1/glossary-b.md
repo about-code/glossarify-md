@@ -1,7 +1,7 @@
 # [Glossary B](#glossary-b)
 
-## [GlossaryB\_Term1](#glossaryb\_term1)
+## [GlossaryB\_Term1](#glossaryb_term1)
 
-## [GlossaryB\_Term2](#glossaryb\_term2)
+## [GlossaryB\_Term2](#glossaryb_term2)
 
-## [GlossaryABC\_Term3](#glossaryabc\_term3)
+## [GlossaryABC\_Term3](#glossaryabc_term3)
