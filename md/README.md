@@ -802,7 +802,9 @@ You can import terms the same way using `import` instead.
 }
 ~~~
 
-More advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
+> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from remote using `https`. While it will try to remove any Markdown and HTML from imported text using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb assume that any files from a remote location potentially enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md]. Therefore never import from untrusted sources and consider downloading files yourself, prior to importing.
+
+Advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
 
 ## Node Support Matrix
 
