@@ -1,4 +1,4 @@
-# [Document 1](#sha256:2405b49)
+# [Document 1](#sha256-2405b49)
 
 GIVEN two glossaries with a term [Alpha][1][<sup>2)</sup>][2]
 AND two documents *Document 1* and *Document 2*, both mentioning term [Alpha][1][<sup>2)</sup>][2]
@@ -17,6 +17,6 @@ AND in the generated index file
 2.  AND there MUST be *two* glossaries linked under that entry
 3.  AND there MUST be *two* documents linked under that entry
 
-[1]: ./glossary-1.md#sha256:12fca02 "First definition."
+[1]: ./glossary-1.md#sha256-12fca02 "First definition."
 
-[2]: ./glossary-2.md#sha256:9c50dbf "Second definition."
+[2]: ./glossary-2.md#sha256-9c50dbf "Second definition."
