@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-beta.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.9...v6.0.0-beta.0) (2021-10-31)
+
+
+### Features
+
+* Import from remote ([#205](https://github.com/about-code/glossarify-md/issues/205)) ([ebadc59](https://github.com/about-code/glossarify-md/commit/ebadc591983d57a8b23008b4b92a033203f6f1ef))
+
 ## [6.0.0-alpha.9](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.8...v6.0.0-alpha.9) (2021-10-29)
 
 
