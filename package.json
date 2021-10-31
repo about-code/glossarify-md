@@ -62,7 +62,7 @@
     "github-slugger": "^1.0.0",
     "glob": "^7.2.0",
     "mdast-builder": "^1.1.1",
-    "mdast-util-to-markdown": "^1.2.3",
+    "mdast-util-to-markdown": "^1.2.4",
     "mdast-util-to-string": "^3.1.0",
     "mdast-util-wiki-link": "^0.0.2",
     "micromark-extension-wiki-link": "0.0.4",
@@ -76,17 +76,17 @@
     "unified-engine": "^9.0.4",
     "unist-util-flatmap": "^1.0.0",
     "unist-util-visit": "^4.1.0",
-    "vfile": "^5.1.1"
+    "vfile": "^5.2.0"
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^6.1.4",
-    "eslint": "^7.32.0",
+    "eslint": "^8.1.0",
     "jsonld": "^5.2.0",
     "npm-run-all": "^4.1.5",
     "remark-cli": "^10.0.0",
     "remark-comment-config": "^7.0.0",
     "remark-license": "^6.0.0",
-    "remark-toc": "^8.0.0",
+    "remark-toc": "^8.0.1",
     "standard-version": "^9.3.2"
   },
   "peerDependencies": {
