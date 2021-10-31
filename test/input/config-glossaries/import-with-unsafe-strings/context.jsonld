@@ -1,0 +1,31 @@
+{
+  "@context": {
+    "@vocab": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "Glossary": {
+      "@id": "skos:ConceptScheme",
+      "@context": {
+        "title": "dc:title",
+        "terms": {
+          "@container": "@index"
+        }
+      }
+    },
+    "Term": {
+      "@id": "skos:Concept",
+      "@context": {
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "abstract": "dc:abstract",
+        "aliases": {
+          "@id": "skos:altLabel",
+          "@container": "@set"
+        }
+      }
+    },
+    "@language": "en"
+  }
+}

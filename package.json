@@ -72,6 +72,7 @@
     "remark-parse": "^10.0.0",
     "remark-reference-links": "^6.0.0",
     "remark-stringify": "^10.0.1",
+    "strip-markdown": "^5.0.0",
     "unified": "^10.1.0",
     "unified-engine": "^9.0.4",
     "unist-util-flatmap": "^1.0.0",
