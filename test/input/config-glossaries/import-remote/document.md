@@ -5,14 +5,16 @@ GIVEN a configuration
 ~~~json
 {
   "glossaries": [{
-    "file": "./glossary.md",
-    "import": { "file": "./glossary.json" }
+    "file": "glossary.md",
+    "import": {
+      "file": "https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json"
+    }
   }]
 }
 ~~~
 
 WITH file `glossary.md` missing
-AND file `glossary.json` existing WITH terms
+AND *remote* file https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json existing WITH terms
 - *Glossary*
 - *Taxonomy*
 - *Thesaurus*
