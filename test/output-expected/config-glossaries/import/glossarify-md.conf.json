@@ -4,6 +4,8 @@
   "outDir": "../../../output-actual/config-glossaries/import",
   "glossaries": [{
     "file": "glossary.md",
-    "import": { "file": "./glossary.json" }
+    "import": {
+      "file": "https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json"
+    }
   }]
 }
