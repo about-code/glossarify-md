@@ -1,0 +1,31 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-with-unsafe-strings",
+  "glossaries": [
+    {
+      "file": "safe-labels.md",
+      "import": {
+        "file": "./unsafe-labels.json"
+      }
+    },
+    {
+      "file": "safe-definitions.md",
+      "import": {
+        "file": "./unsafe-definitions.json"
+      }
+    },
+    {
+      "file": "safe-abstracts.md",
+      "import": {
+        "file": "./unsafe-abstracts.json"
+      }
+    },
+    {
+      "file": "safe-aliases.md",
+      "import": {
+        "file": "./unsafe-aliases.json"
+      }
+    }
+  ]
+}

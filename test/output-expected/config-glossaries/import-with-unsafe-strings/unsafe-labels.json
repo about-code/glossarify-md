@@ -1,0 +1,40 @@
+{
+  "type": "Glossary",
+  "uri": "https://evil.org/unsafe/#",
+  "title": "Evil Glossary",
+  "language": "en",
+  "terms": {
+    "https://evil.org/unsafe/#label-html-link-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#label-html-link-removed",
+      "label": "EXPECT removed <a href=\"https://evil.org/evil.js\">link</a>.",
+      "definition": "Safe.",
+      "abstract": "Safe.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#label-html-script-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#label-html-script-removed",
+      "label": "EXPECT script removed <script src=\"https://evil.org/evil.js\"></script>.",
+      "definition": "Safe.",
+      "abstract": "Safe.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#label-html-script-escaped": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#definition-html-script-escaped",
+      "label": "Unsafe Html in Definition",
+      "definition": "EXPECT script escaped \\<<<script src=\"\">script src=\"https://evil.org/evil.js\"\\/>Evil\\<<script src=\"\">/script>.",
+      "abstract": "Safe.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#label-markdown-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#label-markdown-removed",
+      "label": "EXPECT removed **bold text** AND [link](https://evil.org/evil.js).",
+      "definition": "Safe.",
+      "abstract": "Safe.",
+      "aliases": []
+    }
+  }
+}

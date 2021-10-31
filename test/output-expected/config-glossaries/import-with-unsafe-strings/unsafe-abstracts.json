@@ -1,0 +1,40 @@
+{
+  "type": "Glossary",
+  "uri": "https://evil.org/unsafe/#",
+  "title": "Evil Glossary",
+  "language": "en",
+  "terms": {
+    "https://evil.org/unsafe/#abstract-html-link-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#abstract-html-link-removed",
+      "label": "Unsafe Link in Abstract",
+      "definition": "Safe.",
+      "abstract": "EXPECT removed <a href=\"https://evil.org/evil.js\">link</a>.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#abstract-html-script-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#abstract-html-script-removed",
+      "label": "Unsafe Html in Abstract",
+      "definition": "Safe.",
+      "abstract": "EXPECT script removed <script src=\"https://evil.org/evil.js\"></script>.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#abstract-html-script-escaped": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#abstract-html-script-escaped",
+      "label": "Unsafe Html in Abstract",
+      "definition": "Safe.",
+      "abstract": "EXPECT script escaped \\<<<script src=\"\">script src=\"https://evil.org/evil.js\"\\/>Evil\\<<script src=\"\">/script>.",
+      "aliases": []
+    },
+    "https://evil.org/unsafe/#abstract-markdown-removed": {
+      "type": "Term",
+      "uri": "https://evil.org/unsafe/#abstract-markdown-removed",
+      "label": "Unsafe Markdown in Abstract",
+      "definition": "Safe.",
+      "abstract": "EXPECT removed **bold text** AND [link](https://evil.org/evil.js).",
+      "aliases": []
+    }
+  }
+}
