@@ -23,8 +23,8 @@
     "https://evil.org/unsafe/#label-html-script-escaped": {
       "type": "Term",
       "uri": "https://evil.org/unsafe/#definition-html-script-escaped",
-      "label": "Unsafe Html in Definition",
-      "definition": "EXPECT script escaped \\<<<script src=\"\">script src=\"https://evil.org/evil.js\"\\/>Evil\\<<script src=\"\">/script>.",
+      "label": "EXPECT script escaped \\<<<script src=\"\">script src=\"https://evil.org/evil.js\"\\/>Evil\\<<script src=\"\">/script>.",
+      "definition": "Safe.",
       "abstract": "Safe.",
       "aliases": []
     },

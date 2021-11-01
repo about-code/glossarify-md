@@ -15,7 +15,7 @@
     "https://evil.org/unsafe/#definition-html-script-removed": {
       "type": "Term",
       "uri": "https://evil.org/unsafe/#definition-html-script-removed",
-      "label": "Unsafe Html in Definition",
+      "label": "Unsafe Html in Definition (Remove)",
       "definition": "EXPECT script removed <script src=\"https://evil.org/evil.js\"></script>.",
       "abstract": "Safe.",
       "aliases": []
@@ -23,7 +23,7 @@
     "https://evil.org/unsafe/#definition-html-script-escaped": {
       "type": "Term",
       "uri": "https://evil.org/unsafe/#definition-html-script-escaped",
-      "label": "Unsafe Html in Definition",
+      "label": "Unsafe Html in Definition (Escape)",
       "definition": "EXPECT script escaped \\<<<script src=\"\">script src=\"https://evil.org/evil.js\"\\/>Evil\\<<script src=\"\">/script>.",
       "abstract": "Safe.",
       "aliases": []

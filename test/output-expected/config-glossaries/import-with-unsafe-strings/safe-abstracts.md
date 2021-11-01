@@ -6,15 +6,15 @@
 }-->
 Safe.
 
-## Unsafe Html in Abstract
+## Unsafe Html in Abstract (Escape)
 <!--{
-  "uri": "https://evil.org/unsafe/#abstract-html-script-removed"
+  "uri": "https://evil.org/unsafe/#abstract-html-script-escaped"
 }-->
 Safe.
 
-## Unsafe Html in Abstract
+## Unsafe Html in Abstract (Remove)
 <!--{
-  "uri": "https://evil.org/unsafe/#abstract-html-script-escaped"
+  "uri": "https://evil.org/unsafe/#abstract-html-script-removed"
 }-->
 Safe.
 
