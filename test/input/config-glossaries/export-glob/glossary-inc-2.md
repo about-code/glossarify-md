@@ -1,4 +1,4 @@
-# Knowledge Organization Systems (2)
+# Inc (2)
 
 ## Ontology
 

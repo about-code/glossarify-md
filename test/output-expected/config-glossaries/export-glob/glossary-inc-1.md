@@ -1,4 +1,4 @@
-# [Knowledge Organization Systems (1)](#knowledge-organization-systems-1)
+# [Inc (1)](#inc-1)
 
 ## [Glossary](#glossary)
 

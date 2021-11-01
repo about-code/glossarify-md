@@ -1,4 +1,4 @@
-# Knowledge Organization Systems (1)
+# Inc (1)
 
 ## Glossary
 <!-- Aliases: Vocabulary -->
