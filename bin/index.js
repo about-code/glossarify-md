@@ -2,6 +2,7 @@
 import merge from "deepmerge";
 import fs from "fs-extra";
 import minimist from "minimist";
+import nodeFs from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import proc from "node:process";
@@ -33,6 +34,12 @@ const cli = {
         ,description: "When used with --init generates a configuration using a local node_modules path to the config schema."
         ,type: "boolean"
         ,default: false
+    }
+    ,"logfile": {
+        alias: ""
+        ,description: "Where to write console logs into. Used for testing."
+        ,type: "string"
+        ,default: ""
     }
     ,"more": {
         alias: ""
@@ -72,10 +79,22 @@ const cli = {
     }
 };
 const argv = minimist(proc.argv.slice(2), cli);
-
 if (!argv.init) {
     // print banner only without --init to prevent writing banner to config.
     console.log(banner);
+}
+if (argv.logfile) {
+    nodeFs.rmSync(argv.logfile, { force: true });
+    nodeFs.mkdirSync(path.dirname(argv.logfile), { recursive: true });
+    const logfile = path.resolve(argv.logfile);
+    const logError = console.error;
+    const logger = (txt) => {
+        nodeFs.writeFile(logfile, `${txt}\n`, { flag: "a"}, err => err ? logError(err) : "");
+    };
+    console.log = logger;
+    console.warn = logger;
+    console.error = logger;
+    console.info = logger;
 }
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
