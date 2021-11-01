@@ -1,6 +1,8 @@
 # [Document](#document)
 
-GIVEN a configuration
+GIVEN
+
+*   a configuration
 
 ```json
 {
@@ -13,12 +15,12 @@ GIVEN a configuration
 }
 ```
 
-WITH file `glossary.md` missing
-AND *remote* file [https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json][1] existing WITH terms
-
-*   *[Glossary][2]*
-*   *[Taxonomy][3]*
-*   *[Thesaurus][4]*
+*   AND file `glossary.md` missing
+*   AND file [`../import-remote-data/glossary.json`][1] served *remotely* at [https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json][2]
+*   AND remote glossary having terms
+    *   *[Glossary][3]*
+    *   *[Taxonomy][4]*
+    *   *[Thesaurus][5]*
 
 THEN
 
@@ -29,10 +31,12 @@ THEN
 3.  AND the system MUST linkify the terms mentioned above in *this* file
 4.  AND the terms must be linked to the generated file `glossary.md`
 
-[1]: https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json
+[1]: ../import-remote-data
 
-[2]: ./glossary.md#glossary "Glossaries are collections of terms and their definitions."
+[2]: https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json
 
-[3]: ./glossary.md#taxonomy "Taxonomies are classification schemes."
+[3]: ./glossary.md#glossary "Glossaries are collections of terms and their definitions."
 
-[4]: ./glossary.md#thesaurus "Thesauri are word nets."
+[4]: ./glossary.md#taxonomy "Taxonomies are classification schemes."
+
+[5]: ./glossary.md#thesaurus "Thesauri are word nets."
