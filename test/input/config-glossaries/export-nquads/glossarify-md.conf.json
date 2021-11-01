@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/export-nquads",
+  "glossaries": [{
+    "uri": "https://my.org/vocabulary/#",
+    "file": "./glossary.md",
+    "export": { "file": "./glossary.nq" }
+  },{
+    "file": "./glossary-2.md"
+  }],
+  "i18n": {
+      "locale": "en-US"
+  }
+}
