@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-nquads",
+  "glossaries": [{
+    "uri": "https://ignore.org/vocab/#",
+    "file": "glossary.md",
+    "import": {
+      "file": "./glossary.nq"
+    }
+  }],
+  "dev": {
+    "termsFile": "../../../output-actual/config-glossaries/import-nquads/terms.json"
+  }
+}

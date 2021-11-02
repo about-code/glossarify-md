@@ -17,7 +17,7 @@
     "https://evil.org/unsafe/#aliases-html-script-removed": {
       "type": "Term",
       "uri": "https://evil.org/unsafe/#aliases-html-script-removed",
-      "label": "Unsafe Html in Definition",
+      "label": "Unsafe Html in Aliases (Remove)",
       "definition": "Safe.",
       "abstract": "Safe.",
       "aliases": [
@@ -27,7 +27,7 @@
     "https://evil.org/unsafe/#aliases-html-script-escaped": {
       "type": "Term",
       "uri": "https://evil.org/unsafe/#aliases-html-script-escaped",
-      "label": "Unsafe Html in Aliases",
+      "label": "Unsafe Html in Aliases (Escape)",
       "definition": "Safe.",
       "abstract": "Safe.",
       "aliases": [

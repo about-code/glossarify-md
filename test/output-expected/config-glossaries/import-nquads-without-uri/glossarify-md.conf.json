@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-nquads-without-uri",
+  "glossaries": [{
+    "file": "glossary.md",
+    "import": {
+      "file": "./glossary.nq"
+    }
+  }]
+}

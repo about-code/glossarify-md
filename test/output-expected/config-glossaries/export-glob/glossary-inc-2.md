@@ -1,4 +1,4 @@
-# [Knowledge Organization Systems (2)](#knowledge-organization-systems-2)
+# [Inc (2)](#inc-2)
 
 ## [Ontology](#ontology)
 

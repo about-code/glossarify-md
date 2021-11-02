@@ -59,16 +59,16 @@ THEN
     *   MUST have glossary title *Inc (1)*
     *   AND MUST have URI [https://my.org/vocab/inc/#][8]
     *   AND MUST have ALL of these terms
-        *   [https://my.org/vocab/inc/#glossary][9]
-        *   [https://my.org/vocab/inc/#taxonomy][10]
-        *   [https://my.org/vocab/inc/#thesaurus][11]
-        *   [https://my.org/vocab/inc/#ontology][12]
+        *   [https://my.org/vocab/inc/#glossary][9] (`glossary-inc-1.md`)
+        *   [https://my.org/vocab/inc/#taxonomy][10] (`glossary-inc-1.md`)
+        *   [https://my.org/vocab/inc/#thesaurus][11] (`glossary-inc-1.md`)
+        *   [https://my.org/vocab/inc/#ontology][12] (`glossary-inc-2.md`)
 *   AND [include.json][7] MUST
     *   MUST have glossary title  *Include (1)*
     *   AND MUST have URI [https://my.org/vocab/include/#][13]
     *   AND MUST have ALL of these terms
-        *   [https://my.org/vocab/include/#car][14]
-        *   [https://my.org/vocab/include/#bobby-car][15]
+        *   [https://my.org/vocab/include/#car][14] (`glossary-include-1.md`)
+        *   [https://my.org/vocab/include/#bobby-car][15] (`glossary-include-2.md`)
 
 [1]: ./glossary-exclude.md
 

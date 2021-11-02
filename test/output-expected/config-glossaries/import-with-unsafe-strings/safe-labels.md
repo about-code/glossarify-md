@@ -1,5 +1,11 @@
 # Evil Glossary
 
+## EXPECT script escaped <\<script src="https://evil.org/evil.js"/>Evil\</script>.
+<!--{
+  "uri": "https://evil.org/unsafe/#definition-html-script-escaped"
+}-->
+Safe.
+
 ## EXPECT removed link.
 <!--{
   "uri": "https://evil.org/unsafe/#label-html-link-removed"
@@ -11,12 +17,6 @@ Safe.
   "uri": "https://evil.org/unsafe/#label-html-script-removed"
 }-->
 Safe.
-
-## Unsafe Html in Definition
-<!--{
-  "uri": "https://evil.org/unsafe/#label-html-script-escaped"
-}-->
-EXPECT script escaped <\<script src="https://evil.org/evil.js"/>Evil\</script>.
 
 ## EXPECT removed bold text AND link.
 <!--{

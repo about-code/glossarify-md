@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-with-headingIdAlgorithm-md5",
+  "glossaries": [{
+    "file": "glossary.md",
+    "import": {
+      "file": "./glossary.json"
+    }
+  }],
+  "linking": {
+    "headingIdAlgorithm": "md5-7"
+  },
+  "dev": {
+    "termsFile": "../../../output-actual/config-glossaries/import-with-headingIdAlgorithm-md5/terms.json"
+  }
+}

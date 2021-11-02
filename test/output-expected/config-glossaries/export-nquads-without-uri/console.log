@@ -1,0 +1,2 @@
+⚠ Can't write glossary to "./glossary.nq". RDF N-Quads require a vocabulary URI. See "uri" config option for glossaries.
+

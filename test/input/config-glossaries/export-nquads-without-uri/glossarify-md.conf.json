@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/export-nquads-without-uri",
+  "glossaries": [{
+    "file": "./glossary.md",
+    "export": {
+      "file": "./glossary.nq"
+    }
+  }]
+}

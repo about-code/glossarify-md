@@ -1,6 +1,8 @@
 # Document
 
-GIVEN a configuration
+GIVEN
+
+- a configuration
 
 ~~~json
 {
@@ -13,11 +15,12 @@ GIVEN a configuration
 }
 ~~~
 
-WITH file `glossary.md` missing
-AND *remote* file https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json existing WITH terms
-- *Glossary*
-- *Taxonomy*
-- *Thesaurus*
+- AND file `glossary.md` missing
+- AND file [`../import-remote-data/glossary.json`](../import-remote-data) served *remotely* at https://raw.githubusercontent.com/about-code/glossarify-md/master/test/input/config-glossaries/import-remote-data/glossary.json
+- AND remote glossary having terms
+  - *Glossary*
+  - *Taxonomy*
+  - *Thesaurus*
 
 THEN
 

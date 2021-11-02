@@ -7,17 +7,17 @@
 }-->
 Safe.
 
-## Unsafe Html in Definition
-<!--{
-  "uri": "https://evil.org/unsafe/#aliases-html-script-removed",
-  "aliases": "EXPECT script removed ."
-}-->
-Safe.
-
-## Unsafe Html in Aliases
+## Unsafe Html in Aliases (Escape)
 <!--{
   "uri": "https://evil.org/unsafe/#aliases-html-script-escaped",
   "aliases": "\"}-->EXPECT script escaped: <\\<script src=\"https://evil.org/evil.js\"/>Evil\\</script>.\\<!--{"
+}-->
+Safe.
+
+## Unsafe Html in Aliases (Remove)
+<!--{
+  "uri": "https://evil.org/unsafe/#aliases-html-script-removed",
+  "aliases": "EXPECT script removed ."
 }-->
 Safe.
 

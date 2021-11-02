@@ -59,13 +59,13 @@ THEN
   - MUST have glossary title *Inc (1)*
   - AND MUST have URI https://my.org/vocab/inc/#
   - AND MUST have ALL of these terms
-    - https://my.org/vocab/inc/#glossary
-    - https://my.org/vocab/inc/#taxonomy
-    - https://my.org/vocab/inc/#thesaurus
-    - https://my.org/vocab/inc/#ontology
+    - https://my.org/vocab/inc/#glossary (`glossary-inc-1.md`)
+    - https://my.org/vocab/inc/#taxonomy (`glossary-inc-1.md`)
+    - https://my.org/vocab/inc/#thesaurus (`glossary-inc-1.md`)
+    - https://my.org/vocab/inc/#ontology (`glossary-inc-2.md`)
 - AND [include.json](./include.json) MUST
   - MUST have glossary title  *Include (1)*
   - AND MUST have URI https://my.org/vocab/include/#
   - AND MUST have ALL of these terms
-    - https://my.org/vocab/include/#car
-    - https://my.org/vocab/include/#bobby-car
+    - https://my.org/vocab/include/#car (`glossary-include-1.md`)
+    - https://my.org/vocab/include/#bobby-car (`glossary-include-2.md`)
