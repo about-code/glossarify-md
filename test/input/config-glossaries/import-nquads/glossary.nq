@@ -1,0 +1,20 @@
+<https://my.org/vocabulary/#> <http://purl.org/dc/terms/title> "Export to N-Quads"@en-us .
+<https://my.org/vocabulary/#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://my.org/vocabulary/#> <https://about-code.github.io/vocab/glossarify-md/2021/10/#language> "en-US"@en-us .
+<https://my.org/vocabulary/#> <https://about-code.github.io/vocab/glossarify-md/2021/10/#terms> <https://my.org/vocabulary/#aliased> .
+<https://my.org/vocabulary/#> <https://about-code.github.io/vocab/glossarify-md/2021/10/#terms> <https://my.org/vocabulary/#simple> .
+<https://my.org/vocabulary/#> <https://about-code.github.io/vocab/glossarify-md/2021/10/#terms> <https://other.org/vocab/#custom-uri> .
+<https://my.org/vocabulary/#aliased> <http://purl.org/dc/terms/abstract> "GIVEN a term with aliases\nTHEN this term MUST be exported with all its aliases as SKOS altLabel."@en-us .
+<https://my.org/vocabulary/#aliased> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://my.org/vocabulary/#aliased> <http://www.w3.org/2004/02/skos/core#altLabel> "Alias-1"@en-us .
+<https://my.org/vocabulary/#aliased> <http://www.w3.org/2004/02/skos/core#altLabel> "Alias-2"@en-us .
+<https://my.org/vocabulary/#aliased> <http://www.w3.org/2004/02/skos/core#definition> "GIVEN a term with aliases\nTHEN this term MUST be exported with all its aliases as SKOS altLabel."@en-us .
+<https://my.org/vocabulary/#aliased> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aliased"@en-us .
+<https://my.org/vocabulary/#simple> <http://purl.org/dc/terms/abstract> "GIVEN a simple term with two sentences."@en-us .
+<https://my.org/vocabulary/#simple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://my.org/vocabulary/#simple> <http://www.w3.org/2004/02/skos/core#definition> "GIVEN a simple term with two sentences.\nTHEN this second sentence MUST only be part of SKOS definition\nAND MUST NOT be part of Dublin Core abstract."@en-us .
+<https://my.org/vocabulary/#simple> <http://www.w3.org/2004/02/skos/core#prefLabel> "Simple"@en-us .
+<https://other.org/vocab/#custom-uri> <http://purl.org/dc/terms/abstract> "GIVEN a term with a uri term attribute\nTHEN this term MUST be exported using uri https://other.org/vocab/#custom-uri."@en-us .
+<https://other.org/vocab/#custom-uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://other.org/vocab/#custom-uri> <http://www.w3.org/2004/02/skos/core#definition> "GIVEN a term with a uri term attribute\nTHEN this term MUST be exported using uri https://other.org/vocab/#custom-uri."@en-us .
+<https://other.org/vocab/#custom-uri> <http://www.w3.org/2004/02/skos/core#prefLabel> "Custom-URI"@en-us .
