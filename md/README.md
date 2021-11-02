@@ -810,12 +810,13 @@ Advanced topics on importing and exporting can be found [here](https://github.co
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
 
-|  NodeJS  |                                                                      compatibility & support status                                                                      |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current  | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
-| 14.x LTS | Tested + Supported                                                                                                                                                       |
-| 12.x LTS | Tested + Supported                                                                                                                                                       |
-| 10.x LTS | glossarify-md <= v4                                                                                                                                                      |
+| NodeJS  | glossarify-md |                                                                           Current Test Matrix                                                                            |
+| ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Current | v6+           | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
+| 16 LTS  | v5, v6+       | Tested + Supported                                                                                                                                                       |
+| 14 LTS  | v4, v5, v6+   | Tested + Supported                                                                                                                                                       |
+| 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |
+| 10 LTS  | v2, v3, v4    |                                                                                                                                                                          |
 
 ## Options
 
