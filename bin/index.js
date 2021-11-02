@@ -84,7 +84,7 @@ if (!argv.init) {
     console.log(banner);
 }
 if (argv.logfile) {
-    nodeFs.unlinkSync(argv.logfile, { force: true });
+    try { nodeFs.unlinkSync(argv.logfile); } catch (err) { /* ignore */ }
     nodeFs.mkdirSync(path.dirname(argv.logfile), { recursive: true });
     const logfile = path.resolve(argv.logfile);
     const logError = console.error;
