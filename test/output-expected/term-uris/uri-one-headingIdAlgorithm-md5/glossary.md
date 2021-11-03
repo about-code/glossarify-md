@@ -1,11 +1,11 @@
-# [Glossary](#md5-17d8aa2)
+# [Glossary](#md5-355f756)
 
-## [Term](#md5-8b3b1b8)
+## [Term](#md5-7e9dfa8)
 
 GIVEN a single term
 THEN the system must generate an URI [https://my.org/vocab/#{hash}][1]
 
-## [Phrase with Spaces](#md5-da83c5a)
+## [Phrase with Spaces](#md5-08780c0)
 
 GIVEN a phrase with spaces
 THEN the system must generate an URI [https://my.org/vocab/#{hash}][1]

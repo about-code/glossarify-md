@@ -1,9 +1,9 @@
-# [Glossary 1](#sha256-ffdd0bf)
+# [Glossary 1](#sha256-429925a)
 
-## [Alpha](#sha256-04ac362)
+## [Alpha](#sha256-d0ae6bd)
 
 First definition.
 
-## [Alpha](#sha256-9580085)
+## [Alpha](#sha256-10ab94d)
 
 Second definition.

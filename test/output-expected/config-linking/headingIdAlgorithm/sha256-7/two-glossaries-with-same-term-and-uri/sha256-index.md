@@ -4,9 +4,9 @@
 
 [Glossary 1][1] ○ [Glossary 2][2] ○ [Document 1][3] ○ [Document 2][4]
 
-[1]: ./glossary-1.md#sha256-cfbbd6e "First definition."
+[1]: ./glossary-1.md#sha256-7e16917 "First definition."
 
-[2]: ./glossary-2.md#sha256-320d575 "Second definition."
+[2]: ./glossary-2.md#sha256-04b1d48 "Second definition."
 
 [3]: ./document-1.md#sha256-e97a2aa
 
