@@ -991,6 +991,10 @@ When `true`, occurrences of glossary terms found in text will no longer be linke
 
 When being `true` or being a template string with a placeholder `${uri}` then render term URIs in glossaries generated from [imported][doc-export-import] terms.
 
+#### `glossaries[].uri`
+
+See \[]
+
 #### `ignoreCase`
 
 - **Range:** `boolean`
@@ -1127,7 +1131,16 @@ Use this option to select markdown heading depths which should be considered ter
 - **Default:** `"github"`
 - **Since:** v6.0.0
 
-Algorithm to use for generating heading identifiers (slugs). `"github"` will only guarantee *unique-per file* IDs. The MD5 and SHA256 options will make [glossarify-md] calculate a hash over file path and heading phrase. So they are able to guarantee *unique-in-fileset* IDs given that a particular heading phrase occurs *once only* within a file. For brevity the `*-7` options truncate hashes to a maximum length of 7. They will still be unlikely to collide in a typical project. You'll need *unique-in-fileset* IDs if you plan on concatenating output files, e.g. with [pandoc]. Otherwise links in the final result aren't guaranteed to reference the correct target anymore.
+Algorithm to use for generating heading identifiers ("slugs"). `"github"` will only guarantee *uniqueness per file*. MD5 and SHA256 options will generate a hash *unique in the fileset*. The hash value depends on
+
+```
+    glossary filepath
+AND glossary filename without ext.
+AND ( conf.glossaries[].uri OR conf.baseUrl )
+AND term phrase's github-slug
+```
+
+The `*-7` variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
 
 #### `linking.headingIdPandoc`
 

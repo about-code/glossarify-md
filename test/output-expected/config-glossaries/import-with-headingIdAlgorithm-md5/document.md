@@ -1,4 +1,4 @@
-# [Document](#md5-6d7c843)
+# [Document](#md5-0a9a7c4)
 
 GIVEN a configuration
 
@@ -31,8 +31,8 @@ THEN
 4.  AND the terms MUST be linked to the generated file `glossary.md`
 5.  AND terms in `terms.json` MUST have their imported URI in `headingIdPlain`
 
-[1]: ./glossary.md#md5-5b86894 "Glossaries are collections of terms and their definitions."
+[1]: ./glossary.md#md5-c950bf0 "Glossaries are collections of terms and their definitions."
 
-[2]: ./glossary.md#md5-b5e0c5d "Taxonomies are classification schemes."
+[2]: ./glossary.md#md5-ee9d483 "Taxonomies are classification schemes."
 
-[3]: ./glossary.md#md5-76129fc "Thesauri are word nets."
+[3]: ./glossary.md#md5-a03ea0a "Thesauri are word nets."
