@@ -33,18 +33,18 @@
   "title": "Include (1)",
   "language": "en",
   "terms": {
-    "https://my.org/vocab/include/#car": {
-      "type": "Term",
-      "uri": "https://my.org/vocab/include/#car",
-      "label": "Car",
-      "definition": "Belongs to include.json",
-      "abstract": "Belongs to include.json",
-      "aliases": []
-    },
     "https://my.org/vocab/include/#bobby-car": {
       "type": "Term",
       "uri": "https://my.org/vocab/include/#bobby-car",
       "label": "Bobby Car",
+      "definition": "Belongs to include.json",
+      "abstract": "Belongs to include.json",
+      "aliases": []
+    },
+    "https://my.org/vocab/include/#car": {
+      "type": "Term",
+      "uri": "https://my.org/vocab/include/#car",
+      "label": "Car",
       "definition": "Belongs to include.json",
       "abstract": "Belongs to include.json",
       "aliases": []
