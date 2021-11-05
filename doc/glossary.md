@@ -1,26 +1,24 @@
 # [Glossary](#glossary)
 
+[glossarify-md]: https://github.com/about-code/glossarify-md
+
 This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also servers as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json][1] configuration at the root of this repo.
 
 ## [JSON-LD](#json-ld)
-
-[JSON-LD🟉][2] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS🟉][3] is one such vocabulary supported by [glossarify-md]
-
-## [KOS (Knowledge Organization Systems)](#kos-knowledge-organization-systems)
-
-<!--{ "aliases": "KOS, Knowledge Organization System" }-->
-
-[SKOS]: http://w3.org/skos/
-
-[LD]: https://www.w3.org/standards/semanticweb/ontology
 
 [JSON-LD]: https://json-ld.org
 
 [jsonld]: https://npmjs.com/package/jsonld
 
-[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
+[LD]: https://www.w3.org/standards/semanticweb/ontology
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
+[JSON-LD] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With [JSON-LD🟉][2] it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS🟉][3] is one such vocabulary supported by [glossarify-md]
+
+## [KOS (Knowledge Organization Systems)](#kos-knowledge-organization-systems)
+
+<!--{ "aliases": "KOS, Knowledge Organization System" }-->
+
+[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
 
 [OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
 
@@ -36,11 +34,13 @@ onto the term definition in *document B*.
 
 ## [remark](#remark)
 
-[remark] is a parser and compiler project under the [unified🟉][5] umbrella for *Markdown* text files in particular.
-
 [remark]: https://github.com/remarkjs/remark
 
+[remark] is a parser and compiler project under the [unified🟉][5] umbrella for *Markdown* text files in particular.
+
 ## [SKOS](#skos)
+
+[SKOS]: http://w3.org/skos/
 
 With [SKOS][6] the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
@@ -48,7 +48,7 @@ With [SKOS][6] the World Wide Web Consortium (W3C) has standardized a (meta-)voc
 
 <!--{ "aliases": "slugs" }-->
 
-A [slug🟉][7] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL🟉][8] fragments to address headings / sections on a page.
+A [slug🟉][7] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL fragments🟉][8] to address headings / sections on a page.
 
 ## [Term Attributes](#term-attributes)
 
@@ -73,19 +73,19 @@ See glossarify-md configuration options for details.
 
 ## [unified](#unified)
 
-[unified] is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][10]
-
 [unified]: https://unifiedjs.com
+
+[unified] is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][10]
 
 ## [URL fragment](#url-fragment)
 
 <!-- Aliases: URL fragments -->
 
-The fragment is the part follwing the `#` in a [URL🟉][8].
+The fragment is the part follwing the `#` in a [URL🟉][11].
 
-## [URI](#uri)
+## [URI / URL](#uri--url)
 
-<!--{ "aliases": "URL" }-->
+<!--{ "aliases": "URI, URL" }-->
 
 *Uniform Resource Identifier* and *Uniform Resource Locator* describe both the same thing, which is an ID with a syntax `scheme://authority.tld/path/#fragment?query` like `https://my.org/foo/#bar?q=123`. Although both things are the same, the two acronyms are often used to emphasize whether using the ID to primarily *identify* something or using *the same ID* to *also* locate and retrieve a represention of what it identifies.
 
@@ -107,11 +107,11 @@ In case of glossarify-md you could use one of the cryptographic heading ID algor
 
 ## [vuepress](#vuepress)
 
-[vuepress] is a static website generator translating markdown files into a website powered by [vuejs].
+[vuepress]: https://vuepress.vuejs.org
 
 [vuejs]: https://vuejs.org
 
-[vuepress]: https://vuepress.vuejs.org
+[vuepress] is a static website generator translating markdown files into a website powered by [vuejs].
 
 [1]: ../glossarify-md.conf.json
 
@@ -127,8 +127,10 @@ In case of glossarify-md you could use one of the cryptographic heading ID algor
 
 [7]: #slug "A slug by our definition is a URL-friendly identifier created from arbitrary text that can be used within URL fragments to address headings / sections on a page."
 
-[8]: #uri "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[8]: #url-fragment "The fragment is the part follwing the # in a URL."
 
 [9]: #term-attributes "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
 
 [10]: ./conceptual-layers.md
+
+[11]: #uri--url "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."

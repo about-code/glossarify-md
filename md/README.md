@@ -200,14 +200,14 @@ Augmented versions of the source files have been written to the output directory
 ```md
 # [Demo](#demo)
 
-This is a text which uses a glossary [Term ↴][1] to describe something.
+This is a text which uses a glossary [Term🟉][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
 
 > ## [Demo](#demo)
 >
-> This is a text which uses a glossary [Term ↴][1] to describe something.
+> This is a text which uses a glossary [Term🟉][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
@@ -275,7 +275,7 @@ In the output files aliases will be linked to their related term:
 *glossarify-md.conf.json*
 ```json
 "glossaries": [
-    { "file": "./glossary.md", "termHint": "↴"},
+    { "file": "./glossary.md", "termHint": "🟉"},
 ]
 ```
 
@@ -283,6 +283,8 @@ Glossaries can be associated with *term hints*. Term hints may be used to indica
 
 > **Since v2.0.0**:
 Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
+>
+> **Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
 
 ## Multiple Glossaries
 
@@ -299,8 +301,6 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ]
 ```
 
-**Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
-
 *requirements.md*
 
 ```md
@@ -312,7 +312,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ...
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can choose to generate a [Book Index](#book-index).
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can generate a [Book Index](#book-index).
 
 ## Sorting your glossaries
 
@@ -359,7 +359,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior gets increasingly hard to reason about.
+> **Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior will become increasingly hard for you to reason about.
 
 **Too many links?**
 
@@ -381,13 +381,13 @@ While you should consider using an [alias] to make use of term-based auto-linkin
 ## User Story {#s-241}
 ~~~
 
-with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference
+with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference:
 
 ~~~md
 [any phrase](#s-241)
 ~~~
 
-in any file being processed and [glossarify-md] will resolve the relative path:
+In any file being processed [glossarify-md] will resolve the actual path to the definition:
 
 */README.md*
 ~~~
@@ -939,7 +939,7 @@ When being `true` or being a template string with a placeholder `${uri}` then re
 
 #### `glossaries[].uri`
 
-See []
+See also [Vocabulary URIs][doc-vocabulary-uris].
 
 #### `ignoreCase`
 
@@ -1076,16 +1076,19 @@ Use this option to select markdown heading depths which should be considered ter
 - **Default:** `"github"`
 - **Since:** v6.0.0
 
-Algorithm to use for generating heading identifiers ("slugs"). `"github"` will only guarantee *uniqueness per file*. MD5 and SHA256 options will generate a hash *unique in the fileset*. The hash value depends on
+Algorithm to use for generating heading identifiers used as `#` URL-fragment ("slugs"). Option value `"github"` will only guarantee *uniqueness per file* whereas `md5` and `sha256` options will generate a hash *unique in the fileset*. The hash value will depend on
 
 ~~~
-    glossary filepath
-AND glossary filename without ext.
-AND ( conf.glossaries[].uri OR conf.baseUrl )
-AND term phrase's github-slug
+hash (
+  glossary file path,
+  glossary file name without file extension,
+  glossary uri,
+  github-slugger(term),
+  baseUrl
+)
 ~~~
 
-The `*-7` variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
+where `baseUrl` will be used only if there's no glossary uri. The `*-7` hashsum variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
 
 #### `linking.headingIdPandoc`
 
