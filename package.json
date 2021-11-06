@@ -37,7 +37,7 @@
     "changelog": "standard-version --dry-run",
     "config": "node ./bin/index.js --config",
     "dconfig": "node --inspect-brk ./bin/index.js --config",
-    "experiment": "npm run config ./experiment/glossarify-md.conf.json",
+    "experiment": "node ./bin/index.js --config ./experiment/glossarify-md.conf.json",
     "debug": "node --inspect-brk ./bin/index.js --config ./experiment/glossarify-md.conf.json",
     "docs": "npm-run-all docs-*",
     "docs-doc": "node ./bin/index.js --config ./glossarify-md.conf.json",
