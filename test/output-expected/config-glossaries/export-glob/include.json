@@ -5,26 +5,15 @@
     "dc": "http://purl.org/dc/terms/",
     "uri": "@id",
     "type": "@type",
-    "Glossary": {
-      "@id": "skos:ConceptScheme",
-      "@context": {
-        "title": "dc:title",
-        "terms": {
-          "@container": "@index"
-        }
-      }
-    },
-    "Term": {
-      "@id": "skos:Concept",
-      "@context": {
-        "label": "skos:prefLabel",
-        "definition": "skos:definition",
-        "abstract": "dc:abstract",
-        "aliases": {
-          "@id": "skos:altLabel",
-          "@container": "@set"
-        }
-      }
+    "Glossary": "skos:ConceptScheme",
+    "Term": "skos:Concept",
+    "label": "skos:prefLabel",
+    "definition": "skos:definition",
+    "aliases": "skos:altLabel",
+    "abstract": "dc:abstract",
+    "title": "dc:title",
+    "terms": {
+      "@container": "@index"
     },
     "@language": "en"
   },
