@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-typed-data-only",
+  "glossaries": [
+    {
+      "import": { "file": "./glossary-untyped.json" },
+      "file": "./imported-untyped.md"
+    },{
+      "import": { "file": "./glossary-typed.json" },
+      "file": "./imported-typed.md"
+    }
+  ]
+}
