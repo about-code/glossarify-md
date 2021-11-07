@@ -1,4 +1,4 @@
-# SKOS Interoperability
+# SKOS Interoperability with JSON-LD
 
 > Readers Level: Advanced
 

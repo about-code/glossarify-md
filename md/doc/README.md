@@ -1,3 +1,10 @@
+[doc-vocabulary-uris]: ./vocabulary-uris.md
+[doc-skos-interop]: ./skos-interop.md
+[doc-vuepress]: ./vuepress.md
+[doc-syntax-extensions]: ./markdown-syntax-extensions.md
+[doc-conceptual-layers]: ./conceptual-layers.md
+[doc-lists-on-github]: ./lists-on-github.md
+[doc-glossary]: ./glossary.md
 [SKOS]: http://w3.org/skos/
 [LD]: https://www.w3.org/standards/semanticweb/ontology
 [JSON-LD]: https://json-ld.org
@@ -9,17 +16,18 @@
 # Advanced Topics
 
 Concepts
-- [Vocabulary and Term URIs](./vocabulary-uris.md)
-- [SKOS Interoperability with JSON-LD](./skos-interop.md)
-- [Glossary of glossarify-md](./glossary.md)
+- [Markdown Syntax Extensions][doc-syntax-extensions]
+- [Vocabulary and Term URIs][doc-vocabulary-uris]
+- [SKOS Interoperability with JSON-LD][doc-skos-interop]
+- [Glossary of glossarify-md][doc-glossary]
 
 Integrations
-- [Using glossarify-md with vuepress](./vuepress.md)
+- [Using glossarify-md with vuepress][doc-vuepress]
 
 Internals
 
-- [Conceptual Layers of glossarify-md](./conceptual-layers.md)
+- [Conceptual Layers of glossarify-md][doc-conceptual-layers]
 
 Known Issues
 
-- [Generated Lists and Links on GitHub](./lists-on-github.md)
+- [Generated Lists and Links on GitHub][doc-lists-on-github]

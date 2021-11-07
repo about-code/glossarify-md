@@ -1,4 +1,4 @@
-# [SKOS Interoperability](#skos-interoperability)
+# [SKOS Interoperability with JSON-LD](#skos-interoperability-with-json-ld)
 
 > Readers Level: Advanced
 
