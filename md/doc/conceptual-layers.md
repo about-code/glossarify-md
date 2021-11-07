@@ -24,11 +24,4 @@ Conceptual layers of text processing by [glossarify-md] and projects contributin
 
 [glossarify-md] is built on [unified], an umbrella project for *text file processing in general*. We use unified with [remark] which in conceptual terms of unified is a *processor* for *Markdown text files in particular*. remark itself is built on (or better *wrapping around*) [micromark] which is a low-level parser/tokenizer operating on a stream of individual character symbols which drive a token state machine. [micromark] can be considered a technical implementation of the textual [CommonMark] specification.
 
- However, there are also plug-ins which do operate on layer 2, only.
-
-When looking for non-standard [syntax extensions][doc-syntax-extensions] you should be looking for [remark plug-ins][remark-plugins]. Those plug-ins then are likely to depend on and transitively install their preferred or required [micromark] extension themselves.
- and uses a simpler RegEx parsing of pre-parsed
-
-One popular syntax [glossarify-md] already installs [remark-gfm] to also support popular [GitHub Flavoured Markdown][GFM] syntax (e.g. tables and footnotes).
-
-Unless told you by any [remark plug-in][remark-plugins] you won't likely have to install any micromark extensions yourself when using [glossarify-md]. Just stick with [remark plug-ins][remark-plugins] on layer 2. They should declare their [micromark] requirements for themselves.
+When looking for non-standard [syntax extensions][doc-syntax-extensions] you should be looking for [remark plug-ins][remark-plugins]. Those plug-ins are likely to depend on and transitively install their preferred or required [micromark] extension themselves. Others may operate on layer 2 using a simpler RegEx parsing. One plug-in [glossarify-md] already installs itself is [remark-gfm] which adds support for the popular CommonMark syntax extension [GitHub Flavoured Markdown][GFM] (tables, footnotes and more).

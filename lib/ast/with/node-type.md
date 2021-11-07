@@ -22,19 +22,19 @@ The interface reflects the overall process defined by [micromark] and implementa
 
 *Figure 1: Parsing, Manipulating, Serializing*
 ~~~
-1. Input Stream     | .~~~~ ['#','F','o','o','EOL'] <~~~ file.md
+1. Input            | .~~~~ ['#','F','o','o','EOL'] <~~~ file.md
                     | |
-2. Tokenize         | `~~~~ micromark(string)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
-                    |                                                          o)-- syntax()
-3. Token Queue      | .~~ ['enter:atxHeading','F','o','o','exit:atxHeading'] ~~'
+2. Tokenize         | `~~~~ micromark(symbols) => tokens ~~~~~~~~~~~~~~~~~~~~~~.
+                    |                                                          o)-- syntax(symbols) => token
+3. Token Stream     | .~~ ['enter:atxHeading','F','o','o','exit:atxHeading'] ~~'
                     | |
-4. Grow Syntax Tree | `~~~> mdast-util-from-markdown(tokens) ~~~~~~~~~~~~~~~~~~.
-                    |                                                 o        o)-- fromMarkdown()
-5. Transform Tree   | .~~~~ transform(tree-node) => tree-node ~~~~~~ / \  ~~~~~'
+4. Grow Syntax Tree | `~~~> mdast-util-from-markdown(tokens) => treeNode ~~~~~~.
+                    |                                                 o        o)-- fromMarkdown(tokens) => treeNode
+5. Transform Tree   | .~~~~ transform(treeNode) => treeNode ~~~~~~~~ / \  ~~~~~'
                     | |                                             o   o
-6. Serialize        | `~~~~ mdast-util-to-markdown(tree) ~~~~~~~~~~~~~~~~~~~~~~.
-                    |                                                          o)-- toMarkdown()
-7. Output Stream    | <~~~~ ['#','F','o','o','EOL'] <~~~~~~~~~~~~~~~~~~~~~~~~~~'
+6. Serialize        | `~~~~ mdast-util-to-markdown(treeNode) => string ~~~~~~~~.
+                    |                                                          o)-- toMarkdown(treeNode) => string
+7. Output           | <~~~~ ['#','F','o','o','EOL'] <~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ~~~
 
 ## `syntax()`
