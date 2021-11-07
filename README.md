@@ -17,6 +17,10 @@
 
 [doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md
 
+[doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
+
+[doc-conceptual-layers]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md
+
 [CommonMark]: https://www.commonmark.org
 
 [GFM]: https://github.github.com/gfm/
@@ -67,7 +71,6 @@
   - [List of Figures](#list-of-figures)
   - [List of Tables](#list-of-tables)
   - [Lists from Regular Expressions](#lists-from-regular-expressions)
-- [Markdown Syntax Extensions](#markdown-syntax-extensions)
 - [Structured Export and Import](#structured-export-and-import)
 - [Node Support Matrix](#node-support-matrix)
 - [Options](#options)
@@ -76,7 +79,7 @@
 
 ## Install
 
-#### Option 1: Install globally:
+#### Option 1: Install globally, init and run:
 
 ```
 npm i -g glossarify-md
@@ -85,7 +88,7 @@ glossarify-md --init --new
 glossarify-md --config ./glossarify-md.conf.json
 ```
 
-#### Option 2: Install locally as a project dependency:
+#### Option 2: Install locally as a project dependency, init and run:
 
 ```
 npm i glossarify-md
@@ -112,7 +115,7 @@ npm run glossarify
 
 ## Configuration
 
-> **Since v5.0.0**
+> **ⓘ Since v5.0.0**
 
 Generate a configuration with the `--init` option:
 
@@ -120,9 +123,9 @@ Generate a configuration with the `--init` option:
 npx glossarify-md --init > glossarify-md.conf.json
 ```
 
-- use `--init` to generate a config.
-  - add `--new`  to create a `./docs/glossarify.md` and write config into `./glossarify-md.conf.json`
-  - add `--more` to generate a config with more [options] and default values
+- use `--init` to write a minimal config to stdout
+  - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossarify.md`
+  - add `--more` to write a config with more [options] and default values
   - add `--local` to load the config schema from the `node_modules` directory
 
 *glossarify-md.conf.json (`glossarify-md --init`)*
@@ -153,7 +156,7 @@ npx glossarify-md --init > glossarify-md.conf.json
 
 ### Config CLI
 
-> **Since v4.0.0**
+> **ⓘ Since v4.0.0**
 
 Use `--shallow` or `--deep`
 
@@ -240,14 +243,14 @@ Augmented versions of the source files have been written to the output directory
 ```md
 # [Demo](#demo)
 
-This is a text which uses a glossary [Term ↴][1] to describe something.
+This is a text which uses a glossary [Term🟉][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
 
 > ## [Demo](#demo)
 >
-> This is a text which uses a glossary [Term ↴][1] to describe something.
+> This is a text which uses a glossary [Term🟉][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
@@ -287,15 +290,17 @@ Terms found in Markdown blockquotes (`>`) aren't linked to a term definition bas
 
 [aliases]: #aliases-and-synonyms
 
-Aliases can be defined in an HTML comment with the keyword `Aliases:` followed by a comma-separated list of alternative terms.
+[term-attributes]: #aliases-and-synonyms
 
-*glossary.md*
+Aliases can be added with a *term attribute*. Term attributes follow a term's heading. Syntactically they are a JSON key-value map embedded into an HTML comment. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
+
+*glossary.md with a term attribute `aliases`:*
 
 ```md
 # Glossary
 
 ## Cat
-<!-- Aliases: Cats, Wildcat, House Cat -->
+<!--{ "aliases": "Cats, Wildcat, House Cat" }-->
 Cats are cute, ...dogs are loyal.
 ```
 
@@ -309,20 +314,31 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
 ```
 
+> **ⓘ Prior to v6.0.0** there has also been an alternative aliases syntax whose (single-line) form is not meant to be deprecated any time soon.
+>
+> ```
+> ## Term
+> <!-- Aliases: Term 1, Term2, ... -->
+> ```
+>
+> Term attribute syntax using a JSON map is just going to be the way forward for embedding additional term metadata in the future. If you like to convert to term attribute syntax a RegEx-search with `<!--[\s]?Aliases:[\s]?(.*)[\s]-->` and replacement `<!--{ "aliases": "$1" }-->` may serve you.
+
 ## Term Hints
 
 *glossarify-md.conf.json*
 
 ```json
 "glossaries": [
-    { "file": "./glossary.md", "termHint": "↴"},
+    { "file": "./glossary.md", "termHint": "🟉"},
 ]
 ```
 
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one.
 
-> **Since v2.0.0**:
+> **ⓘ Since v2.0.0**:
 > Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
+>
+> **Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
 
 ## Multiple Glossaries
 
@@ -339,8 +355,6 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ]
 ```
 
-**Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
-
 *requirements.md*
 
 ```md
@@ -352,11 +366,11 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ...
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can choose to generate a [Book Index](#book-index).
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can generate a [Book Index](#book-index).
 
 ## Sorting your glossaries
 
-> **Since v3.6.0**
+> **ⓘ Since v3.6.0**
 
 Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want [glossarify-md] to sort them for you:
 
@@ -385,13 +399,13 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 [cross-linking]: #cross-linking
 
-> **Since: v5.0.0**
+> **ⓘ Since: v5.0.0**
 
 ### Term-Based Auto-Linking
 
 *Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term (*linkification*).
 
-**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with...
+**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with ...
 
 ```json
 "glossaries": [
@@ -399,9 +413,9 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 ]
 ```
 
-...you can turn every `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
+... you can turn any `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior gets increasingly hard to reason about.
+> **☛ Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior will become increasingly hard for you to reason about.
 
 **Too many links?**
 
@@ -414,7 +428,7 @@ While you should consider using an [alias] to make use of term-based auto-linkin
 
 **Since v5.0.0** we've added support for manual cross-linking through [pandoc's concept of heading ids][pandoc-heading-ids]. These allow you to assign identifiers which are more stable for referencing than auto-generated IDs derived from the heading phrase (slugs).
 
-> **Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **☛ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
 [Sample]: document `./pages/page1.md` declares a heading
 
@@ -424,13 +438,13 @@ While you should consider using an [alias] to make use of term-based auto-linkin
 ## User Story {#s-241}
 ```
 
-with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference
+with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference:
 
 ```md
 [any phrase](#s-241)
 ```
 
-in any file being processed and [glossarify-md] will resolve the relative path:
+In any file being processed [glossarify-md] will resolve the actual path to the definition:
 
 */README.md*
 
@@ -448,7 +462,7 @@ in any file being processed and [glossarify-md] will resolve the relative path:
 
 ### Book Index
 
-> **Since v3.0.0**
+> **ⓘ Since v3.0.0**
 
 *glossarify-md.conf.json*
 
@@ -469,7 +483,7 @@ This option will generate a single book index file `./book-index.md` with glossa
 }
 ```
 
-> **Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists](#lists).
+> **☛ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists](#lists).
 
 Let's assume you have multiple glossaries and you want to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
 
@@ -487,11 +501,11 @@ Let's assume you have multiple glossaries and you want to create separate book i
 }
 ```
 
-> **Note**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **☛ Note:**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
 ### Lists
 
-> **Since v3.5.0**
+> **ⓘ Since v3.5.0**
 
 You can generate **arbitrary lists from HTML elements with an `id` attribute** and an element *classifier* to compile similar elements into the same list.
 
@@ -554,7 +568,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials and uses the classifier *tutorial*.
 ```
 
-> **Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
+> **☛ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
 
 <!--
 **Link label extraction**
@@ -570,7 +584,7 @@ The link label for list items will be inferred in this order (first-match):
 
 ### List of Figures
 
-> **Since v3.3.0**
+> **ⓘ Since v3.3.0**
 
 So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
 `listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
@@ -623,7 +637,7 @@ This configuration which would allow you to also choose a shorter classifier lik
 
 ### List of Tables
 
-> **Since v3.4.0**
+> **ⓘ Since v3.4.0**
 
 `listOfTables` like [`listOfFigures`](#list-of-figures) is a shortcut alternative to HTML anchors with a default [`listOf`](#lists) classifier ***table***:
 
@@ -699,7 +713,7 @@ Since **v5.0.0** and the introduction of `listOf` all the previous examples will
 | 3        | Book        | $23.45     |
 ```
 
-> **Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
+> **☛ Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
 >
 > 1. using the table headers separated by comma,
 > 1. or if no headers, using the closest section heading
@@ -745,73 +759,11 @@ You can then generate a *List of Tasks* with a configuration like this:
 }
 ```
 
-If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegExp has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
+If the regular expression (RegEx) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegEx has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
 
-> **Which syntax to include in the RegExp**:
+> **ⓘ Which syntax to include in the RegEx**:
 >
-> You may notice that the RegExp above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained [unsupported Markdown Syntax][syntax-extensions] then the RegExp had to take care for it to correctly match (more on syntax extensions below).
-
-## Markdown Syntax Extensions
-
-[syntax-extensions]: #markdown-syntax-extensions
-
-> **Since v5.0.0**
-
-[glossarify-md] supports [CommonMark] and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may have no - or worse - a wrong representation in the tool's [Abstract Syntax Tree][mdast]. If it has got a wrong representation it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
-
-*Frontmatter Syntax*
-
-```
----
-key: This is a frontmatter
----
-```
-
-Without special support for it [CommonMark] compliant parsers will interpret the line of trailing dashes as *heading* markers and the text before as *heading text*.
-
-To make our parser ([remark]) aware of frontmatter syntax we need to enhance it. **Since v5.0.0** we have opened [glossarify-md] to the [remark plug-in ecosystem][remark-plugins] and its extensive support of additional syntaxes and tools:
-
-> **Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional plug-ins.
-
-*Add this to your glossarify-md.conf.json*
-
-```json
-{
-  "unified": {
-    "rcPath": "../remark.conf.json"
-  }
-}
-```
-
-The file path is relative to `baseDir`. Then install a remark plug-in
-
-```
-npm install remark-frontmatter
-```
-
-and make remark load the plug-in by adding to your *remark.conf.json*:
-
-```json
-{
-  "plugins": {
-    "remark-frontmatter": {
-      "type": "yaml",
-      "marker": "-"
-    }
-  }
-}
-```
-
-`remark.conf.json` follows the [unified configuration][unified-config] schema:
-
-- `remark-frontmatter` must be the name of the npm package you installed before
-- any properties of the object are specific to the plug-in.
-
-You could also embed the configuration into a *glossarify-md.conf.json* using the `unified` key. But keep in mind that anything under that key is a different config schema and *not* subject to the [glossarify-md] config schema.
-
-> **[remark], [unified], uhh... ?**
->
-> Read more on how these projects relate to glossarify-md in our [Addendum: Conceptual Layers](https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md)
+> You may notice that the RegEx above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained other syntax then the RegEx had to take care for it to correctly match (more on syntax extensions see addendum [Markdown Syntax Extensions][doc-syntax-extensions]).
 
 ## Structured Export and Import
 
@@ -819,7 +771,7 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 
 [SKOS]: https://w3.org/skos
 
-**Since v6.0.0** markdown glossary terms can be exported to a structured JSON format.
+**Since v6.0.0** markdown glossary terms can be exported to a structured JSON format or RDF N-Quads (file extension `.nq`).
 
 *glossarify-md.conf.json* (generates ./glossary.json)
 
@@ -835,7 +787,7 @@ You could also embed the configuration into a *glossarify-md.conf.json* using th
 }
 ```
 
-When using a glob pattern for the markdown `file` it is possible to export terms from multiple files into a single JSON file. Consider declaring a glossary `uri`. [glossarify-md] will assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris].
+Consider declaring a glossary `uri` when exporting. Then [glossarify-md] can assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris].
 
 You can import terms the same way using `import` instead.
 
@@ -853,7 +805,7 @@ You can import terms the same way using `import` instead.
 }
 ```
 
-> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported text using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and consider downloading files yourself, prior to importing. Assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md].
+> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported term definitions using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md]. Consider downloading file revisions statically, prior to importing.
 
 Advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
 
@@ -993,7 +945,7 @@ When being `true` or being a template string with a placeholder `${uri}` then re
 
 #### `glossaries[].uri`
 
-See \[]
+See also [Vocabulary URIs][doc-vocabulary-uris].
 
 #### `ignoreCase`
 
@@ -1121,7 +1073,7 @@ See also:
 
 Use this option to select markdown heading depths which should be considered terms or sections for cross-linking. For example, to only consider headings `## text` at depth 2 or `### text` at depth 3 but not at depths 1 and 4-6 provide an array `[2,3]`
 
-> **Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
+> **☛ Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `linking.headingIdAlgorithm`
 
@@ -1131,16 +1083,19 @@ Use this option to select markdown heading depths which should be considered ter
 - **Default:** `"github"`
 - **Since:** v6.0.0
 
-Algorithm to use for generating heading identifiers ("slugs"). `"github"` will only guarantee *uniqueness per file*. MD5 and SHA256 options will generate a hash *unique in the fileset*. The hash value depends on
+Algorithm to use for generating heading identifiers used as `#` URL-fragment ("slugs"). Option value `"github"` will only guarantee *uniqueness per file* whereas `md5` and `sha256` options will generate a hash *unique in the fileset*. The hash value will depend on
 
 ```
-    glossary filepath
-AND glossary filename without ext.
-AND ( conf.glossaries[].uri OR conf.baseUrl )
-AND term phrase's github-slug
+hash (
+  glossary file path,
+  glossary file name without file extension,
+  glossary uri,
+  github-slugger(term),
+  baseUrl
+)
 ```
 
-The `*-7` variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
+where `baseUrl` will be used only if there's no glossary uri. The `*-7` hashsum variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
 
 #### `linking.headingIdPandoc`
 
@@ -1150,7 +1105,7 @@ The `*-7` variants truncate a hash to at most 7 symbols which are still unlikely
 
 Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with [pandoc].
 
-> **Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **☛ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
 See also
 
@@ -1233,7 +1188,7 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 
 - **Range:** `{ rcPath: string } | { settings: object, plugins: object|array }`
 
-Extended [unified configuration][unified-config]. See also [Markdown Syntax Extensions][syntax-extensions].
+Extended [unified configuration][unified-config]. See also [Markdown Syntax Extensions][doc-syntax-extensions].
 
 ## Special Thanks go to
 

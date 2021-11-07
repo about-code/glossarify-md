@@ -69,6 +69,6 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 ~~~
 -->
 
-[1]: ./glossary.md#uri "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[1]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
 [2]: ./skos-interop.md

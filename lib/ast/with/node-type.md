@@ -22,23 +22,19 @@ The interface reflects the overall process defined by [micromark] and implementa
 
 *Figure 1: Parsing, Manipulating, Serializing*
 ~~~
-                 |  in ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
-1. Input Stream  | .~~~~~~['#','F','o','o','EOL']<-~~~'
-                 | |
-2. Tokenize      | `~~~~~micromark(string)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
-                 |                                                syntax() --(o
-                 |                                                            |
-3. Token Queue   | .~~~['enter:atxHeading','F','o','o','exit:atxHeading']<~~~~'
-                 | |
-4. Grow Tree     | `~~~> mdast-util-from-markdown(tokens) ~~~.
-                 |                o                          o)-- fromMarkdown()
-5. Syntax Tree   | .~~~~~~~~~~~  / \  <~~~~~~~~~~~~~~~~~~~~~~'
-                 | |            o   o )-------------------------- modify AST
-                 | |
-6. Serialize     | `~~~~ mdast-util-to-markdown(tree) ~~~~~~~.
-                 |                                           o)-- toMarkdown()
-                 | .~~~~ ['#','F','o','o','EOL'] <~~~~~~~~~~~'
-7. Output Stream | `~> out
+1. Input Stream     | .~~~~ ['#','F','o','o','EOL'] <~~~ file.md
+                    | |
+2. Tokenize         | `~~~~ micromark(string)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.
+                    |                                                          o)-- syntax()
+3. Token Queue      | .~~ ['enter:atxHeading','F','o','o','exit:atxHeading'] ~~'
+                    | |
+4. Grow Syntax Tree | `~~~> mdast-util-from-markdown(tokens) ~~~~~~~~~~~~~~~~~~.
+                    |                                                 o        o)-- fromMarkdown()
+5. Transform Tree   | .~~~~ transform(tree-node) => tree-node ~~~~~~ / \  ~~~~~'
+                    | |                                             o   o
+6. Serialize        | `~~~~ mdast-util-to-markdown(tree) ~~~~~~~~~~~~~~~~~~~~~~.
+                    |                                                          o)-- toMarkdown()
+7. Output Stream    | <~~~~ ['#','F','o','o','EOL'] <~~~~~~~~~~~~~~~~~~~~~~~~~~'
 ~~~
 
 ## `syntax()`

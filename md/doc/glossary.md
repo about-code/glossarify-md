@@ -1,19 +1,18 @@
 # Glossary
+[glossarify-md]: https://github.com/about-code/glossarify-md
 
 This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also servers as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json](../glossarify-md.conf.json) configuration at the root of this repo.
 
 ## JSON-LD
+[JSON-LD]: https://json-ld.org
+[jsonld]: https://npmjs.com/package/jsonld
+[LD]: https://www.w3.org/standards/semanticweb/ontology
 
-JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. SKOS is one such vocabulary supported by [glossarify-md]
+[JSON-LD] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. SKOS is one such vocabulary supported by [glossarify-md]
 
 ## KOS (Knowledge Organization Systems)
 <!--{ "aliases": "KOS, Knowledge Organization System" }-->
-[SKOS]: http://w3.org/skos/
-[LD]: https://www.w3.org/standards/semanticweb/ontology
-[JSON-LD]: https://json-ld.org
-[jsonld]: https://npmjs.com/package/jsonld
 [vocabularies]: https://www.w3.org/standards/semanticweb/ontology
-[glossarify-md]: https://github.com/about-code/glossarify-md
 [OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
 
 Glossaries are considered a kind of *Knowledge Organisation System (KOS)* which organizes knowledge as a list of terms and term definitions. There are other KOS like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal KOS the W3C has developed SKOS.
@@ -27,12 +26,12 @@ Process of searching for a term in *document A* matching a heading phrase in
 onto the term definition in *document B*.
 
 ## remark
+[remark]: https://github.com/remarkjs/remark
 
 [remark] is a parser and compiler project under the unified umbrella for *Markdown* text files in particular.
 
-[remark]: https://github.com/remarkjs/remark
-
 ## SKOS
+[SKOS]: http://w3.org/skos/
 
 With [SKOS](https://w3.org/skos) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
@@ -61,17 +60,17 @@ See glossarify-md configuration options for details.
 
 
 ## unified
+[unified]: https://unifiedjs.com
 
 [unified] is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md](./conceptual-layers.md)
 
-[unified]: https://unifiedjs.com
 
 ## URL fragment
 <!-- Aliases: URL fragments -->
 The fragment is the part follwing the `#` in a URL.
 
-## URI
-<!--{ "aliases": "URL" }-->
+## URI / URL
+<!--{ "aliases": "URI, URL" }-->
 
 *Uniform Resource Identifier* and *Uniform Resource Locator* describe both the same thing, which is an ID with a syntax `scheme://authority.tld/path/#fragment?query` like `https://my.org/foo/#bar?q=123`. Although both things are the same, the two acronyms are often used to emphasize whether using the ID to primarily *identify* something or using *the same ID* to *also* locate and retrieve a represention of what it identifies.
 <!--
@@ -91,8 +90,7 @@ In case of glossarify-md you could use one of the cryptographic heading ID algor
 -->
 
 ## vuepress
+[vuepress]: https://vuepress.vuejs.org
+[vuejs]: https://vuejs.org
 
 [vuepress] is a static website generator translating markdown files into a website powered by [vuejs].
-
-[vuejs]: https://vuejs.org
-[vuepress]: https://vuepress.vuejs.org

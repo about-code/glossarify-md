@@ -1,4 +1,6 @@
 # Contributing
+[VSCode]: https://code.visualstudio.com
+[launch configuration]: ./.vscode/launch.json
 
 ## Table of Contents
 
@@ -17,30 +19,17 @@
 
 > **⚠ Important (Windows-Users):** Configure your editor or IDE to use Unix-style line-endings (LF) for this project. Unix-Style-Endings are required at least for *Markdown*, *JS* and *JSON* files.
 
-```
+~~~
 git clone https://github.com/<your-name>/glossarify-md
 cd glossarify-md
 ./install-git-hooks.sh  // optional; Run tests prior to pushing.
 npm install
 cd ./test
 npm install
-```
-
-> **⚠ Important:** Make sure to run `npm test` successfully, locally, on a fresh clone before you start coding. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue and hold back contributions until the issue can be fixed or work on resolving those issues first. Do NOT just ignore it and commit new baselines in this case. This will corrupt the baseline and the CI pipeline might now going green when it shouldn't and tests lose their purpose of providing feedback to you and us about your changes.
-
-## Running a particular configuration
-
-~~~
-npm run config ./path/to/glossarify-md.conf.json
 ~~~
 
-There's an equivalent for running a debug session with a config
+> **⚠ Important:** Make sure to run `npm test` successfully on a fresh clone before beginning to code. If tests fail (which should not happen but *might* happen due to unforseen platform issues or bugs) consider filing an issue, first, and hold back contributions until the issue can be resolved. DO NOT just ignore it. DO NOT commit new baselines in this case. Otherwise it will corrupt the baseline and while the CI pipeline might now go green any tests have lost their value.
 
-~~~
-npm run dconfig ./path/to/glossarify-md.conf.json
-~~~
-
-Since these commands can become cumbersome to write over and over again continue reading on [Experiments](#experiments).
 
 ## Experiments
 
@@ -66,146 +55,116 @@ ${workspace}/
 {
     "$schema": "../conf/v5/schema.json",
     "baseDir": "./input",
-    "outDir": "../output",
-    "dev": {
-        "termsFile": "../output/terms.json"
-    }
+    "outDir": "../output"
 }
 ~~~
 
-Then to run the experiment use the shortcut
+Then to run the experiment use...
 
 ~~~
 npm run experiment
 ~~~
 
-> **☛ Note**: If you need to create files outside the `experiment/` folder, consider using a \*.gitignore.\* pattern. Those files will be excluded from revision control and may not be accidentally committed.
+> **☛ Note**: If you need to create files outside the `experiment/` folder, consider using a `*.gitignore.*` filename pattern to exclude it from revision control and accidental commits.
 
 ## Debugging
 
-~~~
-npm run dconfig ./path/to/glossarify-md.conf.json
-~~~
+The project includes a [VSCode] `Debug Experiment` [launch configuration] for debugging [experiments](#experiments) with the internal debugger (`F5` key).
 
-starts a "remote" debug session at `127.0.0.1:9229`. Remote debugging allows any debugger frontend speaking the Remote Debug Protocol to connect to the process. For example you can connect with
-
-- *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
-- *VSCode* by attaching as a remote debugger
-- others
-
-If you are coding in [VSCode](https://code.visualstudio.com) then you can use `Debug External` from our [Launch Configuration](./.vscode/launch.json) to debug *arbitrary* configurations after having issued `npm run dconfig ...` on a terminal.
-
-**Debugging Experiments**:
-
-In VSCode use the `Debug Experiment` launch configuration to debug experiments with the internal debugger (does not require `npm run debug`). Otherwise you may find
+Alternatively
 
 ~~~
 npm run debug
 ~~~
 
-handy to launch a remote debug session for an experiment.
+starts a debug session *for an experiment* at `127.0.0.1:9229` and allows other debugger frontends to connect to the process. For example you can connect with
 
-*VSCode Launch Configuration in ${workspace}/.vscode/launch.json*
+- *Chrome Browser* ⇨ URL-Bar: `chrome://inspect`
+- *VSCode* ⇨ [Launch Config][launch configuration] `Debug External`
+- others
 
-~~~json
-{
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Debug Experiment",
-            "program": "${workspaceFolder}/bin/index.js",
-            "runtimeArgs": [
-                "--preserve-symlinks",
-                "--preserve-symlinks-main",
-            ],
-            "runtimeVersion": "16.0.0",
-            "args": [
-                "--config",
-                "./experiment/glossarify-md.conf.json"
-            ]
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "Debug External",
-            "address": "127.0.0.1",
-            "port": 9229,
-            "localRoot": "${workspaceFolder}"
-        }
-    ]
-}
+To run a configuration at arbitrary location use
+
+~~~
+npm run dconfig ./path/to/glossarify-md.conf.json  (debug session on)
+npm run config  ./path/to/glossarify-md.conf.json  (no debug session)
 ~~~
 
 ## Testing
 
-Any scripts and paths in this section assume you're in `${workspace}/test`.
-If you aren't there yet run:
+**Any scripts, paths and examples in this section assume you're working in `${workspace}/test`.**
 
-```
+~~~
 cd ./test
-```
+npm install  (if not done yet)
+~~~
 
-### Directory Structure
-
-```
+*Test directories:*
+~~~
 ${workspace}/
+   |- ...
    |- test/
    |   |- input/            <-- test suite
-   |   |- output-actual/    <-- test results from last test run (created on first run)
+   |   |- output-actual/    <-- actual results from last run
    |   |- output-expected/  <-- currently accepted baseline
+   |   |- node_modules      <-- installed test dependencies
    |   `- package.json      <-- test dependencies and scripts
+   |- ...
    `- package.json          <-- project dependencies
-```
+~~~
 
-`./output-expected` is the **baseline** which `./output-actual` is compared against
-using `git diff`. If there are any differences between actual and expected output
-then tests fail.
+### Baseline Testing
+
+Folder `./output-expected` contains the **baseline** which `./output-actual` is compared against (using `git diff`). If there are any differences between the actual results and the expected baseline then tests fail. Adding additional tests requires the baseline to be updated. It *must only* be updated if all the the differences are an expected consequence of the latest modifications to the system under test or test suite.
+
 
 ### Running the Test Suite
 
-```
+~~~
 npm test
-```
+~~~
 
-This script exists in both `package.json` files. But `${workspace}/package.json`
-will run a linter prior to running the test suite.
+> **Note:** The script in `${workspace}/package.json` will run a **linter** prior to running the test suite. The script in `${workspace}/test/package.json` won't run the linter.
+>
 
-> As a Windows user run this command in a `git-bash` (being installed with Git) or in Windows Subsystem for Linux (WSL). Otherwise use `npm run test-win` in default command prompt `cmd`.
+You can run a single test or selected set of tests with `npm run at [glob-pattern]`. If you only know the test case directory but not the exact run-script `npm run at? [directory|pattern]` might help you.
+
+*Examples:*
+~~~
+npm run at? export
+npm run at test-p10-13
+~~~
 
 ### Extending the Test Suite
-
-To add a new scenario *foo-test*
-
-1. create a new feature test directory `./input/foo-test`
-1. add a new config file `./input/foo-test/glossarify-md.conf.json` (see example below)
-1. append a new `test_*` script in `${workspace}/test/package.json`
-
-   ```
-   npx . --config=./input/foo-test/glossarify-md.conf.json
-   ```
+[run-tests]: #running-the-test-suite
 
 A test case usually consists of
 
 1. **one or more *document* files...**
-
    ...with term usages in sentences that specify the test case and acceptance criteria in a `GIVEN <condition> [AND|OR <condition>] THEN <expectation> [AND|OR <expectation>]` syntax
-
 1. **one or more *glossary* files ...**
-
    ...with term definitions required for the test goal
-
 1. **a *config* file**...
-
    ...whose `glossaries` section points to the glossary file(s)
 
-> Convention
->
-> Each bugfix or feature should have its distinct glossary and document input files
+To add a new test case or scenario *foo-test*
+
+1. create a new feature test directory `./input/foo-test`
+   ~~~
+   mkdir -p ./input/foo-test
+   ~~~
+1. copy and tailor a config from an existing test.
+   **In particular adjust `outDir` and other paths to `output-actual`!**
+1. append a new `test_*` script in `${workspace}/test/package.json`
+   ~~~
+   node . --config=./input/foo-test/glossarify-md.conf.json
+   ~~~
+
+
+> **Important:** Each test case must have a dedicated configuration and input file set. Avoid copying existing tests. If you can't resist, though, make sure to adjust any paths in the config.
 
 *./input/foo-test/glossarify-md.conf.json (sample)*
-```json
+~~~json
 {
     "$schema": "../../../conf/v5/schema.json",
     "baseDir": ".",
@@ -214,49 +173,55 @@ A test case usually consists of
         "termsFile": "../../output-actual/foo-test/terms.json"
     }
 }
-```
-
-### Implement and Review
-
-When you extended the test suite and implemented the feature or bugfix
-("test-first-approach") run the tests once again now with your changes to
-the implementation:
-
-~~~
-npm run test
 ~~~
 
-**If you followed the guide so far then tests are *expected to fail* at this point.**
+### Review
 
- This is because
-your new test inputs aren't part of the baseline yet. Before adding them to the
-baseline **carefully review the diff of failing tests**:
 
-- there should not be any changes to other files apart from test input files
-  added by you. Otherwise your change is likely to be a *major change* requiring
-  a major version update.
+After modifying the sources *and* extending the test suite [run the tests][run-tests] again. After adding tests the test suite *is expected to fail* (see [baseline testing](#baseline-testing])).
 
-- the diff should be *minimal* and only change what you would really would *expect to change*.
+**Carefully review the diff of failing tests**:
 
-Tweak the implementation & rerun tests as necessary. Start careful reviewing again.
+- the diff should be *minimal* and only change what you would *expect to change*
+- changes to other files apart from the newly added test input files are signs of unexpected consequences or a *breaking change*.
 
-**Once the diff is okay..**
+Tweak the implementation & rerun tests as often as necessary.
 
-1. Commit changes to the `${workspace}/lib` directory using [conventional commit messages](https://www.conventionalcommits.org/)
+**Once the diff is okay...**
 
-    - bugfixes must have a message
+1. Run `npm test` from `${workspace}` root or at least run the linter with
 
-      `fix: <issue-title>. Closes #<issue-nr>.`
+   ~~~
+   npm run linter
+   ~~~
 
-    - new features must have a message
+1. Commit changes to JavaScript sources using [conventional commit messages](https://www.conventionalcommits.org/)
 
-      `feat: <description>. Closes #<issue-nr>.`
+    - Bugfixes: `fix: <issue>. Closes #<issue-nr>.`
+    - Features: `feat: <description>. Closes #<issue-nr>.`
+    - Breaking Changes:
+      ~~~
+      feat: or fix: ...
 
-1. Commit changes to `${workspace}/test/input/*` with a message:
+      BREAKING CHANGE: <description>
+      ~~~
+
+1. Commit changes to the test suite `${workspace}/test/input/*` with a message:
 
     ~~~
     test: New test cases.
     ~~~
+
+### Update Baseline
+
+
+Run the complete test suite to build a fresh `./output-actual`
+
+   ~~~
+   npm test
+   ~~~
+
+**⚠ Warning:** Committing a corrupt baseline can render the test suite useless. Only proceed if you are sure about the contents in `./output-actual` and that the Diff is okay [^why-this].
 
 1. Create a new baseline from `./output-actual` with
 
@@ -265,13 +230,25 @@ Tweak the implementation & rerun tests as necessary. Start careful reviewing aga
     npm run new-baseline-win  (Windows)
     ~~~
 
+    > **☛ Note**: At this point you can still restore the old baseline by running
+    > ~~~
+    > git checkout ./output-expected
+    > ~~~
+    >
+
 1. Commit a new baseline
 
     ~~~
     npm run commit-baseline
     ~~~
+    > **☛ Important** Always commit baselines, separately. This allows for restoring a previous baselines using `git reset` or `git revert`.
 
-    > **☛ Note:** If you already staged files for commit using `git add` but didn't `git commit` them yet, then these files will be unstaged using `git reset`. *You won't lose any changes*. Just make sure to check your `git status` and `git add` them again before running a `git commit` afterwards.
+    > **☛ Note:** If you have already staged files for commit when running the command but didn't `git commit` them yet, then these files will be unstaged temporarily using `git reset`. *You won't lose any changes*. Just check your `git status` and `git add` them again if needed.
 
-1. Push local history
+1. `git push` changes to a remote branch
+
+   > **☛ Note:** Always use `git revert` to undo commits if you have already `git push`-ed to a remote branch.
+
 1. Open a *Pull Request* in the origin repository (use dedicated pull requests for different fixes or features)
+
+[^why-this]: *This warning is there to raise your care but not to make you feel intimidated. Nothing is broken until a Pull Request makes it into the `master` branch and if things go wrong `git` will be our friend*.

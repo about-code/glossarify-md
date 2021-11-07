@@ -119,7 +119,7 @@ More information see [README.md][4].
 
 ## [Appendix](#appendix)
 
-[glossarify-md] requires a [slug🟉][1] algorithm to create friendly [URL🟉][9] fragments (#...) for section links. When [vuepress🟉][2] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27][10]). So it's best to configure vuepress to use the same slugger as [glossarify-md].
+[glossarify-md] requires a [slug🟉][1] algorithm to create friendly [URL fragments🟉][9] (#...) for section links. When [vuepress🟉][2] translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27][10]). So it's best to configure vuepress to use the same slugger as [glossarify-md].
 
 [glossarify-md] uses [github-slugger][11] internally. In case you no longer want to use [glossarify-md] you might not want to have [slugs🟉][1] change again. Then you can use the slugger directly with [vuepress🟉][2], too:
 
@@ -157,7 +157,7 @@ module.exports = {
 
 [8]: http://unifiedjs.com/explore/package/remark-frontmatter/
 
-[9]: ./glossary.md#uri "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[9]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
 
 [10]: https://github.com/about-code/glossarify-md/issues/27
 
