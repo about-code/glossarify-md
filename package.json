@@ -68,7 +68,7 @@
     "micromark-extension-wiki-link": "0.0.4",
     "minimist": "^1.2.5",
     "remark-autolink-headings": "^7.0.1",
-    "remark-gfm": "^3.0.0",
+    "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.0",
     "remark-reference-links": "^6.0.0",
     "remark-stringify": "^10.0.1",
@@ -80,8 +80,8 @@
     "vfile": "^5.2.0"
   },
   "devDependencies": {
-    "@adobe/jsonschema2md": "^6.1.4",
-    "eslint": "^8.1.0",
+    "@adobe/jsonschema2md": "6.0.3",
+    "eslint": "^8.2.0",
     "jsonld": "^5.2.0",
     "npm-run-all": "^4.1.5",
     "remark-cli": "^10.0.0",
