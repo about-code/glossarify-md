@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-rc.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-beta.0...v6.0.0-rc.0) (2021-11-07)
+
+
+### ⚠ BREAKING CHANGES
+
+* Affects users of 6.0.0-alpha and 6.0.0-beta.0, only and only those using `headingIdAlgorithm` with `md5` or `sha256`. The fix affects hashsums and may affect a term's URI.
+
+  Previously a term's hashsum was created from a term's plaintext
+URI consisting of vocabulary-URI + slug. But when there's a
+`glossaries` entry with a glob pattern and an `uri` then once
+the same term existed twice or more in different glob-matched
+glossaries the terms' hashsums would collide although
+the algorithms are meant to guarantee *uniqueness in the fileset*.
+The change fixes this by including the glossary file's source path
+in the value being hashed.
+
+* glossarify-md@6.0.0 ends support for Node 12.x.
+
+### Features
+
+* Export and import RDF N-Quads ([#209](https://github.com/about-code/glossarify-md/issues/209)) ([d5057c4](https://github.com/about-code/glossarify-md/commit/d5057c4ec41d816927f80a2d9d26328da8dada9c))
+* New node support matrix ([#210](https://github.com/about-code/glossarify-md/issues/210)) ([b83f73f](https://github.com/about-code/glossarify-md/commit/b83f73fe395cf5dfffb0b232bae101b2ac932dc0))
+
+
+### Bug Fixes
+
+* No fileset uniqueness of hashed heading id with glossary uri and globs ([#214](https://github.com/about-code/glossarify-md/issues/214)) ([6d5674e](https://github.com/about-code/glossarify-md/commit/6d5674efe882bc42fe199d14b1359813c7c58483))
+* Rewrite exporter to fix non-deterministic results. ([#215](https://github.com/about-code/glossarify-md/issues/215)) ([2265ac7](https://github.com/about-code/glossarify-md/commit/2265ac75fb4c2f1fcde600da954494fd07497e01))
+* Wrong linking of heading depths when term exists twice at different depths ([#217](https://github.com/about-code/glossarify-md/issues/217)) ([3df4fe5](https://github.com/about-code/glossarify-md/commit/3df4fe56e5b14d024cf9e04095d3f468e7fd5b22))
+
 ## [6.0.0-beta.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.9...v6.0.0-beta.0) (2021-10-31)
 
 
