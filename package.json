@@ -1,6 +1,6 @@
 {
   "name": "glossarify-md",
-  "version": "6.0.0-beta.0",
+  "version": "6.0.0-rc.0",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "author": {
     "name": "Andreas Martin"
@@ -52,6 +52,7 @@
     "v:prepare": "npm run docs && npm run changelog",
     "v:alpha": "standard-version --prerelease alpha",
     "v:beta": "standard-version --prerelease beta",
+    "v:candidate": "standard-version --prerelease rc",
     "v:release": "standard-version",
     "v:tag": "git add -u && git commit && git tag -D latest && git tag latest",
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
