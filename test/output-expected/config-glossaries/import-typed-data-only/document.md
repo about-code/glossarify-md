@@ -26,9 +26,9 @@ GIVEN
     *   WITH a typed entity mapped onto `skos:ConceptScheme`
     *   AND typed entities mapped onto `skos:Concept`
     *   AND typed entities denoting concepts
-        *   *[Glossary][1][<sup>2)</sup>][2]*
-        *   *[Taxonomy][3]*
-        *   *[Thesaurus][4]*
+        *   *[Glossary][1]*
+        *   *[Taxonomy][2]*
+        *   *[Thesaurus][3]*
 
 THEN the system
 
@@ -42,8 +42,6 @@ THEN the system
 
 [1]: ./imported-typed.md#glossary "Glossaries are collections of terms and their definitions."
 
-[2]: ./imported-untyped.md#glossary
+[2]: ./imported-typed.md#taxonomy "Taxonomies are classification schemes."
 
-[3]: ./imported-typed.md#taxonomy "Taxonomies are classification schemes."
-
-[4]: ./imported-typed.md#thesaurus "Thesauri are word nets."
+[3]: ./imported-typed.md#thesaurus "Thesauri are word nets."

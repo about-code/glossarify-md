@@ -1,0 +1,17 @@
+{
+    "$schema": "../../../../conf/v5/schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/config-linking/headingDepths-and-alternatives",
+    "glossaries": [
+      { "file": "./glossary-tc1-1.md" },
+      { "file": "./glossary-tc1-2.md" },
+      { "file": "./glossary-tc2-1.md" },
+      { "file": "./glossary-tc2-2.md" }
+    ],
+    "indexing": {
+      "headingDepths": [1,2,3,4,5,6]
+    },
+    "linking": {
+      "headingDepths": [2,4]
+    }
+  }
