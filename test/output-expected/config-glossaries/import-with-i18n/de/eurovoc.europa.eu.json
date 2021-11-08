@@ -1,0 +1,250 @@
+{
+    "@context": {
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "isothes": "http://purl.org/iso25964/skos-thes#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "dct": "http://purl.org/dc/terms/",
+        "dc11": "http://purl.org/dc/elements/1.1/",
+        "uri": "@id",
+        "type": "@type",
+        "lang": "@language",
+        "value": "@value",
+        "graph": "@graph",
+        "label": "rdfs:label",
+        "prefLabel": "skos:prefLabel",
+        "altLabel": "skos:altLabel",
+        "hiddenLabel": "skos:hiddenLabel",
+        "broader": "skos:broader",
+        "narrower": "skos:narrower",
+        "related": "skos:related",
+        "inScheme": "skos:inScheme",
+        "exactMatch": "skos:exactMatch",
+        "closeMatch": "skos:closeMatch",
+        "broadMatch": "skos:broadMatch",
+        "narrowMatch": "skos:narrowMatch",
+        "relatedMatch": "skos:relatedMatch"
+    },
+    "graph": [
+        {
+            "uri": "http://eurovoc.europa.eu/100141",
+            "type": "skos:ConceptScheme",
+            "skos:hasTopConcept": { "uri": "http://eurovoc.europa.eu/434743" },
+            "prefLabel": [
+                { "lang": "fr", "value": "EuroVoc" },
+                { "lang": "de", "value": "EuroVoc" },
+                { "lang": "en", "value": "EuroVoc" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/100242",
+            "type": "skos:ConceptScheme",
+            "skos:hasTopConcept": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "5206",
+            "prefLabel": [
+                { "lang": "fr", "value": "5206 politique de l'environnement" },
+                { "lang": "de", "value": "5206 Umweltpolitik" },
+                { "lang": "en", "value": "5206 environmental policy" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434743",
+            "type": "skos:Concept",
+            "http://publications.europa.eu/ontology/euvoc#status": {
+                "uri": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
+            },
+            "http://publications.europa.eu/ontology/euvoc#xlEditorialNote": {
+                "uri": "http://eurovoc.europa.eu/note_69b8db310a"
+            },
+            "http://publications.europa.eu/ontology/euvoc#xlNotation": {
+                "uri": "http://eurovoc.europa.eu/note_38c08fa39becdc8265688813b0b8ee24"
+            },
+            "dct:created": {
+                "type": "http://www.w3.org/2001/XMLSchema#date", "value": "2010-03-26" },
+            "owl:versionInfo": "4.4",
+            "altLabel": [
+                { "lang": "en", "value": "climate policy" },
+                { "lang": "fr", "value": "action face au changement climatique" },
+                { "lang": "en", "value": "climate action" },
+                { "lang": "en", "value": "policy for responding to climate change" }
+            ],
+            "skos:editorialNote": {
+                "lang": "en",
+                "value": "http://iate.europa.eu/IATE-50549"
+            },
+            "inScheme": [
+                { "uri": "http://eurovoc.europa.eu/100242" },
+                { "uri": "http://eurovoc.europa.eu/100141" }
+            ],
+            "narrower": [
+                { "uri": "http://eurovoc.europa.eu/434909" },
+                { "uri": "http://eurovoc.europa.eu/434843" },
+                { "uri": "http://eurovoc.europa.eu/434966" },
+                { "uri": "http://eurovoc.europa.eu/434938" },
+                { "uri": "http://eurovoc.europa.eu/6400" },
+                { "uri": "http://eurovoc.europa.eu/434786" }
+            ],
+            "skos:notation": "434743",
+            "prefLabel": [
+                { "lang": "fr", "value": "politique en matière de changement climatique" },
+                { "lang": "en", "value": "climate change policy" },
+                { "lang": "de", "value": "Klimaschutzpolitik" }
+            ],
+            "related": { "uri": "http://eurovoc.europa.eu/5482" },
+            "skos:topConceptOf": [
+                { "uri": "http://eurovoc.europa.eu/100141" },
+                { "uri": "http://eurovoc.europa.eu/100242" }
+            ],
+            "http://www.w3.org/2008/05/skos-xl#altLabel": [
+                { "uri": "http://eurovoc.europa.eu/438949" },
+                { "uri": "http://eurovoc.europa.eu/438948" },
+                { "uri": "http://eurovoc.europa.eu/438946" },
+                { "uri": "http://eurovoc.europa.eu/438947" },
+                { "uri": "http://eurovoc.europa.eu/434770" },
+                { "uri": "http://eurovoc.europa.eu/434742" },
+                { "uri": "http://eurovoc.europa.eu/434768" },
+                { "uri": "http://eurovoc.europa.eu/xl_en_17c75f6f" },
+                { "uri": "http://eurovoc.europa.eu/499515" },
+                { "uri": "http://eurovoc.europa.eu/492747" },
+                { "uri": "http://eurovoc.europa.eu/434741" },
+                { "uri": "http://eurovoc.europa.eu/469766" },
+                { "uri": "http://eurovoc.europa.eu/438950" }
+            ],
+            "http://www.w3.org/2008/05/skos-xl#prefLabel": [
+                { "uri": "http://eurovoc.europa.eu/434745" },
+                { "uri": "http://eurovoc.europa.eu/434740" },
+                { "uri": "http://eurovoc.europa.eu/434764" },
+                { "uri": "http://eurovoc.europa.eu/494348" },
+                { "uri": "http://eurovoc.europa.eu/434750" },
+                { "uri": "http://eurovoc.europa.eu/434765" },
+                { "uri": "http://eurovoc.europa.eu/434769" },
+                { "uri": "http://eurovoc.europa.eu/434759" },
+                { "uri": "http://eurovoc.europa.eu/434748" },
+                { "uri": "http://eurovoc.europa.eu/434755" },
+                { "uri": "http://eurovoc.europa.eu/xl_sr_90af1f51" },
+                { "uri": "http://eurovoc.europa.eu/434754" },
+                { "uri": "http://eurovoc.europa.eu/434758" },
+                { "uri": "http://eurovoc.europa.eu/434763" },
+                { "uri": "http://eurovoc.europa.eu/434753" },
+                { "uri": "http://eurovoc.europa.eu/434757" },
+                { "uri": "http://eurovoc.europa.eu/434762" },
+                { "uri": "http://eurovoc.europa.eu/434746" },
+                { "uri": "http://eurovoc.europa.eu/434747" },
+                { "uri": "http://eurovoc.europa.eu/475389" },
+                { "uri": "http://eurovoc.europa.eu/434771" },
+                { "uri": "http://eurovoc.europa.eu/434756" },
+                { "uri": "http://eurovoc.europa.eu/434749" },
+                { "uri": "http://eurovoc.europa.eu/434766" },
+                { "uri": "http://eurovoc.europa.eu/xl_ga_f1747af5" },
+                { "uri": "http://eurovoc.europa.eu/434760" },
+                { "uri": "http://eurovoc.europa.eu/434761" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434786",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "434786",
+            "prefLabel": [
+                { "lang": "de", "value": "Anpassung an den Klimawandel" },
+                { "lang": "en", "value": "adaptation to climate change" },
+                { "lang": "fr", "value": "adaptation au changement climatique" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434843",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "434843",
+            "prefLabel": [
+                { "lang": "fr", "value": "échange de droits d'émission" },
+                { "lang": "de", "value": "Emissionshandel" },
+                { "lang": "en", "value": "emission trading" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434909",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "434909",
+            "prefLabel": [
+                { "lang": "fr", "value": "mécanisme pour un développement propre" },
+                { "lang": "de", "value": "Mechanismus für die umweltverträgliche Entwicklung" },
+                { "lang": "en", "value": "clean development mechanism" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434938",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "434938",
+            "prefLabel": [
+                { "lang": "fr", "value": "mise en oeuvre conjointe" },
+                { "lang": "de", "value": "Gemeinsame Umsetzung" },
+                { "lang": "en", "value": "joint implementation" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/434966",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "434966",
+            "prefLabel": [
+                { "lang": "fr", "value": "quota d'émission" },
+                { "lang": "de", "value": "Emissionsberechtigung" },
+                { "lang": "en", "value": "emission allowance" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/5482",
+            "type": "skos:Concept",
+            "skos:notation": "5482",
+            "prefLabel": [
+                { "lang": "de", "value": "Klimaveränderung" },
+                { "lang": "fr", "value": "changement climatique" },
+                { "lang": "en", "value": "climate change" }
+            ],
+            "related": { "uri": "http://eurovoc.europa.eu/434743" }
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/6400",
+            "type": "skos:Concept",
+            "broader": { "uri": "http://eurovoc.europa.eu/434743" },
+            "skos:notation": "6400",
+            "prefLabel": [
+                { "lang": "fr", "value": "réduction des émissions de gaz" },
+                { "lang": "de", "value": "Verringerung der Emissionen von Treibhausgasen" },
+                { "lang": "en", "value": "reduction of gas emissions" }
+            ]
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/note_38c08fa39becdc8265688813b0b8ee24",
+            "type": "http://publications.europa.eu/ontology/euvoc#XlNotation",
+            "http://publications.europa.eu/ontology/euvoc#status": {
+                 "uri": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": "434743",
+            "owl:versionInfo": "4.11"
+        },
+        {
+            "uri": "http://eurovoc.europa.eu/note_69b8db310a",
+            "type": "http://publications.europa.eu/ontology/euvoc#XlNote",
+            "http://publications.europa.eu/ontology/euvoc#status": {
+                "uri": "http://publications.europa.eu/resource/authority/concept-status/CURRENT"
+            },
+            "dct:created": {
+                "type": "http://www.w3.org/2001/XMLSchema#date",
+                "value": "2010-03-26"
+            },
+            "dct:modified": {
+                "type": "http://www.w3.org/2001/XMLSchema#date",
+                "value": "2020-05-27"
+            },
+            "http://www.w3.org/1999/02/22-rdf-syntax-ns#value": {
+                "lang": "en",
+                "value": "http://iate.europa.eu/IATE-50549"
+            },
+            "owl:versionInfo": "4.4"
+        }
+    ]
+}
