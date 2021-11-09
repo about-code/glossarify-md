@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": "./",
+  "outDir": "../../../../output-actual/config-glossaries/import-with-i18n/de",
+  "glossaries":[{
+      "file": "./glossary-de.md",
+      "import": {
+        "file": "./eurovoc.europa.eu.json"
+      }
+  }],
+  "i18n": {
+    "locale": "de"
+  }
+}
