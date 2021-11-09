@@ -55,20 +55,16 @@ link stability and paths.
 2.  `headingIdPandoc: true` adds pandoc-style `{# foo}` attributes taken by
     pandoc for its own linking
 3.  `headingIdAlgorithm: "md5"` guarantees heading IDs to be unique accross the
-    whole file set and therefore within the merged file.
+    whole file set and therefore within the merged file
 4.  `byReferenceDefinition: false` disables link reference definitions and enables
     inline link urls. Reference numbers are not unique, either and would lose
     their referential purpose in a merged file.
 
 Optional
 
-1.  `headingAsLink: false` disables [linkification🟉][1] of headings and is
+1.  `headingAsLink: false` disables linkifying of headings and is
     not required but may come handy, e.g. when translating to a book format.
 
 After having set these options, files can be merged, e.g. with
 
     pandoc --from=markdown -o out.html ./**/*.md
-
-[1]: ./glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
-document B and replacing the term in document A with a Markdown link pointing
-onto the term definition in document B."

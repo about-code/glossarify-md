@@ -58,14 +58,14 @@ link stability and paths.
 1. `headingIdPandoc: true` adds pandoc-style `{# foo}` attributes taken by
    pandoc for its own linking
 1. `headingIdAlgorithm: "md5"` guarantees heading IDs to be unique accross the
-   whole file set and therefore within the merged file.
+   whole file set and therefore within the merged file
 1. `byReferenceDefinition: false` disables link reference definitions and enables
    inline link urls. Reference numbers are not unique, either and would lose
    their referential purpose in a merged file.
 
 Optional
 
-1. `headingAsLink: false` disables linkification of headings and is
+1. `headingAsLink: false` disables linkifying of headings and is
    not required but may come handy, e.g. when translating to a book format.
 
 After having set these options, files can be merged, e.g. with
