@@ -4,6 +4,7 @@
 [doc-syntax-extensions]: ./markdown-syntax-extensions.md
 [doc-conceptual-layers]: ./conceptual-layers.md
 [doc-lists-on-github]: ./lists-on-github.md
+[doc-pandoc]: ./pandoc.md
 [doc-glossary]: ./glossary.md
 [SKOS]: http://w3.org/skos/
 [LD]: https://www.w3.org/standards/semanticweb/ontology
@@ -23,6 +24,7 @@ Concepts
 
 Integrations
 - [Using glossarify-md with vuepress][doc-vuepress]
+- [Using glossarify-md with pandoc][doc-pandoc]
 
 Internals
 
