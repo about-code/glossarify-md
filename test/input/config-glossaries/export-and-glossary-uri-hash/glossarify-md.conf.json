@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/export-and-glossary-uri-hash",
+  "glossaries": [{
+    "uri": "#",
+    "file": "./glossary.md",
+    "export": { "file": "./glossary.json" }
+  }]
+}
