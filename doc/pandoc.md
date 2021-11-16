@@ -4,19 +4,6 @@
 
     ${root}
        +- docs/
-       |   +- .vuepress/
-       |   |   |- public/
-       |   |   '- config.js
-       |   |
-       |   +- images/
-       |   |   '...
-       |   +- section-1/
-       |   |   |- page-1.md
-       |   |   |- page-2.md
-       |   |   '- page-3.md
-       |   |
-       |   '- glossary.md
-       |
        +- docs-glossarified/           (Generated)
        +- node_modules/
        |- glossarify-md.conf.json
@@ -54,17 +41,18 @@ link stability and paths.
     (anchors), only
 2.  `headingIdPandoc: true` adds pandoc-style `{# foo}` attributes taken by
     pandoc for its own linking
-3.  `headingIdAlgorithm: "md5"` guarantees heading IDs to be unique accross the
-    whole file set and therefore within the merged file
+3.  `headingIdAlgorithm: "md5"` generates a heading ID based on a hashsum which is
+    unique accross the file set and therefore within a pandoc-merged file, too. Other
+    values may be `md5-7, sha256, sha256-7`.
 4.  `byReferenceDefinition: false` disables link reference definitions and enables
     inline link urls. Reference numbers are not unique, either and would lose
-    their referential purpose in a merged file.
+    their referential purpose in a pandoc-merged file.
 
 Optional
 
-1.  `headingAsLink: false` disables linkifying of headings and is
-    not required but may come handy, e.g. when translating to a book format.
+1.  `headingAsLink: false` disables headings being wrapped into links. Linkable
+    headings may not required when there is `headingIdPandoc: true`.
 
 After having set these options, files can be merged, e.g. with
 
-    pandoc --from=markdown -o out.html ./**/*.md
+    pandoc --from=markdown -o out.html ./docs-glossarified/**/*.md
