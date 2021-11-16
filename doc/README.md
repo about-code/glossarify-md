@@ -10,6 +10,8 @@
 
 [doc-lists-on-github]: ./lists-on-github.md
 
+[doc-pandoc]: ./pandoc.md
+
 [doc-glossary]: ./glossary.md
 
 [SKOS]: http://w3.org/skos/
@@ -35,9 +37,10 @@ Concepts
 *   [SKOS Interoperability with JSON-LD][doc-skos-interop]
 *   [Glossary of glossarify-md][doc-glossary]
 
-Integrations
+Using with others
 
 *   [Using glossarify-md with vuepress][doc-vuepress]
+*   [Using glossarify-md with pandoc][doc-pandoc]
 
 Internals
 

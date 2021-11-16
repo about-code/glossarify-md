@@ -335,10 +335,9 @@ In the output files aliases will be linked to their related term:
 
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one.
 
-> **ⓘ Since v2.0.0**:
-> Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
+> **ⓘ Since v2.0.0**: Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
 >
-> **Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
+> **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
 
 ## Multiple Glossaries
 
@@ -415,20 +414,19 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ... you can turn any `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
 
-> **☛ Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then for that file `glossaries` options of the entry latest in the array will apply. But in general you should try avoid using many glob patterns or writing glob patterns whose file sets overlap. One reason is performance, another is that glossarify-md's actual behavior will become increasingly hard for you to reason about.
+> **ⓘ Too many links?**
+>
+> What might happen with *globs* is, that you might feel that *too many links* are being generated disturbing the reading experience. If this is an issue for you explore options like [`linking.mentions`](#linkingmentions) or [`linking.limitByAlternatives`](#linkinglimitbyalternatives) or [`linking.headingDepths`](#linkingheadingdepths).
 
-**Too many links?**
-
-What might happen with *globs* is, that once a lot of headings exist, you might feel that *too many links* are being generated, disturbing the reading experience. If this is an issue for you explore [`linking.*`][opt-linking] options like `linking.mentions`, `linking.limitByAlternatives` or `linking.headingDepths` to tweak linkify behavior.
+> **ⓘ Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then `glossaries` options of the entry latest in the array will apply. Though avoid too many glob patterns or patterns whose file sets overlap as the effects on the output get increasingly hard to understand, otherwise.
 
 ### Identifier-based Cross-Linking
 
-If the same section heading exists more than once then you might want to link to one heading in particular.
-While you should consider using an [alias] to make use of term-based auto-linking, there might be situations where you whish to have manually declared links.
+If the same section heading exists more than once then you might want to link to one heading in particular. While you should consider using an [alias] to make use of term-based auto-linking, there might be situations where you whish to have manually declared links.
 
 **Since v5.0.0** we've added support for manual cross-linking through [pandoc's concept of heading ids][pandoc-heading-ids]. These allow you to assign identifiers which are more stable for referencing than auto-generated IDs derived from the heading phrase (slugs).
 
-> **☛ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
 [Sample]: document `./pages/page1.md` declares a heading
 
@@ -483,7 +481,7 @@ This option will generate a single book index file `./book-index.md` with glossa
 }
 ```
 
-> **☛ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists](#lists).
+> **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists](#lists).
 
 Let's assume you have multiple glossaries and you want to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
 
@@ -501,7 +499,7 @@ Let's assume you have multiple glossaries and you want to create separate book i
 }
 ```
 
-> **☛ Note:**: If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
 ### Lists
 
@@ -568,7 +566,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials and uses the classifier *tutorial*.
 ```
 
-> **☛ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
+> **ⓘ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
 
 <!--
 **Link label extraction**
@@ -713,7 +711,7 @@ Since **v5.0.0** and the introduction of `listOf` all the previous examples will
 | 3        | Book        | $23.45     |
 ```
 
-> **☛ Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
+> **ⓘ Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
 >
 > 1. using the table headers separated by comma,
 > 1. or if no headers, using the closest section heading
@@ -1073,7 +1071,7 @@ See also:
 
 Use this option to select markdown heading depths which should be considered terms or sections for cross-linking. For example, to only consider headings `## text` at depth 2 or `### text` at depth 3 but not at depths 1 and 4-6 provide an array `[2,3]`
 
-> **☛ Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
+> **ⓘ Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
 
 #### `linking.headingIdAlgorithm`
 
@@ -1105,7 +1103,7 @@ where `baseUrl` will be used only if there's no glossary uri. The `*-7` hashsum 
 
 Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with [pandoc].
 
-> **☛ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
 See also
 
