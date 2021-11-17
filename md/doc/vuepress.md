@@ -2,7 +2,11 @@
 
 Below we assume a *sample* project structure like this:
 
+[doc-syntax-extensions]: ./markdown-syntax-extensions.md
 [CommonMark]: https://www.commonmark.org
+[github-slugger]: https://npmjs.com/package/github-slugger
+[glossarify-md]: https://github.com/about-code/glossarify-md
+[vuepress]: https://vuepress.vuejs.org
 
 ```
 ${root}
@@ -42,58 +46,62 @@ npm i --save glossarify-md
     "baseDir": "./docs",
     "outDir": "../docs-glossarified",
     "glossaries": [
-        { "file": "./glossary.md", "termHint": "↴"},
+        { "file": "./glossary.md", "termHint": "🟉"},
     ]
 }
 ```
 
-> **Notes**
->
-> ☛ All relative paths inside the config file are being interpreted
-> relativ to `baseDir` except for `$schema` which is relative to the config file.
+> **ⓘ Note:** All relative paths inside the config file are being interpreted relativ to `baseDir` except of `$schema` which is relative to the config file.
 
 ## Configure vuepress
 
-```js
-// .vuepress/config.js
-const glossarify = require("glossarify-md");
-module.exports = {
-    /* ... */
-    markdown: {
-      slugify: glossarify.getSlugger()
-    }
+[glossarify-md] and [vuepress] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix](#appendix).
+
+<em>./docs/.vuepress/config.js</em>
+~~~js
+const slugify = {
+  slugify: require("glossarify-md").getSlugger();
 };
-```
+module.exports = {
+    markdown: { ...slugify }    // vuepress v1.x
+    // markdown: {               // vuepress v2.x
+    //   toc: { ...slugify },
+    //   anchor: { ...slugify },
+    //   extractHeaders: { ...slugify }
+    // }
+};
+~~~
 
-Details on why we have to use a modified slug algorithm with vuepress and can be found in [Appendix](#appendix).
-
-
-> **Warnings**
+> ⚠ **Important:** Vuepress maps headings onto section anchors which become part of a URL fragment like `http://.../#foo-anchor`. By default vuepress creates anchors with lowercase ASCII characters, only. In contrast [github-slugger] will map unicode characters onto their lowercase unicode equivalent, which then affects you our your readers in the following way:
 >
-> ⚠ Changing the slug algorithm might be a breaking change in *published* docs. URLs, especially URL fragments may change. Bookmarks of your readers may become outdated.
+> 1. Readers who bookmarked a section URL with an ASCII-only `#`-URL fragment will still be able to open the web page they've bookmarked. But as a minor inconvenience their browser may no longer scroll to the bookmarked page section.
 >
-> ⚠ For headings with unicode characters, e.g. `# Äquator` vuepress generates lowercase slugs with ASCII characters, only, which you might referred to by links `[Äquator](#aquator)`. [glossarify-md]'s slugger keeps non-ASCII characters and requires you to refer to the same heading by `[Äquator](#äquator)`, so by a lowercase slug with **ä**.
+> 2. Writers who linke to a heading with unicode characters (e.g. `# Äquator`[^1]) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with **#ä...**.
+
+
+[^1]: German term for *Equator*
 
 ## Configure Build Scripts
 
 *package.json*
 ```json
 "scripts": {
-  "glossarify": "glossarify-md --config ./glossarify-md.conf.json",
   "start": "vuepress dev docs",
+  "glossarify": "glossarify-md --config ./glossarify-md.conf.json",
   "glossarified": "npm run glossarify && vuepress dev docs-glossarified",
-  "build": "npm run glossarify && vuepress build docs-glossarified",
+  "build": "npm run glossarify && vuepress build docs-glossarified"
 }
 ```
 - `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
+- `npm run glossarify` writes glossarified markdown files to `outDir`
 - `npm run glossarified` builds and serves the glossarified version from `outDir`.
-- `npm run build` just builds the glossarified version without running a server.
+- `npm run build` just builds the glossarified vuepress site without running a server.
 
 More information see [README.md](../README.md).
 
 ## Markdown Extensions
 
-Vuepress has a few [Markdown Extensions](https://vuepress.vuejs.org/guide/markdown.html). Most of them work out of the box. Though, *Frontmatter* requires a plug-in to work with glossarify-md. Read [Markdown Syntax Extensions](../README.md#markdown-syntax-extensions), for using glossarify-md with Markdown syntax not covered by the [CommonMark] Spec.
+Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by [CommonMark]. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with glossarify-md (see [Markdown Syntax Extensions][doc-syntax-extensions]).
 
 |      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                   |
 | ------------------------------------- | ------------------------------------------------------------------------------ |
@@ -115,24 +123,22 @@ Vuepress has a few [Markdown Extensions](https://vuepress.vuejs.org/guide/markdo
 
 ## Appendix
 
-[glossarify-md] requires a slug algorithm to create friendly URL fragments (#...) for section links. When vuepress translates *glossarified markdown* to HTML it does the same once again for the same purpose. If both tools use different slug algorithms then there's the risk of both generating different fragments which can break links in some situations ([#27](https://github.com/about-code/glossarify-md/issues/27)). So it's best to configure vuepress to use the same slugger as [glossarify-md].
+[glossarify-md] and [vuepress] both emply a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
 
 
-[glossarify-md] uses [github-slugger](https://npmjs.com/package/github-slugger) internally. In case you no longer want to use [glossarify-md] you might not want to have slugs change again. Then you can use the slugger directly with vuepress, too:
+[glossarify-md] uses [github-slugger] internally. In case you want to get rid of [glossarify-md] you likely not want to have slugs change again. Then you can use [github-slugger] standalone with vuepress, like so:
 
+*Using github-slugger without glossarify-md*
 ```js
-//.vuepress/config.js
 const GitHubSlugger = require("github-slugger");
-module.exports = {
-  /* ... */
-  markdown: {
-    slugify: (value) => {
+const slugify = {
+  slugify: (value) => {
       const slugifier = new GitHubSlugger();
       return slugifier.slug(value);
-    }
   }
 };
-```
 
-[vuepress]: https://vuepress.vuejs.org
-[glossarify-md]: https://github.com/about-code/glossarify-md
+module.exports = {
+  /* see section "Configure vuepress"... */
+};
+```
