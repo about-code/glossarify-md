@@ -5,6 +5,7 @@
 [doc-conceptual-layers]: ./conceptual-layers.md
 [doc-lists-on-github]: ./lists-on-github.md
 [doc-pandoc]: ./pandoc.md
+[doc-plugins]: ./plugins.md
 [doc-glossary]: ./glossary.md
 [SKOS]: http://w3.org/skos/
 [LD]: https://www.w3.org/standards/semanticweb/ontology
@@ -16,13 +17,18 @@
 
 # Advanced Topics
 
-Concepts
-- [Markdown Syntax Extensions][doc-syntax-extensions]
-- [Vocabulary and Term URIs][doc-vocabulary-uris]
-- [SKOS Interoperability with JSON-LD][doc-skos-interop]
-- [Glossary of glossarify-md][doc-glossary]
+ [Glossary][doc-glossary] (of glossarify-md)
 
-Using with others
+Markdown Syntax
+  - [Markdown Syntax Extensions][doc-syntax-extensions]
+  - [Installing Syntax Plug-ins][doc-plugins]
+
+Exporting and Importing
+  - [Vocabulary and Term URIs][doc-vocabulary-uris]
+  - [SKOS Interoperability with JSON-LD][doc-skos-interop]
+
+
+Further Processing
 - [Using glossarify-md with vuepress][doc-vuepress]
 - [Using glossarify-md with pandoc][doc-pandoc]
 

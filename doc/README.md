@@ -12,6 +12,8 @@
 
 [doc-pandoc]: ./pandoc.md
 
+[doc-plugins]: ./plugins.md
+
 [doc-glossary]: ./glossary.md
 
 [SKOS]: http://w3.org/skos/
@@ -30,14 +32,19 @@
 
 # [Advanced Topics](#advanced-topics)
 
-Concepts
+[Glossary][doc-glossary] (of glossarify-md)
+
+Markdown Syntax
 
 *   [Markdown Syntax Extensions][doc-syntax-extensions]
+*   [Installing Syntax Plug-ins][doc-plugins]
+
+Exporting and Importing
+
 *   [Vocabulary and Term URIs][doc-vocabulary-uris]
 *   [SKOS Interoperability with JSON-LD][doc-skos-interop]
-*   [Glossary of glossarify-md][doc-glossary]
 
-Using with others
+Further Processing
 
 *   [Using glossarify-md with vuepress][doc-vuepress]
 *   [Using glossarify-md with pandoc][doc-pandoc]
