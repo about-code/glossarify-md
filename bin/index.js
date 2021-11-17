@@ -239,7 +239,7 @@ function writeInitialConf(conf, argv) {
     if (argv.new) {
         const glossaryFile = path.resolve(conf.baseDir, "glossary.md");
         const configFile = path.resolve(conf.baseDir, "../glossarify-md.conf.json");
-        if (fs.pathExists(glossaryFile)) {
+        if (fs.pathExistsSync(glossaryFile)) {
             console.log(`⚠ Warning: ${glossaryFile} already exists. Nothing written.`);
         } else {
             fs.outputFileSync(glossaryFile, "# Glossary", "utf8");
