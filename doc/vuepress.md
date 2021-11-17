@@ -58,7 +58,7 @@ Below we assume a *sample* project structure like this:
 
 [glossarify-md] and [vuepress] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix][1].
 
-*./docs/.[vuepress🟉][2]/config.js*
+<em>./docs/.vuepress/config.js</em>
 
 ```js
 const slugify = {
