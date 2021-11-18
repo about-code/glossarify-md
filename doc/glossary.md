@@ -87,7 +87,7 @@ The fragment is the part follwing the `#` in a [URL🟉][11].
 
 <!--{ "aliases": "URI, URL" }-->
 
-*Uniform Resource Identifier* and *Uniform Resource Locator* describe both the same thing, which is an ID with a syntax `scheme://authority.tld/path/#fragment?query` like `https://my.org/foo/#bar?q=123`. Although both things are the same, the two acronyms are often used to emphasize whether using the ID to primarily *identify* something or using *the same ID* to *also* locate and retrieve a represention of what it identifies.
+*Uniform Resource Identifier* and *Uniform Resource Locator* are both the same thing, which is an ID with a syntax `scheme://authority.tld/path/#fragment?query` like `https://my.org/foo/#bar?q=123`. Although both things are the same, the two acronyms are often used to emphasize whether using the ID to primarily *identify* something or using *the same ID* to *also* locate and retrieve a represention of what it identifies.
 
 <!--
 For example there's no strict requirement that URIs must resolve to a web page. They are just IDs. However URIs *can* be used to *locate and retrieve* a textual representation *of what they identify* which is when they are often called URL. A *representation* can be a web page. But an URI could als identify a technical device and could be used as an URL to locate a representation of that device in form of a datasheet.
@@ -133,4 +133,4 @@ In case of glossarify-md you could use one of the cryptographic heading ID algor
 
 [10]: ./conceptual-layers.md
 
-[11]: #uri--url "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[11]: #uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."

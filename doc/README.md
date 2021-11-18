@@ -41,7 +41,7 @@ Markdown Syntax
 
 Exporting and Importing
 
-*   [Vocabulary and Term URIs][doc-vocabulary-uris]
+*   [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
 *   [SKOS Interoperability with JSON-LD][doc-skos-interop]
 
 Further Processing

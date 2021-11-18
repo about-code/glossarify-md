@@ -168,6 +168,6 @@ module.exports = {
 
 [8]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
 
-[9]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[9]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
 [10]: https://github.com/about-code/glossarify-md/issues/27

@@ -49,7 +49,7 @@ Term with an individual URI.
 
 ### [Resolvability](#resolvability)
 
-URIs can also be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a term's [URI🟉][1] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
+URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a term's [URI🟉][1] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
 
 ### [Authority](#authority)
 
@@ -73,6 +73,6 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 
 If you have a background in Linked Data and Semantic Web technologies you might also be interested in reading about [SKOS Interoperability with JSON-LD][2].
 
-[1]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator describe both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[1]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
 [2]: ./skos-interop.md
