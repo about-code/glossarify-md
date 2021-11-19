@@ -89,7 +89,11 @@ if (argv.logfile) {
     const logfile = path.resolve(argv.logfile);
     const logError = console.error;
     const logger = (txt) => {
-        nodeFs.writeFile(logfile, `${txt}\n`, { flag: "a"}, err => err ? logError(err) : "");
+        try {
+            nodeFs.writeFileSync(logfile, `${txt}\n`, { flag: "a"});
+        } catch (err) {
+            logError(err);
+        }
     };
     console.log = logger;
     console.warn = logger;
