@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-glossaries/import-with-external-context-invalid",
+  "glossaries": [{
+    "file": "imported.md",
+    "import": {
+      "file": "./glossary-with-invalid-context.json"
+    }
+  }]
+}

@@ -1,0 +1,33 @@
+{
+    "@context": {
+        "terms": { "@container": "@invalid" },
+        "@vocab": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+        "glsfy": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "dc": "http://purl.org/dc/terms/",
+        "uri": "@id",
+        "type": "@type",
+        "Glossary": "skos:ConceptScheme",
+        "title": "skos:prefLabel",
+        "language": {"@id": "@language"},
+        "Term": "skos:Concept",
+        "label": "skos:prefLabel",
+        "definition": "skos:definition",
+        "aliases": "skos:altLabel",
+        "abstract": "glsfy:abstract"
+    },
+    "type": "Glossary",
+    "uri": "https://my.org/vocab/#",
+    "title": "Glossary",
+    "language": "de",
+    "terms": {
+      "https://other.org/vocab/cat": {
+        "type": "Term",
+        "uri": "https://other.org/vocab/cat",
+        "label": "Test Case",
+        "definition": "EXPECT this not to be imported",
+        "abstract": "",
+        "aliases": []
+      }
+    }
+  }
