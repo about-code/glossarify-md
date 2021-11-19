@@ -61,11 +61,12 @@ Below we assume a *sample* project structure like this:
 <em>./docs/.vuepress/config.js</em>
 
 ```js
+const glossarify = require("glossarify-md");
 const slugify = {
-  slugify: require("glossarify-md").getSlugger();
+  slugify: glossarify.getSlugger()
 };
 module.exports = {
-    markdown: { ...slugify }    // vuepress v1.x
+    markdown: { ...slugify }     // vuepress v1.x
     // markdown: {               // vuepress v2.x
     //   toc: { ...slugify },
     //   anchor: { ...slugify },

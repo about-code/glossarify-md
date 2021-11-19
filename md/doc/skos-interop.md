@@ -120,7 +120,7 @@ On the next run of [glossarify-md] it will attempt to load package [jsonld] and
 1. look for `@context` mappings *embedded into the JSON import file*
 2. look for `@context` mappings provided *externally* using `import` with a `context` file
 
-Since very few tools embed JSON-LD mappings today we'll continue to make step 2. succeed by writingour own mappings:
+Since very few tools embed JSON-LD mappings today we'll continue to make step 2. succeed by writing our own mappings:
 
 *unknown-format.jsonld*
 ~~~json

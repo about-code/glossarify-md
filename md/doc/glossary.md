@@ -1,7 +1,15 @@
-# Glossary
+# Glossary of glossarify-md
 [glossarify-md]: https://github.com/about-code/glossarify-md
 
 This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also servers as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json](../glossarify-md.conf.json) configuration at the root of this repo.
+
+## Document
+
+A markdown file not being declared a *glossary* by means of glossarify-md config option `glossaries`.
+
+## JSON-Document
+
+A JSON-Document is a file or resource containing JSON-serialized data object.
 
 ## JSON-LD
 [JSON-LD]: https://json-ld.org

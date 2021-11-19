@@ -6,7 +6,7 @@
 
 [glossarify-md] is a command line tool to help Markdown writers with
 
-- **Cross-Linking** (prime use case): autolink terms to some definition in a glossary
+- **Cross-Linking** (primary use case): autolink terms to some definition in a glossary
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
@@ -81,7 +81,7 @@ npx glossarify-md --init > glossarify-md.conf.json
 ~~~
 
 - use `--init` to write a minimal config to stdout
-  - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossarify.md`
+  - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
   - add `--more` to write a config with more [options] and default values
   - add `--local` to load the config schema from the `node_modules` directory
 
@@ -190,8 +190,11 @@ Your document files may just use the term *Term* anywhere in text:
 This is a text which uses a glossary Term to describe something.
 ```
 
-Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration).
+Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration):
 
+~~~
+npx glossarify-md --config ./glossarify-md.conf.json
+~~~
 
 **Output Results**
 
@@ -238,12 +241,14 @@ A glossary term has a short description. The full description contains both sent
 Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. These are
 
 - Headlines `#`
-- Blockquotes `>`
-- Preformatted blocks ` ```, ~~~ `
 - (Markdown) links `[]()`
-- HTML `<a>text</a>`
+- Preformatted blocks ` ```, ~~~ `
+- Blockquotes `>`
+- HTML `<a>text</a>` or `<span>text</span>`
 
-Terms found in Markdown blockquotes (`>`) aren't linked to a term definition based on the premise that a quoted source entity may not share the same definition of a term like the entity who quotes it. They could use a term in different semantic contexts.
+> **ⓘ Tip:** Use HTML tags to explicitely mark a word from being linkified. Just wrap it into `<span>` or some non-HTML tag like e.g. `<x>`.
+
+> **ⓘ Note:** Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
 ## Aliases and Synonyms
 
@@ -251,7 +256,7 @@ Terms found in Markdown blockquotes (`>`) aren't linked to a term definition bas
 [aliases]: #aliases-and-synonyms
 [term-attributes]: #aliases-and-synonyms
 
-Aliases can be added with a *term attribute*. Term attributes follow a term's heading. Syntactically they are a JSON key-value map embedded into an HTML comment. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
+Aliases can be added by what we call a *term attribute*. Term attributes follow a term's heading. Syntactically they are a JSON key-value map embedded into an HTML comment. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
 
 *glossary.md with a term attribute `aliases`:*
 ```md
@@ -269,7 +274,7 @@ In the output files aliases will be linked to their related term:
 ```md
 # About Cats
 
-[Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [The Author]
+[Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
 ```
 
 > **ⓘ Prior to v6.0.0** there has also been an alternative aliases syntax whose (single-line) form is not meant to be deprecated any time soon.
@@ -277,7 +282,7 @@ In the output files aliases will be linked to their related term:
 > ## Term
 > <!-- Aliases: Term 1, Term2, ... -->
 > ~~~
-> Term attribute syntax using a JSON map is just going to be the way forward for embedding additional term metadata in the future. If you like to convert to term attribute syntax a RegEx-search with `<!--[\s]?Aliases:[\s]?(.*)[\s]-->` and replacement `<!--{ "aliases": "$1" }-->` may serve you.
+> Term attribute syntax using a JSON map is just going to be our way of providing additional term attributes in the future. If you like to convert to term attribute syntax a RegExp search with `<!--[\s]?Aliases:[\s]?(.*)[\s]-->` and replacement `<!--{ "aliases": "$1" }-->` may serve you.
 
 ## Term Hints
 
@@ -288,10 +293,8 @@ In the output files aliases will be linked to their related term:
 ]
 ```
 
-Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one.
+Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one. Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of a linkified term occurrence.
 
-> **ⓘ Since v2.0.0**: Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of the link.
->
 > **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
 
 ## Multiple Glossaries
@@ -320,13 +323,11 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ...
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* gets linked to the requirements catalogue. To navigate the opposite direction from a requirement to sections where those requirements got mentioned you can generate a [Book Index](#book-index).
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index](#book-index).
 
 ## Sorting your glossaries
 
-> **ⓘ Since v3.6.0**
-
-Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want [glossarify-md] to sort them for you:
+Add `sort` with `"asc"` (ascending) or `"desc"` (descending) to glossaries you want [glossarify-md] sort for you:
 
 *glossarify-md.conf.json*
 ```json
@@ -335,7 +336,7 @@ Add `sort` direction `"asc"` or `"desc"` to glossaries for which you want [gloss
 ]
 ```
 
-Internally sorting uses `Intl.Collator` and falls back to `String.localeCompare` if the `Intl` API is missing. You can tweak collation by adding `i18n` options:
+Internally, glossarify-md uses `Intl.Collator` and falls back to `String.localeCompare` if the `Intl` API is missing. You can tweak collation by adding `i18n` options:
 
 *glossarify-md.conf.json*
 ```json
@@ -410,8 +411,6 @@ In any file being processed [glossarify-md] will resolve the actual path to the 
 
 ### Book Index
 
-> **ⓘ Since v3.0.0**
-
 *glossarify-md.conf.json*
 
 ```json
@@ -452,8 +451,6 @@ Let's assume you have multiple glossaries and you want to create separate book i
 > **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
 ### Lists
-
-> **ⓘ Since v3.5.0**
 
 You can generate **arbitrary lists from HTML elements with an `id` attribute** and an element *classifier* to compile similar elements into the same list.
 
@@ -529,8 +526,6 @@ The link label for list items will be inferred in this order (first-match):
 
 ### List of Figures
 
-> **ⓘ Since v3.3.0**
-
 So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
 `listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
 
@@ -581,8 +576,6 @@ This configuration which would allow you to also choose a shorter classifier lik
 ```
 
 ### List of Tables
-
-> **ⓘ Since v3.4.0**
 
 `listOfTables` like [`listOfFigures`](#list-of-figures) is a shortcut alternative to HTML anchors with a default [`listOf`](#lists) classifier ***table***:
 
@@ -649,7 +642,7 @@ The result for the tables above will be:
 > - [Average Prices by Article Category](#avg-prices)
 
 
-Since **v5.0.0** and the introduction of `listOf` all the previous examples will make [glossarify-md] annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
+**Since v5.0.0** and the introduction of `listOf` all the previous examples will make [glossarify-md] annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
 
 ```md
 <a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
@@ -704,17 +697,19 @@ You can then generate a *List of Tasks* with a configuration like this:
 }
 ~~~
 
-If the regular expression (RegEx) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegEx has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
+If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegExp has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
 
-> **ⓘ Which syntax to include in the RegEx**:
+> **ⓘ When to consider "markdown syntax" in the RegExp**:
 >
-> You may notice that the RegEx above doesn't assume *Task* to be written between `**` star markers. The expression won't be applied directly to the Markdown input *you* wrote but to plain text cleaned from any *recognised* syntax elements of [CommonMark] or [GFM]. If the phrase had contained other syntax then the RegEx had to take care for it to correctly match (more on syntax extensions see addendum [Markdown Syntax Extensions][doc-syntax-extensions]).
+> You may noticed that the RegExp above doesn't assume *Task:* to be written between "bold" star markers `**`. The expression won't be matched against the input *you* wrote but against *plain text* cleaned from symbols contributing to [CommonMark] or [GFM] syntax.
+>
+> In case you use another Markdown flavor see our addendum on [Markdown Syntax Extensions][doc-syntax-extensions]. Without a proper plug-in its syntactical elements are likely considered plain text, too. Then they need to be taken care of in the RegExp to make it match.
 
 ## Structured Export and Import
 [doc-export-import]: #structured-export-and-import
 [SKOS]: https://w3.org/skos
 
-**Since v6.0.0** markdown glossary terms can be exported to a structured JSON format or RDF N-Quads (file extension `.nq`).
+**Since v6.0.0** markdown glossary terms can be exported to a structured JSON format (file extension `.json`) or RDF N-Quads (file extension `.nq`).
 
 *glossarify-md.conf.json* (generates ./glossary.json)
 ~~~json
@@ -729,9 +724,7 @@ If the regular expression (RegEx) matches text in a paragraph, then *the paragra
 }
 ~~~
 
-Consider declaring a glossary `uri` when exporting. Then [glossarify-md] can assign each term a web-compatible identifier by combining the glossary's vocabulary `uri` with a term's identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris].
-
-You can import terms the same way using `import` instead.
+Declaring a glossary `uri` when exporting. It will make [glossarify-md] assign each term a *uniform resource identifier* by combining the glossary's `uri` with a term's book-internal identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]. You can import terms the same way using `import` instead.
 
 *glossarify-md.conf.json* (generates ./glossary.md):
 ~~~json

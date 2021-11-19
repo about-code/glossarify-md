@@ -10,7 +10,7 @@
 
 Consider bankers and IT professionals talking about *security*. Since the term is used differently in the banking domain than it is being used in computer science its *ambiguity* can cause some confusion among these people. As a consequence the term demands *clarification* of its particular meaning when being used. Of course, that's what glossaries are meant for.
 
-*Technically* such kind of clarification can be achieved using *IDs* to uniquely identify *one particular definition of meaning*. Uniform Resource Identifiers (URIs) do fit well for that purpose. For example whenever a system processes an [URI🟉][1]
+*For a computer* such kind of clarification can be achieved using *IDs* to *uniquely identify one particular definition of meaning*. Uniform Resource Identifiers (URIs) do fit well for that purpose. For example whenever a system processes an [URI🟉][1]
 
 *   `https://example.com/glossary/banking/#security`
 
