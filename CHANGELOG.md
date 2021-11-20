@@ -2,127 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [6.0.0-rc.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-beta.0...v6.0.0-rc.0) (2021-11-07)
-
-
-### ⚠ BREAKING CHANGES
-
-* Affects users of 6.0.0-alpha and 6.0.0-beta.0, only and only those using `headingIdAlgorithm` with `md5` or `sha256`. The fix affects hashsums and may affect a term's URI.
-
-  Previously a term's hashsum was created from a term's plaintext
-URI consisting of vocabulary-URI + slug. But when there's a
-`glossaries` entry with a glob pattern and an `uri` then once
-the same term existed twice or more in different glob-matched
-glossaries the terms' hashsums would collide although
-the algorithms are meant to guarantee *uniqueness in the fileset*.
-The change fixes this by including the glossary file's source path
-in the value being hashed.
-
-* glossarify-md@6.0.0 ends support for Node 12.x.
-
-### Features
-
-* Export and import RDF N-Quads ([#209](https://github.com/about-code/glossarify-md/issues/209)) ([d5057c4](https://github.com/about-code/glossarify-md/commit/d5057c4ec41d816927f80a2d9d26328da8dada9c))
-* New node support matrix ([#210](https://github.com/about-code/glossarify-md/issues/210)) ([b83f73f](https://github.com/about-code/glossarify-md/commit/b83f73fe395cf5dfffb0b232bae101b2ac932dc0))
-
-
-### Bug Fixes
-
-* No fileset uniqueness of hashed heading id with glossary uri and globs ([#214](https://github.com/about-code/glossarify-md/issues/214)) ([6d5674e](https://github.com/about-code/glossarify-md/commit/6d5674efe882bc42fe199d14b1359813c7c58483))
-* Rewrite exporter to fix non-deterministic results. ([#215](https://github.com/about-code/glossarify-md/issues/215)) ([2265ac7](https://github.com/about-code/glossarify-md/commit/2265ac75fb4c2f1fcde600da954494fd07497e01))
-* Wrong linking of heading depths when term exists twice at different depths ([#217](https://github.com/about-code/glossarify-md/issues/217)) ([3df4fe5](https://github.com/about-code/glossarify-md/commit/3df4fe56e5b14d024cf9e04095d3f468e7fd5b22))
-
-## [6.0.0-beta.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.9...v6.0.0-beta.0) (2021-10-31)
-
-
-### Features
-
-* Import from remote ([#205](https://github.com/about-code/glossarify-md/issues/205)) ([ebadc59](https://github.com/about-code/glossarify-md/commit/ebadc591983d57a8b23008b4b92a033203f6f1ef))
-
-## [6.0.0-alpha.9](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.8...v6.0.0-alpha.9) (2021-10-29)
-
-
-### Features
-
-* New option 'glossaries[].showUris' ([48b5585](https://github.com/about-code/glossarify-md/commit/48b5585784ecc599670998427f4902bcf6c943be))
-
-## [6.0.0-alpha.8](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.7...v6.0.0-alpha.8) (2021-10-21)
-
-
-### ⚠ BREAKING CHANGES
-
-* **refactor:** Affects users of 6.0.0-alpha.7 only:
-`export: "string"` and `exports: [...]` are no longer
-supported. Use `export: { "file": "string" }` or
-`export: [{ "file": "string" }]` instead.
-
-* Making `outDir` current working directory (CWD):
-This might only affect you if you have used glossarify-md
-with third-party remark plug-ins which require file path configurations
-and assume paths relative to 'process.cwd()'.
-
-### Features
-
-* Structured imports. ([4447f72](https://github.com/about-code/glossarify-md/commit/4447f727732ce7d04d1a48dd570fa8bfe30dd1c3))
-* Make outdir current working dir ([#196](https://github.com/about-code/glossarify-md/issues/196)) ([241d59d](https://github.com/about-code/glossarify-md/commit/241d59d2271f4a7527b6cb7f4d9b6e76f4a26a1a))
-* New option `glossaries.linkUris`. ([8d8f78b](https://github.com/about-code/glossarify-md/commit/8d8f78b9e145c1af0364657ec410a46ef6d15b46))
-* New JSONish term attributes syntax (Aliases, etc.) ([e6e9f45](https://github.com/about-code/glossarify-md/commit/e6e9f453b8300ebaa236175ddb55707f198ecb3e))
-
-### Bug Fixes
-
-* Spaces causing many `&#x20;` being rendered in index files and lists ([#195](https://github.com/about-code/glossarify-md/issues/195)) ([65d5290](https://github.com/about-code/glossarify-md/commit/65d529077484dbf57167751adfc9d6a65a54a926)), closes [#x20](https://github.com/about-code/glossarify-md/issues/x20)
-
-
-* **refactor:** Align `export` option with `import` option. ([427de35](https://github.com/about-code/glossarify-md/commit/427de35c79df0f459808f1c3fb45760b103d5bc6))
-
-## [6.0.0-alpha.7](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.6...v6.0.0-alpha.7) (2021-10-13)
-
-
-### Bug Fixes
-
-* CommonJS interop. Package entry module with npm package archives. ([5898b5c](https://github.com/about-code/glossarify-md/commit/5898b5c16bf423edfd402b41181a579f8ac63bca))
-
-## [6.0.0-alpha.6](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.5...v6.0.0-alpha.6) (2021-10-13)
-
-
-### Bug Fixes
-
-* Add missing dependency vfile. ([df8afc2](https://github.com/about-code/glossarify-md/commit/df8afc204b0e25239585d7450fcc9bd508348f35))
-
-## [6.0.0-alpha.5](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.4...v6.0.0-alpha.5) (2021-10-13)
-
+## [6.0.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-rc.0...v6.0.0) (2021-11-20)
 
 ### ⚠ BREAKING CHANGES
 
 * Option `linking.baseUrl` now requires values to have a trailing slash.
-* Hashes generated with `headingIdAlgorithm` other than `"github"` change (only affects users of previous 6.0.0-alpha).
+* glossarify-md@6.0.0 ends support for Node 12.x.
+* Dropping use of deprecated `url.parse()` NodeJS-API.
 
-### Features
-
-* Apply options like `termHint` and `sort` on glossaries selected with `glob` pattern. ([1030b78](https://github.com/about-code/glossarify-md/commit/1030b7821db989fecc9eb60f79378436f276c60e))
-* New config option `glossaries[].uri` ([699f01e](https://github.com/about-code/glossarify-md/commit/699f01eaabca75336e71260093dab90fbd713bee))
-* New config option `glossaries[].export` and `glossaries[].exports`: Structured interoperable export. ([6d68976](https://github.com/about-code/glossarify-md/commit/6d689762b1b5882f6f94efa8884efc368b8b5363))
-  * Support multiple exports with different JSON-LD context mappings. ([4cfcdc3](https://github.com/about-code/glossarify-md/commit/4cfcdc3396b46b4a8af1e549c79af20f7881ca99))
-
-
-### Bug Fixes
-
-* Provide CommonJS export of getSlugger() for vuepress v1 compatibility ([#189](https://github.com/about-code/glossarify-md/issues/189)) ([101b768](https://github.com/about-code/glossarify-md/commit/101b768b3ca3f1cd3d824cdfc9fa85cfdab00313))
-
-## [6.0.0-alpha.4](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.3...v6.0.0-alpha.4) (2021-09-21)
-
-
-### Features
-
-* Install less dependencies by default. ([986bdec](https://github.com/about-code/glossarify-md/commit/986bdec7a30e92d162d7bcd8d7318fc64023ebfb))
-
-## [6.0.0-alpha.3](https://github.com/about-code/glossarify-md/compare/v6.0.0-alpha.2...v6.0.0-alpha.3) (2021-09-12)
-
-
-### ⚠ BREAKING CHANGES
-
-* **compatibility:** Dropping use of deprecated `url.parse()` NodeJS-API.
-Unfortunately, there is no replacement for the old API that is fully compatible.
+  Unfortunately, there is no replacement for the old API that is fully compatible.
 As a consequence you *may* observe that path encoding has changed. Previously
 all paths (relative or absolute) have been passed through
 `url.parse(path).format()` and thereby got URL-encoded. With this change
@@ -132,49 +20,65 @@ now must be `"/"` *or* must be a URL which conforms to WHATWG URL specification
 and which can be passed as a *base* parameter to Node's URL implementation (see
 also https://docs.nodejs.org/api/url.html).
 
-### Features
+* Making `outDir` current working directory (CWD):
 
-* **compatibility:** Drop deprecated `url.parse()` NodeJS-API. ([#178](https://github.com/about-code/glossarify-md/issues/178)) ([ed8ffc8](https://github.com/about-code/glossarify-md/commit/ed8ffc8b6ffdd25cad13153b5133d3a37a1ce54f))
-* New option `linking.pathComponents` ([#173](https://github.com/about-code/glossarify-md/issues/173)) ([1a2fdd6](https://github.com/about-code/glossarify-md/commit/1a2fdd6af4bcc37f12d2c2e5c535e593c0458b45))
-* Rename option `linking.byReference` to `linking.byReferenceDefinition`. ([#174](https://github.com/about-code/glossarify-md/issues/174)) ([7950a17](https://github.com/about-code/glossarify-md/commit/7950a17a73f1b7a65797271a22c37fc8b049cf12))
-
-## [6.0.0-alpha.2](https://github.com/about-code/glossarify-md/compare/v5.2.0...v6.0.0-alpha.2) (2021-09-06)
-
-
-### Features
-
-* New options `linking.headingIdPandoc`, `linking.byReference`, `linking.headingAsLink`. ([447fc17](https://github.com/about-code/glossarify-md/commit/447fc1700538eddaa38286dc98011a029a1a061c))
-
-
-## [6.0.0-alpha.1](https://github.com/about-code/glossarify-md/compare/v5.2.0...v6.0.0-alpha.1) (2021-09-03)
-
-
-### ⚠ BREAKING CHANGES
-
-* Requires Node >= 12.20.
-Upgrading to new major versions of dependencies.
+  This might only affect you if you have used glossarify-md
+with third-party remark plug-ins which require file path configurations
+and assume paths relative to `process.cwd()`.
 
 * chore(deps): Migrating to remark v14 and unified v10.
-* chore(refactor): Bump package version to v6.0.0.
-* test: New baseline.
 
 ### Features
 
-* Migrate to ECMAScript Modules (ESM) ([#164](https://github.com/about-code/glossarify-md/issues/164)) ([36e6289](https://github.com/about-code/glossarify-md/commit/36e62891d80fb828aaaf3ca4c9cb1135c9314359))
-* New option value `"none"` for option `linking.paths`. ([a0fc951](https://github.com/about-code/glossarify-md/commit/a0fc951b80065ca609eb035d3ea8adbb5be8c1b0))
-* New option `linking.headingIdAlgorithm` for unique heading identifiers based on MD5 or SHA256. ([ab61b6c](https://github.com/about-code/glossarify-md/commit/ab61b6cbfa5400c809e9755338dee27ecb56173a))
+* Apply options like `termHint` and `sort` on glossaries selected with `glob` pattern. ([1030b78](https://github.com/about-code/glossarify-md/commit/1030b7821db989fecc9eb60f79378436f276c60e))
 
+**Exporting & Importing**
+
+* New config option `glossaries[].export` and `glossaries[].exports`: Structured interoperable export. ([6d68976](https://github.com/about-code/glossarify-md/commit/6d689762b1b5882f6f94efa8884efc368b8b5363))
+* Export and import RDF N-Quads ([#209](https://github.com/about-code/glossarify-md/issues/209)) ([d5057c4](https://github.com/about-code/glossarify-md/commit/d5057c4ec41d816927f80a2d9d26328da8dada9c))
+* Support multiple exports with different JSON-LD context mappings. ([4cfcdc3](https://github.com/about-code/glossarify-md/commit/4cfcdc3396b46b4a8af1e549c79af20f7881ca99))
+* Structured imports. ([4447f72](https://github.com/about-code/glossarify-md/commit/4447f727732ce7d04d1a48dd570fa8bfe30dd1c3))
+* Import from remote ([#205](https://github.com/about-code/glossarify-md/issues/205)) ([ebadc59](https://github.com/about-code/glossarify-md/commit/ebadc591983d57a8b23008b4b92a033203f6f1ef))
+
+**Linking**
+
+* New option `linking.pathComponents` ([#173](https://github.com/about-code/glossarify-md/issues/173)) ([1a2fdd6](https://github.com/about-code/glossarify-md/commit/1a2fdd6af4bcc37f12d2c2e5c535e593c0458b45))
+* New option value `"none"` for option `linking.paths`. ([a0fc951](https://github.com/about-code/glossarify-md/commit/a0fc951b80065ca609eb035d3ea8adbb5be8c1b0))
+* New options `linking.headingIdPandoc`, <del>`linking.byReference`</del>, `linking.headingAsLink`. ([447fc17](https://github.com/about-code/glossarify-md/commit/447fc1700538eddaa38286dc98011a029a1a061c))
+  * Rename option `linking.byReference` to `linking.byReferenceDefinition`. ([#174](https://github.com/about-code/glossarify-md/issues/174)) ([7950a17](https://github.com/about-code/glossarify-md/commit/7950a17a73f1b7a65797271a22c37fc8b049cf12))
+* New option `linking.headingIdAlgorithm` for unique heading identifiers based on MD5 or SHA256. ([ab61b6c](https://github.com/about-code/glossarify-md/commit/ab61b6cbfa5400c809e9755338dee27ecb56173a))
+* New config option `glossaries[].uri` ([699f01e](https://github.com/about-code/glossarify-md/commit/699f01eaabca75336e71260093dab90fbd713bee))
+* New option `glossaries[].showUris` ([48b5585](https://github.com/about-code/glossarify-md/commit/48b5585784ecc599670998427f4902bcf6c943be))
+* New option `glossaries.linkUris`. ([8d8f78b](https://github.com/about-code/glossarify-md/commit/8d8f78b9e145c1af0364657ec410a46ef6d15b46))
+
+
+**Others**
+
+* New JSONish term attributes syntax (Aliases, etc.) ([e6e9f45](https://github.com/about-code/glossarify-md/commit/e6e9f453b8300ebaa236175ddb55707f198ecb3e))
+* Install less dependencies by default ([inquirer](https://npmjs.com/package/inquirer) as a peer-dependency). ([986bdec](https://github.com/about-code/glossarify-md/commit/986bdec7a30e92d162d7bcd8d7318fc64023ebfb))
+* Make outdir current working dir ([#196](https://github.com/about-code/glossarify-md/issues/196)) ([241d59d](https://github.com/about-code/glossarify-md/commit/241d59d2271f4a7527b6cb7f4d9b6e76f4a26a1a))
+* Migrate to ECMAScript Modules (ESM) ([#164](https://github.com/about-code/glossarify-md/issues/164)) ([36e6289](https://github.com/about-code/glossarify-md/commit/36e62891d80fb828aaaf3ca4c9cb1135c9314359))
+* CommonJS interop. Package entry module with npm package archives for vuepress v1.x compatibility. ([5898b5c](https://github.com/about-code/glossarify-md/commit/5898b5c16bf423edfd402b41181a579f8ac63bca))
+* Provide CommonJS export of getSlugger() for vuepress v1 compatibility ([#189](https://github.com/about-code/glossarify-md/issues/189)) ([101b768](https://github.com/about-code/glossarify-md/commit/101b768b3ca3f1cd3d824cdfc9fa85cfdab00313))
+* Drop use of deprecated `url.parse()` NodeJS-API. ([#178](https://github.com/about-code/glossarify-md/issues/178)) ([ed8ffc8](https://github.com/about-code/glossarify-md/commit/ed8ffc8b6ffdd25cad13153b5133d3a37a1ce54f))
+* New node support matrix ([#210](https://github.com/about-code/glossarify-md/issues/210)) ([b83f73f](https://github.com/about-code/glossarify-md/commit/b83f73fe395cf5dfffb0b232bae101b2ac932dc0))
 
 ### Bug Fixes
 
+* --init --new wrongly assumes ./docs/glossary.md exists ([#224](https://github.com/about-code/glossarify-md/issues/224)) ([d6bc34d](https://github.com/about-code/glossarify-md/commit/d6bc34d5f3cabaa85a0252ef51daaa5ccc0b3660))
+* Wrong linking of heading depths when term exists twice at different depths ([#217](https://github.com/about-code/glossarify-md/issues/217)) ([3df4fe5](https://github.com/about-code/glossarify-md/commit/3df4fe56e5b14d024cf9e04095d3f468e7fd5b22))
 * **perf:** Unnecessary "unwrap" iterations. ([2b0aa2f](https://github.com/about-code/glossarify-md/commit/2b0aa2f3f8b417cd7304bb0f8d6629ede2615095))
 * **perf:** Unnecessary duplicate writes. ([f92db19](https://github.com/about-code/glossarify-md/commit/f92db19281194d096b6f137df327a5eaf5fabb5a))
 * Access error when processing all-empty files ([aeaaf1d](https://github.com/about-code/glossarify-md/commit/aeaaf1d9ccd70190f3e58bbf39313f7fd784cbe2))
-
+* Not importing localized data correctly. ([#220](https://github.com/about-code/glossarify-md/issues/220)) ([0327d87](https://github.com/about-code/glossarify-md/commit/0327d879d987ab52b430469db3abe483cf565f60))
+* Add missing dependency vfile. ([df8afc2](https://github.com/about-code/glossarify-md/commit/df8afc204b0e25239585d7450fcc9bd508348f35))
+* Spaces causing many `&#x20;` being rendered in index files and lists ([#195](https://github.com/about-code/glossarify-md/issues/195)) ([65d5290](https://github.com/about-code/glossarify-md/commit/65d529077484dbf57167751adfc9d6a65a54a926)), closes [#x20](https://github.com/about-code/glossarify-md/issues/x20)
 
 ### Documentation Updates
 
+* Added [Using with pandoc](./doc/pandoc.md) ([#221](https://github.com/about-code/glossarify-md/issues/221)) ([f24eff5](https://github.com/about-code/glossarify-md/commit/f24eff5007dce1b407508b8bc9c4f39b33a0a18d))
 * Clarify pattern anchorization ([bf7f98f](https://github.com/about-code/glossarify-md/commit/bf7f98f02aa72e48efd529e8b0f4cfa4b87bddd1))
+
 
 ## [5.2.0](https://github.com/about-code/glossarify-md/compare/v5.1.3...v5.2.0) (2021-06-04)
 
