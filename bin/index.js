@@ -84,7 +84,11 @@ if (!argv.init) {
     console.log(banner);
 }
 if (argv.logfile) {
-    try { nodeFs.unlinkSync(argv.logfile); } catch (err) { /* ignore */ }
+    try {
+        nodeFs.unlinkSync(argv.logfile);
+    } catch (err) {
+        /* ignore */
+    }
     nodeFs.mkdirSync(path.dirname(argv.logfile), { recursive: true });
     const logfile = path.resolve(argv.logfile);
     const logError = console.error;
@@ -134,51 +138,55 @@ if (confPath) {
     confDir = CWD;
 }
 
-confPromise.then((conf) => {
+(async function() {
+    try {
+        let conf = await confPromise;
 
-    // --deep custum conf
-    if (argv.deep) {
-        try {
-            conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
-        } catch (e) {
-            console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
-            proc.exit(1);
+        // --deep custum conf
+        if (argv.deep) {
+            try {
+                conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
+            } catch (e) {
+                console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
+                proc.exit(1);
+            }
         }
-    }
-    // --shallow custom conf
-    if (argv.shallow) {
-        try {
-            conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
-        } catch (e) {
-            console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
-            proc.exit(1);
+        // --shallow custom conf
+        if (argv.shallow) {
+            try {
+                conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
+            } catch (e) {
+                console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
+                proc.exit(1);
+            }
         }
-    }
-    // Merge custom conf with default conf
-    conf = merge(confDefault, conf, {
-        clone: false
-        , arrayMerge: (_default, curConf) => {
-            return curConf && curConf.length > 0 ? curConf : _default;
+        // Merge custom conf with default conf
+        conf = merge(confDefault, conf, {
+            clone: false
+            , arrayMerge: (_default, curConf) => {
+                return curConf && curConf.length > 0 ? curConf : _default;
+            }
+        });
+
+        // --init
+        if (argv.init) {
+            writeInitialConf(conf, argv);
+            proc.exit(0);
         }
-    });
 
-    // --init
-    if (argv.init) {
-        writeInitialConf(conf, argv);
-        proc.exit(0);
+        // Resolve baseDir relative to confDir and outDir relative to baseDir
+        conf.baseDir = path.resolve(confDir, conf.baseDir);
+        conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
+        validateConf(conf);
+
+        // _/ Run \_____________________________________________________________________
+        program.run(conf);
+    } catch (err) {
+        console.error(err);
+        proc.exit(1);
     }
+})();
 
-    // Resolve baseDir relative to confDir and outDir relative to baseDir
-    conf.baseDir = path.resolve(confDir, conf.baseDir);
-    conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
-    validateConf(conf);
-
-    // _/ Run \_____________________________________________________________________
-    program.run(conf);
-}).catch(error => {
-    console.error(error);
-    proc.exit(1);
-});
 
 // _/ Helpers \_________________________________________________________________
 function validateConf(conf) {
