@@ -790,7 +790,7 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 }
 ```
 
-Declaring a glossary `uri` when exporting. It will make [glossarify-md] assign each term a *uniform resource identifier* by combining the glossary's `uri` with a term's book-internal identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]. You can import terms the same way using `import` instead.
+Declare a glossary `uri` when exporting. It will make [glossarify-md] assign each term a *uniform resource identifier* by combining the glossary's `uri` with a term's book-internal identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]. You can import terms the same way using `import` instead.
 
 *glossarify-md.conf.json* (generates ./glossary.md):
 
