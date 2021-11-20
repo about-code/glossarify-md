@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.0.0-rc.1](https://github.com/about-code/glossarify-md/compare/v6.0.0-rc.0...v6.0.0-rc.1) (2021-11-20)
+
+### Bug Fixes
+
+* --init --new wrongly assumes ./docs/glossary.md exists ([#224](https://github.com/about-code/glossarify-md/issues/224)) ([d6bc34d](https://github.com/about-code/glossarify-md/commit/d6bc34d5f3cabaa85a0252ef51daaa5ccc0b3660))
+* Not importing localized data correctly. ([#220](https://github.com/about-code/glossarify-md/issues/220)) ([0327d87](https://github.com/about-code/glossarify-md/commit/0327d879d987ab52b430469db3abe483cf565f60))
+
+### Documentation Updates
+
+* **doc:** Added *Using with pandoc* ([#221](https://github.com/about-code/glossarify-md/issues/221)) ([f24eff5](https://github.com/about-code/glossarify-md/commit/f24eff5007dce1b407508b8bc9c4f39b33a0a18d))
+
 ## [6.0.0-rc.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-beta.0...v6.0.0-rc.0) (2021-11-07)
 
 
