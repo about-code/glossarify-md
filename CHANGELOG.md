@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [6.0.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-rc.0...v6.0.0) (2021-11-20)
 
+This is a summary of notable changes between v5.2.0 and v6.0.0. As a user of prerelease versions (`alpha, beta, rc`) or `glossarify-md@next` have a look at [changes between pre-releases](https://github.com/about-code/glossarify-md/blob/v6.0.0-rc.1/CHANGELOG.md).
+
 ### ⚠ BREAKING CHANGES
 
 * Option `linking.baseUrl` now requires values to have a trailing slash.
