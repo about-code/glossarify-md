@@ -211,8 +211,6 @@
             ,"not": {
                 "anyOf": [
                     { "required": ["import", "export"] }
-                    ,{ "required": ["import", "exports"] }
-                    ,{ "required": ["export", "exports"] }
                 ]
             }
         }

@@ -36,7 +36,7 @@ and assume paths relative to `process.cwd()`.
 
 **Exporting & Importing**
 
-* New config option `glossaries[].export` and `glossaries[].exports`: Structured interoperable export. ([6d68976](https://github.com/about-code/glossarify-md/commit/6d689762b1b5882f6f94efa8884efc368b8b5363))
+* New config option `glossaries[].export`: Structured interoperable export. ([6d68976](https://github.com/about-code/glossarify-md/commit/6d689762b1b5882f6f94efa8884efc368b8b5363))
 * Export and import RDF N-Quads ([#209](https://github.com/about-code/glossarify-md/issues/209)) ([d5057c4](https://github.com/about-code/glossarify-md/commit/d5057c4ec41d816927f80a2d9d26328da8dada9c))
 * Support multiple exports with different JSON-LD context mappings. ([4cfcdc3](https://github.com/about-code/glossarify-md/commit/4cfcdc3396b46b4a8af1e549c79af20f7881ca99))
 * Structured imports. ([4447f72](https://github.com/about-code/glossarify-md/commit/4447f727732ce7d04d1a48dd570fa8bfe30dd1c3))
