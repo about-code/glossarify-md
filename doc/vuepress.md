@@ -79,9 +79,7 @@ module.exports = {
 >
 > 1.  Readers who bookmarked a section URL with an ASCII-only `#`-URL fragment will still be able to open the web page they've bookmarked. But as a minor inconvenience their browser may no longer scroll to the bookmarked page section.
 >
-> 2.  Writers who linke to a heading with unicode characters (e.g. `# Äquator`[^1]) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with **#ä...**.
-
-[^1]: German term for *Equator*
+> 2.  Writers who linked to a heading with unicode characters (e.g. `# Äquator`) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with `#ä...`.
 
 ## [Configure Build Scripts](#configure-build-scripts)
 
@@ -133,7 +131,7 @@ More information see [README.md][3].
 
 ## [Appendix](#appendix)
 
-[glossarify-md] and [vuepress] both emply a [slug🟉][7] algorithm to create friendly [URL fragments🟉][8] (`#...`) for section links. When [vuepress🟉][2] is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][9] fragments which can break links in a book (see [#27][10]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
+[glossarify-md] and [vuepress] both employ a [slug🟉][7] algorithm to create friendly [URL fragments🟉][8] (`#...`) for section links. When [vuepress🟉][2] is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][9] fragments which can break links in a book (see [#27][10]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
 
 [glossarify-md] uses [github-slugger] internally. In case you want to get rid of [glossarify-md] you likely not want to have [slugs🟉][7] change again. Then you can use [github-slugger] standalone with [vuepress🟉][2], like so:
 

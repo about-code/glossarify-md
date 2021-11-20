@@ -77,10 +77,7 @@ module.exports = {
 >
 > 1. Readers who bookmarked a section URL with an ASCII-only `#`-URL fragment will still be able to open the web page they've bookmarked. But as a minor inconvenience their browser may no longer scroll to the bookmarked page section.
 >
-> 2. Writers who linke to a heading with unicode characters (e.g. `# Äquator`[^1]) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with **#ä...**.
-
-
-[^1]: German term for *Equator*
+> 2. Writers who linked to a heading with unicode characters (e.g. `# Äquator`) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with `#ä...`.
 
 ## Configure Build Scripts
 
@@ -124,7 +121,7 @@ Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdo
 
 ## Appendix
 
-[glossarify-md] and [vuepress] both emply a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
+[glossarify-md] and [vuepress] both employ a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
 
 
 [glossarify-md] uses [github-slugger] internally. In case you want to get rid of [glossarify-md] you likely not want to have slugs change again. Then you can use [github-slugger] standalone with vuepress, like so:

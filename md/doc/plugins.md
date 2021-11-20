@@ -13,6 +13,19 @@ The following example demonstrates how to install a [remark plug-in][remark-plug
 
 > **☛ Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
+We'll assume the following file structure:
+
+~~~
+${root}
+   +- docs/                        (baseDir)
+   +- docs-glossarified/           (outDir)
+   +- node_modules/
+   |- glossarify-md.conf.json
+   |- remark.conf.json
+   |- package.json
+   '- .gitignore
+~~~
+
 **1:** Next to your `outDir` create a file `remark.conf.json`. Then add to your `glossarify-md.conf.json`:
 
 ```json
@@ -23,7 +36,7 @@ The following example demonstrates how to install a [remark plug-in][remark-plug
 }
 ```
 
-`rcPath` is interpreted relative to `outDir`.
+`rcPath` is interpreted relative to `outDir`, so you need to "step out" of it.
 
 **2:** Then install a [remark plug-in][remark-plugin]
 
@@ -33,6 +46,7 @@ npm install remark-frontmatter
 
 **3:** Make remark load the plug-in by adding to your `remark.conf.json`:
 
+*remark.conf.js*
 ```json
 {
   "plugins": {
@@ -44,12 +58,10 @@ npm install remark-frontmatter
 }
 ```
 
-`remark.conf.json` follows the [unified configuration][unified-config] schema:
+1. `remark-frontmatter` must be the name of the npm package you installed before
+2. any properties of the `remark-frontmatter` object are options specific to the plug-in.
 
-- `remark-frontmatter` must be the name of the npm package you installed before
-- any properties of the object are specific to the plug-in.
-
-You could also embed the configuration into a glossarify-md.conf.json by replacing `rcPath` with the `plugins` key. But keep in mind that anything under the `unified` key is a different config schema and *not* subject to the [glossarify-md] config schema.
+`remark.conf.json` follows the [unified configuration][unified-config] schema. You could also embed the configuration into a `glossarify-md.conf.json` by replacing `rcPath` above with `plugins`. But keep in mind that anything under the `unified` key is a different config schema and *not* subject to [glossarify-md]'s config schema.
 
 > **ⓘ [remark], [unified], uhh... ?**
 >
