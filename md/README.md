@@ -182,13 +182,13 @@ A glossary term has a short description. The full description contains both sent
 
 Your document files may just use the term *Term* anywhere in text:
 
-*docs/pages/page1.md*
-
+*./docs/pages/page1.md...*
 ```md
 # Demo
 
 This is a text which uses a glossary Term to describe something.
 ```
+
 
 Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration):
 
@@ -201,7 +201,6 @@ npx glossarify-md --config ./glossarify-md.conf.json
 Augmented versions of the source files have been written to the output directory:
 
 *./docs-glossarified/pages/page1.md*
-
 ```md
 # [Demo](#demo)
 
@@ -209,6 +208,8 @@ This is a text which uses a glossary [Term🟉][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
+
+*Rendered as HTML:*
 
 > ## [Demo](#demo)
 >
@@ -229,6 +230,7 @@ Headings in glossary files have got an anchor ID and have been made linkable:
 A glossary term has a short description. The full description contains both sentences.
 ```
 
+*Rendered as HTML*:
 > ## [Glossary](#glossary)
 >
 > ### [Term](#term)
@@ -238,17 +240,18 @@ A glossary term has a short description. The full description contains both sent
 
 ## What's not Linked
 
-Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. These are
+Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. Terms are not linkified when part of:
 
 - Headlines `#`
 - (Markdown) links `[]()`
 - Preformatted blocks ` ```, ~~~ `
 - Blockquotes `>`
-- HTML `<a>text</a>` or `<span>text</span>`
+- HTML `<a>text</a>`
 
-> **ⓘ Tip:** Use HTML tags to explicitely mark a word from being linkified. Just wrap it into `<span>` or some non-HTML tag like e.g. `<x>`.
+> **ⓘ Tip:**  Wrap a word into `<span>word</span>` or some non-HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][cross-linking].
 
-> **ⓘ Note:** Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
+> **ⓘ** Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
+
 
 ## Aliases and Synonyms
 
@@ -277,12 +280,16 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
 ```
 
-> **ⓘ Prior to v6.0.0** there has also been an alternative aliases syntax whose (single-line) form is not meant to be deprecated any time soon.
+> **ⓘ** There is an alternative aliases syntax whose (single-line) form is not meant to be deprecated any time soon.
 > ~~~
 > ## Term
 > <!-- Aliases: Term 1, Term2, ... -->
 > ~~~
-> Term attribute syntax using a JSON map is just going to be our way of providing additional term attributes in the future. If you like to convert to term attribute syntax a RegExp search with `<!--[\s]?Aliases:[\s]?(.*)[\s]-->` and replacement `<!--{ "aliases": "$1" }-->` may serve you.
+> However, term attribute syntax with a JSON map is going to be our way forward and required for providing multiple attributes at once. If you like to convert above Aliases to term attribute syntax a RegExp search & replace with
+> - search `<!--[\s]?Aliases:[\s]?(.*)[\s]-->`
+> - replace `<!--{ "aliases": "$1" }-->`
+>
+> may serve you.
 
 ## Term Hints
 
@@ -356,7 +363,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 ### Term-Based Auto-Linking
 
-*Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term (*linkification*).
+*Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term.
 
 **Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with ...
 
@@ -739,7 +746,7 @@ Declaring a glossary `uri` when exporting. It will make [glossarify-md] assign e
 }
 ~~~
 
-> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported term definitions using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md]. Consider downloading file revisions statically, prior to importing.
+> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported term definitions using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md]. Consider importing files statically after review.
 
 Advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
 

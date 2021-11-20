@@ -26,7 +26,7 @@
 >
 > The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of type names or attribute names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
 
-**Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other [document🟉][1]'s *model terms* onto "well-known" [SKOS] and [Dublin Core][DC] model terms.
+**Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS] and [Dublin Core][DC] model terms.
 
 Model terms understood by [glossarify-md] are:
 
@@ -55,7 +55,7 @@ To see how this works a good starting point is to have a look at glossarify-md's
 }
 ```
 
-`glossary.json` will embed a [JSON-LD] `@context` [document🟉][1]. It maps glossarify-md's own export model terminology onto [SKOS] and [Dublin Core][DC] terms for interoperability with *other* tools understanding [SKOS🟉][2] and Dublin Core.[^1]
+`glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto [SKOS] and [Dublin Core][DC] terms for interoperability with *other* tools understanding [SKOS🟉][1] and Dublin Core.[^1]
 
 [^1]: You can embed your own mappings using the `export` config with a `context` file having an `@context` key.
 
@@ -102,7 +102,7 @@ Have a look at `glossary.json` again. When ignoring the `@context` metadata the 
 }
 ```
 
-Of course, [glossarify-md] will be able to import *this* (its own) export format. Now let's drop `@context` and change the [document🟉][1] to a very different schema:
+Of course, [glossarify-md] will be able to import *this* (its own) export format. Now let's drop `@context` and change the document to a very different schema:
 
 *term-data.json*
 
@@ -123,7 +123,7 @@ Of course, [glossarify-md] will be able to import *this* (its own) export format
 }
 ```
 
-This is now a format *unknown* to [glossarify-md] at the moment. To import its term data we **enhance glossarify-md with [JSON-LD🟉][3] capabilitites for interoperability**:
+This is now a format *unknown* to [glossarify-md] at the moment. To import its term data we **enhance glossarify-md with [JSON-LD🟉][2] capabilitites for interoperability**:
 
     npm install jsonld
 
@@ -132,7 +132,7 @@ On the next run of [glossarify-md] it will attempt to load package [jsonld] and
 1.  look for `@context` mappings *embedded into the JSON import file*
 2.  look for `@context` mappings provided *externally* using `import` with a `context` file
 
-Since very few tools embed [JSON-LD🟉][3] mappings today we'll continue to make step 2. succeed by writing our own mappings:
+Since very few tools embed [JSON-LD🟉][2] mappings today we'll continue to make step 2. succeed by writing our own mappings:
 
 *unknown-format.jsonld*
 
@@ -176,8 +176,6 @@ After running [glossarify-md] again there should be a file `imported.md` with th
 
 More complicated data formats may require use of some additional [JSON-LD keywords][JSON-LD Spec].
 
-[1]: ./glossary.md#document "A markdown file not being declared a glossary by means of glossarify-md config option glossaries."
+[1]: ./glossary.md#skos "With SKOS the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[2]: ./glossary.md#skos "With SKOS the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
-
-[3]: ./glossary.md#json-ld "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
+[2]: ./glossary.md#json-ld "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."

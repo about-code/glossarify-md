@@ -17,15 +17,15 @@
 
 # Advanced Topics
 
- [Glossary][doc-glossary] (of glossarify-md)
+[Glossary][doc-glossary] (of glossarify-md)
 
 Markdown Syntax
-  - [Markdown Syntax Extensions][doc-syntax-extensions]
-  - [Installing Syntax Plug-ins][doc-plugins]
+- [Markdown Syntax Extensions][doc-syntax-extensions]
+- [Installing Syntax Plug-ins][doc-plugins]
 
 Exporting and Importing
-  - [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
-  - [SKOS Interoperability with JSON-LD][doc-skos-interop]
+- [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
+- [Interoperability with SKOS and JSON-LD][doc-skos-interop]
 
 
 Further Processing
