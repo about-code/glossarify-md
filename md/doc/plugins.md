@@ -103,15 +103,20 @@ The example uses a [visit][mdast-util-visit] utility function for traversing the
 Here's how you can set up a plug-in project:
 
 1. Make a new directory *remark-my-plugin* and step into
+
    ~~~
    npm init
    ~~~
+
 2. Open your package.json and add
+
    ~~~
    "type": "module",
    "exports": "./index.js",
    ~~~
+
 3. Copy above plug-in code into index.js
+
    ~~~
    npm install unist-util-visit
    ~~~
@@ -120,6 +125,7 @@ You're now set with your plug-in. Next let's link the sources into the `node_mod
 
 4. Within folder *remark-my-plugin* run `npm link` (creates a symlink in the global node_modules folder)
 5. `cd` into your *glossarify-md* project now and there run
+
    ~~~
    npm link remark-my-plugin (creates a symlink onto the global symlink)
    ~~~

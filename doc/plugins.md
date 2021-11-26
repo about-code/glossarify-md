@@ -110,17 +110,23 @@ The example uses a [visit][mdast-util-visit] utility function for traversing the
 Here's how you can set up a plug-in project:
 
 1.  Make a new directory *remark-my-plugin* and step into
+
         npm init
+
 2.  Open your package.json and add
+
         "type": "module",
         "exports": "./index.js",
+
 3.  Copy above plug-in code into index.js
+
         npm install unist-util-visit
 
 You're now set with your plug-in. Next let's link the sources into the `node_modules` folder of a *glossarify-md* project:
 
 4.  Within folder *remark-my-plugin* run `npm link` (creates a symlink in the global node\_modules folder)
 5.  `cd` into your *glossarify-md* project now and there run
+
         npm link remark-my-plugin (creates a symlink onto the global symlink)
 
 You now virtually "installed" your plug-in similar as if you had run `npm install` to fetch it from a npm registry.**Important:** Be aware that the latter link needs to be re-established after you ran `npm install` in your *glossarify-md* project, so don't do that now).
