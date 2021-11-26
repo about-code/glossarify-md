@@ -11,9 +11,10 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#aliased",
-    "regex": "/(Alias-1|Aliased)/u",
+    "regex": "/(Alias-1|Alias-2|Aliased)/u",
     "aliases": [
-      "Alias-1"
+      "Alias-1",
+      "Alias-2"
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,

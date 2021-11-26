@@ -4,7 +4,7 @@
 
 <!--{
   "uri": "https://my.org/vocabulary/#aliased",
-  "aliases": "Alias-1"
+  "aliases": "Alias-1, Alias-2"
 }-->
 
 GIVEN a term with aliases
