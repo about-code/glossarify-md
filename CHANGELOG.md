@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [6.0.0](https://github.com/about-code/glossarify-md/compare/v6.0.0-rc.0...v6.0.0) (2021-11-20)
+## [6.0.1](https://github.com/about-code/glossarify-md/compare/v6.0.0...v6.0.1) (2021-11-26)
+
+
+### Bug Fixes
+
+* Headings of imported glossaries not linked ([#228](https://github.com/about-code/glossarify-md/issues/228)) ([677915e](https://github.com/about-code/glossarify-md/commit/677915e425d6956d344b5ee6ef93fa5c53c98f69))
+* Only first alias from a list of aliases imported ([#229](https://github.com/about-code/glossarify-md/issues/229)) ([cc59f3e](https://github.com/about-code/glossarify-md/commit/cc59f3edbf65d9798593acf08dd57948a13fcb93))
+
+### Documentation Updates
+
+* **doc:** Add how to write plug-ins ([#230](https://github.com/about-code/glossarify-md/issues/230)) ([96e69f2](https://github.com/about-code/glossarify-md/commit/96e69f283d618532c4ac3b2c79d096c088012573))
+
+
+## [6.0.0](https://github.com/about-code/glossarify-md/compare/v5.2.0...v6.0.0) (2021-11-20)
 
 This is a summary of notable changes between v5.2.0 and v6.0.0. As a user of prerelease versions (`alpha, beta, rc`) or `glossarify-md@next` have a look at [changes between pre-releases](https://github.com/about-code/glossarify-md/blob/v6.0.0-rc.1/CHANGELOG.md).
 
