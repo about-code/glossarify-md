@@ -29,6 +29,8 @@
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
 
+[jsonld]: https://npmjs.com/package/jsonld
+
 [link reference definitions]: https://spec.commonmark.org/0.30/#link-reference-definition
 
 [mdast]: https://github.com/syntax-tree/mdast
@@ -774,7 +776,7 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 
 [SKOS]: https://w3.org/skos
 
-**Since v6.0.0** markdown glossary terms can be exported to a structured JSON format (file extension `.json`) or RDF N-Quads (file extension `.nq`).
+**Since v6.0.0** glossary terms can be exported to a structured JSON format (file extension `.json`). When [jsonld] is installed alongside glossarify-md then terms can also be exported to RDF N-Quads (file extension `.nq`).
 
 *glossarify-md.conf.json* (generates ./glossary.json)
 
