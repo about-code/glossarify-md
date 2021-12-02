@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-indexing/groupByHeadingDepth-2-order",
+  "glossaries": [{
+    "file": "./glossary.md"
+  }],
+  "indexing": {
+    "groupByHeadingDepth": 2
+  },
+  "generateFiles": {
+    "indexFile": {
+      "file": "./index.md",
+      "title": "EXPECT Title"
+    }
+  }
+}
