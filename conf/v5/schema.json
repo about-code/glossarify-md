@@ -256,8 +256,12 @@
                     ,"type": "string"
                 }
                 ,"glossary": {
-                    "description": "Path to a particular glossary file with terms to restrict the index document to. Only affects Index generation with 'indexFiles' property. Since v5.1.0."
+                    "description": "When you configured multiple glossaries, then this option can be used to generate an index file with terms of a particular glossary, only. Use with `generateFiles.indexFiles` (not `generateFiles.indexFile`). Since v5.1.0."
                     ,"type": "string"
+                }
+                ,"hideDeepLinks": {
+                    "description": "Term occurrences in sections *deeper than* `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option you can disable these \"deep\" section links. This will reduce the \"precision\" by which users can navigate from the Book Index to a particular occurrence of a term in the book. Note that index file rendering also depends on which kind of headings are being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0."
+                    ,"type": "boolean"
                 }
             }
         }
@@ -271,7 +275,7 @@
                     ,"maximum": 6
                 }
                 ,"headingDepths": {
-                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.\nThe relation to 'linking.headingDepths' is that _this_ is about \"knowing the link targets\" whereas the other is about \"creating links\" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`."
+                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Excluding headings from indexing is mostly a performance optimization, applicable when only headings at a particular depth should participate in id-based cross-linking or term-based auto linking. Note that it is possible to keep indexing all headings to support manually written id-based cross-links for all headings but restricting auto-linking to a subset of headings at a particular depth using `linking.headingDepths` (see `linking` options)."
                     ,"type": "array"
                     ,"items": {
                         "type": "integer"
@@ -368,7 +372,7 @@
                     ,"enum": ["all", "first-in-paragraph"]
                 }
                 ,"headingDepths": {
-                    "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'."
+                    "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as \"terms\" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`."
                     ,"type": "array"
                     ,"items": {
                         "type": "integer"
