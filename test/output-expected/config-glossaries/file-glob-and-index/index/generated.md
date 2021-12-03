@@ -2,7 +2,7 @@
 
 ## [Second Level\~](#second-level)
 
-[Glossary 2][1] ○ [**Testing Index generation for glossaries file glob**][2]
+[Glossary 2][1] ○ [Testing Index generation for glossaries file glob][2]
 
 ## [Third Level\~](#third-level)
 

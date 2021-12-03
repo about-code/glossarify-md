@@ -2,7 +2,7 @@
 
 ## [Alpha](#sha256-262b27b)
 
-[Glossary 1][1] ○ [Glossary 1][2] ○ [**Document 1**][3] ○ [**Document 2**][4]
+[Glossary 1][1] ○ [Glossary 1][2] ○ [Document 1][3] ○ [Document 2][4]
 
 [1]: ./glossary.md#sha256-d0ae6bd "First definition."
 
