@@ -47,6 +47,7 @@
     "test_p03__03": "node . --config ./input/config-indexing/groupByHeadingDepth-0/glossarify-md.conf.json",
     "test_p03__04": "node . --config ./input/config-indexing/groupByHeadingDepth-1/glossarify-md.conf.json",
     "test_p03__05": "node . --config ./input/config-indexing/groupByHeadingDepth-2/glossarify-md.conf.json",
+    "test_p03__06": "node . --config ./input/config-indexing/groupByHeadingDepth-2-order/glossarify-md.conf.json",
     "test_p04__00": "node . --config ./input/config-reportNotMentioned/true/glossarify-md.conf.json",
     "test_p04__01": "node . --config ./input/config-reportNotMentioned/false/glossarify-md.conf.json",
     "test_p05__00": "node . --config ./input/term-descriptions/glossarify-md.conf.json",
