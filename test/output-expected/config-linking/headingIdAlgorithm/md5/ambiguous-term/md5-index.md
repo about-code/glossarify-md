@@ -2,7 +2,7 @@
 
 ## [Alpha](#md5-b1afca04273052ac654e454590780523)
 
-[Glossary 1][1] ○ [Glossary 2][2] ○ [Document 1][3] ○ [Document 2][4]
+[Glossary 1][1] ○ [Glossary 2][2] ○ [**Document 1**][3] ○ [**Document 2**][4]
 
 [1]: ./glossary-1.md#md5-3e5743fb44c2774df0009ab82b8b8b78 "First definition."
 

@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-indexFiles/hideDeepLinks",
+  "glossaries": [
+    { "file": "./glossary-1.md" },
+    { "file": "./glossary-2.md" },
+    { "file": "./glossary-3.md" }
+  ],
+  "indexing": {
+    "groupByHeadingDepth": 2
+  },
+  "generateFiles": {
+    "indexFiles": [{
+      "file": "./index-1-hide-true.md",
+      "glossary": "./glossary-1.md",
+      "hideDeepLinks": true
+    },{
+      "file": "./index-2-hide-false.md",
+      "glossary": "./glossary-2.md",
+      "hideDeepLinks": false
+    },{
+      "file": "./index-3-hide-default.md",
+      "glossary": "./glossary-3.md"
+    }]
+  }
+}

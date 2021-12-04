@@ -100,7 +100,7 @@ Control the link density and whether every occurrence of a term in your document
 
 ## headingDepths
 
-An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'.
+An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as "terms" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`.
 
 `headingDepths`
 

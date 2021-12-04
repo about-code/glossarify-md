@@ -20,8 +20,7 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 ## headingDepths
 
-An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.
-The relation to 'linking.headingDepths' is that *this* is about "knowing the link targets" whereas the other is about "creating links" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.
+An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Excluding headings from indexing is mostly a performance optimization, applicable when only headings at a particular depth should participate in id-based cross-linking or term-based auto linking. Note that it is possible to keep indexing all headings to support manually written id-based cross-links for all headings but restricting auto-linking to a subset of headings at a particular depth using `linking.headingDepths` (see `linking` options).
 
 `headingDepths`
 

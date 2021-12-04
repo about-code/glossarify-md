@@ -855,21 +855,27 @@ Paths or Glob-Patterns of files to exclude. Excluded files will be excluded from
 
 #### `generateFiles.indexFile`
 
-- **Range:** `{file: string, [title: string]}`
+[doc-config-indexFile]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-indexfile.md
+
+- **Range:** `{file: string, [title: string], [hideDeepLinks: boolean]}` ([details][doc-config-indexFile])
 - **Since:** v3.0.0
 
 Generates an index of glossary terms with links to files in which they have been mentioned.
 
 #### `generateFiles.indexFiles`
 
-- **Range:** `Array<{file: string, glossary: string, [title: string]}>`
+[doc-config-indexFiles]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-indexfiles-items.md
+
+- **Range:** `Array<{file: string, glossary: string, [title: string], [hideDeepLinks: boolean]}>` ([details][doc-config-indexFiles])
 - **Since:** v3.0.0
 
-Similar to `indexFile` but allows for generating an index per glossary.
+Similar to `indexFile` but allows for generating multiple index files, e.g. one per glossary.
 
 #### `generateFiles.listOf`
 
-- **Range:** `Array<{class: string, file: string, [title: string]}>`
+[doc-config-listOf]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-listof-items.md
+
+- **Range:** `Array<{class: string, file: string, [title: string]}>` ([details][doc-config-listof])
 - **Since:** v3.5.0
 
 If available, generates a list from HTML anchors exposing the configured `class` attribute.
@@ -918,17 +924,21 @@ sequence. If you would like to have the glossary sorted provide a *sort* directi
 
 #### `glossaries[].export`
 
-- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>`
+[doc-config-export]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-export-oneof-0.md
+
+- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>` ([details][doc-config-export])
 - **Since:** v6.0.0
 
 Export markdown terms in a structured JSON format. More read [here][doc-export-import].
 
 #### `glossaries[].import`
 
-- **Range:** `{ file: string [, context: string]}`
+[doc-config-import]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-import.md
+
+- **Range:** `{ file: string [, context: string]}` ([details][doc-config-import])
 - **Since:** v6.0.0
 
-Import terms from a structured JSON format and generate a markdown glossary from it. More read [here][doc-export-import].
+Import terms from a structured JSON format and generate a markdown glossary from it. For an example see [here][doc-export-import].
 
 #### `glossaries[].linkUris`
 
