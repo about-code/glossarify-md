@@ -129,6 +129,7 @@
     "test_p12__05": "node . --config ./input/config-indexFile/issue-75-formatted-headings/glossarify-md.conf.json",
     "test_p12__06": "node . --config ./input/config-indexFiles/flat-dir/glossarify-md.conf.json",
     "test_p12__07": "node . --config ./input/config-indexFiles/154-deep-dir/glossarify-md.conf.json",
+    "test_p12__08": "node . --config ./input/config-indexFiles/hideDeepLinks/glossarify-md.conf.json",
     "test_p13__00": "node . --config ./input/config-listOf/basic/glossarify-md.conf.json",
     "test_p13__01": "node . --config ./input/config-listOf/pattern-tc1-text-paragraph/glossarify-md.conf.json",
     "test_p13__02": "node . --config ./input/config-listOf/pattern-tc2-formatted-paragraph/glossarify-md.conf.json",
