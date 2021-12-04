@@ -260,7 +260,7 @@
                     ,"type": "string"
                 }
                 ,"hideDeepLinks": {
-                    "description": "Term occurrences in sections *deeper than* `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option you can disable these \"deep\" section links. This will reduce the \"precision\" by which users can navigate from the Book Index to a particular occurrence of a term in the book. Note that index file rendering also depends on which kind of headings are being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0."
+                    "description": "When this is `false` (default) then term occurrences in sections deeper than `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option being `true` you can disable these \"deep\" section links. Note that index file generation also depends on the kind of headings being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0."
                     ,"type": "boolean"
                 }
             }
