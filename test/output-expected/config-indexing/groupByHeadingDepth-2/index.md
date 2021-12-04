@@ -2,7 +2,7 @@
 
 ## [Term1](#term1)
 
-[Glossary][1] ○ [Document][2] ○ [Heading 2 Depth 2][3]<sub>↳ [2][4], [3][5], [4][6]</sub> ○ [Heading 6 Depth 2][7]<sub>↳ [2][8], [3][9], [4][10]</sub> ○ [Term1][11]
+[Glossary][1] ○ [**Document**][2] ○ [Heading 2 Depth 2][3]<sub>↳ [2][4], [3][5], [4][6]</sub> ○ [Heading 6 Depth 2][7]<sub>↳ [2][8], [3][9], [4][10]</sub> ○ [Term1][11]
 
 ## [Term2](#term2)
 

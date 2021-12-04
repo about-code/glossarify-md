@@ -2,7 +2,7 @@
 
 ## [Term1](#term1)
 
-[Glossary][1] ○ [Document][2] ○ [Heading 2 Depth 2][3] ○ [Heading 3 Depth 3][4] ○ [Heading 4 Depth 4][5] ○ [Heading 5 Depth 3][6] ○ [Heading 6 Depth 2][7] ○ [Heading 7 Depth 3][8] ○ [Heading 8 Depth 6][9] ○ [Heading 9 Depth 2][10] ○ [Term1][11]
+[Glossary][1] ○ [**Document**][2] ○ [Heading 2 Depth 2][3] ○ [Heading 3 Depth 3][4] ○ [Heading 4 Depth 4][5] ○ [Heading 5 Depth 3][6] ○ [Heading 6 Depth 2][7] ○ [Heading 7 Depth 3][8] ○ [Heading 8 Depth 6][9] ○ [Heading 9 Depth 2][10] ○ [Term1][11]
 
 ## [Term2](#term2)
 
