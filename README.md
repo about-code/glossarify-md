@@ -924,9 +924,9 @@ sequence. If you would like to have the glossary sorted provide a *sort* directi
 
 #### `glossaries[].export`
 
-[doc-config-exports]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-export-oneof-0.md
+[doc-config-export]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-export-oneof-0.md
 
-- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>` (\[details]\[doc-config-export])
+- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>` ([details][doc-config-export])
 - **Since:** v6.0.0
 
 Export markdown terms in a structured JSON format. More read [here][doc-export-import].
