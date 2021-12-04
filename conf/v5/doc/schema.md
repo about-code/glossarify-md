@@ -447,7 +447,7 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 
 ### showUris
 
-Whether to render a term's URI in the glossary (currently for imported glossaries, only).
+Whether to render a term's URI in the glossary (currently for imported glossaries, only). May be a markdown snippet using a placeholder `${uri}` to control URI formatting.
 
 `showUris`
 
@@ -529,6 +529,16 @@ The JSON file to import terms from.
 
 *   Type: `string`
 
+### context
+
+File path or URL to a custom JSON-LD context document. Expected to map attributes and type names of a custom import document format onto terms of the well-known W3C SKOS vocabulary.
+
+`context`
+
+*   is optional
+
+*   Type: `string`
+
 ## Definitions group indexFile
 
 Reference this group by using
@@ -545,17 +555,7 @@ Path relative to 'outDir' where to create the index markdown file.
 
 `file`
 
-*   is optional
-
-*   Type: `string`
-
-### class
-
-The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list.
-
-`class`
-
-*   is optional
+*   is required
 
 *   Type: `string`
 
@@ -571,13 +571,23 @@ The page title for the index file. If missing the application uses a default val
 
 ### glossary
 
-Path to a particular glossary file with terms to restrict the index document to. Only affects Index generation with 'indexFiles' property. Since v5.1.0.
+When you configured multiple glossaries, then this option can be used to generate an index file with terms of a particular glossary, only. Use with `generateFiles.indexFiles` (not `generateFiles.indexFile`). Since v5.1.0.
 
 `glossary`
 
 *   is optional
 
 *   Type: `string`
+
+### hideDeepLinks
+
+When this is `false` (default) then term occurrences in sections deeper than `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option being `true` you can disable these "deep" section links. Note that index file generation also depends on the kind of headings being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0.
+
+`hideDeepLinks`
+
+*   is optional
+
+*   Type: `boolean`
 
 ## Definitions group indexing
 
@@ -607,8 +617,7 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 ### headingDepths
 
-An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually.
-The relation to 'linking.headingDepths' is that *this* is about "knowing the link targets" whereas the other is about "creating links" ...based on knowledge about link targets. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.
+An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Excluding headings from indexing is mostly a performance optimization, applicable when only headings at a particular depth should participate in id-based cross-linking or term-based auto linking. Note that it is possible to keep indexing all headings to support manually written id-based cross-links for all headings but restricting auto-linking to a subset of headings at a particular depth using `linking.headingDepths` (see `linking` options).
 
 `headingDepths`
 
@@ -864,7 +873,7 @@ Control the link density and whether every occurrence of a term in your document
 
 ### headingDepths
 
-An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). In case you have modified 'indexing.headingDepths', be aware that 'linking.headingDepths' makes only sense if it is a full subset of the items in 'indexing.headingDepths'.
+An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as "terms" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`.
 
 `headingDepths`
 

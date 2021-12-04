@@ -63,7 +63,7 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 
 ## showUris
 
-Whether to render a term's URI in the glossary (currently for imported glossaries, only).
+Whether to render a term's URI in the glossary (currently for imported glossaries, only). May be a markdown snippet using a placeholder `${uri}` to control URI formatting.
 
 `showUris`
 
