@@ -11,10 +11,11 @@
 [jsonld]: https://npmjs.com/package/jsonld
 [vocabularies]: https://www.w3.org/standards/semanticweb/ontology
 [OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
+[sample-export]: ../test/output-expected/config-glossaries/export-and-glossary-uri/glossary.json
 
 > Readers Level: *Advanced*
 >
-> The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of type names or attribute names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
+> The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of technical attribute names or type names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
 
 **Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS] and [Dublin Core][DC] model terms.
 
@@ -27,7 +28,7 @@ Model terms understood by [glossarify-md] are:
 - `skos:definition`
 - `dc:title`
 
-To see how this works a good starting point is to have a look at glossarify-md's own `export` files, first.
+To see how this works a good starting point is to have a look at a glossarify-md `export` file first.
 
 ### Exporting SKOS
 
@@ -44,9 +45,52 @@ To see how this works a good starting point is to have a look at glossarify-md's
 }
 ~~~
 
+The configuration will make [glossarify-md] produce a file
+
+*glossary.json*
+~~~json
+{
+  "@context": {
+    "@vocab": "https://about-code.github.io/vocab/glossarify-md/2021/10/#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/terms/",
+    "uri": "@id",
+    "type": "@type",
+    "Glossary": "skos:ConceptScheme",
+    "Term": "skos:Concept",
+    "label": "skos:prefLabel",
+    "definition": "skos:definition",
+    "aliases": "skos:altLabel",
+    "abstract": "dc:abstract",
+    "title": "dc:title",
+    "terms": {
+      "@container": "@index"
+    },
+    "@language": "en"
+  },
+  "type": "Glossary",
+  "uri": "https://my.org/vocab/#",
+  "title": "My Glossary",
+  "language": "en",
+  "terms": {
+      "https://my.org/vocab/#foo": {
+        "uri": "https://my.org/vocab/#foo",
+        "type": "Term",
+        "label": "Foo",
+        "definition": "Some definition of Foo. Foo is not bar.",
+        "abstract": "Some definition of Foo.",
+        "aliases": [ "FooBar" ]
+      }
+    },
+    "...": {}
+  }
+}
+~~~
+
+
 `glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto [SKOS] and [Dublin Core][DC] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
-[^1]: You can embed your own mappings using the `export` config with a `context` file having an `@context` key.
+[^1]: You can map glossarify-md's terms onto other model vocabularies by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
 Next we'll simulate a roundtrip by importing our exported file again.
 
@@ -66,37 +110,18 @@ Copy `glossary.json` which you've just exported into your input folder (*baseDir
 }
 ~~~
 
-Have a look at `glossary.json` again. When ignoring the `@context` metadata the actual export model of glossary-md will look like:
+Of course, [glossarify-md] will be able to import *its own* export format again. But what if you have terms exported by another tool in another format?
 
-*glossary.json*
-~~~json
-{
-  "@context": {},
-  "uri": "https://my.org/vocab/#",
-  "type": "Glossary",
-  "title": "My Glossary",
-  "language": "en",
-  "terms": {
-    "https://my.org/vocab/foo": {
-      "uri": "https://my.org/vocab/#foo",
-      "type": "Term",
-      "label": "Foo",
-      "definition": "Some definition of Foo. Foo is not bar.",
-      "abstract": "Some definition of Foo.",
-      "aliases": [ "FooBar" ]
-    }
-  }
-}
-~~~
+> In case you just ran [glossarify-md] and there is an `imported.md` file in your `outDir` then delete it.
 
-Of course, [glossarify-md] will be able to import *this* (its own) export format. Now let's drop `@context` and change the document to a very different schema:
+Let's drop `@context` from `glossary.json` and change it to a very different schema:
 
 *term-data.json*
 ~~~json
 {
   "uri": "https://my.org/vocab/#",
   "type": "Vocabulary",
-  "heading": "Glossary",
+  "heading": "My Glossary",
   "language": "en",
   "vocabulary": [{
       "uri": "https://my.org/vocab/#foo",
@@ -109,18 +134,9 @@ Of course, [glossarify-md] will be able to import *this* (its own) export format
 }
 ~~~
 
-This is now a format *unknown* to [glossarify-md] at the moment. To import its term data we **enhance glossarify-md with JSON-LD capabilitites for interoperability**:
+This is now a sample format *unknown* to [glossarify-md]. Different data formats and semantics like these are a barrier to *interoperability*. That's where JSON-LD and standardized vocabularies enter the game.
 
-~~~
-npm install jsonld
-~~~
-
-On the next run of [glossarify-md] it will attempt to load package [jsonld] and
-
-1. look for `@context` mappings *embedded into the JSON import file*
-2. look for `@context` mappings provided *externally* using `import` with a `context` file
-
-Since very few tools embed JSON-LD mappings today we'll continue to make step 2. succeed by writing our own mappings:
+If the *unknown* application had embedded JSON-LD mappings onto [SKOS] and [DublinCore][DC] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
 
 *unknown-format.jsonld*
 ~~~json
@@ -141,7 +157,7 @@ Since very few tools embed JSON-LD mappings today we'll continue to make step 2.
 }
 ~~~
 
-Now provide the external `context` along the imported file:
+Now provide this *external context* document along the imported file:
 
 *glossarify-md.conf.json*
 ~~~json
@@ -156,8 +172,25 @@ Now provide the external `context` along the imported file:
 }
 ~~~
 
-After running [glossarify-md] again there should be a file `imported.md` with the terms from `term-data.json`.
+What's left is to enhance glossarify-md with JSON-LD capabilities for interoperability: [^2]
 
-> **Important:** [glossarify-md] will only import data from *typed* documents with a `type`-like attribute whose name gets mapped to JSON-LD's `@type` and whose values get mapped to `skos:Concept` and `skos:ConceptScheme`.
+~~~
+npm install jsonld
+~~~
 
-More complicated data formats may require use of some additional [JSON-LD keywords][JSON-LD Spec].
+[^2]: We could have installed [jsonld] together with [glossarify-md] by default but decided against to minimize bloat for the average user.
+
+On the next run [glossarify-md] will be looking for `@context` mappings
+
+1. *embedded into the JSON import file*
+2. or provided *externally* using `context` in the `import` config.
+
+In our example the second applies. Glossary terms in `term-data.json` from the previously *unknown* format should now have been imported and written to a new markdown file `imported.md`.
+
+To sum up: we've just seen an example of interoperability and how two or more applications can exchange data in their own distinct formats as soon as they provide mappings onto standardized terminology and shared semantics.
+
+### Additional Notes
+
+- [glossarify-md] will only import typed documents directly using JSON-LD's `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
+
+- More complicated data formats may require use of some additional [JSON-LD keywords][JSON-LD Spec].
