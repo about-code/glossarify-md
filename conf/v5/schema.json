@@ -89,6 +89,7 @@
                 ,"headingIdPandoc": false
                 ,"headingAsLink": true
                 ,"byReferenceDefinition": true
+                ,"limitToAncestry": false
                 ,"limitByAlternatives": 10
             }
         }
@@ -401,6 +402,11 @@
                     ,"type": "integer"
                     ,"minimum": "-95"
                     ,"maximum": "+95"
+                }
+                ,"limitToAncestry": {
+                    "description": "When 'true' only terms from a parent glossary or some glossary next to a document will be linkified. It is meant to improve context awareness of linkification when there are multiple glossaries, e.g. due to using 'glossaries[].file' with a glob pattern. It assumes a book project whose directory structure reflects a table of contents."
+                    ,"type": "boolean"
+                    ,"since": "6.1.0"
                 }
                 ,"byReferenceDefinition": {
                     "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
