@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-linking/paths-relative-limitToChildren",
+  "glossaries": [{
+    "file": "./**/glossary-*.md"
+  }],
+  "linking": {
+    "limitToAncestry": true
+  }
+}

@@ -121,6 +121,7 @@
     "test_p11__26": "node . --config ./input/config-linking/paths-relative-pathComponents/path-file/glossarify-md.conf.json",
     "test_p11__27": "node . --config ./input/config-linking/paths-relative-pathComponents/path-file-ext/glossarify-md.conf.json",
     "test_p11__28": "node . --config ./input/config-linking/paths-relative-pathComponents/none/glossarify-md.conf.json",
+    "test_p11__29": "node . --config ./input/config-linking/paths-relative-limitToAncestry/glossarify-md.conf.json",
     "test_p12__00": "node . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_p12__01": "node . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
     "test_p12__02": "node . --config ./input/config-indexFile/term-link-to-section/glossarify-md.conf.json",
