@@ -123,6 +123,7 @@
     "test_p11__29": "node . --config ./input/config-linking/paths-relative-limitToTargets/parent/glossarify-md.conf.json",
     "test_p11__30": "node . --config ./input/config-linking/paths-relative-limitToTargets/child/glossarify-md.conf.json",
     "test_p11__31": "node . --config ./input/config-linking/paths-relative-limitToTargets/sibling/glossarify-md.conf.json",
+    "test_p11__32": "node . --config ./input/config-linking/paths-relative-limitToTargets/self/glossarify-md.conf.json",
     "test_p12__00": "node . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_p12__01": "node . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
     "test_p12__02": "node . --config ./input/config-indexFile/term-link-to-section/glossarify-md.conf.json",
