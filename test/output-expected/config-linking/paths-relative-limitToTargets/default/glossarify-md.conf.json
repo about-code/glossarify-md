@@ -1,0 +1,10 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/paths-relative-limitToTargets/default/",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+  }
+}
