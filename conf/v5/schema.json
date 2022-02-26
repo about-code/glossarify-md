@@ -89,7 +89,7 @@
                 ,"headingIdPandoc": false
                 ,"headingAsLink": true
                 ,"byReferenceDefinition": true
-                ,"limitToAncestry": false
+                ,"limitToTargets": []
                 ,"limitByAlternatives": 10
             }
         }
@@ -403,9 +403,13 @@
                     ,"minimum": "-95"
                     ,"maximum": "+95"
                 }
-                ,"limitToAncestry": {
-                    "description": "When 'true' only terms from a parent glossary or some glossary next to a document will be linkified. It is meant to improve context awareness of linkification when there are multiple glossaries, e.g. due to using 'glossaries[].file' with a glob pattern. It assumes a book project whose directory structure reflects a table of contents."
-                    ,"type": "boolean"
+                ,"limitToTargets": {
+                    "description": "Limits linkification based on the path relationship between a file with a term occurrence (link origin) and a file with a term definition (link target). E.g. `[\"parent\", \"self\"]` causes a term occurrence being linkified, only, when the glossary term was defined in a parent directory or within the glossary file itself. The option may help when the directory layout of markdown files reflects some kind of contextualization or table of contents and `glossaries[].file` is used with a wildcard pattern. Default: []"
+                    ,"type": "array"
+                    ,"items": {
+                        "type": "string",
+                        "enum": ["self", "parent", "child", "sibling", "parent-sibling"]
+                    }
                     ,"since": "6.1.0"
                 }
                 ,"byReferenceDefinition": {
