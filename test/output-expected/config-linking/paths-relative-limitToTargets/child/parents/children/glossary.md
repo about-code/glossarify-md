@@ -17,7 +17,7 @@ GIVEN a config...
   }],
   "linking": {
     "paths": "relative",
-    "limitToTargets": [ "parent" ]
+    "limitToTargets": [ "child" ]
   }
 }
 ```
@@ -32,14 +32,14 @@ THEN the term MUST NOT be linked.
 ## [Test Case 1](#test-case-1)
 
 ... AND a glossary `../../glossary-grandparents.md`
-AND this document mentioning term *[Grandparents][1]* from the grandparent glossary
-THEN the term MUST be linked.
+AND this document mentioning term *Grandparents* from the grandparent glossary
+THEN the term MUST NOT be linked.
 
 ## [Test Case 2](#test-case-2)
 
 ... AND a glossary `../glossary-parents.md`
-AND this document mentioning term *[Parents][2]* from the parent glossary
-THEN the term MUST be linked.
+AND this document mentioning term *Parents* from the parent glossary
+THEN the term MUST NOT be linked.
 
 ## [Test Case 3](#test-case-3)
 
@@ -50,8 +50,8 @@ THEN the term MUST NOT be linked.
 ## [Test Case 4](#test-case-4)
 
 ... AND a glossary `./grandchildren/glossary-grandchildren.md`
-AND this document mentioning term *Grandchildren* from the child glossary
-THEN the term MUST NOT be linked.
+AND this document mentioning term *[Grandchildren][1]* from the child glossary
+THEN the term MUST be linked.
 
 ## [Test Case 5](#test-case-5)
 
@@ -65,6 +65,4 @@ THEN the term MUST NOT be linked.
 AND this document mentioning term *Aunts* from the aunt glossary
 THEN the term MUST NOT be linked.
 
-[1]: ../../glossary-grandparents.md#grandparents "Grandparents of a child are the parents of a child's parents and aunts or uncles."
-
-[2]: ../glossary-parents.md#parents "Parents of a person gave birth to that person."
+[1]: ./grandchildren/glossary-grandchildren.md#grandchildren "Grandchildren are the children of children."
