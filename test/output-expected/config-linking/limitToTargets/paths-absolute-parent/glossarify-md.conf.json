@@ -1,0 +1,13 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/limitToTargets/paths-absolute-parent/",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "absolute",
+    "baseUrl": "https://foo.org/",
+    "limitToTargets": ["parent"]
+  }
+}
