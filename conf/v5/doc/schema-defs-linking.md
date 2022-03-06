@@ -135,6 +135,16 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 
 *   Type: `integer`
 
+## limitByTermOrigin
+
+Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it was defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms and section-based glossaries in subdirectories. It may also provide a means of limiting auto-linking when the `glossaries` option is used with multiple glossaries or `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
+
+`limitByTermOrigin`
+
+*   is optional
+
+*   Type: `string[]`
+
 ## byReferenceDefinition
 
 When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on <http://commonmark.org>.
