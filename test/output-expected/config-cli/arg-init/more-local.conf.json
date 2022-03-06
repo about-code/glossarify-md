@@ -54,7 +54,7 @@
     "headingIdPandoc": false,
     "headingAsLink": true,
     "byReferenceDefinition": true,
-    "limitToTargets": [],
+    "limitByTermOrigin": [],
     "limitByAlternatives": 10
   },
   "outDir": "../docs-glossarified",

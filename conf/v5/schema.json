@@ -89,7 +89,7 @@
                 ,"headingIdPandoc": false
                 ,"headingAsLink": true
                 ,"byReferenceDefinition": true
-                ,"limitToTargets": []
+                ,"limitByTermOrigin": []
                 ,"limitByAlternatives": 10
             }
         }
@@ -403,12 +403,12 @@
                     ,"minimum": "-95"
                     ,"maximum": "+95"
                 }
-                ,"limitToTargets": {
-                    "description": "Limits linkification based on the path relationship between a file with a term occurrence (link origin) and a file with a term definition (link target). E.g. `[\"parent\", \"self\"]` causes a term occurrence being linkified, only, when the glossary term was defined in a parent directory or within the glossary file itself. The option may help when the directory layout of markdown files reflects some kind of contextualization or table of contents and `glossaries[].file` is used with a wildcard pattern. Default: []"
+                ,"limitByTermOrigin": {
+                    "description": "Limits linkification based on the file hierarchy of a book project. For example, `[\"self\", \"parent\", \"sibling\"]` causes a term occurrence being linkified only within the glossary itself (\"self\"), when defined in a glossary in a parent directory (\"parent\") or when defined in a glossary next to the document file with the term occurrence (\"sibling\"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms and section-based glossaries in subdirectories. It may also provide a means of limiting auto-linking when the `glossaries` option is used with multiple glossaries or `file` wildcard patterns. An empty array is similar to using all options and means all glossary terms found in documents will be linkified. Defaults to `[]`."
                     ,"type": "array"
                     ,"items": {
                         "type": "string",
-                        "enum": ["self", "parent", "child", "sibling", "parent-sibling"]
+                        "enum": ["self", "parent", "sibling", "child", "parent-sibling"]
                     }
                     ,"since": "6.1.0"
                 }
