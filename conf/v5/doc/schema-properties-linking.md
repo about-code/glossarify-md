@@ -23,6 +23,7 @@ The default value is:
   "headingIdPandoc": false,
   "headingAsLink": true,
   "byReferenceDefinition": true,
+  "limitByTermOrigin": [],
   "limitByAlternatives": 10
 }
 ```
@@ -163,6 +164,16 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 *   is optional
 
 *   Type: `integer`
+
+## limitByTermOrigin
+
+Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
+
+`limitByTermOrigin`
+
+*   is optional
+
+*   Type: `string[]`
 
 ## byReferenceDefinition
 

@@ -429,7 +429,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 > **ⓘ Too many links?**
 >
-> What might happen with *globs* is, that you might feel that *too many links* are being generated disturbing the reading experience. If this is an issue for you explore options like [`linking.mentions`](#linkingmentions) or [`linking.limitByAlternatives`](#linkinglimitbyalternatives) or [`linking.headingDepths`](#linkingheadingdepths).
+> What might happen with *globs* is, that you might feel that *too many links* are being generated disturbing the reading experience. If this is an issue for you explore options like [`linking.mentions`](#linkingmentions), [`linking.headingDepths`](#linkingheadingdepths) or [`linking.limit*`](#linkinglimitbyalternatives) options.
 
 > **ⓘ Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then `glossaries` options of the entry latest in the array will apply. Though avoid too many glob patterns or patterns whose file sets overlap as the effects on the output get increasingly hard to understand, otherwise.
 
@@ -1049,6 +1049,7 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so no 
   headingIdAlgorithm: "github" | "md5" | "md5-7" | "sha256" | "sha256-7",
   headingIdPandoc: boolean,
   limitByAlternatives: number
+  limitByTermOrigin: ["self", "parent", "sibling", "child", "parent-sibling"]
 }
 ```
 
@@ -1136,6 +1137,20 @@ Control how a term occurrence is linkified if there are *multiple  definitions* 
 - **positive value**: the system *creates links to alternative definitions but no more than `x` links*.
 - **negative value**: the system does *not create a term-link at all once there are more than `x` alternative definitions* of a term or heading.
 - **zero**: create a link but to a single out of all definitions, only
+
+#### `linking.limitByTermOrigin`
+
+- **Range:** `string[]` in `["self", "parent", "sibling", "child", "parent-sibling"]`
+- **Default:** `[]`
+- **Since:** v6.1.0
+
+Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only
+
+- when a term has been defined in a glossary in a parent directory (`"parent"`)
+- when it has been defined in a glossary next to the document file (`"sibling"`)
+- or within the glossary itself (`"self"`).
+
+The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the [`glossaries`](#glossaries) option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
 
 #### `linking.mentions`
 

@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/limitByTermOrigin/parent-sibling/",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "limitByTermOrigin": ["parent-sibling"]
+  }
+}
