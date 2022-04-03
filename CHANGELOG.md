@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.1.0](https://github.com/about-code/glossarify-md/compare/v6.0.1...v6.1.0) (2022-04-03)
+
+
+### Features
+
+* New option `linking.limitByTermOrigin` ([#235](https://github.com/about-code/glossarify-md/issues/235)) ([fcc02ac](https://github.com/about-code/glossarify-md/commit/fcc02aca472be15c9b490b9e4050ea25e24aa918))
+* **indexFiles:** New option `generateFiles.indexFile(s).hideDeepLinks`. ([#233](https://github.com/about-code/glossarify-md/issues/233)) ([db58b9f](https://github.com/about-code/glossarify-md/commit/db58b9fb5b47337f8ecf87cd85701e81956a8893))
+
+
+### Bug Fixes
+
+* Links in index files not sorted correctly ([#232](https://github.com/about-code/glossarify-md/issues/232)) ([350b28c](https://github.com/about-code/glossarify-md/commit/350b28cfbbf13edcee46fdf503cefb4675b1ba67))
+
+
+### Documentation Updates
+
+* Improve explanations of SKOS interoperability. ([1456456](https://github.com/about-code/glossarify-md/commit/145645669ec2b4b930898f43001b975ab0c7aa44))
+
 ## [6.0.1](https://github.com/about-code/glossarify-md/compare/v6.0.0...v6.0.1) (2021-11-26)
 
 
