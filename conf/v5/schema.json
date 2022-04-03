@@ -82,6 +82,7 @@
             ,"default": {
                 "baseUrl": ""
                 ,"paths": "relative"
+                ,"pathRewrites": {}
                 ,"pathComponents": ["path", "file", "ext"]
                 ,"mentions": "all"
                 ,"headingDepths": [2,3,4,5,6]
@@ -367,6 +368,11 @@
                         "enum": ["path", "file", "ext"]
                     }
                     ,"since": "6.0.0"
+                }
+                ,"pathRewrites": {
+                    "description": "Object with keys being regular expressions (RegExp) and values being replacement strings. Path rewriting won't change the output folder structure. It may be used to prepare paths when output folder structure changes after glossarify-md's own processing. The results of other glossarify-md options affecting how link URLs are determined need to be considered in the RegExp. Note that rewritten URLs are subject to escaping of unsafe or incompatible CommonMark Markdown."
+                    ,"type": "object"
+                    ,"since": "6.1.0"
                 }
                 ,"mentions": {
                     "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
