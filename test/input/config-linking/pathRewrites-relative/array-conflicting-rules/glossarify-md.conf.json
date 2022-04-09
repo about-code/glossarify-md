@@ -1,0 +1,16 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-relative/array-conflicting-rules",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "relative",
+    "pathRewrites": {
+      "KEY-1/": ["section-1-1/", "section-1-2/", "section-2-1/", "section-2-2/"],
+      "KEY-2/": ["section-2-1/", "section-2-2/"]
+    },
+    "byReferenceDefinition": false
+  }
+}
