@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-relative/simple-array",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "relative",
+    "pathRewrites": {
+      ".html": [".md"]
+    },
+    "byReferenceDefinition": false
+  }
+}
