@@ -370,7 +370,7 @@
                     ,"since": "6.0.0"
                 }
                 ,"pathRewrites": {
-                    "description": "Object with keys being regular expressions (RegExp) and values being replacement strings. Path rewriting won't change the output folder structure. It may be used to prepare paths when output folder structure changes after glossarify-md's own processing. The results of other glossarify-md options affecting how link URLs are determined need to be considered in the RegExp. Note that rewritten URLs are subject to escaping of unsafe or incompatible CommonMark Markdown."
+                    "description": "Object with keys reflecting the intended rewrite and values being a search string or an array of search strings or array of regular (search) expressions (RegExp). Path rewriting won't change the output folder structure. It may be used to prepare paths when output folder structure changes after glossarify-md's own processing. The results of other glossarify-md options affecting how link URLs are determined need to be considered in the RegExp. Note that rewritten URLs are subject to escaping of unsafe or incompatible CommonMark Markdown."
                     ,"type": "object"
                     ,"since": "6.1.0"
                 }
