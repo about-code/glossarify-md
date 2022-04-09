@@ -37,6 +37,7 @@
   "linking": {
     "baseUrl": "",
     "paths": "relative",
+    "pathRewrites": {},
     "pathComponents": [
       "path",
       "file",
