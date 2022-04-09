@@ -16,7 +16,7 @@ it is clear that it refers to a different meaning than some identifier
 - `https://example.com/glossary/it/#security`.
 
 
-**Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-import] glossaries. Moreover it introduces an `uri` option for `glossaries` which assigns a glossary a *vocabulary URI*. When *exported* term URIs will be constructed from the vocabulary URI and a term's heading ID (see [headingidalgorithm]).
+**Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-import] glossaries. Moreover it introduces an `uri` option for `glossaries` which assigns a glossary a *vocabulary URI*. Then *exported* term URIs will be constructed from the vocabulary URI and a term's heading ID (see [headingidalgorithm]).
 
 ~~~json
 {

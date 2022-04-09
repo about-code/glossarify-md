@@ -93,9 +93,8 @@ The configuration will make [glossarify-md] produce a file
         "definition": "Some definition of Foo. Foo is not bar.",
         "abstract": "Some definition of Foo.",
         "aliases": [ "FooBar" ]
-      }
-    },
-    "...": {}
+      },
+      "...": {}
   }
 }
 ```

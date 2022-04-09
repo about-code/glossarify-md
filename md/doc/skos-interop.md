@@ -80,13 +80,11 @@ The configuration will make [glossarify-md] produce a file
         "definition": "Some definition of Foo. Foo is not bar.",
         "abstract": "Some definition of Foo.",
         "aliases": [ "FooBar" ]
-      }
-    },
-    "...": {}
+      },
+      "...": {}
   }
 }
 ~~~
-
 
 `glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto [SKOS] and [Dublin Core][DC] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
