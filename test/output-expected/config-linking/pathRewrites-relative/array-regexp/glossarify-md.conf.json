@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-relative/array-regexp",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "relative",
+    "pathRewrites": {
+      "REWRITTEN$1/": ["chapter(.*)/"]
+    },
+    "byReferenceDefinition": false
+  }
+}
