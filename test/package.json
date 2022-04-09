@@ -172,6 +172,7 @@
     "test_p21__02": "node . --config ./input/config-linking/pathRewrites-absolute/array-collapse-hierarchy/glossarify-md.conf.json",
     "test_p21__03": "node . --config ./input/config-linking/pathRewrites-absolute/array-conflicting-rules/glossarify-md.conf.json",
     "test_p21__04": "node . --config ./input/config-linking/pathRewrites-absolute/array-regexp/glossarify-md.conf.json",
+    "test_p21__05": "node . --config ./input/config-linking/pathRewrites-absolute/array-regexp-recursive-1/glossarify-md.conf.json",
     "postsuite": "npm run diff",
     "postat": "npm run diff",
     "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
