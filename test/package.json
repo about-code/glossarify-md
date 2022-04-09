@@ -166,6 +166,7 @@
     "test_p20__03": "node . --config ./input/config-linking/pathRewrites-relative/array-conflicting-rules/glossarify-md.conf.json",
     "test_p20__04": "node . --config ./input/config-linking/pathRewrites-relative/array-regexp/glossarify-md.conf.json",
     "test_p20__05": "node . --config ./input/config-linking/pathRewrites-relative/array-regexp-recursive-1/glossarify-md.conf.json",
+    "test_p20__06": "node . --config ./input/config-linking/pathRewrites-relative/array-regexp-recursive-2/glossarify-md.conf.json",
     "postsuite": "npm run diff",
     "postat": "npm run diff",
     "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
