@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-relative/array-collapse-hierarchy",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "relative",
+    "pathRewrites": {
+      "chapter/": ["chapter-1/", "chapter-2/"]
+    },
+    "byReferenceDefinition": false
+  }
+}

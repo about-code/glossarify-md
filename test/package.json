@@ -162,6 +162,7 @@
     "test_p19__00": "node . --config ./input/term-attribute-aliases/glossarify-md.conf.json",
     "test_p20__00": "node . --config ./input/config-linking/pathRewrites-relative/scalar-change-file-ext/glossarify-md.conf.json",
     "test_p20__01": "node . --config ./input/config-linking/pathRewrites-relative/array-change-file-ext/glossarify-md.conf.json",
+    "test_p20__02": "node . --config ./input/config-linking/pathRewrites-relative/array-collapse-hierarchy/glossarify-md.conf.json",
     "postsuite": "npm run diff",
     "postat": "npm run diff",
     "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
