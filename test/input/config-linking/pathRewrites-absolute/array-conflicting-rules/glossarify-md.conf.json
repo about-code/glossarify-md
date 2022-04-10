@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-absolute/array-conflicting-rules",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "baseUrl": "http://my.org/",
+    "paths": "absolute",
+    "pathRewrites": {
+      "KEY-1/": ["section-1-1/", "section-1-2/", "section-2-1/", "section-2-2/"],
+      "KEY-2/": ["section-2-1/", "section-2-2/"]
+    },
+    "byReferenceDefinition": false
+  }
+}

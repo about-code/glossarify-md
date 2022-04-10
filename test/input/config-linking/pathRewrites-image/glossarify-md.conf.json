@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../output-actual/config-linking/pathRewrites-image",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "pathRewrites": {
+      "/static/$2.$3": ["(.*)/(.*).(png|jpg|svg|gif)"]
+    },
+    "byReferenceDefinition": false
+  }
+}

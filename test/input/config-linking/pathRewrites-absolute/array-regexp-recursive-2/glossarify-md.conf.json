@@ -1,0 +1,17 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-absolute/array-regexp-recursive-2",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "baseUrl": "http://my.org/",
+    "paths": "absolute",
+    "pathRewrites": {
+      "RE-$1/": ["section-(.*)/"],
+      "$1CURSIVE$2/": ["(RE)(.*)/"]
+    },
+    "byReferenceDefinition": false
+  }
+}

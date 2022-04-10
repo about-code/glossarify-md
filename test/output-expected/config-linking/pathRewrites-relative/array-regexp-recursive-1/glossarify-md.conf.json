@@ -1,0 +1,15 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/pathRewrites-relative/array-regexp-recursive-1",
+  "glossaries": [{
+    "file": "./**/*.md"
+  }],
+  "linking": {
+    "paths": "relative",
+    "pathRewrites": {
+      "RE-$1/": ["section-(.*)/", "(RE.*)/"]
+    },
+    "byReferenceDefinition": false
+  }
+}
