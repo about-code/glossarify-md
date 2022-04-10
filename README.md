@@ -11,6 +11,8 @@
 
 [vuepress] users might be interested in learning [how to use the tool with vuepress][doc-vuepress].
 
+[doc-paths-and-urls]: https://github.com/about-code/glossarify-md/blob/master/doc/paths-and-urls.md
+
 [doc-vocabulary-uris]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md
 
 [doc-skos-interop]: https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md
@@ -1043,6 +1045,7 @@ glossarifying and linking. Non-markdown files won't be processed anyways, so no 
   byReferenceDefinition: boolean,
   paths: "relative" | "absolute",
   pathComponents: ["path", "file", "ext"],
+  pathRewrites: {},
   mentions: "all" | "first-in-paragraph",
   headingAsLink: boolean,
   headingDepths: number[],
@@ -1186,6 +1189,14 @@ Allows to tweak which components of a file path should make it into auto-generat
 - `["file"]` => `default#term`
 
 Use `linking.paths: "none"` if you would like to have a fragment (`#`) but no path components.
+
+#### `linking.pathRewrites`
+
+- **Range:** `{ [key: string]: string | string[] }`
+- **Default:** `{}`
+- **Since:** v6.2.0
+
+Key-Value map where *Value* is a single search string or an array of strings or regular expressions (RegExp) and *Key* is the replacement/rewrite string. See also [Paths and Urls][doc-paths-and-urls].
 
 #### `outDir`
 
