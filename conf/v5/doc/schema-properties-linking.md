@@ -6,6 +6,7 @@ The default value is:
 {
   "baseUrl": "",
   "paths": "relative",
+  "pathRewrites": {},
   "pathComponents": [
     "path",
     "file",
@@ -79,6 +80,16 @@ Adjust which path components should make it into auto-generated links. glossarif
 ### pathComponents Constraints
 
 **maximum number of items**: the maximum number of items for this array is: `3`
+
+## pathRewrites
+
+KEY-VALUE map where VALUE is a single search string or an array of strings or regular expressions (RegExp) and KEY is the replacement/rewrite string. Path rewriting won't change the output folder structure but is intended to be used when output folder structure changes after glossarify-md's own processing. Other glossarify-md options affect link paths and URLs and need to be considered in rewrite rules. Be aware that *URLs* can only be rewritten when the URL is based on 'baseUrl'. If you need path rewriting because the published directory layout differs from 'outDir' then you may find rewriting absolute paths ('paths: absolute') or URLs based on 'baseUrl' easier than than rewriting relative paths. Relative paths can be harder to get right and thus are more likely to result in dead links.
+
+`pathRewrites`
+
+*   is optional
+
+*   Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
 
 ## mentions
 

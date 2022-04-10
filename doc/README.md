@@ -6,7 +6,7 @@
 
 [doc-pandoc]: ./pandoc.md
 
-[doc-path-rewriting]: ./path-rewriting.md
+[doc-path-rewriting]: ./paths-and-urls.md
 
 [doc-plugins]: ./plugins.md
 
@@ -58,6 +58,7 @@ Publishing
 
 *   [Using glossarify-md with vuepress\*][doc-vuepress]
 *   [Using glossarify-md with pandoc\*][doc-pandoc]
+*   [Paths and URLs\*][doc-path-rewriting]
 
 Exporting and Importing Terms
 

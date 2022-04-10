@@ -370,7 +370,7 @@
                     ,"since": "6.0.0"
                 }
                 ,"pathRewrites": {
-                    "description": "Object with keys reflecting the intended rewrite and values being a search string or an array of search strings or array of regular (search) expressions (RegExp). Path rewriting won't change the output folder structure. It may be used to prepare paths when output folder structure changes after glossarify-md's own processing. The results of other glossarify-md options affecting how link URLs are determined need to be considered in the RegExp. Note that rewritten URLs are subject to escaping of unsafe or incompatible CommonMark Markdown."
+                    "description": "KEY-VALUE map where VALUE is a single search string or an array of strings or regular expressions (RegExp) and KEY is the replacement/rewrite string. Path rewriting won't change the output folder structure but is intended to be used when output folder structure changes after glossarify-md's own processing. Other glossarify-md options affect link paths and URLs and need to be considered in rewrite rules. Be aware that _URLs_ can only be rewritten when the URL is based on 'baseUrl'. If you need path rewriting because the published directory layout differs from 'outDir' then you may find rewriting absolute paths ('paths: absolute') or URLs based on 'baseUrl' easier than than rewriting relative paths. Relative paths can be harder to get right and thus are more likely to result in dead links."
                     ,"type": "object"
                     ,"since": "6.1.0"
                 }
