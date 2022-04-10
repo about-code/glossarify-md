@@ -44,7 +44,6 @@ Book Writing
 Publishing
 - [Using glossarify-md with vuepress*][doc-vuepress]
 - [Using glossarify-md with pandoc*][doc-pandoc]
-- [Path Rewriting*][doc-path-rewriting]
 
 Exporting and Importing Terms
 - [Basics](../README.md#structured-export-and-import)
@@ -56,7 +55,7 @@ Dealing with Non-Standard Markdown Syntax
 - [Installing Syntax Plug-ins*][doc-plugins]
 
 Glossary
-- [Glossary*][doc-glossary] (of [glossarify-md…][1])
+- [Glossary*][doc-glossary] (Terms of glossarify-md)
 
 Developer Resources
 - [Conceptual Layers of glossarify-md*][doc-dev-conceptual-layers]
