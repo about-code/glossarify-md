@@ -8,7 +8,7 @@
       "termHint": "🟉"
     },
     {
-      "file": "./references.md",
+      "file": "./_references.md",
       "termHint": "…",
       "linkUris": true
     }

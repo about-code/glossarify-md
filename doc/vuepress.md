@@ -31,7 +31,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*glossarify-md.conf.json*
+*[glossarify-md…][1].conf.json*
 
 ```json
 {
@@ -48,7 +48,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure vuepress](#configure-vuepress)
 
-glossarify-md and vuepress need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix][1].
+[glossarify-md…][1] and [vuepress…][2] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix][3].
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -89,23 +89,23 @@ module.exports = {
 *   `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
 *   `npm run glossarify` writes glossarified markdown files to `outDir`
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
-*   `npm run build` just builds the glossarified vuepress site without running a server.
+*   `npm run build` just builds the glossarified [vuepress…][2] site without running a server.
 
-More information see [README.md][2].
+More information see [README.md][4].
 
 ## [Markdown Extensions](#markdown-extensions)
 
-Vuepress supports some [Markdown Syntax][3] not covered by CommonMark. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with glossarify-md (see [Markdown Syntax Extensions][doc-syntax-extensions]).
+[Vuepress…][2] supports some [Markdown Syntax][5] not covered by [CommonMark…][6]. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with [glossarify-md…][1] (see [Markdown Syntax Extensions][doc-syntax-extensions]).
 
-| Vuepress Markdown Extension           | remark plug-in required with glossarify-md |
-| ------------------------------------- | ------------------------------------------ |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][4]                    |
-| [Custom Containers][vp-cc]            | None                                       |
-| [GitHub Style Tables][vp-gh-tables]   | None                                       |
-| [Table of Contents][vp-toc] `[[toc]]` | None                                       |
-| [Emoji][vp-emoji]                     | None                                       |
-| [Line Highlighting Codeblocks][vp-lh] | None                                       |
-| [Import Code Snippets][vp-code]       | None                                       |
+| [Vuepress…][2] Markdown Extension     | [remark…][7] plug-in required with [glossarify-md…][1] |
+| ------------------------------------- | ------------------------------------------------------ |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][8]                                |
+| [Custom Containers][vp-cc]            | None                                                   |
+| [GitHub Style Tables][vp-gh-tables]   | None                                                   |
+| [Table of Contents][vp-toc] `[[toc]]` | None                                                   |
+| [Emoji][vp-emoji]                     | None                                                   |
+| [Line Highlighting Codeblocks][vp-lh] | None                                                   |
+| [Import Code Snippets][vp-code]       | None                                                   |
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 
@@ -123,11 +123,11 @@ Vuepress supports some [Markdown Syntax][3] not covered by CommonMark. While mos
 
 ## [Appendix](#appendix)
 
-glossarify-md and vuepress both employ a [slug🟉][5] algorithm to create friendly [URL fragments🟉][6] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][7] fragments which can break links in a book (see [#27][8]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
+[glossarify-md…][1] and [vuepress…][2] both employ a [slug🟉][9] algorithm to create friendly [URL fragments🟉][10] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][11] fragments which can break links in a book (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
 
-glossarify-md uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs🟉][5] change again. Then you can use \[github-slugger] standalone with vuepress, like so:
+[glossarify-md…][1] uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs🟉][9] change again. Then you can use \[github-slugger] standalone with [vuepress…][2], like so:
 
-*Using github-slugger without glossarify-md*
+*Using [github-slugger…][13] without [glossarify-md…][1]*
 
 ```js
 const GitHubSlugger = require("github-slugger");
@@ -143,18 +143,28 @@ module.exports = {
 };
 ```
 
-[1]: #appendix
+[1]: https://github.com/about-code/glossarify-md "This project."
 
-[2]: ../README.md
+[2]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
 
-[3]: https://vuepress.vuejs.org/guide/markdown.html
+[3]: #appendix
 
-[4]: http://unifiedjs.com/explore/package/remark-frontmatter/
+[4]: ../README.md
 
-[5]: ./glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
+[5]: https://vuepress.vuejs.org/guide/markdown.html
 
-[6]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
+[6]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[7]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[7]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
 
-[8]: https://github.com/about-code/glossarify-md/issues/27
+[8]: http://unifiedjs.com/explore/package/remark-frontmatter/
+
+[9]: ./glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
+
+[10]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
+
+[11]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+
+[12]: https://github.com/about-code/glossarify-md/issues/27
+
+[13]: https://npmjs.com/package/github-slugger "A library providing support for slugs."

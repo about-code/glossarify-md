@@ -73,11 +73,11 @@ Dealing with Non-Standard Markdown Syntax
 
 Glossary
 
-*   [Glossary\*][doc-glossary] (of \[glossarify-md…]\[1])
+*   [Glossary\*][doc-glossary] (of \[[glossarify-md…][19]…]\[1])
 
 Developer Resources
 
-*   \[Conceptual Layers of glossarify-md\*]\[doc-dev-conceptual-layers]
+*   \[Conceptual Layers of [glossarify-md…][19]\*]\[doc-dev-conceptual-layers]
 *   \[The Parsing Process and Custom Node Types\*]\[doc-dev-node-types]
 
 Known Issues
@@ -119,3 +119,5 @@ Known Issues
 [17]: ../README.md#lists-from-regular-expressions
 
 [18]: ../README.md#structured-export-and-import
+
+[19]: https://github.com/about-code/glossarify-md "This project."
