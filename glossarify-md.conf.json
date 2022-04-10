@@ -6,6 +6,10 @@
     {
       "file": "./glossary.md",
       "termHint": "🟉"
+    },
+    {
+      "file": "./references.md",
+      "linkUris": true
     }
   ],
   "ignoreCase": true,

@@ -4,35 +4,24 @@
 ![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20(with%20latest%20deps)/badge.svg)
 
 
-[glossarify-md] is a command line tool to help Markdown writers with
+glossarify-md is a command line tool to help Markdown writers with
 
 - **Cross-Linking** (primary use case): autolink terms to some definition in a glossary
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
-[vuepress] users might be interested in learning [how to use the tool with vuepress][doc-vuepress].
+vuepress users might be interested in learning [how to use the tool with vuepress][doc-vuepress].
 
 [doc-vocabulary-uris]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md
 [doc-skos-interop]: https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md
 [doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md
 [doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
 [doc-conceptual-layers]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md
-[CommonMark]: https://www.commonmark.org
-[GFM]: https://github.github.com/gfm/
-[glob]: https://github.com/isaacs/node-glob#glob-primer
-[glossarify-md]: https://github.com/about-code/glossarify-md
-[jsonld]: https://npmjs.com/package/jsonld
 [link reference definitions]: https://spec.commonmark.org/0.30/#link-reference-definition
-[mdast]: https://github.com/syntax-tree/mdast
-[micromark]: https://github.com/micromark/
-[pandoc]: https://pandoc.org
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
-[remark]: https://github.com/remarkjs/remark
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
-[unified]: https://unifiedjs.com
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
-[vuepress]: https://vuepress.vuejs.org
 
 ## Table of Contents
 
@@ -191,7 +180,7 @@ This is a text which uses a glossary Term to describe something.
 ```
 
 
-Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration):
+Then run glossarify-md with a [glossarify-md.conf.json](#configuration):
 
 ~~~
 npx glossarify-md --config ./glossarify-md.conf.json
@@ -303,7 +292,7 @@ In the output files aliases will be linked to their related term:
 
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one. Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of a linkified term occurrence.
 
-> **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking].
+> **ⓘ Since v5.0.0**: `file` can also be used with a glob pattern. More see [Cross-Linking].
 
 ## Multiple Glossaries
 
@@ -335,7 +324,7 @@ By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *R
 
 ## Sorting your glossaries
 
-Add `sort` with `"asc"` (ascending) or `"desc"` (descending) to glossaries you want [glossarify-md] sort for you:
+Add `sort` with `"asc"` (ascending) or `"desc"` (descending) to glossaries you want glossarify-md sort for you:
 
 *glossarify-md.conf.json*
 ```json
@@ -366,7 +355,7 @@ The i18n-object is passed *as is* to the collator function. Thus you can use add
 
 *Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term.
 
-**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with ...
+**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for glob patterns in `glossaries.file`. For example with ...
 
 ```json
 "glossaries": [
@@ -388,7 +377,7 @@ If the same section heading exists more than once then you might want to link to
 
 **Since v5.0.0** we've added support for manual cross-linking through [pandoc's concept of heading ids][pandoc-heading-ids]. These allow you to assign identifiers which are more stable for referencing than auto-generated IDs derived from the heading phrase (slugs).
 
-> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **ⓘ Note:** Pandoc's identifier syntax is not standardized in CommonMark.
 
 [Sample]: document `./pages/page1.md` declares a heading
 
@@ -403,7 +392,7 @@ with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents
 [any phrase](#s-241)
 ~~~
 
-In any file being processed [glossarify-md] will resolve the actual path to the definition:
+In any file being processed glossarify-md will resolve the actual path to the definition:
 
 */README.md*
 ~~~
@@ -456,7 +445,7 @@ Let's assume you have multiple glossaries and you want to create separate book i
 }
 ```
 
-> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with vuepress(https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
 ### Lists
 
@@ -535,13 +524,13 @@ The link label for list items will be inferred in this order (first-match):
 ### List of Figures
 
 So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
-`listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
+`listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes glossarify-md generate the HTML anchor itself from Markdown's image syntax:
 
 ```md
 ![List item Label](./figure.png)
 ```
 
-Then you may only need to use HTML for dynamically rendered figures, e.g. a [PlantUML](https://plantuml.com) diagram:
+Then you may only need to use HTML for dynamically rendered figures, e.g. a PlantUML diagram:
 
 ````md
 <figure id="figure-gen">Dynamically Rendered Diagram</figure>
@@ -553,7 +542,7 @@ Then you may only need to use HTML for dynamically rendered figures, e.g. a [Pla
 ```
 ````
 
-To compile both figures into the same list one way to configure [glossarify-md] is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
+To compile both figures into the same list one way to configure glossarify-md is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
 
 *glossarify-md.conf.json* (since v5.0.0)
 
@@ -598,7 +587,7 @@ This configuration which would allow you to also choose a shorter classifier lik
 }
 ```
 
-In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md] tries to infer a list item label.
+In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table glossarify-md tries to infer a list item label.
 
 One such inference looks at the **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon** then the tool uses that phrase as the item label:
 
@@ -650,7 +639,7 @@ The result for the tables above will be:
 > - [Average Prices by Article Category](#avg-prices)
 
 
-**Since v5.0.0** and the introduction of `listOf` all the previous examples will make [glossarify-md] annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
+**Since v5.0.0** and the introduction of `listOf` all the previous examples will make glossarify-md annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
 
 ```md
 <a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
@@ -662,7 +651,7 @@ The result for the tables above will be:
 | 3        | Book        | $23.45     |
 ```
 
-> **ⓘ Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
+> **ⓘ Note:** If glossarify-md can't find a list item label by any of the above means it will fall back to rendering a list item
 > 1. using the table headers separated by comma,
 > 1. or if no headers, using the closest section heading
 > 1. or if no section heading, using the file name.
@@ -709,15 +698,15 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 
 > **ⓘ When to consider "markdown syntax" in the RegExp**:
 >
-> You may noticed that the RegExp above doesn't assume *Task:* to be written between "bold" star markers `**`. The expression won't be matched against the input *you* wrote but against *plain text* cleaned from symbols contributing to [CommonMark] or [GFM] syntax.
+> You may noticed that the RegExp above doesn't assume *Task:* to be written between "bold" star markers `**`. The expression won't be matched against the input *you* wrote but against *plain text* cleaned from symbols contributing to CommonMark or GFM syntax.
 >
 > In case you use another Markdown flavor see our addendum on [Markdown Syntax Extensions][doc-syntax-extensions]. Without a proper plug-in its syntactical elements are likely considered plain text, too. Then they need to be taken care of in the RegExp to make it match.
 
 ## Structured Export and Import
 [doc-export-import]: #structured-export-and-import
-[SKOS]: https://w3.org/skos
+SKOS: https://w3.org/skos
 
-**Since v6.0.0** glossary terms can be exported to a structured JSON format (file extension `.json`). When [jsonld] is installed alongside glossarify-md then terms can also be exported to RDF N-Quads (file extension `.nq`).
+**Since v6.0.0** glossary terms can be exported to a structured JSON format (file extension `.json`). When jsonld is installed alongside glossarify-md then terms can also be exported to RDF N-Quads (file extension `.nq`).
 
 *glossarify-md.conf.json* (generates ./glossary.json)
 ~~~json
@@ -732,7 +721,7 @@ If the regular expression (RegExp) matches text in a paragraph, then *the paragr
 }
 ~~~
 
-Declare a glossary `uri` when exporting. It will make [glossarify-md] assign each term a *uniform resource identifier* by combining the glossary's `uri` with a term's book-internal identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]. You can import terms the same way using `import` instead.
+Declare a glossary `uri` when exporting. It will make glossarify-md assign each term a *uniform resource identifier* by combining the glossary's `uri` with a term's book-internal identifier (see [`headingIdAlgorithm`][headingIdAlgorithm]). Note that URIs are not required to resolve to some web page but *can* do so. More on the idea behind URIs read [here][doc-vocabulary-uris]. You can import terms the same way using `import` instead.
 
 *glossarify-md.conf.json* (generates ./glossary.md):
 ~~~json
@@ -747,7 +736,7 @@ Declare a glossary `uri` when exporting. It will make [glossarify-md] assign eac
 }
 ~~~
 
-> ⚠ **Important:** [glossarify-md] is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported term definitions using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of [glossarify-md]. Consider importing files statically after review.
+> ⚠ **Important:** glossarify-md is able to import JSON glossaries from a remote location using `https`. While it will try to remove any Markdown and HTML from imported term definitions using [strip-markdown](https://npmjs.com/package/strip-markdown) it can only do so after `JSON.parse()`. As a rule of thumb never import from untrusted sources and assume that any files from a remote location could enable a remote entity to embed malicious code into outputs or execute such code in the runtime context of glossarify-md. Consider importing files statically after review.
 
 Advanced topics on importing and exporting can be found [here](https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md).
 
@@ -758,7 +747,7 @@ The term *support* refers to *runs on the given platform* and is subject to the 
 
 | NodeJS  | glossarify-md |                                                                           Current Test Matrix                                                                            |
 | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current | v6+           | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
+| Current | v6+           | Tested. Should node.js introduce breaking changes which affect glossarify-md, then we may choose to step back from supporting *Current* until it becomes the next LTS. |
 | 16 LTS  | v5, v6+       | Tested + Supported                                                                                                                                                       |
 | 14 LTS  | v4, v5, v6+   | Tested + Supported                                                                                                                                                       |
 | 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |
@@ -1008,7 +997,7 @@ Whether to convert inline-links to [link reference definitions] (size-efficient)
 - **Default:** `true`
 - **Since:** v6.0.0
 
-Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like [pandoc] don't need linkified headings but special syntax.
+Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like pandoc don't need linkified headings but special syntax.
 
 See also:
 
@@ -1053,9 +1042,9 @@ where `baseUrl` will be used only if there's no glossary uri. The `*-7` hashsum 
 - **Default:** false
 - **Since:** v6.0.0
 
-Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with [pandoc].
+Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with pandoc.
 
-> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
+> **ⓘ Note:** Pandoc's identifier syntax is not standardized in CommonMark.
 
 See also
 

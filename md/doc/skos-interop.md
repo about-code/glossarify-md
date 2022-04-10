@@ -1,25 +1,18 @@
 # Interoperability with SKOS and JSON-LD
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
+glossarify-md: https://github.com/about-code/glossarify-md
 [doc-export-import]: ../README.md#structured-export-and-import
 [headingidalgorithm]: ../README.md#headingidalgorithm
-[SKOS]: http://w3.org/skos/
-[DC]: http://purl.org/dc/terms/
-[LD]: https://www.w3.org/standards/semanticweb/ontology
-[JSON-LD]: https://json-ld.org
-[JSON-LD Spec]: https://www.w3.org/TR/json-ld/
-[jsonld]: https://npmjs.com/package/jsonld
-[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
-[OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
+OWL: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
 [sample-export]: ../test/output-expected/config-glossaries/export-and-glossary-uri/glossary.json
 
 > Readers Level: *Advanced*
 >
 > The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of technical attribute names or type names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
 
-**Since v6.0.0** [glossarify-md] supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS] and [Dublin Core][DC] model terms.
+**Since v6.0.0** glossarify-md supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" SKOS and Dublin Core model terms.
 
-Model terms understood by [glossarify-md] are:
+Model terms understood by glossarify-md are:
 
 - `skos:ConceptScheme`
 - `skos:Concept`
@@ -45,7 +38,7 @@ To see how this works a good starting point is to have a look at a glossarify-md
 }
 ~~~
 
-The configuration will make [glossarify-md] produce a file
+The configuration will make glossarify-md produce a file
 
 *glossary.json*
 ~~~json
@@ -86,7 +79,7 @@ The configuration will make [glossarify-md] produce a file
 }
 ~~~
 
-`glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto [SKOS] and [Dublin Core][DC] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
+`glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto SKOS and Dublin Core terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
 [^1]: You can map glossarify-md's terms onto other model vocabularies by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
@@ -108,9 +101,9 @@ Copy `glossary.json` which you've just exported into your input folder (*baseDir
 }
 ~~~
 
-Of course, [glossarify-md] will be able to import *its own* export format again. But what if you have terms exported by another tool in another format?
+Of course, glossarify-md will be able to import *its own* export format again. But what if you have terms exported by another tool in another format?
 
-> In case you just ran [glossarify-md] and there is an `imported.md` file in your `outDir` then delete it.
+> In case you just ran glossarify-md and there is an `imported.md` file in your `outDir` then delete it.
 
 Let's drop `@context` from `glossary.json` and change it to a very different schema:
 
@@ -132,9 +125,9 @@ Let's drop `@context` from `glossary.json` and change it to a very different sch
 }
 ~~~
 
-This is now a sample format *unknown* to [glossarify-md]. Different data formats and semantics like these are a barrier to *interoperability*. That's where JSON-LD and standardized vocabularies enter the game.
+This is now a sample format *unknown* to glossarify-md. Different data formats and semantics like these are a barrier to *interoperability*. That's where JSON-LD and standardized vocabularies enter the game.
 
-If the *unknown* application had embedded JSON-LD mappings onto [SKOS] and [DublinCore][DC] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
+If the *unknown* application had embedded JSON-LD mappings onto SKOS and [DublinCore] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
 
 *unknown-format.jsonld*
 ~~~json
@@ -176,9 +169,9 @@ What's left is to enhance glossarify-md with JSON-LD capabilities for interopera
 npm install jsonld
 ~~~
 
-[^2]: We could have installed [jsonld] together with [glossarify-md] by default but decided against to minimize bloat for the average user.
+[^2]: We could have installed [jsonld] together with glossarify-md by default but decided against to minimize bloat for the average user.
 
-On the next run [glossarify-md] will be looking for `@context` mappings
+On the next run glossarify-md will be looking for `@context` mappings
 
 1. *embedded into the JSON import file*
 2. or provided *externally* using `context` in the `import` config.
@@ -189,6 +182,6 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 ### Additional Notes
 
-- [glossarify-md] will only import typed documents directly using JSON-LD's `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
+- glossarify-md will only import typed documents directly using JSON-LD's `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
 
-- More complicated data formats may require use of some additional [JSON-LD keywords][JSON-LD Spec].
+- More complicated data formats may require use of some additional JSON-LD keywords from the JSON-LD Spec.

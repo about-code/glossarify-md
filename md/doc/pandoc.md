@@ -1,7 +1,5 @@
 # Using glossarify-md with pandoc
 
-[pandoc]: https://pandoc.org
-
 ~~~
 ${root}
    +- docs/
@@ -37,7 +35,7 @@ npm i --save glossarify-md
 }
 ~~~
 
-When [pandoc] merges multiple files into a single file we need to take care for
+When pandoc merges multiple files into a single file we need to take care for
 link stability and paths.
 
 1. `linking.paths: "none"` disables the use of paths and uses heading ids
