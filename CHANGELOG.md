@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.2.0](https://github.com/about-code/glossarify-md/compare/v6.1.0...v6.2.0) (2022-04-10)
+
+
+### Features
+
+* Path Rewrites. New option `linking.pathRewrites` ([#238](https://github.com/about-code/glossarify-md/issues/238)) ([e43284d](https://github.com/about-code/glossarify-md/commit/e43284de0ee884df669977615561b51269529dc6))
+
 ## [6.1.0](https://github.com/about-code/glossarify-md/compare/v6.0.1...v6.1.0) (2022-04-03)
 
 
