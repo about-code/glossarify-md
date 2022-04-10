@@ -12,9 +12,9 @@ A sementically similar or equivalent alternative name for a [term🟉][4]. May a
 
 A [term🟉][4] is a heading in a markdown file which is passed to [glossarify-md][1] as a glossary.
 
-## [Term Attributes](#term-attributes)
+## [Term Attribute](#term-attribute)
 
-<!--{ "aliases": "term attribute, term-attribute" }-->
+<!--{ "aliases": "term attributes, term-attribute" }-->
 
 [Term🟉][4] Attributes are properties passed to [glossarify-md][1] using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
 

@@ -79,6 +79,6 @@ If you have a background in [Linked Data][6] and Semantic Web technologies you m
 
 [4]: ./glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
 
-[5]: ./glossary.md#term-attributes "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
+[5]: ./glossary.md#term-attribute "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
 
 [6]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."

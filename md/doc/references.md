@@ -1,7 +1,6 @@
 # Managing References
 
-In order to cite a source on the web whenever using a particular term, use a
-glossary configuration with `linkUris: true`:
+In order to cite a source on the web whenever using a particular term use a glossary configuration with `linkUris: true`:
 
 *glossarify-md.conf.json*
 ~~~json
@@ -15,7 +14,7 @@ glossary configuration with `linkUris: true`:
 }
 ~~~
 
-Within file `./references.md` use the `uri` term attribute to provide the source's URL. Optionally you can add an `aliases` term attribute to make further terms refer to a particular source and provide a tooltip for the link.
+Within file `./references.md` use the term attribute `uri` to provide the source's URL. Optionally you can add an `aliases` term attribute to make further terms refer to a particular source and provide a tooltip for the link.
 
 *references.md*
 ~~~md

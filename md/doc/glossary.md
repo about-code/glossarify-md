@@ -12,8 +12,8 @@ A sementically similar or equivalent alternative name for a term. May also be us
 
 A term is a heading in a markdown file which is passed to glossarify-md as a glossary.
 
-## Term Attributes
-<!--{ "aliases": "term attribute, term-attribute" }-->
+## Term Attribute
+<!--{ "aliases": "term attributes, term-attribute" }-->
 
 Term Attributes are properties passed to glossarify-md using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
 
