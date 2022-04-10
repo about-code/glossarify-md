@@ -14,7 +14,7 @@
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*[glossarify-md⎆][1].conf.json*
+*glossarify-md.conf.json*
 
 ```json
 {
@@ -32,13 +32,13 @@
 }
 ```
 
-When [pandoc⎆][2] merges multiple files into a single file we need to take care for
+When pandoc merges multiple files into a single file we need to take care for
 link stability and paths.
 
 1.  `linking.paths: "none"` disables the use of paths and uses heading ids
     (anchors), only
 2.  `headingIdPandoc: true` adds pandoc-style `{# foo}` attributes taken by
-    [pandoc⎆][2] for its own linking
+    pandoc for its own linking
 3.  `headingIdAlgorithm: "md5"` generates a heading ID based on a hashsum which is
     unique accross the file set and therefore within a pandoc-merged file, too. Other
     values may be `md5-7, sha256, sha256-7`.
@@ -54,7 +54,3 @@ Optional
 After having set these options, files can be merged, e.g. with
 
     pandoc --from=markdown -o out.html ./docs-glossarified/**/*.md
-
-[1]: https://github.com/about-code/glossarify-md "This project."
-
-[2]: https://pandoc.org "See pandoc."

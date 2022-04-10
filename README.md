@@ -41,7 +41,7 @@ vuepress users might be interested in learning [how to use the tool with vuepres
 - [Aliases and Synonyms](#aliases-and-synonyms)
 - [Term Hints](#term-hints)
 - [Multiple Glossaries](#multiple-glossaries)
-- [Sorting your glossaries](#sorting-your-glossaries)
+- [Sorting Glossaries](#sorting-glossaries)
 - [Cross Linking](#cross-linking)
   - [Term-Based Auto-Linking](#term-based-auto-linking)
   - [Identifier-based Cross-Linking](#identifier-based-cross-linking)
@@ -360,7 +360,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index](#book-index).
 
-## Sorting your glossaries
+## Sorting Glossaries
 
 Add `sort` with `"asc"` (ascending) or `"desc"` (descending) to glossaries you want glossarify-md sort for you:
 
@@ -1002,7 +1002,7 @@ The relation to [`linking.headingDepths`](#linkingheadingdepths) is that *this* 
 }`
 ```
 
-Locale options to control [sorting](#sorting-your-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
+Locale options to control [sorting](#sorting-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
 
 #### `keepRawFiles`
 
