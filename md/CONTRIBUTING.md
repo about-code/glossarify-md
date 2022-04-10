@@ -1,5 +1,5 @@
 # Contributing
-
+[VSCode]: https://code.visualstudio.com
 [launch configuration]: ./.vscode/launch.json
 
 ## Table of Contents
@@ -15,7 +15,7 @@
 *Prerequisites*
 - [`git`](https://git-scm.com)
 - [`node` and `npm`](https://nodejs.org) - we aim to support the last two Node LTS releases ([Maintenance, Active](https://nodejs.org/en/about/releases/)) as well as the latest Non-LTS versions ([Current](https://nodejs.org/en/about/releases/))
-- Editor of your choice, e.g. Atom, VSCode, etc.
+- Editor of your choice, e.g. [Atom](https://atom.io), [VSCode](https://code.visualstudio.com), etc.
 
 > **⚠ Important (Windows-Users):** Configure your editor or IDE to use Unix-style line-endings (LF) for this project. Unix-Style-Endings are required at least for *Markdown*, *JS* and *JSON* files.
 
@@ -69,7 +69,7 @@ npm run experiment
 
 ## Debugging
 
-The project includes a VSCode `Debug Experiment` [launch configuration] for debugging [experiments](#experiments) with the internal debugger (`F5` key).
+The project includes a [VSCode] `Debug Experiment` [launch configuration] for debugging [experiments](#experiments) with the internal debugger (`F5` key).
 
 Alternatively
 
