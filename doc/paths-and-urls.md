@@ -33,9 +33,9 @@ If your post processor moves files around but is not able to properly adjust lin
 
 **Rules of thumb**:
 
-*   Use `paths: absolute` when rewriting *paths* (optionally with a `baseUrl`).
-*   You can only rewrite *URLs* which are based on `baseUrl`.
 *   `pathRewrites` won't change the output directory structure of [glossarify-md][1]'s `outDir` *but links only*.
+*   Consider `paths: absolute` when rewriting *paths* (optionally with a `baseUrl`), it might be easier.
+*   You can only rewrite *URLs* which are based on `baseUrl`.
 
 *Example: when markdown files from a deep structure get moved all into the same directory*
 
@@ -48,7 +48,7 @@ If your post processor moves files around but is not able to properly adjust lin
       }
     }
 
-You can use anything acceptable to JavaScript's `String.replace()` method. Just note that in the rewrite map *keys are the replacer* and  *values are one or more search expressions* (including regular expressions).
+You can use anything acceptable to JavaScript's `String.replace()` method. Just note that in the rewrite map *keys are the replacer* and *values are one or more search expressions* (including regular expressions).
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 
