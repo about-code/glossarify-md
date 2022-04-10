@@ -1,14 +1,10 @@
 # Installing Syntax Plug-ins
 
 [doc-conceptual-layers]: ./conceptual-layers.md
-CommonMark: https://www.commonmark.org
-glossarify-md: https://github.com/about-code/glossarify-md
 [mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
-micromark: https://github.com/micromark/
 [remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 [remark-plugin]: https://github.com/remarkjs/awesome-remark
-unified: https://unifiedjs.com
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
 

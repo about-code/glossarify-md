@@ -5,9 +5,8 @@
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
-vuepress: https://vuepress.vuejs.org
 
-glossarify-md supports CommonMark and [GitHub Flavoured Markdown (GFM)][GFM]. Syntax not covered by these specifications may have no or worse, a wrong representation in the tool's [Abstract Syntax Tree][mdast]. As a consequence it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
+glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM). Syntax not covered by these specifications may have no or worse, a wrong representation in the tool's Abstract Syntax Tree (mdAst). As a consequence it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
 
 *Frontmatter Syntax*
 

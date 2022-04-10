@@ -10,7 +10,7 @@ Conceptual layers of text processing by glossarify-md and projects contributing 
 | ----- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 4     | glossarify-md | cross-linking multiple markdown files                                                                                                                                 |
 | 3     | unified       | umbrella project for *text file processing in general*                                                                                                                |
-| 2     | remark        | unified *processor* for *markdown text file processing in particular*. Offers access to an Abstract Syntax Tree ([mdast]) data structure grown from micromark tokens. |
+| 2     | remark        | unified *processor* for *markdown text file processing in particular*. Offers access to an Abstract Syntax Tree (mdAst) data structure grown from micromark tokens. |
 | 1     | micromark     | remarks internal markdown syntax tokenizer                                                                                                                            |
 | 0     | CommonMark    | Markdown Syntax Specification                                                                                                                                         |
 

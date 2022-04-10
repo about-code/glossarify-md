@@ -1,10 +1,6 @@
 # Interoperability with SKOS and JSON-LD
 
-glossarify-md: https://github.com/about-code/glossarify-md
 [doc-export-import]: ../README.md#structured-export-and-import
-[headingidalgorithm]: ../README.md#headingidalgorithm
-OWL: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
-[sample-export]: ../test/output-expected/config-glossaries/export-and-glossary-uri/glossary.json
 
 > Readers Level: *Advanced*
 >

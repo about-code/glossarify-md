@@ -9,6 +9,7 @@
     },
     {
       "file": "./references.md",
+      "termHint": "⎆",
       "linkUris": true
     }
   ],
