@@ -16,23 +16,9 @@
 
 [doc-glossary]: ./glossary.md
 
-[SKOS]: http://w3.org/skos/
-
-[LD]: https://www.w3.org/standards/semanticweb/ontology
-
-[JSON-LD]: https://json-ld.org
-
-[jsonld]: https://npmjs.com/package/jsonld
-
-[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
-
-[glossarify-md]: https://github.com/about-code/glossarify-md
-
-[OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
-
 # [Advanced Topics](#advanced-topics)
 
-[Glossary][doc-glossary] (of glossarify-md)
+[Glossary][doc-glossary] (of [glossarify-md][1])
 
 Markdown Syntax
 
@@ -56,3 +42,5 @@ Internals
 Known Issues
 
 *   [Generated Lists and Links on GitHub][doc-lists-on-github]
+
+[1]: https://github.com/about-code/glossarify-md "This project."
