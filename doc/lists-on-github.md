@@ -30,9 +30,9 @@ Normally, when converting such markdown to HTML using a Markdown-to-HTML static 
 
 On a GitHub repository, though, you'll find that you can navigate within the repository using the list item link in `list.md` but the browser *won't* scroll to the item position `#mylist-foo` in `page.md`. The reason for this is that GitHub *[sanitizes][gfm-sanitize]* Markdown files before rendering them within their own repository previews. They allow only a small subset of HTML and strip elements like `<cite>` and other [Semantic HTML Tags][html-sem-tags] including the element's `id="#mylist-foo"` which a browser needs to be able to scroll to that part of an HTML document. Therefore, if you care for navigability in GitHub repositories, just use supported elements like `<span>` or `<a>` instead.
 
-**This is a limitation of GitHub's repository preview renderer *only*!** It is not a bug in [glossarify-md][3]. For example, if you were rendering `list.md` and `page.md` with a static website generator like [Jekyll][4] or [vuepress][5] things work just fine.
+**This is a limitation of GitHub's repository preview renderer *only*!** It is not a bug in [glossarify-md⎆][3]. For example, if you were rendering `list.md` and `page.md` with a static website generator like [Jekyll⎆][4] or [vuepress⎆][5] things work just fine.
 
-You can even try yourself with [GitHub Pages][gh-pages] which renders `.md` files in a repo to [https://yoursite.github.io][6] using [Jekyll][4].
+You can even try yourself with [GitHub Pages][gh-pages] which renders `.md` files in a repo to [https://yoursite.github.io][6] using [Jekyll⎆][4].
 
 [1]: #my-list
 

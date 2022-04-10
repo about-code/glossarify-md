@@ -18,7 +18,7 @@
 
 # [Advanced Topics](#advanced-topics)
 
-[Glossary][doc-glossary] (of [glossarify-md][1])
+[Glossary][doc-glossary] (of [glossarify-md⎆][1])
 
 Markdown Syntax
 

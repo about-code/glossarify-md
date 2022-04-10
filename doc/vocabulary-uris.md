@@ -16,7 +16,7 @@ it is clear that it refers to a different meaning than some identifier
 
 *   `https://example.com/glossary/it/#security`.
 
-**Since v6.0.0** [glossarify-md][3] supports [exporting and importing][doc-import] glossaries. Moreover it introduces an `uri` option for `glossaries` which assigns a glossary a *[vocabulary🟉][4] [URI🟉][2]*. Then *exported* [term🟉][1] URIs will be constructed from the vocabulary URI and a term's heading ID (see [headingIdAlgorithm]).
+**Since v6.0.0** [glossarify-md⎆][3] supports [exporting and importing][doc-import] glossaries. Moreover it introduces an `uri` option for `glossaries` which assigns a glossary a *[vocabulary🟉][4] [URI🟉][2]*. Then *exported* [term🟉][1] URIs will be constructed from the vocabulary URI and a term's heading ID (see [headingIdAlgorithm]).
 
 ```json
 {
@@ -47,7 +47,7 @@ Term with an individual URI.
 
 ### [Resolvability](#resolvability)
 
-URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term🟉][1]'s [URI🟉][2] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md][3] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
+URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term🟉][1]'s [URI🟉][2] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md⎆][3] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
 
 ### [Authority](#authority)
 
@@ -69,7 +69,7 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 ~~~
 -->
 
-If you have a background in [Linked Data][5] and Semantic Web technologies you might also be interested in reading about [SKOS Interoperability with JSON-LD][doc-skos].
+If you have a background in [Linked Data⎆][5] and Semantic Web technologies you might also be interested in reading about [SKOS Interoperability with JSON-LD][doc-skos].
 
 [1]: ./glossary.md#term "A term is a heading in a markdown file which is passed to glossarify-md as a glossary."
 
