@@ -31,7 +31,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*[glossarify-md…][1].conf.json*
+*[glossarify-md][1].conf.json*
 
 ```json
 {
@@ -48,7 +48,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure vuepress](#configure-vuepress)
 
-[glossarify-md…][1] and [vuepress…][2] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix][3].
+[glossarify-md][1] and [vuepress][2] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix][3].
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -89,23 +89,23 @@ module.exports = {
 *   `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
 *   `npm run glossarify` writes glossarified markdown files to `outDir`
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
-*   `npm run build` just builds the glossarified [vuepress…][2] site without running a server.
+*   `npm run build` just builds the glossarified [vuepress][2] site without running a server.
 
 More information see [README.md][4].
 
 ## [Markdown Extensions](#markdown-extensions)
 
-[Vuepress…][2] supports some [Markdown Syntax][5] not covered by [CommonMark…][6]. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with [glossarify-md…][1] (see [Markdown Syntax Extensions][doc-syntax-extensions]).
+[Vuepress][2] supports some [Markdown Syntax][5] not covered by [CommonMark][6]. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with [glossarify-md][1] (see [Markdown Syntax Extensions][doc-syntax-extensions]).
 
-| [Vuepress…][2] Markdown Extension     | [remark…][7] plug-in required with [glossarify-md…][1] |
-| ------------------------------------- | ------------------------------------------------------ |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][8]                                |
-| [Custom Containers][vp-cc]            | None                                                   |
-| [GitHub Style Tables][vp-gh-tables]   | None                                                   |
-| [Table of Contents][vp-toc] `[[toc]]` | None                                                   |
-| [Emoji][vp-emoji]                     | None                                                   |
-| [Line Highlighting Codeblocks][vp-lh] | None                                                   |
-| [Import Code Snippets][vp-code]       | None                                                   |
+| [Vuepress][2] Markdown Extension      | [remark][7] plug-in required with [glossarify-md][1] |
+| ------------------------------------- | ---------------------------------------------------- |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][8]                              |
+| [Custom Containers][vp-cc]            | None                                                 |
+| [GitHub Style Tables][vp-gh-tables]   | None                                                 |
+| [Table of Contents][vp-toc] `[[toc]]` | None                                                 |
+| [Emoji][vp-emoji]                     | None                                                 |
+| [Line Highlighting Codeblocks][vp-lh] | None                                                 |
+| [Import Code Snippets][vp-code]       | None                                                 |
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 
@@ -123,11 +123,11 @@ More information see [README.md][4].
 
 ## [Appendix](#appendix)
 
-[glossarify-md…][1] and [vuepress…][2] both employ a [slug🟉][9] algorithm to create friendly [URL fragments🟉][10] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][11] fragments which can break links in a book (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
+[glossarify-md][1] and [vuepress][2] both employ a [slug🟉][9] algorithm to create friendly [URL fragments🟉][10] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][11] fragments which can break links in a book (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
 
-[glossarify-md…][1] uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs🟉][9] change again. Then you can use \[github-slugger] standalone with [vuepress…][2], like so:
+[glossarify-md][1] uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs🟉][9] change again. Then you can use \[github-slugger] standalone with [vuepress][2], like so:
 
-*Using [github-slugger…][13] without [glossarify-md…][1]*
+*Using [github-slugger][13] without [glossarify-md][1]*
 
 ```js
 const GitHubSlugger = require("github-slugger");

@@ -73,11 +73,11 @@ Dealing with Non-Standard Markdown Syntax
 
 Glossary
 
-*   [Glossary\*][doc-glossary] (of \[[glossarify-md…][19]…]\[1])
+*   [Glossary\*][doc-glossary] (of \[[glossarify-md][19]…]\[1])
 
 Developer Resources
 
-*   \[Conceptual Layers of [glossarify-md…][19]\*]\[doc-dev-conceptual-layers]
+*   \[Conceptual Layers of [glossarify-md][19]\*]\[doc-dev-conceptual-layers]
 *   \[The Parsing Process and Custom Node Types\*]\[doc-dev-node-types]
 
 Known Issues

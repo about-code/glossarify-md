@@ -4,7 +4,7 @@
 
 <!--{"uri": "https://atom.io" }-->
 
-[Atom…][1] Code Editor.
+[Atom][1] Code Editor.
 
 ## [CommonMark](#commonmark)
 
@@ -19,7 +19,7 @@ Effort on providing a minimal set of standardized Markdown syntax.
     "aliases": "DC, DublinCore, dc:"
 }-->
 
-The [Dublin Core…][2] Metadata Initiative.
+The [Dublin Core][2] Metadata Initiative.
 
 ## [GFM](#gfm)
 
@@ -28,19 +28,19 @@ The [Dublin Core…][2] Metadata Initiative.
     "aliases": "GFM, GitHub Flavoured Markdown, GitHub Flavored Markdown"
 }-->
 
-[GitHub Flavoured Markdown…][3]
+[GitHub Flavoured Markdown][3]
 
 ## [github-slugger](#github-slugger)
 
 <!--{"uri": "https://npmjs.com/package/github-slugger" }-->
 
-A library providing support for [slugs🟉][4]. See [github-slugger…][5].
+A library providing support for [slugs🟉][4]. See [github-slugger][5].
 
 ## [glob](#glob)
 
 <!--{"uri": "https://github.com/isaacs/node-glob#glob-primer" }-->
 
-A file pattern matcher. See [glob…][6].
+A file pattern matcher. See [glob][6].
 
 ## [glossarify-md](#glossarify-md)
 
@@ -61,7 +61,7 @@ A static website renderer compiling an HTML website from Markdown files.
     "aliases": "JSON-LD Spec"
 }-->
 
-[JSON-LD…][7] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies🟉][8]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS…][9] is one such vocabulary supported by [glossarify-md…][10]
+[JSON-LD][7] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies🟉][8]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS][9] is one such vocabulary supported by [glossarify-md][10]
 
 ## [jsonld Library](#jsonld-library)
 
@@ -70,7 +70,7 @@ A static website renderer compiling an HTML website from Markdown files.
     "aliases": "jsonld"
 }-->
 
-A JavaScript implementation of [JSON-LD…][7].
+A JavaScript implementation of [JSON-LD][7].
 
 ## [Linked Data](#linked-data)
 
@@ -79,7 +79,7 @@ A JavaScript implementation of [JSON-LD…][7].
     "aliases": "LD"
 }-->
 
-See [Linked Data…][11].
+See [Linked Data][11].
 
 ## [mdAst](#mdast)
 
@@ -94,13 +94,13 @@ Specification and Implementation of a Markdown Abstract Syntax Tree.
 
 <!--{"uri": "https://github.com/micromark/" }-->
 
-A low-level extensible implementation of the [CommonMark…][12] syntax specification (parsing and tokenizing).
+A low-level extensible implementation of the [CommonMark][12] syntax specification (parsing and tokenizing).
 
 ## [npm](#npm)
 
 <!-- {"uri": "https://npmjs.com"}-->
 
-Node Package Manager. See [npm…][13].
+Node Package Manager. See [npm][13].
 
 ## [OWL](#owl)
 
@@ -112,37 +112,37 @@ Web Ontology Language.
 
 <!--{"uri": "https://pandoc.org" }-->
 
-See [pandoc…][14].
+See [pandoc][14].
 
 ## [PlantUML](#plantuml)
 
 <!--{"uri": "https://plantuml.com" }-->
 
-Generates diagrams from text files written in the [PlantUML…][15] syntax.
+Generates diagrams from text files written in the [PlantUML][15] syntax.
 
 ## [remark](#remark)
 
 <!--{"uri": "https://github.com/remarkjs/remark" }-->
 
-*[remark…][16]* is a parser and compiler project under the [unified…][17] umbrella for *Markdown* text files in particular.
+*[remark][16]* is a parser and compiler project under the [unified][17] umbrella for *Markdown* text files in particular.
 
 ## [SKOS](#skos)
 
 <!--{ "uri": "http://w3.org/skos/" }-->
 
-With the Simple [Knowledge Organization System🟉][18] ([SKOS…][9]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary🟉][8] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+With the Simple [Knowledge Organization System🟉][18] ([SKOS][9]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary🟉][8] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
 ## [unified](#unified)
 
 <!--{ "uri": "https://unifiedjs.com" }-->
 
-*[unified…][17]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][19]
+*[unified][17]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][19]
 
 ## [URN](#urn)
 
 <!--{ "uri": "https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml" }-->
 
-Uniform Resource Names. See [URN…][20].
+Uniform Resource Names. See [URN][20].
 
 ## [VSCode](#vscode)
 
@@ -150,7 +150,7 @@ Uniform Resource Names. See [URN…][20].
 
 [Code-OSS]: https://github.com/microsoft/vscode
 
-Visual Studio Code. See [VSCode…][21] or [Code-OSS].
+Visual Studio Code. See [VSCode][21] or [Code-OSS].
 
 ## [vuepress](#vuepress)
 

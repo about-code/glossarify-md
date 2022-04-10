@@ -3,7 +3,7 @@
 In order to cite a source on the web whenever using a particular [term🟉][1], use a
 glossary configuration with `linkUris: true`:
 
-*[glossarify-md…][2].conf.json*
+*[glossarify-md][2].conf.json*
 
 ```json
 {
@@ -16,7 +16,7 @@ glossary configuration with `linkUris: true`:
 }
 ```
 
-Within file `./references.md` use the `uri` [term🟉][1] attribute to provide the source's [URL🟉][3]. Optionally you can add an `aliases` term attribute to make further terms refer to a particular source and provide a tooltip for the link.
+Within file `./references.md` use the `uri` [term🟉][1] attribute to provide the source's [URL🟉][3]. Optionally you can add an `aliases` [term attribute🟉][4] to make further terms refer to a particular source and provide a tooltip for the link.
 
 *references.md*
 
@@ -32,7 +32,7 @@ Within file `./references.md` use the `uri` [term🟉][1] attribute to provide t
 The Dublin Core Metadata Initiative.
 ```
 
-See an example by inspecting the markdown source of [\_references.md][4] or this repository's [glossarify-md.conf.json][5].
+See an example by inspecting the markdown source of [\_references.md][5] or this repository's [glossarify-md.conf.json][6].
 
 [1]: ./glossary.md#term "A term is a heading in a markdown file which is passed to glossarify-md as a glossary."
 
@@ -40,6 +40,8 @@ See an example by inspecting the markdown source of [\_references.md][4] or this
 
 [3]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
-[4]: ./_references.md
+[4]: ./glossary.md#term-attributes "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
 
-[5]: ../glossarify-md.conf.json
+[5]: ./_references.md
+
+[6]: ../glossarify-md.conf.json
