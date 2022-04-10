@@ -1,39 +1,65 @@
-[doc-vocabulary-uris]: ./vocabulary-uris.md
-[doc-skos-interop]: ./skos-interop.md
-[doc-vuepress]: ./vuepress.md
-[doc-syntax-extensions]: ./markdown-syntax-extensions.md
 [doc-conceptual-layers]: ./conceptual-layers.md
+[doc-glossary]: ./glossary.md
 [doc-lists-on-github]: ./lists-on-github.md
 [doc-pandoc]: ./pandoc.md
+[doc-path-rewriting]: ./path-rewriting.md
 [doc-plugins]: ./plugins.md
-[doc-glossary]: ./glossary.md
-[SKOS]: http://w3.org/skos/
-[LD]: https://www.w3.org/standards/semanticweb/ontology
-[JSON-LD]: https://json-ld.org
-[jsonld]: https://npmjs.com/package/jsonld
-[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
-[glossarify-md]: https://github.com/about-code/glossarify-md
-[OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
+[doc-vocabulary-uris]: ./vocabulary-uris.md
+[doc-vuepress]: ./vuepress.md
+[doc-references]: ./references.md
+[doc-skos-interop]: ./skos-interop.md
+[doc-syntax-extensions]: ./markdown-syntax-extensions.md
+[README.md]: ../README.md
 
-# Advanced Topics
+# Documentation
 
-[Glossary][doc-glossary] (of glossarify-md)
+Alternative Table of Contents for [README.md].
+Sections marked with * add content *not* found in the README.
 
-Markdown Syntax
-- [Markdown Syntax Extensions][doc-syntax-extensions]
-- [Installing Syntax Plug-ins][doc-plugins]
+Setup
+- [Install](../README.md#install)
+- [Configuration](./README.md#configuration)
+  - [Options](../README.md#options)
+- [Node Support Matrix](../README.md#node-support-matrix)
 
-Exporting and Importing
-- [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
-- [Interoperability with SKOS and JSON-LD][doc-skos-interop]
+Glossary Basics
+- [Basic Glossary Example](../README.md#sample)
+- [Aliases and Synonyms](../README.md#aliases-and-synonyms)
+- [Term Hints](../README.md#term-hints)
+- [Multiple Glossaries](../README.md#multiple-glossaries)
+- [Sorting Glossaries](../README.md#sorting-glossaries)
 
+Book Writing
 
-Further Processing
-- [Using glossarify-md with vuepress][doc-vuepress]
-- [Using glossarify-md with pandoc][doc-pandoc]
+- [Cross Linking](../README.md#cross-linking)
+  - [Term-Based Auto-Linking](../README.md#term-based-auto-linking)
+  - [Identifier-based Cross-Linking](../README.md#identifier-based-cross-linking)
+- [References*][doc-references]
+- [Book Index](../README.md#book-index)
+- [Lists](../README.md#lists)
+  - [List of Figures](../README.md#list-of-figures)
+  - [List of Tables](../README.md#list-of-tables)
+  - [Lists from Regular Expressions](../README.md#lists-from-regular-expressions)
 
-Internals
-- [Conceptual Layers of glossarify-md][doc-conceptual-layers]
+Publishing
+- [Using glossarify-md with vuepress*][doc-vuepress]
+- [Using glossarify-md with pandoc*][doc-pandoc]
+
+Exporting and Importing Terms
+- [Basics](../README.md#structured-export-and-import)
+- [URIs as Identifiers for Definitions of Meaning*][doc-vocabulary-uris]
+- [Interoperability with SKOS and JSON-LD*][doc-skos-interop]
+
+Dealing with Non-Standard Markdown Syntax
+- [Markdown Syntax Extensions*][doc-syntax-extensions]
+- [Installing Syntax Plug-ins*][doc-plugins]
+
+Glossary
+- [Glossary*][doc-glossary] (Terms of glossarify-md)
+
+Developer Resources
+- [Conceptual Layers of glossarify-md*][doc-dev-conceptual-layers]
+- [The Parsing Process and Custom Node Types*][doc-dev-node-types]
 
 Known Issues
-- [Generated Lists and Links on GitHub][doc-lists-on-github]
+- [Generated Lists and Links on GitHub*][doc-lists-on-github]

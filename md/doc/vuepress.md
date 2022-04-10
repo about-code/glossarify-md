@@ -3,10 +3,6 @@
 Below we assume a *sample* project structure like this:
 
 [doc-syntax-extensions]: ./markdown-syntax-extensions.md
-[CommonMark]: https://www.commonmark.org
-[github-slugger]: https://npmjs.com/package/github-slugger
-[glossarify-md]: https://github.com/about-code/glossarify-md
-[vuepress]: https://vuepress.vuejs.org
 
 ```
 ${root}
@@ -55,7 +51,7 @@ npm i --save glossarify-md
 
 ## Configure vuepress
 
-[glossarify-md] and [vuepress] need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix](#appendix).
+glossarify-md and vuepress need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix](#appendix).
 
 <em>./docs/.vuepress/config.js</em>
 ~~~js
@@ -73,7 +69,7 @@ module.exports = {
 };
 ~~~
 
-> ⚠ **Important:** Vuepress maps headings onto section anchors which become part of a URL fragment like `http://.../#foo-anchor`. By default vuepress creates anchors with lowercase ASCII characters, only. In contrast [github-slugger] will map unicode characters onto their lowercase unicode equivalent, which then affects you our your readers in the following way:
+> ⚠ **Important:** Vuepress maps headings onto section anchors which become part of a URL fragment like `http://.../#foo-anchor`. By default vuepress creates anchors with lowercase ASCII characters, only. In contrast github-slugger will map unicode characters onto their lowercase unicode equivalent, which then affects you our your readers in the following way:
 >
 > 1. Readers who bookmarked a section URL with an ASCII-only `#`-URL fragment will still be able to open the web page they've bookmarked. But as a minor inconvenience their browser may no longer scroll to the bookmarked page section.
 >
@@ -99,7 +95,7 @@ More information see [README.md](../README.md).
 
 ## Markdown Extensions
 
-Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by [CommonMark]. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with glossarify-md (see [Markdown Syntax Extensions][doc-syntax-extensions]).
+Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by CommonMark. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with glossarify-md (see [Markdown Syntax Extensions][doc-syntax-extensions]).
 
 |      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                   |
 | ------------------------------------- | ------------------------------------------------------------------------------ |
@@ -121,10 +117,10 @@ Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdo
 
 ## Appendix
 
-[glossarify-md] and [vuepress] both employ a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md].
+glossarify-md and vuepress both employ a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
 
 
-[glossarify-md] uses [github-slugger] internally. In case you want to get rid of [glossarify-md] you likely not want to have slugs change again. Then you can use [github-slugger] standalone with vuepress, like so:
+glossarify-md uses [github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have slugs change again. Then you can use [github-slugger] standalone with vuepress, like so:
 
 *Using github-slugger without glossarify-md*
 ```js

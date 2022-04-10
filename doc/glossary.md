@@ -1,60 +1,22 @@
-# [Glossary of glossarify-md](#glossary-of-glossarify-md)
+# [Glossary](#glossary)
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
+[glossarify-md][1]: [https://github.com/about-code/glossarify-md][2]
 
-This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also servers as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json][1] configuration at the root of this repo.
+This is a glossary of terms helpful when working with [glossarify-md][1] or reading its docs. It also servers as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json][3] configuration at the root of this repo.
 
-## [JSON-LD](#json-ld)
+## [Alias](#alias)
 
-[JSON-LD]: https://json-ld.org
+A sementically similar or equivalent alternative name for a [term🟉][4]. May also be used to link grammatical variants of a term with a term definition.
 
-[jsonld]: https://npmjs.com/package/jsonld
+## [Term](#term)
 
-[LD]: https://www.w3.org/standards/semanticweb/ontology
+A [term🟉][4] is a heading in a markdown file which is passed to [glossarify-md][1] as a glossary.
 
-[JSON-LD] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies. With [JSON-LD🟉][2] it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS🟉][3] is one such vocabulary supported by [glossarify-md]
+## [Term Attribute](#term-attribute)
 
-## [KOS (Knowledge Organization Systems)](#kos-knowledge-organization-systems)
+<!--{ "aliases": "term attributes, term-attribute" }-->
 
-<!--{ "aliases": "KOS, Knowledge Organization System" }-->
-
-[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
-
-[OWL]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/
-
-Glossaries are considered a kind of *Knowledge Organisation System ([KOS🟉][4])* which organizes knowledge as a list of terms and term definitions. There are other KOS like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal KOS the W3C has developed [SKOS🟉][3].
-
-[Formal Ontologies][vocabularies] are graph-like [KOS🟉][4] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the [*Web Ontology Language* OWL][OWL]. [SKOS🟉][3] was built on top of OWL.
-
-## [Linkification](#linkification)
-
-Process of searching for a term in *document A* matching a heading phrase in
-*document B* and replacing the term in *document A* with a Markdown link pointing
-onto the term definition in *document B*.
-
-## [remark](#remark)
-
-[remark]: https://github.com/remarkjs/remark
-
-[remark] is a parser and compiler project under the [unified🟉][5] umbrella for *Markdown* text files in particular.
-
-## [SKOS](#skos)
-
-[SKOS]: http://w3.org/skos/
-
-With [SKOS][6] the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
-
-## [slug](#slug)
-
-<!--{ "aliases": "slugs" }-->
-
-A [slug🟉][7] by our definition is a URL-friendly identifier created from arbitrary text that can be used within [URL fragments🟉][8] to address headings / sections on a page.
-
-## [Term Attributes](#term-attributes)
-
-<!--{ "uri": "term attribute, term-attribute" }-->
-
-[Term Attributes🟉][9] are properties passed to glossarify-md using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
+[Term🟉][4] Attributes are properties passed to [glossarify-md][1] using an HTML comment syntax `<!--{...}-->` which encodes a JSON string:
 
 *glossary.md*
 
@@ -68,20 +30,34 @@ A [slug🟉][7] by our definition is a URL-friendly identifier created from arbi
 
 <!--{ "aliases": "term hint, term-hint" }-->
 
-An optional (symbol-) character like for example `🟉` decorating a term link to distinguish it from a regular link.
-See glossarify-md configuration options for details.
+An optional (symbol-) character like for example `🟉` decorating a [term🟉][4] link to distinguish it from a regular link.
+See [glossarify-md][1] configuration options for details.
 
-## [unified](#unified)
+## [Vocabulary](#vocabulary)
 
-[unified]: https://unifiedjs.com
+<!--{ "aliases": "vocabularies, Formal Ontologies" }-->
 
-[unified] is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][10]
+[vocabularies]: https://www.w3.org/standards/semanticweb/ontology
+
+A collection of terms which is uniquely identifiable. See also [Semantic Web Vocabularies and Ontologies][vocabularies].
+
+## [Linkification](#linkification)
+
+Process of searching for a [term🟉][4] in *document A* matching a heading phrase in
+*document B* and replacing the term in *document A* with a Markdown link pointing
+onto the term definition in *document B*.
+
+## [Slug](#slug)
+
+<!--{ "aliases": "slug, slugs" }-->
+
+A [slug🟉][5] is a URL-friendly identifier that can be used within [URL fragments🟉][6] to address headings / sections on a page.
 
 ## [URL fragment](#url-fragment)
 
 <!-- Aliases: URL fragments -->
 
-The fragment is the part follwing the `#` in a [URL🟉][11].
+The fragment is the part follwing the `#` in a [URL🟉][7].
 
 ## [URI / URL](#uri--url)
 
@@ -89,48 +65,32 @@ The fragment is the part follwing the `#` in a [URL🟉][11].
 
 *Uniform Resource Identifier* and *Uniform Resource Locator* are both the same thing, which is an ID with a syntax `scheme://authority.tld/path/#fragment?query` like `https://my.org/foo/#bar?q=123`. Although both things are the same, the two acronyms are often used to emphasize whether using the ID to primarily *identify* something or using *the same ID* to *also* locate and retrieve a represention of what it identifies.
 
-<!--
-For example there's no strict requirement that URIs must resolve to a web page. They are just IDs. However URIs *can* be used to *locate and retrieve* a textual representation *of what they identify* which is when they are often called URL. A *representation* can be a web page. But an URI could als identify a technical device and could be used as an URL to locate a representation of that device in form of a datasheet.
+## [KOS - Knowledge Organization Systems](#kos---knowledge-organization-systems)
 
-URIs continue to be IDs after a particular representation like the datasheet disappears. This sometimes leads to controversies on whether a certain URL which is also an URI can ever be "reused" to locate something different than what the URI identified.
+<!--{ "aliases": "KOS, Knowledge Organization System" }-->
 
-Strictly spoken: it *should not* because URLs and URIs *are equivalent* and two sides of the same coin. A URL should be reserved to locate and serve a representation of what itself *being a URI* identifies. If it doesn't it no longer identifies *a single* thing but two different things and loses its purpose as *identifier*.
+Glossaries are considered a kind of *Knowledge Organisation System ([KOS🟉][8])* which organizes knowledge as a list of terms and [term🟉][4] definitions. There are other KOS like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal KOS the W3C has developed [SKOS][9].
 
-However, it is a matter of fact that URLs and the web page content they identify and locate change thousands of times every day world wide. Because often it simply doesn't matter *what exactly* an URI/URL identifies but just that it identifies and locates *something*. Therefore you may only really care about "durability" of an URI/URL if your audience cares or if you really want to identify a particular thing.
+[Formal Ontologies🟉][10] are graph-like [KOS🟉][8] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the *Web Ontology Language* [OWL][11]. [SKOS][9] was built on top of OWL.
 
-If you're afraid of making a long-term comittment on a particular URI because you "might want to reuse the URL", then there's a simple solution: just add additional elements like "time", "randomness" or "uniqueness" to the URI/URL's `/path/...` or `#fragment` part to make it *unlikely* of being reused for something else.
+[1]: https://github.com/about-code/glossarify-md "This project."
 
-In case of glossarify-md you could use one of the cryptographic heading ID algorithms like `md5` or `sha256` supported by [`headingIdAlgorithm`][headingIdAlgorithm].
+[2]: https://github.com/about-code/glossarify-md
 
-[headingIdAlgorithm]: ../README.md#linkingheadingidalgorithm
--->
+[3]: ../glossarify-md.conf.json
 
-## [vuepress](#vuepress)
+[4]: #term "A term is a heading in a markdown file which is passed to glossarify-md as a glossary."
 
-[vuepress]: https://vuepress.vuejs.org
+[5]: #slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
-[vuejs]: https://vuejs.org
+[6]: #url-fragment "The fragment is the part follwing the # in a URL."
 
-[vuepress] is a static website generator translating markdown files into a website powered by [vuejs].
+[7]: #uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
-[1]: ../glossarify-md.conf.json
+[8]: #kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[2]: #json-ld "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
+[9]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[3]: #skos "With SKOS the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
+[10]: #vocabulary "A collection of terms which is uniquely identifiable."
 
-[4]: #kos-knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
-
-[5]: #unified "unified is an umbrella project around text file processing in general."
-
-[6]: https://w3.org/skos
-
-[7]: #slug "A slug by our definition is a URL-friendly identifier created from arbitrary text that can be used within URL fragments to address headings / sections on a page."
-
-[8]: #url-fragment "The fragment is the part follwing the # in a URL."
-
-[9]: #term-attributes "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
-
-[10]: ./conceptual-layers.md
-
-[11]: #uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[11]: https://www.w3.org/TR/2012/REC-owl2-overview-20121211/ "Web Ontology Language."
