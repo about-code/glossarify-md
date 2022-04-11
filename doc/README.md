@@ -86,7 +86,7 @@ Known Issues
 
 [1]: ../README.md#install
 
-[2]: ./README.md#configuration
+[2]: ../README.md#configuration
 
 [3]: ../README.md#options
 

@@ -18,7 +18,7 @@ Sections marked with * add content *not* found in the README.
 
 Setup
 - [Install](../README.md#install)
-- [Configuration](./README.md#configuration)
+- [Configuration](../README.md#configuration)
   - [Options](../README.md#options)
 - [Node Support Matrix](../README.md#node-support-matrix)
 
