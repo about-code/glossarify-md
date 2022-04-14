@@ -75,7 +75,7 @@ The configuration will make glossarify-md produce a file
 }
 ~~~
 
-`glossary.json` will embed a [JSON-LD] `@context` document. It maps glossarify-md's own export model terminology onto SKOS and Dublin Core terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
+`glossary.json` will embed a JSON-LD `@context` document. It maps glossarify-md's own export model terminology onto SKOS and Dublin Core terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
 [^1]: You can map glossarify-md's terms onto other model vocabularies by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
@@ -123,7 +123,7 @@ Let's drop `@context` from `glossary.json` and change it to a very different sch
 
 This is now a sample format *unknown* to glossarify-md. Different data formats and semantics like these are a barrier to *interoperability*. That's where JSON-LD and standardized vocabularies enter the game.
 
-If the *unknown* application had embedded JSON-LD mappings onto SKOS and [DublinCore] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
+If the *unknown* application had embedded JSON-LD mappings onto SKOS and DublinCore the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
 
 *unknown-format.jsonld*
 ~~~json
@@ -165,7 +165,7 @@ What's left is to enhance glossarify-md with JSON-LD capabilities for interopera
 npm install jsonld
 ~~~
 
-[^2]: We could have installed [jsonld] together with glossarify-md by default but decided against to minimize bloat for the average user.
+[^2]: We could have installed jsonld together with glossarify-md by default but decided against to minimize bloat for the average user.
 
 On the next run glossarify-md will be looking for `@context` mappings
 
