@@ -77,9 +77,9 @@ The configuration will make [glossarify-md][1] produce a file
 }
 ```
 
-`glossary.json` will embed a \[JSON-LD] `@context` document. It maps [glossarify-md][1]'s own export model terminology onto [SKOS][2] and [Dublin Core][3] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
+`glossary.json` will embed a [JSON-LD][4] `@context` document. It maps [glossarify-md][1]'s own export model terminology onto [SKOS][2] and [Dublin Core][3] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
-[^1]: You can map [glossarify-md][1]'s terms onto other model [vocabularies🟉][4] by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
+[^1]: You can map [glossarify-md][1]'s terms onto other model [vocabularies🟉][5] by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
 Next we'll simulate a roundtrip by importing our exported file again.
 
@@ -125,9 +125,9 @@ Let's drop `@context` from `glossary.json` and change it to a very different sch
 }
 ```
 
-This is now a sample format *unknown* to [glossarify-md][1]. Different data formats and semantics like these are a barrier to *interoperability*. That's where [JSON-LD][5] and standardized [vocabularies🟉][4] enter the game.
+This is now a sample format *unknown* to [glossarify-md][1]. Different data formats and semantics like these are a barrier to *interoperability*. That's where [JSON-LD][4] and standardized [vocabularies🟉][5] enter the game.
 
-If the *unknown* application had embedded [JSON-LD][5] mappings onto [SKOS][2] and \[DublinCore] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
+If the *unknown* application had embedded [JSON-LD][4] mappings onto [SKOS][2] and [DublinCore][3] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
 
 *unknown-format.[jsonld][6]*
 
@@ -165,11 +165,11 @@ Now provide this *external context* document along the imported file:
 }
 ```
 
-What's left is to enhance [glossarify-md][1] with [JSON-LD][5] capabilities for interoperability: [^2]
+What's left is to enhance [glossarify-md][1] with [JSON-LD][4] capabilities for interoperability: [^2]
 
     npm install jsonld
 
-[^2]: We could have installed \[jsonld] together with [glossarify-md][1] by default but decided against to minimize bloat for the average user.
+[^2]: We could have installed [jsonld][6] together with [glossarify-md][1] by default but decided against to minimize bloat for the average user.
 
 On the next run [glossarify-md][1] will be looking for `@context` mappings
 
@@ -182,9 +182,9 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 ### [Additional Notes](#additional-notes)
 
-*   [glossarify-md][1] will only import typed documents directly using [JSON-LD][5]'s `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
+*   [glossarify-md][1] will only import typed documents directly using [JSON-LD][4]'s `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
 
-*   More complicated data formats may require use of some additional [JSON-LD][5] keywords from the JSON-LD Spec.
+*   More complicated data formats may require use of some additional [JSON-LD][4] keywords from the JSON-LD Spec.
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 
@@ -192,8 +192,8 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 [3]: http://purl.org/dc/terms/ "The Dublin Core Metadata Initiative."
 
-[4]: ./glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+[4]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
 
-[5]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
+[5]: ./glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
 
 [6]: https://npmjs.com/package/jsonld "A JavaScript implementation of JSON-LD."
