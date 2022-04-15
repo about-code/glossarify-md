@@ -1,4 +1,6 @@
-[doc-conceptual-layers]: ./conceptual-layers.md
+[doc-dev-conceptual-layers]: ./conceptual-layers.md
+
+[doc-dev-node-types]: ../lib/ast/with/node-type.md
 
 [doc-glossary]: ./glossary.md
 
@@ -77,8 +79,8 @@ Glossary
 
 Developer Resources
 
-*   \[Conceptual Layers of [glossarify-md][19]\*]\[doc-dev-conceptual-layers]
-*   \[The Parsing Process and Custom Node Types\*]\[doc-dev-node-types]
+*   [Conceptual Layers of glossarify-md\*][doc-dev-conceptual-layers]
+*   [The Parsing Process and Custom Node Types\*][doc-dev-node-types]
 
 Known Issues
 

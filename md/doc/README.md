@@ -1,4 +1,5 @@
-[doc-conceptual-layers]: ./conceptual-layers.md
+[doc-dev-conceptual-layers]: ./conceptual-layers.md
+[doc-dev-node-types]: ../lib/ast/with/node-type.md
 [doc-glossary]: ./glossary.md
 [doc-lists-on-github]: ./lists-on-github.md
 [doc-pandoc]: ./pandoc.md
