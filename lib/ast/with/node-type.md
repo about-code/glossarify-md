@@ -168,7 +168,7 @@ Further Reading:
 
 ## `fromMarkdown()`
 
-> Remind initial notes below Figure 1 for when to implementthis.
+> Remind initial notes below Figure 1 for when to implement this.
 
 With `syntax()` we have written custom syntax tokens onto the token stream/queue. If we want the tokens and data to make it into an [AST] we need some place which creates AST-[Node]s from these tokens. This is what `fromMarkdown()` is concerned with. In particular it creates an [mdAST] node or sub-tree which is to be inserted into the markdown documents [mdAST]. For now we refer to [mdast-util-from-markdown] for any further examples.
 
@@ -199,7 +199,6 @@ Eventually we need to register our custom node type with glossarify-md's *unifie
         {
             processor: unified()
                 .use(withNodeType(TocInstructionNode))
-                .use(withNodeType(TermDefinitionNode))
                 .use(withNodeType(TermDefinitionNode))
                 .use(withNodeType(MyNode))
                 // ...

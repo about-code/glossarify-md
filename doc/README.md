@@ -12,6 +12,8 @@
 
 [doc-plugins]: ./plugins.md
 
+[doc-plugins-dev]: ./plugins-dev.md
+
 [doc-vocabulary-uris]: ./vocabulary-uris.md
 
 [doc-vuepress]: ./vuepress.md
@@ -80,6 +82,7 @@ Glossary
 Developer Resources
 
 *   [Conceptual Layers of glossarify-md\*][doc-dev-conceptual-layers]
+*   [Writing Plug-ins\*][doc-plugins-dev]
 *   [The Parsing Process and Custom Node Types\*][doc-dev-node-types]
 
 Known Issues

@@ -4,6 +4,8 @@
 
 [doc-plugins]: ./plugins.md
 
+[doc-plugins-dev]: ./plugins-dev.md
+
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
@@ -20,7 +22,7 @@
 
 Without special support for it [CommonMark][2] compliant parsers like our [remark][5] parser will interpret the line of trailing dashes as *heading* markers and the text before them as *heading text*. So to make our parser aware of frontmatter syntax we need to enhance it.
 
-**Since v5.0.0** we have opened [glossarify-md][1] to the [remark plug-in ecosystem][remark-plugins] and its support of additional syntaxes and tools. More see [Installing Plug-ins][doc-plugins].
+**Since v5.0.0** we have opened [glossarify-md][1] to the [remark plug-in ecosystem][remark-plugins] and its support of additional syntaxes and tools. More see [Installing Plug-ins][doc-plugins] and [Writing a Plug-in][doc-plugins-dev].
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 

@@ -2,6 +2,7 @@
 
 [doc-conceptual-layers]: ./conceptual-layers.md
 [doc-plugins]: ./plugins.md
+[doc-plugins-dev]: ./plugins-dev.md
 [remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
 [remark-plugins]: https://github.com/remarkjs/awesome-remark
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
@@ -18,4 +19,4 @@ key: This is a frontmatter
 
 Without special support for it CommonMark compliant parsers like our remark parser will interpret the line of trailing dashes as *heading* markers and the text before them as *heading text*. So to make our parser aware of frontmatter syntax we need to enhance it.
 
-**Since v5.0.0** we have opened glossarify-md to the [remark plug-in ecosystem][remark-plugins] and its support of additional syntaxes and tools. More see [Installing Plug-ins][doc-plugins].
+**Since v5.0.0** we have opened glossarify-md to the [remark plug-in ecosystem][remark-plugins] and its support of additional syntaxes and tools. More see [Installing Plug-ins][doc-plugins] and [Writing a Plug-in][doc-plugins-dev].
