@@ -1,4 +1,4 @@
-# [Installing Syntax Plug-ins](#installing-syntax-plug-ins)
+# [Installing Plug-ins](#installing-plug-ins)
 
 [doc-conceptual-layers]: ./conceptual-layers.md
 
@@ -12,68 +12,90 @@
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to install a [remark plug-in][remark-plugin]. The plug-in will extend [glossarify-md][1]'s markdown parser [remark][2]  with support for *Frontmatter* syntax.
+[verdaccio]: https://npmjs.com/package/verdaccio
 
-> **☛ Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
+The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make [glossarify-md][1] handle non-standard *Frontmatter* syntax, correctly.
 
-We'll assume the following file structure:
+> **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
+
+We'll assume the following project structure:
 
     ${root}
        +- docs/                        (baseDir)
        +- docs-glossarified/           (outDir)
        +- node_modules/
        |- glossarify-md.conf.json
-       |- remark.conf.json
        |- package.json
        '- .gitignore
 
-**1:** Next to your `outDir` create a file `remark.conf.json`. Then add to your `glossarify-md.conf.json`:
+**1:** Install [remark-frontmatter]:
+
+    npm install remark-frontmatter
+
+**2:** In your `glossarify-md.conf.json` add:
 
 ```json
 {
   "unified": {
-    "rcPath": "../remark.conf.json"
-  }
-}
-```
-
-`rcPath` is interpreted relative to `outDir`, so you need to "step out" of it.
-
-**2:** Then install a [remark plug-in][remark-plugin]
-
-    npm install remark-frontmatter
-
-**3:** Make [remark][2] load the plug-in by adding to your `remark.conf.json`:
-
-*[remark][2].conf.js*
-
-```json
-{
-  "plugins": {
-    "remark-frontmatter": {
-      "type": "yaml",
-      "marker": "-"
+    "plugins": {
+      "remark-frontmatter": {
+        "type": "yaml",
+        "marker": "-"
+      }
     }
   }
 }
 ```
 
-1.  `remark-frontmatter` must be the name of the [npm][3] package you installed before
-2.  any properties of the `remark-frontmatter` object are options specific to the plug-in.
+Keys of the `plugins` object tell what to load and may be:
 
-`remark.conf.json` follows the [unified configuration][unified-config] schema. You could also embed the configuration into a `glossarify-md.conf.json` by replacing `rcPath` above with `plugins`. But keep in mind that anything under the `unified` key is a different config schema and *not* subject to *[glossarify-md][1]*'s config schema.
+*   *names of [npm][2] packages*
+*   *paths of JavaScript modules.*
 
-> **ⓘ remark, unified, uhh... ?**
+Their value in turn are options passed to the plug-in. Read [remark-frontmatter] docs, to find out about available options.
+
+> ⓘ The `unified` key embeds a [unified configuration][unified-config] object. Its schema is *not* subject to glossarify-md's own config schema, anymore. Thus, if you would like to have the configs separated a bit more clearly, then you can split them:
 >
-> Read more on how these projects relate to glossarify-md in [Conceptual Layers][doc-conceptual-layers].
+> **3:** Create a file `unified.conf.json` next to `glossarify-md.conf.json`
+>
+> **4:** Copy the value of `unified` to `unified.conf.json`:
+>
+> ```json
+> {
+>   "plugins": {
+>     "remark-frontmatter": {
+>       "type": "yaml",
+>       "marker": "-"
+>     }
+>   }
+> }
+> ```
+>
+> **5:** In `glossarify-md.conf.json` replace `plugins` with `rcPath` (rooted in `outDir`, so you need to step out):
+>
+> ```json
+> {
+>   "unified": {
+>     "rcPath": "../unified.conf.json"
+>   }
+> }
+> ```
+>
+> If you would like to learn more about how *unified* and *remark* relate to glossarify-md, read [Conceptual Layers][doc-conceptual-layers].
 
 ## [Writing a Plug-In](#writing-a-plug-in)
 
-Above we saw how to install a *syntax plug-in* which are plug-ins that extend Markdown syntax itself. They operate on raw symbols and tokens and contribute new *node types* to an Abstract Syntax Tree (AST). If you aim to invent yet another non-standardized Markdown addition you might find this [remark discussion and little ASCII-art][remark-discussion] helpful. Have a look at [micromark][4] and [remark][2] for a reference, though.
+### [Syntax Plug-Ins](#syntax-plug-ins)
 
-A lot can be achieved by easier to write *tree plug-ins* which operate on and transform a markdown syntax tree (\[mdAST]\[mdast]). [glossarify-md][1] itself operates on tree plug-ins, only (see [Conceptual Layers][doc-conceptual-layers]).
+Syntax Plug-ins extend Markdown syntax itself, like [remark-frontmatter], for example. They contribute new *node types* to an internal Abstract Syntax Tree (AST). Further they provide a tokenizer to parse and a serializer to write markdown files. Writing syntax plug-ins is a bit more elaborate. At this point we like to refer you to the documentation of [micromark][3] and [mdAst][4]. When exploring these projects you might find this [description of the overall process][remark-discussion] helpful.
 
-A tree plug-in is a function which returns a callback that when called get's passed an \[mdAST]:
+### [Tree-Plug-Ins](#tree-plug-ins)
+
+*Tree plug-ins* operate on a markdown syntax tree ([mdAST][4]). They are much easier to write and use [CommonMark][5] and [GFM][6] syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. [glossarify-md][1] operates on tree plug-ins, almost only (see [Conceptual Layers][doc-conceptual-layers]).
+
+A tree plug-in is a function which returns a callback that when called get's passed an [mdAst][4] root node (`tree`):
+
+*remark-my-plug-in.js*
 
 ```js
 import { visit } from "unist-util-visit";
@@ -88,19 +110,52 @@ export default function myPlugin(options = {}) {
     return visit(tree, "link", (node, parent, index) => {
       node.url += "&visited=true";
       return node;
-    }):
+    });
   };
 }
 ```
 
-The example uses a [visit][mdast-util-visit] utility function for traversing the tree and calling a visitor on a node of `type: "link"` (to visit all nodes just pass the visitor as the second argument, instead). Once you have access to the tree you can transform it to your liking. The example will take a link node's [URL🟉][5] and add a `&visited=true` URL query parameter. Not very useful but it illustrates the concept. Also note the `options` argument which is how your plug-in would get passed its config options. For a list of [CommonMark][6] node types see \[mdAST].
+The example simply adds a `&visited=true` [URL🟉][7] query parameter to each Markdown link in a document.
 
-Here's how you can set up a plug-in project next to a [glossarify-md][1] project:
+It uses a [visit][mdast-util-visit] utility function with a filter argument (2) and visitor callback argument (3). The filter argument can be the name of a node type or a filter function which gets passed a node and is expected to return a boolean.  For a list of [CommonMark][5] node types see [mdAst][4]. Eventually, the plug-in function returns the tree's root node again.
+Note the `options` argument: this is how your plug-in would get passed its config options (see [Installing Plug-Ins][8]).
 
-1.  Make a new directory *remark-my-plugin* and initialize it as an [npm][3] package.
+Let's save the plug-in to *plugins/remark-my-plug-in.js* next to `outDir`:
 
-        mkdir ./remark-my-plugin
-        cd ./remark-my-plugin
+    ${root}
+       +- docs/                        (baseDir)
+       +- docs-glossarified/           (outDir)
+       +- node_modules/
+       +- plugins
+       |     '- remark-my-plug-in.js   <=== your plug-in
+       |- glossarify-md.conf.json
+       |- remark.conf.json
+       |- package.json
+       '- .gitignore
+
+In your `glossarify-md.conf.json` add:
+
+```json
+{
+  "unified": {
+    "plugins": {
+      "../plugins/remark-my-plug-in.js": { "your": "options" }
+    }
+  }
+}
+```
+
+The plug-in path is rooted in `outDir` so you need to step out.
+That's it. Run [glossarify-md][1] again and check the links in Markdown files in your output directory.
+
+## [Writing a Plug-in Package](#writing-a-plug-in-package)
+
+If you aim for publishing a plug-in, here's how you could set up a plug-in package project next to a [glossarify-md][1] project:
+
+1.  Make a new directory *remark-my-plug-in* next to `${root}` and initialize it as an [npm][2] package.
+
+        mkdir ./remark-my-plug-in
+        cd ./remark-my-plug-in
         npm init
 
 2.  Open your `package.json` and add
@@ -108,50 +163,58 @@ Here's how you can set up a plug-in project next to a [glossarify-md][1] project
         "type": "module",
         "exports": "./index.js",
 
-3.  Copy the JavaScript code sample above into `index.js`
+3.  Copy the JavaScript code sample or `remark-my-plug-in.js` (see prev. section) to a file `index.js`
 
-4.  Install the [npm][3] dependency required by the code sample
+4.  Install the [npm][2] dependency required by the code sample
 
         npm install unist-util-visit
 
-You're now set with your plug-in. The next part will make your package usuable on your developer machine (since it's not yet published to [npm][3]):
+5.  You're now set with your plug-in. This step will make your package usuable, *locally*, with symlinking (since it's not yet published to [npm][2]).
 
-4.  Within folder *remark-my-plugin* run
+    `cd` into your [glossarify-md][1] project and create another symlink onto the global symlink:
 
-        npm link remark-my-plugin
+        npm link ../remark-my-plug-in
 
-    This creates a symlink in the system-global `node_modules` folder.
+    > **Important:** Ths step needs to be repeated whenever you ran `npm install` in your glossarify-md project.
 
-5.  `cd` into your [glossarify-md][1] project and create a symlink onto the global symlink:
-
-        npm link remark-my-plugin
-
-You now virtually "installed" your plug-in into your [glossarify-md][1] project similar as if you had run `npm install remark-my-plugin` to fetch it from the [npm][3] registry.
-
-> **Important:** Be aware that step 5 needs to be repeated whenever you ran `npm install` in your glossarify-md project).
-
-What's left is configuring [glossarify-md][1] to use it (see also previous section):
+    You now virtually "installed" your plug-in to your [glossarify-md][1] project similar as if you had run `npm install remark-my-plug-in` to fetch it from the [npm][2] registry. What's left is configuring glossarify-md to use it (see also previous section):
 
 6.  Add to your *[glossarify-md][1].conf.json*
 
         unified: {
-           "plugins": ["remark-my-plugin"]
+           "plugins": {
+             "remark-my-plug-in": { "your": "options" }
+           }
         }
 
-7.  Run glossarify and see whether link output changed.
+7.  Delete your `outDir`, run [glossarify-md][1] again and see whether link output changed.
 
-If you succeeded you may want to familiarize yourself with [publishing your node package][7].
+## [Publishing a Plug-in Package](#publishing-a-plug-in-package)
+
+Prior to publishing check what would get published:
+
+    npm pack
+
+The command creates a `tar.gz` file. Inspect its contents. Optionally, use a `files` whitelist in `package.json` to select which files should go into a package.
+
+> Prior to publishing to the official npm registry, you may also find setting up a test registry on `localhost` useful. See [verdaccio], for an example.
+
+More see official [NPM][2] docs on [publishing your node package][9].
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 
-[2]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
+[2]: _references.md#npm "Node Package Manager."
 
-[3]: _references.md#npm "Node Package Manager."
+[3]: https://github.com/micromark/ "A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing)."
 
-[4]: https://github.com/micromark/ "A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing)."
+[4]: https://github.com/syntax-tree/mdast "Specification and Implementation of a Markdown Abstract Syntax Tree."
 
-[5]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[5]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[6]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
+[6]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[7]: https://docs.npmjs.com/packages-and-modules
+[7]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+
+[8]: #installing-plug-ins
+
+[9]: https://docs.npmjs.com/packages-and-modules
