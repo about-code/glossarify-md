@@ -1,5 +1,11 @@
 # Writing a Plug-In
 
+[doc-conceptual-layers]: ./conceptual-layers.md
+[mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
+[remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
+[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
+[verdaccio]: https://npmjs.com/package/verdaccio
+
 ## Syntax Plug-Ins
 Syntax Plug-ins extend Markdown syntax itself, like [remark-frontmatter], for example. They contribute new *node types* to an internal Abstract Syntax Tree (AST). Further they provide a tokenizer to parse and a serializer to write markdown files. Writing syntax plug-ins is a bit more elaborate. At this point we like to refer you to the documentation of micromark and mdAst. When exploring these projects you might find this [description of the overall process][remark-discussion] helpful.
 
