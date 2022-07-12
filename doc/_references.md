@@ -34,7 +34,7 @@ The [Dublin Core][2] Metadata Initiative.
 
 <!--{"uri": "https://npmjs.com/package/github-slugger" }-->
 
-A library providing support for [slugs🟉][4]. See [github-slugger][5].
+A library providing support for [slugs★][4]. See [github-slugger][5].
 
 ## [glob](#glob)
 
@@ -61,7 +61,7 @@ A static website renderer compiling an HTML website from Markdown files.
     "aliases": "JSON-LD Spec"
 }-->
 
-[JSON-LD][7] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies🟉][8]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS][9] is one such vocabulary supported by [glossarify-md][10]
+[JSON-LD][7] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies★][8]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS][9] is one such vocabulary supported by [glossarify-md][10]
 
 ## [jsonld Library](#jsonld-library)
 
@@ -130,7 +130,7 @@ Generates diagrams from text files written in the [PlantUML][15] syntax.
 
 <!--{ "uri": "http://w3.org/skos/" }-->
 
-With the Simple [Knowledge Organization System🟉][18] ([SKOS][9]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary🟉][8] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+With the Simple [Knowledge Organization System★][18] ([SKOS][9]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary★][8] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
 ## [unified](#unified)
 

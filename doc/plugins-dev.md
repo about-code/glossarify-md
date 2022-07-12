@@ -30,7 +30,7 @@ export default function myPlugin(options = {}) {
 }
 ```
 
-The example simply adds a `&visited=true` [URL🟉][6] query parameter to each Markdown link in a document.
+The example simply adds a `&visited=true` [URL★][6] query parameter to each Markdown link in a document.
 
 It uses a \[visit]\[mdast-util-visit] utility function with a filter argument (2) and visitor callback argument (3). The filter argument can be the name of a node type or a filter function which gets passed a node and is expected to return a boolean.  For a list of [CommonMark][3] node types see [mdAst][2]. Eventually, the plug-in function returns the tree's root node again.
 Note the `options` argument: this is how your plug-in would get passed its config options (see [Installing Plug-Ins][7]).

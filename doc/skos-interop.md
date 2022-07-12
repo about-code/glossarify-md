@@ -79,7 +79,7 @@ The configuration will make [glossarify-md][1] produce a file
 
 `glossary.json` will embed a [JSON-LD][4] `@context` document. It maps [glossarify-md][1]'s own export model terminology onto [SKOS][2] and [Dublin Core][3] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
 
-[^1]: You can map [glossarify-md][1]'s terms onto other model [vocabularies🟉][5] by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
+[^1]: You can map [glossarify-md][1]'s terms onto other model [vocabularies★][5] by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
 Next we'll simulate a roundtrip by importing our exported file again.
 
@@ -125,7 +125,7 @@ Let's drop `@context` from `glossary.json` and change it to a very different sch
 }
 ```
 
-This is now a sample format *unknown* to [glossarify-md][1]. Different data formats and semantics like these are a barrier to *interoperability*. That's where [JSON-LD][4] and standardized [vocabularies🟉][5] enter the game.
+This is now a sample format *unknown* to [glossarify-md][1]. Different data formats and semantics like these are a barrier to *interoperability*. That's where [JSON-LD][4] and standardized [vocabularies★][5] enter the game.
 
 If the *unknown* application had embedded [JSON-LD][4] mappings onto [SKOS][2] and [DublinCore][3] the data could have been understood right away. Since few tools do this as of today, we'll be writing these mappings on our own:
 

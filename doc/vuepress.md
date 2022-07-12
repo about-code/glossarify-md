@@ -123,9 +123,9 @@ More information see [README.md][4].
 
 ## [Appendix](#appendix)
 
-[glossarify-md][1] and [vuepress][2] both employ a [slug🟉][9] algorithm to create friendly [URL fragments🟉][10] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL🟉][11] fragments which can break links in a book (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
+[glossarify-md][1] and [vuepress][2] both employ a [slug★][9] algorithm to create friendly [URL fragments★][10] (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different [URL★][11] fragments which can break links in a book (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
 
-[glossarify-md][1] uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs🟉][9] change again. Then you can use \[github-slugger] standalone with [vuepress][2], like so:
+[glossarify-md][1] uses \[github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have [slugs★][9] change again. Then you can use \[github-slugger] standalone with [vuepress][2], like so:
 
 *Using [github-slugger][13] without [glossarify-md][1]*
 
