@@ -53,12 +53,12 @@
 
 [3]: #tc-2-1
 
-[4]: ./glossary.md#tc-2-2
+[4]: ./glossary.md#tc-2-2 "MUST be resolved by id-based cross-link path resolution"
 
 [5]: #tc-2-3
 
 [6]: #tc-2-4
 
-[7]: ./glossary.md#tc-2-5
+[7]: ./glossary.md#tc-2-5 "MUST be resolved by id-based cross-link path resolution"
 
 [8]: #tc-2-6

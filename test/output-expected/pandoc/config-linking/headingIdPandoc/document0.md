@@ -47,6 +47,6 @@ THEN
 
 [1]: https://github.com/about-code/glossarify-md/issues/122
 
-[2]: ./depth1/document1.md#section-1-2
+[2]: ./depth1/document1.md#section-1-2 "Text"
 
-[3]: ./depth1/depth2/document2.md#section-2-2
+[3]: ./depth1/depth2/document2.md#section-2-2 "Text"
