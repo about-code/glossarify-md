@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.2.1](https://github.com/about-code/glossarify-md/compare/v6.2.0...v6.2.1) (2022-07-12)
+
+
+### Bug Fixes
+
+* Identifier-based cross-linking doesn't provide glossary term preview for bottom page links ([#242](https://github.com/about-code/glossarify-md/issues/242)) ([ff28d49](https://github.com/about-code/glossarify-md/commit/ff28d49295ab0fa61f6adaa8cee85d13823e5265))
+
+
+### Documentation Updates
+
+* Fix TOC. ([888d01c](https://github.com/about-code/glossarify-md/commit/888d01c3143c9e59d8c27801155f7670c78a9eb4))
+* Improve plug-ins doc. ([2e9b5ca](https://github.com/about-code/glossarify-md/commit/2e9b5caaa3e4d23ee65588767282bc4236528833))
+* Separate Installing and Writing of Plug-ins ([83c6889](https://github.com/about-code/glossarify-md/commit/83c6889308daae53f8daeca433b4071367fbc9ba))
+
 ## [6.2.0](https://github.com/about-code/glossarify-md/compare/v6.1.0...v6.2.0) (2022-04-10)
 
 

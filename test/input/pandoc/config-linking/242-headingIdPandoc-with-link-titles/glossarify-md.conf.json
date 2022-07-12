@@ -1,0 +1,5 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/pandoc/config-linking/242-headingIdPandoc-with-short-desc"
+}
