@@ -59,7 +59,7 @@ In a Hugo [Leaf Bundle Structure][hugo-page-bundles]
 
 - each directory represents a page
 - the main content is in an `index.md` Markdown file
-- only the directory name will be part of the page's URL.
+- only the directory name will be part of the page's URL path segments.
 
 Its easier to configure glossarify-md for a Leaf Bundle Structure:
 
@@ -96,8 +96,8 @@ ${root}
 ~~~json
 {
   "linking": {
-    "headingAsLink": false,
-    "pathComponents": ["path"]
+    "pathComponents": ["path"],
+    "headingAsLink": false
   },
   "glossaries": [{
     "file": "./glossary/index.md"
@@ -119,7 +119,7 @@ In a Hugo [Branch Bundle Structure][hugo-page-bundles]
 
 - Markdown files in the directory represent individual pages
 - each directory has an `_index.md` Markdown file
-- Directory *and* file names (without file extension) become part of a page's URL path. Relative URL addressing and relative file adressing may require different paths.
+- directory *and* file names (without file extension) become URL path segments.
 
 ~~~
 ${root}
@@ -156,10 +156,8 @@ ${root}
 ~~~json
 {
   "linking": {
-    "headingAsLink": false,
     "pathComponents": ["path", "file"],
-    "paths": "absolute",
-    "baseUrl": "/"
+    "headingAsLink": false
   },
   "glossaries": [{
     "file": "./glossary/glossary.md"
@@ -167,15 +165,10 @@ ${root}
 }
 ~~~
 
-## Caveats
-
-1. **Links:** Hugo has its own means of producing website URLs from a project's filesystem. We present a glossarify-md configuration that fits a particular project structure but has not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options if the config doesn't work for you.
-
-1. **Syntax:** Hugo supports a different set of Markdown syntax elements than glossarify-md. To use both tools together, *you as a writer and the tools as processors* need to be on par regarding *use and support* of particular syntax features. See [known issues] if you experience problems.
 
 ## Known Issues
 
-### Shortcodes in Markdown links
+### Shortcodes in Markdown Links
 
 glossarify-md can be enhanced with syntax plug-ins to accept shortcode syntax in general. But it won't be able to support certain combinations of CommonMark syntax *and* shortcode syntax, such as when combining CommonMark link syntax `[]()` and shortcode `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. This is because the result is [not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
 
@@ -185,3 +178,7 @@ There may be two reasons:
 
 1. input files use custom syntax not understood by glossarify-md. Try [installing an appropirate syntax plug-in][doc-plugins]
 1. There is an improper combination of CommonMark syntax elements and non-standard syntax elements which is not permitted by CommonMark (see known issue with shortcodes in Markdown links). If this is the problem, then there's only a choice between glossarify-md *or* the problematic syntax, but no way to have both.
+
+### Link paths
+
+Hugo has its own means of producing website URLs from a project's filesystem. We have shown glossarify-md configurations that fit a particular project structure but have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options if the config doesn't work for you.
