@@ -130,7 +130,7 @@ and assume paths relative to `process.cwd()`.
 
 ### Documentation Updates
 
-* Added [Using with pandoc](./doc/pandoc.md) ([#221](https://github.com/about-code/glossarify-md/issues/221)) ([f24eff5](https://github.com/about-code/glossarify-md/commit/f24eff5007dce1b407508b8bc9c4f39b33a0a18d))
+* Added [Using with pandoc](./doc/use-with-pandoc.md) ([#221](https://github.com/about-code/glossarify-md/issues/221)) ([f24eff5](https://github.com/about-code/glossarify-md/commit/f24eff5007dce1b407508b8bc9c4f39b33a0a18d))
 * Clarify pattern anchorization ([bf7f98f](https://github.com/about-code/glossarify-md/commit/bf7f98f02aa72e48efd529e8b0f4cfa4b87bddd1))
 
 
@@ -605,7 +605,7 @@ notice or classification of being breaking changes to nodejs 8.x users.
 
 ### Bug Fixes
 
-* dangling anchor links with german umlauts ([#27](https://github.com/about-code/glossarify-md/issues/27)). See updates to doc/vuepress.md and slugify option. ([475d692](https://github.com/about-code/glossarify-md/commit/475d692))
+* dangling anchor links with german umlauts ([#27](https://github.com/about-code/glossarify-md/issues/27)). See updates to doc/use-with-vuepress.md and slugify option. ([475d692](https://github.com/about-code/glossarify-md/commit/475d692))
 * package.json declares wrong 'main' ([0dc107d](https://github.com/about-code/glossarify-md/commit/0dc107d))
 * Security. Update package-lock.json for use of handlebars@^4.3.1 ([f464ceb](https://github.com/about-code/glossarify-md/commit/f464ceb))
 * Terms with leading or trailing Umlauts/Non-ASCII chars not linked ([#28](https://github.com/about-code/glossarify-md/issues/28)). ([0c7f1da](https://github.com/about-code/glossarify-md/commit/0c7f1da))

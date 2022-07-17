@@ -3,6 +3,7 @@
 Below we assume a *sample* project structure like this:
 
 [doc-syntax-extensions]: ./markdown-syntax-extensions.md
+[doc-plugins]: ./plugins.md
 
 ```
 ${root}
@@ -51,7 +52,7 @@ npm i --save glossarify-md
 
 ## Configure vuepress
 
-glossarify-md and vuepress need to be aligned in terms of how they create section anchors. More on the *why* see [Appendix](#appendix).
+glossarify-md and vuepress need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "slugs" (see [*why?*][Appendix])(#appendix).
 
 <em>./docs/.vuepress/config.js</em>
 ~~~js
@@ -69,11 +70,11 @@ module.exports = {
 };
 ~~~
 
-> ⚠ **Important:** Vuepress maps headings onto section anchors which become part of a URL fragment like `http://.../#foo-anchor`. By default vuepress creates anchors with lowercase ASCII characters, only. In contrast github-slugger will map unicode characters onto their lowercase unicode equivalent, which then affects you our your readers in the following way:
+> ⚠ **Non-English Languages:** vuepress's own slugger creates anchors with lowercase *ASCII characters*, only, e.g. German *Äquator* (engl. *equator*) becomes `#aquator`. Now with github-slugger it will map unicode characters onto their lowercase *unicode* equivalent, e.g. `#äquator` (compare the first character). Consequences:
 >
-> 1. Readers who bookmarked a section URL with an ASCII-only `#`-URL fragment will still be able to open the web page they've bookmarked. But as a minor inconvenience their browser may no longer scroll to the bookmarked page section.
+> 1. Bookmarks of your readers keep addressing the same page. However, as a minor inconvenience a browser may no longer find content sections outside the visible viewport it would otherwise have scrolled to.
 >
-> 2. Writers who linked to a heading with unicode characters (e.g. `# Äquator`) using a markdown link `[Foo](#aquator)` may need to change the link target to `[Foo](#äquator)`, so need to replace `#a...` with `#ä...`.
+> 2. Writers whose input documents contain links with an ASCII fragment will need to change link targets to the unicode variant. In the example they had to change `[Foo](#aquator)` to `[Foo](#äquator)`.
 
 ## Configure Build Scripts
 
@@ -93,22 +94,21 @@ module.exports = {
 
 More information see [README.md](../README.md).
 
-## Markdown Extensions
+## Install and Configure Syntax Extension Plug-Ins
 
-Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by CommonMark. While most of it will work out of the box, *Frontmatter Syntax* requires a plug-in to work with glossarify-md (see [Markdown Syntax Extensions][doc-syntax-extensions]).
+vuepress supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by CommonMark or GFM. See the table below which syntax extension on the left requires [installing and configuring a plug-in][doc-plugins] on the right. See the respective plug-in for its individual default values and config options.
 
-|      Vuepress Markdown Extension      |                   remark plug-in required with glossarify-md                   |
+
+|      Markdown Syntax Extension        |                   remark plug-in required with glossarify-md                   |
 | ------------------------------------- | ------------------------------------------------------------------------------ |
 | [Frontmatter][vp-frontmatter]         | [remark-frontmatter](http://unifiedjs.com/explore/package/remark-frontmatter/) |
-| [Custom Containers][vp-cc]            | None                                                                           |
-| [GitHub Style Tables][vp-gh-tables]   | None                                                                           |
-| [Table of Contents][vp-toc] `[[toc]]` | None                                                                           |
-| [Emoji][vp-emoji]                     | None                                                                           |
-| [Line Highlighting Codeblocks][vp-lh] | None                                                                           |
-| [Import Code Snippets][vp-code]       | None                                                                           |
+| [Custom Containers][vp-cc]            | -                                                                               |
+| [Table of Contents][vp-toc] `[[toc]]` | -                                                                               |
+| [Emoji][vp-emoji]                     | -                                                                               |
+| [Line Highlighting Codeblocks][vp-lh] | -                                                                               |
+| [Import Code Snippets][vp-code]       | -                                                                               |
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
-[vp-gh-tables]: https://vuepress.vuejs.org/guide/markdown.html#github-style-tables
 [vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
 [vp-emoji]: https://vuepress.vuejs.org/guide/markdown.html#emoji
 [vp-toc]: https://vuepress.vuejs.org/guide/markdown.html#table-of-contents
@@ -117,10 +117,9 @@ Vuepress supports some [Markdown Syntax](https://vuepress.vuejs.org/guide/markdo
 
 ## Appendix
 
-glossarify-md and vuepress both employ a slug algorithm to create friendly URL fragments (`#...`) for section links. When vuepress is fed with *glossarified markdown* sources it will attempt to slug URLs again. If both tools use different slug algorithms then there's a risk of both generating different URL fragments which can break links in a book (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md.
+*Slugs* are "*URL-friendly IDs*" used to identify a content section *within* a hypermedia document. They are not required to locate the document but needed to make a browser navigate to a particular content section *within* a document, for example `https://foo.com/#my-slug` identifies a content section using the Slug or *URL fragment* `#my-slug`.
 
-
-glossarify-md uses [github-slugger] internally. In case you want to get rid of glossarify-md you likely not want to have slugs change again. Then you can use [github-slugger] standalone with vuepress, like so:
+"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *linkification* vuepress and glossarify derive slugs from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27](https://github.com/about-code/glossarify-md/issues/27)). To avoid this vuepress needs to be configured to use the same slugger as glossarify-md. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use [github-slugger] standalone without glossarify-md, like so:
 
 *Using github-slugger without glossarify-md*
 ```js
