@@ -46,7 +46,7 @@ Hugo supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.h
       "remark-frontmatter": {},
       "remark-shortcodes": {
         "startBlock": "{{<",
-        "endBlock": "{{>"
+        "endBlock": ">}}"
       }
     }
   }
@@ -127,7 +127,7 @@ ${root}
    |   +- home/
    |   |   |- _index.md
    |   |   '- home.md
-   |   |          .-----------------
+   |   |         .-----------------
    |   |         | # Home
    |   |         |
    |   |         | What is Hugo?
@@ -169,16 +169,17 @@ ${root}
 
 ## Caveats
 
-1. **Linkification:** Hugo has its own means of producing website URLs from a project's filesystem. We present a glossarify-md configuration that fits a particular project structure but has not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options if the config doesn't work for you.
+1. **Links:** Hugo has its own means of producing website URLs from a project's filesystem. We present a glossarify-md configuration that fits a particular project structure but has not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options if the config doesn't work for you.
+
 1. **Syntax:** Hugo supports a different set of Markdown syntax elements than glossarify-md. To use both tools together, *you as a writer and the tools as processors* need to be on par regarding *use and support* of particular syntax features. See [known issues] if you experience problems.
 
 ## Known Issues
 
 ### Shortcodes in Markdown links
 
-[glossarify-md] can be enhanced with syntax plug-ins to accept shortcode syntax in general. But it won't be able to support certain combinations of CommonMark syntax *and* shortcode syntax, such as when combining CommonMark link syntax `[]()` and shortcode `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. This is because the result is [not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
+glossarify-md can be enhanced with syntax plug-ins to accept shortcode syntax in general. But it won't be able to support certain combinations of CommonMark syntax *and* shortcode syntax, such as when combining CommonMark link syntax `[]()` and shortcode `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. This is because the result is [not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
 
-#### Escaping with `\`
+### Escaping with `\`
 
 There may be two reasons:
 
