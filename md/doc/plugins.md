@@ -10,7 +10,7 @@
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 [verdaccio]: https://npmjs.com/package/verdaccio
 
-The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make glossarify-md handle non-standard *Frontmatter* syntax, correctly (see also [When do I need a plug-in?][doc-mdext-syntax]).
+The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make glossarify-md handle non-standard *Frontmatter* syntax, correctly ([When do I need a plug-in?][doc-mdext-syntax]).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -49,8 +49,8 @@ npm install remark-frontmatter
 
 Keys of the `plugins` object tell what plug-in to load and may be:
 
-- *a name of an npm package in the `node_modules` folder*
-- *a path to a JavaScript file exporting a plug-in function (see [writing plug-ins][doc-plugins-dev]*
+- a name of an npm package in a global or local `node_modules` folder
+- a path to a JavaScript file exporting a plug-in function (see [writing plug-ins][doc-plugins-dev])
 
 Their value in turn are options passed to the plug-in. Read [remark-frontmatter] docs, to find out about available options.
 

@@ -1,27 +1,22 @@
-# Using with Hugo
+# Using glossarify-md with Hugo
 
 [doc-readme]: https://github.com/about-code/glossarify-md/blob/master/doc/README.md#linking
 [doc-plugins]: ./plugins.md
 [doc-mdext-syntax]: ./markdown-syntax-extensions.md
-[Hugo]: https://gohugo.io
 [hugo-page-bundles]: https://gohugo.io/content-management/page-bundles/
 [hugo-frontmatter]: https://gohugo.io/content-management/front-matter/
 [hugo-shortcodes]: https://gohugo.io/content-management/shortcodes/
 [hugo-cm-compliance]: https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898
 [known issues]: #known-issues
-[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
-[remark-shortcodes]: https://www.npmjs.com/package/remark-shortcodes
-[nodejs]: https://nodejs.org
-[glossarify-md]: https://github.com/about-code/glossarify-md
 
-Below we provide a few *examples* on how you *might* be able to facilitate glossarify-md in a [Hugo] project. But note that existence of this page is not a statement about *Hugo compatibility*.
+Below we provide a few *examples* on how you *might* be able to facilitate glossarify-md in a Hugo project. But note that existence of this page is not a statement about *Hugo compatibility*.
 
 ## Setup
 
 > ⚠ If your project is not under version control make a copy of your Hugo project.
 
-1. Install [NodeJS and npm][nodejs]
-1. Install [glossarify-md]:
+1. Install NodeJS and npm
+1. Install glossarify-md
    ~~~
    npm install -g glossarify-md
    ~~~
@@ -30,12 +25,12 @@ Below we provide a few *examples* on how you *might* be able to facilitate gloss
 
 ## Install Plug-Ins
 
-[Hugo] supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not [supported by glossarify-md][doc-mdext-syntax]. See the table below which syntax extensions on the left require [installing and configuring a plug-in][doc-plugins] on the right. See plug-in docs for its individual default values and config options.
+Hugo supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not [supported by glossarify-md][doc-mdext-syntax]. See the table below which syntax extensions on the left require [installing and configuring a plug-in][doc-plugins] on the right. See plug-in docs for its individual default values and config options.
 
 |    Markdown Syntax Extension    | plug-in required with glossarify-md |
 | ------------------------------- | ----------------------------------- |
-| [Frontmatter][hugo-frontmatter] | [remark-frontmatter]                |
-| [Shortcodes][hugo-shortcodes]   | [remark-shortcodes]                 |
+| [Frontmatter][hugo-frontmatter] | remark-frontmatter                  |
+| [Shortcodes][hugo-shortcodes]   | remark-shortcodes                   |
 | ...and maybe others             |                                     |
 
 ## Base Configuration
@@ -63,7 +58,7 @@ Below we provide a few *examples* on how you *might* be able to facilitate gloss
 In a Hugo [Leaf Bundle Structure][hugo-page-bundles]
 
 - each directory represents a page
-- the main content is in an `index.md` Markdown file.
+- the main content is in an `index.md` Markdown file
 - only the directory name will be part of the page's URL.
 
 Its easier to configure glossarify-md for a Leaf Bundle Structure:
@@ -116,7 +111,7 @@ Then run
 glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-You should now see the files in `content_` copied to `content` where they will be picked up by [Hugo]. Should you have any troubles with paths, see also [`linking` options][doc-readme].
+You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also [`linking` options][doc-readme].
 
 # Hugo "Branch Bundle Structure"
 
