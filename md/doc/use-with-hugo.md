@@ -25,7 +25,7 @@ Below we provide a few *examples* on how you *might* be able to facilitate gloss
 
 ## Install Plug-Ins
 
-Hugo supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not [supported by glossarify-md][doc-mdext-syntax]. See the table below which syntax extensions on the left require [installing and configuring a plug-in][doc-plugins] on the right. See plug-in docs for its individual default values and config options.
+Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-md][doc-mdext-syntax]. See the table below which syntax in the left column requires [installing and configuring a plug-in][doc-plugins] in the right column. See the plug-in's docs for available config options and default values.
 
 |    Markdown Syntax Extension    | plug-in required with glossarify-md |
 | ------------------------------- | ----------------------------------- |
@@ -168,17 +168,30 @@ ${root}
 
 ## Known Issues
 
+### Different Flavours of "Markdown"
+
+https://github.com/about-code/glossarify-md/issues/246
+
+Hugo and glossarify-md support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of CommonMark and GFM constructs. But there is a chance Hugo supports additional features neither in Commonmark nor GFM. As a glossarify-md-with-Hugo user you may
+
+- need to restrict yourself to using the common set of syntax, only
+- or need to [install a syntax plug-in][doc-plugins], when there's one available
+- or need to step back from glossarify-md given you can't sacrifice certain Hugo features.
+
+
 ### Shortcodes in Markdown Links
 
-glossarify-md can be enhanced with syntax plug-ins to accept shortcode syntax in general. But it won't be able to support certain combinations of CommonMark syntax *and* shortcode syntax, such as when combining CommonMark link syntax `[]()` and shortcode `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. This is because the result is [not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
+https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898
 
-### Escaping with `\`
+glossarify-md can be enhanced with syntax plug-ins to accept shortcode syntax. But it won't be able to support certain combinations of CommonMark syntax *and* shortcode syntax, e.g. CommonMark link syntax `[]()` combined with shortcode syntax `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. glossarify-md requires valid CommonMark input but the combined syntax [is not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
+
+### Things get escaped with `\`
 
 There may be two reasons:
 
-1. input files use custom syntax not understood by glossarify-md. Try [installing an appropirate syntax plug-in][doc-plugins]
-1. There is an improper combination of CommonMark syntax elements and non-standard syntax elements which is not permitted by CommonMark (see known issue with shortcodes in Markdown links). If this is the problem, then there's only a choice between glossarify-md *or* the problematic syntax, but no way to have both.
+1. input files use custom syntax not understood by glossarify-md. See known issue *Different flavors of Markdown*, above.
+2. there is an improper combination of CommonMark syntax elements and non-standard syntax which violates the CommonMark spec. For an example, see known issue *Shortcodes in Markdown Links*, above.
 
 ### Link paths
 
-Hugo has its own means of producing website URLs from a project's filesystem. We have shown glossarify-md configurations that fit a particular project structure but have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options if the config doesn't work for you.
+Hugo has its own means of producing website URLs from a project's filesystem. We have shown glossarify-md configurations that fit a particular project structure but they have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options and `linking`-options in particular if the config doesn't work for you.
