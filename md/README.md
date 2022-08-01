@@ -1175,6 +1175,7 @@ Extended [unified configuration][unified-config]. See also [Markdown Syntax Exte
 ## Special Thanks go to
 
 - [John Gruber](https://daringfireball.net/projects/markdown/), author of the Markdown syntax
+- [John MacFarlane  et al.](https://github.com/commonmark-spec), initiators and authors of the CommonMark specification
 - [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more
 - and all the other great people publishing modules of value to the tool - directly or transitively.
 
