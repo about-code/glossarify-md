@@ -176,6 +176,7 @@
     "test_p21__05": "node . --config ./input/config-linking/pathRewrites-absolute/array-regexp-recursive-1/glossarify-md.conf.json",
     "test_p21__06": "node . --config ./input/config-linking/pathRewrites-absolute/array-regexp-recursive-2/glossarify-md.conf.json",
     "test_p22__00": "node . --config ./input/config-linking/pathRewrites-image/glossarify-md.conf.json",
+    "test_p23__00": "node . --config ./input/docs-hugo/shortcodes/glossarify-md.conf.json",
     "postsuite": "npm run diff",
     "postat": "npm run diff",
     "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
@@ -185,6 +186,7 @@
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5",
-    "remark-frontmatter": "^3.0.0"
+    "remark-frontmatter": "^3.0.0",
+    "remark-shortcodes": "^0.3.1"
   }
 }

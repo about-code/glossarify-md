@@ -1,0 +1,16 @@
+{
+    "$schema": "../../../../conf/v5/schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/markdown-extensions/shortcodes",
+    "glossaries": [
+        { "file": "./glossary.md" }
+    ],
+    "unified": {
+        "plugins": {
+            "remark-shortcodes": {
+                "startBlock": "{{<",
+                "endBlock": "{{>"
+            }
+        }
+    }
+}

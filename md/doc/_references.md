@@ -34,6 +34,10 @@ A file pattern matcher. See glob.
 <!--{"uri": "https://github.com/about-code/glossarify-md" }-->
 This project.
 
+## Hugo
+<!--{"uri": "https://gohugo.io" }-->
+A static website renderer compiling an HTML website from Markdown files.
+
 ## Jekyll
 <!--{"uri": "https://jekyllrb.com" }-->
 A static website renderer compiling an HTML website from Markdown files.
@@ -73,6 +77,9 @@ Specification and Implementation of a Markdown Abstract Syntax Tree.
 
 A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing).
 
+## NodeJS
+<!-- {"uri": "https://nodejs.org", "aliases": "nodejs, node.js" }-->
+
 ## npm
 <!-- {"uri": "https://npmjs.com"}-->
 
@@ -97,6 +104,15 @@ Generates diagrams from text files written in the PlantUML syntax.
 
 *remark* is a parser and compiler project under the unified umbrella for *Markdown* text files in particular.
 
+## remark-frontmatter
+<!--{"uri": "https://npmjs.com/package/remark-frontmatter" -->
+
+A remark syntax plug-in supporting pseudo-standard front-matter syntax.
+
+## remark-shortcodes
+<!--{"uri": "https://www.npmjs.com/package/remark-shortcodes" -->
+
+A remark syntax plug-in supporting non-standard Hugo shortcodes syntax.
 
 ## SKOS
 <!--{ "uri": "http://w3.org/skos/" }-->

@@ -2,12 +2,13 @@
 [doc-dev-node-types]: ../lib/ast/with/node-type.md
 [doc-glossary]: ./glossary.md
 [doc-lists-on-github]: ./lists-on-github.md
-[doc-pandoc]: ./pandoc.md
 [doc-path-rewriting]: ./paths-and-urls.md
 [doc-plugins]: ./plugins.md
 [doc-plugins-dev]: ./plugins-dev.md
 [doc-vocabulary-uris]: ./vocabulary-uris.md
-[doc-vuepress]: ./vuepress.md
+[doc-with-hugo]: ./use-with-hugo.md
+[doc-with-pandoc]: ./use-with-pandoc.md
+[doc-with-vuepress]: ./use-with-vuepress.md
 [doc-references]: ./references.md
 [doc-skos-interop]: ./skos-interop.md
 [doc-syntax-extensions]: ./markdown-syntax-extensions.md
@@ -44,8 +45,9 @@ Book Writing
   - [Lists from Regular Expressions](../README.md#lists-from-regular-expressions)
 
 Publishing
-- [Using glossarify-md with vuepress*][doc-vuepress]
-- [Using glossarify-md with pandoc*][doc-pandoc]
+- [Using glossarify-md with vuepress*][doc-with-vuepress]
+- [Using glossarify-md with pandoc*][doc-with-pandoc]
+- [Using glossarify-md with Hugo*][doc-with-hugo]
 - [Paths and URLs*][doc-path-rewriting]
 
 Exporting and Importing Terms

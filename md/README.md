@@ -15,7 +15,7 @@
 [doc-paths-and-urls]: https://github.com/about-code/glossarify-md/blob/master/doc/paths-and-urls.md
 [doc-vocabulary-uris]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md
 [doc-skos-interop]: https://github.com/about-code/glossarify-md/blob/master/doc/skos-interop.md
-[doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/vuepress.md
+[doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md
 [doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
 [doc-conceptual-layers]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md
 [CommonMark]: https://www.commonmark.org
@@ -36,6 +36,10 @@
 [vuepress]: https://vuepress.vuejs.org
 
 ## Table of Contents
+
+## Prerequisites
+
+- [node.js with npm](https://nodejs.org)
 
 ## Install
 
@@ -1171,6 +1175,7 @@ Extended [unified configuration][unified-config]. See also [Markdown Syntax Exte
 ## Special Thanks go to
 
 - [John Gruber](https://daringfireball.net/projects/markdown/), author of the Markdown syntax
+- [John MacFarlane  et al.](https://github.com/commonmark-spec), initiators and authors of the CommonMark specification
 - [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more
 - and all the other great people publishing modules of value to the tool - directly or transitively.
 
