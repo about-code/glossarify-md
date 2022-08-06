@@ -58,6 +58,7 @@
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
   },
   "dependencies": {
+    "chokidar": "^3.5.3",
     "deepmerge": "^4.2.2",
     "fs-extra": "^10.0.1",
     "github-slugger": "^1.0.0",

@@ -9,6 +9,7 @@ import proc from "node:process";
 import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
 import { upgrade } from "../lib/cli/upgrade.js";
 import * as program from "../lib/main.js";
+import { watch } from "chokidar";
 
 const require_ = createRequire(import.meta.url);
 const confSchema = require_("../conf/v5/schema.json");
@@ -23,7 +24,25 @@ const banner =
 
 // _/ CLI \_____________________________________________________________________
 const cli = {
-    "init": {
+    "config": {
+        alias: "c"
+        ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
+        ,type: "string"
+        ,default: "./glossarify-md.conf.json"
+    }
+    ,"deep": {
+        alias: ""
+        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will _extend_ nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
+        ,type: "string"
+        ,default: ""
+    }
+    ,"help": {
+        alias: "h"
+        ,description: "Show this help."
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"init": {
         alias: ""
         ,description: "Generate a configuration file with default values. Usage: 'glossarify-md --init > glossarify-md.conf.json'"
         ,type: "boolean"
@@ -53,27 +72,15 @@ const cli = {
         ,type: "boolean"
         ,default: false
     }
-    ,"config": {
-        alias: "c"
-        ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
-        ,type: "string"
-        ,default: "./glossarify-md.conf.json"
-    }
     ,"shallow": {
         alias: ""
         ,description: "A JSON string for an object to be shallow-merged with the default configuration or a configuration file provided with --config. Usage: `glossarify-md --shallow \"{'baseDir': './input'}\"`. Shallow merging _replaces_ nested property values. Use --deep to deep-merge."
         ,type: "string"
         ,default: ""
     }
-    ,"deep": {
-        alias: ""
-        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will _extend_ nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
-        ,type: "string"
-        ,default: ""
-    }
-    ,"help": {
-        alias: "h"
-        ,description: "Show this help."
+    ,"watch": {
+        alias: "w"
+        ,description: "Watch the base directory"
         ,type: "boolean"
         ,default: false
     }
@@ -142,7 +149,7 @@ if (confPath) {
     try {
         let conf = await confPromise;
 
-        // --deep custum conf
+        // --deep custom conf
         if (argv.deep) {
             try {
                 conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
@@ -180,7 +187,18 @@ if (confPath) {
         validateConf(conf);
 
         // _/ Run \_____________________________________________________________________
-        program.run(conf);
+        program
+            .run(conf)
+            .then(() => {
+                // --watch
+                if (argv.watch) {
+                    console.log(`Watching ${conf.baseDir}...`);
+                    watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
+                        .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
+                        .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
+                        .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
+                }
+            });
     } catch (err) {
         console.error(err);
         proc.exit(1);
