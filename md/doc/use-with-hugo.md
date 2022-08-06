@@ -33,7 +33,7 @@ Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-m
 | [Shortcodes][hugo-shortcodes]   | remark-shortcodes                   |
 | ...and maybe others             |                                     |
 
-## Base Configuration
+## Configure glossarify-md...
 
 *glossarify-md.conf.json*
 ~~~json
@@ -53,7 +53,7 @@ Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-m
 }
 ~~~
 
-## Configure for a Hugo "Leaf Bundle Structure"
+### ...for a Hugo "Leaf Bundle Structure"
 
 In a Hugo [Leaf Bundle Structure][hugo-page-bundles]
 
@@ -113,7 +113,7 @@ glossarify-md --config ./glossarify-md.conf.json
 
 You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also [`linking` options][doc-readme].
 
-# Hugo "Branch Bundle Structure"
+### ...for a Hugo "Branch Bundle Structure"
 
 In a Hugo [Branch Bundle Structure][hugo-page-bundles]
 
