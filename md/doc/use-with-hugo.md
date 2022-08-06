@@ -1,6 +1,6 @@
 # Using glossarify-md with Hugo
 
-[doc-readme]: https://github.com/about-code/glossarify-md/blob/master/doc/README.md#linking
+[doc-linking]: https://github.com/about-code/glossarify-md/blob/master/doc/README.md#linking
 [doc-plugins]: ./plugins.md
 [doc-mdext-syntax]: ./markdown-syntax-extensions.md
 [hugo-page-bundles]: https://gohugo.io/content-management/page-bundles/
@@ -13,19 +13,22 @@ Below we provide a few *examples* on how you *might* be able to facilitate gloss
 
 ## Setup
 
-> ⚠ If your project is not under version control make a copy of your Hugo project.
-
 1. Install NodeJS and npm
-1. Install glossarify-md
+1. In your Hugo project folder install glossarify-md
    ~~~
-   npm install -g glossarify-md
+   npm install glossarify-md
+   npx glossarify-md --init --local > glossarify-md.conf.json
+   echo node_modules >> .gitignore
    ~~~
-1. In your hugo project rename `content` to `content_`.
-
+1. In your Hugo project folder rename `content` to `content_`.
 
 ## Install Plug-Ins
 
-Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-md][doc-mdext-syntax]. See the table below which syntax in the left column requires [installing and configuring a plug-in][doc-plugins] in the right column. See the plug-in's docs for available config options and default values.
+Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-md][doc-mdext-syntax]. See the table below which syntax (left column) requires [installing and configuring a plug-in][doc-plugins] (right column). See the plug-in's docs for available config options and default values.
+
+~~~
+npm install remark-frontmatter remark-shortcodes
+~~~
 
 |    Markdown Syntax Extension    | plug-in required with glossarify-md |
 | ------------------------------- | ----------------------------------- |
@@ -33,12 +36,12 @@ Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-m
 | [Shortcodes][hugo-shortcodes]   | remark-shortcodes                   |
 | ...and maybe others             |                                     |
 
-## Configure glossarify-md...
+## Configure glossarify-md
 
 *glossarify-md.conf.json*
 ~~~json
 {
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json",
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./content_",
   "outDir": "../content",
   "unified": {
@@ -53,7 +56,7 @@ Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-m
 }
 ~~~
 
-### ...for a Hugo "Leaf Bundle Structure"
+### Option 1: Configure for a Hugo "Leaf Bundle Structure"
 
 In a Hugo [Leaf Bundle Structure][hugo-page-bundles]
 
@@ -83,12 +86,15 @@ ${root}
    |             | ## Hugo
    |             | Hugo is a static site renderer.
    |             ~
-   +- content/
    +- data/
    +- layouts/
+   +- node_modules
    +- ...
    |- config.toml
-   '- glossarify-md.conf.json
+   |- glossarify-md.conf.json
+   |- package-lock.json
+   '- package.json
+
 ~~~
 
 *Add to glossarify-md.conf.json*
@@ -105,15 +111,8 @@ ${root}
 }
 ~~~
 
-Then run
 
-~~~
-glossarify-md --config ./glossarify-md.conf.json
-~~~
-
-You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also [`linking` options][doc-readme].
-
-### ...for a Hugo "Branch Bundle Structure"
+### Option 2: Configure for a Hugo "Branch Bundle Structure"
 
 In a Hugo [Branch Bundle Structure][hugo-page-bundles]
 
@@ -143,12 +142,14 @@ ${root}
    |             | ## Hugo
    |             | Hugo is a static site renderer.
    |             ~
-   +- content/
    +- data/
    +- layouts/
+   +- node_modules
    +- ...
    |- config.toml
-   '- glossarify-md.conf.json
+   |- glossarify-md.conf.json
+   |- package-lock.json
+   '- package.json
 ~~~
 
 *Add to glossarify-md.conf.json*:
@@ -165,6 +166,13 @@ ${root}
 }
 ~~~
 
+## Run
+
+~~~
+npx glossarify-md --config ./glossarify-md.conf.json
+~~~
+
+You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also [`linking` options][doc-linking].
 
 ## Known Issues
 
@@ -194,4 +202,4 @@ There may be two reasons:
 
 ### Link paths
 
-Hugo has its own means of producing website URLs from a project's filesystem. We have shown glossarify-md configurations that fit a particular project structure but they have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options and `linking`-options in particular if the config doesn't work for you.
+Hugo has its own means of producing website URLs from a project's filesystem. We have shown glossarify-md configurations that fit a particular project structure but they have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options and [`linking` options][doc-linking] in particular if the config doesn't work for you.
