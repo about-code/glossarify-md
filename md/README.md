@@ -46,41 +46,26 @@
 #### Option 1: Install globally, init and run:
 
 ~~~
-npm i -g glossarify-md
+npm install -g glossarify-md
 
 glossarify-md --init --new
 glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-#### Option 2: Install locally as a project dependency, init and run:
+#### Option 2: Install locally as a project dependency, init and run (recommended):
 
 ~~~
-npm i glossarify-md
+npm install glossarify-md
 
 npx glossarify-md --local --init --new
 npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-... or add an npm-script to your `package.json`:
+Below we assume a *local* installation.
 
-*package.json*
-~~~json
-{
-  "scripts": {
-    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
-  }
-}
-~~~
+## First Steps
 
-```
-npm run glossarify
-```
-
-## Configuration
-
-> **ⓘ Since v5.0.0**
-
-Generate a configuration with the `--init` option:
+Generate a configuration with the `--init` option (since v5.0.0):
 
 ~~~
 npx glossarify-md --init > glossarify-md.conf.json
@@ -90,7 +75,8 @@ npx glossarify-md --init > glossarify-md.conf.json
   - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
   - add `--more` to write a config with more [options] and default values
   - add `--local` to load the config schema from the `node_modules` directory
-
+- use `--help` to learn about additional command line arguments.
+- use `--watch` (since 6.3.0) to watch for changes in input files and rerun automatically
 
 *glossarify-md.conf.json (`glossarify-md --init`)*
 ```json
@@ -111,45 +97,11 @@ npx glossarify-md --init > glossarify-md.conf.json
 }
 ```
 
-> **Paths**
+> **ⓘ Paths**
 >
 > 1. `baseDir` and `$schema` are resolved relative to the config file or current working directory (when passed via CLI)
 > 1. all other paths  are resolved relative to `baseDir`
 > 1. `outDir` *must not* be in `baseDir`so, if relative, must step out of `baseDir`
-
-
-### Config CLI
-
-> **ⓘ Since v4.0.0**
-
-Use `--shallow` or `--deep`
-
-1. to provide a configuration solely via command line
-2. to merge a configuration with a config file
-
-*Example: use `--shallow` to *replace* simple top-level options:*
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
-~~~
-
-*Example: use `--shallow` to *replace* nested object-like options like `glossaries` alltogether:*
-
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
-~~~
-
-*Example: use `--deep` to *extend* nested object-like options, e.g. to **add** another array item to `glossaries` in the config file write:*
-
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --deep "{'glossaries': [{'file':'./extend.md'}] }"
-~~~
-
 
 ## Sample
 
@@ -243,7 +195,6 @@ A glossary term has a short description. The full description contains both sent
 >
 > A glossary term has a short description. The full description contains both sentences.
 
-
 ## What's not Linked
 
 Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. Terms are not linkified when part of:
@@ -254,9 +205,9 @@ Some syntactic positions of a term occurrence are **excluded** from being linked
 - Blockquotes `>`
 - HTML `<a>text</a>`
 
-> **ⓘ Tip:**  Wrap a word into `<span>word</span>` or some non-HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][cross-linking].
+Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
-> **ⓘ** Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
+> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][cross-linking].
 
 
 ## Aliases and Synonyms
