@@ -162,7 +162,7 @@ Augmented versions of the source files have been written to the output directory
 ```md
 # [Demo](#demo)
 
-This is a text which uses a glossary [Term🟉][1] to describe something.
+This is a text which uses a glossary [Term][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
@@ -171,7 +171,7 @@ This is a text which uses a glossary [Term🟉][1] to describe something.
 
 > ## [Demo](#demo)
 >
-> This is a text which uses a glossary [Term🟉][1] to describe something.
+> This is a text which uses a glossary [Term][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
@@ -253,7 +253,7 @@ In the output files aliases will be linked to their related term:
 *glossarify-md.conf.json*
 ```json
 "glossaries": [
-    { "file": "./glossary.md", "termHint": "🟉"},
+    { "file": "./glossary.md", "termHint": "★"},
 ]
 ```
 

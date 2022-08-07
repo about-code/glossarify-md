@@ -43,7 +43,7 @@ npm i --save glossarify-md
     "baseDir": "./docs",
     "outDir": "../docs-glossarified",
     "glossaries": [
-        { "file": "./glossary.md", "termHint": "🟉"},
+        { "file": "./glossary.md", "termHint": "★"},
     ]
 }
 ```
