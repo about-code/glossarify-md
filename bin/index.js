@@ -87,9 +87,12 @@ const cli = {
 };
 const argv = minimist(proc.argv.slice(2), cli);
 if (!argv.init) {
-    // print banner only without --init to prevent writing banner to config.
+    // banner only in absence of --init; Prevent writing banner to file for
+    // 'glossarify-md --init >> glossarify-md.conf.json'
     console.log(banner);
 }
+
+// --logfile
 if (argv.logfile) {
     try {
         nodeFs.unlinkSync(argv.logfile);
@@ -111,45 +114,45 @@ if (argv.logfile) {
     console.error = logger;
     console.info = logger;
 }
+
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
     printHelp(cli);
     proc.exit(0);
 }
 
-// --config
-const confSchemaProps = confSchema.properties;
-const confDefault = Object
-    .keys(confSchemaProps)
-    .reduce((obj, key) => {
-        obj[key] = confSchemaProps[key].default;
-        return obj;
-    }, { "$schema": confSchema.$id });
-let confDir = "";
-let confPath = argv.config || "";
-let confData = {};
-let confPromise = Promise.resolve({});
-if (confPath) {
-    try {
-        confPath = path.resolve(CWD, confPath);
-        confDir = path.dirname(confPath);
-        confData = JSON.parse(fs.readFileSync(confPath));
-        if (!argv.noupgrade) {
-            confPromise = upgrade(confData, confPath, confDefault);
-        }
-    } catch (e) {
-        console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
-        proc.exit(1);
-    }
-} else {
-    confDir = CWD;
-}
-
 (async function() {
-    try {
-        let conf = await confPromise;
 
-        // --deep custom conf
+    const confSchemaProps = confSchema.properties;
+    const confDefault = Object
+        .keys(confSchemaProps)
+        .reduce((obj, key) => {
+            // Set up a default config from default values in the config schema.
+            obj[key] = confSchemaProps[key].default;
+            return obj;
+        }, { "$schema": confSchema.$id });
+
+    // --config
+    let confPath = argv.config || "";
+    let confDir = CWD;
+    let conf = {};
+    if (confPath) {
+        try {
+            confPath = path.resolve(CWD, confPath);
+            confDir = path.dirname(confPath);
+            const confFile = await fs.readFile(confPath);
+            const confData = JSON.parse(confFile);
+            if (!argv.noupgrade) {
+                conf = await upgrade(confData, confPath, confDefault);
+            }
+        } catch (e) {
+            console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
+        }
+    }
+
+    try {
+        // --deep
         if (argv.deep) {
             try {
                 conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
@@ -158,7 +161,7 @@ if (confPath) {
                 proc.exit(1);
             }
         }
-        // --shallow custom conf
+        // --shallow
         if (argv.shallow) {
             try {
                 conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
@@ -187,18 +190,17 @@ if (confPath) {
         validateConf(conf);
 
         // _/ Run \_____________________________________________________________________
-        program
-            .run(conf)
-            .then(() => {
-                // --watch
-                if (argv.watch) {
-                    console.log(`Watching ${conf.baseDir}...`);
-                    watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
-                        .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
-                        .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
-                        .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
-                }
-            });
+        await program.run(conf);
+
+        // --watch
+        if (argv.watch) {
+            console.log(`Watching ${conf.baseDir}...`);
+            watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
+                .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
+                .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
+                .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
+        }
+
     } catch (err) {
         console.error(err);
         proc.exit(1);
@@ -284,6 +286,7 @@ function writeInitialConf(conf, argv) {
     }
 }
 
+// --help
 function printHelp(parameters) {
     console.log("Options:\n");
     console.log(
