@@ -190,17 +190,18 @@ if (argv.help || proc.argv.length === 2) {
         validateConf(conf);
 
         // _/ Run \_____________________________________________________________________
-        await program.run(conf);
-
         // --watch
         if (argv.watch) {
+            // Do not drop 'outDir' in watch mode. Dropping it would cause some
+            // subsequent 3rd-party watchers on it to break (e.g. vuepress 1.x)
+            conf.outDirDropOld = false;
             console.log(`Watching ${conf.baseDir}...`);
             watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
                 .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
                 .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
                 .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
         }
-
+        await program.run(conf);
     } catch (err) {
         console.error(err);
         proc.exit(1);
