@@ -18,6 +18,7 @@
 [doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md
 [doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
 [doc-conceptual-layers]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md
+[doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 [CommonMark]: https://www.commonmark.org
 [GFM]: https://github.github.com/gfm/
 [glob]: https://github.com/isaacs/node-glob#glob-primer
@@ -43,27 +44,33 @@
 
 ## Install
 
-#### Option 1: Install globally, init and run:
+#### Option 1: Install *globally*, init config and run:
 
 ~~~
-npm i -g glossarify-md
+npm install -g glossarify-md
 
 glossarify-md --init --new
 glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-#### Option 2: Install locally as a project dependency, init and run:
+#### Option 2 (recommended): Install *locally*, init config and run:
 
 ~~~
-npm i glossarify-md
+cd ./your-project
+npm install glossarify-md
 
-npx glossarify-md --local --init --new
+npx glossarify-md --init --new --local
 npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-... or add an npm-script to your `package.json`:
+**Optionally:** You might want to set up a shortcut...
 
-*package.json*
+~~~
+npm run glossarify
+~~~
+
+... by adding a run script to your `package.json`:
+
 ~~~json
 {
   "scripts": {
@@ -72,84 +79,11 @@ npx glossarify-md --config ./glossarify-md.conf.json
 }
 ~~~
 
-```
-npm run glossarify
-```
+> **ⓘ Since 6.3.0** glossarify-md supports a `--watch` mode.
 
 ## Configuration
 
-> **ⓘ Since v5.0.0**
-
-Generate a configuration with the `--init` option:
-
-~~~
-npx glossarify-md --init > glossarify-md.conf.json
-~~~
-
-- use `--init` to write a minimal config to stdout
-  - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
-  - add `--more` to write a config with more [options] and default values
-  - add `--local` to load the config schema from the `node_modules` directory
-
-
-*glossarify-md.conf.json (`glossarify-md --init`)*
-```json
-{
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json",
-  "baseDir": "./docs",
-  "outDir": "../docs-glossarified"
-}
-```
-
-*glossarify-md.conf.json* (`glossarify-md --init --local`)
-
-```json
-{
-  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
-  "baseDir": "./docs",
-  "outDir": "../docs-glossarified"
-}
-```
-
-> **Paths**
->
-> 1. `baseDir` and `$schema` are resolved relative to the config file or current working directory (when passed via CLI)
-> 1. all other paths  are resolved relative to `baseDir`
-> 1. `outDir` *must not* be in `baseDir`so, if relative, must step out of `baseDir`
-
-
-### Config CLI
-
-> **ⓘ Since v4.0.0**
-
-Use `--shallow` or `--deep`
-
-1. to provide a configuration solely via command line
-2. to merge a configuration with a config file
-
-*Example: use `--shallow` to *replace* simple top-level options:*
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
-~~~
-
-*Example: use `--shallow` to *replace* nested object-like options like `glossaries` alltogether:*
-
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
-~~~
-
-*Example: use `--deep` to *extend* nested object-like options, e.g. to **add** another array item to `glossaries` in the config file write:*
-
-~~~
-glossarify-md
-  --config ./glossarify-md.conf.json
-  --deep "{'glossaries': [{'file':'./extend.md'}] }"
-~~~
-
+If you've followed the installation instructions you are already set up for a quick start. For customizing your configuration **[see here][doc-config]**.
 
 ## Sample
 
@@ -210,7 +144,7 @@ Augmented versions of the source files have been written to the output directory
 ```md
 # [Demo](#demo)
 
-This is a text which uses a glossary [Term🟉][1] to describe something.
+This is a text which uses a glossary [Term][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
@@ -219,7 +153,7 @@ This is a text which uses a glossary [Term🟉][1] to describe something.
 
 > ## [Demo](#demo)
 >
-> This is a text which uses a glossary [Term🟉][1] to describe something.
+> This is a text which uses a glossary [Term][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
@@ -243,7 +177,6 @@ A glossary term has a short description. The full description contains both sent
 >
 > A glossary term has a short description. The full description contains both sentences.
 
-
 ## What's not Linked
 
 Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. Terms are not linkified when part of:
@@ -254,10 +187,9 @@ Some syntactic positions of a term occurrence are **excluded** from being linked
 - Blockquotes `>`
 - HTML `<a>text</a>`
 
-> **ⓘ Tip:**  Wrap a word into `<span>word</span>` or some non-HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][cross-linking].
+Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
-> **ⓘ** Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
-
+> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][cross-linking].
 
 ## Aliases and Synonyms
 
@@ -286,23 +218,26 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
 ```
 
-> **ⓘ** There is an alternative aliases syntax whose (single-line) form is not meant to be deprecated any time soon.
+> **ⓘ** There's an alternative plain Aliases syntax whose (single-line) form is not meant to be deprecated any time soon:
 > ~~~
 > ## Term
 > <!-- Aliases: Term 1, Term2, ... -->
 > ~~~
-> However, term attribute syntax with a JSON map is going to be our way forward and required for providing multiple attributes at once. If you like to convert above Aliases to term attribute syntax a RegExp search & replace with
+> However, term attribute syntax with a JSON map is required for providing multiple attributes at once. If you like to convert plain Aliases syntax to term attribute syntax a RegExp search & replace with
 > - search `<!--[\s]?Aliases:[\s]?(.*)[\s]-->`
 > - replace `<!--{ "aliases": "$1" }-->`
 >
 > may serve you.
+
+
+That's all you need to know for a quick start. Continue reading to learn about additional features.
 
 ## Term Hints
 
 *glossarify-md.conf.json*
 ```json
 "glossaries": [
-    { "file": "./glossary.md", "termHint": "🟉"},
+    { "file": "./glossary.md", "termHint": "★"},
 ]
 ```
 

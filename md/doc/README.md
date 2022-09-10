@@ -1,5 +1,7 @@
+[doc-cli]: ./cli.md
 [doc-dev-conceptual-layers]: ./conceptual-layers.md
 [doc-dev-node-types]: ../lib/ast/with/node-type.md
+[doc-config]: ../conf/README.md
 [doc-glossary]: ./glossary.md
 [doc-lists-on-github]: ./lists-on-github.md
 [doc-path-rewriting]: ./paths-and-urls.md
@@ -17,12 +19,12 @@
 # Documentation
 
 Alternative Table of Contents for [README.md].
-Sections marked with * add content *not* found in the README.
+Sections marked with * describe advanced topics *not* mentioned in [README.md] (root).
 
 Setup
 - [Install](../README.md#install)
-- [Configuration](../README.md#configuration)
-  - [Options](../README.md#options)
+- [Configure][doc-config]
+- [Command Line Interface*][doc-cli]
 - [Node Support Matrix](../README.md#node-support-matrix)
 
 Glossary Basics

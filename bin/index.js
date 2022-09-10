@@ -9,6 +9,7 @@ import proc from "node:process";
 import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
 import { upgrade } from "../lib/cli/upgrade.js";
 import * as program from "../lib/main.js";
+import { watch } from "chokidar";
 
 const require_ = createRequire(import.meta.url);
 const confSchema = require_("../conf/v5/schema.json");
@@ -23,7 +24,25 @@ const banner =
 
 // _/ CLI \_____________________________________________________________________
 const cli = {
-    "init": {
+    "config": {
+        alias: "c"
+        ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
+        ,type: "string"
+        ,default: "./glossarify-md.conf.json"
+    }
+    ,"deep": {
+        alias: ""
+        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will _extend_ nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
+        ,type: "string"
+        ,default: ""
+    }
+    ,"help": {
+        alias: "h"
+        ,description: "Show this help."
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"init": {
         alias: ""
         ,description: "Generate a configuration file with default values. Usage: 'glossarify-md --init > glossarify-md.conf.json'"
         ,type: "boolean"
@@ -53,36 +72,27 @@ const cli = {
         ,type: "boolean"
         ,default: false
     }
-    ,"config": {
-        alias: "c"
-        ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
-        ,type: "string"
-        ,default: "./glossarify-md.conf.json"
-    }
     ,"shallow": {
         alias: ""
         ,description: "A JSON string for an object to be shallow-merged with the default configuration or a configuration file provided with --config. Usage: `glossarify-md --shallow \"{'baseDir': './input'}\"`. Shallow merging _replaces_ nested property values. Use --deep to deep-merge."
         ,type: "string"
         ,default: ""
     }
-    ,"deep": {
-        alias: ""
-        ,description: "Deeply merge the given JSON configuration string with the configuration file or default configuration. This will _extend_ nested arrays and replace only those keys exactly matching with the given structure. Use --shallow to shallow-merge."
-        ,type: "string"
-        ,default: ""
-    }
-    ,"help": {
-        alias: "h"
-        ,description: "Show this help."
+    ,"watch": {
+        alias: "w"
+        ,description: "Watch the base directory"
         ,type: "boolean"
         ,default: false
     }
 };
 const argv = minimist(proc.argv.slice(2), cli);
 if (!argv.init) {
-    // print banner only without --init to prevent writing banner to config.
+    // banner only in absence of --init; Prevent writing banner to file for
+    // 'glossarify-md --init >> glossarify-md.conf.json'
     console.log(banner);
 }
+
+// --logfile
 if (argv.logfile) {
     try {
         nodeFs.unlinkSync(argv.logfile);
@@ -104,45 +114,45 @@ if (argv.logfile) {
     console.error = logger;
     console.info = logger;
 }
+
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
     printHelp(cli);
     proc.exit(0);
 }
 
-// --config
-const confSchemaProps = confSchema.properties;
-const confDefault = Object
-    .keys(confSchemaProps)
-    .reduce((obj, key) => {
-        obj[key] = confSchemaProps[key].default;
-        return obj;
-    }, { "$schema": confSchema.$id });
-let confDir = "";
-let confPath = argv.config || "";
-let confData = {};
-let confPromise = Promise.resolve({});
-if (confPath) {
-    try {
-        confPath = path.resolve(CWD, confPath);
-        confDir = path.dirname(confPath);
-        confData = JSON.parse(fs.readFileSync(confPath));
-        if (!argv.noupgrade) {
-            confPromise = upgrade(confData, confPath, confDefault);
-        }
-    } catch (e) {
-        console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
-        proc.exit(1);
-    }
-} else {
-    confDir = CWD;
-}
-
 (async function() {
-    try {
-        let conf = await confPromise;
 
-        // --deep custum conf
+    const confSchemaProps = confSchema.properties;
+    const confDefault = Object
+        .keys(confSchemaProps)
+        .reduce((obj, key) => {
+            // Set up a default config from default values in the config schema.
+            obj[key] = confSchemaProps[key].default;
+            return obj;
+        }, { "$schema": confSchema.$id });
+
+    // --config
+    let confPath = argv.config || "";
+    let confDir = CWD;
+    let conf = {};
+    if (confPath) {
+        try {
+            confPath = path.resolve(CWD, confPath);
+            confDir = path.dirname(confPath);
+            const confFile = await fs.readFile(confPath);
+            const confData = JSON.parse(confFile);
+            if (!argv.noupgrade) {
+                conf = await upgrade(confData, confPath, confDefault);
+            }
+        } catch (e) {
+            console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
+        }
+    }
+
+    try {
+        // --deep
         if (argv.deep) {
             try {
                 conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
@@ -151,7 +161,7 @@ if (confPath) {
                 proc.exit(1);
             }
         }
-        // --shallow custom conf
+        // --shallow
         if (argv.shallow) {
             try {
                 conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
@@ -180,7 +190,25 @@ if (confPath) {
         validateConf(conf);
 
         // _/ Run \_____________________________________________________________________
-        program.run(conf);
+        // --watch
+        if (argv.watch) {
+            await program.run(conf);
+            // Do not drop 'outDir' while watching. Dropping it would cause some
+            // subsequent 3rd-party watchers on it to break (e.g. vuepress 1.x)
+            conf.outDirDropOld = false;
+            console.log(`Start watching ${conf.baseDir}...`);
+            const watcher = watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
+                .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
+                .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
+                .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
+            const stopWatching = async () => {
+                await watcher.close();
+                console.log("Stopped watching.");
+            };
+            process.on("SIGINT", stopWatching);
+        } else {
+            await program.run(conf);
+        }
     } catch (err) {
         console.error(err);
         proc.exit(1);
@@ -266,6 +294,7 @@ function writeInitialConf(conf, argv) {
     }
 }
 
+// --help
 function printHelp(parameters) {
     console.log("Options:\n");
     console.log(

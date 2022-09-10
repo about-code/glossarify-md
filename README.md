@@ -92,7 +92,7 @@ glossarify-md --init --new
 glossarify-md --config ./glossarify-md.conf.json
 ```
 
-#### Option 2: Install locally as a project dependency, init and run:
+#### Option 2 (recommended): Install locally as a project dependency, init and run:
 
 ```
 npm i glossarify-md
@@ -101,7 +101,13 @@ npx glossarify-md --local --init --new
 npx glossarify-md --config ./glossarify-md.conf.json
 ```
 
-... or add an npm-script to your `package.json`:
+To be able to run with...
+
+```
+npm run glossarify
+```
+
+... add an npm-script to your `package.json`:
 
 *package.json*
 
@@ -111,10 +117,6 @@ npx glossarify-md --config ./glossarify-md.conf.json
     "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
   }
 }
-```
-
-```
-npm run glossarify
 ```
 
 ## Configuration
