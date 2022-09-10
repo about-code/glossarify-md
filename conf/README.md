@@ -1,24 +1,57 @@
 # Configuration
 
+[doc-readme]: "../README.md#installation
+
 - [Config Format v5](./v5/doc/schema.md).
 
-## Config Format Versions
+## Generate a config file with `--init`
 
-Versions in this directory reflect config *format* versions. A config format version corresponds to the major version of some glossarify-md release *which
-introduced breaking changes* to the config format.
+Use `--init` to write a *minimal* config to the console.
+- add `--more` to write a config with more [options] and default values
+- add `--local` to load the config schema from the `node_modules` directory
+- add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
 
-The `v5` format was introduced with `glossarify-md@5.0.0`. Newer versions of `glossarify-md` continue publishing the latest schema revision in a `v5` directory until there are breaking changes to the structure of the config format which require a new format version. In case of breaking changes *glossarify-md* aims to assist in upgrading configs to a newer version.
+Examples:
 
-## Editor Support and Schema Compatibility
+Write config to console
+~~~
+npx glossarify-md --init --local
 
-Many JSON editors provide assistance when referring to a JSON-Schema from within
-a JSON file using a `$schema` property. There are two ways to do that.
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified"
+}
+~~~
 
-#### Local References
+Write config to a file
+~~~
+npx glossarify-md --init --local > glossarify-md.conf.json
+~~~
 
-Local references pull the schema from the local `./node_modules/` folder. With
-local references you'll always get the latest schema which matches the version
-you installed. A local reference may look like
+
+```json
+{
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified"
+}
+```
+
+> **ⓘ Paths**
+>
+> 1. `baseDir` and `$schema` are resolved relative to the config file or current working directory (when passed via CLI)
+> 1. all other paths  are resolved relative to `baseDir`
+> 1. `outDir` *must not* be in `baseDir`so, if relative, must step out of `baseDir`
+
+
+## Editor Support
+
+Many IDEs and editors provide suggestions when editing JSON files that refer to a JSON Schema using a conventional `$schema` property. There are two ways to refer to a glossarify-md config schema.
+
+### Local Referencing with `--local` 
+
+Local referencing is the **recommended** way **when glossarify-md was [installed "locally"][doc-readme] to a project**. It references the config schema of the glossarify-md version installed to the `./node_modules/` folder of the project. This way your editor can suggest all the latest options supported by the installed version.
 
 *glossarify-md.conf.json*
 ~~~
@@ -27,9 +60,9 @@ you installed. A local reference may look like
 }
 ~~~
 
-#### Web References
+### Web References
 
-Web References make editors pull the schema from the internet (if permitted).
+Web references  are intended to be used when glossarify-md was installed "globally" using `npm install -g`. They will be generated when omitting the `--local` option.
 
 *glossarify-md.conf.json*
 ~~~
@@ -38,13 +71,9 @@ Web References make editors pull the schema from the internet (if permitted).
 }
 ~~~
 
-Unlike local references they do not only contain a config format version (`v5`)
-but also a glossarify-md release version (`v5.1.0`). When installing a newer
-release of glossarify-md (say `v5.2.0`) above configuration keeps on referring
-to the previous release. This is guaranteed to work but your editor may not
-suggest you the latest options. You need to adjust the URL manually after
-updates. It will only get upgraded on breaking changes to the configuration
-format. Therefore local references are usually the better choice.
+> **ⓘ** Note that the web reference contains a config *format version* `v5` but also a particular *release version* `v5.1.0`. The latter is the version by the glossarify-md release that generated the config. If you later install a newer version of glossarify-md (say `v5.2.0`) web references in your config files **will only get upgraded on breaking changes to the configuration format**. Thus your config files may keep on referring to `v5.1.0`. Due to backwards compatibility this isn't a problem but your editor won't suggest you *the latest* options that could be used with glossarify-md `v5.2.0`. For this to happen change the *release version* in the path, manually.
+
+
 
 <!--
 If you use `latest` release version your editor will suggest you options from

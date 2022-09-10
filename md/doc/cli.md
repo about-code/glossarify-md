@@ -1,11 +1,10 @@
 # Command Line Interface
 
-For a full list of arguments use `--help`.
+Get a list of command line arguments by passing `--help`.
 
 ## Shortcuts
 
-Let `npm` run a particular glossarify-md command-line for you by adding
-`scripts` in your `package.json`:
+If you have installed glossarify-md locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
 
 *package.json*
 ~~~json
@@ -16,14 +15,12 @@ Let `npm` run a particular glossarify-md command-line for you by adding
 }
 ~~~
 
-Next time run glossarify-md by just typing line 1 below.
+Next time you can run glossarify-md by just typing line 1. Pass arguments after a ` -- ` separator (line 2).
 
 ```
 1 | npm run glossarify
 2 | npm run glossarify -- --help
 ```
-
-Though, with npm you need additional ` -- ` before any arguments (line 2).
 
 ## Configuration Overrides
 
