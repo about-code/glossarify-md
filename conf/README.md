@@ -7,7 +7,7 @@
 ## Generate a config file with `--init`
 
 Use `--init` to write a *minimal* config to the console.
-- add `--more` to write a config with more [options] and default values
+- add `--more` to write a config with more options and default values
 - add `--local` to load the config schema from the `node_modules` directory
 - add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
 
@@ -24,19 +24,15 @@ npx glossarify-md --init --local
 }
 ~~~
 
-Write config to a file
+Write config from console to a file
 ~~~
 npx glossarify-md --init --local > glossarify-md.conf.json
 ~~~
 
-
-```json
-{
-  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
-  "baseDir": "./docs",
-  "outDir": "../docs-glossarified"
-}
-```
+Write config with default filename and initialize a ./doc/ directory with a glossary file.
+~~~
+npx glossarify-md --init --local --new
+~~~
 
 > **ⓘ Paths**
 >
