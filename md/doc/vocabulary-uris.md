@@ -6,20 +6,18 @@
 
 Consider a term *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
 
-Though, *a computer programme* can not really understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *values*. In order to implement into a computer something *like* an "understanding" of meaning and semantics it requires *IDs*, in particular IDs *for definitions of meaning*. 
-
-Uniform Resource Identifiers (URIs) do fit very well for that purpose. For example with unique IDs
+*A computer program* can't understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
 
 - `https://example.com/glossary/medicine/#skin`
 - `https://example.com/glossary/computer-science/#skin`.
 
-a computer can pretend to "understand" that these things are different by just comparing the ID-values. However with such IDs available for comparison computer scientists can now also develop technical languages which can be used to tell a computer about the *relationships* of those IDs. For example we could model a relationship like `is-equal` such that a computer could then also understand when different definitions of meaning actually describe the same thing. However modeling *relationships* is beyond glossaries but typical for other kinds of knowledge organisation systems, like *taxonomies*, *ontologies* or *word nets*.
+a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships (like `xID is-equal yID`) between semantic concepts. Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets. 
 
-**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries. *Term URIs* are there to preserve a glossary term's meaning in a technical sense.
+**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries (see also [Interoperability with SKOS and JSON-LD][doc-skos]).
 
 ## Vocabulary URIs and Term URIs
 
-There's a `uri` config option for `glossaries` entries, which assigns a glossary a so-called *vocabulary URI*. Then on exporting a glossary *term URIs* can be constructed automatically from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how glossarify-md generates heading IDs).
+`glossaries` entries can be augmented with a `uri` config option which assigns a glossary a so-called *vocabulary URI*. Then on exporting *term URIs* can be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how glossarify-md generates heading IDs).
 
 ~~~json
 {
@@ -88,4 +86,3 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 ~~~
 -->
 
-If you have a background in Linked Data and Semantic Web technologies you might also be interested in reading about [SKOS Interoperability with JSON-LD][doc-skos].
