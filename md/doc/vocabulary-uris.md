@@ -11,7 +11,7 @@ Consider a term *skin*. In human medicine it's a term for a human organ while in
 - `https://example.com/glossary/medicine/#skin`
 - `https://example.com/glossary/computer-science/#skin`.
 
-a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships (like `xID is-equal yID`) between semantic concepts. Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets. 
+a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets. 
 
 **Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries (see also [Interoperability with SKOS and JSON-LD][doc-skos]).
 
