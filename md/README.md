@@ -35,6 +35,7 @@
 [unified]: https://unifiedjs.com
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 [vuepress]: https://vuepress.vuejs.org
+[YAML]: https://yaml.org
 
 ## Table of Contents
 
@@ -197,14 +198,14 @@ Blockquotes are excluded based on the premise that a quoted entity may not share
 [aliases]: #aliases-and-synonyms
 [term-attributes]: #aliases-and-synonyms
 
-Aliases can be added by what we call a *term attribute*. Term attributes follow a term's heading. Syntactically they are a JSON key-value map embedded into an HTML comment. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
+Aliases can be added by what we call *term attributes*. Term attributes are provided in a [YAML] formatted HTML comment following a term's heading. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
 
 *glossary.md with a term attribute `aliases`:*
 ```md
 # Glossary
 
 ## Cat
-<!--{ "aliases": "Cats, Wildcat, House Cat" }-->
+<!-- aliases: "Cats, Wildcat, House Cat" -->
 Cats are cute, ...dogs are loyal.
 ```
 
@@ -218,17 +219,7 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
 ```
 
-> **ⓘ** There's an alternative plain Aliases syntax whose (single-line) form is not meant to be deprecated any time soon:
-> ~~~
-> ## Term
-> <!-- Aliases: Term 1, Term2, ... -->
-> ~~~
-> However, term attribute syntax with a JSON map is required for providing multiple attributes at once. If you like to convert plain Aliases syntax to term attribute syntax a RegExp search & replace with
-> - search `<!--[\s]?Aliases:[\s]?(.*)[\s]-->`
-> - replace `<!--{ "aliases": "$1" }-->`
->
-> may serve you.
-
+> **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase. You may find that an uppercase `Aliases: ` term attribute works as well. This is going to be the only attribute for which an uppercase name remains supported *for backwards compatibility*.
 
 That's all you need to know for a quick start. Continue reading to learn about additional features.
 
@@ -264,11 +255,9 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 ```md
 ## REQ-1: The system MUST provide service X
-<!-- Aliases: REQ-1 -->
-...
+<!-- aliases: $2 ...
 ## REQ-2: The system MAY provide service Y
-<!-- Aliases: REQ-2 -->
-...
+<!-- aliases: $2 ...
 ```
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index](#book-index).

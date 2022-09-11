@@ -30,6 +30,7 @@ Setup
 Glossary Basics
 - [Basic Glossary Example](../README.md#sample)
 - [Aliases and Synonyms](../README.md#aliases-and-synonyms)
+  - [Term Attributes](./term-attributes.md)*
 - [Term Hints](../README.md#term-hints)
 - [Multiple Glossaries](../README.md#multiple-glossaries)
 - [Sorting Glossaries](../README.md#sorting-glossaries)

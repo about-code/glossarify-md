@@ -19,13 +19,13 @@ Within file `./references.md` use the term attribute `uri` to provide the source
 *references.md*
 ~~~md
 ## CommonMark
-<!--{ "uri": "https://commonmark.org" }-->
+<!-- uri: https://commonmark.org -->
 
 ## Dublin Core
-<!--{
-    "uri": "http://purl.org/dc/terms/",
-    "aliases": "DC, DublinCore, dc:"
-}-->
+<!--
+  uri: http://purl.org/dc/terms/
+  aliases: DC, DublinCore, dc:
+-->
 The Dublin Core Metadata Initiative.
 ~~~
 

@@ -4,18 +4,22 @@
 [doc-import]: ../README.md#structured-export-and-import
 [doc-skos]: ./skos-interop.md
 
-Consider bankers and IT professionals talking about *security*. Since the term is used differently in the banking domain than it is being used in computer science its *ambiguity* can cause some confusion among these people. As a consequence the term demands *clarification* of its particular meaning when being used. Of course, that's what glossaries are meant for.
+Consider a term *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* and what glossaries are meant for, of course.
 
-*For a computer* such kind of clarification can be achieved using *IDs* to *uniquely identify one particular definition of meaning*. Uniform Resource Identifiers (URIs) do fit well for that purpose. For example whenever a system processes an URI
+Though, *a computer programme* can not really understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *values*. In order to implement into a computer something *like* an "understanding" of meaning and semantics it requires *IDs*, in particular IDs *for definitions of meaning*. 
 
-- `https://example.com/glossary/banking/#security`
+Uniform Resource Identifiers (URIs) do fit very well for that purpose. For example with unique IDs
 
-it is clear that it refers to a different meaning than some identifier
+- `https://example.com/glossary/medicine/#skin`
+- `https://example.com/glossary/computer-science/#skin`.
 
-- `https://example.com/glossary/it/#security`.
+a computer can pretend to "understand" that these things are different by just comparing the ID-values. However with such IDs available for comparison computer scientists can now also develop technical languages which can be used to tell a computer about the *relationships* of those IDs. For example we could model a relationship like `is-equal` such that a computer could then also understand when different definitions of meaning actually describe the same thing. However modeling *relationships* is beyond glossaries but may be added when importing glossary terms into a *taxonomy* or *word net* or other kinds of knowledge organisation systems.
 
+**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries. *Term URIs* are there to preserve a glossary term's meaning in a technical sense. This way an exported glossary
 
-**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries. Moreover it introduces an `uri` option for `glossaries` which assigns a glossary a *vocabulary URI*. Then *exported* term URIs will be constructed from the vocabulary URI and a term's heading ID (see [headingIdAlgorithm]).
+## Vocabulary URIs and Term URIs
+
+There's a `uri` config option for `glossaries` entries, which assigns a glossary a so-called *vocabulary URI*. Then on exporting a glossary *term URIs* can be constructed automatically from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how glossarify-md generates heading IDs).
 
 ~~~json
 {
@@ -29,19 +33,32 @@ it is clear that it refers to a different meaning than some identifier
 }
 ~~~
 
-If you need more control about a term's URI then explicit heading IDs can be assigned using pandoc-style `{#headingId}` or the `uri` *term attribute*:
+If you need more control about a term's Term URI, then there are two switches you can tweak:
 
-*glossary.md*
+- providing a custom heading ID using pandoc-style `{#headingId}`
+- providing a `uri` term attribute
+
+
+*Custom heading ID*
 ~~~md
 # Glossary
 
-## Term
-<!--{ "uri": "http://my.org/special/12345" }-->
+## Term {#custom-heading-id}
 
 Term with an individual URI.
 ~~~
 
-## Properties of URIs
+*`uri` term attribute*:
+~~~md
+# Glossary
+
+## Term
+<!-- uri: http://my.org/special/12345 -->
+
+Term with an individual URI.
+~~~
+
+# Addendum: Properties of URIs
 
 ### Resolvability
 
@@ -49,7 +66,9 @@ URIs can be *just identifiers*. But URIs can also be used to *locate and retriev
 
 ### Authority
 
-URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an URI and make it the identifier of something (like we did here) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition. So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an URI. So particularly when publishing a vocabulary it is usually not a good idea to do so.
+URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an URI and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition. 
+
+So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an URI. So particularly when publishing a vocabulary it is usually not a good idea to use someone else's domain.
 
 
 
