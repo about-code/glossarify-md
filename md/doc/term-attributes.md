@@ -25,7 +25,6 @@ Term Attributes are passed in a comment following a term's heading. The comment 
 > **ⓘ Note:** YAML syntax is *case-sensitive* and  like Markdown it is *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
 
 
-
 ## Attributes
 
 ### `aliases`
@@ -36,11 +35,11 @@ Comma-separated string or a string array listing alternative spellings that shou
 
 ### `uri`
 
-An identifier for the term's *meaning*. Can be used to link term occurrences to an authoritative definition on the web instead of linking term occurences to a markdown book's glossary. Web linking requires setting `linkUris: true` for a `glossaries` item in a glossarify-md configuration file. More see *[URIs as Identifiers for Definitions of Meaning][doc-vocabularies]* 
+An identifier for the term's *meaning*. Can be used to link term occurrences to an authoritative definition on the web instead of linking term occurrences to a markdown book's glossary. Web linking requires setting `linkUris: true` for a `glossaries` item in a glossarify-md configuration file. More see *[URIs as Identifiers for Definitions of Meaning][doc-vocabularies]* 
 
 # Addendum
 
-There's going to be continued support for JSON term attribute syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets and is not recommended anymore:
+There's going to be continued support for JSON term attribute syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets which makes it easier to run into syntax errors:
 
 ~~~md
 # Term Heading

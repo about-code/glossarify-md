@@ -4,7 +4,7 @@
 [doc-import]: ../README.md#structured-export-and-import
 [doc-skos]: ./skos-interop.md
 
-Consider a term *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* and what glossaries are meant for, of course.
+Consider a term *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
 
 Though, *a computer programme* can not really understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *values*. In order to implement into a computer something *like* an "understanding" of meaning and semantics it requires *IDs*, in particular IDs *for definitions of meaning*. 
 
@@ -13,9 +13,9 @@ Uniform Resource Identifiers (URIs) do fit very well for that purpose. For examp
 - `https://example.com/glossary/medicine/#skin`
 - `https://example.com/glossary/computer-science/#skin`.
 
-a computer can pretend to "understand" that these things are different by just comparing the ID-values. However with such IDs available for comparison computer scientists can now also develop technical languages which can be used to tell a computer about the *relationships* of those IDs. For example we could model a relationship like `is-equal` such that a computer could then also understand when different definitions of meaning actually describe the same thing. However modeling *relationships* is beyond glossaries but may be added when importing glossary terms into a *taxonomy* or *word net* or other kinds of knowledge organisation systems.
+a computer can pretend to "understand" that these things are different by just comparing the ID-values. However with such IDs available for comparison computer scientists can now also develop technical languages which can be used to tell a computer about the *relationships* of those IDs. For example we could model a relationship like `is-equal` such that a computer could then also understand when different definitions of meaning actually describe the same thing. However modeling *relationships* is beyond glossaries but typical for other kinds of knowledge organisation systems, like *taxonomies*, *ontologies* or *word nets*.
 
-**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries. *Term URIs* are there to preserve a glossary term's meaning in a technical sense. This way an exported glossary
+**Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries. *Term URIs* are there to preserve a glossary term's meaning in a technical sense.
 
 ## Vocabulary URIs and Term URIs
 
