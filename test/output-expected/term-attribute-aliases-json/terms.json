@@ -264,10 +264,14 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-4",
-    "regex": "/(Term 4)/u",
-    "aliases": [],
+    "regex": "/(\\nT4 Alias1|T4\\.Alias3|T4-Alias2|Term 4)/u",
+    "aliases": [
+      "\nT4 Alias1",
+      "T4-Alias2",
+      "T4.Alias3"
+    ],
     "ignoreCase": false,
-    "countOccurrenceTotal": 1,
+    "countOccurrenceTotal": 3,
     "file": "glossary.md",
     "termHint": ""
   },

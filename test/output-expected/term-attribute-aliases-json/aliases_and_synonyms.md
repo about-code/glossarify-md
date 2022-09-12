@@ -15,8 +15,8 @@ GIVEN there is the term's alias "T3.Alias3" THEN it CAN NOT be replaced with a l
 
 GIVEN there is term "[Term 4][4]" THEN it MUST be replaced with a link to its definition.
 GIVEN there is the term's alias "T4 Alias1" THEN it CAN NOT be replaced with a link to the term's definition.
-GIVEN there is the term's alias "T4-Alias2" THEN it CAN NOT be replaced with a link to the term's definition.
-GIVEN there is the term's alias "T4.Alias3" THEN it CAN NOT be replaced with a link to the term's definition.
+GIVEN there is the term's alias "[T4-Alias2][4]" THEN it CAN NOT be replaced with a link to the term's definition.
+GIVEN there is the term's alias "[T4.Alias3][4]" THEN it CAN NOT be replaced with a link to the term's definition.
 
 ## [Alias substring behavior](#alias-substring-behavior)
 
