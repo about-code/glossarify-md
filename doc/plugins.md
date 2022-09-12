@@ -1,6 +1,10 @@
-# [Installing Plug-ins](#installing-plug-ins)
+# [Installing and Configuring Plug-ins](#installing-and-configuring-plug-ins)
 
 [doc-conceptual-layers]: ./conceptual-layers.md
+
+[doc-plugins-dev]: ./plugins-dev.md
+
+[doc-mdext-syntax]: ./markdown-syntax-extensions.md
 
 [mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
 
@@ -14,7 +18,7 @@
 
 [verdaccio]: https://npmjs.com/package/verdaccio
 
-The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make [glossarify-md][1] handle non-standard *Frontmatter* syntax, correctly.
+The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make [glossarify-md][1] handle non-standard *Frontmatter* syntax, correctly ([When do I need a plug-in?][doc-mdext-syntax]).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -47,10 +51,10 @@ We'll assume the following project structure:
 }
 ```
 
-Keys of the `plugins` object tell what to load and may be:
+Keys of the `plugins` object tell what plug-in to load and may be:
 
-*   *names of [npm][2] packages*
-*   *paths of JavaScript modules.*
+*   a name of an [npm][2] package in a global or local `node_modules` folder
+*   a path to a JavaScript file exporting a plug-in function (see [writing plug-ins][doc-plugins-dev])
 
 Their value in turn are options passed to the plug-in. Read [remark-frontmatter] docs, to find out about available options.
 
@@ -85,4 +89,4 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter]
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 
-[2]: _references.md#npm "Node Package Manager."
+[2]: https://npmjs.com "Node Package Manager."

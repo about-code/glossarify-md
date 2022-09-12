@@ -9,9 +9,9 @@ GIVEN there is the term's alias "[T2-Alias2][2]" THEN it MUST be replaced with a
 GIVEN there is the term's alias "[T2.Alias3][2]" THEN it MUST be replaced with a link to the term's definition.
 
 GIVEN there is term "[Term 3][3]" THEN it MUST be replaced with a link to its definition.
-GIVEN there is the term's alias "T3 Alias1" THEN it CAN NOT be replaced with a link to the term's definition.
-GIVEN there is the term's alias "T3-Alias2" THEN it CAN NOT be replaced with a link to the term's definition.
-GIVEN there is the term's alias "T3.Alias3" THEN it CAN NOT be replaced with a link to the term's definition.
+GIVEN there is the term's alias "[T3 Alias1][3]" THEN it MUST be replaced with a link to the term's definition.
+GIVEN there is the term's alias "[T3-Alias2][3]" THEN it MUST be replaced with a link to the term's definition.
+GIVEN there is the term's alias "[T3.Alias3][3]" THEN it MUST be replaced with a link to the term's definition.
 
 GIVEN there is term "[Term 4][4]" THEN it MUST be replaced with a link to its definition.
 GIVEN there is the term's alias "T4 Alias1" THEN it CAN NOT be replaced with a link to the term's definition.
@@ -57,39 +57,31 @@ THEN all aliases MUST still be separated and linked correctly
 [1]: ./glossary.md#term-1 "GIVEN there is an HTML-single-line-comment beginning with \"aliases\": THEN the
 subsequent comma-separated words MUST be detected as the term's aliases."
 
-[2]: ./glossary.md#term-2 "GIVEN there is an HTML-multi-line-comment beginning with \"aliases\": THEN the
-subsequent comma-separated words MUST be detected as the term's aliases."
+[2]: ./glossary.md#term-2 "GIVEN there is an HTML-multi-line-comment beginning with \"aliases\":
+THEN the subsequent comma-separated words MUST be detected as the term's aliases."
 
-[3]: ./glossary.md#term-3 "GIVEN there is an HTML-multi-line-comment beginning with \"aliases\": THEN the
-subsequent comma-separated lines of words is invalid JSON
-AND CAN NOT be detected as the term's aliases."
+[3]: ./glossary.md#term-3 "GIVEN there is a YAML list beginning with \"aliases\":
+THEN the subsequent list of words MUST be detected as the term's aliases."
 
-[4]: ./glossary.md#term-4 "GIVEN there is an HTML-multi-line-comment beginning with \"aliases\": and an empty
-line THEN the subsequent comma-separated lines of words is invalid JSON
-AND CAN NOT be detected as the term's aliases."
+[4]: ./glossary.md#term-4 "GIVEN there is a multi-line-comment beginning with \"aliases\": and an empty line
+THEN the subsequent comma-separated lines of words is invalid YAML AND CAN NOT be detected as the term's aliases."
 
-[5]: ./glossary.md#issue "GIVEN a term \"Issue\"
-AND an alias \"Issues\" WHERE the alias begins with the term
+[5]: ./glossary.md#issue "GIVEN a term \"Issue\" AND an alias \"Issues\" WHERE the alias begins with the term
 THEN the alias MUST still be linked to the term, correctly."
 
-[6]: ./glossary.md#our "GIVEN a term \"OUR\"
-AND an alias \"FLOURISH\" WHERE the alias includes the term
+[6]: ./glossary.md#our "GIVEN a term \"OUR\" AND an alias \"FLOURISH\" WHERE the alias includes the term
 THEN the alias MUST still be linked to the term, correctly."
 
-[7]: ./glossary.md#field "GIVEN a term \"FIELD\"
-AND an alias \"GREENFIELD\" WHERE the alias ends with the term
+[7]: ./glossary.md#field "GIVEN a term \"FIELD\" AND an alias \"GREENFIELD\" WHERE the alias ends with the term
 THEN the alias MUST still be linked to the term, correctly."
 
-[8]: ./glossary.md#hopefully "GIVEN a term \"Hopefully\"
-AND an alias \"Hope\" WHERE the term begins with the alias
+[8]: ./glossary.md#hopefully "GIVEN a term \"Hopefully\" AND an alias \"Hope\" WHERE the term begins with the alias
 THEN the alias MUST still be linked to the term, correctly."
 
-[9]: ./glossary.md#flower "GIVEN a term \"Flower\"
-AND an alias \"lower\" WHERE the term ends with the alias
+[9]: ./glossary.md#flower "GIVEN a term \"Flower\" AND an alias \"lower\" WHERE the term ends with the alias
 THEN the alias MUST still be linked to the term, correctly."
 
-[10]: ./glossary.md#friendship "GIVEN a term \"Friendship\"
-AND an alias \"end\" WHERE the term includes the alias
+[10]: ./glossary.md#friendship "GIVEN a term \"Friendship\" AND an alias \"end\" WHERE the term includes the alias
 THEN the alias MUST be linked to the term, correctly."
 
 [11]: ./glossary.md#china "GIVEN there is an HTML-single-line-comment beginning with \"aliases\":

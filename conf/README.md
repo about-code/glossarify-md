@@ -1,6 +1,6 @@
 # Configuration
 
-[doc-readme]: "../README.md#installation
+[doc-readme]: ../README.md#install
 
 - [Config Format v5](./v5/doc/schema.md).
 
