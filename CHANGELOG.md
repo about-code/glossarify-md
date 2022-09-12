@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.3.1](https://github.com/about-code/glossarify-md/compare/v6.3.0...v6.3.1) (2022-09-12)
+
+
+### Bug Fixes
+
+* README.md ([5bceaa5](https://github.com/about-code/glossarify-md/commit/5bceaa5375ef113300b2a0a7d39845d1baa65cd7))
+
 ## [6.3.0](https://github.com/about-code/glossarify-md/compare/v6.2.1...v6.3.0) (2022-09-12)
 
 
