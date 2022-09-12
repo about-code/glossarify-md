@@ -306,9 +306,10 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 
 ```md
 ## REQ-1: The system MUST provide service X
-<!-- aliases: $2 ...
+<!-- aliases: REQ-1 -->
+
 ## REQ-2: The system MAY provide service Y
-<!-- aliases: $2 ...
+<!-- aliases: REQ-2 -->
 ```
 
 By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index](#book-index).
