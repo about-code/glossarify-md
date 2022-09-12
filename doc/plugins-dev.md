@@ -140,6 +140,6 @@ More see official [NPM][8] docs on [publishing your node package][9].
 
 [7]: #installing-plug-ins
 
-[8]: _references.md#npm "Node Package Manager."
+[8]: https://npmjs.com "Node Package Manager."
 
 [9]: https://docs.npmjs.com/packages-and-modules

@@ -21,25 +21,25 @@ Within file `./references.md` use the [term★][1] attribute `uri` to provide th
 
 ```md
 ## CommonMark
-<!--{ "uri": "https://commonmark.org" }-->
+<!-- uri: https://commonmark.org -->
 
 ## Dublin Core
-<!--{
-    "uri": "http://purl.org/dc/terms/",
-    "aliases": "DC, DublinCore, dc:"
-}-->
+<!--
+  uri: http://purl.org/dc/terms/
+  aliases: DC, DublinCore, dc:
+-->
 The Dublin Core Metadata Initiative.
 ```
 
 See an example by inspecting the markdown source of [\_references.md][5] or this repository's [glossarify-md.conf.json][6].
 
-[1]: ./glossary.md#term "A term is a heading in a markdown file which is passed to glossarify-md as a glossary."
+[1]: ./glossary.md#term "A term is denoted by a heading in a markdown file which is told glossarify-md to be a glossary file."
 
 [2]: https://github.com/about-code/glossarify-md "This project."
 
 [3]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
-[4]: ./glossary.md#term-attribute "Term Attributes are properties passed to glossarify-md using an HTML comment syntax <!--{...}--> which encodes a JSON string: glossary.md"
+[4]: ./glossary.md#term-attribute "Term Attributes are passed in a comment following a term's heading."
 
 [5]: ./_references.md
 
