@@ -198,14 +198,14 @@ Blockquotes are excluded based on the premise that a quoted entity may not share
 [aliases]: #aliases-and-synonyms
 [term-attributes]: #aliases-and-synonyms
 
-Aliases can be added by what we call *term attributes*. Term attributes are provided in a [YAML] formatted HTML comment following a term's heading. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
+Aliases can be added by what we call *term attributes*. Term attributes are provided in a [YAML] formatted comment following a term's heading. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
 
 *glossary.md with a term attribute `aliases`:*
 ```md
 # Glossary
 
 ## Cat
-<!-- aliases: "Cats, Wildcat, House Cat" -->
+<!-- aliases: Cats, Wildcat, House Cat -->
 Cats are cute, ...dogs are loyal.
 ```
 
@@ -228,7 +228,7 @@ That's all you need to know for a quick start. Continue reading to learn about a
 *glossarify-md.conf.json*
 ```json
 "glossaries": [
-    { "file": "./glossary.md", "termHint": "★"},
+    { "file": "./glossary.md", "termHint": "↴"},
 ]
 ```
 
@@ -247,7 +247,7 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 ```json
 "glossaries": [
     { "file": "./glossary.md",  "termHint": "↴" },
-    { "file": "./requirements.md", "termHint": "★" }
+    { "file": "./requirements.md", "termHint": "☛" }
 ]
 ```
 
@@ -269,7 +269,7 @@ Add `sort` with `"asc"` (ascending) or `"desc"` (descending) to glossaries you w
 *glossarify-md.conf.json*
 ```json
 "glossaries": [
-    { "file":"./glossary.md", "termHint": "", "sort": "asc" }
+    { "file":"./glossary.md", "sort": "asc" }
 ]
 ```
 

@@ -3,11 +3,9 @@
 [doc-aliases]: ../README.md#aliases-and-synonyms
 [doc-vocabularies]: ./vocabulary-uris.md
 
-Term Attributes are passed in a comment following a term's heading. The comment text must adhere to a structured format (a.k.a. syntax).
+Term Attributes are passed in a comment following a term's heading. The comment text must adhere to YAML syntax.
 
-## General Syntax
-
-**Since v6.3.0** glossarify-md supports and recommends YAML syntax. Its easy to learn and a natural fit with Markdown. For example, this will be all you need to understand and use term attributes:
+**Since v6.3.0** glossarify-md supports YAML syntax. Its easy to learn and a natural fit with Markdown. For example, this will be all you need to understand and use term attributes:
 
 *my-glossary.md*
 ~~~md

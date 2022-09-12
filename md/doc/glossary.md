@@ -15,12 +15,12 @@ A term is denoted by a heading in a markdown file which is told glossarify-md to
 ## Term Attribute
 <!-- aliases: term attributes, term-attribute -->
 
-Term Attributes are passed in a comment following a term's heading. The comment must adhere to YAML syntax which is easy to learn, though.
+Term Attributes are passed in a comment following a term's heading. The comment must adhere to YAML syntax.
 
 ## Term Hint
 <!-- aliases: term hint, term-hint -->
 
-An optional (symbol-) character like for example `★` decorating a term link to distinguish it from a regular link.
+An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link.
 See glossarify-md configuration options for details.
 
 ## Vocabulary
@@ -41,7 +41,9 @@ onto the term definition in *document B*.
 A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page.
 
 ## URL fragment
-<!-- aliases: $2 The fragment is the part follwing the `#` in a URL.
+<!-- aliases: URL fragments -->
+
+The fragment is the part follwing the `#` in a URL.
 
 ## URI / URL
 <!-- aliases: URI, URL -->
