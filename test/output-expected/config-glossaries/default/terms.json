@@ -163,9 +163,9 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#dense-definition-with-alias",
-    "regex": "/(dense-definition-with-alias|dense-with-alia)/u",
+    "regex": "/(dense-definition-with-alias|dense-with-alias)/u",
     "aliases": [
-      "dense-with-alia"
+      "dense-with-alias"
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
