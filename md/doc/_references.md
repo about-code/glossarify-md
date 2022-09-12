@@ -11,7 +11,7 @@ Effort on providing a minimal set of standardized Markdown syntax.
 ## Dublin Core
 <!--
   uri: http://purl.org/dc/terms/
-  aliases: DC, DublinCore, dc:
+  aliases: 'DC, DublinCore, dc:'
 -->
 The Dublin Core Metadata Initiative.
 
@@ -78,10 +78,13 @@ Specification and Implementation of a Markdown Abstract Syntax Tree.
 A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing).
 
 ## NodeJS
-<!-- {"uri": "https://nodejs.org", "aliases": "nodejs, node.js" }-->
+<!-- 
+  uri: https://nodejs.org
+  aliases: nodejs, node.js
+-->
 
 ## npm
-<!-- {"uri": "https://npmjs.com"}-->
+<!-- uri: https://npmjs.com -->
 
 Node Package Manager. See npm.
 
@@ -105,12 +108,12 @@ Generates diagrams from text files written in the PlantUML syntax.
 *remark* is a parser and compiler project under the unified umbrella for *Markdown* text files in particular.
 
 ## remark-frontmatter
-<!--{"uri": "https://npmjs.com/package/remark-frontmatter" -->
+<!-- uri: https://npmjs.com/package/remark-frontmatter -->
 
 A remark syntax plug-in supporting pseudo-standard front-matter syntax.
 
 ## remark-shortcodes
-<!--{"uri": "https://www.npmjs.com/package/remark-shortcodes" -->
+<!-- uri: https://www.npmjs.com/package/remark-shortcodes -->
 
 A remark syntax plug-in supporting non-standard Hugo shortcodes syntax.
 
