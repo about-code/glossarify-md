@@ -323,7 +323,7 @@ The default value is:
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/generateFiles"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
 
@@ -383,7 +383,7 @@ Generate a file with a list of tables and where they can be found.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
@@ -486,7 +486,7 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFileExport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/glossaryFileExport"}
 ```
 
 
@@ -516,7 +516,7 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/glossaryFileImport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/glossaryFileImport"}
 ```
 
 
@@ -546,7 +546,7 @@ File path or URL to a custom JSON-LD context document. Expected to map attribute
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/indexFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
 
@@ -596,7 +596,7 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/indexing"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/indexing"}
 ```
 
 
@@ -632,7 +632,7 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/listOfItemsFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/listOfItemsFile"}
 ```
 
 
@@ -682,7 +682,7 @@ A regular expression which when matching against text will generate an entry in 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/i18n"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/i18n"}
 ```
 
 
@@ -801,7 +801,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/linking"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/linking"}
 ```
 
 
@@ -974,7 +974,7 @@ When 'true' replaces markdown inline links with numbered references to a link re
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/unified"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -1016,7 +1016,7 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v5.1.0/conf/v5/schema.json#/$defs/dev"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.0/conf/v5/schema.json#/$defs/dev"}
 ```
 
 

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [6.3.0](https://github.com/about-code/glossarify-md/compare/v6.2.1...v6.3.0) (2022-09-12)
+
+
+### Features
+
+* watch mode ([#250](https://github.com/about-code/glossarify-md/issues/250)) ([2816374](https://github.com/about-code/glossarify-md/commit/28163740ae7c8875205999b0589f7b87bfd5d2fe))
+* YAML term attribute syntax ([#251](https://github.com/about-code/glossarify-md/issues/251)) ([e148da4](https://github.com/about-code/glossarify-md/commit/e148da430b0d04a198bcce34b2d604f5d2597c5d))
+
+
+### Documentation Updates
+
+* Fix manual references ([3d3c826](https://github.com/about-code/glossarify-md/commit/3d3c8269c10d9af493d15970e95815f48d965578))
+* Use character included in new GitHub font ([f509714](https://github.com/about-code/glossarify-md/commit/f50971405bfba81bdc100793515e7943faf29417))
+* Use with Hugo ([#247](https://github.com/about-code/glossarify-md/issues/247)) ([796fa81](https://github.com/about-code/glossarify-md/commit/796fa8163263a877cad25e7df9e5a7b5ce0da1e0))
+
 ### [6.2.1](https://github.com/about-code/glossarify-md/compare/v6.2.0...v6.2.1) (2022-07-12)
 
 
