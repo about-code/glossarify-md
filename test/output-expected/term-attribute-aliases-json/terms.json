@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Alias substring behavior",
     "uri": "glossary.md#alias-substring-behavior",
     "valueHash8": "e8688195",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Aliases and Synonyms",
     "uri": "glossary.md#aliases-and-synonyms",
     "valueHash8": "6576f2d7",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "China",
     "uri": "glossary.md#china",
     "valueHash8": "ae54a5c0",
@@ -58,11 +57,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 5,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "FIELD",
     "uri": "glossary.md#field",
     "valueHash8": "552a5418",
@@ -79,11 +78,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Flower",
     "uri": "glossary.md#flower",
     "valueHash8": "338d1f80",
@@ -100,11 +99,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Friendship",
     "uri": "glossary.md#friendship",
     "valueHash8": "a31816a0",
@@ -121,11 +120,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Hopefully",
     "uri": "glossary.md#hopefully",
     "valueHash8": "efc57f4f",
@@ -142,11 +141,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Issue",
     "uri": "glossary.md#issue",
     "valueHash8": "642facf6",
@@ -163,11 +162,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "OUR",
     "uri": "glossary.md#our",
     "valueHash8": "1f14b053",
@@ -184,11 +183,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term 1",
     "uri": "glossary.md#term-1",
     "valueHash8": "f4b70a17",
@@ -207,11 +206,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term 2",
     "uri": "glossary.md#term-2",
     "valueHash8": "638f18ca",
@@ -230,11 +229,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term 3",
     "uri": "glossary.md#term-3",
     "valueHash8": "3b1ce349",
@@ -249,11 +248,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term 4",
     "uri": "glossary.md#term-4",
     "valueHash8": "5ec3b229",
@@ -272,11 +271,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 3,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term 5",
     "uri": "glossary.md#term-5",
     "valueHash8": "33434f11",
@@ -294,11 +293,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Unicode Support",
     "uri": "glossary.md#unicode-support",
     "valueHash8": "bde525aa",
@@ -313,6 +312,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

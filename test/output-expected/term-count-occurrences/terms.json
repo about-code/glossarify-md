@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "mention-one-once",
     "uri": "glossary.md#mention-one-once",
     "valueHash8": "4df2b5d5",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "mention-two-twice",
     "uri": "glossary.md#mention-two-twice",
     "valueHash8": "f16bec56",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Mentioned-in-document-once",
     "uri": "glossary.md#mentioned-in-document-once",
     "valueHash8": "a036883c",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Mentioned-in-document-twice",
     "uri": "glossary.md#mentioned-in-document-twice",
     "valueHash8": "d6bf35c6",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "One",
     "uri": "glossary.md#one",
     "valueHash8": "06c2cea1",
@@ -110,11 +109,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Two",
     "uri": "glossary.md#two",
     "valueHash8": "aada29da",
@@ -129,11 +128,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Zero",
     "uri": "glossary.md#zero",
     "valueHash8": "d7ed4ee1",
@@ -148,6 +147,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

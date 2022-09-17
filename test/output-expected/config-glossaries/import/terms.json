@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "https://my.org/vocabulary/#glossary",
     "valueHash8": "31d109d1",
@@ -17,11 +16,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Knowledge Organization Systems (KOS)",
     "uri": "https://my.org/vocabulary/#knowledge-organization-systems-kos",
     "valueHash8": "f1fefe90",
@@ -36,11 +35,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Taxonomy",
     "uri": "https://my.org/vocabulary/#taxonomy",
     "valueHash8": "30d10883",
@@ -55,11 +54,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Thesaurus",
     "uri": "https://my.org/vocabulary/#thesaurus",
     "valueHash8": "98bd1e01",
@@ -74,6 +73,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

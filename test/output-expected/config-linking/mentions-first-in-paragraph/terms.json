@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Ipsum",
     "uri": "glossary.md#ipsum",
     "valueHash8": "1034a44d",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Lorem",
     "uri": "glossary.md#lorem",
     "valueHash8": "db6ff2ff",
@@ -53,6 +52,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary.md#sha256-d0ae6bd",
     "valueHash8": "6132295f",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary.md#sha256-10ab94d",
     "valueHash8": "6132295f",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Document 1",
     "uri": "document-1.md#sha256-e97a2aa",
     "valueHash8": "f08a4cd1",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "document-1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Document 2",
     "uri": "document-2.md#sha256-fede59a",
     "valueHash8": "f41f3325",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "document-2.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "glossary.md#sha256-429925a",
     "valueHash8": "4cb8c916",
@@ -91,6 +90,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

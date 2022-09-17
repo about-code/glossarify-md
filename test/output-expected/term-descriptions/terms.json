@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Description Partly Formatted",
     "uri": "glossary.md#description-partly-formatted",
     "valueHash8": "54fe0721",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Formatted Term Definitions",
     "uri": "glossary.md#formatted-term-definitions",
     "valueHash8": "bc4374c3",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN full description is a blockquote",
     "uri": "glossary.md#given-full-description-is-a-blockquote",
     "valueHash8": "a8f71a97",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN long description has a link",
     "uri": "glossary.md#given-long-description-has-a-link",
     "valueHash8": "b64791c2",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN long description is a blockquote",
     "uri": "glossary.md#given-long-description-is-a-blockquote",
     "valueHash8": "558435d9",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description has a link",
     "uri": "glossary.md#given-short-description-has-a-link",
     "valueHash8": "cb1e14ac",
@@ -110,11 +109,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description is a blockquote",
     "uri": "glossary.md#given-short-description-is-a-blockquote",
     "valueHash8": "c90cacfd",
@@ -129,11 +128,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description is bold WITH fullstop excluded",
     "uri": "glossary.md#given-short-description-is-bold-with-fullstop-excluded",
     "valueHash8": "2a37979a",
@@ -148,11 +147,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description is bold WITH fullstop included",
     "uri": "glossary.md#given-short-description-is-bold-with-fullstop-included",
     "valueHash8": "f1c01d68",
@@ -167,11 +166,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description is italic WITH fullstop excluded",
     "uri": "glossary.md#given-short-description-is-italic-with-fullstop-excluded",
     "valueHash8": "cb74321f",
@@ -186,11 +185,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "GIVEN short description is italic WITH fullstop included",
     "uri": "glossary.md#given-short-description-is-italic-with-fullstop-included",
     "valueHash8": "56bdbcb5",
@@ -205,11 +204,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Single sentence across multiple lines",
     "uri": "glossary.md#single-sentence-across-multiple-lines",
     "valueHash8": "93103716",
@@ -224,11 +223,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Single sentence terminated by exclamation mark",
     "uri": "glossary.md#single-sentence-terminated-by-exclamation-mark",
     "valueHash8": "db8b4d6a",
@@ -243,11 +242,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Single sentence terminated by full stop",
     "uri": "glossary.md#single-sentence-terminated-by-full-stop",
     "valueHash8": "5bba307e",
@@ -262,11 +261,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Single sentence terminated by question mark",
     "uri": "glossary.md#single-sentence-terminated-by-question-mark",
     "valueHash8": "b562a5ec",
@@ -281,11 +280,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Testing Term Definition Extraction",
     "uri": "glossary.md#testing-term-definition-extraction",
     "valueHash8": "d19bc82e",
@@ -300,11 +299,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Two sentences across multiple lines terminated by full stop",
     "uri": "glossary.md#two-sentences-across-multiple-lines-terminated-by-full-stop",
     "valueHash8": "2705b83f",
@@ -319,11 +318,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Two sentences in a single line terminated by full stop",
     "uri": "glossary.md#two-sentences-in-a-single-line-terminated-by-full-stop",
     "valueHash8": "32bc9175",
@@ -338,11 +337,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
-    "type": "term-definition",
     "value": "Two sentences in multiple lines terminated by full stop",
     "uri": "glossary.md#two-sentences-in-multiple-lines-terminated-by-full-stop",
     "valueHash8": "e41211fc",
@@ -357,6 +356,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "ⓕ"
   }

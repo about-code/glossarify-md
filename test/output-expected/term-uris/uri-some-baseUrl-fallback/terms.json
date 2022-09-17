@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "https://base.url/vocab/glossary1.md#glossary-1",
     "valueHash8": "4cb8c916",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary 2",
     "uri": "https://glossary.uri/vocab/#glossary-2",
     "valueHash8": "296178d4",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary2.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Phrase1 with Spaces",
     "uri": "https://base.url/vocab/glossary1.md#phrase1-with-spaces",
     "valueHash8": "29d583c9",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Phrase2 with Spaces",
     "uri": "https://glossary.uri/vocab/#phrase2-with-spaces",
     "valueHash8": "27664729",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary2.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term1",
     "uri": "https://base.url/vocab/glossary1.md#term1",
     "valueHash8": "73edc568",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term2",
     "uri": "https://glossary.uri/vocab/#term2",
     "valueHash8": "0a61dcb4",
@@ -110,6 +109,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary2.md",
     "termHint": ""
   }
