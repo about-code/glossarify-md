@@ -94,7 +94,9 @@
     "standard-version": "^9.3.2"
   },
   "peerDependencies": {
-    "inquirer": "^8.2.0",
+    "inquirer": "^8.2.0"
+  },
+  "optionalDependencies": {
     "jsonld": "^5.2.0"
   },
   "remarkConfig": {
