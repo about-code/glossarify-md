@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Custom",
     "uri": "sub-1/sub-2/glossary#custom",
     "valueHash8": "90589c47",
@@ -14,11 +13,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary Without URI",
     "uri": "sub-1/sub-2/glossary#glossary-without-uri",
     "valueHash8": "fc496985",
@@ -33,11 +32,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term",
     "uri": "sub-1/sub-2/glossary#term",
     "valueHash8": "cf5f3091",
@@ -52,6 +51,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   }

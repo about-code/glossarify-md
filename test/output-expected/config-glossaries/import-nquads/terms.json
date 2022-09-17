@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Aliased",
     "uri": "https://my.org/vocabulary/#aliased",
     "valueHash8": "cc2aa1a8",
@@ -18,11 +17,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Custom-URI",
     "uri": "https://other.org/vocab/#custom-uri",
     "valueHash8": "d891b024",
@@ -37,11 +36,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Export to N-Quads",
     "uri": "https://my.org/vocabulary/#export-to-n-quads",
     "valueHash8": "c788f808",
@@ -56,11 +55,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Simple",
     "uri": "https://my.org/vocabulary/#simple",
     "valueHash8": "1fbb1e39",
@@ -75,6 +74,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

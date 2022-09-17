@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary A",
     "uri": "glossary-a.md#glossary-a",
     "valueHash8": "ecedfece",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary-a.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary B",
     "uri": "glossary-b.md#glossary-b",
     "valueHash8": "58f80f50",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary-b.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "In Glossary A and B",
     "uri": "glossary-a.md#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary-a.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "In Glossary A and B",
     "uri": "glossary-b.md#in-glossary-a-and-b",
     "valueHash8": "ddbddb78",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary-b.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Only in Glossary A",
     "uri": "glossary-a.md#only-in-glossary-a",
     "valueHash8": "3f37f840",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary-a.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Only in Glossary B",
     "uri": "glossary-b.md#only-in-glossary-b",
     "valueHash8": "f9f30195",
@@ -110,6 +109,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary-b.md",
     "termHint": ""
   }

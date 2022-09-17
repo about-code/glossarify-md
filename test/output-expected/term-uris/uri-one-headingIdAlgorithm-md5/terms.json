@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "https://my.org/vocab/#md5-d5ff4b3",
     "valueHash8": "31d109d1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   },
   {
-    "type": "term-definition",
     "value": "Phrase with Spaces",
     "uri": "https://my.org/vocab/#md5-1ae9385",
     "valueHash8": "30d29ade",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   },
   {
-    "type": "term-definition",
     "value": "Term",
     "uri": "https://my.org/vocab/#md5-cfb9fc3",
     "valueHash8": "cf5f3091",
@@ -53,6 +52,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   }

@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-1.md#md5-3e5743fb44c2774df0009ab82b8b8b78",
     "valueHash8": "6132295f",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary-1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Alpha",
     "uri": "glossary-2.md#md5-52b33922916044f7a4f1e82766f49c6b",
     "valueHash8": "6132295f",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "glossary-2.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Document 1",
     "uri": "document-1.md#md5-e44038a53026687f0555e9601e5d1b36",
     "valueHash8": "f08a4cd1",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "document-1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Document 2",
     "uri": "document-2.md#md5-13167a421906f4accda09aad255fb639",
     "valueHash8": "f41f3325",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "document-2.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary 1",
     "uri": "glossary-1.md#md5-a179febacc8e5e44796b030f5f95caf6",
     "valueHash8": "4cb8c916",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary-1.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary 2",
     "uri": "glossary-2.md#md5-d5ab3791aecd863744284b717a0196c6",
     "valueHash8": "296178d4",
@@ -110,6 +109,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary-2.md",
     "termHint": ""
   }

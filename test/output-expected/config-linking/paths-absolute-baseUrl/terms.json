@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "First-Level-Child",
     "uri": "http://localhost/sub-1/glossary.md#first-level-child",
     "valueHash8": "890f2eb1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "sub-1/glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "First-Level-Parent",
     "uri": "http://localhost/sub-1/glossary.md#first-level-parent",
     "valueHash8": "17a5382d",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "sub-1/glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Second-Level-Parent",
     "uri": "http://localhost/glossary.md#second-level-parent",
     "valueHash8": "3bb5a2d5",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Sibling",
     "uri": "http://localhost/glossary.md#sibling",
     "valueHash8": "ba3f6a55",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Testing Config Option 'linking'",
     "uri": "http://localhost/glossary.md#testing-config-option-linking",
     "valueHash8": "673553af",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Testing Config Option 'linking'",
     "uri": "http://localhost/sub-1/glossary.md#testing-config-option-linking",
     "valueHash8": "673553af",
@@ -110,6 +109,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "sub-1/glossary.md",
     "termHint": ""
   }

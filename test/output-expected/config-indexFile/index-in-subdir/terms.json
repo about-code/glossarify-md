@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term",
     "uri": "glossary.md#term",
     "valueHash8": "cf5f3091",
@@ -34,6 +33,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": ""
   }

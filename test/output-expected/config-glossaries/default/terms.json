@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "#Hashtag",
     "uri": "formatted-terms-glossary.md#hashtag",
     "valueHash8": "896623e6",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "äöüß Term begins with Umlauts",
     "uri": "unicode-glossary.md#äöüß-term-begins-with-umlauts",
     "valueHash8": "6522ba09",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Äquator",
     "uri": "unicode-glossary.md#äquator",
     "valueHash8": "e9641aed",
@@ -53,11 +52,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "bold-format",
     "uri": "formatted-terms-glossary.md#bold-format",
     "valueHash8": "84c03e70",
@@ -72,11 +71,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "China中国",
     "uri": "unicode-glossary.md#china中国",
     "valueHash8": "39dc6cc0",
@@ -91,11 +90,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Chi中国na",
     "uri": "unicode-glossary.md#chi中国na",
     "valueHash8": "bd46218a",
@@ -110,11 +109,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "codespan-format",
     "uri": "formatted-terms-glossary.md#codespan-format",
     "valueHash8": "31e07118",
@@ -129,11 +128,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "dense-definition",
     "uri": "formatted-terms-glossary.md#dense-definition",
     "valueHash8": "5108ecbd",
@@ -148,11 +147,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "dense-definition-with-alias",
     "uri": "formatted-terms-glossary.md#dense-definition-with-alias",
     "valueHash8": "009d6898",
@@ -169,11 +168,11 @@
     ],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Der Tod und das Mädchen",
     "uri": "unicode-glossary.md#der-tod-und-das-mädchen",
     "valueHash8": "71ec658f",
@@ -188,11 +187,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Faß",
     "uri": "unicode-glossary.md#faß",
     "valueHash8": "d77b79e8",
@@ -207,11 +206,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 3,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "Uppercase-glossary.md#glossary",
     "valueHash8": "31d109d1",
@@ -226,11 +225,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "Uppercase-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Glossary A",
     "uri": "shared-terms-glossary-a.md#glossary-a",
     "valueHash8": "ecedfece",
@@ -245,11 +244,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "shared-terms-glossary-a.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Glossary A.",
     "uri": "disjunct-terms-glossary-a.md#glossary-a",
     "valueHash8": "5384015c",
@@ -264,11 +263,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "disjunct-terms-glossary-a.md",
     "termHint": " (a/b)"
   },
   {
-    "type": "term-definition",
     "value": "Glossary B",
     "uri": "disjunct-terms-glossary-b.md#glossary-b",
     "valueHash8": "58f80f50",
@@ -283,11 +282,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "disjunct-terms-glossary-b.md",
     "termHint": " (a/b)"
   },
   {
-    "type": "term-definition",
     "value": "Glossary B",
     "uri": "shared-terms-glossary-b.md#glossary-b",
     "valueHash8": "58f80f50",
@@ -302,11 +301,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "shared-terms-glossary-b.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Glossary with markdown formatted term",
     "uri": "formatted-terms-glossary.md#glossary-with-markdown-formatted-term",
     "valueHash8": "1c3c8a93",
@@ -321,11 +320,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "In parts formatted",
     "uri": "formatted-terms-glossary.md#in-parts-formatted",
     "valueHash8": "8244485f",
@@ -340,11 +339,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "italic-format",
     "uri": "formatted-terms-glossary.md#italic-format",
     "valueHash8": "94502241",
@@ -359,11 +358,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "formatted-terms-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term contains äöüß Umlauts",
     "uri": "unicode-glossary.md#term-contains-äöüß-umlauts",
     "valueHash8": "72836284",
@@ -378,11 +377,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term Disjunct A",
     "uri": "disjunct-terms-glossary-a.md#term-disjunct-a",
     "valueHash8": "53fd6259",
@@ -397,11 +396,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "disjunct-terms-glossary-a.md",
     "termHint": " (a/b)"
   },
   {
-    "type": "term-definition",
     "value": "Term Disjunct B",
     "uri": "disjunct-terms-glossary-b.md#term-disjunct-b",
     "valueHash8": "66c3bc6f",
@@ -416,11 +415,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "disjunct-terms-glossary-b.md",
     "termHint": " (a/b)"
   },
   {
-    "type": "term-definition",
     "value": "Term ends with Umlauts äöüß",
     "uri": "unicode-glossary.md#term-ends-with-umlauts-äöüß",
     "valueHash8": "cf37c0af",
@@ -435,11 +434,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Term Shared A",
     "uri": "shared-terms-glossary-a.md#term-shared-a",
     "valueHash8": "91088f26",
@@ -454,11 +453,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "shared-terms-glossary-a.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Term Shared A",
     "uri": "shared-terms-glossary-b.md#term-shared-a",
     "valueHash8": "91088f26",
@@ -473,11 +472,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
+    "type": "term-definition",
     "file": "shared-terms-glossary-b.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Term Shared B",
     "uri": "shared-terms-glossary-a.md#term-shared-b",
     "valueHash8": "efa71da4",
@@ -492,11 +491,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "shared-terms-glossary-a.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Term Shared B",
     "uri": "shared-terms-glossary-b.md#term-shared-b",
     "valueHash8": "efa71da4",
@@ -511,11 +510,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
+    "type": "term-definition",
     "file": "shared-terms-glossary-b.md",
     "termHint": " (a&b)"
   },
   {
-    "type": "term-definition",
     "value": "Term-Hint-Prefix",
     "uri": "term-hint-prefix-glossary.md#term-hint-prefix",
     "valueHash8": "cc7167b9",
@@ -530,11 +529,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "term-hint-prefix-glossary.md",
     "termHint": "☛ ${term}"
   },
   {
-    "type": "term-definition",
     "value": "Term-Hint-Suffix",
     "uri": "term-hint-suffix-glossary.md#term-hint-suffix",
     "valueHash8": "584b7a58",
@@ -549,11 +548,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "term-hint-suffix-glossary.md",
     "termHint": "${term} ☚"
   },
   {
-    "type": "term-definition",
     "value": "Term-Hint-Suffix-Default",
     "uri": "term-hint-suffix-default-glossary.md#term-hint-suffix-default",
     "valueHash8": "1fa3de7e",
@@ -568,11 +567,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "term-hint-suffix-default-glossary.md",
     "termHint": "↴"
   },
   {
-    "type": "term-definition",
     "value": "Term-Hint-Wrapped",
     "uri": "term-hint-wrapped-glossary.md#term-hint-wrapped",
     "valueHash8": "8a77a7e1",
@@ -587,11 +586,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "term-hint-wrapped-glossary.md",
     "termHint": "☛ ${term} ☚"
   },
   {
-    "type": "term-definition",
     "value": "Testing config option 'glossaries.termHint'",
     "uri": "term-hint-wrapped-glossary.md#testing-config-option-glossariestermhint",
     "valueHash8": "ca304b73",
@@ -606,11 +605,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "term-hint-wrapped-glossary.md",
     "termHint": "☛ ${term} ☚"
   },
   {
-    "type": "term-definition",
     "value": "Testing option 'glossaries.termHint'",
     "uri": "term-hint-prefix-glossary.md#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
@@ -625,11 +624,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "term-hint-prefix-glossary.md",
     "termHint": "☛ ${term}"
   },
   {
-    "type": "term-definition",
     "value": "Testing option 'glossaries.termHint'",
     "uri": "term-hint-suffix-default-glossary.md#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
@@ -644,11 +643,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "term-hint-suffix-default-glossary.md",
     "termHint": "↴"
   },
   {
-    "type": "term-definition",
     "value": "Testing option 'glossaries.termHint'",
     "uri": "term-hint-suffix-glossary.md#testing-option-glossariestermhint",
     "valueHash8": "eb03dacd",
@@ -663,11 +662,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "term-hint-suffix-glossary.md",
     "termHint": "${term} ☚"
   },
   {
-    "type": "term-definition",
     "value": "Unicode Tests",
     "uri": "unicode-glossary.md#unicode-tests",
     "valueHash8": "c8aa6018",
@@ -682,11 +681,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "Uppercase",
     "uri": "Uppercase-glossary.md#uppercase",
     "valueHash8": "621e7b8e",
@@ -701,11 +700,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "Uppercase-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "zhōngguó",
     "uri": "unicode-glossary.md#zhōngguó",
     "valueHash8": "07df4f2f",
@@ -720,11 +719,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "中China国",
     "uri": "unicode-glossary.md#中china国",
     "valueHash8": "0bb8cf81",
@@ -739,11 +738,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "中国",
     "uri": "unicode-glossary.md#中国",
     "valueHash8": "c13dceab",
@@ -758,11 +757,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   },
   {
-    "type": "term-definition",
     "value": "中国China",
     "uri": "unicode-glossary.md#中国china",
     "valueHash8": "cfe5ada5",
@@ -777,6 +776,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "unicode-glossary.md",
     "termHint": ""
   }

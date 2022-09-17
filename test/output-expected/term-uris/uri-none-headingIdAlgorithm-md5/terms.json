@@ -1,6 +1,5 @@
 [
   {
-    "type": "term-definition",
     "value": "Glossary",
     "uri": "glossary.md#md5-355f756",
     "valueHash8": "31d109d1",
@@ -15,11 +14,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   },
   {
-    "type": "term-definition",
     "value": "Phrase with Spaces",
     "uri": "glossary.md#md5-08780c0",
     "valueHash8": "30d29ade",
@@ -34,11 +33,11 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   },
   {
-    "type": "term-definition",
     "value": "Term",
     "uri": "glossary.md#md5-7e9dfa8",
     "valueHash8": "cf5f3091",
@@ -53,6 +52,7 @@
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
+    "type": "term-definition",
     "file": "glossary.md",
     "termHint": "~"
   }
