@@ -257,6 +257,8 @@ function writeInitialConf(conf, argv) {
     if (argv.local) {
         // append version path segment from schema URI to local path
         conf.$schema = `./node_modules/glossarify-md/conf/${conf.$schema.split("/conf/")[1]}`;
+    } else {
+        conf.$schema = conf.$schema.replace(/\/v(\.?\d){3}\/conf/, `/v${version}/conf`);
     }
     // --more
     if (argv.more) {
