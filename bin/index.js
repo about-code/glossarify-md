@@ -8,7 +8,7 @@ import path from "node:path";
 import proc from "node:process";
 import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
 import { upgrade } from "../lib/cli/upgrade.js";
-import * as program from "../lib/main.js";
+import * as main from "../lib/main.js";
 import { watch } from "chokidar";
 
 const require_ = createRequire(import.meta.url);
@@ -86,11 +86,6 @@ const cli = {
     }
 };
 const argv = minimist(proc.argv.slice(2), cli);
-if (!argv.init) {
-    // banner only in absence of --init; Prevent writing banner to file for
-    // 'glossarify-md --init >> glossarify-md.conf.json'
-    console.log(banner);
-}
 
 // --logfile
 if (argv.logfile) {
@@ -115,13 +110,26 @@ if (argv.logfile) {
     console.info = logger;
 }
 
+// --init
+// Show banner only in absence of --init; Prevents writing banner 
+// to file for 'glossarify-md --init >> glossarify-md.conf.json'
+if (!argv.init) {
+    console.log(banner);
+}
+
 // --help (or no args at all)
 if (argv.help || proc.argv.length === 2) {
     printHelp(cli);
     proc.exit(0);
 }
 
-(async function() {
+/**
+ * 
+ * @param {*} argv key value map of CLI args
+ * @param {*} cwd current working directory
+ * @returns 
+ */
+async function configure(argv, cwd) {
 
     const confSchemaProps = confSchema.properties;
     const confDefault = Object
@@ -134,16 +142,17 @@ if (argv.help || proc.argv.length === 2) {
 
     // --config
     let confPath = argv.config || "";
-    let confDir = CWD;
-    let conf = {};
+    let confDir  = cwd;
+    let confUser = {};
     if (confPath) {
         try {
-            confPath = path.resolve(CWD, confPath);
-            confDir = path.dirname(confPath);
+            confPath = path.resolve(cwd, confPath);
+            confDir  = path.dirname(confPath);
             const confFile = await fs.readFile(confPath);
             const confData = JSON.parse(confFile);
+            // --noupgrade
             if (!argv.noupgrade) {
-                conf = await upgrade(confData, confPath, confDefault);
+                confUser = await upgrade(confData, confPath, confDefault);
             }
         } catch (e) {
             console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
@@ -151,69 +160,37 @@ if (argv.help || proc.argv.length === 2) {
         }
     }
 
-    try {
-        // --deep
-        if (argv.deep) {
-            try {
-                conf = merge(conf, JSON.parse(argv.deep.replace(/'/g, "\"")));
-            } catch (e) {
-                console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
-                proc.exit(1);
-            }
+    // --deep
+    if (argv.deep) {
+        try {
+            const confUserCli = JSON.parse(argv.deep.replace(/'/g, "\""));
+            confUser = merge(confUser, confUserCli);
+        } catch (e) {
+            console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
         }
-        // --shallow
-        if (argv.shallow) {
-            try {
-                conf = Object.assign(conf, JSON.parse(argv.shallow.replace(/'/g, "\"")));
-            } catch (e) {
-                console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
-                proc.exit(1);
-            }
-        }
-        // Merge custom conf with default conf
-        conf = merge(confDefault, conf, {
-            clone: false
-            , arrayMerge: (_default, curConf) => {
-                return curConf && curConf.length > 0 ? curConf : _default;
-            }
-        });
-
-        // --init
-        if (argv.init) {
-            writeInitialConf(conf, argv);
-            proc.exit(0);
-        }
-
-        // Resolve baseDir relative to confDir and outDir relative to baseDir
-        conf.baseDir = path.resolve(confDir, conf.baseDir);
-        conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
-        validateConf(conf);
-
-        // _/ Run \_____________________________________________________________________
-        // --watch
-        if (argv.watch) {
-            await program.run(conf);
-            // Do not drop 'outDir' while watching. Dropping it would cause some
-            // subsequent 3rd-party watchers on it to break (e.g. vuepress 1.x)
-            conf.outDirDropOld = false;
-            console.log(`Start watching ${conf.baseDir}...`);
-            const watcher = watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
-                .on("add",    path => { console.log(`${path} added.`);   program.run(conf); })
-                .on("change", path => { console.log(`${path} changed.`); program.run(conf); })
-                .on("unlink", path => { console.log(`${path} deleted.`); program.run(conf); });
-            const stopWatching = async () => {
-                await watcher.close();
-                console.log("Stopped watching.");
-            };
-            process.on("SIGINT", stopWatching);
-        } else {
-            await program.run(conf);
-        }
-    } catch (err) {
-        console.error(err);
-        proc.exit(1);
     }
-})();
+    // --shallow
+    if (argv.shallow) {
+        try {
+            const confUserCli = JSON.parse(argv.shallow.replace(/'/g, "\""));
+            confUser = Object.assign(confUser, confUserCli);
+        } catch (e) {
+            console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
+            proc.exit(1);
+        }
+    }
+
+    // Merge custom conf with default conf
+    const conf = merge(confDefault, confUser, {
+        clone: false
+        , arrayMerge: (_default, curConf) => {
+            return curConf && curConf.length > 0 ? curConf : _default;
+        }
+    });
+
+    return { confDir, conf };
+}
 
 
 // _/ Helpers \_________________________________________________________________
@@ -248,7 +225,7 @@ function validateConf(conf) {
 }
 
 // --init
-function writeInitialConf(conf, argv) {
+function writeConf(conf, argv) {
 
     let fileOpts = null;
     let replacer = null;
@@ -311,3 +288,45 @@ function printHelp(parameters) {
             .join("")
     );
 }
+
+// _/ Run \_____________________________________________________________________
+async function run() {
+
+    const { confDir, conf } = await configure(argv, CWD);
+
+    // --init
+    if (argv.init) {
+        writeConf(conf, argv);
+        proc.exit(0);
+    }
+
+    // Resolve baseDir relative to confDir and outDir relative to baseDir
+    conf.baseDir = path.resolve(confDir, conf.baseDir);
+    conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
+    validateConf(conf, argv);
+    try {
+        // --watch
+        if (argv.watch) {
+            await main.run(conf);
+            // Do not drop 'outDir' while watching. Dropping it would cause some
+            // subsequent 3rd-party watchers on it to break (e.g. vuepress 1.x)
+            conf.outDirDropOld = false;
+            console.log(`Start watching ${conf.baseDir}...`);
+            const watcher = watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
+                .on("add",    path => { console.log(`${path} added.`);   main.run(conf); })
+                .on("change", path => { console.log(`${path} changed.`); main.run(conf); })
+                .on("unlink", path => { console.log(`${path} deleted.`); main.run(conf); });
+            const stopWatching = async () => {
+                await watcher.close();
+                console.log("Stopped watching.");
+            };
+            process.on("SIGINT", stopWatching);
+        } else {
+            await main.run(conf);
+        }
+    } catch (err) {
+        console.error(err);
+        proc.exit(1);
+    }
+}
+run();
