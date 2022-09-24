@@ -111,7 +111,7 @@ if (argv.logfile) {
 }
 
 // --init
-// Show banner only in absence of --init; Prevents writing banner 
+// Show banner only in absence of --init; Prevents writing banner
 // to file for 'glossarify-md --init >> glossarify-md.conf.json'
 if (!argv.init) {
     console.log(banner);
@@ -124,10 +124,10 @@ if (argv.help || proc.argv.length === 2) {
 }
 
 /**
- * 
+ *
  * @param {*} argv key value map of CLI args
  * @param {*} cwd current working directory
- * @returns 
+ * @returns
  */
 async function configure(argv, cwd) {
 
