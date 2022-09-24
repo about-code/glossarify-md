@@ -1,9 +1,10 @@
 import fs from "fs-extra";
-import proc from "node:process";
+import { strictEqual } from "node:assert";
+
 const confProp = JSON.parse(fs.readFileSync("../conf/v5/schema.json")).properties;
 let errors = [];
 
-(function testNoDuplicateArgs() {
+(function schemaShouldNotHaveDuplicateArgs() {
     let counter = {};
     function count(name) {
         if (name) {
@@ -26,10 +27,6 @@ let errors = [];
             .filter(name => counter[name] > 1)
             .map(name => new Error(`Ambiguous config option --${name}`))
     );
-})();
 
-if (errors.length > 0) {
-    console.log(errors);
-    console.log("Tests failed with errors.");
-    proc.exit(1);
-}
+    strictEqual(errors.length, 0, "Ambiguous config options.");
+})();
