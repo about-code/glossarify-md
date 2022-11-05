@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.3.2](https://github.com/about-code/glossarify-md/compare/v6.3.1...v6.3.2) (2022-11-05)
+
+
+### Bug Fixes
+
+* Empty headings causing glossarify to exit with error ([#257](https://github.com/about-code/glossarify-md/issues/257)) ([670cdcf](https://github.com/about-code/glossarify-md/commit/670cdcf05a05a69ea5df8fea4797c94b8f667f12))
+* New config refers to outdated config release version ([#254](https://github.com/about-code/glossarify-md/issues/254)) ([4f2c377](https://github.com/about-code/glossarify-md/commit/4f2c37747a9d07294e79d74d74050e64aaa75dbd))
+
 ### [6.3.1](https://github.com/about-code/glossarify-md/compare/v6.3.0...v6.3.1) (2022-09-12)
 
 
