@@ -53,7 +53,7 @@
     "v:alpha": "standard-version --prerelease alpha",
     "v:beta": "standard-version --prerelease beta",
     "v:candidate": "standard-version --prerelease rc",
-    "v:release": "standard-version",
+    "v:release": "standard-version && cd ./test && npm run at test_s00__0*",
     "v:tag": "git add -u && git commit && git tag -D latest && git tag latest",
     "start": "node ./bin/index.js --config ./test/input/glossarify-md.conf.json"
   },
