@@ -30,9 +30,6 @@ jobs:
         echo "| caused by deps violating semantic versioning."
         mv package-lock.json package-lock-ignored.json
         npm install
-        cd ./test
-        npm install
-        cd ..
-        npm test
+        npm test --workspaces
       env:
         CI: true
