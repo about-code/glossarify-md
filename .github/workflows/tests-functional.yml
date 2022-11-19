@@ -27,9 +27,6 @@ jobs:
       run: |
         echo "| Testing against dependencies locked by package-lock.json"
         npm install
-        cd ./test
-        npm install
-        cd ..
-        npm test
+        npm test --workspaces
       env:
         CI: true
