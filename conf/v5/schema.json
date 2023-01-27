@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#"
-    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json"
+    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json"
     ,"type": "object"
     ,"title": "Configuration Schema"
     ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
