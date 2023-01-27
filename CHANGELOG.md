@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [6.3.3](https://github.com/about-code/glossarify-md/compare/v6.3.2...v6.3.3) (2023-01-27)
+
+
+### Bug Fixes
+
+* Type Error: Cannot convert Symbol to string ([#262](https://github.com/about-code/glossarify-md/issues/262)) ([6b4d984](https://github.com/about-code/glossarify-md/commit/6b4d984ec9f47d0543a73dc39773e144670a218e))
+
 ### [6.3.2](https://github.com/about-code/glossarify-md/compare/v6.3.1...v6.3.2) (2022-11-05)
 
 
