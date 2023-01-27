@@ -97,6 +97,7 @@
     "inquirer": "^8.2.0"
   },
   "optionalDependencies": {
+    "csv-parse": "^5.3.5",
     "jsonld": "^5.2.0"
   },
   "remarkConfig": {
