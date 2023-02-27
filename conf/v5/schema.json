@@ -121,7 +121,60 @@
         }
     }
     ,"$defs": {
-        "generateFiles": {
+        "csvDialect": {
+            "title": "CSV Dialect",
+            "description": "A CSV dialect descriptor. Similar to dialect in a https://frictionlessdata.io tabular data resource schema.",
+            "type": "object"
+            ,"required": [
+              "delimiter",
+              "doubleQuote"
+            ]
+            ,"properties": {
+              "delimiter": {
+                "title": "Delimiter"
+                ,"description": "A character sequence to use as the field separator."
+                ,"type": "string"
+                ,"default": ";"
+              }
+              ,"doubleQuote": {
+                "title": "Double Quote"
+                ,"description": "Specifies the handling of quotes inside fields. If Double Quote is set to true, two consecutive quotes must be interpreted as one."
+                ,"type": "boolean"
+                ,"default": true
+              }
+            }
+        }
+        ,"csvTableSchema": {
+            "title": "Table Schema"
+            ,"description": "A mapping of CSV table fields onto SKOS terms, e.g. \n\"fields\": [\n{ \"rdfType\": \"http://www.w3.org/2004/02/skos/core#Concept \"},\n{ \"rdfType\": \"http://www.w3.org/2004/02/skos/core#prefLabel \"}\n]. Aims to be compatible with https://frictionlessdata.io Tabular Data Resource schema."
+            ,"type": "object"
+            ,"properties": {
+                "fields": {
+                    "type": "array"
+                    ,"minItems": 1
+                    ,"items": {
+                        "$ref": "#/$defs/csvTableSchemaField"
+                    }
+                }
+            }
+            ,"required": ["fields"]
+        }
+        ,"csvTableSchemaField": {
+            "title": "Table Schema Field"
+            ,"type": "object"
+            ,"properties": {
+                "rdfType": {
+                    "$ref": "#/$defs/csvTableSchemaRdfType"
+                }
+            }
+        }
+        ,"csvTableSchemaRdfType": {
+            "type": "string"
+            ,"description": "The RDF type for this field."
+            ,"format": "uri"
+            ,"default": "http://www.w3.org/2004/02/skos/core#"
+        }
+        ,"generateFiles": {
             "type": "object"
             ,"properties": {
                 "indexFile": {
@@ -235,13 +288,35 @@
             "type": "object",
             "properties": {
                 "file": {
-                    "description": "The JSON file to import terms from."
+                    "description": "The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'."
                     ,"type": "string"
                     ,"default": ""
                 }
                 ,"context": {
-                    "description": "File path or URL to a custom JSON-LD context document. Expected to map attributes and type names of a custom import document format onto terms of the well-known W3C SKOS vocabulary."
+                    "description": "File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology."
                     ,"type": "string"
+                }
+            }
+            ,"if": {
+                "properties": {
+                    "file": {
+                        "type": "string",
+                        "pattern": "^(.*).csv$"
+                    }
+                }
+            }
+            ,"then": {
+                "properties": {
+                    "dialect": {
+                        "$ref": "#/$defs/csvDialect"
+                        ,"default": {
+                            "delimiter": ";"
+                            ,"doubleQuote": true
+                        }
+                    }
+                    ,"schema": {
+                        "$ref": "#/$defs/csvTableSchema"
+                    }
                 }
             }
             ,"required": ["file"]
