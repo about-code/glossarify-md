@@ -163,15 +163,15 @@
             "title": "Table Schema Field"
             ,"type": "object"
             ,"properties": {
-                "rdfType": {
-                    "$ref": "#/$defs/csvTableSchemaRdfType"
+                "name": {
+                    "$ref": "#/$defs/csvTableSchemaFieldName"
                 }
             }
         }
-        ,"csvTableSchemaRdfType": {
-            "type": "string"
-            ,"description": "The RDF type for this field."
-            ,"format": "uri"
+        ,"csvTableSchemaFieldName": {
+            "title": "Name"
+            ,"description": "A name for this field."
+            ,"type": "string"
             ,"default": "http://www.w3.org/2004/02/skos/core#"
         }
         ,"generateFiles": {
