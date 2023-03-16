@@ -1,8 +1,10 @@
 [doc-cli]: ./cli.md
+[doc-config]: ../conf/README.md
 [doc-dev-conceptual-layers]: ./conceptual-layers.md
 [doc-dev-node-types]: ../lib/ast/with/node-type.md
-[doc-config]: ../conf/README.md
+[doc-export]: ./export.md
 [doc-glossary]: ./glossary.md
+[doc-import]: ./import.md
 [doc-lists-on-github]: ./lists-on-github.md
 [doc-path-rewriting]: ./paths-and-urls.md
 [doc-plugins]: ./plugins.md
@@ -54,7 +56,8 @@ Publishing
 - [Paths and URLs*][doc-path-rewriting]
 
 Exporting and Importing Terms
-- [Basics](../README.md#structured-export-and-import)
+- [Export][doc-export]
+- [Import][doc-import]*
 - [URIs as Identifiers for Definitions of Meaning*][doc-vocabulary-uris]
 - [Interoperability with SKOS and JSON-LD*][doc-skos-interop]
 
