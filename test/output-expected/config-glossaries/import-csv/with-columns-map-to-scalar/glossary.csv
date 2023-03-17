@@ -1,0 +1,3 @@
+@id;skos:prefLabel;skos:altLabel;skos:definition;skos:definition
+#1;Imported Term 1;Alias 1.1, Alias 1.2, Alias 1.3;GIVEN multiple columns of skos:definition AND skos:definition maps to a term's definition AND a term definition is a scalar property THEN the value of none or the first or the last column SHOULD become the term's definition but not both.;Definition 1.2
+#2;Imported Term 2;Alias 2.1, Alias 2.2, Alias 2.3;GIVEN multiple columns of skos:definition AND skos:definition maps to a term's definition AND a term definition is a scalar property THEN the value of none or the first or the last column SHOULD become the term's definition but not both.;Definition 2.2
