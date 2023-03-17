@@ -307,7 +307,11 @@
             }
             ,"then": {
                 "properties": {
-                    "dialect": {
+                    "title": {
+                        "type": "string"
+                        ,"default": "Glossary"
+                    }
+                    ,"dialect": {
                         "$ref": "#/$defs/csvDialect"
                         ,"default": {
                             "delimiter": ";"
