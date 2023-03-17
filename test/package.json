@@ -185,6 +185,7 @@
     "test_p24__03": "node . --config ./input/config-glossaries/import-csv/with-whitespaces/glossarify-md.conf.json",
     "test_p24__04": "node . --config ./input/config-glossaries/import-csv/with-custom-delimiter/glossarify-md.conf.json",
     "test_p24__05": "node . --config ./input/config-glossaries/import-csv/with-columns-partly-not-skos/glossarify-md.conf.json",
+    "test_p24__06": "node . --config ./input/config-glossaries/import-csv/with-duplicate-columns/glossarify-md.conf.json",
     "postsuite": "npm run diff",
     "postat": "npm run diff",
     "diff": "git diff --minimal --color --no-index --ignore-cr-at-eol ./output-expected ./output-actual | node difftest.js",
