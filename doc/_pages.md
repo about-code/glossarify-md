@@ -33,6 +33,10 @@ aliases: importing, imports
 
 <!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md -->
 
+#### [glossarify-md](#glossarify-md)
+
+<!-- uri: https://github.com/about-code/glossarify-md -->
+
 #### [Lists on GitHub](#lists-on-github)
 
 <!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/lists-on-github.md -->

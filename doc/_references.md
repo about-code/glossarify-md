@@ -48,12 +48,6 @@ A library providing support for [slugs][5]. See [github-slugger 🌎][6].
 
 A file pattern matcher. See [glob 🌎][7].
 
-## [glossarify-md](#glossarify-md)
-
-<!-- uri: https://github.com/about-code/glossarify-md -->
-
-This project.
-
 ## [Hugo](#hugo)
 
 <!-- uri: https://gohugo.io -->
@@ -73,7 +67,7 @@ A static website renderer compiling an HTML website from Markdown files.
   aliases: JSON-LD Spec
 -->
 
-[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS 🌎][10] is one such vocabulary supported by [glossarify-md 🌎][11]
+[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS 🌎][10] is one such vocabulary supported by [glossarify-md][11]
 
 ## [jsonld Library](#jsonld-library)
 
@@ -193,7 +187,7 @@ With the Simple [Knowledge Organization System][21] ([SKOS 🌎][10]) the World 
 
 <!-- uri: https://unifiedjs.com -->
 
-*[unified 🌎][18]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][22]
+*[unified 🌎][18]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers][22] of [glossarify-md][11].
 
 ## [URN](#urn)
 
@@ -247,7 +241,7 @@ An easy to install local or on-premises [npm 🌎][14] registry.
 
 [10]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[11]: https://github.com/about-code/glossarify-md "This project."
+[11]: https://github.com/about-code/glossarify-md
 
 [12]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
 
@@ -269,7 +263,7 @@ An easy to install local or on-premises [npm 🌎][14] registry.
 
 [21]: ./glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[22]: ./conceptual-layers.md
+[22]: https://github.com/about-code/glossarify-md/tree/master/docconceptual-layers.md
 
 [23]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
 

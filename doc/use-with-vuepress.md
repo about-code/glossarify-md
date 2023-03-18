@@ -41,7 +41,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*[glossarify-md 🌎][1].conf.json*
+*[glossarify-md][1].conf.json*
 
 ```json
 {
@@ -58,7 +58,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure vuepress](#configure-vuepress)
 
-[glossarify-md 🌎][1] and [vuepress 🌎][2] need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "[slugs][3]" (see \[*why?*]\[Appendix])(#appendix).
+[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "[slugs][3]" (see \[*why?*]\[Appendix])(#appendix).
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -107,22 +107,22 @@ More information see [README.md][4].
 
 [vuepress 🌎][2] supports some [Markdown syntax][5] not covered by [CommonMark 🌎][6] or [GFM 🌎][7]. See the table below which syntax extension on the left requires [installing and configuring a plug-in][8] on the right. See the respective plug-in for its individual default values and [config options][9].
 
-| Markdown Syntax Extension             | [remark 🌎][10] plug-in required with [glossarify-md 🌎][1] |
-| ------------------------------------- | ----------------------------------------------------------- |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][11]                                    |
-| [Custom Containers][vp-cc]            | -                                                           |
-| [Table of Contents][vp-toc] `[[toc]]` | -                                                           |
-| [Emoji][vp-emoji]                     | -                                                           |
-| [Line Highlighting Codeblocks][vp-lh] | -                                                           |
-| [Import Code Snippets][vp-code]       | -                                                           |
+| Markdown Syntax Extension             | [remark 🌎][10] plug-in required with [glossarify-md][1] |
+| ------------------------------------- | -------------------------------------------------------- |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][11]                                 |
+| [Custom Containers][vp-cc]            | -                                                        |
+| [Table of Contents][vp-toc] `[[toc]]` | -                                                        |
+| [Emoji][vp-emoji]                     | -                                                        |
+| [Line Highlighting Codeblocks][vp-lh] | -                                                        |
+| [Import Code Snippets][vp-code]       | -                                                        |
 
 ## [Appendix](#appendix)
 
 *[Slugs][3]* are "*URL-friendly IDs*" used to identify a content section *within* a hypermedia document. They are not required to locate the document but needed to make a browser navigate to a particular content section *within* a document, for example `https://foo.com/#my-slug` identifies a content section using the Slug or *[URL fragment][12]* `#my-slug`.
 
-"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *[linkification][13]* [vuepress 🌎][2] and glossarify derive [slugs][3] from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27][14]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md 🌎][1]. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use \[github-slugger] standalone without glossarify-md, like so:
+"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *[linkification][13]* [vuepress 🌎][2] and glossarify derive [slugs][3] from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27][14]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md][1]. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use \[github-slugger] standalone without glossarify-md, like so:
 
-*Using [github-slugger 🌎][15] without [glossarify-md 🌎][1]*
+*Using [github-slugger 🌎][15] without [glossarify-md][1]*
 
 ```js
 const GitHubSlugger = require("github-slugger");
@@ -138,7 +138,7 @@ module.exports = {
 };
 ```
 
-[1]: https://github.com/about-code/glossarify-md "This project."
+[1]: https://github.com/about-code/glossarify-md
 
 [2]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
 

@@ -8,7 +8,7 @@ Syntax [Plug-ins][1] extend Markdown syntax itself, like [remark-frontmatter �
 
 ## [Tree-Plug-Ins](#tree-plug-ins)
 
-*Tree [plug-ins][1]* operate on a markdown syntax tree ([mdAST 🌎][4]). They are much easier to write and use [CommonMark 🌎][5] and [GFM 🌎][6] syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. [glossarify-md 🌎][7] operates on tree plug-ins, almost only (see page [Conceptual Layers][8]).
+*Tree [plug-ins][1]* operate on a markdown syntax tree ([mdAST 🌎][4]). They are much easier to write and use [CommonMark 🌎][5] and [GFM 🌎][6] syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. [glossarify-md][7] operates on tree plug-ins, almost only (see page [Conceptual Layers][8]).
 
 A tree plug-in is a function which returns a callback that when called get's passed an [mdAst 🌎][4] root node (`tree`):
 
@@ -63,11 +63,11 @@ In your `glossarify-md.conf.json` add:
 ```
 
 The plug-in path is rooted in `outDir` so you need to step out.
-That's it. Run [glossarify-md 🌎][7] again and check the links in Markdown files in your output directory.
+That's it. Run [glossarify-md][7] again and check the links in Markdown files in your output directory.
 
 ## [Creating a Plug-in Package (optional)](#creating-a-plug-in-package-optional)
 
-If you aim for publishing a plug-in, here's how you could set up a plug-in package project next to a [glossarify-md 🌎][7] project:
+If you aim for publishing a plug-in, here's how you could set up a plug-in package project next to a [glossarify-md][7] project:
 
 1.  Make a new directory *remark-my-plug-in* next to `${root}` and initialize it as an [npm 🌎][13] package.
 
@@ -88,15 +88,15 @@ If you aim for publishing a plug-in, here's how you could set up a plug-in packa
 
 5.  You're now set with your plug-in. This step will make your package usuable, *locally*, with symlinking (since it's not yet published to [npm 🌎][13]).
 
-    `cd` into your [glossarify-md 🌎][7] project and create another symlink onto the global symlink:
+    `cd` into your [glossarify-md][7] project and create another symlink onto the global symlink:
 
         npm link ../remark-my-plug-in
 
     > **Important:** Ths step needs to be repeated whenever you ran `npm install` in your glossarify-md project.
 
-    You now virtually "installed" your plug-in to your [glossarify-md 🌎][7] project similar as if you had run `npm install remark-my-plug-in` to fetch it from the [npm 🌎][13] registry. What's left is configuring glossarify-md to use it (see also previous section):
+    You now virtually "installed" your plug-in to your [glossarify-md][7] project similar as if you had run `npm install remark-my-plug-in` to fetch it from the [npm 🌎][13] registry. What's left is configuring glossarify-md to use it (see also previous section):
 
-6.  Add to your *[glossarify-md 🌎][7].conf.json*
+6.  Add to your *[glossarify-md][7].conf.json*
 
         unified: {
            "plugins": {
@@ -104,7 +104,7 @@ If you aim for publishing a plug-in, here's how you could set up a plug-in packa
            }
         }
 
-7.  Delete your `outDir`, run [glossarify-md 🌎][7] again and see whether link output changed.
+7.  Delete your `outDir`, run [glossarify-md][7] again and see whether link output changed.
 
 ### [Publishing a Plug-in Package](#publishing-a-plug-in-package)
 
@@ -130,7 +130,7 @@ More see official [NPM 🌎][13] docs on [publishing your node package][14].
 
 [6]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[7]: https://github.com/about-code/glossarify-md "This project."
+[7]: https://github.com/about-code/glossarify-md
 
 [8]: https://github.com/about-code/glossarify-md/tree/master/docconceptual-layers.md
 

@@ -27,6 +27,9 @@ aliases: importing, imports
 #### Glossary
 <!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md -->
 
+#### glossarify-md
+<!-- uri: https://github.com/about-code/glossarify-md -->
+
 #### Lists on GitHub
 <!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/lists-on-github.md -->
 

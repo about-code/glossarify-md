@@ -1,8 +1,6 @@
 # [Glossary](#glossary)
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
-
-This is a [glossary][1] of terms helpful when working with [glossarify-md] or reading its docs. It also serves as an example and is processed by *[glossarify-md 🌎][2]* itself using the [glossarify-md.conf.json][3] [configuration][4] at the root of this repo.
+This is a [glossary][1] of terms helpful when working with [glossarify-md][2] or reading its docs. It also serves as an example and is processed by glossarify-md itself using the [glossarify-md.conf.json][3] [configuration][4] at the root of this repo.
 
 ## [Alias](#alias)
 
@@ -23,7 +21,7 @@ Terms are headings in a markdown file which has been configured to be a *[glossa
 <!-- aliases: term hint, term-hint -->
 
 An optional (symbol-) character like for example `↴` decorating a [term][5] link to distinguish it from a regular link.
-See [glossarify-md 🌎][2] [configuration][4] options for details.
+See [glossarify-md][2] [configuration][4] options for details.
 
 ## [Vocabulary](#vocabulary)
 
@@ -67,7 +65,7 @@ Glossaries are considered a kind of *Knowledge Organisation System ([KOS][10])* 
 
 [1]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
 
-[2]: https://github.com/about-code/glossarify-md "This project."
+[2]: https://github.com/about-code/glossarify-md
 
 [3]: ../glossarify-md.conf.json
 

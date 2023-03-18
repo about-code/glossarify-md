@@ -14,7 +14,7 @@
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*[glossarify-md 🌎][1].conf.json*
+*[glossarify-md][1].conf.json*
 
 ```json
 {
@@ -55,6 +55,6 @@ After having set these options, files can be merged, e.g. with
 
     pandoc --from=markdown -o out.html ./docs-glossarified/**/*.md
 
-[1]: https://github.com/about-code/glossarify-md "This project."
+[1]: https://github.com/about-code/glossarify-md
 
 [2]: https://pandoc.org "See pandoc."

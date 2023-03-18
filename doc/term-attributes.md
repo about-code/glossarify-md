@@ -28,7 +28,7 @@ Expects a comma-separated string or a list of strings which provide synonyms or 
 
 ### [`uri`](#uri)
 
-A unique identifier for the [term][2] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md 🌎][4] [configuration][5] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][6]. See also *[URIs as Identifiers for Definitions of Meaning][7]*.
+A unique identifier for the [term][2] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md][4] [configuration][5] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][6]. See also *[URIs as Identifiers for Definitions of Meaning][7]*.
 
 # [Addendum](#addendum)
 
@@ -111,7 +111,7 @@ If you've been using JSON [term][2] attribute syntax and want to switch to YAML 
 
 [3]: https://github.com/about-code/glossarify-md/tree/master/README.md
 
-[4]: https://github.com/about-code/glossarify-md "This project."
+[4]: https://github.com/about-code/glossarify-md
 
 [5]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
 

@@ -35,10 +35,6 @@ A library providing support for slugs. See github-slugger.
 <!-- uri: https://github.com/isaacs/node-glob#glob-primer -->
 A file pattern matcher. See glob.
 
-## glossarify-md
-<!-- uri: https://github.com/about-code/glossarify-md -->
-This project.
-
 ## Hugo
 <!-- uri: https://gohugo.io -->
 A static website renderer compiling an HTML website from Markdown files.
@@ -151,7 +147,7 @@ With the Simple Knowledge Organization System (SKOS) the World Wide Web Consorti
 ## unified
 <!-- uri: https://unifiedjs.com -->
 
-*unified* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md](./conceptual-layers.md)
+*unified* is an umbrella project around *text file processing in general*. See also Conceptual Layers of glossarify-md.
 
 ## URN
 <!-- uri: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml -->

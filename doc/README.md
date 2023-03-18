@@ -90,7 +90,7 @@ Dealing with Non-Standard Markdown Syntax
 
 [Glossary][4]
 
-*   [Glossary\*][doc-glossary] (Terms of [glossarify-md 🌎][21])
+*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][21])
 
 Developer Resources
 
@@ -142,4 +142,4 @@ Known Issues
 
 [20]: https://github.com/about-code/glossarify-md/tree/master/doc/import.md
 
-[21]: https://github.com/about-code/glossarify-md "This project."
+[21]: https://github.com/about-code/glossarify-md

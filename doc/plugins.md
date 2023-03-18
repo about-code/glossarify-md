@@ -2,7 +2,7 @@
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to install [remark-frontmatter 🌎][1], a [remark 🌎][2] plug-in to make [glossarify-md 🌎][3] handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][4] for when you need a plug-in).
+The following example demonstrates how to install [remark-frontmatter 🌎][1], a [remark 🌎][2] plug-in to make [glossarify-md][3] handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][4] for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -69,13 +69,13 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter 
 > }
 > ```
 
-If you would like to learn more about how *[unified 🌎][8]* and *[remark 🌎][2]* relate to [glossarify-md 🌎][3], read [Conceptual Layers][9]
+If you would like to learn more about how *[unified 🌎][8]* and *[remark 🌎][2]* relate to [glossarify-md][3], read [Conceptual Layers][9]
 
 [1]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
 
 [2]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
 
-[3]: https://github.com/about-code/glossarify-md "This project."
+[3]: https://github.com/about-code/glossarify-md
 
 [4]: https://github.com/about-code/glossarify-md/tree/master/doc/markdown-syntax-extensions.md
 
