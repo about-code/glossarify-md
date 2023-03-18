@@ -24,8 +24,10 @@ uri: https://github.com/about-code/glossarify-md/tree/master/doc/import.md
 aliases: importing, imports
 -->
 
+<!-- Intentionally...
 #### Glossary
-<!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md -->
+uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
+-->
 
 #### glossarify-md
 <!-- uri: https://github.com/about-code/glossarify-md -->

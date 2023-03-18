@@ -29,9 +29,10 @@ uri: https://github.com/about-code/glossarify-md/tree/master/doc/import.md
 aliases: importing, imports
 -->
 
-#### [Glossary](#glossary)
-
-<!-- uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md -->
+<!-- Intentionally...
+#### Glossary
+uri: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
+-->
 
 #### [glossarify-md](#glossarify-md)
 

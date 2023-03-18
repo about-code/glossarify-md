@@ -13,7 +13,7 @@ A way to use [glossarify-md][1] for citing and linking is to have a file, e.g. `
 C. E. Shannon, "A mathematical theory of communication," in The Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.
 ```
 
-...and configure it as a [glossary][2]:
+...and configure it as a glossary:
 
 ```json
 {
@@ -26,35 +26,4 @@ C. E. Shannon, "A mathematical theory of communication," in The Bell System Tech
 
 Use `linkUris: true` to make [glossarify-md][1] link occurrences of [Shannon1948] to the web using its `uri`. With `linkUris: false` (default) it links to `references.md`.
 
-## [More Examples](#more-examples)
-
-*Example: Linking mentions of [Shannon1948] by aliasing the works title:*
-
-```md
-# References
-
-#### C. E. Shannon, "A mathematical theory of communication,"
-<!--
-aliases: Shannon1948
-uri: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
--->
-
-in The Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.
-```
-
-*Example (rendered):*
-
-# [References](#references)
-
-#### [C. E. Shannon, "A mathematical theory of communication,"](#c-e-shannon-a-mathematical-theory-of-communication)
-
-<!--
-aliases: Shannon1948
-uri: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
--->
-
-in The Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.
-
 [1]: https://github.com/about-code/glossarify-md
-
-[2]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
