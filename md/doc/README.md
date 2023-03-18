@@ -50,14 +50,14 @@ Book Writing
   - [Lists from Regular Expressions](../README.md#lists-from-regular-expressions)
 
 Publishing
+- [Paths and URLs*][doc-path-rewriting]
 - [Using glossarify-md with vuepress*][doc-with-vuepress]
 - [Using glossarify-md with pandoc*][doc-with-pandoc]
 - [Using glossarify-md with Hugo*][doc-with-hugo]
-- [Paths and URLs*][doc-path-rewriting]
 
 Exporting and Importing Terms
 - [Export][doc-export]
-- [Import][doc-import]*
+- [Import][doc-import]
 - [URIs as Identifiers for Definitions of Meaning*][doc-vocabulary-uris]
 - [Interoperability with SKOS and JSON-LD*][doc-skos-interop]
 

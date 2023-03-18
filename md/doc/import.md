@@ -9,12 +9,7 @@
 #123;IGNORED-COLUMN;My Term;Alternative Term;This Term stands for Foo
 ~~~
 
-Without a header row a mapping of columns instructs glossarify-md where to find the data to import:
-
-- `@id` - the ID column
-- http://www.w3.org/2004/02/skos/core#prefLabel - the term
-- http://www.w3.org/2004/02/skos/core#altLabel - an alternative label
-- http://www.w3.org/2004/02/skos/core#definition - the term definition
+Without a header row embeded into the CSV file a `schema` mapping instructs glossarify-md on how to interprete each column (resp. `field`):
 
 ~~~json
 {
@@ -41,23 +36,25 @@ Without a header row a mapping of columns instructs glossarify-md where to find 
 }
 ~~~
 
-A `schema` definition can be omitted when a CSV file provides the required headers (empty lines will be ignored):
+- Use `@id` for the ID column
+- Use http://www.w3.org/2004/02/skos/core#prefLabel for the term column
+- Use http://www.w3.org/2004/02/skos/core#altLabel for one or more alternative term columns (aliases)
+- Use http://www.w3.org/2004/02/skos/core#definition for the term definition column
 
-*terms.csv with a headings row*
+A `schema` mapping can be omitted when the CSV file embeds these as header labels in the first row:
+
+*Example: CSV with a header row*
 ~~~csv
 @id;http://www.w3.org/2004/02/skos/core#prefLabel;http://www.w3.org/2004/02/skos/core#altLabel;http://www.w3.org/2004/02/skos/core#definition
 
 #123;My Term;Alternative Term;This Term stands for Foo
 ~~~
 
-### Importing from JSON (SKOS RDF/JSON-LD)
-
-*Example: Importing JSON exported by glossarify-md (optional: `uri`)*
+### Importing from JSON (glossarify-md format)
 
 ~~~json
 {
   "glossaries": [{
-    "uri": "http://your-domain.com/vocab/#",
     "file": "./glossary.md",
     "import": {
       "file": "./terms.json"
@@ -66,18 +63,17 @@ A `schema` definition can be omitted when a CSV file provides the required heade
 }
 ~~~
 
+### Importing from (arbitrary) JSON
 
+With some basic understanding about JSON-LD you may find a way to import your own JSON document format. All it takes is to add some `@context` metadata for mapping the document's JSON attribute names and types onto SKOS URIs understood by glossarify-md. Then glossarify-md's importer is able to "understand your data in terms of SKOS". See Interoperability with SKOS and JSON-LD for an in-depth example.
 
-**Note:** Almost any JSON document can be turned into importable SKOS RDF/JSON-LD by providing `@context` metadata for mapping the JSON format's attribute names onto SKOS URIs supported by glossarify-md. See Interoperability with SKOS and JSON-LD for an in-depth example.
+### Importing terms from RDF (JSON-LD / N-Quads)
 
-### SKOS RDF/N-Quads
-
-N-Triples or N-Quads are a textual serialization of RDF Data. Assuming *terms.nq* is a serialization of SKOS RDF data then you should be able to import it with:
+If you have described a vocabulary using SKOS and stored it in some RDF linked data format then you might equipped with linked data tooling that is able to serialize/export/convert your linked data vocabulary to N-Triples, N-Quads or JSON-LD. When serialized to JSON-LD it should be importable as easy as importing from glossarify-md's own JSON export (see above). Importing N-Triples/N-Quads requires the file name to end with `.nq`:
 
 ~~~json
 {
   "glossaries": [{
-    "uri": "http://your-domain.com/vocab/#",
     "file": "./glossary.md",
     "import": {
       "file": "./terms.nq"
