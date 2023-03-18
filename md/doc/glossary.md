@@ -10,7 +10,7 @@ An alternative term or spelling for a term.
 
 ## Term
 
-A term is denoted by a heading in a markdown file which is told glossarify-md to be a *glossary file*.
+Terms are headings in a markdown file which has been configured to be a *glossary file*.
 
 ## Term Attribute
 <!-- aliases: term attributes, term-attribute -->

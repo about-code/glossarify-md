@@ -2,7 +2,7 @@
 
 ### [Importing from CSV](#importing-from-csv)
 
-**Since v6.4.0** [glossarify-md][1] can [import][2] terms from CSV data. CSV is a textual serialization for tabular data and supported by most spreadsheed programs. Columns in CSV are separated by a `delimiter`, e.g. `;`:
+**Since v6.4.0** [glossarify-md🌎][1] can [import][2] terms from CSV data. CSV is a textual serialization for tabular data and supported by most spreadsheed programs. Columns in CSV are separated by a `delimiter`, e.g. `;`:
 
 *Example: CSV formatted text without a header row*
 
@@ -10,12 +10,12 @@
 #123;IGNORED-COLUMN;My Term;Alternative Term;This Term stands for Foo
 ```
 
-Without a header row a mapping of columns instructs [glossarify-md][1] where to find the data to [import][2]:
+Without a header row a mapping of columns instructs [glossarify-md🌎][1] where to find the data to [import][2]:
 
 *   `@id` - the ID column
-*   [http://www.w3.org/2004/02/skos/core#prefLabel][3] - the [term★][4]
+*   [http://www.w3.org/2004/02/skos/core#prefLabel][3] - the [term][4]
 *   [http://www.w3.org/2004/02/skos/core#altLabel][5] - an alternative label
-*   [http://www.w3.org/2004/02/skos/core#definition][6] - the [term★][4] definition
+*   [http://www.w3.org/2004/02/skos/core#definition][6] - the [term][4] definition
 
 ```json
 {
@@ -54,7 +54,7 @@ A `schema` definition can be omitted when a CSV file provides the required heade
 
 ### [Importing from JSON (SKOS RDF/JSON-LD)](#importing-from-json-skos-rdfjson-ld)
 
-*Example: [Importing][2] JSON exported by [glossarify-md][1] (optional: `uri`)*
+*Example: [Importing][2] JSON exported by [glossarify-md🌎][1] (optional: `uri`)*
 
 ```json
 {
@@ -68,11 +68,11 @@ A `schema` definition can be omitted when a CSV file provides the required heade
 }
 ```
 
-**Note:** Almost any JSON document can be turned into importable [SKOS][7] RDF/[JSON-LD][8] by providing `@context` metadata for mapping the JSON format's attribute names onto SKOS URIs supported by [glossarify-md][1]. See [Interoperability with SKOS and JSON-LD][9] for an in-depth example.
+**Note:** Almost any JSON document can be turned into importable [SKOS🌎][7] RDF/[JSON-LD🌎][8] by providing `@context` metadata for mapping the JSON format's attribute names onto SKOS URIs supported by [glossarify-md🌎][1]. See [Interoperability with SKOS and JSON-LD][9] for an in-depth example.
 
 ### [SKOS RDF/N-Quads](#skos-rdfn-quads)
 
-N-Triples or N-Quads are a textual serialization of RDF Data. Assuming *terms.nq* is a serialization of [SKOS][7] RDF data then you should be able to [import][2] it with:
+N-Triples or N-Quads are a textual serialization of RDF Data. Assuming *terms.nq* is a serialization of [SKOS🌎][7] RDF data then you should be able to [import][2] it with:
 
 ```json
 {
@@ -92,7 +92,7 @@ N-Triples or N-Quads are a textual serialization of RDF Data. Assuming *terms.nq
 
 [3]: http://www.w3.org/2004/02/skos/core#prefLabel
 
-[4]: ./glossary.md#term "A term is denoted by a heading in a markdown file which is told glossarify-md to be a glossary file."
+[4]: ./glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
 
 [5]: http://www.w3.org/2004/02/skos/core#altLabel
 

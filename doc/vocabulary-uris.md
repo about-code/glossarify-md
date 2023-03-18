@@ -6,20 +6,20 @@
 
 [doc-skos]: ./skos-interop.md
 
-Consider a [term★][1] *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
+Consider a [term][1] *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
 
-*A computer program* can't understand a natural language description of a [term★][1]'s meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
+*A computer program* can't understand a natural language description of a [term][1]'s meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
 
 *   `https://example.com/glossary/medicine/#skin`
 *   `https://example.com/glossary/computer-science/#skin`.
 
 a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning [glossary][2] terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets.
 
-**Since v6.0.0** [glossarify-md][3] supports [exporting and importing][doc-import] glossaries (see also [Interoperability with SKOS and JSON-LD][doc-skos]).
+**Since v6.0.0** [glossarify-md🌎][3] supports [exporting and importing][doc-import] glossaries (see also [Interoperability with SKOS and JSON-LD][doc-skos]).
 
 ## [Vocabulary URIs and Term URIs](#vocabulary-uris-and-term-uris)
 
-`glossaries` entries can be augmented with a `uri` [config option][4] which assigns a [glossary][2] a so-called *[vocabulary★][5] [URI★][6]*. Then on [exporting][7] *[term★][1] URIs* can be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how [glossarify-md][3] generates heading IDs).
+`glossaries` entries can be augmented with a `uri` [config option][4] which assigns a [glossary][2] a so-called *[vocabulary][5] [URI][6]*. Then on [exporting][7] *[term][1] URIs* can be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how [glossarify-md🌎][3] generates heading IDs).
 
 ```json
 {
@@ -33,10 +33,10 @@ a computer can operate on symbols equivalent to *some meaning* without having to
 }
 ```
 
-If you need more control about a [term★][1]'s Term [URI★][6], then there are two switches you can tweak:
+If you need more control about a [term][1]'s Term [URI][6], then there are two switches you can tweak:
 
 *   providing a custom heading ID using pandoc-style `{#headingId}`
-*   providing a `uri` [term★][1] attribute
+*   providing a `uri` [term][1] attribute
 
 *Custom heading ID*
 
@@ -48,7 +48,7 @@ If you need more control about a [term★][1]'s Term [URI★][6], then there are
 Term with an individual URI.
 ```
 
-*`uri` [term★][1] attribute*:
+*`uri` [term][1] attribute*:
 
 ```md
 # Glossary
@@ -63,13 +63,13 @@ Term with an individual URI.
 
 ### [Resolvability](#resolvability)
 
-URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term★][1]'s [URI★][6] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md][3] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal [glossary][2]. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
+URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term][1]'s [URI][6] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md🌎][3] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal [glossary][2]. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
 
 ### [Authority](#authority)
 
-URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an [URI★][6] and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition.
+URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an [URI][6] and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition.
 
-So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an [URI★][6]. So particularly when publishing a [vocabulary★][5] it is usually not a good idea to use someone else's domain.
+So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an [URI][6]. So particularly when publishing a [vocabulary][5] it is usually not a good idea to use someone else's domain.
 
 <!--
 Uniform Resource Names (URNs) may be an alternative to URIs. They do not depend on the Domain Name System as a registry but on an IANA registry of *URN namespaces*:
@@ -87,7 +87,7 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 ~~~
 -->
 
-[1]: ./glossary.md#term "A term is denoted by a heading in a markdown file which is told glossarify-md to be a glossary file."
+[1]: ./glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
 
 [2]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
 

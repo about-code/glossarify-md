@@ -4,11 +4,11 @@
   "outDir": "../../doc",
   "glossaries": [
     {
-      "file": "./glossary.md",
-      "termHint": "★"
+      "file": "./glossary.md"
     },
     {
       "file": "./_references.md",
+      "termHint": "🌎",
       "linkUris": true
     },
     {

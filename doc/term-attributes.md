@@ -1,40 +1,38 @@
 # [Term Attributes](#term-attributes)
 
-[Term Attributes][1] are passed in a comment following a [term★][2]'s heading. The comment text must adhere to YAML syntax.
-
-**Since v6.3.0** [glossarify-md][3] supports YAML syntax. Its easy to learn and a natural fit with Markdown. For example, this will be all you need to understand and use [term attributes][1]:
-
-*my-glossary.md*
+[Term Attributes][1] provide additional metadata for a [term][2]. They are passed in a comment following a term heading:
 
 ```md
 # Term Heading
 <!--
-  attr-key: This is an attribute's value
-  list-attr-key:
-  - This is a list attribute's list value 0
-  - This is a list attribute's list value 1
-  - etc.
+key1: value
+key2:
+- list value 0
+- list value 1
 -->
-...
+
+Term definition here.
 ```
 
-> **ⓘ Note:** YAML syntax is *case-sensitive* and  like Markdown it is *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
+**Since v6.3.0** [term attributes][1] use YAML syntax. The example shows two [term][2] attributes `key1` and `key2` where `key2` has multiple attribute values.
 
-## [Attributes](#attributes)
+> **ⓘ Note:** YAML syntax is *case-sensitive* and *sensitive to tabs and whitespaces* (like Markdown). As a rule of thumb: our own term attributes will be all lowercase.
+
+## [Supported Term Attributes](#supported-term-attributes)
 
 ### [`aliases`](#aliases)
 
-Comma-separated string or a string array listing alternative spellings that should be linked with a [term★][2] definition when found in text. More see [README.md][4]
+Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a [term][2] that should be linked with a term definition when found in text. More see [README.md][3]
 
-> **ⓘ Note:** You may find that an uppercase `Aliases: ` term attribute works as well. This is going to be the only attribute for which an uppercase name remains supported *for backwards compatibility*.
+> **ⓘ Note:** Uppercase `Aliases` remains to be supported for backwards compatibility.
 
 ### [`uri`](#uri)
 
-An identifier for the [term★][2]'s *meaning*. Can be used to link term occurrences to an authoritative definition on the web instead of linking term occurrences to a markdown book's [glossary][5]. Web linking requires setting `linkUris: true` for a `glossaries` item in a [glossarify-md][3] [configuration][6] file. More see page *[URIs as Identifiers for Definitions of Meaning][7]*
+A unique identifier for the [term][2] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md🌎][4] [configuration][5] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][6]. See also *[URIs as Identifiers for Definitions of Meaning][7]*.
 
 # [Addendum](#addendum)
 
-There's going to be continued support for JSON [term★][2] attribute syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets which makes it easier to run into syntax errors:
+There's going to be continued support for JSON [term][2] attribute syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets which makes it easier to run into syntax errors:
 
 ```md
 # Term Heading
@@ -48,7 +46,7 @@ There's going to be continued support for JSON [term★][2] attribute syntax, fo
 }-->
 ```
 
-If you've been using JSON [term★][2] attribute syntax and want to switch to YAML syntax you might find these regular expressions helpful to use with your editor's Search/Replace assistant:
+If you've been using JSON [term][2] attribute syntax and want to switch to YAML syntax you might find these regular expressions helpful to use with your editor's Search/Replace assistant:
 
 ### [Example (Single term attribute)](#example-single-term-attribute)
 
@@ -109,14 +107,14 @@ If you've been using JSON [term★][2] attribute syntax and want to switch to YA
 
 [1]: https://github.com/about-code/glossarify-md/tree/master/doc/term-attributes.md
 
-[2]: ./glossary.md#term "A term is denoted by a heading in a markdown file which is told glossarify-md to be a glossary file."
+[2]: ./glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
 
-[3]: https://github.com/about-code/glossarify-md "This project."
+[3]: https://github.com/about-code/glossarify-md/tree/master/README.md
 
-[4]: https://github.com/about-code/glossarify-md/tree/master/README.md
+[4]: https://github.com/about-code/glossarify-md "This project."
 
-[5]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
+[5]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
 
-[6]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
+[6]: ./glossary.md#term-attribute "Term Attributes are passed in a comment following a term's heading."
 
 [7]: https://github.com/about-code/glossarify-md/tree/master/doc/vocabulary-uris.md
