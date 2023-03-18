@@ -1,16 +1,8 @@
 # Installing and Configuring Plug-ins
 
-[doc-conceptual-layers]: ./conceptual-layers.md
-[doc-plugins-dev]: ./plugins-dev.md
-[doc-mdext-syntax]: ./markdown-syntax-extensions.md
-[mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
-[remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
-[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
-[remark-plugin]: https://github.com/remarkjs/awesome-remark
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
-[verdaccio]: https://npmjs.com/package/verdaccio
 
-The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make glossarify-md handle non-standard *Frontmatter* syntax, correctly ([When do I need a plug-in?][doc-mdext-syntax]).
+The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard *Frontmatter* syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -26,7 +18,7 @@ ${root}
    '- .gitignore
 ~~~
 
-**1:** Install [remark-frontmatter]:
+**1:** Install remark-frontmatter:
 
 ~~~
 npm install remark-frontmatter
@@ -50,9 +42,9 @@ npm install remark-frontmatter
 Keys of the `plugins` object tell what plug-in to load and may be:
 
 - a name of an npm package in a global or local `node_modules` folder
-- a path to a JavaScript file exporting a plug-in function (see [writing plug-ins][doc-plugins-dev])
+- a path to a JavaScript file exporting a plug-in function (see page Writing a Plug-in)
 
-Their value in turn are options passed to the plug-in. Read [remark-frontmatter] docs, to find out about available options.
+Their value in turn are options passed to the plug-in. Read remark-frontmatter docs, to find out about available options.
 
 > ⓘ The `unified` key embeds a [unified configuration][unified-config] object. Its schema is *not* subject to glossarify-md's own config schema, anymore. Thus, if you would like to have the configs separated a bit more clearly, then you can split them:
 >
@@ -79,4 +71,5 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter]
 > }
 > ```
 >
-> If you would like to learn more about how *unified* and *remark* relate to glossarify-md, read [Conceptual Layers][doc-conceptual-layers].
+
+If you would like to learn more about how *unified* and *remark* relate to glossarify-md, read Conceptual Layers

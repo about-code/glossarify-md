@@ -1,14 +1,14 @@
-# Export
+# [Export](#export)
 
 **Since v6.0.0**
 
-Exporting makes glossarify-md generate a structured representation of a markdown glossary and write it to the output directory.
+Exporting makes [glossarify-md][1] generate a structured representation of a markdown glossary and write it to the output directory.
 
-## JSON (SKOS RDF/JSON-LD)
+## [JSON (SKOS RDF/JSON-LD)](#json-skos-rdfjson-ld)
 
 *Example: Export terms in glossary.md as ./glossary.json*
 
-~~~json
+```json
 {
   "glossaries": [{
     "uri": "http://basic.org/vocabulary/#",
@@ -18,19 +18,19 @@ Exporting makes glossarify-md generate a structured representation of a markdown
     }
   }]
 }
-~~~
+```
 
 > **ⓘ** We recommend declaring a glossary `uri` when exporting. It will make glossarify-md assign each term a unique *uniform resource identifier* by combining the URI with a term's term identifier.
 >
 > More on the idea behind URIs read Vocabulary URIs. See config option `headingIdAlgorithm` to select an algorithm for generating term identifiers from the term itself. Use pandoc syntax `{#my-own-id}` in a term heading to specify your own term identifier.
 
-## RDF/N-Quads
+## [RDF/N-Quads](#rdfn-quads)
 
-With [jsonld] installed alongside glossarify-md terms can also be exported to RDF N-Quads (file extension `.nq`).
+With \[jsonld] installed alongside [glossarify-md][1] terms can also be exported to RDF N-Quads (file extension `.nq`).
 
 *Example: Export terms in glossary.md as ./glossary.nq*
 
-~~~json
+```json
 {
   "glossaries": [{
     "uri": "http://basic.org/vocabulary/#",
@@ -40,4 +40,6 @@ With [jsonld] installed alongside glossarify-md terms can also be exported to RD
     }
   }]
 }
-~~~
+```
+
+[1]: https://github.com/about-code/glossarify-md "This project."

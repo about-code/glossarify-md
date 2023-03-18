@@ -1,12 +1,16 @@
 [doc-cli]: ./cli.md
 
+[doc-config]: ../conf/README.md
+
 [doc-dev-conceptual-layers]: ./conceptual-layers.md
 
 [doc-dev-node-types]: ../lib/ast/with/node-type.md
 
-[doc-config]: ../conf/README.md
+[doc-export]: ./export.md
 
 [doc-glossary]: ./glossary.md
+
+[doc-import]: ./import.md
 
 [doc-lists-on-github]: ./lists-on-github.md
 
@@ -74,7 +78,8 @@ Publishing
 
 Exporting and Importing Terms
 
-*   [Basics][17]
+*   [Export][doc-export]
+*   [Import][doc-import]\*
 *   [URIs as Identifiers for Definitions of Meaning\*][doc-vocabulary-uris]
 *   [Interoperability with SKOS and JSON-LD\*][doc-skos-interop]
 
@@ -85,7 +90,7 @@ Dealing with Non-Standard Markdown Syntax
 
 Glossary
 
-*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][18])
+*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][17])
 
 Developer Resources
 
@@ -129,6 +134,4 @@ Known Issues
 
 [16]: ../README.md#lists-from-regular-expressions
 
-[17]: ../README.md#structured-export-and-import
-
-[18]: https://github.com/about-code/glossarify-md "This project."
+[17]: https://github.com/about-code/glossarify-md "This project."

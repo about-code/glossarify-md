@@ -318,12 +318,120 @@ The default value is:
 
 # Configuration Schema Definitions
 
+## Definitions group csvDialect
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvDialect"}
+```
+
+
+
+### delimiter
+
+A character sequence to use as the field separator.
+
+`delimiter`
+
+*   is required
+
+*   Type: `string` ([Delimiter](schema-defs-csv-dialect-properties-delimiter.md))
+
+#### delimiter Default Value
+
+The default value is:
+
+```json
+";"
+```
+
+### doubleQuote
+
+Specifies the handling of quotes inside fields. If Double Quote is set to true, two consecutive quotes must be interpreted as one.
+
+`doubleQuote`
+
+*   is required
+
+*   Type: `boolean` ([Double Quote](schema-defs-csv-dialect-properties-double-quote.md))
+
+#### doubleQuote Default Value
+
+The default value is:
+
+```json
+true
+```
+
+## Definitions group csvTableSchema
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchema"}
+```
+
+
+
+### fields
+
+
+
+`fields`
+
+*   is required
+
+*   Type: `object[]` ([Table Schema Field](schema-defs-table-schema-properties-fields-table-schema-field.md))
+
+#### fields Constraints
+
+**minimum number of items**: the minimum number of items for this array is: `1`
+
+## Definitions group csvTableSchemaField
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaField"}
+```
+
+
+
+### name
+
+A name for this field.
+
+`name`
+
+*   is optional
+
+*   Type: `string` ([Name](schema-defs-table-schema-field-properties-name.md))
+
+#### name Default Value
+
+The default value is:
+
+```json
+"http://www.w3.org/2004/02/skos/core#"
+```
+
+## Definitions group csvTableSchemaFieldName
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaFieldName"}
+```
+
+
+
 ## Definitions group generateFiles
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/generateFiles"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
 
@@ -383,7 +491,7 @@ Generate a file with a list of tables and where they can be found.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
@@ -486,7 +594,7 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFileExport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileExport"}
 ```
 
 
@@ -516,14 +624,14 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFileImport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileImport"}
 ```
 
 
 
 ### file
 
-The JSON file to import terms from.
+The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'.
 
 `file`
 
@@ -533,7 +641,7 @@ The JSON file to import terms from.
 
 ### context
 
-File path or URL to a custom JSON-LD context document. Expected to map attributes and type names of a custom import document format onto terms of the well-known W3C SKOS vocabulary.
+File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology.
 
 `context`
 
@@ -546,7 +654,7 @@ File path or URL to a custom JSON-LD context document. Expected to map attribute
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/indexFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
 
@@ -596,7 +704,7 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/indexing"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexing"}
 ```
 
 
@@ -632,7 +740,7 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/listOfItemsFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/listOfItemsFile"}
 ```
 
 
@@ -682,7 +790,7 @@ A regular expression which when matching against text will generate an entry in 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/i18n"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/i18n"}
 ```
 
 
@@ -801,7 +909,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/linking"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/linking"}
 ```
 
 
@@ -974,7 +1082,7 @@ When 'true' replaces markdown inline links with numbered references to a link re
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/unified"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -1016,7 +1124,7 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/dev"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/dev"}
 ```
 
 

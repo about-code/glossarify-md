@@ -1,12 +1,10 @@
 # [Interoperability with SKOS and JSON-LD](#interoperability-with-skos-and-json-ld)
 
-[doc-export-import]: ../README.md#structured-export-and-import
-
 > Readers Level: *Advanced*
 >
 > The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of technical attribute names or type names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
 
-**Since v6.0.0** [glossarify-md][1] supports [exporting and importing][doc-export-import] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS][2] and [Dublin Core][3] model terms.
+**Since v6.0.0** [glossarify-md][1] supports exporting and importing glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS][2] and [Dublin Core][3] model terms.
 
 Model terms understood by [glossarify-md][1] are:
 

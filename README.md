@@ -91,16 +91,7 @@
 
 ## Install
 
-#### Option 1: Install *globally*, init config and run:
-
-```
-npm install -g glossarify-md
-
-glossarify-md --init --new
-glossarify-md --config ./glossarify-md.conf.json
-```
-
-#### Option 2 (recommended): Install *locally*, init config and run:
+#### Option 1: Install *locally*, init, configure, run (recommended):
 
 ```
 cd ./your-project
@@ -110,13 +101,9 @@ npx glossarify-md --init --new --local
 npx glossarify-md --config ./glossarify-md.conf.json
 ```
 
-**Optionally:** You might want to set up a shortcut...
+> **ⓘ Since 6.3.0** glossarify-md supports a `--watch` mode.
 
-```
-npm run glossarify
-```
-
-... by adding a run script to your `package.json`:
+When installing locally you might want to set up a shortcut by adding a run script to your `package.json`:
 
 ```json
 {
@@ -126,7 +113,20 @@ npm run glossarify
 }
 ```
 
-> **ⓘ Since 6.3.0** glossarify-md supports a `--watch` mode.
+Now use:
+
+```
+npm run glossarify
+```
+
+#### Option 2: Install *globally*, init, configure, run:
+
+```
+npm install -g glossarify-md
+
+glossarify-md --init --new
+glossarify-md --config ./glossarify-md.conf.json
+```
 
 ## Configuration
 

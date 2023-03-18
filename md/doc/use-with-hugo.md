@@ -1,13 +1,9 @@
 # Using glossarify-md with Hugo
 
-[doc-linking]: https://github.com/about-code/glossarify-md/blob/master/doc/README.md#linking
-[doc-plugins]: ./plugins.md
-[doc-mdext-syntax]: ./markdown-syntax-extensions.md
 [hugo-page-bundles]: https://gohugo.io/content-management/page-bundles/
 [hugo-frontmatter]: https://gohugo.io/content-management/front-matter/
 [hugo-shortcodes]: https://gohugo.io/content-management/shortcodes/
 [hugo-cm-compliance]: https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898
-[known issues]: #known-issues
 
 Below we provide a few *examples* on how you *might* be able to facilitate glossarify-md in a Hugo project. But note that existence of this page is not a statement about *Hugo compatibility*.
 
@@ -24,7 +20,7 @@ Below we provide a few *examples* on how you *might* be able to facilitate gloss
 
 ## Install Plug-Ins
 
-Hugo supports some Markdown syntax not [supported out-of-the-box by glossarify-md][doc-mdext-syntax]. See the table below which syntax (left column) requires [installing and configuring a plug-in][doc-plugins] (right column). See the plug-in's docs for available config options and default values.
+Hugo supports some Markdown syntax extensions not supported out-of-the-box by glossarify-md. See the table below which kind of syntax (left column) requires installing and configuring a plug-in (right column). See the plug-in's docs for available config options and default values.
 
 ~~~
 npm install remark-frontmatter remark-shortcodes
@@ -172,7 +168,7 @@ ${root}
 npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also [`linking` options][doc-linking].
+You should now see the files in `content_` copied to `content` where they will be picked up by Hugo. Should you have any troubles with paths, see also `linking` config option.
 
 ## Known Issues
 
@@ -183,7 +179,7 @@ https://github.com/about-code/glossarify-md/issues/246
 Hugo and glossarify-md support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of CommonMark and GFM constructs. But there is a chance Hugo supports additional features neither in Commonmark nor GFM. As a glossarify-md-with-Hugo user you may
 
 - need to restrict yourself to using the common set of syntax, only
-- or need to [install a syntax plug-in][doc-plugins], when there's one available
+- or need to install a syntax plug-in, when there's one available
 - or need to step back from glossarify-md given you can't sacrifice certain Hugo features.
 
 

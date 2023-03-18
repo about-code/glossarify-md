@@ -1,11 +1,5 @@
 # [Internals: Conceptual Layers](#internals-conceptual-layers)
 
-[doc-syntax-extensions]: ./markdown-syntax-extensions.md
-
-[remark-gfm]: https://npmjs.com/package/remark-gfm
-
-[remark-plugins]: https://github.com/remarkjs/awesome-remark
-
 Conceptual layers of text processing by [glossarify-md][1] and projects contributing to each layer
 
 | Layer | Project            | Conceptual purpose                                                                                                                                                                 |
@@ -18,7 +12,7 @@ Conceptual layers of text processing by [glossarify-md][1] and projects contribu
 
 [glossarify-md][1] is built on [unified][2], an umbrella project for *text file processing in general*. We use unified with [remark][3] which in conceptual terms of unified is a *processor* for *Markdown text files in particular*. remark itself is built on (or better *wrapping around*) [micromark][5] which is a low-level parser/tokenizer operating on a stream of individual character symbols which drive a token state machine. micromark can be considered a technical implementation of the textual [CommonMark][6] specification.
 
-When looking for non-standard [syntax extensions][doc-syntax-extensions] you should be looking for [remark plug-ins][remark-plugins]. Those plug-ins are likely to depend on and transitively install their preferred or required [micromark][5] extension themselves. Others may operate on layer 2 using a simpler RegEx parsing. One plug-in [glossarify-md][1] already installs itself is [remark-gfm] which adds support for the popular [CommonMark][6] syntax extension [GitHub Flavoured Markdown][7] (tables, footnotes and more).
+When looking for non-standard Markdown syntax extensions you should be looking for [remark][3] plug-ins. Those plug-ins are likely to depend on and transitively install their preferred or required [micromark][5] extension themselves. Others may operate on layer 2 using a simpler RegEx parsing. One plug-in [glossarify-md][1] already installs itself is [remark-gfm][7] which adds support for the popular [CommonMark][6] syntax extension [GitHub Flavoured Markdown][8] (tables, footnotes and more).
 
 [1]: https://github.com/about-code/glossarify-md "This project."
 
@@ -32,4 +26,6 @@ When looking for non-standard [syntax extensions][doc-syntax-extensions] you sho
 
 [6]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[7]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
+[7]: https://npmjs.com/package/remark-gfm "A remark syntax plug-in supporting GitHub Flavoured Markdown."
+
+[8]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"

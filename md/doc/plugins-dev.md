@@ -1,16 +1,13 @@
 # Writing a Plug-In
 
-[doc-conceptual-layers]: ./conceptual-layers.md
-[mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
 [remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
-[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
-[verdaccio]: https://npmjs.com/package/verdaccio
+
 
 ## Syntax Plug-Ins
-Syntax Plug-ins extend Markdown syntax itself, like [remark-frontmatter], for example. They contribute new *node types* to an internal Abstract Syntax Tree (AST). Further they provide a tokenizer to parse and a serializer to write markdown files. Writing syntax plug-ins is a bit more elaborate. At this point we like to refer you to the documentation of micromark and mdAst. When exploring these projects you might find this [description of the overall process][remark-discussion] helpful.
+Syntax Plug-ins extend Markdown syntax itself, like remark-frontmatter, for example. They contribute new *node types* to an internal Abstract Syntax Tree (AST). Further they provide a tokenizer to parse and a serializer to write markdown files. Writing syntax plug-ins is a bit more elaborate. At this point we like to refer you to the documentation of micromark and mdAst. When exploring these projects you might find this [description of the overall process][remark-discussion] helpful.
 
 ## Tree-Plug-Ins
-*Tree plug-ins* operate on a markdown syntax tree (mdAST). They are much easier to write and use CommonMark and GFM syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. glossarify-md operates on tree plug-ins, almost only (see [Conceptual Layers][doc-conceptual-layers]).
+*Tree plug-ins* operate on a markdown syntax tree (mdAST). They are much easier to write and use CommonMark and GFM syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. glossarify-md operates on tree plug-ins, almost only (see page Conceptual Layers).
 
 A tree plug-in is a function which returns a callback that when called get's passed an mdAst root node (`tree`):
 
@@ -35,7 +32,7 @@ export default function myPlugin(options = {}) {
 
 The example simply adds a `&visited=true` URL query parameter to each Markdown link in a document.
 
-It uses a [visit][mdast-util-visit] utility function with a filter argument (2) and visitor callback argument (3). The filter argument can be the name of a node type or a filter function which gets passed a node and is expected to return a boolean.  For a list of CommonMark node types see mdAst. Eventually, the plug-in function returns the tree's root node again.
+It uses a *visit* utility function (see mdast-util-visit) with a filter argument (2) and visitor callback argument (3). The filter argument can be the name of a node type or a filter function which gets passed a node and is expected to return a boolean.  For a list of CommonMark node types see mdAst. Eventually, the plug-in function returns the tree's root node again.
 Note the `options` argument: this is how your plug-in would get passed its config options (see [Installing Plug-Ins](#installing-plug-ins)).
 
 Let's save the plug-in to *plugins/remark-my-plug-in.js* next to `outDir`:
@@ -129,6 +126,6 @@ npm pack
 
 The command creates a `tar.gz` file. Inspect its contents. Optionally, use a `files` whitelist in `package.json` to select which files should go into a package.
 
-> Prior to publishing to the official npm registry, you may also find setting up a test registry on `localhost` useful. See [verdaccio], for an example.
+> Prior to publishing to the official npm registry, you may also find setting up a test registry on `localhost` useful. See verdaccio, for an example.
 
 More see official NPM docs on [publishing your node package](https://docs.npmjs.com/packages-and-modules).

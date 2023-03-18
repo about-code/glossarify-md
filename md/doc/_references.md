@@ -22,6 +22,11 @@ The Dublin Core Metadata Initiative.
 -->
 GitHub Flavoured Markdown
 
+## GitHub Pages
+<!-- uri: https://pages.github.com/ -->
+
+GitHub Pages is a static website rendering and publishing service by GitHub Inc.
+
 ## github-slugger
 <!-- uri: https://npmjs.com/package/github-slugger -->
 A library providing support for slugs. See github-slugger.
@@ -72,13 +77,16 @@ See Linked Data.
 
 Specification and Implementation of a Markdown Abstract Syntax Tree.
 
+## mdast-util-visit
+<!-- uri: https://npmjs.com/package/mdast-util-visit -->
+
 ## micromark
 <!-- uri: https://github.com/micromark/ -->
 
 A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing).
 
 ## NodeJS
-<!-- 
+<!--
   uri: https://nodejs.org
   aliases: nodejs, node.js
 -->
@@ -112,10 +120,28 @@ Generates diagrams from text files written in the PlantUML syntax.
 
 A remark syntax plug-in supporting pseudo-standard front-matter syntax.
 
+## remark-gfm
+<!-- uri: https://npmjs.com/package/remark-gfm -->
+
+A remark syntax plug-in supporting GitHub Flavoured Markdown.
+
+## remark plug-ins
+<!--
+uri: https://github.com/remarkjs/awesome-remark
+aliases: remark plug-in ecosystem
+-->
+A curated list of remark plug-ins.
+
 ## remark-shortcodes
 <!-- uri: https://www.npmjs.com/package/remark-shortcodes -->
 
 A remark syntax plug-in supporting non-standard Hugo shortcodes syntax.
+
+## Semantic HTML Tags
+<!--
+   uri: https://www.w3schools.com/html/html5_semantic_elements
+   aliases: Semantic HTML elements
+-->
 
 ## SKOS
 <!-- uri: http://w3.org/skos/ -->
@@ -146,3 +172,8 @@ A static website generator translating markdown files into a website powered by 
 <!-- uri: https://vuejs.org -->
 
 A Single Page Application framework written in JavaScript.
+
+## verdaccio
+<!-- uri: https://npmjs.com/package/verdaccio -->
+
+An easy to install local or on-premises npm registry.
