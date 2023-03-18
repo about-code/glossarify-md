@@ -2,7 +2,7 @@
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to install [remark-frontmatter][1], a [remark][2] plug-in to make [glossarify-md][3] handle non-standard *Frontmatter* syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in).
+The following example demonstrates how to install [remark-frontmatter][1], a [remark][2] plug-in to make [glossarify-md][3] handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][4] for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -37,8 +37,8 @@ We'll assume the following project structure:
 
 Keys of the `plugins` object tell what plug-in to load and may be:
 
-*   a name of an [npm][4] package in a global or local `node_modules` folder
-*   a path to a JavaScript file exporting a plug-in function (see page Writing a Plug-in)
+*   a name of an [npm][5] package in a global or local `node_modules` folder
+*   a path to a JavaScript file [exporting][6] a plug-in function (see page [Writing a Plug-in][7])
 
 Their value in turn are options passed to the plug-in. Read [remark-frontmatter][1] docs, to find out about available options.
 
@@ -69,7 +69,7 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter]
 > }
 > ```
 
-If you would like to learn more about how *[unified][5]* and *[remark][2]* relate to [glossarify-md][3], read Conceptual Layers
+If you would like to learn more about how *[unified][8]* and *[remark][2]* relate to [glossarify-md][3], read [Conceptual Layers][9]
 
 [1]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
 
@@ -77,6 +77,14 @@ If you would like to learn more about how *[unified][5]* and *[remark][2]* relat
 
 [3]: https://github.com/about-code/glossarify-md "This project."
 
-[4]: https://npmjs.com "Node Package Manager."
+[4]: https://github.com/about-code/glossarify-md/tree/master/doc/markdown-syntax-extensions.md
 
-[5]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
+[5]: https://npmjs.com "Node Package Manager."
+
+[6]: https://github.com/about-code/glossarify-md/tree/master/doc/export.md
+
+[7]: https://github.com/about-code/glossarify-md/tree/master/doc/plugins-dev.md
+
+[8]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
+
+[9]: https://github.com/about-code/glossarify-md/tree/master/docconceptual-layers.md

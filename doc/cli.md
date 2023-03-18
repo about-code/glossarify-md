@@ -27,8 +27,8 @@ Next time you can run [glossarify-md][1] by just typing line 1. Pass arguments a
 
 Use Cases
 
-1.  Provide a configuration solely via command line
-2.  Merge a configuration with a config file
+1.  Provide a [configuration][2] solely via command line
+2.  Merge a [configuration][2] with a config file
 
 **Example:** use `--shallow` to *replace* simple top-level options:
 
@@ -49,3 +49,5 @@ Use Cases
       --deep "{'glossaries': [{'file':'./extend.md'}] }"
 
 [1]: https://github.com/about-code/glossarify-md "This project."
+
+[2]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md

@@ -2,11 +2,11 @@
 
 **Since v6.0.0**
 
-Exporting makes [glossarify-md][1] generate a structured representation of a markdown glossary and write it to the output directory.
+[Exporting][1] makes [glossarify-md][2] generate a structured representation of a markdown [glossary][3] and write it to the output directory.
 
 ## [JSON (SKOS RDF/JSON-LD)](#json-skos-rdfjson-ld)
 
-*Example: Export terms in glossary.md as ./glossary.json*
+*Example: [Export][1] terms in [glossary][3].md as ./glossary.json*
 
 ```json
 {
@@ -26,9 +26,9 @@ Exporting makes [glossarify-md][1] generate a structured representation of a mar
 
 ## [RDF/N-Quads](#rdfn-quads)
 
-With \[jsonld] installed alongside [glossarify-md][1] terms can also be exported to RDF N-Quads (file extension `.nq`).
+With \[jsonld] installed alongside [glossarify-md][2] terms can also be exported to RDF N-Quads (file extension `.nq`).
 
-*Example: Export terms in glossary.md as ./glossary.nq*
+*Example: [Export][1] terms in [glossary][3].md as ./glossary.nq*
 
 ```json
 {
@@ -42,4 +42,8 @@ With \[jsonld] installed alongside [glossarify-md][1] terms can also be exported
 }
 ```
 
-[1]: https://github.com/about-code/glossarify-md "This project."
+[1]: https://github.com/about-code/glossarify-md/tree/master/doc/export.md
+
+[2]: https://github.com/about-code/glossarify-md "This project."
+
+[3]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md

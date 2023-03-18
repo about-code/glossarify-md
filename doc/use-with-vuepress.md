@@ -105,24 +105,24 @@ More information see [README.md][4].
 
 ## [Install and Configure Syntax Extension Plug-Ins](#install-and-configure-syntax-extension-plug-ins)
 
-[vuepress][2] supports some [Markdown syntax][5] not covered by [CommonMark][6] or [GFM][7]. See the table below which syntax extension on the left requires installing and configuring a plug-in on the right. See the respective plug-in for its individual default values and config options.
+[vuepress][2] supports some [Markdown syntax][5] not covered by [CommonMark][6] or [GFM][7]. See the table below which syntax extension on the left requires [installing and configuring a plug-in][8] on the right. See the respective plug-in for its individual default values and [config options][9].
 
-| Markdown Syntax Extension             | [remark][8] plug-in required with [glossarify-md][1] |
-| ------------------------------------- | ---------------------------------------------------- |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][9]                              |
-| [Custom Containers][vp-cc]            | -                                                    |
-| [Table of Contents][vp-toc] `[[toc]]` | -                                                    |
-| [Emoji][vp-emoji]                     | -                                                    |
-| [Line Highlighting Codeblocks][vp-lh] | -                                                    |
-| [Import Code Snippets][vp-code]       | -                                                    |
+| Markdown Syntax Extension             | [remark][10] plug-in required with [glossarify-md][1] |
+| ------------------------------------- | ----------------------------------------------------- |
+| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][11]                              |
+| [Custom Containers][vp-cc]            | -                                                     |
+| [Table of Contents][vp-toc] `[[toc]]` | -                                                     |
+| [Emoji][vp-emoji]                     | -                                                     |
+| [Line Highlighting Codeblocks][vp-lh] | -                                                     |
+| [Import Code Snippets][vp-code]       | -                                                     |
 
 ## [Appendix](#appendix)
 
-*[Slugs★][3]* are "*URL-friendly IDs*" used to identify a content section *within* a hypermedia document. They are not required to locate the document but needed to make a browser navigate to a particular content section *within* a document, for example `https://foo.com/#my-slug` identifies a content section using the Slug or *[URL fragment★][10]* `#my-slug`.
+*[Slugs★][3]* are "*URL-friendly IDs*" used to identify a content section *within* a hypermedia document. They are not required to locate the document but needed to make a browser navigate to a particular content section *within* a document, for example `https://foo.com/#my-slug` identifies a content section using the Slug or *[URL fragment★][12]* `#my-slug`.
 
-"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *[linkification★][11]* [vuepress][2] and glossarify derive [slugs★][3] from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27][12]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md][1]. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use \[github-slugger] standalone without glossarify-md, like so:
+"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *[linkification★][13]* [vuepress][2] and glossarify derive [slugs★][3] from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27][14]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md][1]. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use \[github-slugger] standalone without glossarify-md, like so:
 
-*Using [github-slugger][13] without [glossarify-md][1]*
+*Using [github-slugger][15] without [glossarify-md][1]*
 
 ```js
 const GitHubSlugger = require("github-slugger");
@@ -152,16 +152,20 @@ module.exports = {
 
 [7]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[8]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
+[8]: https://github.com/about-code/glossarify-md/tree/master/doc/plugins.md
 
-[9]: http://unifiedjs.com/explore/package/remark-frontmatter/
+[9]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
 
-[10]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
+[10]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
 
-[11]: ./glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
+[11]: http://unifiedjs.com/explore/package/remark-frontmatter/
+
+[12]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
+
+[13]: ./glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
 document B and replacing the term in document A with a Markdown link pointing
 onto the term definition in document B."
 
-[12]: https://github.com/about-code/glossarify-md/issues/27
+[14]: https://github.com/about-code/glossarify-md/issues/27
 
-[13]: https://npmjs.com/package/github-slugger "A library providing support for slugs."
+[15]: https://npmjs.com/package/github-slugger "A library providing support for slugs."

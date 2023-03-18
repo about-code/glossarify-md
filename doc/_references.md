@@ -168,13 +168,13 @@ uri: https://github.com/remarkjs/awesome-remark
 aliases: remark plug-in ecosystem
 -->
 
-A curated list of [remark][17] plug-ins.
+A curated list of [remark][17] [plug-ins][19].
 
 ## [remark-shortcodes](#remark-shortcodes)
 
 <!-- uri: https://www.npmjs.com/package/remark-shortcodes -->
 
-A [remark][17] syntax plug-in supporting non-standard [Hugo][19] shortcodes syntax.
+A [remark][17] syntax plug-in supporting non-standard [Hugo][20] shortcodes syntax.
 
 ## [Semantic HTML Tags](#semantic-html-tags)
 
@@ -187,19 +187,19 @@ A [remark][17] syntax plug-in supporting non-standard [Hugo][19] shortcodes synt
 
 <!-- uri: http://w3.org/skos/ -->
 
-With the Simple [Knowledge Organization System★][20] ([SKOS][10]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary★][9] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+With the Simple [Knowledge Organization System★][21] ([SKOS][10]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary★][9] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
 ## [unified](#unified)
 
 <!-- uri: https://unifiedjs.com -->
 
-*[unified][18]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][21]
+*[unified][18]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers of glossarify-md][22]
 
 ## [URN](#urn)
 
 <!-- uri: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml -->
 
-Uniform Resource Names. See [URN][22].
+Uniform Resource Names. See [URN][23].
 
 ## [VSCode](#vscode)
 
@@ -207,7 +207,7 @@ Uniform Resource Names. See [URN][22].
 
 [Code-OSS]: https://github.com/microsoft/vscode
 
-Visual Studio Code. See [VSCode][23] or [Code-OSS].
+Visual Studio Code. See [VSCode][24] or [Code-OSS].
 
 ## [vuepress](#vuepress)
 
@@ -263,12 +263,14 @@ An easy to install local or on-premises [npm][14] registry.
 
 [18]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[19]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
+[19]: https://github.com/about-code/glossarify-md/tree/master/doc/plugins.md
 
-[20]: ./glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
+[20]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
 
-[21]: ./conceptual-layers.md
+[21]: ./glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[22]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
+[22]: ./conceptual-layers.md
 
-[23]: https://code.visualstudio.com "Visual Studio Code."
+[23]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
+
+[24]: https://code.visualstudio.com "Visual Studio Code."

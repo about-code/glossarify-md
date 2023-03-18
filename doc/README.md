@@ -38,36 +38,36 @@
 
 # [Documentation](#documentation)
 
-Alternative Table of Contents for [README.md].
+Alternative [Table of Contents][1] for [README.md].
 Sections marked with \* describe advanced topics *not* mentioned in [README.md] (root).
 
 Setup
 
-*   [Install][1]
+*   [Install][2]
 *   [Configure][doc-config]
 *   [Command Line Interface\*][doc-cli]
-*   [Node Support Matrix][2]
+*   [Node Support Matrix][3]
 
-Glossary Basics
+[Glossary][4] Basics
 
-*   [Basic Glossary Example][3]
-*   [Aliases and Synonyms][4]
-    *   [Term Attributes][5]\*
-*   [Term Hints][6]
-*   [Multiple Glossaries][7]
-*   [Sorting Glossaries][8]
+*   [Basic Glossary Example][5]
+*   [Aliases and Synonyms][6]
+    *   [Term Attributes][7]\*
+*   [Term Hints][8]
+*   [Multiple Glossaries][9]
+*   [Sorting Glossaries][10]
 
 Book Writing
 
-*   [Cross Linking][9]
-    *   [Term-Based Auto-Linking][10]
-    *   [Identifier-based Cross-Linking][11]
+*   [Cross Linking][11]
+    *   [Term-Based Auto-Linking][12]
+    *   [Identifier-based Cross-Linking][13]
 *   [References\*][doc-references]
-*   [Book Index][12]
-*   [Lists][13]
-    *   [List of Figures][14]
-    *   [List of Tables][15]
-    *   [Lists from Regular Expressions][16]
+*   [Book Index][14]
+*   [Lists][15]
+    *   [List of Figures][16]
+    *   [List of Tables][17]
+    *   [Lists from Regular Expressions][18]
 
 Publishing
 
@@ -76,7 +76,7 @@ Publishing
 *   [Using glossarify-md with Hugo\*][doc-with-hugo]
 *   [Paths and URLs\*][doc-path-rewriting]
 
-Exporting and Importing Terms
+[Exporting][19] and [Importing][20] Terms
 
 *   [Export][doc-export]
 *   [Import][doc-import]\*
@@ -88,9 +88,9 @@ Dealing with Non-Standard Markdown Syntax
 *   [Markdown Syntax Extensions\*][doc-syntax-extensions]
 *   [Installing Syntax Plug-ins\*][doc-plugins]
 
-Glossary
+[Glossary][4]
 
-*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][17])
+*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][21])
 
 Developer Resources
 
@@ -102,36 +102,44 @@ Known Issues
 
 *   [Generated Lists and Links on GitHub\*][doc-lists-on-github]
 
-[1]: ../README.md#install
+[1]: https://github.com/about-code/glossarify-md/tree/master/doc/README.md
 
-[2]: ../README.md#node-support-matrix
+[2]: ../README.md#install
 
-[3]: ../README.md#sample
+[3]: ../README.md#node-support-matrix
 
-[4]: ../README.md#aliases-and-synonyms
+[4]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
 
-[5]: ./term-attributes.md
+[5]: ../README.md#sample
 
-[6]: ../README.md#term-hints
+[6]: ../README.md#aliases-and-synonyms
 
-[7]: ../README.md#multiple-glossaries
+[7]: ./term-attributes.md
 
-[8]: ../README.md#sorting-glossaries
+[8]: ../README.md#term-hints
 
-[9]: ../README.md#cross-linking
+[9]: ../README.md#multiple-glossaries
 
-[10]: ../README.md#term-based-auto-linking
+[10]: ../README.md#sorting-glossaries
 
-[11]: ../README.md#identifier-based-cross-linking
+[11]: ../README.md#cross-linking
 
-[12]: ../README.md#book-index
+[12]: ../README.md#term-based-auto-linking
 
-[13]: ../README.md#lists
+[13]: ../README.md#identifier-based-cross-linking
 
-[14]: ../README.md#list-of-figures
+[14]: ../README.md#book-index
 
-[15]: ../README.md#list-of-tables
+[15]: ../README.md#lists
 
-[16]: ../README.md#lists-from-regular-expressions
+[16]: ../README.md#list-of-figures
 
-[17]: https://github.com/about-code/glossarify-md "This project."
+[17]: ../README.md#list-of-tables
+
+[18]: ../README.md#lists-from-regular-expressions
+
+[19]: https://github.com/about-code/glossarify-md/tree/master/doc/export.md
+
+[20]: https://github.com/about-code/glossarify-md/tree/master/doc/import.md
+
+[21]: https://github.com/about-code/glossarify-md "This project."
