@@ -90,7 +90,7 @@ Dealing with Non-Standard Markdown Syntax
 
 [Glossary][4]
 
-*   [Glossary\*][doc-glossary] (Terms of [glossarify-md🌎][21])
+*   [Glossary\*][doc-glossary] (Terms of [glossarify-md 🌎][21])
 
 Developer Resources
 

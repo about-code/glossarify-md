@@ -28,7 +28,7 @@ Expects a comma-separated string or a list of strings which provide synonyms or 
 
 ### [`uri`](#uri)
 
-A unique identifier for the [term][2] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md🌎][4] [configuration][5] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][6]. See also *[URIs as Identifiers for Definitions of Meaning][7]*.
+A unique identifier for the [term][2] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md 🌎][4] [configuration][5] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][6]. See also *[URIs as Identifiers for Definitions of Meaning][7]*.
 
 # [Addendum](#addendum)
 

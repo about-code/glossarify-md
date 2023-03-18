@@ -2,7 +2,7 @@
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
 
-This is a [glossary][1] of terms helpful when working with [glossarify-md] or reading its docs. It also serves as an example and is processed by *[glossarify-md🌎][2]* itself using the [glossarify-md.conf.json][3] [configuration][4] at the root of this repo.
+This is a [glossary][1] of terms helpful when working with [glossarify-md] or reading its docs. It also serves as an example and is processed by *[glossarify-md 🌎][2]* itself using the [glossarify-md.conf.json][3] [configuration][4] at the root of this repo.
 
 ## [Alias](#alias)
 
@@ -23,7 +23,7 @@ Terms are headings in a markdown file which has been configured to be a *[glossa
 <!-- aliases: term hint, term-hint -->
 
 An optional (symbol-) character like for example `↴` decorating a [term][5] link to distinguish it from a regular link.
-See [glossarify-md🌎][2] [configuration][4] options for details.
+See [glossarify-md 🌎][2] [configuration][4] options for details.
 
 ## [Vocabulary](#vocabulary)
 
@@ -61,9 +61,9 @@ The fragment is the part follwing the `#` in a [URL][9].
 
 <!-- aliases: KOS, Knowledge Organization System -->
 
-Glossaries are considered a kind of *Knowledge Organisation System ([KOS][10])* which organizes knowledge as a list of terms and [term][5] definitions. There are other KOS like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal KOS the W3C has developed [SKOS🌎][11].
+Glossaries are considered a kind of *Knowledge Organisation System ([KOS][10])* which organizes knowledge as a list of terms and [term][5] definitions. There are other KOS like *Thesauri*, *Taxonomies* or *Word Nets* which add term relationships (hierarchically or as graphs capturing semantic or linguistic relationships). To model informal KOS the W3C has developed [SKOS 🌎][11].
 
-[Formal Ontologies][12] are graph-like [KOS][10] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the *Web Ontology Language* [OWL🌎][13]. [SKOS🌎][11] was built on top of OWL.
+[Formal Ontologies][12] are graph-like [KOS][10] which focus on *logical formalism*. They are built from logical statements and tend to become harder to maintain as they grow due to a requirement of being *fully free of logical conflicts*. Ontologies require a (meta-) vocabulary known as the *Web Ontology Language* [OWL 🌎][13]. [SKOS 🌎][11] was built on top of OWL.
 
 [1]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
 
