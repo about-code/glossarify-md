@@ -135,7 +135,7 @@ A remark syntax plug-in supporting non-standard Hugo shortcodes syntax.
 
 ## Semantic HTML Tags
 <!--
-   uri: https://www.w3schools.com/html/html5_semantic_elements
+   uri: https://www.w3schools.com/html/html5_semantic_elements.asp
    aliases: Semantic HTML elements
 -->
 

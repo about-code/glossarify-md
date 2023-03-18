@@ -29,10 +29,10 @@ Setup
 - [Command Line Interface*][doc-cli]
 - [Node Support Matrix](../README.md#node-support-matrix)
 
-Glossary Basics
+<x>Glossary Basics</x>
 - [Basic Glossary Example](../README.md#sample)
 - [Aliases and Synonyms](../README.md#aliases-and-synonyms)
-  - [Term Attributes](./term-attributes.md)*
+  - [Term Attributes*](./term-attributes.md)
 - [Term Hints](../README.md#term-hints)
 - [Multiple Glossaries](../README.md#multiple-glossaries)
 - [Sorting Glossaries](../README.md#sorting-glossaries)
@@ -55,7 +55,7 @@ Publishing
 - [Using glossarify-md with pandoc*][doc-with-pandoc]
 - [Using glossarify-md with Hugo*][doc-with-hugo]
 
-Exporting and Importing Terms
+<x>Exporting and Importing Terms</x>
 - [Export][doc-export]
 - [Import][doc-import]
 - [URIs as Identifiers for Definitions of Meaning*][doc-vocabulary-uris]
@@ -65,7 +65,7 @@ Dealing with Non-Standard Markdown Syntax
 - [Markdown Syntax Extensions*][doc-syntax-extensions]
 - [Installing Syntax Plug-ins*][doc-plugins]
 
-Glossary
+<x>Glossary</x>
 - [Glossary*][doc-glossary] (Terms of glossarify-md)
 
 Developer Resources

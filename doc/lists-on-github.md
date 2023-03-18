@@ -28,7 +28,7 @@ You can even try yourself with [GitHub Pages 🌎][8] which renders `.md` files 
 
 [3]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[4]: https://www.w3schools.com/html/html5_semantic_elements
+[4]: https://www.w3schools.com/html/html5_semantic_elements.asp
 
 [5]: https://github.com/about-code/glossarify-md
 

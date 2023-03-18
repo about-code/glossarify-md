@@ -173,7 +173,7 @@ A [remark 🌎][17] syntax plug-in supporting non-standard [Hugo 🌎][20] short
 ## [Semantic HTML Tags](#semantic-html-tags)
 
 <!--
-   uri: https://www.w3schools.com/html/html5_semantic_elements
+   uri: https://www.w3schools.com/html/html5_semantic_elements.asp
    aliases: Semantic HTML elements
 -->
 

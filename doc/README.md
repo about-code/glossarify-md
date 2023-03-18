@@ -48,26 +48,26 @@ Setup
 *   [Command Line Interface\*][doc-cli]
 *   [Node Support Matrix][3]
 
-[Glossary][4] Basics
+<x>Glossary Basics</x>
 
-*   [Basic Glossary Example][5]
-*   [Aliases and Synonyms][6]
-    *   [Term Attributes][7]\*
-*   [Term Hints][8]
-*   [Multiple Glossaries][9]
-*   [Sorting Glossaries][10]
+*   [Basic Glossary Example][4]
+*   [Aliases and Synonyms][5]
+    *   [Term Attributes\*][6]
+*   [Term Hints][7]
+*   [Multiple Glossaries][8]
+*   [Sorting Glossaries][9]
 
 Book Writing
 
-*   [Cross Linking][11]
-    *   [Term-Based Auto-Linking][12]
-    *   [Identifier-based Cross-Linking][13]
+*   [Cross Linking][10]
+    *   [Term-Based Auto-Linking][11]
+    *   [Identifier-based Cross-Linking][12]
 *   [References\*][doc-references]
-*   [Book Index][14]
-*   [Lists][15]
-    *   [List of Figures][16]
-    *   [List of Tables][17]
-    *   [Lists from Regular Expressions][18]
+*   [Book Index][13]
+*   [Lists][14]
+    *   [List of Figures][15]
+    *   [List of Tables][16]
+    *   [Lists from Regular Expressions][17]
 
 Publishing
 
@@ -76,7 +76,7 @@ Publishing
 *   [Using glossarify-md with pandoc\*][doc-with-pandoc]
 *   [Using glossarify-md with Hugo\*][doc-with-hugo]
 
-[Exporting][19] and [Importing][20] Terms
+<x>Exporting and Importing Terms</x>
 
 *   [Export][doc-export]
 *   [Import][doc-import]
@@ -88,9 +88,9 @@ Dealing with Non-Standard Markdown Syntax
 *   [Markdown Syntax Extensions\*][doc-syntax-extensions]
 *   [Installing Syntax Plug-ins\*][doc-plugins]
 
-[Glossary][4]
+<x>Glossary</x>
 
-*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][21])
+*   [Glossary\*][doc-glossary] (Terms of [glossarify-md][18])
 
 Developer Resources
 
@@ -108,38 +108,32 @@ Known Issues
 
 [3]: ../README.md#node-support-matrix
 
-[4]: https://github.com/about-code/glossarify-md/tree/master/doc/glossary.md
+[4]: ../README.md#sample
 
-[5]: ../README.md#sample
+[5]: ../README.md#aliases-and-synonyms
 
-[6]: ../README.md#aliases-and-synonyms
+[6]: ./term-attributes.md
 
-[7]: ./term-attributes.md
+[7]: ../README.md#term-hints
 
-[8]: ../README.md#term-hints
+[8]: ../README.md#multiple-glossaries
 
-[9]: ../README.md#multiple-glossaries
+[9]: ../README.md#sorting-glossaries
 
-[10]: ../README.md#sorting-glossaries
+[10]: ../README.md#cross-linking
 
-[11]: ../README.md#cross-linking
+[11]: ../README.md#term-based-auto-linking
 
-[12]: ../README.md#term-based-auto-linking
+[12]: ../README.md#identifier-based-cross-linking
 
-[13]: ../README.md#identifier-based-cross-linking
+[13]: ../README.md#book-index
 
-[14]: ../README.md#book-index
+[14]: ../README.md#lists
 
-[15]: ../README.md#lists
+[15]: ../README.md#list-of-figures
 
-[16]: ../README.md#list-of-figures
+[16]: ../README.md#list-of-tables
 
-[17]: ../README.md#list-of-tables
+[17]: ../README.md#lists-from-regular-expressions
 
-[18]: ../README.md#lists-from-regular-expressions
-
-[19]: https://github.com/about-code/glossarify-md/tree/master/doc/export.md
-
-[20]: https://github.com/about-code/glossarify-md/tree/master/doc/import.md
-
-[21]: https://github.com/about-code/glossarify-md
+[18]: https://github.com/about-code/glossarify-md
