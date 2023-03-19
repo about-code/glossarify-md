@@ -1,5 +1,7 @@
 # [Using glossarify-md with pandoc](#using-glossarify-md-with-pandoc)
 
+<!-- aliases: Use with Pandoc, use with pandoc -->
+
     ${root}
        +- docs/
        +- docs-glossarified/           (Generated)

@@ -219,7 +219,7 @@ A Single Page Application framework written in JavaScript.
 
 <!-- uri: https://npmjs.com/package/verdaccio -->
 
-An easy to install local or on-premises [npm 🌎][14] registry.
+An easy to [install][25] local or on-premises [npm 🌎][14] registry.
 
 [1]: https://atom.io "Atom Code Editor."
 
@@ -229,7 +229,7 @@ An easy to install local or on-premises [npm 🌎][14] registry.
 
 [4]: https://pages.github.com/ "GitHub Pages is a static website rendering and publishing service by GitHub Inc."
 
-[5]: ./glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
+[5]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
 [6]: https://npmjs.com/package/github-slugger "A library providing support for slugs."
 
@@ -237,7 +237,7 @@ An easy to install local or on-premises [npm 🌎][14] registry.
 
 [8]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
 
-[9]: ./glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
 
 [10]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
@@ -257,14 +257,16 @@ An easy to install local or on-premises [npm 🌎][14] registry.
 
 [18]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[19]: https://github.com/about-code/glossarify-md/tree/master/doc/plugins.md
+[19]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard Frontmatter syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in)."
 
 [20]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
 
-[21]: ./glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
+[21]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[22]: https://github.com/about-code/glossarify-md/tree/master/docconceptual-layers.md
+[22]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer"
 
 [23]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
 
 [24]: https://code.visualstudio.com "Visual Studio Code."
+
+[25]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install

@@ -1,5 +1,9 @@
 # [Command Line Interface](#command-line-interface)
 
+<!--
+aliases: CLI
+-->
+
 Get a list of command line arguments by passing `--help`.
 
 ## [Shortcuts](#shortcuts)
@@ -50,4 +54,4 @@ Use Cases
 
 [1]: https://github.com/about-code/glossarify-md
 
-[2]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
+[2]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md

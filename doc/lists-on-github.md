@@ -1,5 +1,9 @@
 # [Known Issues: Lists in GitHub Repos](#known-issues-lists-in-github-repos)
 
+<!--
+aliases: Lists on GitHub
+-->
+
 [2]: <>
 
 We assume you have generated a `list.md` file using a `listOf` config:
@@ -24,7 +28,7 @@ On a GitHub repository, though, you'll find that you can navigate within the rep
 
 You can even try yourself with [GitHub Pages 🌎][8] which renders `.md` files in a repo to [https://yoursite.github.io][9] using [Jekyll 🌎][6].
 
-[1]: #my-list
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md#my-list "List item title"
 
 [3]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 

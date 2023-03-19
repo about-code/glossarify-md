@@ -1,5 +1,7 @@
 # [Using glossarify-md with vuepress](#using-glossarify-md-with-vuepress)
 
+<!-- aliases: Use with VuePress -->
+
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 
 [vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
@@ -58,7 +60,7 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure vuepress](#configure-vuepress)
 
-[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "[slugs][3]" (see \[*why?*]\[Appendix])(#appendix).
+[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "[slugs][3]" (see \[*why?*]\[Appendix])(#[appendix][4]).
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -101,11 +103,11 @@ module.exports = {
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
 *   `npm run build` just builds the glossarified [vuepress 🌎][2] site without running a server.
 
-More information see [README.md][4].
+More information see [README.md][5].
 
 ## [Install and Configure Syntax Extension Plug-Ins](#install-and-configure-syntax-extension-plug-ins)
 
-[vuepress 🌎][2] supports some [Markdown syntax][5] not covered by [CommonMark 🌎][6] or [GFM 🌎][7]. See the table below which syntax extension on the left requires [installing and configuring a plug-in][8] on the right. See the respective plug-in for its individual default values and [config options][9].
+[vuepress 🌎][2] supports some [Markdown syntax][6] not covered by [CommonMark 🌎][7] or [GFM 🌎][8]. See the table below which syntax extension on the left requires installing and configuring a plug-in on the right. See the respective plug-in for its individual default values and [config options][9].
 
 | Markdown Syntax Extension             | [remark 🌎][10] plug-in required with [glossarify-md][1] |
 | ------------------------------------- | -------------------------------------------------------- |
@@ -142,27 +144,27 @@ module.exports = {
 
 [2]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
 
-[3]: ./glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
+[3]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
-[4]: ../README.md
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md#appendix "Slugs are \"URL-friendly IDs\" used to identify a content section within a hypermedia document."
 
-[5]: https://vuepress.vuejs.org/guide/markdown.html
+[5]: ../README.md
 
-[6]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
+[6]: https://vuepress.vuejs.org/guide/markdown.html
 
-[7]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
+[7]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[8]: https://github.com/about-code/glossarify-md/tree/master/doc/plugins.md
+[8]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[9]: https://github.com/about-code/glossarify-md/tree/master/conf/README.md
+[9]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
 [10]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
 
 [11]: http://unifiedjs.com/explore/package/remark-frontmatter/
 
-[12]: ./glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
+[12]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
 
-[13]: ./glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
+[13]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
 document B and replacing the term in document A with a Markdown link pointing
 onto the term definition in document B."
 
