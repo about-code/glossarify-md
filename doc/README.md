@@ -26,8 +26,7 @@
 
 # Documentation
 
-Alternative Table of Contents for [README.md].
-Sections marked with * describe advanced topics *not* mentioned in [README.md] (root).
+Extended Documentation covering all of [README.md] and more (marked with *).
 
 Setup
 
@@ -39,8 +38,8 @@ Setup
 Glossary Basics
 
 - [Basic Glossary Example](../README.md#sample)
-- [Aliases and Synonyms](../README.md#aliases-and-synonyms)
-  - [Term Attributes*](./term-attributes.md)
+- [Term Attributes](./term-attributes.md)*
+  - [Aliases and Synonyms](../README.md#aliases-and-synonyms)
 - [Term Hints](../README.md#term-hints)
 - [Multiple Glossaries](../README.md#multiple-glossaries)
 - [Sorting Glossaries](../README.md#sorting-glossaries)
@@ -56,9 +55,9 @@ Generating Files
 
 - [Book Index][doc-gen-book-index]*
 - [Lists][doc-gen-lists]*
-  - [List of Figures][doc-gen-lists-of-figures]
-  - [List of Tables][doc-gen-lists-of-tables]
-  - [Lists from Regular Expressions][doc-gen-lists-from-regexp]
+  - [List of Figures][doc-gen-lists-of-figures]*
+  - [List of Tables][doc-gen-lists-of-tables]*
+  - [Lists from Regular Expressions][doc-gen-lists-from-regexp]*
 
 Publishing
 
@@ -71,13 +70,13 @@ Importing and Exporting Terms
 
 - [Import][doc-import]
 - [Export][doc-export]
-- [URIs as Identifiers for Definitions of Meaning*][doc-vocabulary-uris]
-- [Interoperability with SKOS and JSON-LD*][doc-skos-interop]
+- [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]*
+- [Interoperability with SKOS and JSON-LD][doc-skos-interop]*
 
 Dealing with Non-Standard Markdown Syntax
 
-- [Markdown Syntax Extensions*][doc-syntax-extensions]
-- [Installing Syntax Plug-ins*][doc-plugins]
+- [Markdown Syntax Extensions][doc-syntax-extensions]*
+- [Installing Syntax Plug-ins][doc-plugins]*
   - Frontmatter
   - Shortcodes
   - Directives
@@ -89,10 +88,10 @@ Glossary
 
 Developer Resources
 
-- [Conceptual Layers of glossarify-md*][doc-dev-conceptual-layers]
-- [Writing Plug-ins*][doc-plugins-dev]
-- [The Parsing Process and Custom Node Types*][doc-dev-node-types]
+- [Conceptual Layers of glossarify-md][doc-dev-conceptual-layers]*
+- [Writing Plug-ins][doc-plugins-dev]
+- [The Parsing Process and Custom Node Types][doc-dev-node-types]*
 
 Known Issues
 
-- [Generated Lists and Links on GitHub*][doc-lists-on-github]
+- [Generated Lists and Links on GitHub][doc-lists-on-github]*
