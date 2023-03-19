@@ -1,4 +1,5 @@
 # Using glossarify-md with vuepress
+<!-- aliases: Use with VuePress -->
 
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 [vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers

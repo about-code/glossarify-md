@@ -1,5 +1,7 @@
 # Writing a Plug-In
-
+<!--
+aliases: Developing Plug-ins, Writing a Plug-in
+-->
 [remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
 
 

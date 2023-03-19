@@ -1,5 +1,7 @@
 # Known Issues: Lists in GitHub Repos
-
+<!--
+aliases: Lists on GitHub
+-->
 [2]: <>
 
 We assume you have generated a `list.md` file using a `listOf` config:

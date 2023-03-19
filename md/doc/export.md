@@ -1,5 +1,7 @@
 # Export
-
+<!--
+aliases: exporting, exports
+-->
 **Since v6.0.0**
 
 Exporting makes glossarify-md generate a structured representation of a markdown glossary and write it to the output directory.
@@ -26,7 +28,7 @@ Exporting makes glossarify-md generate a structured representation of a markdown
 
 ## RDF/N-Quads
 
-With [jsonld] installed alongside glossarify-md terms can also be exported to RDF N-Quads (file extension `.nq`).
+With jsonld installed alongside glossarify-md terms can also be exported to RDF N-Quads (file extension `.nq`).
 
 *Example: Export terms in glossary.md as ./glossary.nq*
 

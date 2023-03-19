@@ -1,5 +1,7 @@
 # Internals: Conceptual Layers
-
+<!--
+aliases: Conceptual Layers
+-->
 Conceptual layers of text processing by glossarify-md and projects contributing to each layer
 
 | Layer |    Project    |                                                                          Conceptual purpose                                                                           |

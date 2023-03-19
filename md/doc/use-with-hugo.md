@@ -1,4 +1,5 @@
 # Using glossarify-md with Hugo
+<!-- aliases: Use with Hugo, use with Hugo -->
 
 [hugo-page-bundles]: https://gohugo.io/content-management/page-bundles/
 [hugo-frontmatter]: https://gohugo.io/content-management/front-matter/
@@ -7,7 +8,7 @@
 
 Below we provide a few *examples* on how you *might* be able to facilitate glossarify-md in a Hugo project. But note that existence of this page is not a statement about *Hugo compatibility*.
 
-## Setup
+## Setup Hugo with glossarify-md
 
 1. Install NodeJS and npm
 1. In your Hugo project folder install glossarify-md
@@ -162,7 +163,7 @@ ${root}
 }
 ~~~
 
-## Run
+## Run glossarify-md
 
 ~~~
 npx glossarify-md --config ./glossarify-md.conf.json

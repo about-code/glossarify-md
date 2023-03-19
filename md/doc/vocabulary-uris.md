@@ -1,4 +1,7 @@
 # URIs as Identifiers for *Definitions of Meaning*
+<!--
+aliases: Vocabulary URIs
+-->
 
 [headingIdAlgorithm]: ../README.md#headingidalgorithm
 [doc-import]: ../README.md#structured-export-and-import
@@ -11,7 +14,7 @@ Consider a term *skin*. In human medicine it's a term for a human organ while in
 - `https://example.com/glossary/medicine/#skin`
 - `https://example.com/glossary/computer-science/#skin`.
 
-a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets. 
+a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets.
 
 **Since v6.0.0** glossarify-md supports [exporting and importing][doc-import] glossaries (see also [Interoperability with SKOS and JSON-LD][doc-skos]).
 
@@ -64,7 +67,7 @@ URIs can be *just identifiers*. But URIs can also be used to *locate and retriev
 
 ### Authority
 
-URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an URI and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition. 
+URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an URI and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition.
 
 So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an URI. So particularly when publishing a vocabulary it is usually not a good idea to use someone else's domain.
 

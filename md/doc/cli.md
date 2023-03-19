@@ -1,5 +1,7 @@
 # Command Line Interface
-
+<!--
+aliases: CLI
+-->
 Get a list of command line arguments by passing `--help`.
 
 ## Shortcuts
