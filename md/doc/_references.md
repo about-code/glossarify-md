@@ -124,7 +124,7 @@ A remark syntax plug-in supporting GitHub Flavoured Markdown.
 ## remark plug-ins
 <!--
 uri: https://github.com/remarkjs/awesome-remark
-aliases: remark plug-in ecosystem
+aliases: remark plug-in ecosystem, plug-in ecosystem
 -->
 A curated list of remark plug-ins.
 

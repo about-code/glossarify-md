@@ -1,5 +1,7 @@
 ## [Generating Files: Book Index](#generating-files-book-index)
 
+[doc-lists]: ./gen-lists.md
+
 *[glossarify-md][1].conf.json*
 
 ```json
@@ -11,7 +13,7 @@
 }
 ```
 
-This option will generate a single book index file `./book-index.md` with [glossary][2] terms and links to book sections in which they have been mentioned. By default items will be grouped *by section of occurrence* using the section heading as a group title. You can disable or affect granularity of section-based grouping using:
+This option will generate a single book index file `./book-index.md` with glossary terms and links to book sections in which they have been mentioned. By default items will be grouped *by section of occurrence* using the section heading as a group title. You can disable or affect granularity of section-based grouping using:
 
 ```json
 "indexing": {
@@ -19,7 +21,7 @@ This option will generate a single book index file `./book-index.md` with [gloss
 }
 ```
 
-> **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists][3].
+> **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists][doc-lists].
 
 Let's assume you have multiple glossaries and you want to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
 
@@ -37,12 +39,8 @@ Let's assume you have multiple glossaries and you want to create separate book i
 }
 ```
 
-> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress][4], be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress][2], be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
 [1]: https://github.com/about-code/glossarify-md
 
-[2]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#glossary "This is a glossary of terms helpful when working with glossarify-md or reading its docs."
-
-[3]: #lists
-
-[4]: https://vuepress.vuejs.org
+[2]: https://vuepress.vuejs.org

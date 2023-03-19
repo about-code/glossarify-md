@@ -1,10 +1,10 @@
 # Installing and Configuring Plug-ins
 <!--
-aliases: Plug-ins, Installing Plug-ins, installing and  configuring a plug-in, install a syntax plug-in
+aliases: Plug-ins, Installing Plug-ins, installing and configuring a plug-in, install a syntax plug-in
 -->
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard *Frontmatter* syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in).
+The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp. its internal remark parser) handle non-standard *Frontmatter* syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 

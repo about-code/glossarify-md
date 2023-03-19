@@ -159,7 +159,7 @@ A [remark 🌎][17] syntax plug-in supporting [GitHub Flavoured Markdown 🌎][3
 
 <!--
 uri: https://github.com/remarkjs/awesome-remark
-aliases: remark plug-in ecosystem
+aliases: remark plug-in ecosystem, plug-in ecosystem
 -->
 
 A curated list of [remark 🌎][17] [plug-ins][19].
@@ -257,7 +257,7 @@ An easy to [install][25] local or on-premises [npm 🌎][14] registry.
 
 [18]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[19]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard Frontmatter syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in)."
+[19]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
 
 [20]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
 

@@ -75,30 +75,3 @@ Web references are intended to be used when glossarify-md was installed "globall
 ~~~
 
 > **ⓘ Note** A web reference contains a config *format version* (e.g. `v5`) but also a particular *release version* (e.g. `v6.1.0`). The release version is the version of the glossarify-md release *that initially generated the config*. When you later install newer release versions of glossarify-md (say `v6.2.0`) the release version in the web reference *won't* be updated. Your config files may keep on referring to `v6.1.0`. This is not an issue at all due to the config format which hasn't changed. But your editor or IDE won't suggest you *the latest* options that might have been added to feature glossarify-md `v6.2.0` until you change the *release version*, manually. You'll receive a hint from glossarify-md if it detects such a situation. On breaking changes to the *configuration format*, though, glossarify-md will attempt to provide assistance on upgrading your configuration including the format version in a web reference.
-
-
-
-<!--
-If you use `latest` release version your editor will suggest you options from
-the 'latest' tag. But there may be options not yet supported by the release
-you've installed, locally. Keep that in mind otherwise you're wasting time
-trying things that can't work until you update.
-
-*glossarify-md.conf.json*
-~~~
-{
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/latest/conf/v5/schema.json"
-}
-~~~
-
-> **Note:** If your editor doesn't validate against the latest version it may have cached an older version.
-
-IMPORTANT:
-When introducing a new config format version KEEP the previous format's /conf/v.. folder.
-Otherwise moving the 'latest' tag forward onto a new revision which misses the old folder would
-cause $schema-URLs onto the old path to break, although still widely in public use:
-
-https://raw.githubusercontent.com/about-code/glossarify-md/latest/conf/---BREAKING--/schema.json
-
-We may only remove versions after they phased out and will no longer be supported.
--->

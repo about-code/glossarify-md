@@ -13,7 +13,7 @@ A way to use [glossarify-md][1] for citing and linking is to have a file, e.g. `
 C. E. Shannon, "A mathematical theory of communication," in The Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.
 ```
 
-...and configure it as a [glossary][2]:
+...and configure it as a glossary:
 
 ```json
 {
@@ -27,5 +27,3 @@ C. E. Shannon, "A mathematical theory of communication," in The Bell System Tech
 Use `linkUris: true` to make [glossarify-md][1] link occurrences of [Shannon1948] to the web using its `uri`. With `linkUris: false` (default) it links to `references.md`.
 
 [1]: https://github.com/about-code/glossarify-md
-
-[2]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#glossary "This is a glossary of terms helpful when working with glossarify-md or reading its docs."

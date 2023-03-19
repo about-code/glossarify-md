@@ -14,7 +14,7 @@ aliases: Developing Plug-ins, Writing a Plug-in
 
 *Tree [plug-ins][3]* operate on a markdown syntax tree ([mdAST 🌎][5]). They are much easier to write and use [CommonMark 🌎][6] and [GFM 🌎][7] syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. [glossarify-md][8] operates on tree plug-ins, almost only (see page [Conceptual Layers][9]).
 
-A tree plug-in is a function which returns a callback that when called get's passed an [mdAst 🌎][5] root node (`tree`):
+A tree plug-in is a function which returns a callback function. The callback function receives an [mdAst 🌎][5] node (usually the root node for a markdown file) whose subtree can be inspected and modified by visiting all or particular types of nodes:
 
 *remark-my-plug-in.js*
 
@@ -126,7 +126,7 @@ More see official [NPM 🌎][14] docs on [publishing your node package][16].
 
 [2]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
 
-[3]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard Frontmatter syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in)."
+[3]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
 
 [4]: https://github.com/micromark/ "A low-level extensible implementation of the CommonMark syntax specification (parsing and tokenizing)."
 

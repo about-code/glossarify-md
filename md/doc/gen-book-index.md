@@ -1,5 +1,7 @@
 ## Generating Files: Book Index
 
+[doc-lists]: ./gen-lists.md
+
 *glossarify-md.conf.json*
 
 ```json
@@ -19,7 +21,7 @@ This option will generate a single book index file `./book-index.md` with glossa
 }
 ```
 
-> **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists](#lists).
+> **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists][doc-lists].
 
 Let's assume you have multiple glossaries and you want to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
 

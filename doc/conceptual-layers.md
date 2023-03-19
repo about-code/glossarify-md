@@ -34,7 +34,7 @@ When looking for non-standard [Markdown syntax extensions][8] you should be look
 
 [8]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md#markdown-syntax-extensions "glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM)."
 
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a remark plug-in to make glossarify-md handle non-standard Frontmatter syntax, correctly (See Markdown Syntax Extensions for when you need a plug-in)."
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
 
 [10]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install
 

@@ -23,14 +23,14 @@ Below we provide a few *examples* on how you *might* be able to facilitate [glos
 
 ## [Install Plug-Ins](#install-plug-ins)
 
-[Hugo 🌎][2] supports some [Markdown syntax extensions][6] not supported out-of-the-box by [glossarify-md][1]. See the table below which kind of syntax (left column) requires installing and configuring a plug-in (right column). See the plug-in's docs for available [config options][7] and default values.
+[Hugo 🌎][2] supports some [Markdown syntax extensions][6] not supported out-of-the-box by [glossarify-md][1]. See the table below which kind of syntax (left column) requires [installing and configuring a plug-in][7] (right column). See the plug-in's docs for available [config options][8] and default values.
 
     npm install remark-frontmatter remark-shortcodes
 
 | Markdown Syntax Extension       | plug-in required with [glossarify-md][1] |
 | ------------------------------- | ---------------------------------------- |
-| [Frontmatter][hugo-frontmatter] | [remark-frontmatter 🌎][8]               |
-| [Shortcodes][hugo-shortcodes]   | [remark-shortcodes 🌎][9]                |
+| [Frontmatter][hugo-frontmatter] | [remark-frontmatter 🌎][9]               |
+| [Shortcodes][hugo-shortcodes]   | [remark-shortcodes 🌎][10]               |
 | ...and maybe others             |                                          |
 
 ## [Configure glossarify-md](#configure-glossarify-md)
@@ -60,7 +60,7 @@ In a [Hugo 🌎][2] [Leaf Bundle Structure][hugo-page-bundles]
 
 *   each directory represents a page
 *   the main content is in an `index.md` Markdown file
-*   only the directory name will be part of the page's [URL][10] path segments.
+*   only the directory name will be part of the page's [URL][11] path segments.
 
 Its easier to configure [glossarify-md][1] for a Leaf Bundle Structure:
 
@@ -115,7 +115,7 @@ In a [Hugo 🌎][2] [Branch Bundle Structure][hugo-page-bundles]
 
 *   Markdown files in the directory represent individual pages
 *   each directory has an `_index.md` Markdown file
-*   directory *and* file names (without file extension) become [URL][10] path segments.
+*   directory *and* file names (without file extension) become [URL][11] path segments.
 
 <!---->
 
@@ -167,15 +167,15 @@ In a [Hugo 🌎][2] [Branch Bundle Structure][hugo-page-bundles]
 
     npx glossarify-md --config ./glossarify-md.conf.json
 
-You should now see the files in `content_` copied to `content` where they will be picked up by [Hugo 🌎][2]. Should you have any troubles with paths, see also `linking` [config option][7].
+You should now see the files in `content_` copied to `content` where they will be picked up by [Hugo 🌎][2]. Should you have any troubles with paths, see also `linking` [config option][8].
 
 ## [Known Issues](#known-issues)
 
 ### [Different Flavours of "Markdown"](#different-flavours-of-markdown)
 
-[https://github.com/about-code/glossarify-md/issues/246][11]
+[https://github.com/about-code/glossarify-md/issues/246][12]
 
-[Hugo 🌎][2] and [glossarify-md][1] support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of [CommonMark 🌎][12] and [GFM 🌎][13] constructs. But there is a chance Hugo supports additional features neither in Commonmark nor GFM. As a glossarify-md-with-Hugo user you may
+[Hugo 🌎][2] and [glossarify-md][1] support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of [CommonMark 🌎][13] and [GFM 🌎][14] constructs. But there is a chance Hugo supports additional features neither in Commonmark nor GFM. As a glossarify-md-with-Hugo user you may
 
 *   need to restrict yourself to using the common set of syntax, only
 *   or need to [install][3] a syntax plug-in, when there's one available
@@ -185,14 +185,14 @@ You should now see the files in `content_` copied to `content` where they will b
 
 [https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898][hugo-cm-compliance]
 
-[glossarify-md][1] can be enhanced with [syntax plug-ins][14] to accept shortcode syntax. But it won't be able to support certain combinations of [CommonMark 🌎][12] syntax *and* shortcode syntax, e.g. CommonMark link syntax `[]()` combined with shortcode syntax `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. glossarify-md requires valid CommonMark input but the combined syntax [is not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
+[glossarify-md][1] can be enhanced with [syntax plug-ins][15] to accept shortcode syntax. But it won't be able to support certain combinations of [CommonMark 🌎][13] syntax *and* shortcode syntax, e.g. CommonMark link syntax `[]()` combined with shortcode syntax `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. glossarify-md requires valid CommonMark input but the combined syntax [is not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
 
 ### [Things get escaped with `\`](#things-get-escaped-with-)
 
 There may be two reasons:
 
 1.  input files use custom syntax not understood by [glossarify-md][1]. See known issue *Different flavors of Markdown*, above.
-2.  there is an improper combination of [CommonMark 🌎][12] syntax elements and non-standard syntax which violates the CommonMark spec. For an example, see known issue *[Shortcodes in Markdown Links][15]*, above.
+2.  there is an improper combination of [CommonMark 🌎][13] syntax elements and non-standard syntax which violates the CommonMark spec. For an example, see known issue *[Shortcodes in Markdown Links][16]*, above.
 
 ### [Link paths](#link-paths)
 
@@ -210,20 +210,22 @@ There may be two reasons:
 
 [6]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md#markdown-syntax-extensions "glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM)."
 
-[7]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
 
-[8]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
+[8]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
-[9]: https://www.npmjs.com/package/remark-shortcodes "A remark syntax plug-in supporting non-standard Hugo shortcodes syntax."
+[9]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
 
-[10]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[10]: https://www.npmjs.com/package/remark-shortcodes "A remark syntax plug-in supporting non-standard Hugo shortcodes syntax."
 
-[11]: https://github.com/about-code/glossarify-md/issues/246
+[11]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
-[12]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
+[12]: https://github.com/about-code/glossarify-md/issues/246
 
-[13]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
+[13]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[14]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#syntax-plug-ins "Syntax Plug-ins extend Markdown syntax itself, like remark-frontmatter, for example."
+[14]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
 
-[15]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-hugo.md#shortcodes-in-markdown-links "https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898"
+[15]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#syntax-plug-ins "Syntax Plug-ins extend Markdown syntax itself, like remark-frontmatter, for example."
+
+[16]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-hugo.md#shortcodes-in-markdown-links "https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898"

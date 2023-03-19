@@ -1,4 +1,4 @@
-# Glossary
+# Glossary (Terms and Concepts of glossarify-md)
 
 This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also serves as an example and is processed by glossarify-md itself using the [glossarify-md.conf.json](../glossarify-md.conf.json) configuration at the root of this repo.
 

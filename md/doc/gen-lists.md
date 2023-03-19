@@ -1,5 +1,8 @@
 ### Generating Files: Lists
 
+[CommonMark]: https://commonmark.org
+[GFM]: https://github.github.com/gfm/
+
 You can generate **arbitrary lists from HTML elements with an `id` attribute** and an element *classifier* to compile similar elements into the same list.
 
 <a id="video-tutorial-part-one"></a>
@@ -58,7 +61,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials and uses the classifier *tutorial*.
 ~~~
 
-> **ⓘ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Addendum: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
+> **ⓘ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Known Issues: Lists in GitHub Repos](https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md).
 
 <!--
 **Link label extraction**
@@ -74,14 +77,13 @@ The link label for list items will be inferred in this order (first-match):
 
 ### List of Figures
 
-So far we used [`listOf`](#lists) to generate a list from *HTML elements* in Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where
-`listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes [glossarify-md] generate the HTML anchor itself from Markdown's image syntax:
+In the previous section we used [`listOf`](#generating-files-lists) to generate a list *from HTML elements* inside Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where `listOfFigures` and [`listOfTables`](#list-of-tables) fit in. It is a shortcut which makes glossarify-md generate the HTML anchor itself from Markdown's image syntax:
 
 ```md
 ![List item Label](./figure.png)
 ```
 
-Then you may only need to use HTML for dynamically rendered figures, e.g. a [PlantUML](https://plantuml.com) diagram:
+Then you may only need to use HTML for dynamically rendered figures, e.g. a PlantUML diagram:
 
 ````md
 <figure id="figure-gen">Dynamically Rendered Diagram</figure>
@@ -93,7 +95,7 @@ Then you may only need to use HTML for dynamically rendered figures, e.g. a [Pla
 ```
 ````
 
-To compile both figures into the same list one way to configure [glossarify-md] is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
+To compile both figures into the same list one way to configure glossarify-md is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
 
 *glossarify-md.conf.json* (since v5.0.0)
 
@@ -138,7 +140,7 @@ This configuration which would allow you to also choose a shorter classifier lik
 }
 ```
 
-In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md] tries to infer a list item label.
+In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table glossarify-md tries to infer a list item label.
 
 One such inference looks at the **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon** then the tool uses that phrase as the item label:
 
@@ -190,7 +192,7 @@ The result for the tables above will be:
 > - [Average Prices by Article Category](#avg-prices)
 
 
-**Since v5.0.0** and the introduction of `listOf` all the previous examples will make [glossarify-md] annotate the table with an HTML anchor. So while not recommended due to verbosity, you could of course also just add an HTML anchor yourself, like described in [`listOf`](#lists):
+**Since v5.0.0** and the introduction of [`listOf`](#generating-files-lists) all the previous examples will make glossarify-md annotate the table with an HTML anchor. While not recommended due to verbosity, you could also just add an HTML anchor yourself, of course, applying what was described in [`listOf`](#generating-files-lists) above:
 
 ```md
 <a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
@@ -202,7 +204,7 @@ The result for the tables above will be:
 | 3        | Book        | $23.45     |
 ```
 
-> **ⓘ Note:** If [glossarify-md] can't find a list item label by any of the above means it will fall back to rendering a list item
+> **ⓘ Note:** If glossarify-md can't find a list item label by any of the above means it will fall back to rendering a list item
 > 1. using the table headers separated by comma,
 > 1. or if no headers, using the closest section heading
 > 1. or if no section heading, using the file name.
@@ -216,11 +218,11 @@ The result for the tables above will be:
 1. **filename** otherwise.
 -->
 
-### Lists from Regular Expressions
+### Lists from Regular Expressions (Experts)
 
-**Since v5.2.0** you can use `listOf` with a regular expression pattern. Like `listOfFigures` and `listOfTables` it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself.
+**Since v5.2.0** you can use `listOf` with a regular expression pattern. Like [`listOfFigures`](#list-of-figures) and [`listOfTables`](#list-of-tables) it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself. If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will become annotated with an HTML anchor `<a class="..."></a>` preparing it for evaluation by `listOf` as we have seen above.
 
-Let's assume you are writing a book with tasks to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern which prefixes tasks with a phrase **Task:** and ends them with an exclamation mark *!*
+**Example:** Let's assume you are writing a book with *tasks* to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern which prefixes tasks with a phrase **Task:** and ends them with an exclamation mark *!*
 
 *Document.md*
 ~~~md
@@ -229,7 +231,7 @@ Some text [...]
 **Task:** Clap your hands!
 ~~~
 
-You can then generate a *List of Tasks* with a configuration like this:
+Then you can generate a *List of Tasks* with a configuration like this:
 ~~~md
 {
   "generateFiles": {
@@ -245,10 +247,11 @@ You can then generate a *List of Tasks* with a configuration like this:
 }
 ~~~
 
-If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will be annotated with an anchor for `listOf`. Our RegExp has a Capture Group in braces `()`. Text matching the group pattern will become the list item label, so *Clap your hands* in the example because `Task:` and exclamation mark `!` are not part of the group.
+Our expression uses a Capture Group in brackets `()`. Text matching the capture group pattern will become the list item label, so *Clap your hands* will become the item label, because `Task:` and exclamation mark `!` are not part of the group. There can be at most one capture group.
 
-> **ⓘ When to consider "markdown syntax" in the RegExp**:
+> **ⓘ When to consider "Markdown" syntax in the RegExp pattern?**:
 >
-> You may noticed that the RegExp above doesn't assume *Task:* to be written between "bold" star markers `**`. The expression won't be matched against the input *you* wrote but against *plain text* cleaned from symbols contributing to [CommonMark] or [GFM] syntax.
+> You may noticed that the RegExp pattern above doesn't assume *Task:* to be written between "bold" star markers `**`, even though, that's the case in the input file *Document.md*. The pattern will be matched against *plain text* that was separated from syntactic tokens of [CommonMark] and [GFM] syntax. Other *non-standard* markdown syntax may require a special syntax plug-in which parses its tokens into an abstract syntax tree. Otherwise they will be considered plain text, too, thus have to be considered in the RegExp pattern. Unfortunately, remark plug-ins behave differently in this regard. There are plug-ins which promote special syntax which fits *their* purpose, yet *without* correctly parsing their syntax into an abstract syntax tree. So if this feature causes you headaches better try both ways or consider it not fit for your purpose.
 >
-> In case you use another Markdown flavor see our addendum on [Markdown Syntax Extensions][doc-syntax-extensions]. Without a proper plug-in its syntactical elements are likely considered plain text, too. Then they need to be taken care of in the RegExp to make it match.
+
+See also page Plug-ins.

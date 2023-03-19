@@ -11,7 +11,7 @@ Syntax Plug-ins extend Markdown syntax itself, like remark-frontmatter, for exam
 ## Tree-Plug-Ins
 *Tree plug-ins* operate on a markdown syntax tree (mdAST). They are much easier to write and use CommonMark and GFM syntax and respective AST node types to do their job. Basically they inspect, add, remove or resort AST nodes. glossarify-md operates on tree plug-ins, almost only (see page Conceptual Layers).
 
-A tree plug-in is a function which returns a callback that when called get's passed an mdAst root node (`tree`):
+A tree plug-in is a function which returns a callback function. The callback function receives an mdAst node (usually the root node for a markdown file) whose subtree can be inspected and modified by visiting all or particular types of nodes:
 
 *remark-my-plug-in.js*
 ~~~js
