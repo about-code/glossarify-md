@@ -84,12 +84,12 @@ Dealing with Non-Standard Markdown Syntax
 
 Glossary
 
-- [Glossary*][doc-glossary] (Terms and Concepts of glossarify-md)
+- [Glossary][doc-glossary] (Terms and Concepts of glossarify-md)*
 
 Developer Resources
 
 - [Conceptual Layers of glossarify-md][doc-dev-conceptual-layers]*
-- [Writing Plug-ins][doc-plugins-dev]
+- [Writing Plug-ins][doc-plugins-dev]*
 - [The Parsing Process and Custom Node Types][doc-dev-node-types]*
 
 Known Issues
