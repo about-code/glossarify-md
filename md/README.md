@@ -278,71 +278,14 @@ Internally, glossarify-md uses `Intl.Collator` and falls back to `String.localeC
 
 The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
 
-## Cross Linking
 
-[cross-linking]: #cross-linking
-
-> **ⓘ Since: v5.0.0**
-
-### Term-Based Auto-Linking
-
-*Term-based auto-linking* is what we've seen so far. It is to assume headings in markdown files called *glossaries* are *terms* that whenever being mentioned in text are being turned into a link to the glossary section where they have been defined as a term.
-
-**Since v5.0.0** we've added a few features which let us evolve that principle into a more generic means of cross-linking beginning with support for [glob] patterns in `glossaries.file`. For example with ...
-
-```json
-"glossaries": [
-    { "file": "./**/*.md"}
-]
-```
-
-... you can turn any `*.md` file being processed into a "glossary". Now *all* document headings are considered terms. Mentioning the heading or an [alias] alike turns the phrase into a link to that section.
-
-> **ⓘ Too many links?**
->
-> What might happen with *globs* is, that you might feel that *too many links* are being generated disturbing the reading experience. If this is an issue for you explore options like [`linking.mentions`](#linkingmentions), [`linking.headingDepths`](#linkingheadingdepths) or [`linking.limit*`](#linkinglimitbyalternatives) options.
-
-> **ⓘ Note:** When there are multiple `glossaries: []` entries with a `{ file: ... }` glob or path and a given file matches more than one entry then `glossaries` options of the entry latest in the array will apply. Though avoid too many glob patterns or patterns whose file sets overlap as the effects on the output get increasingly hard to understand, otherwise.
-
-### Identifier-based Cross-Linking
-
-If the same section heading exists more than once then you might want to link to one heading in particular. While you should consider using an [alias] to make use of term-based auto-linking, there might be situations where you whish to have manually declared links.
-
-**Since v5.0.0** we've added support for manual cross-linking through [pandoc's concept of heading ids][pandoc-heading-ids]. These allow you to assign identifiers which are more stable for referencing than auto-generated IDs derived from the heading phrase (slugs).
-
-> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
-
-[Sample]: document `./pages/page1.md` declares a heading
-
-*/pages/page1.md*
-~~~md
-## User Story {#s-241}
-~~~
-
-with heading-id `#s-241`. **Given that `#s-241` is *unique* across all documents** you can use it as a link reference:
-
-~~~md
-[any phrase](#s-241)
-~~~
-
-In any file being processed [glossarify-md] will resolve the actual path to the definition:
-
-*/README.md*
-~~~
-[any phrase](./pages/page1.md#s-241)
-~~~
-
-*/pages/page2.md*
-~~~
-[any phrase](./page1.md#s-241)
-~~~
 
 ## Advanced Topics
 
 - Generating files
 - Using glossarify-md with other tools
 - Importing and exporting terms
-- Dealing with non-standard Markdown Syntax via Plug-ins(e.g Frontmatter)
+- Dealing with non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
 - ...and [more][doc-extended]
 
 

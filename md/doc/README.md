@@ -32,13 +32,13 @@ Setup
 
 - [Install][doc-install]
 - [Configure][doc-config]
-- [Command Line Interface][doc-cli]*
+- [Command Line Interface][doc-cli] *
 - [Node Support Matrix](../README.md#node-support-matrix)
 
 Glossary Basics
 
 - [Basic Glossary Example](../README.md#sample)
-- [Term Attributes](./term-attributes.md)*
+- [Term Attributes](./term-attributes.md) *
   - [Aliases and Synonyms](../README.md#aliases-and-synonyms)
 - [Term Hints](../README.md#term-hints)
 - [Multiple Glossaries](../README.md#multiple-glossaries)
@@ -49,49 +49,49 @@ Book Writing
 - [Cross Linking](../README.md#cross-linking)
   - [Term-Based Auto-Linking](../README.md#term-based-auto-linking)
   - [Identifier-based Cross-Linking](../README.md#identifier-based-cross-linking)
-- [References][doc-references]*
+- [References][doc-references] *
 
-Generating Files
+Generating Files *
 
-- [Book Index][doc-gen-book-index]*
-- [Lists][doc-gen-lists]*
-  - [List of Figures][doc-gen-lists-of-figures]*
-  - [List of Tables][doc-gen-lists-of-tables]*
-  - [Lists from Regular Expressions][doc-gen-lists-from-regexp]*
+- [Book Index][doc-gen-book-index]
+- [Lists][doc-gen-lists]
+  - [List of Figures][doc-gen-lists-of-figures]
+  - [List of Tables][doc-gen-lists-of-tables]
+  - [Lists from Regular Expressions][doc-gen-lists-from-regexp]
 
-Publishing
+Publishing *
 
-- [Paths and URLs][doc-path-rewriting]*
-- [Using glossarify-md with vuepress][doc-with-vuepress]*
-- [Using glossarify-md with pandoc][doc-with-pandoc]*
-- [Using glossarify-md with Hugo][doc-with-hugo]*
+- [Paths and URLs][doc-path-rewriting]
+- [Using glossarify-md with vuepress][doc-with-vuepress]
+- [Using glossarify-md with pandoc][doc-with-pandoc]
+- [Using glossarify-md with Hugo][doc-with-hugo]
 
-Importing and Exporting Terms
+Importing and Exporting Terms *
 
 - [Import][doc-import]
 - [Export][doc-export]
-- [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]*
-- [Interoperability with SKOS and JSON-LD][doc-skos-interop]*
+- [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
+- [Interoperability with SKOS and JSON-LD][doc-skos-interop]
 
-Dealing with Non-Standard Markdown Syntax
+Dealing with Non-Standard Markdown Syntax *
 
-- [Markdown Syntax Extensions][doc-syntax-extensions]*
-- [Installing Syntax Plug-ins][doc-plugins]*
+- [Markdown Syntax Extensions][doc-syntax-extensions]
+- [Installing Syntax Plug-ins][doc-plugins]
   - Frontmatter
   - Shortcodes
   - Directives
   - etc.
 
+Developer Resources *
+
+- [Conceptual Layers of glossarify-md][doc-dev-conceptual-layers]
+- [Writing Plug-ins][doc-plugins-dev]
+- [The Parsing Process and Custom Node Types][doc-dev-node-types]
+
 Glossary
 
-- [Glossary][doc-glossary] (Terms and Concepts of glossarify-md)*
-
-Developer Resources
-
-- [Conceptual Layers of glossarify-md][doc-dev-conceptual-layers]*
-- [Writing Plug-ins][doc-plugins-dev]*
-- [The Parsing Process and Custom Node Types][doc-dev-node-types]*
+- [Glossary][doc-glossary] (Terms and Concepts of glossarify-md)
 
 Known Issues
 
-- [Generated Lists and Links on GitHub][doc-lists-on-github]*
+- [Generated Lists and Links on GitHub][doc-lists-on-github]
