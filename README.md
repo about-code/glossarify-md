@@ -3,25 +3,31 @@
 ![Tests (Functional)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(Functional\)/badge.svg)
 ![Nightly Tests (Latest Dependencies)](https://github.com/about-code/glossarify-md/workflows/Tests%20\(with%20latest%20deps\)/badge.svg)
 
+[CommonMark]: https://www.commonmark.org
+
+[doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
+
+[doc-cross-linking]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md
+
+[doc-extended]: https://github.com/about-code/blob/master/doc/README.md
+
 [doc-paths-and-urls]: https://github.com/about-code/glossarify-md/blob/master/doc/paths-and-urls.md
+
+[doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
+
+[doc-term-attributes]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md
 
 [doc-vocabulary-uris]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md
 
 [doc-vuepress]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md
-
-[doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
-
-[doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
-
-[doc-extended]: https://github.com/about-code/blob/master/doc/README.md
-
-[CommonMark]: https://www.commonmark.org
 
 [GFM]: https://github.github.com/gfm/
 
 [glob]: https://github.com/isaacs/node-glob#glob-primer
 
 [glossarify-md]: https://github.com/about-code/glossarify-md
+
+[Hugo]: https://gohugo.io
 
 [link reference definitions]: https://spec.commonmark.org/0.30/#link-reference-definition
 
@@ -40,8 +46,6 @@
 - **Cross-Linking** (primary use case): autolink terms to some definition in a glossary
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
-
-[vuepress] users might be interested in learning [how to use the tool with vuepress][doc-vuepress].
 
 ## Table of Contents
 
@@ -212,7 +216,7 @@ Some syntactic positions of a term occurrence are **excluded** from being linked
 
 Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
-> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from \[term-based auto-linking]\[cross-linking].
+> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][doc-cross-linking].
 
 ## Aliases and Synonyms
 
@@ -220,9 +224,7 @@ Blockquotes are excluded based on the premise that a quoted entity may not share
 
 [aliases]: #aliases-and-synonyms
 
-[term-attributes]: #aliases-and-synonyms
-
-Aliases can be added by what we call *term attributes*. Term attributes are provided in a [YAML] formatted comment following a term's heading. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
+Aliases can be added by what we call [*term attributes*][doc-term-attributes]. Term attributes are provided in a [YAML] formatted comment following a term's heading. For aliases there's the term attribute `aliases` whose attribute value is a string of comma-separated synonyms:
 
 *glossary.md with a term attribute `aliases`:*
 
@@ -244,7 +246,7 @@ In the output files aliases will be linked to their related term:
 [Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
 ```
 
-> **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase. You may find that an uppercase `Aliases: ` term attribute works as well. This is going to be the only attribute for which an uppercase name remains supported *for backwards compatibility*.
+> **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
 
 That's all you need to know for a quick start. Continue reading to learn about additional features.
 
@@ -260,7 +262,7 @@ That's all you need to know for a quick start. Continue reading to learn about a
 
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one. Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of a linkified term occurrence.
 
-> **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see \[Cross-Linking].
+> **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking][doc-cross-linking].
 
 ## Multiple Glossaries
 
@@ -312,15 +314,15 @@ Internally, glossarify-md uses `Intl.Collator` and falls back to `String.localeC
 }
 ```
 
-The i18n-object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
+The `i18n` object is passed *as is* to the collator function. Thus you can use additional options documented on [Mozilla Developer Portal](https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Collator):
 
-## Advanced Topics
+## [Advanced Topics][doc-extended]
 
-- Generating files
-- Using glossarify-md with other tools
 - Importing and exporting terms
+- Generating files
+- Using glossarify-md with other tools, like [vuepress], [pandoc] or [Hugo]
 - Dealing with non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
-- ...and [more][doc-extended]
+- [...and more][doc-extended]
 
 ## Node Support Matrix
 
