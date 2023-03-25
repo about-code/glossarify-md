@@ -2,27 +2,36 @@
 <!--
 aliases: CLI
 -->
-Get a list of command line arguments by passing `--help`.
 
-## Shortcuts
+## `--help`
 
-If you have installed glossarify-md locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
+Get a complete list of available command line arguments.
 
-*package.json*
-~~~json
-{
-  "scripts": {
-    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
-  }
-}
+## `--config [file]`
+
+
+~~~
+npx glossarify-md --config ./glossarify-md.conf.json
 ~~~
 
-Next time you can run glossarify-md by just typing line 1. Pass arguments after a ` -- ` separator (line 2).
-
-```
-1 | npm run glossarify
-2 | npm run glossarify -- --help
-```
+> **Tipp:** If you have installed glossarify-md locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
+>
+>*package.json*
+>~~~json
+>{
+>  "scripts": {
+>    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
+>  }
+>}
+>~~~
+>
+> Next time you can run glossarify-md by just typing line 1. Pass arguments after a ` -- ` separator (line 2).
+>
+> ```
+> 1 | npm run glossarify
+> 2 | npm run glossarify -- --help
+> ```
+>
 
 ## Configuration Overrides
 
@@ -56,3 +65,7 @@ glossarify-md
   --config ./glossarify-md.conf.json
   --deep "{'glossaries': [{'file':'./extend.md'}] }"
 ~~~
+
+## `--watch`
+
+Watches `baseDir` for changes.

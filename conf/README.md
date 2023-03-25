@@ -1,21 +1,34 @@
-# Configuration
+# Configure
 
 [doc-readme]: ../doc/install.md
 [doc-cli]: ../doc/cli.md
 
-- [Config Format v5](./v5/doc/schema.md).
 
-## Generate a config file with `--init`
-
-Use `--init` to write a *minimal* config to the console.
-- add `--more` to write a config with more options and default values
-- add `--local` to load the config schema from the `node_modules` directory (see [Local Referencing](#local-referencing) below)
-- add `--new`  to write a config to `./glossarify-md.conf.json` and a glossary to `./docs/glossary.md`
-
-*Example: Writing a minimal configuration to the console*
+[All config options (Config Format v5)](./v5/doc/schema.md)
 ~~~
-npx glossarify-md --init --local
+npx glossarify-md --config [file]
+~~~
 
+## Generate a config file
+
+~~~
+npx glossarify-md --init
+~~~
+
+- add `--new`
+  - to write to a config file `./glossarify-md.conf.json`
+  - to create a glossary file `./docs/glossary.md`
+- add `--local` to load the config `$schema` from `./node_modules` ([see below](#local-schema))
+- add `--more` to write a verbose config with more options and their default values
+
+*Example: Writing console outputs to a file*
+~~~
+npx glossarify-md --init --local > my-own.conf.json
+~~~
+
+
+*Example: Minimal configuration*
+~~~
 {
   "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./docs",
@@ -23,22 +36,6 @@ npx glossarify-md --init --local
 }
 ~~~
 
-*Example: Writing a minimal configuration to a file*
-~~~
-npx glossarify-md --init --local > glossarify-md.conf.json
-~~~
-
-*Example: Initializing a new glossarify-md project with a minimal configuration*
-~~~
-npx glossarify-md --init --local --new
-~~~
-
-*Example: Configuring glossarify-md via CLI*
-~~~
-npx glossarify-md --shallow "{ 'baseDir':'./docs', 'outDir':'../target', 'glossaries': ['./glossary.md'] }"
-~~~
-
-More on configuring glossarify-md by its command-line interface see [CLI][doc-cli].
 
 
 > **ⓘ Paths**
@@ -50,28 +47,28 @@ More on configuring glossarify-md by its command-line interface see [CLI][doc-cl
 
 ## Editor Support
 
-Many IDEs and editors provide suggestions when editing JSON files that refer to a JSON Schema using a conventional `$schema` property. There are two ways to refer to a glossarify-md config schema.
+Many IDEs and editors provide suggestions for JSON files with a `$schema` property locating a JSON Schema.
 
-### Local Referencing
+### Local `$schema`
 
-Local referencing is **recommended** when glossarify-md was [installed "locally"][doc-readme] to a project. It references the config schema of the glossarify-md version installed to the `./node_modules/` folder of the project. This way your editor can suggest all the latest options supported by the installed version.
+... is **recommended** when glossarify-md was [installed][doc-readme] using `npm install` (*without* the `-g` switch). If supported, an editor loads the schema from the `./node_modules/` directory of your project, thus it can suggest you the config options matching your currently installed version of glossarify-md.
 
-*glossarify-md.conf.json*
-~~~
+~~~json
 {
   "$schema": "./node_modules/glossarify-md/conf/v5/schema.json"
 }
 ~~~
 
-### Web References
+### Remote `$schema`
 
-Web references are intended to be used when glossarify-md was installed "globally" using `npm install -g`. They will be generated when omitting the `--local` option.
+...may be used when glossarify-md was installed using `npm install -g`. It requires editors downloading the schema from a remote location.
 
-*glossarify-md.conf.json*
-~~~
+~~~json
 {
   "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v6.1.0/conf/v5/schema.json"
 }
 ~~~
 
-> **ⓘ Note** A web reference contains a config *format version* (e.g. `v5`) but also a particular *release version* (e.g. `v6.1.0`). The release version is the version of the glossarify-md release *that initially generated the config*. When you later install newer release versions of glossarify-md (say `v6.2.0`) the release version in the web reference *won't* be updated. Your config files may keep on referring to `v6.1.0`. This is not an issue at all due to the config format which hasn't changed. But your editor or IDE won't suggest you *the latest* options that might have been added to feature glossarify-md `v6.2.0` until you change the *release version*, manually. You'll receive a hint from glossarify-md if it detects such a situation. On breaking changes to the *configuration format*, though, glossarify-md will attempt to provide assistance on upgrading your configuration including the format version in a web reference.
+> **ⓘ Note** The remote `$schema` URL contains a config *format version* (`v5`) and a glossarify-md *release version* (`v6.1.0`). The release version is the glossarify-md version *which initially generated the config file*. When you install a newer release of glossarify-md (say `v6.2.0`) the URL *won't* be updated and keeps on referring to `v6.1.0`. Therefore, your editor or IDE won't suggest you *the latest* options available for `v6.2.0` when editing the config file. However, glossarify-md will inform you when it detects this situation.
+>
+> On breaking changes affecting the *format version* glossarify-md will attempt to provide assistance on upgrading your configuration files including the `$schema` URL. This should happen *rarely*, though.

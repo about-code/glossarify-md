@@ -4,26 +4,30 @@
 aliases: CLI
 -->
 
-Get a list of command line arguments by passing `--help`.
+## [`--help`](#--help)
 
-## [Shortcuts](#shortcuts)
+Get a complete list of available command line arguments.
 
-If you have installed [glossarify-md][1] locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
+## [`--config [file]`](#--config-file)
 
-*package.json*
+    npx glossarify-md --config ./glossarify-md.conf.json
 
-```json
-{
-  "scripts": {
-    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
-  }
-}
-```
-
-Next time you can run [glossarify-md][1] by just typing line 1. Pass arguments after a `--` separator (line 2).
-
-    1 | npm run glossarify
-    2 | npm run glossarify -- --help
+> **Tipp:** If you have installed glossarify-md locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
+>
+> *package.json*
+>
+> ```json
+> {
+>  "scripts": {
+>    "glossarify": "glossarify-md --config ./glossarify-md.conf.json"
+>  }
+> }
+> ```
+>
+> Next time you can run glossarify-md by just typing line 1. Pass arguments after a `--` separator (line 2).
+>
+>     1 | npm run glossarify
+>     2 | npm run glossarify -- --help
 
 ## [Configuration Overrides](#configuration-overrides)
 
@@ -31,8 +35,8 @@ Next time you can run [glossarify-md][1] by just typing line 1. Pass arguments a
 
 Use Cases
 
-1.  Provide a [configuration][2] solely via command line
-2.  Merge a [configuration][2] with a config file
+1.  Provide a [configuration][1] solely via command line
+2.  Merge a [configuration][1] with a config file
 
 **Example:** use `--shallow` to *replace* simple top-level options:
 
@@ -52,6 +56,8 @@ Use Cases
       --config ./glossarify-md.conf.json
       --deep "{'glossaries': [{'file':'./extend.md'}] }"
 
-[1]: https://github.com/about-code/glossarify-md
+## [`--watch`](#--watch)
 
-[2]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
+Watches `baseDir` for changes.
+
+[1]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
