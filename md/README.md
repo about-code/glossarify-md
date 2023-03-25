@@ -6,7 +6,8 @@
 [CommonMark]: https://www.commonmark.org
 [doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 [doc-cross-linking]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md
-[doc-extended]: https://github.com/about-code/blob/master/doc/README.md
+[doc-extended]: https://github.com/about-code/glossarify-md/blob/master/doc/README.md
+[doc-options]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 [doc-paths-and-urls]: https://github.com/about-code/glossarify-md/blob/master/doc/paths-and-urls.md
 [doc-syntax-extensions]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md
 [doc-term-attributes]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md
@@ -78,7 +79,22 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ## Configuration
 
-If you've followed the installation instructions you are already set up for a quick start. For customizing your configuration **[see here][doc-config]**.
+If you've followed the installation instructions you are already set up for a quick start with a minimal configuration.
+
+*Minimal Configuration*
+
+~~~json
+{
+  "$schema": "./conf/v5/schema.json",
+  "baseDir": "./docs",
+  "outDir": "../docs-glossarified",
+  "glossaries": [
+    { "file": "./glossary.md" }
+  ]
+}
+~~~
+
+For customizing your configuration **[see more options here][doc-config]**.
 
 ## Sample
 
@@ -284,12 +300,11 @@ The `i18n` object is passed *as is* to the collator function. Thus you can use a
 ## [Advanced Topics][doc-extended]
 
 - Importing and exporting terms
-- Generating files
+- Cross-Linking more than just terms
+- Generating book index and lists of figures, etc.
 - Using glossarify-md with other tools, like [vuepress], [pandoc] or [Hugo]
-- Dealing with non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
+- Dealing with Non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
 - [...and more][doc-extended]
-
-
 
 ## Node Support Matrix
 
@@ -302,409 +317,6 @@ The term *support* refers to *runs on the given platform* and is subject to the 
 | 14 LTS  | v4, v5, v6+   | Tested + Supported                                                                                                                                                       |
 | 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |
 | 10 LTS  | v2, v3, v4    |                                                                                                                                                                          |
-
-## Options
-
-[Options]: #options
-
-#### `baseDir`
-
-- **Range:** `string`
-
-Path to directory where to search for the glossary and markdown files. All paths in a config file except for `$schema` will be relative to *baseDir*. *baseDir* itself and `$schema` are relative to the location of the config file.
-
-#### `excludeFiles`
-
-- **Range:** `string[]`
-
-Paths or Glob-Patterns of files to exclude. Excluded files will be excluded from being copied to `outDir` where they would be processed. Use [`keepRawFiles`](#keeprawfiles) if you want to have them copied to `outDir` but *ignored* by glossarify-md.
-
-#### `generateFiles`
-
-- **Range:** `Object`
-~~~
-{
-  indexFile: {},
-  listOf: [],
-  listOfFigures: {},
-  listOfTables: {}
-}
-~~~
-
-#### `generateFiles.indexFile`
-
-[doc-config-indexFile]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-indexfile.md
-
-- **Range:** `{file: string, [title: string], [hideDeepLinks: boolean]}` ([details][doc-config-indexFile])
-- **Since:** v3.0.0
-
-Generates an index of glossary terms with links to files in which they have been mentioned.
-
-#### `generateFiles.indexFiles`
-
-[doc-config-indexFiles]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-indexfiles-items.md
-
-- **Range:** `Array<{file: string, glossary: string, [title: string], [hideDeepLinks: boolean]}>` ([details][doc-config-indexFiles])
-- **Since:** v3.0.0
-
-Similar to `indexFile` but allows for generating multiple index files, e.g. one per glossary.
-
-#### `generateFiles.listOf`
-
-[doc-config-listOf]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-generatefiles-properties-listof-items.md
-
-- **Range:** `Array<{class: string, file: string, [title: string]}>` ([details][doc-config-listof])
-- **Since:** v3.5.0
-
-If available, generates a list from HTML anchors exposing the configured `class` attribute.
-
-#### `generateFiles.listOfFigures`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.3.0
-
-Generates a list of figures with links to sections where the figures have been mentioned.
-
-#### `generateFiles.listOfTables`
-
-- **Range:** `{file: string, [title: string, class: string]}`
-- **Since:** v3.4.0
-
-Generates a list of tables.
-
-#### `glossaries`
-
-- **Range:** `Array`
-~~~
-[
-  {
-    file: string,
-    termHint: string,
-    sort: string],
-    uri: string,
-    linkUris: boolean,
-    showUris: boolean|string,
-    import: {},
-    export: {},
-  }
-]
-~~~
-- **Default:** `[{ "file": "./glossary.md", "termHint": "" }]`
-
-A list of glossary configuations, each with a path to the glossary file. Every
-glossary may have an optional *termHint*. A *termHint* is a symbol character
-being appended to term occurrences in order to indicate which glossary or
-category a term belongs to. A term hint may be any UTF-8 character or character
-sequence. If you would like to have the glossary sorted provide a *sort* direction
-`"asc"` or `"desc"`.
-
-#### `glossaries[].export`
-
-[doc-config-export]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-export-oneof-0.md
-
-- **Range:** `{ file: string [, context: string]} | Array<{ file: string [, context: string]}>` ([details][doc-config-export])
-- **Since:** v6.0.0
-
-Export markdown terms in a structured JSON format. More read [here][doc-export-import].
-
-#### `glossaries[].import`
-
-[doc-config-import]: https://github.com/about-code/glossarify-md/blob/master/conf/v5/doc/schema-defs-glossaryfile-properties-import.md
-
-- **Range:** `{ file: string [, context: string]}` ([details][doc-config-import])
-- **Since:** v6.0.0
-
-Import terms from a structured JSON format and generate a markdown glossary from it. For an example see [here][doc-export-import].
-
-#### `glossaries[].linkUris`
-
-- **Range:** `boolean`
-- **Default:** `false`
-- **Since:** v6.0.0
-
-When `true`, occurrences of glossary terms found in text will no longer be linked with the markdown glossary file but with an external definition on the web using a term's URI. The given glossary file will serve as a data source for a link title providing a short tooltip and may still be found from [indexFiles](#generatefilesindexfiles).
-
-#### `glossaries[].showUris`
-
-- **Range:** `boolean|string`
-- **Default:** `false`
-- **Since:** v6.0.0
-
-When being `true` or being a template string with a placeholder `${uri}` then render term URIs in glossaries generated from [imported][doc-export-import] terms.
-
-#### `glossaries[].uri`
-
-See also [Vocabulary URIs][doc-vocabulary-uris].
-
-#### `ignoreCase`
-
-- **Range:** `boolean`
-
-When true any occurrence of a term will be linked no matter how it was spelled.
-
-#### `includeFiles`
-
-- **Range:** `string[]`
-
-Paths or Glob-Patterns for files to include. Default: `.` (includes all Markdown files within the current directory and its subdirectories). See also [`excludeFiles`](#excludefiles) and ([`keepRawFiles`](#keeprawfiles)).
-
-#### `indexing`
-
-- **Range:** `Object`
-~~~
-{
-  headingDepths: number[],
-  groupByHeadingDepth: number,
-}
-~~~
-
-#### `indexing.groupByHeadingDepth`
-
-- **Range:** `number` in [1-6]
-- **Default:** 6
-- **Since:** v3.4.0
-
-This option affects outputs generated with `generateFiles`. By default when
-indexing terms and markdown elements they are being grouped by the heading of
-the section they've been found in. In larger books with many sections and
-subsections this can lead to Index files or *Tables of X* with a lot of group
-headings (many representing sub- and subsubsections). Yet often it's enough for
-an Index to only list the chapter or higher-level sections where some term or
-element has been found in. This option allows to set the depth by which
-elements shall be grouped where `1` refers to chapters (`#` headings).
-
-#### `indexing.headingDepths`
-
-- **Range:** `number[]` in 1-6
-- **Default:** `[1,2,3,4,5,6]`
-- **Since:** v5.0.0
-
-An array with items in a range of 1-6 denoting the depths of headings that should be indexed. Excluding some headings from indexing is mostly a performance optimization, only. You can just remove the option from your config or stick with defaults. Change defaults only if you are sure that you do not want to have cross-document links onto headings at a particular depth, no matter whether the link was created automatically or written manually. Default is `[1,2,3,4,5,6]`.
-
-The relation to [`linking.headingDepths`](#linkingheadingdepths) is that *this* is about *knowing the link targets* whereas the latter is about *creating links automatically ...based on knowledge about link targets*. Yet, indexing of headings is further required for existing (cross-)links like `[foo](#heading-id)` and resolving the path to where a heading with such id was declared, so for example `[foo](../document.md#heading-id)`.
-
-#### `i18n`
-
-- **Range**: `Object`
-~~~
-{
-  locale: string,
-  [localeMatcher: string],
-  [caseFirst: string],
-  [ignorePunctuation: boolean],
-  [numeric: boolean],
-  [sensitivity: string],
-  [usage: string]
-}`
-~~~
-
-Locale options to control [sorting](#sorting-glossaries). See [`Intl.Collator`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator).
-
-#### `keepRawFiles`
-
-- **Range:** `string[]`
-
-Paths or Glob-Patterns for Markdown files to copy to `outDir` but keep there as they are without
-glossarifying and linking. Non-markdown files won't be processed anyways, so no need to add those.
-
-#### `linking`
-
-- **Range:** `Object`
-
-~~~
-{
-  baseUrl: string,
-  byReferenceDefinition: boolean,
-  paths: "relative" | "absolute",
-  pathComponents: ["path", "file", "ext"],
-  pathRewrites: {},
-  mentions: "all" | "first-in-paragraph",
-  headingAsLink: boolean,
-  headingDepths: number[],
-  headingIdAlgorithm: "github" | "md5" | "md5-7" | "sha256" | "sha256-7",
-  headingIdPandoc: boolean,
-  limitByAlternatives: number
-  limitByTermOrigin: ["self", "parent", "sibling", "child", "parent-sibling"]
-}
-~~~
-
-#### `linking.baseUrl`
-
-- **Range:** `string`
-
-URL to prepend to links. Only effective with `linking.paths: "absolute"`. In most situations, e.g. when hosting markdown files in a repository or processing markdown files with an HTML converter omitting a pre-defined `baseUrl` and using `linking.paths: "relative"` is likely to work better.
-
-#### `linking.byReferenceDefinition`
-
-- **Range:** `boolean`
-- **Default:** `true`,
-- **Since:** v6.0.0
-
-Whether to convert inline-links to [link reference definitions] (size-efficient).
-
-#### `linking.headingAsLink`
-
-- **Range:** `boolean`
-- **Default:** `true`
-- **Since:** v6.0.0
-
-Whether to linkify headings. Note that some Markdown-to-HTML renderers need headings to be linkified in order to be rendered URL-addressable and navigable. Others like [pandoc] don't need linkified headings but special syntax.
-
-See also:
-
-- [`linking.headingIdPandoc`](#linkingheadingidpandoc)
-
-#### `linking.headingDepths`
-
-- **Range:** `number[]` in 1-6
-- **Default:** `[2,3,4,5,6]`
-- **Since:** v5.0.0
-
-Use this option to select markdown heading depths which should be considered terms or sections for cross-linking. For example, to only consider headings `## text` at depth 2 or `### text` at depth 3 but not at depths 1 and 4-6 provide an array `[2,3]`
-
-> **ⓘ Note:** Headings at the given depths must be indexed. So they must be in the set of [`indexing.headingDepths`](#indexingheadingdepths).
-
-
-#### `linking.headingIdAlgorithm`
-
-[headingIdAlgorithm]: #linkingheadingidalgorithm
-
-- **Range:** `"github" | "md5" | "md5-7" | "sha256" |"sha256-7"`
-- **Default:** `"github"`
-- **Since:** v6.0.0
-
-Algorithm to use for generating heading identifiers used as `#` URL-fragment ("slugs"). Option value `"github"` will only guarantee *uniqueness per file* whereas `md5` and `sha256` options will generate a hash *unique in the fileset*. The hash value will depend on
-
-~~~
-hash (
-  glossary file path,
-  glossary file name without file extension,
-  glossary uri,
-  github-slugger(term),
-  baseUrl
-)
-~~~
-
-where `baseUrl` will be used only if there's no glossary uri. The `*-7` hashsum variants truncate a hash to at most 7 symbols which are still unlikely to collide in normal books.
-
-#### `linking.headingIdPandoc`
-
-- **Range:** `boolean`
-- **Default:** false
-- **Since:** v6.0.0
-
-Since v5 there has been support for *parsing* pandoc-style heading IDs from input markdown. In v6 we added support for *writing*  pandoc-style `{#id}` identifiers to output markdown to facilitate postprocessing with [pandoc].
-
-> **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
-
-See also
-
-- [`linking.headingIdAlgorithm`](#linkingheadingidalgorithm)
-- [`linking.paths`](#linkingpaths)
-
-#### `linking.limitByAlternatives`
-
-- **Range:** `number[]` in -95 - +95
-- **Default:** 95
-- **Since:** v5.0.0
-
-Control how a term occurrence is linkified if there are *multiple  definitions* of a term:
-
-- **positive value**: the system *creates links to alternative definitions but no more than `x` links*.
-- **negative value**: the system does *not create a term-link at all once there are more than `x` alternative definitions* of a term or heading.
-- **zero**: create a link but to a single out of all definitions, only
-
-
-#### `linking.limitByTermOrigin`
-
-- **Range:** `string[]` in `["self", "parent", "sibling", "child", "parent-sibling"]`
-- **Default:** `[]`
-- **Since:** v6.1.0
-
-Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only
-
-- when a term has been defined in a glossary in a parent directory (`"parent"`)
-- when it has been defined in a glossary next to the document file (`"sibling"`)
-- or within the glossary itself (`"self"`).
-
-The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the [`glossaries`](#glossaries) option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
-
-
-#### `linking.mentions`
-
-- **Range:** `"all" | "first-in-paragraph"`
-- **Default:** `"all"`
-- **Since:** v5.0.0
-
-By default every mention of a term will be linkified. Sometimes this can
-result in too much links affecting readability. This option provides finer
-control of linkify behavior.
-
-
-#### `linking.paths`
-
-[opt-linking]: #linkingpaths
-
-- **Range:** `"relative" | "absolute" | "none" `
-- **Default:** `"relative"`
-
-Whether to create absolute or relative link-urls to the glossary.
-
-> **Important:** Using `"absolute"` without a `baseUrl` will produce an absolute file system path which you might not want to publish.
-
-#### `linking.pathComponents`
-
-- **Range:** `string[] with "path", "file", "ext"`
-- **Default:** `["path", "file", "ext"]`
-- **Since:** v6.0.0
-
-Allows to tweak which components of a file path should make it into auto-generated links. Examples:
-
-- `["path", "file", "ext"]` => `./glossary/default.md#term`
-- `["path", "file"]` => `./glossary/default#term`
-- `["file"]` => `default#term`
-
-Use `linking.paths: "none"` if you would like to have a fragment (`#`) but no path components.
-
-#### `linking.pathRewrites`
-
-- **Range:** `{ [key: string]: string | string[] }`
-- **Default:** `{}`
-- **Since:** v6.2.0
-
-Key-Value map where *Value* is a single search string or an array of strings or regular expressions (RegExp) and *Key* is the replacement/rewrite string. See also [Paths and Urls][doc-paths-and-urls].
-
-#### `outDir`
-
-- **Range:** `string`
-
-The directory where to write output files to.
-
-> **Important:** using `.` or `./` is going to overwrite your input files. Only do this on a copy of your input
-> files or if you are able to roll back any changes or if you know the outcome satisfies your needs.
-
-The recommendation is to write outputs to a separate directory such as `../out` or `../target` or `../docs-glossarified`.
-
-
-#### `outDirDropOld`
-
-- **Range:** `boolean`
-
-If `true` remove old `outDir` before writing a new one, otherwise overwrite files. Drops orphan files that have intentionally been removed from `baseDir`.
-
-#### `reportNotMentioned`
-
-- **Range:** `boolean`
-
-Report on terms which exist in a glossary but have neither been mentioned directly nor with any of its aliases.
-
-#### `unified`
-
-[opt-unified]: #unified
-
-- **Range:** `{ rcPath: string } | { settings: object, plugins: object|array }`
-
-Extended [unified configuration][unified-config]. See also [Markdown Syntax Extensions][doc-syntax-extensions].
 
 ## Special Thanks go to
 

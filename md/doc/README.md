@@ -1,5 +1,9 @@
 [doc-cli]: ./cli.md
 [doc-config]: ../conf/README.md
+[doc-cross-linking]: ./cross-linking.md
+[doc-cross-linking-auto]: ./cross-linking.md#term-based-auto-linking
+[doc-cross-linking-id]: ./cross-linking.md#identifier-based-cross-linking
+[doc-cross-linking-tree]: ./cross-linking.md#tree-scoped-linking
 [doc-dev-conceptual-layers]: ./conceptual-layers.md
 [doc-dev-node-types]: ../lib/ast/with/node-type.md
 [doc-export]: ./export.md
@@ -26,32 +30,33 @@
 
 # Documentation
 
-Extended Documentation covering all of [README.md] and more (marked with *).
+Extended Documentation covering all of [README.md] (marked with *) and more...
 
 Setup
 
-- [Install][doc-install]
+- [Install][doc-install] *
 - [Configure][doc-config]
-- [Command Line Interface][doc-cli] *
-- [Node Support Matrix](../README.md#node-support-matrix)
+- [Command Line Interface][doc-cli]
+- [Node Support Matrix](../README.md#node-support-matrix) *
 
 Glossary Basics
 
-- [Basic Glossary Example](../README.md#sample)
-- [Term Attributes](./term-attributes.md) *
-  - [Aliases and Synonyms](../README.md#aliases-and-synonyms)
-- [Term Hints](../README.md#term-hints)
-- [Multiple Glossaries](../README.md#multiple-glossaries)
-- [Sorting Glossaries](../README.md#sorting-glossaries)
+- [Basic Glossary Example](../README.md#sample) *
+- [Aliases and Synonyms](../README.md#aliases-and-synonyms) *
+- [Term Hints](../README.md#term-hints) *
+- [Multiple Glossaries](../README.md#multiple-glossaries) *
+- [Sorting Glossaries](../README.md#sorting-glossaries) *
+- [Term Attributes](./term-attributes.md)
 
 Book Writing
 
-- [Cross Linking](../README.md#cross-linking)
-  - [Term-Based Auto-Linking](../README.md#term-based-auto-linking)
-  - [Identifier-based Cross-Linking](../README.md#identifier-based-cross-linking)
-- [References][doc-references] *
+- [Cross Linking][doc-cross-linking]
+  - [Term-Based Auto-Linking][doc-cross-linking-auto]
+  - [Identifier-based Cross-Linking][doc-cross-linking-id]
+  - [Tree-Scoped Linking][doc-cross-linking-tree]
+- [References][doc-references]
 
-Generating Files *
+Generating Files
 
 - [Book Index][doc-gen-book-index]
 - [Lists][doc-gen-lists]
@@ -59,21 +64,21 @@ Generating Files *
   - [List of Tables][doc-gen-lists-of-tables]
   - [Lists from Regular Expressions][doc-gen-lists-from-regexp]
 
-Publishing *
+Publishing
 
 - [Paths and URLs][doc-path-rewriting]
 - [Using glossarify-md with vuepress][doc-with-vuepress]
 - [Using glossarify-md with pandoc][doc-with-pandoc]
 - [Using glossarify-md with Hugo][doc-with-hugo]
 
-Importing and Exporting Terms *
+Importing and Exporting Terms
 
 - [Import][doc-import]
 - [Export][doc-export]
 - [URIs as Identifiers for Definitions of Meaning][doc-vocabulary-uris]
 - [Interoperability with SKOS and JSON-LD][doc-skos-interop]
 
-Dealing with Non-Standard Markdown Syntax *
+Dealing with Non-Standard Markdown Syntax
 
 - [Markdown Syntax Extensions][doc-syntax-extensions]
 - [Installing Syntax Plug-ins][doc-plugins]
@@ -82,7 +87,7 @@ Dealing with Non-Standard Markdown Syntax *
   - Directives
   - etc.
 
-Developer Resources *
+Developer Resources
 
 - [Conceptual Layers of glossarify-md][doc-dev-conceptual-layers]
 - [Writing Plug-ins][doc-plugins-dev]
