@@ -336,7 +336,7 @@ A character sequence to use as the field separator.
 
 *   is required
 
-*   Type: `string` ([Delimiter](schema-defs-csv-dialect-properties-delimiter.md))
+*   Type: `string`
 
 #### delimiter Default Value
 
@@ -346,22 +346,40 @@ The default value is:
 ";"
 ```
 
-### doubleQuote
+### quoteChar
 
-Specifies the handling of quotes inside fields. If Double Quote is set to true, two consecutive quotes must be interpreted as one.
+A one-character string for surrounding field values in CSV data (no matter whether being a numeric value or an alphanumeric value or something else). Uses the quote character " by default. A CSV field whose field value is text containing quotes is required to embed the whole text value between two `quoteChar` as well as escaping the quotes in the text data using `escapeChar`. For example a raw value of ;This is "quoted" text; is expected to be encoded in CSV as ;"This is ""quoted"" text"; where the outer quotes are `quoteChars` and the inner quotes each are preceeded by an `escapeChar` (which is a quote character by default, either).
 
-`doubleQuote`
+`quoteChar`
 
-*   is required
+*   is optional
 
-*   Type: `boolean` ([Double Quote](schema-defs-csv-dialect-properties-double-quote.md))
+*   Type: `string`
 
-#### doubleQuote Default Value
+#### quoteChar Default Value
 
 The default value is:
 
 ```json
-true
+"\""
+```
+
+### escapeChar
+
+Specifies a one-character string to use as an escape character within a field value. Uses the quote " character as a default which requires encoding quotes in text data using two consecutive quotes (one being the escape character and one being the actual quote of the data). This is a very common encoding scheme. However, change this to an empty string to disable escaping, completely or use another character as needed.
+
+`escapeChar`
+
+*   is optional
+
+*   Type: `string`
+
+#### escapeChar Default Value
+
+The default value is:
+
+```json
+"\""
 ```
 
 ## Definitions group csvTableSchema
@@ -382,7 +400,7 @@ Reference this group by using
 
 *   is required
 
-*   Type: `object[]` ([Table Schema Field](schema-defs-table-schema-properties-fields-table-schema-field.md))
+*   Type: `object[]` ([Details](schema-defs-csvtableschema-properties-fields-items.md))
 
 #### fields Constraints
 
@@ -406,7 +424,7 @@ A name for this field.
 
 *   is optional
 
-*   Type: `string` ([Name](schema-defs-table-schema-field-properties-name.md))
+*   Type: `string`
 
 #### name Default Value
 

@@ -28,7 +28,7 @@ A CSV dialect descriptor. Similar to dialect in a <https://frictionlessdata.io> 
 
 *   is optional
 
-*   Type: `object` ([CSV Dialect](schema-defs-csv-dialect.md))
+*   Type: `object` ([Details](schema-defs-csvdialect.md))
 
 ### dialect Default Value
 
@@ -36,8 +36,7 @@ The default value is:
 
 ```json
 {
-  "delimiter": ";",
-  "doubleQuote": true
+  "delimiter": ";"
 }
 ```
 
@@ -53,4 +52,4 @@ A mapping of CSV table fields onto SKOS terms, e.g.
 
 *   is optional
 
-*   Type: `object` ([Table Schema](schema-defs-table-schema.md))
+*   Type: `object` ([Details](schema-defs-csvtableschema.md))

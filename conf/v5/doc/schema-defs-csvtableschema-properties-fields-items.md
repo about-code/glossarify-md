@@ -10,7 +10,7 @@ A name for this field.
 
 *   is optional
 
-*   Type: `string` ([Name](schema-defs-name.md))
+*   Type: `string`
 
 ### name Default Value
 

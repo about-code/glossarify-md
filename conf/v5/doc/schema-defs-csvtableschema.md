@@ -10,7 +10,7 @@
 
 *   is required
 
-*   Type: `object[]` ([Table Schema Field](schema-defs-table-schema-field.md))
+*   Type: `object[]` ([Details](schema-defs-csvtableschemafield.md))
 
 ### fields Constraints
 
