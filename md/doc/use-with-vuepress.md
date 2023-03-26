@@ -1,7 +1,7 @@
 # Using glossarify-md with vuepress
 <!-- aliases: Use with VuePress -->
 
-[doc-v6]: https://github.com/about-code/glossarify-md/blob/v6.3.3/doc/use-with-vuepress.md
+[doc-v6]: https://github.com/about-code/glossarify-md/blob/v6.3.3/doc/use-with-vuepress.md#configure-vuepress
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 [vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
 [vp-emoji]: https://vuepress.vuejs.org/guide/markdown.html#emoji
@@ -74,14 +74,13 @@ glossarify-md and vuepress need to be aligned in how they create hyperlink URLs 
 
 
 > ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent. 
+> For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
+> 
+> 1. Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
+> 2. As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
 
-**Example**: non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
 
-1. Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
-
-2. As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
-
-### vuepress 2.x
+### Configure vuepress 2.x
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -101,7 +100,7 @@ module.exports = {
 ~~~
 
 
-### vuepress 1.x
+### Configure vuepress 1.x
 
 > ⚠ **We recommend [using vuepress 1.x with glossarify-md <= v6, only][doc-v6]**. Using glossarify-md v7 with vuepress 1.x should be possible but requires you to install a CommonJS version of [github-slugger v1][github-slugger] for yourself while glossarify-md uses [github-slugger v2][github-slugger]. Slugs should be compatible, because [github-slugger v1 and v2 still implement the same algorithm][github-slugger-diff] but the mere fact that vuepress and glossarify-md no longer physically execute the same code to generate slugs makes it more likely to break in a future when some major release of glossarify-md starts using a potentially incompatbile [github-slugger v3][github-slugger].  
 
