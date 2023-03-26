@@ -1,7 +1,7 @@
 {
   "$schema": "../../../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../../../output-actual/config-glossaries/import-csv/with-headings-as-fields",
+  "outDir": "../../../../output-actual/config-glossaries/import-csv/with-headers-configured",
   "glossaries": [{
     "file": "./glossary.md",
     "import": {
@@ -21,6 +21,6 @@
     }
   }],
   "dev": {
-    "termsFile": "../../../../output-actual/config-glossaries/import-csv/with-headings-as-fields/terms.json"
+    "termsFile": "../../../../output-actual/config-glossaries/import-csv/with-headers-configured/terms.json"
   }
 }

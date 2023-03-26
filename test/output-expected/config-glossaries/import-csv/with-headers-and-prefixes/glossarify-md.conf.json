@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-glossaries/import-csv/with-headers-and-prefixes",
+  "glossaries": [{
+    "file": "./glossary.md",
+    "import": {
+      "file": "./glossary.csv"
+    }
+  }],
+  "dev": {
+    "termsFile": "../../../../output-actual/config-glossaries/import-csv/with-headers-and-prefixes/terms.json"
+  }
+}
