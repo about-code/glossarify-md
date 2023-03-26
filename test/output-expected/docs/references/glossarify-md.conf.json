@@ -1,0 +1,11 @@
+{
+    "$schema": "../../../../conf/v5/schema.json",
+    "baseDir": ".",
+    "outDir": "../../../output-actual/docs/references",
+    "glossaries": [{
+        "file": "./references.md"
+    }],
+    "linking": {
+        "headingIdAlgorithm": "md5-7"
+    }
+}
