@@ -142,6 +142,6 @@ If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in so
 
 [10]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
 
-[11]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0"
+[11]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
 [12]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."

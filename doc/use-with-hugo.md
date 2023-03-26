@@ -228,4 +228,4 @@ There may be two reasons:
 
 [15]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#syntax-plug-ins "Syntax Plug-ins extend Markdown syntax itself, like remark-frontmatter, for example."
 
-[16]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-hugo.md#shortcodes-in-markdown-links "https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898"
+[16]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-hugo.md#shortcodes-in-markdown-links "https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898 glossarify-md can be enhanced with syntax plug-ins to accept shortcode syntax."

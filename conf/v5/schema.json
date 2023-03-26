@@ -54,7 +54,7 @@
             ,"default": ["."]
         }
         ,"indexing": {
-            "description": "Path or glob patterns of files to include for linking to glossaries."
+            "description": "Options configuring the indexer."
             ,"$ref": "#/$defs/indexing"
             ,"default": {
                 "groupByHeadingDepth": 6
@@ -352,7 +352,7 @@
                     ,"maximum": 6
                 }
                 ,"headingDepths": {
-                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Excluding headings from indexing is mostly a performance optimization, applicable when only headings at a particular depth should participate in id-based cross-linking or term-based auto linking. Note that it is possible to keep indexing all headings to support manually written id-based cross-links for all headings but restricting auto-linking to a subset of headings at a particular depth using `linking.headingDepths` (see `linking` options)."
+                    "description": "An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Most of the time `linking.headingDepths` should be preferred to exclude certain headings from term-based auto linking. Excluding headings from indexing not only affects auto-linking but more such as path resolution for manual ID-based cross-links, generation of lists or book indexes and other features. Excluding headings from indexing is mostly a performance optimization applicable when headings at a particular level are never used or never required to be linkified."
                     ,"type": "array"
                     ,"items": {
                         "type": "integer"

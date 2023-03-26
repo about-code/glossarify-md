@@ -259,7 +259,7 @@ Our expression uses a Capture Group in brackets `()`. Text matching the capture 
 
 See also page [Plug-ins][14].
 
-[1]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-videos "Tutorial Part 1"
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-videos "Tutorial Part 1 You can type less when prefixing ids with your list classifier: Without a title attribute the tool attempts to derive a list item label from an elements inner text content: Use invisible HTML anchors to generate lists from and navigate to text content: ⓘ Note: If you find the browser not scrolling correctly when navigating lists on GitHub, please read Known Issues: Lists in GitHub Repos."
 
 [2]: https://github.com/about-code/glossarify-md
 
@@ -269,7 +269,7 @@ See also page [Plug-ins][14].
 
 [5]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#generating-files-lists "You can generate arbitrary lists from HTML elements with an id attribute and an element classifier to compile similar elements into the same list."
 
-[6]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-tables "listOfTables like listOfFigures is a shortcut alternative to HTML anchors with a default listOf classifier table:"
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-tables "listOfTables like listOfFigures is a shortcut alternative to HTML anchors with a default listOf classifier table: glossarify-md.conf.json In contrast to images Markdown tables have no notion of a table caption."
 
 [7]: https://plantuml.com "Generates diagrams from text files written in the PlantUML syntax."
 

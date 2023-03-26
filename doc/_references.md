@@ -263,7 +263,7 @@ An easy to [install][25] local or on-premises [npm 🌎][14] registry.
 
 [21]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[22]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer"
+[22]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."
 
 [23]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
 

@@ -188,7 +188,7 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 [1]: https://github.com/about-code/glossarify-md
 
-[2]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0"
+[2]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
 [3]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https."
 

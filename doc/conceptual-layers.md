@@ -18,7 +18,7 @@ aliases: Conceptual Layers
 
 When looking for non-standard [Markdown syntax extensions][9] you should be looking for [remark 🌎][5] [plug-ins][10]. Those plug-ins are likely to depend on and transitively [install][11] their preferred or required [micromark 🌎][7] extension themselves. Others may operate on layer 2 using a simpler RegEx parsing. One plug-in [glossarify-md][2] already installs itself is [remark-gfm 🌎][12] which adds support for the popular [CommonMark 🌎][8] syntax extension [GitHub Flavoured Markdown 🌎][13] (tables, footnotes and more).
 
-[1]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer"
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."
 
 [2]: https://github.com/about-code/glossarify-md
 

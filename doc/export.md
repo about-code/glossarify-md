@@ -46,7 +46,7 @@ With [jsonld 🌎][3] installed alongside [glossarify-md][2] terms can also be e
 }
 ```
 
-[1]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0"
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
 [2]: https://github.com/about-code/glossarify-md
 

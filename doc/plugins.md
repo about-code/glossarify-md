@@ -89,10 +89,10 @@ If you would like to learn more about how *[unified 🌎][10]* and *[remark 🌎
 
 [7]: https://npmjs.com "Node Package Manager."
 
-[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0"
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
 [9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#writing-a-plug-in
 
 [10]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[11]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer"
+[11]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."

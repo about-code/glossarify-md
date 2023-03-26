@@ -5,6 +5,8 @@
 
 [CommonMark]: https://www.commonmark.org
 
+[doc-book-index]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-book-index.md
+
 [doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
 [doc-cross-linking]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md
@@ -55,7 +57,9 @@
 - [Install](#install)
 - [Configuration](#configuration)
 - [Sample](#sample)
-- [What's not Linked](#whats-not-linked)
+  - [Input](#input)
+  - [Output](#output)
+- [What's not being linkified](#whats-not-being-linkified)
 - [Aliases and Synonyms](#aliases-and-synonyms)
 - [Term Hints](#term-hints)
 - [Multiple Glossaries](#multiple-glossaries)
@@ -93,7 +97,7 @@ When installing locally you might want to set up a shortcut by adding a run scri
 }
 ```
 
-Now use:
+Next time you're able to use:
 
 ```
 npm run glossarify
@@ -110,22 +114,19 @@ glossarify-md --config ./glossarify-md.conf.json
 
 ## Configuration
 
-If you've followed the installation instructions you are already set up for a quick start with a minimal configuration.
+By following the installation instructions you should be set up with a minimal configuration:
 
 *Minimal Configuration*
 
 ```json
 {
-  "$schema": "./conf/v5/schema.json",
+  "$schema": "./node_modules/glossarify-md/conf/v5/schema.json",
   "baseDir": "./docs",
-  "outDir": "../docs-glossarified",
-  "glossaries": [
-    { "file": "./glossary.md" }
-  ]
+  "outDir": "../docs-glossarified"
 }
 ```
 
-For customizing your configuration **[see more options here][doc-config]**.
+**[More configuration options here][doc-config]**.
 
 ## Sample
 
@@ -148,9 +149,9 @@ ${root}
    `- glossarify-md.conf.json
 ```
 
-**Input**
+### Input
 
-Your original glossary is a file
+Your original glossary is a file with *term definitions*
 
 *docs/glossary.md*
 
@@ -162,12 +163,12 @@ Your original glossary is a file
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-Your document files may just use the term *Term* anywhere in text:
+The term *Term* may occurs anywhere in the rest of your document files:
 
 *./docs/pages/page1.md...*
 
 ```md
-# Demo
+# Document
 
 This is a text which uses a glossary Term to describe something.
 ```
@@ -178,21 +179,21 @@ Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration):
 npx glossarify-md --config ./glossarify-md.conf.json
 ```
 
-**Output Results**
+### Output
 
 Augmented versions of the source files have been written to the output directory:
 
-*./docs-glossarified/pages/page1.md*
+*Source: ./docs-glossarified/pages/page1.md*
 
 ```md
-# [Demo](#demo)
+# [Document](#document)
 
 This is a text which uses a glossary [Term][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
 
-*Rendered as HTML:*
+*When rendered to HTML:*
 
 > ## [Demo](#demo)
 >
@@ -200,9 +201,7 @@ This is a text which uses a glossary [Term][1] to describe something.
 >
 > [1]: #term "A glossary term has a short description."
 
-Headings in glossary files have got an anchor ID and have been made linkable:
-
-*./docs-glossarified/glossary.md*:
+*Source: ./docs-glossarified/glossary.md*:
 
 ```md
 # [Glossary](#glossary)
@@ -212,7 +211,7 @@ Headings in glossary files have got an anchor ID and have been made linkable:
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-*Rendered as HTML*:
+*When rendered to HTML*:
 
 > ## [Glossary](#glossary)
 >
@@ -220,17 +219,16 @@ A glossary term has a short description. The full description contains both sent
 >
 > A glossary term has a short description. The full description contains both sentences.
 
-## What's not Linked
+## What's not being linkified
 
-Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary. Terms are not linkified when part of:
+Some syntactic positions of a term occurrence are **excluded** from being linked to the glossary, for example when the term occurs in:
 
+- HTML `<a>text</a>`
 - Headlines `#`
 - (Markdown) links `[]()`
 - Preformatted blocks ` ```, ~~~ `
 - Blockquotes `>`
-- HTML `<a>text</a>`
-
-Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
+  - Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
 > **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][doc-cross-linking].
 
@@ -278,13 +276,11 @@ That's all you need to know for a quick start. Continue reading to learn about a
 
 Glossaries can be associated with *term hints*. Term hints may be used to indicate that a link refers to a glossary term and in case of [multiple glossaries][multiple-glossaries] to which one. Use `"${term}"` to control placement of a `termHint`. For example, `"☛ ${term}"` puts the symbol `☛` in front of a linkified term occurrence.
 
-> **ⓘ Since v5.0.0**: `file` can also be used with a [glob] pattern. More see [Cross-Linking][doc-cross-linking].
-
 ## Multiple Glossaries
 
 [multiple-glossaries]: #multiple-glossaries
 
-Sometimes you might whish to have multiple glossaries. For example as a Requirements Engineer you may not just have a glossary of business terms but also a requirements catalogue:
+Sometimes you might whish to have multiple glossaries:
 
 *glossarify-md.conf.json*
 
@@ -305,7 +301,9 @@ Sometimes you might whish to have multiple glossaries. For example as a Requirem
 <!-- aliases: REQ-2 -->
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index](#book-index).
+By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index][doc-book-index].
+
+**Since v5.0.0** `file` can also be used with a [glob] pattern. This way each markdown file matching the pattern is considered a glossary. More see [Cross-Linking][doc-cross-linking].
 
 ## Sorting Glossaries
 
@@ -335,10 +333,10 @@ The `i18n` object is passed *as is* to the collator function. Thus you can use a
 ## [Advanced Topics][doc-extended]
 
 - Importing and exporting terms
+- Generating files, such as a book index, lists of figures, etc.
 - Cross-Linking more than just terms
-- Generating book index and lists of figures, etc.
 - Using glossarify-md with other tools, like [vuepress], [pandoc] or [Hugo]
-- Dealing with Non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
+- Dealing with non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
 - [...and more][doc-extended]
 
 ## Node Support Matrix
@@ -357,8 +355,8 @@ The term *support* refers to *runs on the given platform* and is subject to the 
 
 - [John Gruber](https://daringfireball.net/projects/markdown/), author of the Markdown syntax
 - [John MacFarlane  et al.](https://github.com/commonmark-spec), initiators and authors of the CommonMark specification
-- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and many more
-- and all the other great people publishing modules of value to the tool - directly or transitively.
+- [Titus Wormer](https://github.com/wooorm), author of [unifiedjs](https://unifiedjs.com/), [remarkjs](https://github.com/remarkjs) and so much more
+- All the other great people publishing modules of value for the tool, be it directly or transitively.
 
 ## License
 

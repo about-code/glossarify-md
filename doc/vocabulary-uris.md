@@ -101,7 +101,7 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 
 [5]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
-[6]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0"
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
 [7]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md#uri "A unique identifier for the term and the definition of it's meaning."
 
