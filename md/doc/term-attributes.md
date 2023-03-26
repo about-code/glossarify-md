@@ -1,39 +1,35 @@
 # Term Attributes
 
-[doc-aliases]: ../README.md#aliases-and-synonyms
-[doc-vocabularies]: ./vocabulary-uris.md
+Term Attributes provide additional metadata for a term. They are passed in a comment following a term heading:
 
-Term Attributes are passed in a comment following a term's heading. The comment text must adhere to YAML syntax.
-
-**Since v6.3.0** glossarify-md supports YAML syntax. Its easy to learn and a natural fit with Markdown. For example, this will be all you need to understand and use term attributes:
-
-*my-glossary.md*
 ~~~md
 # Term Heading
-<!-- 
-  attr-key: This is an attribute's value
-  list-attr-key:
-  - This is a list attribute's list value 0
-  - This is a list attribute's list value 1
-  - etc.
+<!--
+key1: value
+key2:
+- list value 0
+- list value 1
 -->
-...
+
+Term definition here.
 ~~~
 
-> **ⓘ Note:** YAML syntax is *case-sensitive* and  like Markdown it is *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
+**Since v6.3.0** term attributes use YAML syntax. The example shows two term attributes `key1` and `key2` where `key2` has multiple attribute values.
+
+> **ⓘ Note:** YAML syntax is *case-sensitive* and *sensitive to tabs and whitespaces* (like Markdown). As a rule of thumb: our own term attributes will be all lowercase.
 
 
-## Attributes
+## Supported Term Attributes
 
 ### `aliases`
 
-Comma-separated string or a string array listing alternative spellings that should be linked with a term definition when found in text. More see [README.md][doc-aliases]
+Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text. More see README.md
 
-> **ⓘ Note:** You may find that an uppercase `Aliases: ` term attribute works as well. This is going to be the only attribute for which an uppercase name remains supported *for backwards compatibility*. 
+> **ⓘ Note:** Uppercase `Aliases` remains to be supported for backwards compatibility.
 
 ### `uri`
 
-An identifier for the term's *meaning*. Can be used to link term occurrences to an authoritative definition on the web instead of linking term occurrences to a markdown book's glossary. Web linking requires setting `linkUris: true` for a `glossaries` item in a glossarify-md configuration file. More see *[URIs as Identifiers for Definitions of Meaning][doc-vocabularies]* 
+A unique identifier for the term and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a glossarify-md configuration file to link term occurrences to an authoritative definition on the web using the term's `uri` term attribute. See also *URIs as Identifiers for Definitions of Meaning*.
 
 # Addendum
 
@@ -41,7 +37,7 @@ There's going to be continued support for JSON term attribute syntax, for backwa
 
 ~~~md
 # Term Heading
-<!--{ 
+<!--{
   "attr-key": "This is a simple attribute's value",
   "list-attr-key": [
     This is a list attribute's list value 0,
@@ -79,7 +75,7 @@ Replace:  <!-- $1: $2 -->
 *Input (JSON)*
 ~~~md
 # Term
-<!--{ 
+<!--{
   "aliases": "alias 1, alias2",
   "uri": "https://foo.bar.org"
 }-->
@@ -104,7 +100,7 @@ Replace:
 
 ~~~md
 # Term
-<!-- 
+<!--
   aliases: alias 1, alias2
   uri: https://foo.bar.org
 -->

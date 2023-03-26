@@ -17,7 +17,7 @@
     "rules": {
         "semi": [ "error", "always" ]
         ,"quotes": [ "error", "double" ]
-        ,"indent": [ "error", 4 ]
+        ,"indent": [ "error", 4, { "SwitchCase": 1 } ]
         ,"dot-location": ["error", "property"]
         ,"dot-notation": ["error"]
         ,"linebreak-style": [ "error", "unix" ]

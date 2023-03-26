@@ -126,7 +126,7 @@ The default value is:
 
 ## indexing
 
-Path or glob patterns of files to include for linking to glossaries.
+Options configuring the indexer.
 
 `indexing`
 
@@ -318,12 +318,138 @@ The default value is:
 
 # Configuration Schema Definitions
 
+## Definitions group csvDialect
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvDialect"}
+```
+
+
+
+### delimiter
+
+A character sequence to use as the field separator.
+
+`delimiter`
+
+*   is required
+
+*   Type: `string`
+
+#### delimiter Default Value
+
+The default value is:
+
+```json
+";"
+```
+
+### quoteChar
+
+A one-character string for surrounding field values in CSV data (no matter whether being a numeric value or an alphanumeric value or something else). Uses the quote character " by default. A CSV field whose field value is text containing quotes is required to embed the whole text value between two `quoteChar` as well as escaping the quotes in the text data using `escapeChar`. For example a raw value of ;This is "quoted" text; is expected to be encoded in CSV as ;"This is ""quoted"" text"; where the outer quotes are `quoteChars` and the inner quotes each are preceeded by an `escapeChar` (which is a quote character by default, either).
+
+`quoteChar`
+
+*   is optional
+
+*   Type: `string`
+
+#### quoteChar Default Value
+
+The default value is:
+
+```json
+"\""
+```
+
+### escapeChar
+
+Specifies a one-character string to use as an escape character within a field value. Uses the quote " character as a default which requires encoding quotes in text data using two consecutive quotes (one being the escape character and one being the actual quote of the data). This is a very common encoding scheme. However, change this to an empty string to disable escaping, completely or use another character as needed.
+
+`escapeChar`
+
+*   is optional
+
+*   Type: `string`
+
+#### escapeChar Default Value
+
+The default value is:
+
+```json
+"\""
+```
+
+## Definitions group csvTableSchema
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchema"}
+```
+
+
+
+### fields
+
+
+
+`fields`
+
+*   is required
+
+*   Type: `object[]` ([Details](schema-defs-csvtableschema-properties-fields-items.md))
+
+#### fields Constraints
+
+**minimum number of items**: the minimum number of items for this array is: `1`
+
+## Definitions group csvTableSchemaField
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaField"}
+```
+
+
+
+### name
+
+A name for this field.
+
+`name`
+
+*   is optional
+
+*   Type: `string`
+
+#### name Default Value
+
+The default value is:
+
+```json
+"http://www.w3.org/2004/02/skos/core#"
+```
+
+## Definitions group csvTableSchemaFieldName
+
+Reference this group by using
+
+```json
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaFieldName"}
+```
+
+
+
 ## Definitions group generateFiles
 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/generateFiles"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
 
@@ -383,7 +509,7 @@ Generate a file with a list of tables and where they can be found.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
@@ -486,7 +612,7 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFileExport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileExport"}
 ```
 
 
@@ -516,14 +642,14 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/glossaryFileImport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileImport"}
 ```
 
 
 
 ### file
 
-The JSON file to import terms from.
+The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'.
 
 `file`
 
@@ -533,7 +659,7 @@ The JSON file to import terms from.
 
 ### context
 
-File path or URL to a custom JSON-LD context document. Expected to map attributes and type names of a custom import document format onto terms of the well-known W3C SKOS vocabulary.
+File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology.
 
 `context`
 
@@ -546,7 +672,7 @@ File path or URL to a custom JSON-LD context document. Expected to map attribute
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/indexFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
 
@@ -596,7 +722,7 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/indexing"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexing"}
 ```
 
 
@@ -619,7 +745,7 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 ### headingDepths
 
-An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Excluding headings from indexing is mostly a performance optimization, applicable when only headings at a particular depth should participate in id-based cross-linking or term-based auto linking. Note that it is possible to keep indexing all headings to support manually written id-based cross-links for all headings but restricting auto-linking to a subset of headings at a particular depth using `linking.headingDepths` (see `linking` options).
+An array with items in a range of 1-6 denoting the depths of headings that should be indexed for cross-linking. Most of the time `linking.headingDepths` should be preferred to exclude certain headings from term-based auto linking. Excluding headings from indexing not only affects auto-linking but more such as path resolution for manual ID-based cross-links, generation of lists or book indexes and other features. Excluding headings from indexing is mostly a performance optimization applicable when headings at a particular level are never used or never required to be linkified.
 
 `headingDepths`
 
@@ -632,7 +758,7 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/listOfItemsFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/listOfItemsFile"}
 ```
 
 
@@ -682,7 +808,7 @@ A regular expression which when matching against text will generate an entry in 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/i18n"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/i18n"}
 ```
 
 
@@ -801,7 +927,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/linking"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/linking"}
 ```
 
 
@@ -937,11 +1063,11 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 ### limitByAlternatives
 
-This option can be used to limit the number of links, if there are multiple definitions of a term. When using a positive value, then the system creates links *no more than ...* alternative links. If the number is negative then the absolute amount indicates to *not link a term at all once there are at least ...* alternative definitions. For example:
-1 linkifies the term in text and adds a link to 1 alternative definition (superscript),
-0 only linkifies the term in text but adds 0 links to alternative definitions,
-\-1 does not linkify a term in text once there is at least 1 alternative definition.
-Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain template and thus repeatedly declare the same heading (= term).
+This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of
+5: makes the system link to *at most 5* alternative definitions per term
+\-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
+0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).
+Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once.
 
 `limitByAlternatives`
 
@@ -951,7 +1077,7 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 
 ### limitByTermOrigin
 
-Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
+Limits linkification based on the filesystem hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
 
 `limitByTermOrigin`
 
@@ -974,7 +1100,7 @@ When 'true' replaces markdown inline links with numbered references to a link re
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/unified"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -1016,7 +1142,7 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.1/conf/v5/schema.json#/$defs/dev"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/dev"}
 ```
 
 

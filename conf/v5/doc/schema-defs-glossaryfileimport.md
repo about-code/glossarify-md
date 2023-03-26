@@ -4,7 +4,7 @@
 
 ## file
 
-The JSON file to import terms from.
+The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'.
 
 `file`
 
@@ -14,7 +14,7 @@ The JSON file to import terms from.
 
 ## context
 
-File path or URL to a custom JSON-LD context document. Expected to map attributes and type names of a custom import document format onto terms of the well-known W3C SKOS vocabulary.
+File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology.
 
 `context`
 

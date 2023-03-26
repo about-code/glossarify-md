@@ -1,32 +1,27 @@
-# Managing References
+# Citations and References
 
-In order to cite a source on the web whenever using a particular term use a glossary configuration with `linkUris: true`:
+[Shannon1948]: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
 
-*glossarify-md.conf.json*
+A way to use glossarify-md for citing and linking is to have a file, e.g. `references.md` ...
+
+~~~md
+# References
+
+## Shannon1948
+<!-- uri: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x -->
+
+C. E. Shannon, "A mathematical theory of communication," in The Bell System Technical Journal, vol. 27, no. 3, pp. 379-423, July 1948, doi: 10.1002/j.1538-7305.1948.tb01338.x.
+~~~
+
+...and configure it as a glossary:
+
 ~~~json
 {
-  "glossaries": [
-    {
-      "file": "./references.md",
-      "linkUris": true
-    }
-  ]
+ "glossaries": [{
+    "file": "./references.md",
+    "linkUris": true
+  }]
 }
 ~~~
 
-Within file `./references.md` use the term attribute `uri` to provide the source's URL. Optionally you can add an `aliases` term attribute to make further terms refer to a particular source and provide a tooltip for the link.
-
-*references.md*
-~~~md
-## CommonMark
-<!-- uri: https://commonmark.org -->
-
-## Dublin Core
-<!--
-  uri: http://purl.org/dc/terms/
-  aliases: DC, DublinCore, dc:
--->
-The Dublin Core Metadata Initiative.
-~~~
-
-See an example by inspecting the markdown source of [_references.md](./_references.md) or this repository's [glossarify-md.conf.json](../glossarify-md.conf.json).
+Use `linkUris: true` to make glossarify-md link occurrences of [Shannon1948] to the web using its `uri`. With `linkUris: false` (default) it links to `references.md`.

@@ -164,11 +164,11 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 ## limitByAlternatives
 
-This option can be used to limit the number of links, if there are multiple definitions of a term. When using a positive value, then the system creates links *no more than ...* alternative links. If the number is negative then the absolute amount indicates to *not link a term at all once there are at least ...* alternative definitions. For example:
-1 linkifies the term in text and adds a link to 1 alternative definition (superscript),
-0 only linkifies the term in text but adds 0 links to alternative definitions,
-\-1 does not linkify a term in text once there is at least 1 alternative definition.
-Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain template and thus repeatedly declare the same heading (= term).
+This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of
+5: makes the system link to *at most 5* alternative definitions per term
+\-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
+0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).
+Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once.
 
 `limitByAlternatives`
 
@@ -178,7 +178,7 @@ Negative values may also be helpful when using 'glossaries' option with a glob p
 
 ## limitByTermOrigin
 
-Limits linkification based on the file hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
+Limits linkification based on the filesystem hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
 
 `limitByTermOrigin`
 

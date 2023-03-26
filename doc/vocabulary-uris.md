@@ -1,14 +1,18 @@
 # [URIs as Identifiers for *Definitions of Meaning*](#uris-as-identifiers-for-definitions-of-meaning)
 
+<!--
+aliases: Vocabulary URIs
+-->
+
 [headingIdAlgorithm]: ../README.md#headingidalgorithm
 
 [doc-import]: ../README.md#structured-export-and-import
 
 [doc-skos]: ./skos-interop.md
 
-Consider a [term★][1] *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
+Consider a [term][1] *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
 
-*A computer program* can't understand a natural language description of a [term★][1]'s meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
+*A computer program* can't understand a natural language description of a [term][1]'s meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
 
 *   `https://example.com/glossary/medicine/#skin`
 *   `https://example.com/glossary/computer-science/#skin`.
@@ -19,7 +23,7 @@ a computer can operate on symbols equivalent to *some meaning* without having to
 
 ## [Vocabulary URIs and Term URIs](#vocabulary-uris-and-term-uris)
 
-`glossaries` entries can be augmented with a `uri` config option which assigns a glossary a so-called *[vocabulary★][3] [URI★][4]*. Then on exporting *[term★][1] URIs* can be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how [glossarify-md][2] generates heading IDs).
+`glossaries` entries can be augmented with a `uri` [config option][3] which assigns a glossary a so-called *[vocabulary][4] [URI][5]*. Then on [exporting][6] *[term][1] URIs* can be derived from the vocabulary [URI][7] and a term's *heading ID* by appending the heading ID to the vocabulary URI (see [headingIdAlgorithm] for how [glossarify-md][2] generates heading IDs).
 
 ```json
 {
@@ -33,10 +37,10 @@ a computer can operate on symbols equivalent to *some meaning* without having to
 }
 ```
 
-If you need more control about a [term★][1]'s Term [URI★][4], then there are two switches you can tweak:
+If you need more control about a [term][1]'s Term [URI][5], then there are two switches you can tweak:
 
 *   providing a custom heading ID using pandoc-style `{#headingId}`
-*   providing a `uri` [term★][1] attribute
+*   providing a `uri` [term][1] attribute
 
 *Custom heading ID*
 
@@ -48,7 +52,7 @@ If you need more control about a [term★][1]'s Term [URI★][4], then there are
 Term with an individual URI.
 ```
 
-*`uri` [term★][1] attribute*:
+*`uri` [term][1] attribute*:
 
 ```md
 # Glossary
@@ -63,13 +67,13 @@ Term with an individual URI.
 
 ### [Resolvability](#resolvability)
 
-URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term★][1]'s [URI★][4] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md][2] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
+URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a [term][1]'s [URI][5] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make [glossarify-md][2] link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On [imported][doc-import] glossaries `showUris: true` or `showUris: "${uri}"` will render [URI][7] links in the markdown glossary generated from imported terms.
 
 ### [Authority](#authority)
 
-URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an [URI★][4] and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim authority in case of disputes over some definition.
+URIs for terms reveal the authoritative source for a particular definition, which in our example was `example.com`. While anyone could use any domain name in an [URI][5] and make it the identifier of something (like we did in our examples) only the legitimate domain name owner as registered in the Domain Name System (DNS) can claim [authority][8] in case of disputes over some definition.
 
-So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an [URI★][4]. So particularly when publishing a [vocabulary★][3] it is usually not a good idea to use someone else's domain.
+So in this particular example we could *not* veto if the owners of domain `example.com` chose to use above URIs to identify something else. By using another domain name than our own we effectively accept that there could be conflicting definitions wiping out the purpose of an [URI][5]. So particularly when publishing a [vocabulary][4] it is usually not a good idea to use someone else's domain.
 
 <!--
 Uniform Resource Names (URNs) may be an alternative to URIs. They do not depend on the Domain Name System as a registry but on an IANA registry of *URN namespaces*:
@@ -87,10 +91,18 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 ~~~
 -->
 
-[1]: ./glossary.md#term "A term is denoted by a heading in a markdown file which is told glossarify-md to be a glossary file."
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
 
-[2]: https://github.com/about-code/glossarify-md "This project."
+[2]: https://github.com/about-code/glossarify-md
 
-[3]: ./glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+[3]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
-[4]: ./glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+
+[5]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
+
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md#uri "A unique identifier for the term and the definition of it's meaning."
+
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/vocabulary-uris.md#authority "URIs for terms reveal the authoritative source for a particular definition, which in our example was example.com."

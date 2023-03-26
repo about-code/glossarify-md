@@ -4,25 +4,38 @@
   "outDir": "../../doc",
   "glossaries": [
     {
-      "file": "./glossary.md",
-      "termHint": "★"
+      "file": "./**/*.md"
     },
     {
       "file": "./_references.md",
+      "termHint": " 🌎",
+      "linkUris": true
+    },
+    {
+      "file": "./_pages.md",
       "linkUris": true
     }
   ],
+  "keepRawFiles": [
+    "README.md"
+  ],
+  "excludeFiles": [
+    "node_modules",
+    ".git"
+  ],
   "ignoreCase": true,
   "linking": {
-    "paths": "relative",
+    "baseUrl": "https://github.com/about-code/glossarify-md/blob/master/doc/",
+    "paths": "absolute",
     "mentions": "first-in-paragraph",
     "headingDepths": [
+      1,
       2,
       3,
       4,
       5,
       6
     ],
-    "limitByAlternatives": 10
+    "limitByAlternatives": 5
   }
 }

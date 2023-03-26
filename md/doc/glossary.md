@@ -1,8 +1,6 @@
-# Glossary
+# Glossary (Terms and Concepts of glossarify-md)
 
-[glossarify-md]: https://github.com/about-code/glossarify-md
-
-This is a glossary of terms helpful when working with [glossarify-md] or reading its docs. It also serves as an example and is processed by *glossarify-md* itself using the [glossarify-md.conf.json](../glossarify-md.conf.json) configuration at the root of this repo.
+This is a glossary of terms helpful when working with glossarify-md or reading its docs. It also serves as an example and is processed by glossarify-md itself using the [glossarify-md.conf.json](../glossarify-md.conf.json) configuration at the root of this repo.
 
 ## Alias
 
@@ -10,7 +8,7 @@ An alternative term or spelling for a term.
 
 ## Term
 
-A term is denoted by a heading in a markdown file which is told glossarify-md to be a *glossary file*.
+Terms are headings in a markdown file which has been configured to be a *glossary file*.
 
 ## Term Attribute
 <!-- aliases: term attributes, term-attribute -->

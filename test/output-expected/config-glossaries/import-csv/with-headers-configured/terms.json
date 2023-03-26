@@ -1,0 +1,63 @@
+[
+  {
+    "value": "Glossary",
+    "uri": "/glossary",
+    "valueHash8": "31d109d1",
+    "hint": "",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "glossary",
+    "headingIdPlain": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "regex": "/(Glossary)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0,
+    "type": "term-definition",
+    "file": "glossary.md",
+    "termHint": ""
+  },
+  {
+    "value": "Imported Term 1",
+    "uri": "/#1",
+    "valueHash8": "c8c7f905",
+    "hint": "",
+    "longDesc": "The short definition of a term. The long definition of a term contains both sentences.",
+    "shortDesc": "The short definition of a term.",
+    "headingId": "imported-term-1",
+    "headingIdPlain": "",
+    "headingDepth": 2,
+    "anchor": "#imported-term-1",
+    "regex": "/(Alias 1\\.1,Alias 1\\.2,Alias 1\\.3|Imported Term 1)/u",
+    "aliases": [
+      "Alias 1.1,Alias 1.2,Alias 1.3"
+    ],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0,
+    "type": "term-definition",
+    "file": "glossary.md",
+    "termHint": ""
+  },
+  {
+    "value": "Imported Term 2",
+    "uri": "/#2",
+    "valueHash8": "dbf4905e",
+    "hint": "",
+    "longDesc": "The short definition of a term. The long definition of a term contains both sentences.",
+    "shortDesc": "The short definition of a term.",
+    "headingId": "imported-term-2",
+    "headingIdPlain": "",
+    "headingDepth": 2,
+    "anchor": "#imported-term-2",
+    "regex": "/(Alias 2\\.1,Alias 2\\.2,Alias 2\\.3|Imported Term 2)/u",
+    "aliases": [
+      "Alias 2.1,Alias 2.2,Alias 2.3"
+    ],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0,
+    "type": "term-definition",
+    "file": "glossary.md",
+    "termHint": ""
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-glossaries/import-csv/with-headers-configured",
+  "glossaries": [{
+    "file": "./glossary.md",
+    "import": {
+      "file": "./glossary.csv"
+      ,"dialect": {
+        "delimiter": ";",
+        "doubleQuote": true
+      }
+      ,"schema": {
+        "fields": [
+          {"name": "@id"}
+          ,{"name": "http://www.w3.org/2004/02/skos/core#prefLabel"}
+          ,{"name": "http://www.w3.org/2004/02/skos/core#altLabel"}
+          ,{"name": "http://www.w3.org/2004/02/skos/core#definition"}
+        ]
+      }
+    }
+  }],
+  "dev": {
+    "termsFile": "../../../../output-actual/config-glossaries/import-csv/with-headers-configured/terms.json"
+  }
+}

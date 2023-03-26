@@ -1,24 +1,12 @@
 # [Installing and Configuring Plug-ins](#installing-and-configuring-plug-ins)
 
-[doc-conceptual-layers]: ./conceptual-layers.md
-
-[doc-plugins-dev]: ./plugins-dev.md
-
-[doc-mdext-syntax]: ./markdown-syntax-extensions.md
-
-[mdast-util-visit]: https://npmjs.com/package/mdast-util-visit
-
-[remark-discussion]: https://github.com/remarkjs/remark/discussions/869#discussioncomment-1602674
-
-[remark-frontmatter]: https://npmjs.com/package/remark-frontmatter
-
-[remark-plugin]: https://github.com/remarkjs/awesome-remark
+<!--
+aliases: Plug-ins, Installing Plug-ins, installing and configuring a plug-in, install a syntax plug-in
+-->
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-[verdaccio]: https://npmjs.com/package/verdaccio
-
-The following example demonstrates how to install [remark-frontmatter], a [remark plug-in][remark-plugin] to make [glossarify-md][1] handle non-standard *Frontmatter* syntax, correctly ([When do I need a plug-in?][doc-mdext-syntax]).
+The following example demonstrates how to [install][1] [remark-frontmatter 🌎][2], a syntax plug-in from the [remark 🌎][3] [plug-in ecosystem 🌎][4] which makes [glossarify-md][5] (resp. its internal remark parser) handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][6] for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -32,7 +20,7 @@ We'll assume the following project structure:
        |- package.json
        '- .gitignore
 
-**1:** Install [remark-frontmatter]:
+**1:** [Install][1] [remark-frontmatter 🌎][2]:
 
     npm install remark-frontmatter
 
@@ -53,10 +41,10 @@ We'll assume the following project structure:
 
 Keys of the `plugins` object tell what plug-in to load and may be:
 
-*   a name of an [npm][2] package in a global or local `node_modules` folder
-*   a path to a JavaScript file exporting a plug-in function (see [writing plug-ins][doc-plugins-dev])
+*   a name of an [npm 🌎][7] package in a global or local `node_modules` folder
+*   a path to a JavaScript file [exporting][8] a plug-in function (see page [Writing a Plug-in][9])
 
-Their value in turn are options passed to the plug-in. Read [remark-frontmatter] docs, to find out about available options.
+Their value in turn are options passed to the plug-in. Read [remark-frontmatter 🌎][2] docs, to find out about available options.
 
 > ⓘ The `unified` key embeds a [unified configuration][unified-config] object. Its schema is *not* subject to glossarify-md's own config schema, anymore. Thus, if you would like to have the configs separated a bit more clearly, then you can split them:
 >
@@ -84,9 +72,27 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter]
 >   }
 > }
 > ```
->
-> If you would like to learn more about how *unified* and *remark* relate to glossarify-md, read [Conceptual Layers][doc-conceptual-layers].
 
-[1]: https://github.com/about-code/glossarify-md "This project."
+If you would like to learn more about how *[unified 🌎][10]* and *[remark 🌎][3]* relate to [glossarify-md][5], read [Conceptual Layers][11]
 
-[2]: https://npmjs.com "Node Package Manager."
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install
+
+[2]: https://npmjs.com/package/remark-frontmatter "A remark syntax plug-in supporting pseudo-standard front-matter syntax."
+
+[3]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
+
+[4]: https://github.com/remarkjs/awesome-remark "A curated list of remark plug-ins."
+
+[5]: https://github.com/about-code/glossarify-md
+
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md#markdown-syntax-extensions "glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM)."
+
+[7]: https://npmjs.com "Node Package Manager."
+
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
+
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#writing-a-plug-in
+
+[10]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
+
+[11]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."

@@ -1,9 +1,14 @@
 # Using glossarify-md with vuepress
+<!-- aliases: Use with VuePress -->
+
+[vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
+[vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
+[vp-emoji]: https://vuepress.vuejs.org/guide/markdown.html#emoji
+[vp-toc]: https://vuepress.vuejs.org/guide/markdown.html#table-of-contents
+[vp-lh]: https://vuepress.vuejs.org/guide/markdown.html#line-highlighting-in-code-blocks
+[vp-code]: https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets
 
 Below we assume a *sample* project structure like this:
-
-[doc-syntax-extensions]: ./markdown-syntax-extensions.md
-[doc-plugins]: ./plugins.md
 
 ```
 ${root}
@@ -96,7 +101,7 @@ More information see [README.md](../README.md).
 
 ## Install and Configure Syntax Extension Plug-Ins
 
-vuepress supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by CommonMark or GFM. See the table below which syntax extension on the left requires [installing and configuring a plug-in][doc-plugins] on the right. See the respective plug-in for its individual default values and config options.
+vuepress supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdown.html) not covered by CommonMark or GFM. See the table below which syntax extension on the left requires installing and configuring a plug-in on the right. See the respective plug-in for its individual default values and config options.
 
 
 |      Markdown Syntax Extension        |                   remark plug-in required with glossarify-md                   |
@@ -107,13 +112,6 @@ vuepress supports some [Markdown syntax](https://vuepress.vuejs.org/guide/markdo
 | [Emoji][vp-emoji]                     | -                                                                               |
 | [Line Highlighting Codeblocks][vp-lh] | -                                                                               |
 | [Import Code Snippets][vp-code]       | -                                                                               |
-
-[vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
-[vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
-[vp-emoji]: https://vuepress.vuejs.org/guide/markdown.html#emoji
-[vp-toc]: https://vuepress.vuejs.org/guide/markdown.html#table-of-contents
-[vp-lh]: https://vuepress.vuejs.org/guide/markdown.html#line-highlighting-in-code-blocks
-[vp-code]: https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets
 
 ## Appendix
 

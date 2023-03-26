@@ -1,0 +1,21 @@
+[
+  {
+    "value": "Glossary",
+    "uri": "/glossary",
+    "valueHash8": "31d109d1",
+    "hint": "",
+    "longDesc": "",
+    "shortDesc": "",
+    "headingId": "glossary",
+    "headingIdPlain": "",
+    "headingDepth": 1,
+    "anchor": "#glossary",
+    "regex": "/(Glossary)/u",
+    "aliases": [],
+    "ignoreCase": false,
+    "countOccurrenceTotal": 0,
+    "type": "term-definition",
+    "file": "glossary.md",
+    "termHint": ""
+  }
+]
