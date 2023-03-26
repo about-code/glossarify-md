@@ -306,9 +306,10 @@ The term *support* refers to *runs on the given platform* and is subject to the 
 
 | NodeJS  | glossarify-md |                                                                           Current Test Matrix                                                                            |
 | ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current | v6+           | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
-| 16 LTS  | v5, v6+       | Tested + Supported                                                                                                                                                       |
-| 14 LTS  | v4, v5, v6+   | Tested + Supported                                                                                                                                                       |
+| Current | v7            | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
+| 18 LTS  | v6, v7        | Tested + Supported
+| 16 LTS  | v5, v6, v7    | Tested + Supported                                                                                                                                                       |
+| 14 LTS  | v4, v5, v6    | |
 | 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |
 | 10 LTS  | v2, v3, v4    |                                                                                                                                                                          |
 

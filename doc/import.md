@@ -17,7 +17,7 @@ aliases: Import, importing, imports
 
 ### [From CSV](#from-csv)
 
-**Since v6.4.0**
+**Since v7.0.0**
 
 CSV is a textual serialization for tabular data and supported by most spreadsheed programmes. Columns in CSV are separated by a `delimiter`.
 
