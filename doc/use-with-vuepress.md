@@ -2,6 +2,8 @@
 
 <!-- aliases: Use with VuePress -->
 
+[doc-v6]: https://github.com/about-code/glossarify-md/blob/v6.3.3/doc/use-with-vuepress.md
+
 [vp-frontmatter]: https://vuepress.vuejs.org/guide/markdown.html#frontmatter
 
 [vp-cc]: https://vuepress.vuejs.org/guide/markdown.html#custom-containers
@@ -13,6 +15,10 @@
 [vp-lh]: https://vuepress.vuejs.org/guide/markdown.html#line-highlighting-in-code-blocks
 
 [vp-code]: https://vuepress.vuejs.org/guide/markdown.html#import-code-snippets
+
+[github-slugger]: https://npmjs.com/package/github-slugger
+
+[github-slugger-diff]: https://github.com/Flet/github-slugger/compare/v1.5.0...2.0.0
 
 Below we assume a *sample* project structure like this:
 
@@ -37,9 +43,11 @@ Below we assume a *sample* project structure like this:
        |- package.json
        '- .gitignore
 
-## [Install into your project](#install-into-your-project)
+## [Install glossarify-md](#install-glossarify-md)
 
-    npm i --save glossarify-md
+    npm i glossarify-md remark-frontmatter
+
+Installs [glossarify-md][1] with a syntax plug-in for *frontmatter* syntax.
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
@@ -52,7 +60,14 @@ Below we assume a *sample* project structure like this:
     "outDir": "../docs-glossarified",
     "glossaries": [
         { "file": "./glossary.md", "termHint": "★"},
-    ]
+    ],
+    "unified": {
+      "plugins": {
+        "remark-frontmatter": {
+          "marker": "-"
+        }
+      }
+    }
 }
 ```
 
@@ -60,32 +75,58 @@ Below we assume a *sample* project structure like this:
 
 ## [Configure vuepress](#configure-vuepress)
 
-[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in terms of how they create URL-friendly IDs for section anchors also called "[slugs][3]" (see \[*why?*]\[Appendix])(#[appendix][4]).
+[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *[slugs][3]*.
+
+> ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent.
+
+**Example**: non-ASCII *Äquator* (German) becomes `#aquator` with [vuepress 🌎][2] defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
+
+1.  Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
+
+2.  As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
+
+### [vuepress 2.x](#vuepress-2x)
 
 <em>./docs/.vuepress/config.js</em>
 
 ```js
-const glossarify = require("glossarify-md");
+import { getSlugger } from "glossarify-md"
+
 const slugify = {
-  slugify: glossarify.getSlugger()
+  slugify: getSlugger()
 };
 module.exports = {
-    markdown: { ...slugify }     // vuepress v1.x
-    // markdown: {               // vuepress v2.x
-    //   toc: { ...slugify },
-    //   anchor: { ...slugify },
-    //   extractHeaders: { ...slugify }
-    // }
+    markdown: {               // vuepress v2.x
+      toc: { ...slugify },
+      anchor: { ...slugify },
+      extractHeaders: { ...slugify }
+    }
 };
 ```
 
-> ⚠ **Non-English Languages:** vuepress's own slugger creates anchors with lowercase *ASCII characters*, only, e.g. German *Äquator* (engl. *equator*) becomes `#aquator`. Now with github-slugger it will map unicode characters onto their lowercase *unicode* equivalent, e.g. `#äquator` (compare the first character). Consequences:
->
-> 1.  Bookmarks of your readers keep addressing the same page. However, as a minor inconvenience a browser may no longer find content sections outside the visible viewport it would otherwise have scrolled to.
->
-> 2.  Writers whose input documents contain links with an ASCII fragment will need to change link targets to the unicode variant. In the example they had to change `[Foo](#aquator)` to `[Foo](#äquator)`.
+### [vuepress 1.x](#vuepress-1x)
 
-## [Configure Build Scripts](#configure-build-scripts)
+> ⚠ **We recommend [using vuepress 1.x with glossarify-md <= v6, only][doc-v6]**. Using glossarify-md v7 with vuepress 1.x should be possible but requires you to install a CommonJS version of [github-slugger v1][github-slugger] for yourself while glossarify-md uses [github-slugger v2][github-slugger]. Slugs should be compatible, because [github-slugger v1 and v2 still implement the same algorithm][github-slugger-diff] but the mere fact that vuepress and glossarify-md no longer physically execute the same code to generate slugs makes it more likely to break in a future when some major release of glossarify-md starts using a potentially incompatbile [github-slugger v3][github-slugger].
+
+    npm i --save github-slugger@^1.5.0
+
+<em>./docs/.vuepress/config.js</em>
+
+```js
+const GitHubSlugger = require("github-slugger");
+const slugify = {
+  slugify: (value) => {
+      const slugifier = new GitHubSlugger();
+      return slugifier.slug(value);
+  }
+};
+
+module.exports = {
+    markdown: { ...slugify }
+};
+```
+
+## [Optional: Configure Run Scripts](#optional-configure-run-scripts)
 
 *package.json*
 
@@ -103,42 +144,7 @@ module.exports = {
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
 *   `npm run build` just builds the glossarified [vuepress 🌎][2] site without running a server.
 
-More information see [README.md][5].
-
-## [Install and Configure Syntax Extension Plug-Ins](#install-and-configure-syntax-extension-plug-ins)
-
-[vuepress 🌎][2] supports some [Markdown syntax][6] not covered by [CommonMark 🌎][7] or [GFM 🌎][8]. See the table below which syntax extension on the left requires [installing and configuring a plug-in][9] on the right. See the respective plug-in for its individual default values and [config options][10].
-
-| Markdown Syntax Extension             | [remark 🌎][11] plug-in required with [glossarify-md][1] |
-| ------------------------------------- | -------------------------------------------------------- |
-| [Frontmatter][vp-frontmatter]         | [remark-frontmatter][12]                                 |
-| [Custom Containers][vp-cc]            | -                                                        |
-| [Table of Contents][vp-toc] `[[toc]]` | -                                                        |
-| [Emoji][vp-emoji]                     | -                                                        |
-| [Line Highlighting Codeblocks][vp-lh] | -                                                        |
-| [Import Code Snippets][vp-code]       | -                                                        |
-
-## [Appendix](#appendix)
-
-*[Slugs][3]* are "*URL-friendly IDs*" used to identify a content section *within* a hypermedia document. They are not required to locate the document but needed to make a browser navigate to a particular content section *within* a document, for example `https://foo.com/#my-slug` identifies a content section using the Slug or *[URL fragment][13]* `#my-slug`.
-
-"*URL-friendly*" means *only certain characters, allowed*. In particular, *whitespaces* need to be encoded. During *[linkification][14]* [vuepress 🌎][2] and glossarify derive [slugs][3] from section headings but use different algorithms. They may differ in how they replace whitespaces in the IDs derived from a heading text. As a consequence there's a risk of ending up with broken book-internal links (see [#27][15]). To avoid this vuepress needs to be configured to use the same slugger as [glossarify-md][1]. In case you want to get rid of glossarify-md you most likely do *not* want to have slugs change, again. You can use \[github-slugger] standalone without glossarify-md, like so:
-
-*Using [github-slugger 🌎][16] without [glossarify-md][1]*
-
-```js
-const GitHubSlugger = require("github-slugger");
-const slugify = {
-  slugify: (value) => {
-      const slugifier = new GitHubSlugger();
-      return slugifier.slug(value);
-  }
-};
-
-module.exports = {
-  /* see section "Configure vuepress"... */
-};
-```
+More see [README.md][4].
 
 [1]: https://github.com/about-code/glossarify-md
 
@@ -146,30 +152,4 @@ module.exports = {
 
 [3]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
-[4]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md#appendix "Slugs are \"URL-friendly IDs\" used to identify a content section within a hypermedia document."
-
-[5]: ../README.md
-
-[6]: https://vuepress.vuejs.org/guide/markdown.html
-
-[7]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
-
-[8]: https://github.github.com/gfm/ "GitHub Flavoured Markdown"
-
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
-
-[10]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
-
-[11]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
-
-[12]: http://unifiedjs.com/explore/package/remark-frontmatter/
-
-[13]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#url-fragment "The fragment is the part follwing the # in a URL."
-
-[14]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
-document B and replacing the term in document A with a Markdown link pointing
-onto the term definition in document B."
-
-[15]: https://github.com/about-code/glossarify-md/issues/27
-
-[16]: https://npmjs.com/package/github-slugger "A library providing support for slugs."
+[4]: ../README.md

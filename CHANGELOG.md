@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### ⚠ BREAKING CHANGES
 
 * End of support for NodeJS 14.x.
+* No longer supporting CommonJS module system, see [using with vuepress 1.x](https://github.com/about-code/glossarify-md/blob/v7.0.0/docuse-with-vuepress.md)
 * Bumped `glob` dependency from `v7` to `v9`. **This *might* affect you** when using glob patterns in a glossarify-md config, e.g.:
   - `glossaries` with `[{ "file": "./some/**/glob/**/pattern*.md" }]`
   - `includeFiles`

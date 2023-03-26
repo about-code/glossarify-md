@@ -7,13 +7,11 @@
   },
   "license": "MIT",
   "exports": {
-    "import": "./lib/main.js",
-    "require": "./cjs/main.js"
+    "import": "./lib/main.js"
   },
-  "main": "./cjs/main.js",
   "type": "module",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": ">=16.0.0"
   },
   "repository": {
     "type": "git",
