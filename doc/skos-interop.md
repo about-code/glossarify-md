@@ -1,12 +1,12 @@
-# [Interoperability with SKOS and JSON-LD](#interoperability-with-skos-and-json-ld)
+# [Interoperability with SKOS](#interoperability-with-skos)
 
-<!-- aliases: SKOS interoperability, Interoperability with SKOS -->
+<!-- aliases: SKOS interoperability -->
 
 > Readers Level: *Advanced*
 >
 > The term *term* can become itself confusing in this section. Therefore we'll say *model terms* if we refer to a vocabulary of technical attribute names or type names of a data model. We'll say *glossary terms* if we refer to the actual terms of a glossary (an instance of that data model).
 
-**Since v6.0.0** [glossarify-md][1] supports [exporting][2] and [importing][3] glossaries. In addition to importing terms from files exported by glossarify-md itself it can import glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS 🌎][4] and [Dublin Core 🌎][5] model terms.
+**Since v6.0.0** [glossarify-md][1] supports [exporting][2] and [importing][3] glossaries. In addition to [importing terms][3] from files exported by [glossarify-md][1] itself it can [import][3] glossary terms from arbitrarily structured JSON documents once there are mappings of the other document's *model terms* onto "well-known" [SKOS 🌎][4] and [Dublin Core 🌎][5] model terms.
 
 Model terms understood by [glossarify-md][1] are:
 
@@ -77,7 +77,7 @@ The [configuration][6] will make [glossarify-md][1] produce a file
 }
 ```
 
-`glossary.json` will embed a [JSON-LD 🌎][7] `@context` document. It maps [glossarify-md][1]'s own [export][2] model terminology onto [SKOS 🌎][4] and [Dublin Core 🌎][5] terms for interoperability with *other* tools understanding SKOS and Dublin Core.[^1]
+`glossary.json` will embed a [JSON-LD 🌎][7] `@context` document. It maps [glossarify-md][1]'s own [export][2] model terminology onto [SKOS 🌎][4] and [Dublin Core 🌎][5] terms for interoperability with *other* tools understanding [SKOS 🌎][4] and [Dublin Core 🌎][5].[^1]
 
 [^1]: You can map [glossarify-md][1]'s terms onto other model [vocabularies][8] by adding a `context` attribute to the `export` config. The attribute value is expected to be a path to a `.json` or `.jsonld` file which exposes a document with a `@context` key.
 
@@ -184,13 +184,13 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 *   [glossarify-md][1] will only [import][3] typed documents directly using [JSON-LD 🌎][7]'s `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
 
-*   More complicated data formats may require use of some additional [JSON-LD 🌎][7] keywords from the JSON-LD Spec.
+*   More complicated data formats may require use of some additional [JSON-LD 🌎][7] keywords from the [JSON-LD Spec 🌎][7].
 
 [1]: https://github.com/about-code/glossarify-md
 
 [2]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
-[3]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https."
+[3]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https, when configured this way."
 
 [4]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 

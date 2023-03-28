@@ -1,4 +1,4 @@
-### [Generating Files: Lists](#generating-files-lists)
+# [Generating Files: Lists](#generating-files-lists)
 
 [CommonMark]: https://commonmark.org
 

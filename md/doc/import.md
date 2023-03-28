@@ -4,7 +4,7 @@ aliases: Import, importing, imports
 -->
 [strip-markdown]: https://npmjs.com/package/strip-markdown
 
-> **⚠ Important:** glossarify-md is able to import terms and definitions from a remote location using `https`. It will try to remove any Markdown and HTML from imported data using [strip-markdown](https://npmjs.com/package/strip-markdown). Nevertheless, as a rule of thumb, **never import from untrusted sources**.
+> **⚠ Important:** glossarify-md is able to import terms and definitions from a remote location using `https`, when configured this way. It will try to remove any Markdown and HTML from imported data using [strip-markdown](https://npmjs.com/package/strip-markdown). Nevertheless, as a rule of thumb, **never blindly import from untrusted sources**.
 > <details>
 > Loading <strong>files from a remote location could enable a remote entity to embed malicious code</strong>, execute such code in the runtime context of glossarify-md or make glossarify-md embed it into <em>your</em> output files. <strong>Consider downloading files first and after review import them statically from within your project.</strong>
 </details>

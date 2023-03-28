@@ -1,14 +1,4 @@
-## dialect Default Value
-
-The default value is:
-
-```json
-{
-  "delimiter": ";"
-}
-```
-
-# dialect Properties
+# csvDialect Properties
 
 
 

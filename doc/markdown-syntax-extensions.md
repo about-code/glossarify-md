@@ -4,7 +4,7 @@
 aliases: Markdown syntax extensions
 -->
 
-[glossarify-md][1] supports [CommonMark 🌎][2] and [GitHub Flavoured Markdown 🌎][3] (GFM). Syntax not covered by these specifications may have no or worse, a wrong representation in the tool's Abstract Syntax Tree ([mdAst 🌎][4]). As a consequence it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
+[glossarify-md][1] supports [CommonMark 🌎][2] and [GitHub Flavoured Markdown 🌎][3] ([GFM 🌎][3]). Syntax not covered by these specifications may have no or worse, a wrong representation in the tool's Abstract Syntax Tree ([mdAst 🌎][4]). As a consequence it may not make it correctly into output documents. For example *Frontmatter* syntax is a Markdown syntax extension popularized by many static site generators:
 
 *Frontmatter Syntax*
 

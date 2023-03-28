@@ -1,4 +1,4 @@
-# schema Properties
+# csvTableSchema Properties
 
 
 

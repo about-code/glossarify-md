@@ -10,7 +10,7 @@
 
 [hugo-cm-compliance]: https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898
 
-Below we provide a few *examples* on how you *might* be able to facilitate [glossarify-md][1] in a [Hugo 🌎][2] project. But note that existence of this page is not a statement about *Hugo compatibility*.
+Below we provide a few *examples* on how you *might* be able to facilitate [glossarify-md][1] in a [Hugo 🌎][2] project. But note that existence of this page is not a statement about *[Hugo 🌎][2] compatibility*.
 
 ## [Setup Hugo with glossarify-md](#setup-hugo-with-glossarify-md)
 
@@ -175,7 +175,7 @@ You should now see the files in `content_` copied to `content` where they will b
 
 [https://github.com/about-code/glossarify-md/issues/246][12]
 
-[Hugo 🌎][2] and [glossarify-md][1] support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of [CommonMark 🌎][13] and [GFM 🌎][14] constructs. But there is a chance Hugo supports additional features neither in Commonmark nor GFM. As a glossarify-md-with-Hugo user you may
+[Hugo 🌎][2] and [glossarify-md][1] support an overlapping, yet not identical set of Markdown syntax constructs. They share the common set of [CommonMark 🌎][13] and [GFM 🌎][14] constructs. But there is a chance [Hugo 🌎][2] supports additional features neither in [Commonmark 🌎][13] nor [GFM 🌎][14]. As a glossarify-md-with-Hugo user you may
 
 *   need to restrict yourself to using the common set of syntax, only
 *   or need to [install][3] a syntax plug-in, when there's one available
@@ -185,18 +185,18 @@ You should now see the files in `content_` copied to `content` where they will b
 
 [https://github.com/about-code/glossarify-md/issues/165#issuecomment-1086874898][hugo-cm-compliance]
 
-[glossarify-md][1] can be enhanced with [syntax plug-ins][15] to accept shortcode syntax. But it won't be able to support certain combinations of [CommonMark 🌎][13] syntax *and* shortcode syntax, e.g. CommonMark link syntax `[]()` combined with shortcode syntax `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. glossarify-md requires valid CommonMark input but the combined syntax [is not valid CommonMark][hugo-cm-compliance] (as of CommonMark v0.30).
+[glossarify-md][1] can be enhanced with [syntax plug-ins][15] to accept shortcode syntax. But it won't be able to support certain combinations of [CommonMark 🌎][13] syntax *and* shortcode syntax, e.g. [CommonMark 🌎][13] link syntax `[]()` combined with shortcode syntax `{{< relref >}}` to something like `[Foo]({{< relref bar >}})`. [glossarify-md][1] requires valid [CommonMark 🌎][13] input but the combined syntax [is not valid CommonMark][hugo-cm-compliance] (as of [CommonMark 🌎][13] v0.30).
 
 ### [Things get escaped with `\`](#things-get-escaped-with-)
 
 There may be two reasons:
 
 1.  input files use custom syntax not understood by [glossarify-md][1]. See known issue *Different flavors of Markdown*, above.
-2.  there is an improper combination of [CommonMark 🌎][13] syntax elements and non-standard syntax which violates the CommonMark spec. For an example, see known issue *[Shortcodes in Markdown Links][16]*, above.
+2.  there is an improper combination of [CommonMark 🌎][13] syntax elements and non-standard syntax which violates the [CommonMark 🌎][13] spec. For an example, see known issue *[Shortcodes in Markdown Links][16]*, above.
 
 ### [Link paths](#link-paths)
 
-[Hugo 🌎][2] has its own means of producing website URLs from a project's filesystem. We have shown [glossarify-md][1] configurations that fit a particular project structure but they have not been tested beyond a few simple Hugo demo pages. Feel free to experiment with glossarify-md options and \[`linking` options]\[doc-linking] in particular if the config doesn't work for you.
+[Hugo 🌎][2] has its own means of producing website URLs from a project's filesystem. We have shown [glossarify-md][1] configurations that fit a particular project structure but they have not been tested beyond a few simple [Hugo 🌎][2] demo pages. Feel free to experiment with [glossarify-md][1] options and \[`linking` options]\[doc-linking] in particular if the config doesn't work for you.
 
 [1]: https://github.com/about-code/glossarify-md
 

@@ -1,5 +1,5 @@
-# Interoperability with SKOS and JSON-LD
-<!-- aliases: SKOS interoperability, Interoperability with SKOS -->
+# Interoperability with SKOS
+<!-- aliases: SKOS interoperability -->
 
 > Readers Level: *Advanced*
 >

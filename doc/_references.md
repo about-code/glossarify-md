@@ -67,7 +67,7 @@ A static website renderer compiling an HTML website from Markdown files.
   aliases: JSON-LD Spec
 -->
 
-[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS 🌎][10] is one such vocabulary supported by [glossarify-md][11]
+[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With [JSON-LD 🌎][8] it's possible to write applications which are interoperable by mutual agreement on the same public [vocabulary][9]. [SKOS 🌎][10] is one such [vocabulary][9] supported by [glossarify-md][11]
 
 ## [jsonld Library](#jsonld-library)
 

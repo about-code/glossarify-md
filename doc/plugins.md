@@ -6,7 +6,7 @@ aliases: Plug-ins, Installing Plug-ins, installing and configuring a plug-in, in
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to [install][1] [remark-frontmatter 🌎][2], a syntax plug-in from the [remark 🌎][3] [plug-in ecosystem 🌎][4] which makes [glossarify-md][5] (resp. its internal remark parser) handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][6] for when you need a plug-in).
+The following example demonstrates how to [install][1] [remark-frontmatter 🌎][2], a syntax plug-in from the [remark 🌎][3] [plug-in ecosystem 🌎][4] which makes [glossarify-md][5] (resp. its internal [remark 🌎][3] parser) handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][6] for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 

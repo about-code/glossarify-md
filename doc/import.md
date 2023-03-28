@@ -6,7 +6,7 @@ aliases: Import, importing, imports
 
 [strip-markdown]: https://npmjs.com/package/strip-markdown
 
-> **⚠ Important:** glossarify-md is able to import terms and definitions from a remote location using `https`. It will try to remove any Markdown and HTML from imported data using [strip-markdown][strip-markdown]. Nevertheless, as a rule of thumb, **never import from untrusted sources**.
+> **⚠ Important:** glossarify-md is able to import terms and definitions from a remote location using `https`, when configured this way. It will try to remove any Markdown and HTML from imported data using [strip-markdown][strip-markdown]. Nevertheless, as a rule of thumb, **never blindly import from untrusted sources**.
 >
 > <details>
 > Loading <strong>files from a remote location could enable a remote entity to embed malicious code</strong>, execute such code in the runtime context of glossarify-md or make glossarify-md embed it into <em>your</em> output files. <strong>Consider downloading files first and after review import them statically from within your project.</strong>
@@ -98,15 +98,15 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ```
 
-[Importing][7] from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][8] types and attributes. See Interoperability with SKOS and [JSON-LD 🌎][9] for an in-depth example.
+[Importing][7] from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][8] types and attributes. See Interoperability with [SKOS 🌎][8] and [JSON-LD 🌎][9] for an in-depth example.
 
 ### [From RDF + SKOS](#from-rdf--skos)
 
 **Since v6.0.0**
 
-If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in some RDF [linked data 🌎][10] store then you might find linked data tooling that is able to [export][11]/convert/serialize your linked data [vocabulary][12] to **N-Triples, N-Quads or [JSON-LD 🌎][9]**.
+If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in some RDF [linked data 🌎][10] store then you might find [linked data 🌎][10] tooling that is able to [export][11]/convert/serialize your [linked data 🌎][10] [vocabulary][12] to **N-Triples, N-Quads or [JSON-LD 🌎][9]**.
 
-*   [Importing][7] from [JSON-LD 🌎][9] should work similar to importing [glossarify-md][1]'s own JSON [exports][11]
+*   [Importing][7] from [JSON-LD 🌎][9] should work similar to [importing][7] [glossarify-md][1]'s own JSON [exports][11]
 *   [Importing][7] N-Triples/N-Quads requires the file name to end with `.nq`
 
 *Example: [Import][7] RDF + [SKOS 🌎][8] from an N-Quads serialization:*
@@ -134,7 +134,7 @@ If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in so
 
 [6]: http://www.w3.org/2004/02/skos/core#definition
 
-[7]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https."
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https, when configured this way."
 
 [8]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 

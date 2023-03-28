@@ -81,7 +81,7 @@ Control the link density and whether every occurrence of a term in your document
 
 ## headingDepths
 
-An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as "terms" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`.
+An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*.
 
 `headingDepths`
 
@@ -135,7 +135,7 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of
 5: makes the system link to *at most 5* alternative definitions per term
-\-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
+-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
 0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).
 Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once.
 
