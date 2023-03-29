@@ -20,7 +20,7 @@ More details see our video tutorial:
 </video>
 ```
 
-Then to generate a *[List of Videos][1]* from all elements of `class="video"` add to your *[glossarify-md][2].conf.json*:
+Then to generate a *[List of Videos][1]* from all elements of `class="video"` add to your *glossarify-md.conf.json*:
 
 ```json
 "generateFiles": {
@@ -32,13 +32,13 @@ Then to generate a *[List of Videos][1]* from all elements of `class="video"` ad
 }
 ```
 
-After running [glossarify-md][2] there will be a file:
+After running glossarify-md there will be a file:
 
 *docs-glossarified/videos.md (generated)*
 
 > ## [List of Videos](#list-of-videos)
 >
-> *   [Tutorial Part 1][3]
+> *   [Tutorial Part 1][2]
 
 You can **type less** when prefixing ids with your list classifier:
 
@@ -65,7 +65,7 @@ Use *invisible* HTML anchors to generate lists from and navigate to text content
 This is not a video tutorial but a textual tutorial. The body of text can be navigated to from a List of Tutorials and uses the classifier *tutorial*.
 ```
 
-> **ⓘ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Known Issues: Lists in GitHub Repos][4].
+> **ⓘ Note:** If you find the browser not scrolling correctly when navigating lists on GitHub, please read [Known Issues: Lists in GitHub Repos][3].
 
 <!--
 **Link label extraction**
@@ -81,13 +81,13 @@ The link label for list items will be inferred in this order (first-match):
 
 ### [List of Figures](#list-of-figures)
 
-In the previous section we used [`listOf`][5] to generate a list *from HTML elements* inside Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where `listOfFigures` and [`listOfTables`][6] fit in. It is a shortcut which makes [glossarify-md][2] generate the HTML anchor itself from Markdown's image syntax:
+In the previous section we used [`listOf`][4] to generate a list *from HTML elements* inside Markdown. Writing HTML can be annoying, particularly if there is handier Markdown syntax for the elements to be listed. This is where `listOfFigures` and [`listOfTables`][5] fit in. It is a shortcut which makes glossarify-md generate the HTML anchor itself from Markdown's image syntax:
 
 ```md
 ![List item Label](./figure.png)
 ```
 
-Then you may only need to use HTML for dynamically rendered figures, e.g. a [PlantUML 🌎][7] diagram:
+Then you may only need to use HTML for dynamically rendered figures, e.g. a [PlantUML 🌎][6] diagram:
 
 ````md
 <figure id="figure-gen">Dynamically Rendered Diagram</figure>
@@ -99,9 +99,9 @@ Then you may only need to use HTML for dynamically rendered figures, e.g. a [Pla
 ```
 ````
 
-To compile both figures into the same list one way to configure [glossarify-md][2] is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
+To compile both figures into the same list one way to [configure glossarify-md][7][<sup>2)</sup>][8][<sup> 3)</sup>][9] is to declare a `listOf` class *figure* (for HTML elements) and tell `listOfFigures` (for `![]()` images) to use the same classifier *figure*:
 
-*[glossarify-md][2].conf.json* (since v5.0.0)
+*glossarify-md.conf.json* (since v5.0.0)
 
 ```json
 "generateFiles": {
@@ -116,9 +116,9 @@ To compile both figures into the same list one way to configure [glossarify-md][
 }
 ```
 
-This [configuration][8] which would allow you to also choose a shorter classifier like *fig* is the default, though. Therefore, if you are fine with ***figure* as the default classifier** you can omit `listOf` and just use:
+This [configuration][10] which would allow you to also choose a shorter classifier like *fig* is the default, though. Therefore, if you are fine with ***figure* as the default classifier** you can omit `listOf` and just use:
 
-*[glossarify-md][2].conf.json*
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
@@ -131,9 +131,9 @@ This [configuration][8] which would allow you to also choose a shorter classifie
 
 ### [List of Tables](#list-of-tables)
 
-`listOfTables` like [`listOfFigures`][9] is a shortcut alternative to HTML anchors with a default [`listOf`][10] classifier ***table***:
+`listOfTables` like [`listOfFigures`][11] is a shortcut alternative to HTML anchors with a default [`listOf`][12] classifier ***table***:
 
-*[glossarify-md][2].conf.json*
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
@@ -144,7 +144,7 @@ This [configuration][8] which would allow you to also choose a shorter classifie
 }
 ```
 
-In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table [glossarify-md][2] tries to infer a list item label.
+In contrast to images Markdown tables have no notion of a table caption. To render a list item for a table glossarify-md tries to infer a list item label.
 
 One such inference looks at the **paragraph preceding the table**. If it **ends with an *emphasized* phrase** and the phrase itself is **terminated by a colon** then the tool uses that phrase as the item label:
 
@@ -189,11 +189,11 @@ The result for the tables above will be:
 
 > ## [List of Tables](#list-of-tables-1)
 >
-> *   [Table of average prices by article category][11]
-> *   [Average prices by category][12]
-> *   [Average Prices by Article Category][13]
+> *   [Table of average prices by article category][13]
+> *   [Average prices by category][14]
+> *   [Average Prices by Article Category][15]
 
-**Since v5.0.0** and the introduction of [`listOf`][5] all the previous examples will make [glossarify-md][2] annotate the table with an HTML anchor. While not recommended due to verbosity, you could also just add an HTML anchor yourself, of course, applying what was described in [`listOf`][5] above:
+**Since v5.0.0** and the introduction of [`listOf`][4] all the previous examples will make glossarify-md annotate the table with an HTML anchor. While not recommended due to verbosity, you could also just add an HTML anchor yourself, of course, applying what was described in [`listOf`][4] above:
 
 ```md
 <a id="avg-prices" class="table" title="Average Prices by Article Category"></a>
@@ -222,7 +222,7 @@ The result for the tables above will be:
 
 ### [Lists from Regular Expressions (Experts)](#lists-from-regular-expressions-experts)
 
-**Since v5.2.0** you can use `listOf` with a regular expression pattern. Like [`listOfFigures`][9] and [`listOfTables`][6] it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself. If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will become annotated with an HTML anchor `<a class="..."></a>` preparing it for evaluation by `listOf` as we have seen above.
+**Since v5.2.0** you can use `listOf` with a regular expression pattern. Like [`listOfFigures`][11] and [`listOfTables`][5] it is meant to be a shortcut to save you from annotating Markdown with HTML elements yourself. If the regular expression (RegExp) matches text in a paragraph, then *the paragraph* will become annotated with an HTML anchor `<a class="..."></a>` preparing it for evaluation by `listOf` as we have seen above.
 
 **Example:** Let's assume you are writing a book with *tasks* to be accomplished by your readers. You would like to compile a *List of Tasks* in that book. You decided to use a conventional pattern which prefixes tasks with a phrase **Task:** and ends them with an exclamation mark *!*
 
@@ -234,7 +234,7 @@ Some text [...]
 **Task:** Clap your hands!
 ```
 
-Then you can generate a *List of Tasks* with a [configuration][8] like this:
+Then you can generate a *List of Tasks* with a [configuration][10] like this:
 
 ```md
 {
@@ -257,32 +257,37 @@ Our expression uses a Capture Group in brackets `()`. Text matching the capture 
 >
 > You may noticed that the RegExp pattern above doesn't assume *Task:* to be written between "bold" star markers `**`, even though, that's the case in the input file *Document.md*. The pattern will be matched against *plain text* that was separated from syntactic tokens of [CommonMark] and [GFM] syntax. Other *non-standard* markdown syntax may require a special syntax plug-in which parses its tokens into an abstract syntax tree. Otherwise they will be considered plain text, too, thus have to be considered in the RegExp pattern. Unfortunately, remark plug-ins behave differently in this regard. There are plug-ins which promote special syntax which fits *their* purpose, yet *without* correctly parsing their syntax into an abstract syntax tree. So if this feature causes you headaches better try both ways or consider it not fit for your purpose.
 
-See also page [Plug-ins][14].
+See also page [Plug-ins][16].
 
 [1]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-videos "Tutorial Part 1 You can type less when prefixing ids with your list classifier: Without a title attribute the tool attempts to derive a list item label from an elements inner text content: Use invisible HTML anchors to generate lists from and navigate to text content: ⓘ Note: If you find the browser not scrolling correctly when navigating lists on GitHub, please read Known Issues: Lists in GitHub Repos."
 
-[2]: https://github.com/about-code/glossarify-md
+[2]: #video-tutorial-part-1
 
-[3]: #video-tutorial-part-1
+[3]: https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md
 
-[4]: https://github.com/about-code/glossarify-md/blob/master/doc/lists-on-github.md
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#generating-files-lists "You can generate arbitrary lists from HTML elements with an id attribute and an element classifier to compile similar elements into the same list."
 
-[5]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#generating-files-lists "You can generate arbitrary lists from HTML elements with an id attribute and an element classifier to compile similar elements into the same list."
+[5]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-tables "listOfTables like listOfFigures is a shortcut alternative to HTML anchors with a default listOf classifier table: glossarify-md.conf.json In contrast to images Markdown tables have no notion of a table caption."
 
-[6]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-tables "listOfTables like listOfFigures is a shortcut alternative to HTML anchors with a default listOf classifier table: glossarify-md.conf.json In contrast to images Markdown tables have no notion of a table caption."
+[6]: https://plantuml.com "Generates diagrams from text files written in the PlantUML syntax."
 
-[7]: https://plantuml.com "Generates diagrams from text files written in the PlantUML syntax."
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-hugo.md#configure-glossarify-md "glossarify-md.conf.json"
 
-[8]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-pandoc.md#configure-glossarify-md "glossarify-md.conf.json When pandoc merges multiple files into a single file we need to take care for
+link stability and paths."
 
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-figures "In the previous section we used listOf to generate a list from HTML elements inside Markdown."
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/use-with-vuepress.md#configure-glossarify-md "glossarify-md.conf.json ⓘ Note: All relative paths inside the config file are being interpreted relativ to baseDir except of $schema which is relative to the config file."
 
-[10]: #lists
+[10]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
-[11]: #table-of-average-prices-by-article-category
+[11]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-lists.md#list-of-figures "In the previous section we used listOf to generate a list from HTML elements inside Markdown."
 
-[12]: #average-prices-by-category
+[12]: #lists
 
-[13]: #avg-prices
+[13]: #table-of-average-prices-by-article-category
 
-[14]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
+[14]: #average-prices-by-category
+
+[15]: #avg-prices
+
+[16]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."

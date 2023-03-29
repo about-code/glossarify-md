@@ -2,7 +2,7 @@
 
 [doc-lists]: ./gen-lists.md
 
-*[glossarify-md][1].conf.json*
+*glossarify-md.conf.json*
 
 ```json
 "generateFiles": {
@@ -39,8 +39,6 @@ Let's assume you have multiple glossaries and you would like to create separate 
 }
 ```
 
-> **ⓘ Note:** If you plan for translating Markdown to HTML, e.g. with [vuepress][2], be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **ⓘ Note:** If you plan for translating Markdown to HTML, e.g. with [vuepress][1], be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
 
-[1]: https://github.com/about-code/glossarify-md
-
-[2]: https://vuepress.vuejs.org
+[1]: https://vuepress.vuejs.org

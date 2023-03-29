@@ -1,6 +1,6 @@
 # [Term Attributes](#term-attributes)
 
-[Term][1] Attributes provide additional metadata for a [term][1]. They are passed in a comment following a [term][1] heading:
+[Term Attributes][1] provide additional metadata for a term. They are passed in a comment following a term heading:
 
 ```md
 # Term Heading
@@ -14,25 +14,25 @@ key2:
 Term definition here.
 ```
 
-**Since v6.3.0** [term][1] attributes use YAML syntax. The example shows two [term][1] attributes `key1` and `key2` where `key2` has multiple attribute values.
+**Since v6.3.0** [term attributes][1] use YAML syntax. The example shows two [term attributes][2] `key1` and `key2` where `key2` has multiple attribute values.
 
 > **ⓘ Note:** YAML syntax is *case-sensitive* and *sensitive to tabs and whitespaces* (like Markdown). As a rule of thumb: our own term attributes will be all lowercase.
 
 ## [Supported Term Attributes](#supported-term-attributes)
 
-### [`aliases`](#aliases)
+### [<x>`aliases`</x>](#xaliasesx)
 
-Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a [term][1] that should be linked with a [term][1] definition when found in text. More see [README.md][2]
+A comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text. More see [README.md][3]
 
 > **ⓘ Note:** Uppercase `Aliases` remains to be supported for backwards compatibility.
 
 ### [`uri`](#uri)
 
-A unique identifier for the [term][1] and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a [glossarify-md][3] [configuration][4] file to link [term][1] occurrences to an authoritative definition on the web using the [term][1]'s `uri` [term][1] attribute. See also *[URIs as Identifiers for Definitions of Meaning][5]*.
+A unique identifier for the term and the definition of it's *meaning*. Use `linkUris: true` with a `glossaries` config in a glossarify-md [configuration][4] file to link term occurrences to an authoritative definition on the web using the term's `uri` [term attribute][1]. See also *[URIs as Identifiers for Definitions of Meaning][5]*.
 
 # [Addendum](#addendum)
 
-There's going to be continued support for JSON [term][1] attribute syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets which makes it easier to run into syntax errors:
+There's going to be continued support for JSON [term attribute][1] syntax, for backwards compatibility. However, it requires some strictness about quotation marks, commas and braces/brackets which makes it easier to run into syntax errors:
 
 ```md
 # Term Heading
@@ -46,7 +46,7 @@ There's going to be continued support for JSON [term][1] attribute syntax, for b
 }-->
 ```
 
-If you've been using JSON [term][1] attribute syntax and want to switch to YAML syntax you might find these regular expressions helpful to use with your editor's Search/Replace assistant:
+If you've been using JSON [term attribute][1] syntax and want to switch to YAML syntax you might find these regular expressions helpful to use with your editor's Search/Replace assistant:
 
 ### [Example (Single term attribute)](#example-single-term-attribute)
 
@@ -105,11 +105,11 @@ If you've been using JSON [term][1] attribute syntax and want to switch to YAML 
 -->
 ```
 
-[1]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term-attribute "Term Attributes are passed in a comment following a term's heading."
 
-[2]: https://github.com/about-code/glossarify-md/blob/master/README.md
+[2]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md#term-attributes "Term Attributes provide additional metadata for a term."
 
-[3]: https://github.com/about-code/glossarify-md
+[3]: https://github.com/about-code/glossarify-md/blob/master/README.md
 
 [4]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 

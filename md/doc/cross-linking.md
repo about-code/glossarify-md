@@ -133,7 +133,7 @@ A term's *origin* is the glossary section where the term was defined. A link is 
 ...linkifies term occurrences in both directions along a filesystem path. Yet, it does not create links between branches of the file tree, e.g. it does not link terms defined in `context-1-2` with term occurrences found in `context-1-1` and vice versa,
 
 ~~~json
-limitByTermOrigin: ["parent", "children", "sibling", "parent-sibling", "self"]
+"limitByTermOrigin": ["parent", "children", "sibling", "parent-sibling", "self"]
 ~~~
 
 ...linkifies any term definitions with any term occurrences, including linking accross tree branches (bidirectionally). This is basically the "unlimited" default so is equivalent to `limitByTermOrigin: []`.

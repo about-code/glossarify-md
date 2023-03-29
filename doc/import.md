@@ -27,7 +27,7 @@ CSV is a textual serialization for tabular data and supported by most spreadshee
 #123;IGNORED-COLUMN;My Term;Alternative Term;This Term stands for Foo
 ```
 
-Without a header row embedded into the CSV data a `schema` mapping is required to tell [glossarify-md][1] where to find glossary columns (resp. `fields`):
+Without a header row embedded into the CSV data a `schema` mapping is required to tell glossarify-md where to find glossary columns (resp. `fields`):
 
 ```json
 {
@@ -55,9 +55,9 @@ Without a header row embedded into the CSV data a `schema` mapping is required t
 ```
 
 *   Use `@id` for the ID column
-*   Use [http://www.w3.org/2004/02/skos/core#prefLabel][2] for the [term][3] column
-*   Use [http://www.w3.org/2004/02/skos/core#altLabel][4] for one or more alternative [term][3] columns ([aliases][5])
-*   Use [http://www.w3.org/2004/02/skos/core#definition][6] for the [term][3] definition column
+*   Use [http://www.w3.org/2004/02/skos/core#prefLabel][1] for the term column
+*   Use [http://www.w3.org/2004/02/skos/core#altLabel][2] for one or more alternative term columns (aliases)
+*   Use [http://www.w3.org/2004/02/skos/core#definition][3] for the term definition column
 
 A `schema` mapping can be omitted when the CSV file embeds these as header labels in the first row:
 
@@ -98,18 +98,18 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ```
 
-[Importing][7] from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][8] types and attributes. See Interoperability with [SKOS 🌎][8] and [JSON-LD 🌎][9] for an in-depth example.
+[Importing][4] from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][5] types and attributes. See Interoperability with SKOS and [JSON-LD 🌎][6] for an in-depth example.
 
 ### [From RDF + SKOS](#from-rdf--skos)
 
 **Since v6.0.0**
 
-If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in some RDF [linked data 🌎][10] store then you might find [linked data 🌎][10] tooling that is able to [export][11]/convert/serialize your [linked data 🌎][10] [vocabulary][12] to **N-Triples, N-Quads or [JSON-LD 🌎][9]**.
+If you have an [SKOS 🌎][5] description of a glossary or taxonomy stored in some RDF [linked data 🌎][7] store then you might find linked data tooling that is able to [export][8]/convert/serialize your linked data [vocabulary][9] to **N-Triples, N-Quads or [JSON-LD 🌎][6]**.
 
-*   [Importing][7] from [JSON-LD 🌎][9] should work similar to [importing][7] [glossarify-md][1]'s own JSON [exports][11]
-*   [Importing][7] N-Triples/N-Quads requires the file name to end with `.nq`
+*   [Importing][4] from [JSON-LD 🌎][6] should work similar to importing glossarify-md's own JSON [exports][8]
+*   [Importing][4] N-Triples/N-Quads requires the file name to end with `.nq`
 
-*Example: [Import][7] RDF + [SKOS 🌎][8] from an N-Quads serialization:*
+*Example: [Import][4] RDF + [SKOS 🌎][5] from an N-Quads serialization:*
 
 ```json
 {
@@ -122,26 +122,20 @@ If you have an [SKOS 🌎][8] description of a glossary or taxonomy stored in so
 }
 ```
 
-[1]: https://github.com/about-code/glossarify-md
+[1]: http://www.w3.org/2004/02/skos/core#prefLabel
 
-[2]: http://www.w3.org/2004/02/skos/core#prefLabel
+[2]: http://www.w3.org/2004/02/skos/core#altLabel
 
-[3]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
+[3]: http://www.w3.org/2004/02/skos/core#definition
 
-[4]: http://www.w3.org/2004/02/skos/core#altLabel
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https, when configured this way."
 
-[5]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md#aliases "Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text."
+[5]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[6]: http://www.w3.org/2004/02/skos/core#definition
+[6]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
 
-[7]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https, when configured this way."
+[7]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
 
-[8]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
-[9]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
-
-[10]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
-
-[11]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
-
-[12]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."

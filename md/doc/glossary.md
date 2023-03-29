@@ -6,9 +6,11 @@ This is a glossary of terms helpful when working with glossarify-md or reading i
 
 An alternative term or spelling for a term.
 
+<!--
 ## Term
 
 Terms are headings in a markdown file which has been configured to be a *glossary file*.
+-->
 
 ## Term Attribute
 <!-- aliases: term attributes, term-attribute -->

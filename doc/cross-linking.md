@@ -20,7 +20,7 @@
 }
 ```
 
-Such a [configuration][4] makes [glossarify-md][5] consider every `*.md` file a *glossary* and each of its section headings *terms*. Mentioning headings (or their [aliases][6]) in any of the processed files turns the phrases into links to those section headings. You might want to have a look at `linking.*` [config options][4] or [Tree-scoped Linking][7] for ways to fine-tune [linkification][8].
+Such a [configuration][4] makes glossarify-md consider every `*.md` file a *glossary* and each of its section headings *terms*. Mentioning headings (or their aliases) in any of the processed files turns the phrases into links to those section headings. You might want to have a look at `linking.*` config options or [Tree-scoped Linking][5] for ways to fine-tune [linkification][6].
 
 > **ⓘ** When the `glossaries` option has multiple `file` patterns and the file sets covered by those patterns overlap then for a file that would belong to multiple file sets only the entry *latest* in the config array applies.
 
@@ -45,11 +45,11 @@ Try [identifier-based cross-linking](#identifier-based-cross-linking) and config
 
 ## [Identifier-based Cross-Linking](#identifier-based-cross-linking)
 
-When there are two or more [term][9] definitions or book sections with the same heading phrase then you might want to refer to a particular [term][9] definition or section. While we would recommend trying [Term-based Auto-Linking][1] with distinguished *[aliases][6]*, first, there might be situations where you might want to be explicit about a link target. With [glossarify-md][5] you can use [pandoc's concept of heading identifiers][pandoc-heading-ids] for identifier-based cross linking.
+When there are two or more term definitions or book sections with the same heading phrase then you might want to refer to a particular term definition or section. While we would recommend trying [Term-based Auto-Linking][1] with distinguished *aliases*, first, there might be situations where you might want to be explicit about a link target. With glossarify-md you can use [pandoc's concept of heading identifiers][pandoc-heading-ids] for identifier-based cross linking.
 
 > **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
-**Example: [Identifier-based Cross-Linking][10]**
+**Example: [Identifier-based Cross-Linking][7]**
 
 *./page1.md*
 
@@ -63,7 +63,7 @@ The document declares a heading-id `#s-241`. Given it is **unique across *all* f
 [any phrase](#s-241)
 ```
 
-[glossarify-md][5] will resolve the actual path to the corresponding section heading for you (relative or absolute, depending on the `paths` [config option][4]):
+glossarify-md will resolve the actual path to the corresponding section heading for you (relative or absolute, depending on the `paths` [config option][4]):
 
 *./pages/page2.md*
 
@@ -71,9 +71,9 @@ The document declares a heading-id `#s-241`. Given it is **unique across *all* f
 
 ## [Tree-Scoped Linking](#tree-scoped-linking)
 
-When using term-based auto linking then, occassionally, you might find [term][9] occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading. A manual approach to prevent this case by case is to wrap a [term][9] occurrence into some HTML-like tag, e.g. `<x>term</x>`, where necessary. A less selective approach might be to limit the applicable scope of auto-linking or [term][9] definitions to only subtrees of a file tree and prevent links to other parts of the tree:
+When using term-based auto linking then, occassionally, you might find term occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading. A manual approach to prevent this case by case is to wrap a term occurrence into some HTML-like tag, e.g. `<x>term</x>`, where necessary. A less selective approach might be to limit the applicable scope of auto-linking or term definitions to only subtrees of a file tree and prevent links to other parts of the tree:
 
-**Example: [Tree-Scoped Linking][7]**
+**Example: [Tree-Scoped Linking][5]**
 
 *Project directory layout:*
 
@@ -104,36 +104,36 @@ When using term-based auto linking then, occassionally, you might find [term][9]
 }
 ```
 
-A [term][9]'s *origin* is the glossary section where the [term][9] was defined. A link is a directed edge of kind `(term-occurrence) -> (term-origin)`. A [configuration][4]...
+A term's *origin* is the glossary section where the term was defined. A link is a directed edge of kind `(term-occurrence) -> (term-origin)`. A [configuration][4]...
 
 ```json
 "limitByTermOrigin": ["parent", "sibling", "self"]
 ```
 
-...linkifies [term][9] occurrences when the [term][9] origin is found in the same file, a sibling file within the same directory or a file in a direct parent directory (bottom up linking). Given above example, the config then
+...linkifies term occurrences when the term origin is found in the same file, a sibling file within the same directory or a file in a direct parent directory (bottom up linking). Given above example, the config then
 
-*   *does* link [term][9] occurrences with [term][9] definitions in the same file
-*   *does* link [term][9] occurrences in `context-1-1` with terms defined in `context-1` or context root `/`
-*   *does not* link [term][9] occurrences in context root `/` or `context-1` with terms defined in `context-1-1`
-*   *does not* link [term][9] occurrences in `context-1-1` with terms defined in `context-1-2` or `context-2`
+*   *does* link term occurrences with term definitions in the same file
+*   *does* link term occurrences in `context-1-1` with terms defined in `context-1` or context root `/`
+*   *does not* link term occurrences in context root `/` or `context-1` with terms defined in `context-1-1`
+*   *does not* link term occurrences in `context-1-1` with terms defined in `context-1-2` or `context-2`
 
 ```json
 "limitByTermOrigin": ["children", "sibling", "self"]
 ```
 
-...linkifies [term][9] occurrences only when the [term][9] was defined in the same file a file in the same directory or a file in a subdirectory (top down linking),
+...linkifies term occurrences only when the term was defined in the same file a file in the same directory or a file in a subdirectory (top down linking),
 
 ```json
 "limitByTermOrigin": ["parent", "children", "sibling", "self"]
 ```
 
-...linkifies [term][9] occurrences in both directions along a filesystem path. Yet, it does not create links between branches of the file tree, e.g. it does not link terms defined in `context-1-2` with [term][9] occurrences found in `context-1-1` and vice versa,
+...linkifies term occurrences in both directions along a filesystem path. Yet, it does not create links between branches of the file tree, e.g. it does not link terms defined in `context-1-2` with term occurrences found in `context-1-1` and vice versa,
 
 ```json
-limitByTermOrigin: ["parent", "children", "sibling", "parent-sibling", "self"]
+"limitByTermOrigin": ["parent", "children", "sibling", "parent-sibling", "self"]
 ```
 
-...linkifies any [term][9] definitions with any [term][9] occurrences, including linking accross tree branches (bidirectionally). This is basically the "unlimited" default so is equivalent to `limitByTermOrigin: []`.
+...linkifies any term definitions with any term occurrences, including linking accross tree branches (bidirectionally). This is basically the "unlimited" default so is equivalent to `limitByTermOrigin: []`.
 
 [1]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#term-based-auto-linking "Term-based auto-linking is to assume headings in markdown files called glossaries are terms."
 
@@ -143,16 +143,10 @@ limitByTermOrigin: ["parent", "children", "sibling", "parent-sibling", "self"]
 
 [4]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 
-[5]: https://github.com/about-code/glossarify-md
+[5]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#tree-scoped-linking "When using term-based auto linking then, occassionally, you might find term occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading."
 
-[6]: https://github.com/about-code/glossarify-md/blob/master/doc/term-attributes.md#aliases "Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text."
-
-[7]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#tree-scoped-linking "When using term-based auto linking then, occassionally, you might find term occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading."
-
-[8]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#linkification "Process of searching for a term in document A matching a heading phrase in
 document B and replacing the term in document A with a Markdown link pointing
 onto the term definition in document B."
 
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term "Terms are headings in a markdown file which has been configured to be a glossary file."
-
-[10]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#identifier-based-cross-linking "When there are two or more term definitions or book sections with the same heading phrase then you might want to refer to a particular term definition or section."
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#identifier-based-cross-linking "When there are two or more term definitions or book sections with the same heading phrase then you might want to refer to a particular term definition or section."

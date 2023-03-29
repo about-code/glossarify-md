@@ -2,7 +2,7 @@
 
 [Shannon1948]: https://doi.org/10.1002/j.1538-7305.1948.tb01338.x
 
-A way to use [glossarify-md][1] for citing and linking is to have a file, e.g. `references.md` ...
+A way to use glossarify-md for citing and linking is to have a file, e.g. `references.md` ...
 
 ```md
 # References
@@ -24,6 +24,4 @@ C. E. Shannon, "A mathematical theory of communication," in The Bell System Tech
 }
 ```
 
-Use `linkUris: true` to make [glossarify-md][1] link occurrences of [Shannon1948] to the web using its `uri`. With `linkUris: false` (default) it links to `references.md`.
-
-[1]: https://github.com/about-code/glossarify-md
+Use `linkUris: true` to make glossarify-md link occurrences of [Shannon1948] to the web using its `uri`. With `linkUris: false` (default) it links to `references.md`.

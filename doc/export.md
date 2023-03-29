@@ -6,7 +6,7 @@ aliases: exporting, exports
 
 **Since v6.0.0**
 
-[Exporting][1] makes [glossarify-md][2] generate and write a structured representation of a markdown glossary to the output directory.
+[Exporting][1] makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory.
 
 ## [JSON (SKOS RDF/JSON-LD)](#json-skos-rdfjson-ld)
 
@@ -30,7 +30,7 @@ aliases: exporting, exports
 
 ## [RDF/N-Quads](#rdfn-quads)
 
-With [jsonld 🌎][3] installed alongside [glossarify-md][2] terms can also be exported to RDF N-Quads (file extension `.nq`).
+With [jsonld 🌎][2] installed alongside glossarify-md terms can also be exported to RDF N-Quads (file extension `.nq`).
 
 *Example: [Export][1] terms in glossary.md as ./glossary.nq*
 
@@ -48,6 +48,4 @@ With [jsonld 🌎][3] installed alongside [glossarify-md][2] terms can also be e
 
 [1]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
-[2]: https://github.com/about-code/glossarify-md
-
-[3]: https://npmjs.com/package/jsonld "A JavaScript implementation of JSON-LD."
+[2]: https://npmjs.com/package/jsonld "A JavaScript implementation of JSON-LD."

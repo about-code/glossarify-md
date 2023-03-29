@@ -67,7 +67,7 @@ A static website renderer compiling an HTML website from Markdown files.
   aliases: JSON-LD Spec
 -->
 
-[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With [JSON-LD 🌎][8] it's possible to write applications which are interoperable by mutual agreement on the same public [vocabulary][9]. [SKOS 🌎][10] is one such [vocabulary][9] supported by [glossarify-md][11]
+[JSON-LD 🌎][8] is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public [vocabularies][9]. With JSON-LD it's possible to write applications which are interoperable by mutual agreement on the same public vocabulary. [SKOS 🌎][10] is one such vocabulary supported by glossarify-md
 
 ## [jsonld Library](#jsonld-library)
 
@@ -85,7 +85,7 @@ A JavaScript implementation of [JSON-LD 🌎][8].
   aliases: LD
 -->
 
-See [Linked Data 🌎][12].
+See [Linked Data 🌎][11].
 
 ## [mdAst](#mdast)
 
@@ -104,7 +104,7 @@ Specification and Implementation of a Markdown Abstract Syntax Tree.
 
 <!-- uri: https://github.com/micromark/ -->
 
-A low-level extensible implementation of the [CommonMark 🌎][13] syntax specification (parsing and tokenizing).
+A low-level extensible implementation of the [CommonMark 🌎][12] syntax specification (parsing and tokenizing).
 
 ## [NodeJS](#nodejs)
 
@@ -117,7 +117,7 @@ A low-level extensible implementation of the [CommonMark 🌎][13] syntax specif
 
 <!-- uri: https://npmjs.com -->
 
-Node Package Manager. See [npm 🌎][14].
+Node Package Manager. See [npm 🌎][13].
 
 ## [OWL](#owl)
 
@@ -129,31 +129,31 @@ Web Ontology Language.
 
 <!-- uri: https://pandoc.org -->
 
-See [pandoc 🌎][15].
+See [pandoc 🌎][14].
 
 ## [PlantUML](#plantuml)
 
 <!-- uri: https://plantuml.com -->
 
-Generates diagrams from text files written in the [PlantUML 🌎][16] syntax.
+Generates diagrams from text files written in the [PlantUML 🌎][15] syntax.
 
 ## [remark](#remark)
 
 <!-- uri: https://github.com/remarkjs/remark -->
 
-*[remark 🌎][17]* is a parser and compiler project under the [unified 🌎][18] umbrella for *Markdown* text files in particular.
+*[remark 🌎][16]* is a parser and compiler project under the [unified 🌎][17] umbrella for *Markdown* text files in particular.
 
 ## [remark-frontmatter](#remark-frontmatter)
 
 <!-- uri: https://npmjs.com/package/remark-frontmatter -->
 
-A [remark 🌎][17] syntax plug-in supporting pseudo-standard front-matter syntax.
+A [remark 🌎][16] syntax plug-in supporting pseudo-standard front-matter syntax.
 
 ## [remark-gfm](#remark-gfm)
 
 <!-- uri: https://npmjs.com/package/remark-gfm -->
 
-A [remark 🌎][17] syntax plug-in supporting [GitHub Flavoured Markdown 🌎][3].
+A [remark 🌎][16] syntax plug-in supporting [GitHub Flavoured Markdown 🌎][3].
 
 ## [remark plug-ins](#remark-plug-ins)
 
@@ -162,13 +162,13 @@ uri: https://github.com/remarkjs/awesome-remark
 aliases: remark plug-in ecosystem, plug-in ecosystem
 -->
 
-A curated list of [remark 🌎][17] [plug-ins][19].
+A curated list of [remark 🌎][16] [plug-ins][18].
 
 ## [remark-shortcodes](#remark-shortcodes)
 
 <!-- uri: https://www.npmjs.com/package/remark-shortcodes -->
 
-A [remark 🌎][17] syntax plug-in supporting non-standard [Hugo 🌎][20] shortcodes syntax.
+A [remark 🌎][16] syntax plug-in supporting non-standard [Hugo 🌎][19] shortcodes syntax.
 
 ## [Semantic HTML Tags](#semantic-html-tags)
 
@@ -181,19 +181,19 @@ A [remark 🌎][17] syntax plug-in supporting non-standard [Hugo 🌎][20] short
 
 <!-- uri: http://w3.org/skos/ -->
 
-With the Simple [Knowledge Organization System][21] ([SKOS 🌎][10]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary][9] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+With the Simple [Knowledge Organization System][20] ([SKOS 🌎][10]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary][9] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
 
 ## [unified](#unified)
 
 <!-- uri: https://unifiedjs.com -->
 
-*[unified 🌎][18]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers][22] of [glossarify-md][11].
+*[unified 🌎][17]* is an umbrella project around *text file processing in general*. See also [Conceptual Layers][21] of glossarify-md.
 
 ## [URN](#urn)
 
 <!-- uri: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml -->
 
-Uniform Resource Names. See [URN 🌎][23].
+Uniform Resource Names. See [URN 🌎][22].
 
 ## [VSCode](#vscode)
 
@@ -201,7 +201,7 @@ Uniform Resource Names. See [URN 🌎][23].
 
 [Code-OSS]: https://github.com/microsoft/vscode
 
-Visual Studio Code. See [VSCode 🌎][24] or [Code-OSS].
+Visual Studio Code. See [VSCode 🌎][23] or [Code-OSS].
 
 ## [vuepress](#vuepress)
 
@@ -219,7 +219,7 @@ A Single Page Application framework written in JavaScript.
 
 <!-- uri: https://npmjs.com/package/verdaccio -->
 
-An easy to [install][25] local or on-premises [npm 🌎][14] registry.
+An easy to [install][24] local or on-premises [npm 🌎][13] registry.
 
 [1]: https://atom.io "Atom Code Editor."
 
@@ -241,32 +241,30 @@ An easy to [install][25] local or on-premises [npm 🌎][14] registry.
 
 [10]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[11]: https://github.com/about-code/glossarify-md
+[11]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
 
-[12]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
+[12]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
 
-[13]: https://commonmark.org "Effort on providing a minimal set of standardized Markdown syntax."
+[13]: https://npmjs.com "Node Package Manager."
 
-[14]: https://npmjs.com "Node Package Manager."
+[14]: https://pandoc.org "See pandoc."
 
-[15]: https://pandoc.org "See pandoc."
+[15]: https://plantuml.com "Generates diagrams from text files written in the PlantUML syntax."
 
-[16]: https://plantuml.com "Generates diagrams from text files written in the PlantUML syntax."
+[16]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
 
-[17]: https://github.com/remarkjs/remark "remark is a parser and compiler project under the unified umbrella for Markdown text files in particular."
+[17]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[18]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
+[18]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
 
-[19]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins.md#installing-and-configuring-plug-ins "The following example demonstrates how to install remark-frontmatter, a syntax plug-in from the remark plug-in ecosystem which makes glossarify-md (resp."
+[19]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
 
-[20]: https://gohugo.io "A static website renderer compiling an HTML website from Markdown files."
+[20]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
 
-[21]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#kos---knowledge-organization-systems "Glossaries are considered a kind of Knowledge Organisation System (KOS) which organizes knowledge as a list of terms and term definitions."
+[21]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."
 
-[22]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."
+[22]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
 
-[23]: https://www.iana.org/assignments/urn-namespaces/urn-namespaces.xhtml "Uniform Resource Names."
+[23]: https://code.visualstudio.com "Visual Studio Code."
 
-[24]: https://code.visualstudio.com "Visual Studio Code."
-
-[25]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install
+[24]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install

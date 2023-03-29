@@ -2,7 +2,7 @@
 
 [doc-lists]: ./gen-lists.md
 
-*glossarify-md.conf.json*
+*<x>glossarify-md.conf.json</x>*
 
 ```json
 "generateFiles": {

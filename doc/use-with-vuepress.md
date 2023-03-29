@@ -47,11 +47,11 @@ Below we assume a *sample* project structure like this:
 
     npm i glossarify-md remark-frontmatter
 
-Installs [glossarify-md][1] with a syntax plug-in for *frontmatter* syntax.
+Installs glossarify-md with a syntax plug-in for *frontmatter* syntax.
 
 ## [Configure glossarify-md](#configure-glossarify-md)
 
-*[glossarify-md][1].conf.json*
+*glossarify-md.conf.json*
 
 ```json
 {
@@ -75,7 +75,7 @@ Installs [glossarify-md][1] with a syntax plug-in for *frontmatter* syntax.
 
 ## [Configure vuepress](#configure-vuepress)
 
-[glossarify-md][1] and [vuepress 🌎][2] need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *[slugs][3]*.
+glossarify-md and [vuepress 🌎][1] need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *[slugs][2]*.
 
 > ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent.
 > For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
@@ -140,14 +140,12 @@ module.exports = {
 *   `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
 *   `npm run glossarify` writes glossarified markdown files to `outDir`
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
-*   `npm run build` just builds the glossarified [vuepress 🌎][2] site without running a server.
+*   `npm run build` just builds the glossarified [vuepress 🌎][1] site without running a server.
 
-More see [README.md][4].
+More see [README.md][3].
 
-[1]: https://github.com/about-code/glossarify-md
+[1]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
 
-[2]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
+[2]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
-[3]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
-
-[4]: ../README.md
+[3]: ../README.md
