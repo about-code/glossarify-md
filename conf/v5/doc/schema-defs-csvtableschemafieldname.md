@@ -1,4 +1,4 @@
-## name Default Value
+## csvTableSchemaFieldName Default Value
 
 The default value is:
 

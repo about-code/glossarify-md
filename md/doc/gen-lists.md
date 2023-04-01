@@ -1,4 +1,4 @@
-### Generating Files: Lists
+# Generating Files: Lists
 
 [CommonMark]: https://commonmark.org
 [GFM]: https://github.github.com/gfm/

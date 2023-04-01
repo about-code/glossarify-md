@@ -1,6 +1,7 @@
 # Cross-Linking
 
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
+[CommonMark]: https://commonmark.org
 
 > **ⓘ Since: v5.0.0**
 
@@ -18,9 +19,9 @@ Term-based auto-linking is to assume headings in markdown files called *glossari
 }
 ~~~
 
-Such a configuration makes glossarify-md consider every `*.md` file a *glossary* and each of its section headings *terms*. Mentioning headings (or their aliases) somewhere in the file turns the phrases into links to that section. You might want to have a look at `linking.*` config options or [Tree-scoped Linking](#tree-scoped-linking) for ways to fine-tune linkification.
+Such a configuration makes glossarify-md consider every `*.md` file a *glossary* and each of its section headings *terms*. Mentioning headings (or their aliases) in any of the processed files turns the phrases into links to those section headings. You might want to have a look at `linking.*` config options or [Tree-scoped Linking](#tree-scoped-linking) for ways to fine-tune linkification.
 
-> **ⓘ** When `glossaries:[]` has multiple `file` entries, each with a glob pattern and the file sets covered by those patterns overlap, then for a file that would be come part of both file sets (intersection) only the entry *latest* in the array applies.
+> **ⓘ** When the `glossaries` option has multiple `file` patterns and the file sets covered by those patterns overlap then for a file that would belong to multiple file sets only the entry *latest* in the config array applies.
 
 <!--
 **Too many links**: Try config options
@@ -45,7 +46,7 @@ Try [identifier-based cross-linking](#identifier-based-cross-linking) and config
 
 ## Identifier-based Cross-Linking
 
-When there are two or more term definitions or book sections with the same heading phrase, then you might want to refer to a particular term definition or section, in particular. While we would recommend trying [Term-based Auto-Linking](#term-based-auto-linking) with distinguished *aliases*, first, there might be situations where you might want to be explicit about a link target. glossarify-md supports [pandoc's concept of heading identifiers][pandoc-heading-ids] for identifier-based cross linking.
+When there are two or more term definitions or book sections with the same heading phrase then you might want to refer to a particular term definition or section. While we would recommend trying [Term-based Auto-Linking](#term-based-auto-linking) with distinguished *aliases*, first, there might be situations where you might want to be explicit about a link target. With glossarify-md you can use [pandoc's concept of heading identifiers][pandoc-heading-ids] for identifier-based cross linking.
 
 > **ⓘ Note:** Pandoc's identifier syntax is not standardized in [CommonMark].
 
@@ -56,13 +57,13 @@ When there are two or more term definitions or book sections with the same headi
 ## User Story {#s-241}
 ~~~
 
-The document declares a heading-id `#s-241`. Given `#s-241` is ***unique* across all documents** then you can use it as a link reference in any file being processed...
+The document declares a heading-id `#s-241`. Given it is **unique across *all* files** being processed then you can use it as a link reference in any of these files:
 
 ~~~md
 [any phrase](#s-241)
 ~~~
 
-...and glossarify-md will resolve the actual path to the corresponding section heading for you (relative or absolute based on the `paths` config option):
+glossarify-md will resolve the actual path to the corresponding section heading for you (relative or absolute, depending on the `paths` config option):
 
 
 *./pages/page2.md*
@@ -72,7 +73,7 @@ The document declares a heading-id `#s-241`. Given `#s-241` is ***unique* across
 
 ## Tree-Scoped Linking
 
-When using term-based auto linking then, occassionally, you might find term occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading. A manual approach to prevent this in a case-by-case decision is to wrap a term into some HTML-like tag, e.g. `<x>term</x>`. *Tree-scoped Linking* uses config option `linking.limitByTermOrigin` to limit the applicable scope of a term definition to a subtree of a file tree and prevent links to other parts of the tree:
+When using term-based auto linking then, occassionally, you might find term occurrences being linkified in contexts where a link to the respective link target doesn't seem right or even a bit misleading. A manual approach to prevent this case by case is to wrap a term occurrence into some HTML-like tag, e.g. `<x>term</x>`, where necessary. A less selective approach might be to limit the applicable scope of auto-linking or term definitions to only subtrees of a file tree and prevent links to other parts of the tree:
 
 **Example: Tree-Scoped Linking**
 
@@ -105,21 +106,20 @@ ${ROOT}
 }
 ~~~
 
-A term's origin is the glossary section where the term was defined. A link is a directed edge of kind `(term-occurrence) -> (term-origin)`. So...
+A term's *origin* is the glossary section where the term was defined. A link is a directed edge of kind `(term-occurrence) -> (term-origin)`. A configuration...
 
 
 ~~~json
 "limitByTermOrigin": ["parent", "sibling", "self"]
 ~~~
 
-...linkifies term occurrences when the term origin is found to be in the same file, a sibling file in same directory or a file in a direct parent directory (bottom up linking). Given above example, then
+...linkifies term occurrences when the term origin is found in the same file, a sibling file within the same directory or a file in a direct parent directory (bottom up linking). Given above example, the config then
 
-  - it *does* link term occurrences with term definitions in the same file
-  - it *does* link term occurrences in `context-1-1` with terms defined in `context-1` or context root `/`
-  - it *does not* link term occurrences in context root `/` or `context-1` with terms defined in `context-1-1`
-  - it *does not* link term occurrences in `context-1-1` with terms defined in `context-1-2` or `context-2`
-
-...and so forth,
+  - *does* link term occurrences with term definitions in the same file
+  - *does* link term occurrences in `context-1-1` with terms defined in `context-1` or context root `/`
+  - *does not* link term occurrences in context root `/` or `context-1` with terms defined in `context-1-1`
+  - *does not* link term occurrences in `context-1-1` with terms defined in `context-1-2` or `context-2`
+  
 
 ~~~json
 "limitByTermOrigin": ["children", "sibling", "self"]
@@ -133,7 +133,7 @@ A term's origin is the glossary section where the term was defined. A link is a 
 ...linkifies term occurrences in both directions along a filesystem path. Yet, it does not create links between branches of the file tree, e.g. it does not link terms defined in `context-1-2` with term occurrences found in `context-1-1` and vice versa,
 
 ~~~json
-limitByTermOrigin: ["parent", "children", "sibling", "parent-sibling", "self"]
+"limitByTermOrigin": ["parent", "children", "sibling", "parent-sibling", "self"]
 ~~~
 
 ...linkifies any term definitions with any term occurrences, including linking accross tree branches (bidirectionally). This is basically the "unlimited" default so is equivalent to `limitByTermOrigin: []`.

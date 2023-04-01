@@ -1,4 +1,4 @@
-#### Configuration
+## Configuration
 <!--
 uri: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
 aliases: config option, config options
@@ -8,8 +8,8 @@ aliases: config option, config options
 <!-- uri: https://github.com/about-code/glossarify-md -->
 
 
-#### README.md
+## README.md
 <!-- uri: https://github.com/about-code/glossarify-md/blob/master/README.md -->
 
-#### Table of Contents
+## Table of Contents
 <!-- uri: https://github.com/about-code/glossarify-md/blob/master/README.md -->

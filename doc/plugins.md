@@ -6,7 +6,7 @@ aliases: Plug-ins, Installing Plug-ins, installing and configuring a plug-in, in
 
 [unified-config]: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md
 
-The following example demonstrates how to [install][1] [remark-frontmatter 🌎][2], a syntax plug-in from the [remark 🌎][3] [plug-in ecosystem 🌎][4] which makes [glossarify-md][5] (resp. its internal remark parser) handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][6] for when you need a plug-in).
+The following example demonstrates how to [install][1] [remark-frontmatter 🌎][2], a syntax plug-in from the [remark 🌎][3] [plug-in ecosystem 🌎][4] which makes glossarify-md (resp. its internal remark parser) handle non-standard *Frontmatter* syntax, correctly (See [Markdown Syntax Extensions][5] for when you need a plug-in).
 
 > **ⓘ  Note:** glossarify-md does not guarantee compatibility with plug-ins and likely won't help with issues arising due to installing and using additional third-party plug-ins.
 
@@ -41,8 +41,8 @@ We'll assume the following project structure:
 
 Keys of the `plugins` object tell what plug-in to load and may be:
 
-*   a name of an [npm 🌎][7] package in a global or local `node_modules` folder
-*   a path to a JavaScript file [exporting][8] a plug-in function (see page [Writing a Plug-in][9])
+*   a name of an [npm 🌎][6] package in a global or local `node_modules` folder
+*   a path to a JavaScript file [exporting][7] a plug-in function (see page [Writing a Plug-in][8])
 
 Their value in turn are options passed to the plug-in. Read [remark-frontmatter 🌎][2] docs, to find out about available options.
 
@@ -73,7 +73,7 @@ Their value in turn are options passed to the plug-in. Read [remark-frontmatter 
 > }
 > ```
 
-If you would like to learn more about how *[unified 🌎][10]* and *[remark 🌎][3]* relate to [glossarify-md][5], read [Conceptual Layers][11]
+If you would like to learn more about how *[unified 🌎][9]* and *[remark 🌎][3]* relate to glossarify-md, read [Conceptual Layers][10]
 
 [1]: https://github.com/about-code/glossarify-md/blob/master/doc/install.md#install
 
@@ -83,16 +83,14 @@ If you would like to learn more about how *[unified 🌎][10]* and *[remark 🌎
 
 [4]: https://github.com/remarkjs/awesome-remark "A curated list of remark plug-ins."
 
-[5]: https://github.com/about-code/glossarify-md
+[5]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md#markdown-syntax-extensions "glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM)."
 
-[6]: https://github.com/about-code/glossarify-md/blob/master/doc/markdown-syntax-extensions.md#markdown-syntax-extensions "glossarify-md supports CommonMark and GitHub Flavoured Markdown (GFM)."
+[6]: https://npmjs.com "Node Package Manager."
 
-[7]: https://npmjs.com "Node Package Manager."
+[7]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
-[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
+[8]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#writing-a-plug-in
 
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/plugins-dev.md#writing-a-plug-in
+[9]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
 
-[10]: https://unifiedjs.com "unified is an umbrella project around text file processing in general."
-
-[11]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."
+[10]: https://github.com/about-code/glossarify-md/blob/master/doc/conceptual-layers.md#internals-conceptual-layers "Conceptual layers of text processing by glossarify-md and projects contributing to each layer glossarify-md is built on unified, an umbrella project for text file processing in general."

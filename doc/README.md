@@ -58,11 +58,11 @@ Book Writing
 
 Generating Files
 
-- [Book Index][doc-gen-book-index]
 - [Lists][doc-gen-lists]
   - [List of Figures][doc-gen-lists-of-figures]
   - [List of Tables][doc-gen-lists-of-tables]
   - [Lists from Regular Expressions][doc-gen-lists-from-regexp]
+- [Book Index][doc-gen-book-index]
 
 Publishing
 

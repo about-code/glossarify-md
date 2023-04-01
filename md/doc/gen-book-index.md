@@ -1,8 +1,8 @@
-## Generating Files: Book Index
+# Generating Files: Book Index
 
 [doc-lists]: ./gen-lists.md
 
-*glossarify-md.conf.json*
+*<x>glossarify-md.conf.json</x>*
 
 ```json
 "generateFiles": {
@@ -23,7 +23,7 @@ This option will generate a single book index file `./book-index.md` with glossa
 
 > **ⓘ Note**: The `groupByHeadingDepth` option also affects grouping of list items in [Lists][doc-lists].
 
-Let's assume you have multiple glossaries and you want to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
+Let's assume you have multiple glossaries and you would like to create separate book indexes from terms of those glossaries. **Since v5.1.0** you can use `indexFiles` (plural) like this:
 
 ```json
 "generateFiles": {
@@ -39,4 +39,4 @@ Let's assume you have multiple glossaries and you want to create separate book i
 }
 ```
 
-> **ⓘ Note:** If you plan on translating markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.
+> **ⓘ Note:** If you plan for translating Markdown to HTML, e.g. with [vuepress](https://vuepress.vuejs.org), be aware that a file `index.md` will translate to `index.html` which is typically reserved for the default HTML file served under a domain. We recommend you choosing another name.

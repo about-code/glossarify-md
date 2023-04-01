@@ -24,17 +24,20 @@
     ".git"
   ],
   "ignoreCase": true,
+  "indexing": {
+    "headingDepths": [
+      1,
+      2,
+      3
+    ]
+  },
   "linking": {
     "baseUrl": "https://github.com/about-code/glossarify-md/blob/master/doc/",
     "paths": "absolute",
     "mentions": "first-in-paragraph",
     "headingDepths": [
       1,
-      2,
-      3,
-      4,
-      5,
-      6
+      2
     ],
     "limitByAlternatives": 5
   }

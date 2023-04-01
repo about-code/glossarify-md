@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#"
-    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json"
+    ,"$id": "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json"
     ,"type": "object"
     ,"title": "Configuration Schema"
     ,"description": "Load the configuration schema from your project's node_modules folder, for example './node_modules/glossarify-md/conf/v5/schema.json', or from a GitHub major release tag when installed globally, for example https://raw.githubusercontent.com/about-code/glossarify-md/v5.0.0/conf/v5/schema.json\nUse glossarify-md --init [--local] to generate a config with one or the other.\nNote that the configuration schema version is independent from the glossarify-md release version. Configuration schema version 5 introduced with glossarify-md v5.0.0 may still be used with glossarify-md v6.0.0 or v7.0.0. if there are no breaking changes in the schema."
@@ -454,7 +454,7 @@
                     ,"enum": ["all", "first-in-paragraph"]
                 }
                 ,"headingDepths": {
-                    "description": "An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation (\"linkification\"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as \"terms\" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`."
+                    "description": "An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*."
                     ,"type": "array"
                     ,"items": {
                         "type": "integer"

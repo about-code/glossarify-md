@@ -323,7 +323,7 @@ The default value is:
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvDialect"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvDialect"}
 ```
 
 
@@ -387,7 +387,7 @@ The default value is:
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchema"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvTableSchema"}
 ```
 
 
@@ -411,7 +411,7 @@ Reference this group by using
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaField"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvTableSchemaField"}
 ```
 
 
@@ -439,7 +439,7 @@ The default value is:
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/csvTableSchemaFieldName"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvTableSchemaFieldName"}
 ```
 
 
@@ -449,7 +449,7 @@ Reference this group by using
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/generateFiles"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/generateFiles"}
 ```
 
 
@@ -509,7 +509,7 @@ Generate a file with a list of tables and where they can be found.
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile"}
 ```
 
 
@@ -612,7 +612,7 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileExport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFileExport"}
 ```
 
 
@@ -642,7 +642,7 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/glossaryFileImport"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFileImport"}
 ```
 
 
@@ -672,7 +672,7 @@ File path or URL to a custom JSON-LD context document (application/ld+json) mapp
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexFile"}
 ```
 
 
@@ -722,7 +722,7 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/indexing"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexing"}
 ```
 
 
@@ -758,7 +758,7 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/listOfItemsFile"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/listOfItemsFile"}
 ```
 
 
@@ -808,7 +808,7 @@ A regular expression which when matching against text will generate an entry in 
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/i18n"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/i18n"}
 ```
 
 
@@ -927,7 +927,7 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/linking"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking"}
 ```
 
 
@@ -1011,7 +1011,7 @@ Control the link density and whether every occurrence of a term in your document
 
 ### headingDepths
 
-An array of numerical values each in a range of 1-6 denoting the depths of headings that should participate in term-based link creation ("linkification"). Note the dependency on `indexing.headingDepths`: The latter controls which headings to index as "terms" *at all* so only indexed headings can be linkified at all. As you likely guess this means that configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2` because they haven't been indexed, before. Instead with `indexing.headingDepths: [1,2,3]` *they would* because then headings at depth 1 to 3 would be indexed which includes headings at depth `2`, of course. Or long story short: `linking.headingDepths` is expected to be a fully enclosed subset of `indexing.headingDepths`.
+An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*.
 
 `headingDepths`
 
@@ -1065,7 +1065,7 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of
 5: makes the system link to *at most 5* alternative definitions per term
-\-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
+-5: makes the system *stop linking a term* once there are *at least 5* alternative definitions
 0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).
 Negative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once.
 
@@ -1100,7 +1100,7 @@ When 'true' replaces markdown inline links with numbered references to a link re
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/unified"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/unified"}
 ```
 
 
@@ -1142,7 +1142,7 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 Reference this group by using
 
 ```json
-{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v6.3.3/conf/v5/schema.json#/$defs/dev"}
+{"$ref":"https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/dev"}
 ```
 
 
@@ -1155,7 +1155,7 @@ Print the AST of scanned markdown documents prior to linkification. May be a Reg
 
 *   is optional
 
-*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
+*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
 
 ### printOutputAst
 
@@ -1165,7 +1165,7 @@ Print the AST of scanned markdown documents after linkification. May be a Regex 
 
 *   is optional
 
-*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
+*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
 
 ### reportsFile
 

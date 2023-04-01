@@ -22,9 +22,9 @@ Exporting makes glossarify-md generate and write a structured representation of 
 }
 ~~~
 
-> **ⓘ** We recommend declaring a glossary `uri` when exporting. It will make glossarify-md assign each term a unique *uniform resource identifier* by combining the URI with a term's term identifier.
->
-> More on the idea behind URIs read Vocabulary URIs. See config option `headingIdAlgorithm` to select an algorithm for generating term identifiers from the term itself. Use pandoc syntax `{#my-own-id}` in a term heading to specify your own term identifier.
+We recommend declaring a glossary `uri` when exporting. It will make glossarify-md assign each term a unique *uniform resource identifier* by combining the URI with a term's term identifier.
+
+More on the idea behind URIs read URIs as Identifiers for Definitions of Meaning. See also config option `headingIdAlgorithm` to select an algorithm for generating term identifiers from the term itself or use pandoc syntax `{#my-own-id}` in a term heading to specify your own term identifier.
 
 ## RDF/N-Quads
 

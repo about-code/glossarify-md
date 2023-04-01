@@ -1,19 +1,17 @@
 {
   "name": "glossarify-md",
-  "version": "6.3.3",
+  "version": "7.0.0",
   "description": "Scans markdown files for glossary terms and replaces each occurrence with a link to a glossary file.",
   "author": {
     "name": "Andreas Martin"
   },
   "license": "MIT",
   "exports": {
-    "import": "./lib/main.js",
-    "require": "./cjs/main.js"
+    "import": "./lib/main.js"
   },
-  "main": "./cjs/main.js",
   "type": "module",
   "engines": {
-    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
+    "node": ">=16.0.0"
   },
   "repository": {
     "type": "git",
@@ -59,16 +57,16 @@
   },
   "dependencies": {
     "chokidar": "^3.5.3",
-    "deepmerge": "^4.2.2",
-    "fs-extra": "^10.0.1",
-    "github-slugger": "^1.0.0",
-    "glob": "^7.2.0",
+    "deepmerge": "^4.3.1",
+    "fs-extra": "^11.1.1",
+    "github-slugger": "^2.0.0",
+    "glob": "^9.3.2",
     "mdast-builder": "^1.1.1",
-    "mdast-util-to-markdown": "^1.3.0",
-    "mdast-util-to-string": "^3.1.0",
+    "mdast-util-to-markdown": "^1.5.0",
+    "mdast-util-to-string": "^3.1.1",
     "mdast-util-wiki-link": "^0.0.2",
     "micromark-extension-wiki-link": "0.0.4",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.8",
     "remark-autolink-headings": "^7.0.1",
     "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
@@ -76,29 +74,26 @@
     "remark-stringify": "^10.0.2",
     "strip-markdown": "^5.0.0",
     "unified": "^10.1.2",
-    "unified-engine": "^9.0.5",
+    "unified-engine": "^10.1.0",
     "unist-util-flatmap": "^1.0.0",
-    "unist-util-visit": "^4.1.0",
-    "vfile": "^5.3.2",
-    "yaml": "^2.1.1"
+    "unist-util-visit": "^4.1.2",
+    "vfile": "^5.3.7",
+    "yaml": "^2.2.1"
   },
   "devDependencies": {
-    "@adobe/jsonschema2md": "6.0.3",
-    "eslint": "^8.11.0",
-    "jsonld": "^5.2.0",
+    "@adobe/jsonschema2md": "^7.1.5",
+    "eslint": "^8.37.0",
     "npm-run-all": "^4.1.5",
-    "remark-cli": "^10.0.1",
+    "remark-cli": "^11.0.0",
     "remark-comment-config": "^7.0.1",
     "remark-license": "^6.1.0",
     "remark-toc": "^8.0.1",
     "standard-version": "^9.3.2"
   },
-  "peerDependencies": {
-    "inquirer": "^8.2.0"
-  },
   "optionalDependencies": {
-    "csv-parse": "^5.3.5",
-    "jsonld": "^5.2.0"
+    "csv-parse": "^5.3.6",
+    "inquirer": "^9.1.5",
+    "jsonld": "^8.1.1"
   },
   "remarkConfig": {
     "settings": {

@@ -21,9 +21,9 @@ Term definition here.
 
 ## Supported Term Attributes
 
-### `aliases`
+### <x>`aliases`</x>
 
-Expects a comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text. More see README.md
+A comma-separated string or a list of strings which provide synonyms or alternative spellings for a term that should be linked with a term definition when found in text. More see README.md
 
 > **ⓘ Note:** Uppercase `Aliases` remains to be supported for backwards compatibility.
 

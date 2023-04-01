@@ -2,6 +2,36 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.0.0](https://github.com/about-code/glossarify-md/compare/v6.3.3...v7.0.0) (2023-03-26)
+
+
+### ⚠ BREAKING CHANGES
+
+* End of support for NodeJS 14.x.
+* No longer supporting CommonJS module system, see [using with vuepress 1.x](https://github.com/about-code/glossarify-md/blob/v7.0.0/docuse-with-vuepress.md)
+* Bumped `glob` dependency from `v7` to `v9`. **This *might* affect you** when using glob patterns in a glossarify-md config, e.g.:
+  - `glossaries` with `[{ "file": "./some/**/glob/**/pattern*.md" }]`
+  - `includeFiles`
+  - `excludeFiles`
+  - `keepRawFiles`
+
+  Notable changes:
+  
+  - `\` is now only used as an escape character, and never as a path separator in glob patterns, so that **Windows users** have a way to match against filenames containing literal glob pattern characters.
+  - **Glob pattern paths must use forward-slashes as path separators**, since `\` is an escape character to match literal glob pattern characters.
+  - further changes see [glob/changelog.md](https://github.com/isaacs/node-glob/blob/main/changelog.md)
+* bumped `fs-extra` from `v10` to `v11`
+
+### Features
+
+* **CSV Import** ([#255](https://github.com/about-code/glossarify-md/issues/255)) ([410c7f0](https://github.com/about-code/glossarify-md/commit/410c7f03cebed95c7c6cba2324a02adb244003dc))
+* Updating node support matrix. ([a805581](https://github.com/about-code/glossarify-md/commit/a805581a1ee0ac5d0c08f4f95e975f67f6fafc3d))
+
+
+### Bug Fixes
+
+* Aliases after term description ([#266](https://github.com/about-code/glossarify-md/issues/266)) ([04e5093](https://github.com/about-code/glossarify-md/commit/04e5093dd81810e93de822e575c26d69aaf9dfdd))
+
 ### [6.3.3](https://github.com/about-code/glossarify-md/compare/v6.3.2...v6.3.3) (2023-01-27)
 
 

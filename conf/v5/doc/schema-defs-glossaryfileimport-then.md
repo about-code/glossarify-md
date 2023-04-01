@@ -28,7 +28,7 @@ A CSV dialect descriptor. Similar to dialect in a <https://frictionlessdata.io> 
 
 *   is optional
 
-*   Type: `object` ([Details](schema-defs-csvdialect.md))
+*   Type: `object` ([Details](schema-defs-glossaryfileimport-then-properties-dialect.md))
 
 ### dialect Default Value
 
@@ -45,7 +45,7 @@ The default value is:
 A mapping of CSV table fields onto SKOS terms, e.g.
 "fields": \[
 { "rdfType": "<http://www.w3.org/2004/02/skos/core#Concept> "},
-{ "rdfType": "http\://www\.w3.org/2004/02/skos/core#prefLabel "}
+{ "rdfType": "<http://www.w3.org/2004/02/skos/core#prefLabel> "}
 ]. Aims to be compatible with <https://frictionlessdata.io> Tabular Data Resource schema.
 
 `schema`

@@ -18,7 +18,7 @@ Print the AST of scanned markdown documents prior to linkification. May be a Reg
 
 *   is optional
 
-*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
+*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
 
 ## printOutputAst
 
@@ -28,7 +28,7 @@ Print the AST of scanned markdown documents after linkification. May be a Regex 
 
 *   is optional
 
-*   Type: any of the folllowing: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
+*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
 
 ## reportsFile
 
