@@ -35,6 +35,8 @@
 
 [link reference definitions]: https://spec.commonmark.org/0.30/#link-reference-definition
 
+[node.js with npm]: https://nodejs.org
+
 [pandoc]: https://pandoc.org
 
 [pandoc-heading-ids]: https://pandoc.org/MANUAL.html#heading-identifiers
@@ -47,7 +49,7 @@
 
 [glossarify-md] is a command line tool to help Markdown writers with
 
-- **Cross-Linking** (primary use case): autolink terms to some definition in a glossary
+- **Cross-Linking** (prime use case): auto-link terms to some definition in a glossary
 - **Indexes**: generate indexes from glossary terms and navigate to where they were mentioned
 - **Lists**: generate arbitrary lists such as *List of Tables*, *List of Figures*, *List of Listings*, *List of Definitions*, *List of Formulas*, and so forth...
 
@@ -71,7 +73,7 @@
 
 ## Prerequisites
 
-- [node.js with npm](https://nodejs.org)
+- [node.js with npm]
 
 ## Install
 
@@ -142,7 +144,7 @@ ${root}
    |    |    `- page2.md
    |    |
    |    |- README.md
-   |    |- requirements.md
+   |    |- who-icd-codes.md
    |    `- glossary.md
    |
    +- docs-glossarified/  (Generated output directory)
@@ -151,7 +153,17 @@ ${root}
 
 ### Input
 
-Your original glossary is a file with *term definitions*
+A term *Term* then may occur anywhere in your file set:
+
+*./docs/pages/page1.md...*
+
+```md
+# Document
+
+This is a text mentioning a glossary Term to describe something.
+```
+
+Your glossary is a file with terms being section headings and definitions being section content:
 
 *docs/glossary.md*
 
@@ -163,16 +175,6 @@ Your original glossary is a file with *term definitions*
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-The term *Term* may occurs anywhere in the rest of your document files:
-
-*./docs/pages/page1.md...*
-
-```md
-# Document
-
-This is a text which uses a glossary Term to describe something.
-```
-
 Then run [glossarify-md] with a [glossarify-md.conf.json](#configuration):
 
 ```
@@ -181,25 +183,17 @@ npx glossarify-md --config ./glossarify-md.conf.json
 
 ### Output
 
-Augmented versions of the source files have been written to the output directory:
+Augmented versions of your input files have been written to the output directory:
 
 *Source: ./docs-glossarified/pages/page1.md*
 
 ```md
 # [Document](#document)
 
-This is a text which uses a glossary [Term][1] to describe something.
+This is text mentioning a glossary [Term][1] to describe something.
 
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
-
-*When rendered to HTML:*
-
-> ## [Demo](#demo)
->
-> This is a text which uses a glossary [Term][1] to describe something.
->
-> [1]: #term "A glossary term has a short description."
 
 *Source: ./docs-glossarified/glossary.md*:
 
@@ -211,13 +205,25 @@ This is a text which uses a glossary [Term][1] to describe something.
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-*When rendered to HTML*:
+When rendered by some Markdown to HTML converter (not part of glossarify-md) the result may look like this:
+
+*./docs-glossarified/glossary.html*:
 
 > ## [Glossary](#glossary)
 >
 > ### [Term](#term)
 >
 > A glossary term has a short description. The full description contains both sentences.
+
+*./docs-glossarified/pages/page1.html*
+
+> ## [Demo](#demo)
+>
+> This is text mentioning a glossary [Term][1] to describe something.
+>
+> [1]: #term "A glossary term has a short description."
+
+To navigate the opposite direction from a term to sections where a glossary term got mentioned you might want to generate a [Book Index][doc-book-index].
 
 ## What's not being linkified
 
@@ -230,7 +236,7 @@ Some syntactic positions of a term occurrence are **excluded** from being linked
 - Blockquotes `>`
   - Blockquotes are excluded based on the premise that a quoted entity may not share the same definition of a term like the entity who quotes it.
 
-> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark a word for exclusion from [term-based auto-linking][doc-cross-linking].
+> **ⓘ Tip:**  Wrap a word into some pseudo HTML tag like e.g. `<x>word</x>` to mark it for exclusion from [term-based auto-linking][doc-cross-linking].
 
 ## Aliases and Synonyms
 
@@ -246,7 +252,7 @@ Aliases can be added by what we call [*term attributes*][doc-term-attributes]. T
 # Glossary
 
 ## Cat
-<!-- aliases: Cats, Wildcat, House Cat -->
+<!-- aliases: Cats, Wildcat, House Cat, PET-2 -->
 Cats are cute, ...dogs are loyal.
 ```
 
@@ -261,8 +267,6 @@ In the output files aliases will be linked to their related term:
 ```
 
 > **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
-
-That's all you need to know for a quick start. Continue reading to learn about additional features.
 
 ## Term Hints
 
@@ -286,24 +290,25 @@ Sometimes you might whish to have multiple glossaries:
 
 ```json
 "glossaries": [
-    { "file": "./glossary.md",  "termHint": "↴" },
-    { "file": "./requirements.md", "termHint": "☛" }
+    { "file": "./glossary.md",   "termHint": "↴" },
+    { "file": "./who-icd-codes.md", "termHint": "⚕${term}" }
 ]
 ```
 
-*requirements.md*
+*who-icd-codes.md*
 
 ```md
-## REQ-1: The system MUST provide service X
-<!-- aliases: REQ-1 -->
+## NC32
+Fracture of forearm
 
-## REQ-2: The system MAY provide service Y
-<!-- aliases: REQ-2 -->
+## NC90
+Superficial injury of knee or lower leg
+
 ```
 
-By adding *requirements.md* to the list of glossaries every use of *REQ-1* or *REQ-2* in documents gets linked to the requirements glossary. To navigate the opposite direction from a requirement to sections where those got mentioned you can generate a [Book Index][doc-book-index].
+With adding *who-icd-codes.md* to the list of glossaries every mention of [⚕NC32](#nc32 "Superficial injury of knee or lower leg") or [⚕NC90](#nc90 "Fracture of forearm") in documents will have a tooltip and link to the glossary definition, too.
 
-**Since v5.0.0** `file` can also be used with a [glob] pattern. This way each markdown file matching the pattern is considered a glossary. More see [Cross-Linking][doc-cross-linking].
+> **ⓘ Since v5.0.0** `file` can also be used with a [glob] file pattern. This way each markdown file matching a pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking].
 
 ## Sorting Glossaries
 
@@ -332,12 +337,13 @@ The `i18n` object is passed *as is* to the collator function. Thus you can use a
 
 ## [Advanced Topics][doc-extended]
 
+See **[here][doc-extended]**, for example:
+
 - Importing and exporting terms
 - Generating files, such as a book index, lists of figures, etc.
 - Cross-Linking more than just terms
 - Using glossarify-md with other tools, like [vuepress], [pandoc] or [Hugo]
 - Dealing with non-standard Markdown Syntax via Plug-ins (e.g Frontmatter)
-- [...and more][doc-extended]
 
 ## Node Support Matrix
 

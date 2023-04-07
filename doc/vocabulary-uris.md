@@ -4,26 +4,26 @@
 aliases: Vocabulary URIs
 -->
 
-Consider a term *skin*. In human medicine it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
+Consider a term *skin*. In anatomy it's a term for a human organ while in computer science its often used to refer to a software's look and feel. These kinds of *ambiguities* demand *clarification* which is what glossaries are meant for, of course.
 
-*A computer program* can't understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
+*A computer programme* can't understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
 
-*   `https://example.com/glossary/medicine/#skin`
+*   `https://example.com/glossary/anatomy/#skin`
 *   `https://example.com/glossary/computer-science/#skin`.
 
-a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets.
+a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning to a human. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets.
 
 **Since v6.0.0** glossarify-md supports [exporting][1] and [importing][2] glossaries (see also Interoperability with [SKOS 🌎][3] and [JSON-LD 🌎][4]).
 
 ## [Vocabulary URIs and Term URIs](#vocabulary-uris-and-term-uris)
 
-`glossaries` entries can be augmented with a `uri` [config option][5] which assigns a glossary a so-called *[vocabulary][6] [URI][7]*. Then on [exporting][1] *term URIs* can be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see config option `headingIdAlgorithm`) for how glossarify-md generates heading IDs).
+`glossaries` entries can be augmented with a `uri` [config option][5] which assigns a glossary a so-called *[vocabulary][6] [URI][7]*. When being exported, *term URIs* will be derived from the vocabulary URI and a term's *heading ID* by appending the heading ID to the vocabulary URI (see config option `headingIdAlgorithm`) for how glossarify-md generates heading IDs).
 
 ```json
 {
   "glossaries": [{
-      "uri": "http://my.org/vocabulary/#",
-      "file": "./glossary.md",
+      "uri": "http://id.who.int/icd/entity/",
+      "file": "./who-icd-codes.md",
       "export": {
         "file": "./exported.json"
       }
@@ -31,7 +31,7 @@ a computer can operate on symbols equivalent to *some meaning* without having to
 }
 ```
 
-If you need more control about a term's Term [URI][7], then there are two switches you can tweak:
+If you need more control about a term's [URI][7] then there are two switches you can tweak:
 
 *   providing a custom heading ID using pandoc-style `{#headingId}`
 *   providing a `uri` [term attribute][8]
@@ -39,22 +39,22 @@ If you need more control about a term's Term [URI][7], then there are two switch
 *Custom heading ID*
 
 ```md
-# Glossary
+# WHO ICD Codes
 
-## Term {#custom-heading-id}
+## NC90 {#711977862}
 
-Term with an individual URI.
+Superficial injury of knee or lower leg
 ```
 
 *`uri` [term attribute][8]*:
 
 ```md
-# Glossary
+# WHO ICD Codes
 
-## Term
-<!-- uri: http://my.org/special/12345 -->
+## NC90
+<!-- uri: http://id.who.int/icd/entity/711977862 -->
 
-Term with an individual URI.
+Superficial injury of knee or lower leg
 ```
 
 # [Addendum: Properties of URIs](#addendum-properties-of-uris)

@@ -108,7 +108,7 @@ ${root}
    |    |    `- page2.md
    |    |
    |    |- README.md
-   |    |- glossary-2.md
+   |    |- who-icd-codes.md
    |    `- glossary.md
    |
    +- docs-glossarified/  (Generated output directory)
@@ -116,6 +116,15 @@ ${root}
 ```
 
 ### Input
+
+A term *Term* then may occur anywhere in your file set:
+
+*./docs/pages/page1.md...*
+```md
+# Document
+
+This is a text mentioning a glossary Term to describe something.
+```
 
 Your glossary is a file with terms being section headings and definitions being section content:
 
@@ -127,15 +136,6 @@ Your glossary is a file with terms being section headings and definitions being 
 ## Term
 
 A glossary term has a short description. The full description contains both sentences.
-```
-
-The term *Term* then may occur anywhere in your file set:
-
-*./docs/pages/page1.md...*
-```md
-# Document
-
-This is a text mentioning a glossary Term to describe something.
 ```
 
 
@@ -158,14 +158,6 @@ This is text mentioning a glossary [Term][1] to describe something.
 [1]: ../glossary.md#term "A glossary term has a short description."
 ```
 
-*When rendered to HTML:*
-
-> ## [Demo](#demo)
->
-> This is text mentioning a glossary [Term][1] to describe something.
->
-> [1]: #term "A glossary term has a short description."
-
 
 *Source: ./docs-glossarified/glossary.md*:
 
@@ -177,12 +169,25 @@ This is text mentioning a glossary [Term][1] to describe something.
 A glossary term has a short description. The full description contains both sentences.
 ```
 
-*When rendered to HTML*:
+When rendered by some Markdown to HTML converter (not part of glossarify-md) the result may look like this:
+
+*./docs-glossarified/glossary.html*:
+
 > ## [Glossary](#glossary)
 >
 > ### [Term](#term)
 >
 > A glossary term has a short description. The full description contains both sentences.
+
+*./docs-glossarified/pages/page1.html*
+
+> ## [Demo](#demo)
+>
+> This is text mentioning a glossary [Term][1] to describe something.
+>
+> [1]: #term "A glossary term has a short description."
+
+To navigate the opposite direction from a term to sections where a glossary term got mentioned you might want to generate a [Book Index][doc-book-index].
 
 ## What's not being linkified
 
@@ -210,7 +215,7 @@ Aliases can be added by what we call [*term attributes*][doc-term-attributes]. T
 # Glossary
 
 ## Cat
-<!-- aliases: Cats, Wildcat, House Cat -->
+<!-- aliases: Cats, Wildcat, House Cat, PET-2 -->
 Cats are cute, ...dogs are loyal.
 ```
 
@@ -226,7 +231,6 @@ In the output files aliases will be linked to their related term:
 
 > **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
 
-That's all you need to know for a quick start. Continue reading to learn about additional features.
 
 ## Term Hints
 
@@ -250,11 +254,24 @@ Sometimes you might whish to have multiple glossaries:
 ```json
 "glossaries": [
     { "file": "./glossary.md",   "termHint": "↴" },
-    { "file": "./glossary-2.md", "termHint": "☛" }
+    { "file": "./who-icd-codes.md", "termHint": "⚕${term}" }
 ]
 ```
 
-**Since v5.0.0** `file` can also be used with a [glob] file pattern. This way each markdown file matching a pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking].
+*who-icd-codes.md*
+
+```md
+## NC32
+Fracture of forearm
+
+## NC90
+Superficial injury of knee or lower leg
+
+```
+
+With adding *who-icd-codes.md* to the list of glossaries every mention of [⚕NC32](#nc32 "Superficial injury of knee or lower leg") or [⚕NC90](#nc90 "Fracture of forearm") in documents will have a tooltip and link to the glossary definition, too.
+
+> **ⓘ Since v5.0.0** `file` can also be used with a [glob] file pattern. This way each markdown file matching a pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking].
 
 ## Sorting Glossaries
 

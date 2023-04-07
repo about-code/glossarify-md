@@ -45,8 +45,8 @@ Without a header row embedded into the CSV data a `schema` mapping is required t
             { "name": "http://www.w3.org/2004/02/skos/core#definition" }
         ]
     }
-  }]
-}
+  }
+}]
 ~~~
 
 - Use `@id` for the ID column
