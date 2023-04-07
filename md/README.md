@@ -269,7 +269,7 @@ Superficial injury of knee or lower leg
 
 ```
 
-With adding *who-icd-codes.md* to the list of glossaries every mention of [⚕NC32](#nc32 "Superficial injury of knee or lower leg") or [⚕NC90](#nc90 "Fracture of forearm") in documents will have a tooltip and link to the glossary definition, too.
+With adding *who-icd-codes.md* to the list of glossaries every mention of [⚕NC32](#nc32 "Fracture of forearm") or [⚕NC90](#nc90 "Superficial injury of knee or lower leg") in documents will have a tooltip and link to the glossary definition, too.
 
 > **ⓘ Since v5.0.0** `file` can also be used with a [glob] file pattern. This way each markdown file matching a pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking].
 
