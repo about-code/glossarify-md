@@ -25,6 +25,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Features
 
 * **CSV Import** ([#255](https://github.com/about-code/glossarify-md/issues/255)) ([410c7f0](https://github.com/about-code/glossarify-md/commit/410c7f03cebed95c7c6cba2324a02adb244003dc))
+* **Tree-scoped Linking** (https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#tree-scoped-linking)
 * Updating node support matrix. ([a805581](https://github.com/about-code/glossarify-md/commit/a805581a1ee0ac5d0c08f4f95e975f67f6fafc3d))
 
 
