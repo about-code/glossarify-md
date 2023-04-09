@@ -1,0 +1,8 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/ambiguous-terms/single-shared-term/",
+  "glossaries": [{
+      "file": "./glossary-*.md"
+  }]
+}
