@@ -1,7 +1,7 @@
 {
   "$schema": "../../../conf/v5/schema.json",
   "baseDir": ".",
-  "outDir": "../../output-actual/config-glossaries/term-definition-priority",
+  "outDir": "../../output-actual/term-definition-priority",
   "glossaries": [{
       "file": "./glossary-*.md"
   }]
