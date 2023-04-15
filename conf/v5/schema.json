@@ -92,6 +92,7 @@
                 ,"byReferenceDefinition": true
                 ,"limitByTermOrigin": []
                 ,"limitByAlternatives": 10
+                ,"sortAlternatives": "by-glossary-filename"
             }
         }
         ,"outDir": {
@@ -447,6 +448,12 @@
                     "description": "KEY-VALUE map where VALUE is a single search string or an array of strings or regular expressions (RegExp) and KEY is the replacement/rewrite string. Path rewriting won't change the output folder structure but is intended to be used when output folder structure changes after glossarify-md's own processing. Other glossarify-md options affect link paths and URLs and need to be considered in rewrite rules. Be aware that _URLs_ can only be rewritten when the URL is based on 'baseUrl'. If you need path rewriting because the published directory layout differs from 'outDir' then you may find rewriting absolute paths ('paths: absolute') or URLs based on 'baseUrl' easier than than rewriting relative paths. Relative paths can be harder to get right and thus are more likely to result in dead links."
                     ,"type": "object"
                     ,"since": "6.1.0"
+                }
+                ,"sortAlternatives": {
+                    "description": "In case of multiple glossaries and multiple definitions for the same term this setting allows to change the algorithm by which the links for an ambiguous term occurrence and alternative term definitions are priortized. Sorting 'by-terminology-in-file' may provide better context-sensitive results because it takes term usage within a file into account and which glossary's terms occur most often in a file. In case of an ambiguous term that glossary is being priortized. It does not work "
+                    ,"type": "string"
+                    ,"enum": ["by-glossary-filename", "by-terminology-in-file"]
+                    ,"since": "7.1.0"
                 }
                 ,"mentions": {
                     "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
