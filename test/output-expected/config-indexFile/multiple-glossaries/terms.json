@@ -10,12 +10,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-a",
+    "file": "glossary-a.md",
     "regex": "/(Glossary A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary-a.md",
     "termHint": ""
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-b",
+    "file": "glossary-b.md",
     "regex": "/(Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary-b.md",
     "termHint": ""
   },
   {
@@ -48,12 +48,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
+    "file": "glossary-a.md",
     "regex": "/(In Glossary A and B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary-a.md",
     "termHint": ""
   },
   {
@@ -67,12 +67,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#in-glossary-a-and-b",
+    "file": "glossary-b.md",
     "regex": "/(In Glossary A and B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary-b.md",
     "termHint": ""
   },
   {
@@ -86,12 +86,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-a",
+    "file": "glossary-a.md",
     "regex": "/(Only in Glossary A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary-a.md",
     "termHint": ""
   },
   {
@@ -105,12 +105,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#only-in-glossary-b",
+    "file": "glossary-b.md",
     "regex": "/(Only in Glossary B)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary-b.md",
     "termHint": ""
   }
 ]

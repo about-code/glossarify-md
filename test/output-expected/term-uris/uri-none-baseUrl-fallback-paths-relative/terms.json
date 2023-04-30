@@ -9,12 +9,12 @@
     "headingId": "custom",
     "headingDepth": 2,
     "anchor": "#custom",
+    "file": "sub-1/sub-2/glossary.md",
     "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   },
   {
@@ -28,12 +28,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary-without-uri-but-fallback-to-baseurl",
+    "file": "sub-1/sub-2/glossary.md",
     "regex": "/(Glossary without URI but fallback to baseUrl)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   },
   {
@@ -47,12 +47,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term",
+    "file": "sub-1/sub-2/glossary.md",
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "sub-1/sub-2/glossary.md",
     "termHint": ""
   }
 ]

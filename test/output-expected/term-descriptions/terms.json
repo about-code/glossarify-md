@@ -10,12 +10,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#description-partly-formatted",
+    "file": "glossary.md",
     "regex": "/(Description Partly Formatted)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#formatted-term-definitions",
+    "file": "glossary.md",
     "regex": "/(Formatted Term Definitions)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -48,12 +48,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-full-description-is-a-blockquote",
+    "file": "glossary.md",
     "regex": "/(GIVEN full description is a blockquote)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -67,12 +67,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-long-description-has-a-link",
+    "file": "glossary.md",
     "regex": "/(GIVEN long description has a link)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -86,12 +86,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-long-description-is-a-blockquote",
+    "file": "glossary.md",
     "regex": "/(GIVEN long description is a blockquote)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -105,12 +105,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-has-a-link",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description has a link)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -124,12 +124,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-a-blockquote",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description is a blockquote)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -143,12 +143,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-excluded",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description is bold WITH fullstop excluded)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -162,12 +162,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-bold-with-fullstop-included",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description is bold WITH fullstop included)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -181,12 +181,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-excluded",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description is italic WITH fullstop excluded)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -200,12 +200,12 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#given-short-description-is-italic-with-fullstop-included",
+    "file": "glossary.md",
     "regex": "/(GIVEN short description is italic WITH fullstop included)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -219,12 +219,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-across-multiple-lines",
+    "file": "glossary.md",
     "regex": "/(Single sentence across multiple lines)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -238,12 +238,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-exclamation-mark",
+    "file": "glossary.md",
     "regex": "/(Single sentence terminated by exclamation mark)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -257,12 +257,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-full-stop",
+    "file": "glossary.md",
     "regex": "/(Single sentence terminated by full stop)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -276,12 +276,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#single-sentence-terminated-by-question-mark",
+    "file": "glossary.md",
     "regex": "/(Single sentence terminated by question mark)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -295,12 +295,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#testing-term-definition-extraction",
+    "file": "glossary.md",
     "regex": "/(Testing Term Definition Extraction)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -314,12 +314,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-across-multiple-lines-terminated-by-full-stop",
+    "file": "glossary.md",
     "regex": "/(Two sentences across multiple lines terminated by full stop)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -333,12 +333,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-in-a-single-line-terminated-by-full-stop",
+    "file": "glossary.md",
     "regex": "/(Two sentences in a single line terminated by full stop)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   },
   {
@@ -352,12 +352,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#two-sentences-in-multiple-lines-terminated-by-full-stop",
+    "file": "glossary.md",
     "regex": "/(Two sentences in multiple lines terminated by full stop)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "ⓕ"
   }
 ]

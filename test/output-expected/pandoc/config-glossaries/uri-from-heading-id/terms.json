@@ -9,12 +9,12 @@
     "headingId": "custom",
     "headingDepth": 2,
     "anchor": "#custom",
+    "file": "glossary.md",
     "regex": "/(Custom)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "~"
   },
   {
@@ -28,12 +28,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
+    "file": "glossary.md",
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": "~"
   }
 ]
