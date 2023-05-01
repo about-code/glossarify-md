@@ -92,7 +92,7 @@
                 ,"byReferenceDefinition": true
                 ,"limitByTermOrigin": []
                 ,"limitByAlternatives": 10
-                ,"sortAlternatives": "by-glossary-file-name"
+                ,"sortAlternatives": "by-glossary-filename"
             }
         }
         ,"outDir": {
@@ -453,7 +453,7 @@
                     "description": "In case of multiple glossaries a term may have multiple definitions. When a term with multiple definitions is found in text the term occurrence is going to be linkified. It will be augmented with links to all alternative definitions, too. Typically, you would like to have a term's phrase being linked to the term definition which is most appropriate in the context of its occurrence. Computers are bad in understanding context but this option aims at increasing _the likelihood_ to find the most appropriate definition. It enables tracking the \"popularity\" of a glossary within a given section. It does so with histgrams counting for each glossary on the x-axis how many of its terms have been found in the section (y-axis). Then when finding a term occurrence with multiple definitions the definitions in glossaries with a higher popularity take precedence. For example `{ \"sortAlternatives\": \"by-glossary-refCount-at-depths-3\" }` determines glossary popularity, separately, for each section at depth 1,2,3. Term occurrences at section depths 4,5,6 inherit the popularity measure established for their parent section at depth 3."
                     ,"type": "string"
                     ,"enum": [
-                        "by-glossary-file-name"
+                        "by-glossary-filename"
                         ,"by-glossary-refCount-in-file"
                         ,"by-glossary-refCount-at-depths-1"
                         ,"by-glossary-refCount-at-depths-2"
