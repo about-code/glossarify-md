@@ -454,13 +454,13 @@
                     ,"type": "string"
                     ,"enum": [
                         "by-glossary-filename"
-                        ,"by-glossary-refCount-in-file"
-                        ,"by-glossary-refCount-at-depths-1"
-                        ,"by-glossary-refCount-at-depths-2"
-                        ,"by-glossary-refCount-at-depths-3"
-                        ,"by-glossary-refCount-at-depths-4"
-                        ,"by-glossary-refCount-at-depths-5"
-                        ,"by-glossary-refCount-at-depths-6"
+                        ,"by-glossary-refCount-per-file"
+                        ,"by-glossary-refCount-per-section-1"
+                        ,"by-glossary-refCount-per-section-2"
+                        ,"by-glossary-refCount-per-section-3"
+                        ,"by-glossary-refCount-per-section-4"
+                        ,"by-glossary-refCount-per-section-5"
+                        ,"by-glossary-refCount-per-section-6"
                     ]
                     ,"since": "7.1.0"
                 }
