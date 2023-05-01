@@ -6,7 +6,7 @@
 [C]: ./glossary-c.md#ambiguous-term "Glossary C"
 [D]: ./glossary-d.md#ambiguous-term "Glossary D"
 
-If you have [multiple glossaries] there could be multiple definitions for the same term in two or more glossaries (polysemy). When glossarify-md finds a term occurrence for which multiple term definitions exist, say four, then it will create links to all four definitions by default using a format *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. This way a reader won't miss different meanings of a term. Technically, you can <x>configure glossarify-md</x> to list **up to `99`** alternative definitions. The **default limit is `10`**, though.
+If you have [multiple glossaries] there could be multiple definitions for the same term in two or more glossaries (polysemy). When glossarify-md finds a term occurrence for which multiple term definitions exist, say four, then it will create links to all four definitions by default using a format *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. This way a reader won't miss different meanings of a term. Technically, you can <x>configure glossarify-md</x> to list **up to `95`** alternative definitions. The **default limit is `10`**, though.
 
 You have various options to fine tune the handling of ambiguities.
 <!--
@@ -25,11 +25,11 @@ There are some questions you may ask yourself when thinking about ambiguities:
 
 ~~~json
 "linking": {
-   "limitByAlternatives": 2
+   "limitByAlternatives": 0
 }
 ~~~
 
-Produces a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C]</sup>* linking the term phrase and adding links for two alternative definitions. As mentioned earlier, there is a maximum of 99 and when not setting the value there's a default of 10.
+Produces a result *[Ambiguous Term][A]* linking the term phrase to a single definition but not to alternative definitions. This provides no indication on ambiguity of a term. As mentioned earlier, there is a maximum of 95 and a default of 10.
 
 
 ## Stop linking at a certain degree of ambiguity
@@ -41,7 +41,7 @@ Produces a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C]</sup>* linking the te
 }
 ~~~
 
-Stops linking automatically once there six definitions in total, one definition and five alternative definitions. Since there are only four definitions in our example it produces a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. In contrast with
+Stops linking automatically once there are six definitions in total, one definition and five alternative definitions. Since there are only three alternative definitions in our example, this setting produces a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. In contrast
 
 ~~~json
 "linking": {
@@ -49,7 +49,7 @@ Stops linking automatically once there six definitions in total, one definition 
 }
 ~~~
 
-*Ambiguous Term* were not linkified, anymore, since there's one definition and three alternative definitions.
+would permit two alternative definitions, at most, that is three definitions in total. *Ambiguous Term* were not linkified, anymore, since there are three alternative definitions for the term.
 
 ## Not linking ambiguous terms, at all
 
@@ -78,7 +78,9 @@ There's currently support for two tactics for improving the likelihood of glossa
 
 ~~~json
 "linking": {
-   "sortAlternatives": "by-glossary-refCount-per-file"
+   "sortAlternatives": {
+      "by": "glossary-refCount-per-file"
+   }
 }
 ~~~
 
@@ -120,7 +122,9 @@ Instead of using an evaluation scope *per file* you can choose to collect a sepa
 
 ~~~json
 "linking": {
-   "sortAlternatives": "by-glossary-refCount-per-section-2"
+   "sortAlternatives": {
+      "by": "glossary-refCount-per-section-2"
+   }
 }
 ~~~
 
@@ -131,7 +135,9 @@ Given you would like *every* section be a distinct terminological context, then 
 
 ~~~json
 "linking": {
-   "sortAlternatives": "by-glossary-refCount-per-section-6"
+   "sortAlternatives": {
+      "by": "glossary-refCount-per-section-6"
+   }
 }
 ~~~
 
@@ -150,7 +156,7 @@ Given you would like *every* section be a distinct terminological context, then 
 > }
 > ~~~
 >
-> the default in future major releases (`v8` or later). The default until `v7` has been `"by-glossary-filename"` just for the sake of having a defined order, at all.
+> the default in future major releases (`v8` or later). The default until `v7` has been `"by": "glossary-filename"` just for the sake of having a defined order, at all.
 >
 > Keep in mind that sorting alternatives by glossary refCount means links might change between subsequent runs of glossarify-md depending on how your terminology usage evolved between those runs.
 

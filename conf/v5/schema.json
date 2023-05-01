@@ -92,7 +92,9 @@
                 ,"byReferenceDefinition": true
                 ,"limitByTermOrigin": []
                 ,"limitByAlternatives": 10
-                ,"sortAlternatives": "by-glossary-filename"
+                ,"sortAlternatives": {
+                    "by": "glossary-filename"
+                }
             }
         }
         ,"outDir": {
@@ -269,14 +271,14 @@
         ,"glossaryFileExport": {
             "type": "object",
             "properties": {
-                "file": {
+                "context": {
+                    "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
+                    ,"type": "string"
+                }
+                ,"file": {
                     "description": "A JSON file name to write exported terms to. Recommended file extension is '.json' or '.jsonld'"
                     ,"type": "string"
                     ,"default": ""
-                }
-                ,"context": {
-                    "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
-                    ,"type": "string"
                 }
             }
             ,"required": ["file"]
@@ -284,14 +286,14 @@
         ,"glossaryFileImport": {
             "type": "object",
             "properties": {
-                "file": {
+                "context": {
+                    "description": "File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology."
+                    ,"type": "string"
+                }
+                ,"file": {
                     "description": "The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'."
                     ,"type": "string"
                     ,"default": ""
-                }
-                ,"context": {
-                    "description": "File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology."
-                    ,"type": "string"
                 }
             }
             ,"if": {
@@ -304,11 +306,7 @@
             }
             ,"then": {
                 "properties": {
-                    "title": {
-                        "type": "string"
-                        ,"default": "Glossary"
-                    }
-                    ,"dialect": {
+                    "dialect": {
                         "$ref": "#/$defs/csvDialect"
                         ,"default": {
                             "delimiter": ";"
@@ -316,6 +314,10 @@
                     }
                     ,"schema": {
                         "$ref": "#/$defs/csvTableSchema"
+                    }
+                    ,"title": {
+                        "type": "string"
+                        ,"default": "Glossary"
                     }
                 }
             }
@@ -328,10 +330,6 @@
                     "description": "Path relative to 'outDir' where to create the index markdown file."
                     ,"type": "string"
                 }
-                ,"title": {
-                    "description": "The page title for the index file. If missing the application uses a default value."
-                    ,"type": "string"
-                }
                 ,"glossary": {
                     "description": "When you configured multiple glossaries, then this option can be used to generate an index file with terms of a particular glossary, only. Use with `generateFiles.indexFiles` (not `generateFiles.indexFile`). Since v5.1.0."
                     ,"type": "string"
@@ -339,6 +337,10 @@
                 ,"hideDeepLinks": {
                     "description": "When this is `false` (default) then term occurrences in sections deeper than `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option being `true` you can disable these \"deep\" section links. Note that index file generation also depends on the kind of headings being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0."
                     ,"type": "boolean"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
+                    ,"type": "string"
                 }
             }
             ,"required": ["file"]
@@ -366,20 +368,20 @@
         ,"listOfItemsFile": {
             "type": "object"
             ,"properties": {
-                "file":  {
-                    "description": "Path relative to 'outDir' where to create the index markdown file."
-                    ,"type": "string"
-                }
-                ,"class": {
+                "class": {
                     "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list."
                     ,"type": "string"
                 }
-                ,"title": {
-                    "description": "The page title for the index file. If missing the application uses a default value."
+                ,"file":  {
+                    "description": "Path relative to 'outDir' where to create the index markdown file."
                     ,"type": "string"
                 }
                 ,"pattern": {
                     "description": "A regular expression which when matching against text will generate an entry in the given list. The expression may contain a capture group which extracts a list item title. A match will result in an URL-addressable HTML node being added to the output."
+                    ,"type": "string"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
                     ,"type": "string"
                 }
             }
@@ -429,6 +431,55 @@
                     ,"type": "string"
                     ,"format": "url"
                 }
+                ,"byReferenceDefinition": {
+                    "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"headingAsLink": {
+                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"headingDepths": {
+                    "description": "An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*."
+                    ,"type": "array"
+                    ,"items": {
+                        "type": "integer"
+                        ,"minimum": 1
+                        ,"maximum": 6
+                    }
+                }
+                ,"headingIdAlgorithm": {
+                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org )."
+                    ,"enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
+                    ,"since": "6.0.0"
+                }
+                ,"headingIdPandoc": {
+                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"limitByAlternatives": {
+                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of \n 5: makes the system link to _at most 5_ alternative definitions per term\n-5: makes the system _stop linking a term_ once there are _at least 5_ alternative definitions\n 0: links the term to a single definition but adds no hint or links to alternative definitions (even if there are any).\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once. Since v7.1.0 you can combine this with 'sortAlternatives' which provides algorithms for sorting the most relevant definitions to the front of a list."
+                    ,"type": "integer"
+                    ,"minimum": "-95"
+                    ,"maximum": "+95"
+                }
+                ,"limitByTermOrigin": {
+                    "description": "Limits linkification based on the filesystem hierarchy of a book project. For example, `[\"parent\", \"sibling\", \"self\"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory (\"parent\") or when it has been defined in a glossary next to the document file (\"sibling\") or within the glossary itself (\"self\"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`."
+                    ,"type": "array"
+                    ,"items": {
+                        "type": "string",
+                        "enum": ["self", "parent", "sibling", "child", "parent-sibling"]
+                    }
+                    ,"since": "6.1.0"
+                }
+                ,"mentions": {
+                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
+                    ,"type": "string"
+                    ,"enum": ["all", "first-in-paragraph"]
+                }
                 ,"paths": {
                     "description": "Control how paths to linked documents will be constructed. When choosing \"absolute\" you may set a \"baseUrl\" as well. Without a base URL absolute file system paths will be generated."
                     ,"type": "string"
@@ -450,68 +501,26 @@
                     ,"since": "6.1.0"
                 }
                 ,"sortAlternatives": {
-                    "description": "In case of multiple glossaries a term may have multiple definitions. When a term with multiple definitions is found in text the term occurrence is going to be linkified. It will be augmented with links to all alternative definitions, too. Typically, you would like to have a term's phrase being linked to the term definition which is most appropriate in the context of its occurrence. Computers are bad in understanding context but this option aims at increasing _the likelihood_ to find the most appropriate definition. It enables tracking the \"popularity\" of a glossary within a given section. It does so with histgrams counting for each glossary on the x-axis how many of its terms have been found in the section (y-axis). Then when finding a term occurrence with multiple definitions the definitions in glossaries with a higher popularity take precedence. For example `{ \"sortAlternatives\": \"by-glossary-refCount-at-depths-3\" }` determines glossary popularity, separately, for each section at depth 1,2,3. Term occurrences at section depths 4,5,6 inherit the popularity measure established for their parent section at depth 3."
-                    ,"type": "string"
-                    ,"enum": [
-                        "by-glossary-filename"
-                        ,"by-glossary-refCount-per-file"
-                        ,"by-glossary-refCount-per-section-1"
-                        ,"by-glossary-refCount-per-section-2"
-                        ,"by-glossary-refCount-per-section-3"
-                        ,"by-glossary-refCount-per-section-4"
-                        ,"by-glossary-refCount-per-section-5"
-                        ,"by-glossary-refCount-per-section-6"
-                    ]
+                    "description": "In case of multiple glossaries a term may have multiple definitions. When a term with multiple definitions is found in text the term occurrence is going to be linkified. It will be augmented with links to any alternative definitions. Typically, you would like to have a term's phrase being linked to the term definition which is most appropriate in the context of its occurrence. This option let's you choose from algorithms for sorting and priortizing definitions over others, including algorithms using techniques known from recommender systems which aim at increasing _the likelihood_ to find the most appropriate definition."
+                    ,"type": "object"
+                    ,"properties": {
+                        "by": {
+                            "type": "string"
+                            ,"enum": [
+                                 "glossary-filename"
+                                ,"glossary-refCount-per-file"
+                                ,"glossary-refCount-per-section-1"
+                                ,"glossary-refCount-per-section-2"
+                                ,"glossary-refCount-per-section-3"
+                                ,"glossary-refCount-per-section-4"
+                                ,"glossary-refCount-per-section-5"
+                                ,"glossary-refCount-per-section-6"
+                            ]
+                            ,"default": "glossary-filename"
+                        }
+                    }
+                    ,"required": ["by"]
                     ,"since": "7.1.0"
-                }
-                ,"mentions": {
-                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
-                    ,"type": "string"
-                    ,"enum": ["all", "first-in-paragraph"]
-                }
-                ,"headingDepths": {
-                    "description": "An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*."
-                    ,"type": "array"
-                    ,"items": {
-                        "type": "integer"
-                        ,"minimum": 1
-                        ,"maximum": 6
-                    }
-                }
-                ,"headingIdAlgorithm": {
-                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org )."
-                    ,"enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
-                    ,"since": "6.0.0"
-                }
-                ,"headingAsLink": {
-                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
-                }
-                ,"headingIdPandoc": {
-                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
-                }
-                ,"limitByAlternatives": {
-                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of \n 5: makes the system link to _at most 5_ alternative definitions per term\n-5: makes the system _stop linking a term_ once there are _at least 5_ alternative definitions\n 0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once."
-                    ,"type": "integer"
-                    ,"minimum": "-95"
-                    ,"maximum": "+95"
-                }
-                ,"limitByTermOrigin": {
-                    "description": "Limits linkification based on the filesystem hierarchy of a book project. For example, `[\"parent\", \"sibling\", \"self\"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory (\"parent\") or when it has been defined in a glossary next to the document file (\"sibling\") or within the glossary itself (\"self\"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`."
-                    ,"type": "array"
-                    ,"items": {
-                        "type": "string",
-                        "enum": ["self", "parent", "sibling", "child", "parent-sibling"]
-                    }
-                    ,"since": "6.1.0"
-                }
-                ,"byReferenceDefinition": {
-                    "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
                 }
             }
         }
@@ -551,7 +560,11 @@
         ,"dev": {
             "type": "object"
             ,"properties": {
-                "printInputAst": {
+                "effectiveConfFile": {
+                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults."
+                    ,"type": "string"
+                }
+                ,"printInputAst": {
                     "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document."
                     ,"type": ["boolean", "string"]
                 }
@@ -569,10 +582,6 @@
                 }
                 ,"termsFile": {
                     "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component."
-                    ,"type": "string"
-                }
-                ,"effectiveConfFile": {
-                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults."
                     ,"type": "string"
                 }
             }
