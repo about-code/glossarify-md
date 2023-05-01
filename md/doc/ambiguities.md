@@ -150,9 +150,11 @@ Given you would like *every* section be a distinct terminological context, then 
 >
 > Our assumption is that upper section levels are more likely to capture *different* topics and set up *different* terminological contexts than sections deeper in a table of contents. Furthermore, deeper levels will be less verbose than upper sections. The less verbose the higher the weight of _nearby_ term occurrences but also the higher the risk of not having another occurrence at all. Such a section would miss a discriminator for choosing the glossary for an ambiguous term. Based on this reasoning we plan on making
 >
-> ~~~
+> ~~~json
 > {
->   "sortAlternatives":"by-glossary-refCount-per-section-2"
+>   "sortAlternatives":{
+>     "by": "glossary-refCount-per-section-2"
+>   }
 > }
 > ~~~
 >
