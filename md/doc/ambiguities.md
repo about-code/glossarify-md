@@ -79,7 +79,7 @@ There's currently support for two tactics for improving the likelihood of glossa
 ~~~json
 "linking": {
    "sortAlternatives": {
-      "by": "glossary-refCount-per-file"
+      "by": "glossary-ref-count-per-file"
    }
 }
 ~~~
@@ -123,20 +123,21 @@ Instead of using an evaluation scope *per file* you can choose to collect a sepa
 ~~~json
 "linking": {
    "sortAlternatives": {
-      "by": "glossary-refCount-per-section-2"
+      "by": "glossary-ref-count",
+      "perSectionDepth": 2
    }
 }
 ~~~
 
 This will make glossarify-md count term occurrences, separately, for every section at depth 1 (`# Heading 1`) and depth 2 (`## Heading 2`). As a result the same ambiguous term may be linked differently in sections at these depths depending on the terminlogy prevalent in those sections. Glossary references in section depths 3,4...,6 will contribute to `refCount` of the parent section at level 2 and share the same glossary priority derived from that.
 
-
 Given you would like *every* section be a distinct terminological context, then configure:
 
 ~~~json
 "linking": {
    "sortAlternatives": {
-      "by": "glossary-refCount-per-section-6"
+      "by": "glossary-ref-count",
+      "perSectionDepth": 6
    }
 }
 ~~~
@@ -152,8 +153,9 @@ Given you would like *every* section be a distinct terminological context, then 
 >
 > ~~~json
 > {
->   "sortAlternatives":{
->     "by": "glossary-refCount-per-section-2"
+>   "sortAlternatives": {
+>     "by": "glossary-ref-count",
+>     "perSectionDepth": 2
 >   }
 > }
 > ~~~

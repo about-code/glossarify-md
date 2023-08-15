@@ -309,7 +309,7 @@ The `i18n` object is passed *as is* to the collator function. Thus you can use a
 
 ## [Advanced Topics][doc-extended]
 
-See **[here][doc-extended]**, for example:
+See **[here][doc-extended]**, for advanced topics:
 
 - Importing and exporting terms
 - Generating files, such as a book index, lists of figures, etc.
