@@ -461,7 +461,7 @@
                     ,"since": "6.0.0"
                 }
                 ,"limitByAlternatives": {
-                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of \n 5: makes the system link to _at most 5_ alternative definitions per term\n-5: makes the system _stop linking a term_ once there are _at least 5_ alternative definitions\n 0: links the term to a single definition but adds no hint or links to alternative definitions (even if there are any).\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once. Since v7.1.0 you can combine this with 'sortAlternatives' which provides algorithms for sorting the most relevant definitions to the front of a list."
+                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions for a term. For example, a value of\n 5: makes the system link to _at most 5_ additional definitions per term\n 0: links the term to a single definition but adds no hint or links to alternative definitions (even if there are any)\n -1: makes the system stop linking a term once there is at least 1 additional definition (ambiguity)\n -5: makes the system stop linking a term once there are _at least 5_ additional definitions\n. Negative values may also be helpful when using 'glossaries' option with a glob pattern and in presence of multiple documents that follow a certain heading template such that the same heading appears more than once. Since v7.1.0 you can combine this with 'sortAlternatives' which provides algorithms for sorting the most relevant definitions to the front of a list."
                     ,"type": "integer"
                     ,"minimum": "-95"
                     ,"maximum": "+95"
@@ -501,27 +501,44 @@
                     ,"since": "6.1.0"
                 }
                 ,"sortAlternatives": {
-                    "description": "When there are multiple glossaries a term could be defined with multiple 'competing' definitions. Typically, you want to have a term's phrase being linked to the term definition which is 'most appropriate' in the context of the term's occurrence. However, it's hard for computers to truly 'understand' text. Nevertheless, computationally, the problem can be tackled by finding probability measures suited to _indicate_ appropriateness, numerically. Such numerical representations then make it possible to establish an order on term definitions and sort (resp. prioritize) them, e.g. from 'most appropriate' to 'least appropriate'. This option lets you choose from different algorithms for sorting and priortizing glossary definitions. Some of those algorithms work on measures derived from analyzing a particular scope in which a term occurrence has been found in. These algorithms can increase the likelihood to put the most appropriate definition first in the list of glossary definitions and linking the term's phrase with it."
-                    ,"type": "object"
+                    "description": "When there are multiple glossaries a term could have multiple definitions. This option lets you choose from different algorithms for sorting and priortizing glossary definitions. The primary definition will be considered the first definition in the list of definitions. It will be the one used to link the ambiguous term's phrase in the text. Other definitions become numerical shortlinks to supplementary definitions ordered according to their priority. Whether supplementary definitions are being rendered at all depends on option 'limitByAlternatives'.\n\nSelecting an algorithm: typically, you want to have a term's phrase linking to the term definition which is 'most appropriate' in the context of the term's usage. What 'most appropriate' means in a particular situation is hard for computers to truly understand. Computationally, we can try to find 'probability measures' which indicate appropriateness, numerically. With such a numerical representation we can then establish a (numerical) order and sort/prioritize term definitions from 'most likely appropriate' to 'least likely appropriate'. For strength and weaknesses of available algorithms, see the documentation given for property 'by' after selecting the particular algorithm."
+                    ,"oneOf": [
+                        { "$ref":  "#/$defs/linking/properties/sortAlternativesByFileName" }
+                        ,{ "$ref": "#/$defs/linking/properties/sortAlternativesByRefCount" }
+                    ]
+                    ,"default": { "by": "glossary-filename" }
+                    ,"since": "7.1.0"
+                }
+                ,"sortAlternativesByFileName": {
+                    "type": "object"
                     ,"properties": {
                         "by": {
                             "type": "string"
-                            ,"description": "'glossary-refCount-per-section-X' counts for each glossary how many of its terms have been mentioned in a section at depth X. When linkifying an ambiguous term it priortizes the term definition of the glossary whose terms have been mentioned the most in a given section at depth X (and subsections deeper than X). A numeric suffix of X = 2 initializes a new counter with each heading at depth 2. As a writer you should ask yourself at which heading depth it is more likely for you, to change topics in a way which changes terminology and the meaning of ambiguous terms. Example: Given all of your text is in a single markdown file. Then there is probably only one heading at depth 1 for your book title. Sections at depth 2 are likely to be your book chapters which cover different topics and use a topic-specific terminology. Headings at depth 3 are sections which only add details to a chapter's topic. In such a project 'glossary-refCount-per-section-2' could be a viable choice. If disambiguation should use a more finde-grained analysis, then X larger than 2 may also work. Just be aware that for 'glossary-refCount-per-section-X' the likelihood to properly disambiguate decreases when the number of term occurrences in a section decreases. Since deep sections contain less words than upper sections (which include many deep subsections), the likelihood decreases with increasing section depths X."
-                            ,"enum": [
-                                "glossary-filename"
-                                ,"glossary-refCount-per-file"
-                                ,"glossary-refCount-per-section-1"
-                                ,"glossary-refCount-per-section-2"
-                                ,"glossary-refCount-per-section-3"
-                                ,"glossary-refCount-per-section-4"
-                                ,"glossary-refCount-per-section-5"
-                                ,"glossary-refCount-per-section-6"
-                            ]
-                            ,"default": "glossary-filename"
+                            ,"description": ""
+                            ,"const": "glossary-filename"
                         }
                     }
                     ,"required": ["by"]
-                    ,"since": "7.1.0"
+                    ,"additionalProperties": false
+                }
+                ,"sortAlternativesByRefCount": {
+                    "type": "object"
+                    ,"properties": {
+                        "by": {
+                            "type": "string"
+                            ,"const": "glossary-ref-count"
+                            ,"description": "Sorting glossary definitions by 'glossary-ref-count' means priortizing term definitions from glossaries whose terms have been mentioned (referenced) more often over term definitions from glossaries whose terms have been mentioned less often in a particular section scope. Use of glossary terminology thus affects how ambiguous term occurrences will be linked. The algorithm uses a histogram where each occurrence of a term adds to the bar of the glossary the term has been defined in. Ambiguous term occurrences raise the bar of two or more glossaries. Eventually the glossaries will be priortized from largest bar to smallest bar which establishes a order on glossaries. The order will be used as sort criteria for term definitions of ambiguous terms. The 'most likely appropriate' term definition is considered to be provided by the glossary with the highest priority among those glossaries which provide a definition for the term. More technically: the numerical 'probability measure' will be the aggregated number of glossary references derived from term occurrences in a section. The likelihood function is a sort function sorting glossaries according to the probability measure in descending order. The 'most likely term definition' will be provided by the glossary which is found first in the list of glossaries known to provide a definition for the term."
+                        }
+                        ,"perSectionDepth": {
+                            "type": "number"
+                            ,"description": "When there are ambiguous terms in a book one glossary term definition might be more appropriate in a section A while an alternative definition may be more appropriate in a section B. 'glossary-ref-count' can sort term definitions separately per section by evaluating term usage individually per section (see description of 'by' for how sorting by glossary-ref-count works).\n\n Finding a good section depth: As a writer you may want to ask yourself at which heading depth it is more likely for you to change topics in a way that the meaning of ambiguous terms is more likely to change as well. For example, given your book is a single Markdown file then there is probably only one title heading '# Title' at heading depth 1. Given book chapters '## Chapter' at depth 2 cover different topics and use a topic-specific terminology while sections at heading depths 3 and deeper will only add details to the chapter's topic but do not change the overall topic and terminology of chapters. Then 'perSectionDepth: 2' can be a viable choice, because 'perSectionDepth: 1' would result in only a single term definition priority for the whole book. Consequently, an ambiguous term's primary definition would be the same in all chapters ignoring chapter-specific differences in terminology. In contrast, with 'perSectionDepth: 2' the algorithm determines a different term definition priority per chapter based on terminology use in those chapters. With 'perSectionDepth: 3' or deeper precision may or may not increase further. As a book writer when choosing the deeper value boundary you may also want to ask yourself how likely it is to having enough glossary terms at that depth, at all. The likelihood for finding (enough) term occurrences as samples for the term-glossary-distribution decreases with larger depths. With lower values for 'perSectionDepth' deeper sections use the same term-glossary-distribution and term definition priority as their parent sections. That distribution was derived from all of the parent's child sections, so the sampling space is larger. Because term-glossary-distributions at lower depths are always aggregations of more granular term-glossary-distributions from deeper levels for the term definition priority _at level 2_ it will make no difference whether sampling only one term-glossary-distribution 'perSectionDepth: 2' or sampling multiple separate term-glossary-distributions 'perSectionDepth: 3' then aggregating their ref counts. For disambiguation of terms at section level 2 the difference is comparable to a bar chart where 'perSectionDepth: 3' only reveals how much each subsection contributes to the glossary-term-distribution without changing the total distribution, though. At level 2 the higher resolution is meaningless. It is only relevant for disambiguation at section levels of 3 or deeper."
+                            ,"min": 1
+                            ,"max": 6
+                            ,"default": 2
+                        }
+                    }
+                    ,"required": ["by", "perSectionDepth"]
+                    ,"additionalProperties": false
                 }
             }
         }
