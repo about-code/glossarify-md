@@ -1,5 +1,5 @@
 import { strictEqual } from "node:assert";
-import { relativeFromTo, toSystemSlash } from "../lib/path/tools.js";
+import { relativeFromTo, toSystemSlash } from "../../../lib/path/tools.js";
 
 (function testWhenFromAndToInDifferentBranch() {
     const from = "/home/user/foo/bar/baz.md";
