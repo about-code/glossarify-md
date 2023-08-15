@@ -10,6 +10,16 @@ The default value is:
 
 
 
+## effectiveConfFile
+
+File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults.
+
+`effectiveConfFile`
+
+*   is optional
+
+*   Type: `string`
+
 ## printInputAst
 
 Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document.
@@ -55,16 +65,6 @@ Write system-independent paths into 'termsFile' to produce reproducable output a
 File where to write term book to. Enables testing the term extraction results of the 'terminator' component.
 
 `termsFile`
-
-*   is optional
-
-*   Type: `string`
-
-## effectiveConfFile
-
-File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults.
-
-`effectiveConfFile`
 
 *   is optional
 

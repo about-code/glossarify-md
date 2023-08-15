@@ -12,16 +12,6 @@ Path relative to 'outDir' where to create the index markdown file.
 
 *   Type: `string`
 
-## title
-
-The page title for the index file. If missing the application uses a default value.
-
-`title`
-
-*   is optional
-
-*   Type: `string`
-
 ## glossary
 
 When you configured multiple glossaries, then this option can be used to generate an index file with terms of a particular glossary, only. Use with `generateFiles.indexFiles` (not `generateFiles.indexFile`). Since v5.1.0.
@@ -41,3 +31,13 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 *   is optional
 
 *   Type: `boolean`
+
+## title
+
+The page title for the index file. If missing the application uses a default value.
+
+`title`
+
+*   is optional
+
+*   Type: `string`

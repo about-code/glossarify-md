@@ -2,24 +2,6 @@
 
 
 
-## title
-
-
-
-`title`
-
-*   is optional
-
-*   Type: `string`
-
-### title Default Value
-
-The default value is:
-
-```json
-"Glossary"
-```
-
 ## dialect
 
 A CSV dialect descriptor. Similar to dialect in a <https://frictionlessdata.io> tabular data resource schema.
@@ -53,3 +35,21 @@ A mapping of CSV table fields onto SKOS terms, e.g.
 *   is optional
 
 *   Type: `object` ([Details](schema-defs-csvtableschema.md))
+
+## title
+
+
+
+`title`
+
+*   is optional
+
+*   Type: `string`
+
+### title Default Value
+
+The default value is:
+
+```json
+"Glossary"
+```
