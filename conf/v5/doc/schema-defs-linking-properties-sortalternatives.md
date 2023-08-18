@@ -7,3 +7,14 @@ The default value is:
   "by": "glossary-filename"
 }
 ```
+
+## sortAlternatives Examples
+
+```json
+{
+  "sortAlternatives": {
+    "by": "glossary-ref-count",
+    "perSectionDepth": 2
+  }
+}
+```

@@ -1,6 +1,11 @@
 # indexFile Properties
 
-
+| Property                        | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                  |
+| :------------------------------ | :-------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [file](#file)                   | `string`  | Required | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexFile/properties/file")                   |
+| [glossary](#glossary)           | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-glossary.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexFile/properties/glossary")           |
+| [hideDeepLinks](#hidedeeplinks) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-hidedeeplinks.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexFile/properties/hideDeepLinks") |
+| [title](#title)                 | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-indexfile-properties-title.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexFile/properties/title")                 |
 
 ## file
 

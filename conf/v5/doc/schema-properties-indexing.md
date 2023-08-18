@@ -18,7 +18,10 @@ The default value is:
 
 # indexing Properties
 
-
+| Property                                    | Type      | Required | Nullable       | Defined by                                                                                                                                                                                                            |
+| :------------------------------------------ | :-------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [groupByHeadingDepth](#groupbyheadingdepth) | `integer` | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-groupbyheadingdepth.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexing/properties/groupByHeadingDepth") |
+| [headingDepths](#headingdepths)             | `array`   | Optional | cannot be null | [Configuration Schema](schema-defs-indexing-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/indexing/properties/headingDepths")             |
 
 ## groupByHeadingDepth
 

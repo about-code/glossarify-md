@@ -74,7 +74,7 @@ glossarify-md will resolve the actual path to the corresponding section heading 
 
 ## Tree-Scoped Linking
 
-Tree Scoped Linking can be used to restrict Term-Based Linking to link targets within particular branches of a file tree and prevent links across branches. It can also be used as a [disambiguation tactic][doc-ambiguity] when a book project's filesystem structure reflects chapters and sections of a Table of Contents *or* individual Topics, at least. Then when there were a term with different meanings *in particular branches of the filesystem tree* then you could create a glossary for each of these branches and put the term definition applicable in a branch in the glossary for that branch.
+Tree Scoped Linking can be used to restrict Term-Based Linking to link targets within particular branches of a file tree and prevent links across branches. It can also be used as a [disambiguation tactic][doc-ambiguity] when a book project's filesystem structure reflects chapters and sections of a Table of Contents *or* individual topics, at least. Then when there were a term with different meanings *in particular branches of the filesystem tree* then you could create a glossary for each of these branches and put the term definition applicable in a branch in the glossary for that branch.
 
 **Example: Tree-Scoped Linking**
 

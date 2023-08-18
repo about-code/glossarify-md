@@ -1,6 +1,22 @@
 # linking Properties
 
-
+| Property                                                                        | Type          | Required | Nullable       | Defined by                                                                                                                                                                                                                                              |
+| :------------------------------------------------------------------------------ | :------------ | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [baseUrl](#baseurl)                                                             | `string`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-baseurl.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/baseUrl")                                                             |
+| [byReferenceDefinition](#byreferencedefinition)                                 | `boolean`     | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-byreferencedefinition.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/byReferenceDefinition")                                 |
+| [headingAsLink](#headingaslink)                                                 | `boolean`     | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingaslink.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/headingAsLink")                                                 |
+| [headingDepths](#headingdepths)                                                 | `array`       | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingdepths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/headingDepths")                                                 |
+| [headingIdAlgorithm](#headingidalgorithm)                                       | Not specified | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingidalgorithm.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/headingIdAlgorithm")                                       |
+| [headingIdPandoc](#headingidpandoc)                                             | `boolean`     | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-headingidpandoc.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/headingIdPandoc")                                             |
+| [limitByAlternatives](#limitbyalternatives)                                     | `integer`     | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-limitbyalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/limitByAlternatives")                                     |
+| [limitByTermOrigin](#limitbytermorigin)                                         | `array`       | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-limitbytermorigin.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/limitByTermOrigin")                                         |
+| [mentions](#mentions)                                                           | `string`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-mentions.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/mentions")                                                           |
+| [paths](#paths)                                                                 | `string`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-paths.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/paths")                                                                 |
+| [pathComponents](#pathcomponents)                                               | `array`       | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-pathcomponents.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/pathComponents")                                               |
+| [pathRewrites](#pathrewrites)                                                   | `object`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-pathrewrites.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/pathRewrites")                                                   |
+| [sortAlternatives](#sortalternatives)                                           | Merged        | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-sortalternatives.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/sortAlternatives")                                           |
+| [sortAlternatives.by.glossary-filename](#sortalternativesbyglossary-filename)   | `object`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-sortalternativesbyglossary-filename.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/sortAlternatives.by.glossary-filename")   |
+| [sortAlternatives.by.glossary-ref-count](#sortalternativesbyglossary-ref-count) | `object`      | Optional | cannot be null | [Configuration Schema](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/linking/properties/sortAlternatives.by.glossary-ref-count") |
 
 ## baseUrl
 
@@ -26,6 +42,8 @@ When 'true' replaces markdown inline links with numbered references to a link re
 
 *   Type: `boolean`
 
+*   since: 6.0.0
+
 ## headingAsLink
 
 Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes.
@@ -35,6 +53,8 @@ Whether to linkify headings. Some Markdown-to-HTML renderers may require this is
 *   is optional
 
 *   Type: `boolean`
+
+*   since: 6.0.0
 
 ## headingDepths
 
@@ -55,6 +75,8 @@ Algorithm to use for generating heading IDs. The "github" algorithm (default) pr
 *   is optional
 
 *   Type: unknown
+
+*   since: 6.0.0
 
 ### headingIdAlgorithm Constraints
 
@@ -78,14 +100,17 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 *   Type: `boolean`
 
+*   since: 6.0.0
+
 ## limitByAlternatives
 
 This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions for a term. For example, a value of
-5: makes the system link to *at most 5* additional definitions per term
-0: links the term to a single definition but adds no hint or links to alternative definitions (even if there are any)
--1: makes the system stop linking a term once there is at least 1 additional definition (ambiguity)
--5: makes the system stop linking a term once there are *at least 5* additional definitions
-. Negative values may also be helpful when using 'glossaries' option with a glob pattern and in presence of multiple documents that follow a certain heading template such that the same heading appears more than once. Since v7.1.0 you can combine this with 'sortAlternatives' which provides algorithms for sorting the most relevant definitions to the front of a list.
+`5` makes the system link to *at most 5* additional definitions per term
+. The value `0` links the term to a single definition but adds zero additional links indicating alternative definitions even if there are any. Since v7.1.0 we recommend not only but especially for value `0` to combine it with 'sortAlternatives'. This increases the likelihood that the one definition being linked is the one appropriate in the context of a term's usage.
+A value of `-1` makes the system stop linking a term once there is at least 1 additional definition (stops linking ambiguous terms, completely)
+`-5` makes the system stop linking a term once there are *at least 5* additional definitions
+
+. Negative values may also be helpful when using option 'glossaries.file' with a glob pattern where the glob pattern matches many documents that share a common heading template. Then the repetitive use of the template causes ambiguity and leads to many alternative links being rendered. Use this option, for example, to limit their number.
 
 `limitByAlternatives`
 
@@ -95,13 +120,15 @@ This option can be used to deal with ambiguities and limit the number of links i
 
 ## limitByTermOrigin
 
-Limits linkification based on the filesystem hierarchy of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`.
+This option can be used to deal with ambiguities when there are multiple glossaries with competing definitions for a term. It can restrict the applicable scope of a glossary based on the directory structure and glossary file locations of a book project. For example, `["parent", "sibling", "self"]` causes a term occurrence being linkified only in documents when the term has been defined in a glossary in a parent directory ("parent") or when it has been defined in a glossary next to the document file ("sibling") or within the glossary itself ("self"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. It can also be a manual approach to improving linkification for ambiguous terms when the fuzzyness of 'linking.sortAlternatives' is impractical.  Defaults to `[]`. An array containing all enum values is equivalent to an empty array. It will make glossarify-md link each glossary term in every document.
 
 `limitByTermOrigin`
 
 *   is optional
 
 *   Type: `string[]`
+
+*   since: 6.1.0
 
 ## mentions
 
@@ -152,6 +179,8 @@ Adjust which path components should make it into auto-generated links. glossarif
 
 *   Type: `string[]`
 
+*   since: 6.0.0
+
 ### pathComponents Constraints
 
 **maximum number of items**: the maximum number of items for this array is: `3`
@@ -166,17 +195,21 @@ KEY-VALUE map where VALUE is a single search string or an array of strings or re
 
 *   Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
 
+*   since: 6.1.0
+
 ## sortAlternatives
 
-When there are multiple glossaries a term could have multiple definitions. This option lets you choose from different algorithms for sorting and priortizing glossary definitions. The primary definition will be considered the first definition in the list of definitions. It will be the one used to link the ambiguous term's phrase in the text. Other definitions become numerical shortlinks to supplementary definitions ordered according to their priority. Whether supplementary definitions are being rendered at all depends on option 'limitByAlternatives'.
-
-Selecting an algorithm: typically, you want to have a term's phrase linking to the term definition which is 'most appropriate' in the context of the term's usage. What 'most appropriate' means in a particular situation is hard for computers to truly understand. Computationally, we can try to find 'probability measures' which indicate appropriateness, numerically. With such a numerical representation we can then establish a (numerical) order and sort/prioritize term definitions from 'most likely appropriate' to 'least likely appropriate'. For strength and weaknesses of available algorithms, see the documentation given for property 'by' after selecting the particular algorithm.
+When there are multiple glossaries a term could have multiple definitions (ambiguity). This option lets you choose from different algorithms for sorting and priortizing glossary definitions. The primary definition will be considered the first definition in the sorted list of definitions. It will be the one used to link the phrase of an ambiguous term occurrence in the text. Other definitions become numerical shortlinks to supplementary definitions ordered according to their priority. Whether supplementary definitions are being rendered at all depends on option 'limitByAlternatives'.
 
 `sortAlternatives`
 
 *   is optional
 
 *   Type: merged type ([Details](schema-defs-linking-properties-sortalternatives.md))
+
+*   since: 7.1.0
+
+*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 ### sortAlternatives Default Value
 
@@ -188,22 +221,56 @@ The default value is:
 }
 ```
 
-## sortAlternativesByFileName
+### sortAlternatives Examples
 
+```json
+{
+  "sortAlternatives": {
+    "by": "glossary-ref-count",
+    "perSectionDepth": 2
+  }
+}
+```
 
+## sortAlternatives.by.glossary-filename
 
-`sortAlternativesByFileName`
+Sorting alternative definitions by glossary file name sorts links to those glossary definitions created for term occurrences by comparing the file names of the glossaries hosting the to-be-linked term definitions. The sort algorithm assumes that there is only a single definition for a term in a single glossary file.
+
+`sortAlternatives.by.glossary-filename`
 
 *   is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyfilename.md))
+*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-filename.md))
 
-## sortAlternativesByRefCount
+### sortAlternatives.by.glossary-filename Examples
 
+```json
+{
+  "sortAlternatives": {
+    "by": "glossary-filename"
+  }
+}
+```
 
+## sortAlternatives.by.glossary-ref-count
 
-`sortAlternativesByRefCount`
+Sorting alternative definitions by glossary reference count sorts links to those glossary definitions by comparing the popularity of glossaries hosting the to-be-linked term definitions. It assumes a glossary to be more popular when its terms have occured (referenced, cited) more often in a section. In particular it assumes the most popular glossary in a section to provide the likely most appropriate definition when there competing definitions.
+
+`sortAlternatives.by.glossary-ref-count`
 
 *   is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyrefcount.md))
+*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md))
+
+*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+
+### sortAlternatives.by.glossary-ref-count Examples
+
+```json
+{
+  "sortAlternatives": {
+    "by": "glossary-ref-count",
+    "perSectionDepth": 2
+  }
+}
+```

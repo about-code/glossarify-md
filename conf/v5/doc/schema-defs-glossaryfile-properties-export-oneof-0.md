@@ -1,6 +1,9 @@
 # 0 Properties
 
-
+| Property            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                        |
+| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [context](#context) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfileexport-properties-context.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFileExport/properties/context") |
+| [file](#file)       | `string` | Required | cannot be null | [Configuration Schema](schema-defs-glossaryfileexport-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFileExport/properties/file")       |
 
 ## context
 

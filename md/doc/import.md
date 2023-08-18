@@ -11,7 +11,7 @@ aliases: Import, importing, imports
 
 ----
 
-### From CSV
+### Importing from CSV
 
 **Since v7.0.0**
 
@@ -63,7 +63,7 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 #123;My Term;Alternative Term;This Term stands for Foo
 ~~~
 
-### From JSON (glossarify-md exports)
+### Importing from JSON exported by glossarify-md
 
 **Since v6.0.0**
 
@@ -78,7 +78,9 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ~~~
 
-### From JSON (arbitrary)
+### Importing from JSON exported by other software
+
+In contrast to importing from a JSON file which was exported by glossarify-md itself, importing from arbitrary data models and JSON serializations is likely to require mappings onto SKOS types. Have a look at glossarify-md's own JSON export format to see how it maps format-specific attribute and type names onto SKOS properties and concepts. See Interoperability with SKOS and JSON-LD for an in-depth example.
 
 ~~~json
 {
@@ -92,16 +94,15 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ~~~
 
-Importing from arbitrary data models and JSON serializations is likely to require mappings onto SKOS types and attributes. See Interoperability with SKOS and JSON-LD for an in-depth example.
-
 ### From RDF + SKOS
 
 **Since v6.0.0**
 
-If you have an SKOS description of a glossary or taxonomy stored in some RDF linked data store then you might find linked data tooling that is able to export/convert/serialize your linked data vocabulary to **N-Triples, N-Quads or JSON-LD**.
+Glossary terms can also be imported from RDF serializations when the RDF triples refer to supported SKOS concepts and properties. Supported RDF serializations are **N-Triples, N-Quads or JSON-LD**.
 
-- Importing from JSON-LD should work similar to importing glossarify-md's own JSON exports
 - Importing N-Triples/N-Quads requires the file name to end with `.nq`
+- Importing from JSON-LD requires the file name to end with `.jsonld`
+  - For an example on how to import from JSON-LD have a look at glossarify-md's own JSON export format to see how it maps format-specific attribute and type names onto SKOS properties and concepts. See also Interoperability with SKOS and JSON-LD for an in-depth example.
 
 *Example: Import RDF + SKOS from an N-Quads serialization:*
 ~~~json

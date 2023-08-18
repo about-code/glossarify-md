@@ -1,6 +1,11 @@
 # listOfItemsFile Properties
 
-
+| Property            | Type     | Required | Nullable       | Defined by                                                                                                                                                                                                  |
+| :------------------ | :------- | :------- | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [class](#class)     | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-listofitemsfile-properties-class.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/listOfItemsFile/properties/class")     |
+| [file](#file)       | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-listofitemsfile-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/listOfItemsFile/properties/file")       |
+| [pattern](#pattern) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-listofitemsfile-properties-pattern.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/listOfItemsFile/properties/pattern") |
+| [title](#title)     | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-listofitemsfile-properties-title.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/listOfItemsFile/properties/title")     |
 
 ## class
 
