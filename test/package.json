@@ -128,7 +128,7 @@
     "test_p11__35": "node . --config ./input/config-linking/paths-relative-pathComponents/path-file/glossarify-md.conf.json",
     "test_p11__36": "node . --config ./input/config-linking/paths-relative-pathComponents/path-file-ext/glossarify-md.conf.json",
     "test_p11__37": "node . --config ./input/config-linking/paths-relative-pathComponents/none/glossarify-md.conf.json",
-    "test_p11__38": "node . --config ./input/config-linking/sortAlternatives/glossarify-md.conf.json",
+    "test_p11__38": "node . --config ./input/config-linking/sortAlternatives/glossary-ref-count-perSectionDepth-1/glossarify-md.conf.json",
     "test_p11__39": "node . --config ./input/config-linking/sortAlternatives/glossary-ref-count-perSectionDepth-2/glossarify-md.conf.json",
     "test_p12__00": "node . --config ./input/config-indexFile/glossary-in-subdir/glossarify-md.conf.json",
     "test_p12__01": "node . --config ./input/config-indexFile/index-in-subdir/glossarify-md.conf.json",
