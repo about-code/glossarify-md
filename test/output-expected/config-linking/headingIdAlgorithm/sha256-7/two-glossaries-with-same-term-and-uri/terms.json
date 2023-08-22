@@ -10,12 +10,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary-1?uri=http://my.org/vocab/#alpha",
     "headingDepth": 2,
     "anchor": "#sha256-7e16917",
+    "file": "glossary-1.md",
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary-1.md",
     "termHint": ""
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary-2?uri=http://my.org/vocab/#alpha",
     "headingDepth": 2,
     "anchor": "#sha256-04b1d48",
+    "file": "glossary-2.md",
     "regex": "/(Alpha)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary-2.md",
     "termHint": ""
   },
   {
@@ -48,12 +48,12 @@
     "headingIdPlain": "http://127.0.0.1/document-1?uri=http://my.org/vocab/#document-1",
     "headingDepth": 1,
     "anchor": "#sha256-cb122b9",
+    "file": "document-1.md",
     "regex": "/(Document 1)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "document-1.md",
     "termHint": ""
   },
   {
@@ -67,12 +67,12 @@
     "headingIdPlain": "http://127.0.0.1/document-2?uri=http://my.org/vocab/#document-2",
     "headingDepth": 1,
     "anchor": "#sha256-a8783f5",
+    "file": "document-2.md",
     "regex": "/(Document 2)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "document-2.md",
     "termHint": ""
   },
   {
@@ -86,12 +86,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary-1?uri=http://my.org/vocab/#glossary-1",
     "headingDepth": 1,
     "anchor": "#sha256-5af08a5",
+    "file": "glossary-1.md",
     "regex": "/(Glossary 1)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary-1.md",
     "termHint": ""
   },
   {
@@ -105,12 +105,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary-2?uri=http://my.org/vocab/#glossary-2",
     "headingDepth": 1,
     "anchor": "#sha256-0f3bb50",
+    "file": "glossary-2.md",
     "regex": "/(Glossary 2)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary-2.md",
     "termHint": ""
   }
 ]

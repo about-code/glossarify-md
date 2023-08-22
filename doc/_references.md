@@ -1,4 +1,4 @@
-# [References](#references)
+# [<x>References</x>](#xreferencesx)
 
 ## [Atom](#atom)
 
@@ -182,6 +182,15 @@ A [remark 🌎][16] syntax plug-in supporting non-standard [Hugo 🌎][19] short
 <!-- uri: http://w3.org/skos/ -->
 
 With the Simple [Knowledge Organization System][20] ([SKOS 🌎][10]) the World Wide Web Consortium (W3C) has standardized a (meta-)[vocabulary][9] which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+
+## [Stacked Bar Chart](#stacked-bar-chart)
+
+<!--
+  uri: https://en.wikipedia.org/wiki/Bar_chart
+  aliases: stacked bar chart
+-->
+
+A visualization of a distribution which also reveals how much partial distributions contribute to the overall height of bars and the overall distribution visible in the chart.
 
 ## [unified](#unified)
 

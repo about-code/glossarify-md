@@ -1,4 +1,4 @@
-# References
+# <x>References</x>
 
 ## Atom
 <!-- uri: https://atom.io -->
@@ -143,6 +143,13 @@ A remark syntax plug-in supporting non-standard Hugo shortcodes syntax.
 <!-- uri: http://w3.org/skos/ -->
 
 With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling *Simple Knowledge Organization Systems* such as Glossaries, Thesauri, Taxonomies or Word Nets.
+
+## Stacked Bar Chart
+<!--
+  uri: https://en.wikipedia.org/wiki/Bar_chart
+  aliases: stacked bar chart
+-->
+A visualization of a distribution which also reveals how much partial distributions contribute to the overall height of bars and the overall distribution visible in the chart.
 
 ## unified
 <!-- uri: https://unifiedjs.com -->

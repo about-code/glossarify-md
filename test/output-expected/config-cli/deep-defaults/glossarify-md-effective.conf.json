@@ -56,7 +56,10 @@
     "headingAsLink": true,
     "byReferenceDefinition": true,
     "limitByTermOrigin": {},
-    "limitByAlternatives": 10
+    "limitByAlternatives": 10,
+    "sortAlternatives": {
+      "by": "glossary-filename"
+    }
   },
   "outDir": "{CWD}/output-actual/config-cli/deep-defaults",
   "outDirDropOld": true,

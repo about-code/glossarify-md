@@ -10,12 +10,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#alias-substring-behavior",
+    "file": "glossary.md",
     "regex": "/(Alias substring behavior)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#aliases-and-synonyms",
+    "file": "glossary.md",
     "regex": "/(Aliases and Synonyms)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -48,6 +48,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#china",
+    "file": "glossary.md",
     "regex": "/(中国zhōngguó|zhōngguó中国|中zhōngguó国|zhōng中国guó|China)/u",
     "aliases": [
       "中国zhōngguó",
@@ -58,7 +59,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 5,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -72,6 +72,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#field",
+    "file": "glossary.md",
     "regex": "/(GREENFIELD|FIELD)/u",
     "aliases": [
       "GREENFIELD"
@@ -79,7 +80,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -93,6 +93,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#flower",
+    "file": "glossary.md",
     "regex": "/(Flower|lower)/u",
     "aliases": [
       "lower"
@@ -100,7 +101,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -114,6 +114,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#friendship",
+    "file": "glossary.md",
     "regex": "/(Friendship|end)/u",
     "aliases": [
       "end"
@@ -121,7 +122,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -135,6 +135,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#hopefully",
+    "file": "glossary.md",
     "regex": "/(Hopefully|Hope)/u",
     "aliases": [
       "Hope"
@@ -142,7 +143,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -156,6 +156,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#issue",
+    "file": "glossary.md",
     "regex": "/(Issues|Issue)/u",
     "aliases": [
       "Issues"
@@ -163,7 +164,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -177,6 +177,7 @@
     "headingIdPlain": "",
     "headingDepth": 3,
     "anchor": "#our",
+    "file": "glossary.md",
     "regex": "/(FLOURISH|OUR)/u",
     "aliases": [
       "FLOURISH"
@@ -184,7 +185,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 2,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -198,6 +198,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-1",
+    "file": "glossary.md",
     "regex": "/(T1\\.Alias3|T1 Alias1|T1-Alias2|Term 1)/u",
     "aliases": [
       "T1 Alias1",
@@ -207,7 +208,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -221,6 +221,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-2",
+    "file": "glossary.md",
     "regex": "/(T2\\.Alias3|T2 Alias1|T2-Alias2|Term 2)/u",
     "aliases": [
       "T2 Alias1",
@@ -230,7 +231,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -244,6 +244,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-3",
+    "file": "glossary.md",
     "regex": "/(T3\\.Alias3|T3 Alias1|T3-Alias2|Term 3)/u",
     "aliases": [
       "T3 Alias1",
@@ -253,7 +254,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -267,6 +267,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-4",
+    "file": "glossary.md",
     "regex": "/(T4\\.Alias3|T4 Alias1|T4-Alias2|Term 4)/u",
     "aliases": [
       "T4 Alias1",
@@ -276,7 +277,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 4,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -290,6 +290,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#term-5",
+    "file": "glossary.md",
     "regex": "/(T5-Alias1|T5-Alias2|Term 5)/u",
     "aliases": [
       "T5-Alias1",
@@ -298,7 +299,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -312,12 +312,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#unicode-support",
+    "file": "glossary.md",
     "regex": "/(Unicode Support)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   }
 ]

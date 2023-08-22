@@ -1,6 +1,15 @@
 # glossaryFile Properties
 
-
+| Property              | Type      | Required | Nullable       | Defined by                                                                                                                                                                                              |
+| :-------------------- | :-------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [export](#export)     | Merged    | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-export.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/export")     |
+| [file](#file)         | `string`  | Required | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-file.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/file")         |
+| [import](#import)     | `object`  | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfileimport.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/import")                 |
+| [linkUris](#linkuris) | `boolean` | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-linkuris.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/linkUris") |
+| [sort](#sort)         | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-sort.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/sort")         |
+| [showUris](#showuris) | Merged    | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-showuris.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/showUris") |
+| [termHint](#termhint) | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-termhint.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/termHint") |
+| [uri](#uri)           | `string`  | Optional | cannot be null | [Configuration Schema](schema-defs-glossaryfile-properties-uri.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/glossaryFile/properties/uri")           |
 
 ## export
 
@@ -11,6 +20,8 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 *   is optional
 
 *   Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
+
+*   since: 6.0.0
 
 ## file
 
@@ -32,6 +43,10 @@ Import a JSON glossary (see 'export'). Generates a glossary markdown file from i
 
 *   Type: `object` ([Details](schema-defs-glossaryfileimport.md))
 
+*   since: 6.0.0
+
+*   more: https://github.com/about-code/glossarify-md/blob/master/doc/import.md
+
 ## linkUris
 
 Set this to true to hyperlink occurrences of a term to an 'authoritative' web glossary using a term's URI as lookup URL (default: false). May be used together with a glossary's 'uri' option. When 'linkUris' is 'true' glossarify-md uses the glossary markdown file as a source of link titles (tooltips) or for other internal processing, only, but won't generate links from documents to the markdown glossary, anymore, but from documents to an external web page.
@@ -41,6 +56,8 @@ Set this to true to hyperlink occurrences of a term to an 'authoritative' web gl
 *   is optional
 
 *   Type: `boolean`
+
+*   since: 6.0.0
 
 ## sort
 
@@ -71,6 +88,22 @@ Whether to render a term's URI in the glossary (currently for imported glossarie
 
 *   Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
 
+*   since: 6.0.0
+
+### showUris Examples
+
+```json
+{
+  "showUris": true
+}
+```
+
+```json
+{
+  "showUris": "- Markdown Formatted: *${uri}*"
+}
+```
+
 ## termHint
 
 A symbol to append to a link to denote that the term refers to a glossary term.
@@ -90,6 +123,8 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 *   is optional
 
 *   Type: `string`
+
+*   since: 6.0.0
 
 ### uri Constraints
 

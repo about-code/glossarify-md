@@ -45,6 +45,7 @@ Glossary Basics
 - [Aliases and Synonyms](../README.md#aliases-and-synonyms) *
 - [Term Hints](../README.md#term-hints) *
 - [Multiple Glossaries](../README.md#multiple-glossaries) *
+  - [Multiple Glossaries and Ambiguity](./ambiguities.md)
 - [Sorting Glossaries](../README.md#sorting-glossaries) *
 - [Term Attributes](./term-attributes.md)
 

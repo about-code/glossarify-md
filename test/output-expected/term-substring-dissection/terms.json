@@ -10,12 +10,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äö",
+    "file": "glossary.md",
     "regex": "/('ÄÖ')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#äöü",
+    "file": "glossary.md",
     "regex": "/('ÄÖÜ')/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -48,12 +48,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#a",
+    "file": "glossary.md",
     "regex": "/(A)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 11,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -67,12 +67,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ä",
+    "file": "glossary.md",
     "regex": "/(Ä)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 11,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -86,12 +86,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#ab",
+    "file": "glossary.md",
     "regex": "/(AB)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -105,12 +105,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#abc",
+    "file": "glossary.md",
     "regex": "/(ABC)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 9,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -124,12 +124,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#substring-test-glossary",
+    "file": "glossary.md",
     "regex": "/(Substring Test Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   }
 ]

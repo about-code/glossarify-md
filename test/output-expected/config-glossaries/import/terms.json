@@ -10,6 +10,7 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#glossary",
+    "file": "glossary.md",
     "regex": "/(Vocabulary|Glossary)/u",
     "aliases": [
       "Vocabulary"
@@ -17,7 +18,6 @@
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -31,12 +31,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#knowledge-organization-systems-kos",
+    "file": "glossary.md",
     "regex": "/(Knowledge Organization Systems \\(KOS\\))/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -50,12 +50,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#taxonomy",
+    "file": "glossary.md",
     "regex": "/(Taxonomy)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -69,12 +69,12 @@
     "headingIdPlain": "",
     "headingDepth": 2,
     "anchor": "#thesaurus",
+    "file": "glossary.md",
     "regex": "/(Thesaurus)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   }
 ]

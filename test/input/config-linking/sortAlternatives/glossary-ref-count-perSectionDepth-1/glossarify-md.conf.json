@@ -1,0 +1,14 @@
+{
+  "$schema": "../../../../../conf/v5/schema.json",
+  "baseDir": ".",
+  "outDir": "../../../../output-actual/config-linking/sortAlternatives/glossary-ref-count-perSectionDepth-1",
+  "glossaries": [{
+      "file": "./glossary-*.md"
+  }],
+  "linking": {
+    "sortAlternatives": {
+      "by": "glossary-ref-count",
+      "perSectionDepth": 1
+    }
+  }
+}

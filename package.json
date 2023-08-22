@@ -39,7 +39,7 @@
     "debug": "node --inspect-brk ./bin/index.js --config ./experiment/glossarify-md.conf.json",
     "docs": "npm-run-all docs-*",
     "docs-doc": "node ./bin/index.js --config ./glossarify-md.conf.json",
-    "docs-config": "rm -r ./conf/v5/doc && jsonschema2md -n -d ./conf/v5 -e json -o ./conf/v5/doc -x - -h=false -s nullablefact -s typesection -s definedinfact -s proptable",
+    "docs-config": "rm -r ./conf/v5/doc && jsonschema2md -n -d ./conf/v5 -e json -o ./conf/v5/doc -x - -p since -p more -h false -s nullablefact -s typesection -s definedinfact -s $defs",
     "docs-repo": "remark md/README.md > README.md && remark md/CONTRIBUTING.md > CONTRIBUTING.md",
     "fix": "eslint . --fix",
     "linter": "eslint .",

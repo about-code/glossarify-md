@@ -10,12 +10,12 @@
     "headingIdPlain": "",
     "headingDepth": 1,
     "anchor": "#glossary",
+    "file": "glossary.md",
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   }
 ]

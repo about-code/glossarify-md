@@ -1,6 +1,10 @@
 # csvDialect Properties
 
-
+| Property                  | Type     | Required | Nullable       | Defined by                                                                                                                                                                                              |
+| :------------------------ | :------- | :------- | :------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [delimiter](#delimiter)   | `string` | Required | cannot be null | [Configuration Schema](schema-defs-csvdialect-properties-delimiter.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvDialect/properties/delimiter")   |
+| [quoteChar](#quotechar)   | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-csvdialect-properties-quotechar.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvDialect/properties/quoteChar")   |
+| [escapeChar](#escapechar) | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-csvdialect-properties-escapechar.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/csvDialect/properties/escapeChar") |
 
 ## delimiter
 

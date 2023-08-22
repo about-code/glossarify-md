@@ -10,12 +10,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary?uri=#glossary",
     "headingDepth": 1,
     "anchor": "#md5-355f756",
+    "file": "glossary.md",
     "regex": "/(Glossary)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 0,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   },
   {
@@ -29,12 +29,12 @@
     "headingIdPlain": "http://127.0.0.1/glossary?uri=#term",
     "headingDepth": 2,
     "anchor": "#md5-7e9dfa8",
+    "file": "glossary.md",
     "regex": "/(Term)/u",
     "aliases": [],
     "ignoreCase": false,
     "countOccurrenceTotal": 1,
     "type": "term-definition",
-    "file": "glossary.md",
     "termHint": ""
   }
 ]

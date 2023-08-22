@@ -92,6 +92,9 @@
                 ,"byReferenceDefinition": true
                 ,"limitByTermOrigin": []
                 ,"limitByAlternatives": 10
+                ,"sortAlternatives": {
+                    "by": "glossary-filename"
+                }
             }
         }
         ,"outDir": {
@@ -245,6 +248,14 @@
                         { "type": "boolean", "description": "`true` or `false`"}
                         ,{ "type": "string", "description": "Can be a Markdown snippet using a placeholder `${uri}`." }
                     ]
+                    ,"examples": [
+                        {
+                            "showUris": true
+                        }
+                        ,{
+                            "showUris": "- Markdown Formatted: *${uri}*"
+                        }
+                    ]
                     ,"since": "6.0.0"
                 }
                 ,"termHint": {
@@ -268,14 +279,14 @@
         ,"glossaryFileExport": {
             "type": "object",
             "properties": {
-                "file": {
+                "context": {
+                    "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
+                    ,"type": "string"
+                }
+                ,"file": {
                     "description": "A JSON file name to write exported terms to. Recommended file extension is '.json' or '.jsonld'"
                     ,"type": "string"
                     ,"default": ""
-                }
-                ,"context": {
-                    "description": "File path or URL to a custom JSON-LD context document. JSON-LD contexts map terms from glossarify-md's export format onto terms of the well-known W3C SKOS vocabulary. If you want to import terms to another application supporting JSON-LD but not SKOS, then you can provide a custom JSON-LD context document with mappings of glossarify-md's terminology onto the one understood by the target application."
-                    ,"type": "string"
                 }
             }
             ,"required": ["file"]
@@ -283,14 +294,14 @@
         ,"glossaryFileImport": {
             "type": "object",
             "properties": {
-                "file": {
+                "context": {
+                    "description": "File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology."
+                    ,"type": "string"
+                }
+                ,"file": {
                     "description": "The file to import terms from. Supported file content types: 'application/json', 'application/ld+json', 'application/n-quads'."
                     ,"type": "string"
                     ,"default": ""
-                }
-                ,"context": {
-                    "description": "File path or URL to a custom JSON-LD context document (application/ld+json) mapping format terminology (attributes, type names) of a JSON data document ('application/json') onto well-known W3C SKOS terminology."
-                    ,"type": "string"
                 }
             }
             ,"if": {
@@ -302,12 +313,10 @@
                 }
             }
             ,"then": {
-                "properties": {
-                    "title": {
-                        "type": "string"
-                        ,"default": "Glossary"
-                    }
-                    ,"dialect": {
+                "title": "CSV Import"
+                ,"type": "object"
+                ,"properties": {
+                    "dialect": {
                         "$ref": "#/$defs/csvDialect"
                         ,"default": {
                             "delimiter": ";"
@@ -316,19 +325,20 @@
                     ,"schema": {
                         "$ref": "#/$defs/csvTableSchema"
                     }
+                    ,"title": {
+                        "type": "string"
+                        ,"default": "Glossary"
+                    }
                 }
             }
             ,"required": ["file"]
+            ,"more": "https://github.com/about-code/glossarify-md/blob/master/doc/import.md"
         }
         ,"indexFile": {
             "type": "object"
             ,"properties": {
                 "file":  {
                     "description": "Path relative to 'outDir' where to create the index markdown file."
-                    ,"type": "string"
-                }
-                ,"title": {
-                    "description": "The page title for the index file. If missing the application uses a default value."
                     ,"type": "string"
                 }
                 ,"glossary": {
@@ -338,6 +348,10 @@
                 ,"hideDeepLinks": {
                     "description": "When this is `false` (default) then term occurrences in sections deeper than `indexing.groupByHeadingDepth` will be represented as short numeric links attached to a parent heading at depth `indexing.groupByHeadingDepth`. With this option being `true` you can disable these \"deep\" section links. Note that index file generation also depends on the kind of headings being indexed *at all* (see `indexing.headingDepths`). Since v6.1.0."
                     ,"type": "boolean"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
+                    ,"type": "string"
                 }
             }
             ,"required": ["file"]
@@ -365,20 +379,20 @@
         ,"listOfItemsFile": {
             "type": "object"
             ,"properties": {
-                "file":  {
-                    "description": "Path relative to 'outDir' where to create the index markdown file."
-                    ,"type": "string"
-                }
-                ,"class": {
+                "class": {
                     "description": "The class is used to compile lists of content elements. Elements with a common class will be compiled into the same list."
                     ,"type": "string"
                 }
-                ,"title": {
-                    "description": "The page title for the index file. If missing the application uses a default value."
+                ,"file":  {
+                    "description": "Path relative to 'outDir' where to create the index markdown file."
                     ,"type": "string"
                 }
                 ,"pattern": {
                     "description": "A regular expression which when matching against text will generate an entry in the given list. The expression may contain a capture group which extracts a list item title. A match will result in an URL-addressable HTML node being added to the output."
+                    ,"type": "string"
+                }
+                ,"title": {
+                    "description": "The page title for the index file. If missing the application uses a default value."
                     ,"type": "string"
                 }
             }
@@ -428,6 +442,55 @@
                     ,"type": "string"
                     ,"format": "url"
                 }
+                ,"byReferenceDefinition": {
+                    "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"headingAsLink": {
+                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"headingDepths": {
+                    "description": "An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*."
+                    ,"type": "array"
+                    ,"items": {
+                        "type": "integer"
+                        ,"minimum": 1
+                        ,"maximum": 6
+                    }
+                }
+                ,"headingIdAlgorithm": {
+                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org )."
+                    ,"enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
+                    ,"since": "6.0.0"
+                }
+                ,"headingIdPandoc": {
+                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id."
+                    ,"type": "boolean"
+                    ,"since": "6.0.0"
+                }
+                ,"limitByAlternatives": {
+                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions for a term. For example, a value of\n `5` makes the system link to _at most 5_ additional definitions per term\n. The value `0` links the term to a single definition but adds zero additional links indicating alternative definitions even if there are any. Since v7.1.0 we recommend not only but especially for value `0` to combine it with 'sortAlternatives'. This increases the likelihood that the one definition being linked is the one appropriate in the context of a term's usage.\n A value of `-1` makes the system stop linking a term once there is at least 1 additional definition (stops linking ambiguous terms, completely)\n `-5` makes the system stop linking a term once there are _at least 5_ additional definitions\n\n. Negative values may also be helpful when using option 'glossaries.file' with a glob pattern where the glob pattern matches many documents that share a common heading template. Then the repetitive use of the template causes ambiguity and leads to many alternative links being rendered. Use this option, for example, to limit their number."
+                    ,"type": "integer"
+                    ,"minimum": "-95"
+                    ,"maximum": "+95"
+                }
+                ,"limitByTermOrigin": {
+                    "description": "This option can be used to deal with ambiguities when there are multiple glossaries with competing definitions for a term. It can restrict the applicable scope of a glossary based on the directory structure and glossary file locations of a book project. For example, `[\"parent\", \"sibling\", \"self\"]` causes a term occurrence being linkified only in documents when the term has been defined in a glossary in a parent directory (\"parent\") or when it has been defined in a glossary next to the document file (\"sibling\") or within the glossary itself (\"self\"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. It can also be a manual approach to improving linkification for ambiguous terms when the fuzzyness of 'linking.sortAlternatives' is impractical.  Defaults to `[]`. An array containing all enum values is equivalent to an empty array. It will make glossarify-md link each glossary term in every document."
+                    ,"type": "array"
+                    ,"items": {
+                        "type": "string",
+                        "enum": ["self", "parent", "sibling", "child", "parent-sibling"]
+                    }
+                    ,"since": "6.1.0"
+                }
+                ,"mentions": {
+                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
+                    ,"type": "string"
+                    ,"enum": ["all", "first-in-paragraph"]
+                }
                 ,"paths": {
                     "description": "Control how paths to linked documents will be constructed. When choosing \"absolute\" you may set a \"baseUrl\" as well. Without a base URL absolute file system paths will be generated."
                     ,"type": "string"
@@ -448,54 +511,69 @@
                     ,"type": "object"
                     ,"since": "6.1.0"
                 }
-                ,"mentions": {
-                    "description": "Control the link density and whether every occurrence of a term in your documents should be linked with its glossary definition or only the first occurrence within a particular range."
-                    ,"type": "string"
-                    ,"enum": ["all", "first-in-paragraph"]
+                ,"sortAlternatives": {
+                    "description": "When there are multiple glossaries a term could have multiple definitions (ambiguity). This option lets you choose from different algorithms for sorting and priortizing glossary definitions. The primary definition will be considered the first definition in the sorted list of definitions. It will be the one used to link the phrase of an ambiguous term occurrence in the text. Other definitions become numerical shortlinks to supplementary definitions ordered according to their priority. Whether supplementary definitions are being rendered at all depends on option 'limitByAlternatives'."
+                    ,"oneOf": [
+                        { "$ref": "#/$defs/linking/properties/sortAlternatives.by.glossary-filename"}
+                        ,{ "$ref": "#/$defs/linking/properties/sortAlternatives.by.glossary-ref-count"}
+                    ]
+                    ,"default": { "by": "glossary-filename" }
+                    ,"since": "7.1.0"
+                    ,"more": "https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md"
+                    ,"examples": [
+                        {
+                            "sortAlternatives": {
+                                "by": "glossary-ref-count"
+                                ,"perSectionDepth": 2
+                            }
+                        }
+                    ]
                 }
-                ,"headingDepths": {
-                    "description": "An array of numerical values each in a range of 1-6 denoting the headings level that should participate in term-based auto linking. Note that indexing the given levels is a prerequisite (see `indexing.headingDepths`). So configuring `indexing.headingDepths: [1]` but `linking.headingDepths:[1,2]` would *not* linkify term headings at depth `2`. Instead with `indexing.headingDepths: [1,2,3]` *would*."
-                    ,"type": "array"
-                    ,"items": {
-                        "type": "integer"
-                        ,"minimum": 1
-                        ,"maximum": 6
+                ,"sortAlternatives.by.glossary-filename": {
+                    "type": "object"
+                    ,"description": "Sorting alternative definitions by glossary file name sorts links to those glossary definitions created for term occurrences by comparing the file names of the glossaries hosting the to-be-linked term definitions. The sort algorithm assumes that there is only a single definition for a term in a single glossary file."
+                    ,"properties": {
+                        "by": {
+                            "type": "string"
+                            ,"const": "glossary-filename"
+                        }
                     }
+                    ,"additionalProperties": false
+                    ,"examples": [
+                        {
+                            "sortAlternatives": {
+                                "by": "glossary-filename"
+                            }
+                        }
+                    ]
                 }
-                ,"headingIdAlgorithm": {
-                    "description": "Algorithm to use for generating heading IDs. The \"github\" algorithm (default) produces easier to read IDs but only guarantees uniqueness per file. Use one of the cryptographic hash functions to have IDs be unique across all output files. Hash functions are likely to be required when concatenating output files with tools like pandoc ( https://pandoc.org )."
-                    ,"enum": ["github", "md5", "md5-7", "sha256", "sha256-7"]
-                    ,"since": "6.0.0"
-                }
-                ,"headingAsLink": {
-                    "description": "Whether to linkify headings. Some Markdown-to-HTML renderers may require this is to be true to generate navigable HTML (e.g. VuePress and GitHub's MD preview). You may be able to use 'false' when other reference mechanisms are in place, such as pandoc-style {#...} header attributes."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
-                }
-                ,"headingIdPandoc": {
-                    "description": "When true appends pandoc-style {#...} heading identifiers where necessary. Note that independent from this setting input files may use pandoc-style heading identifiers for cross-linking by id."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
-                }
-                ,"limitByAlternatives": {
-                    "description": "This option can be used to deal with ambiguities and limit the number of links in case of multiple definitions of a term. For example, a value of \n 5: makes the system link to _at most 5_ alternative definitions per term\n-5: makes the system _stop linking a term_ once there are _at least 5_ alternative definitions\n 0: links the term to a single definition but provides 0 indication of alternative definitions (even if there are any).\nNegative values may also be helpful when using 'glossaries' option with a glob pattern and there are multiple documents that follow a certain heading template such that the same heading appears more than once."
-                    ,"type": "integer"
-                    ,"minimum": "-95"
-                    ,"maximum": "+95"
-                }
-                ,"limitByTermOrigin": {
-                    "description": "Limits linkification based on the filesystem hierarchy of a book project. For example, `[\"parent\", \"sibling\", \"self\"]` causes a term occurrence being linkified only when a term has been defined in a glossary in a parent directory (\"parent\") or when it has been defined in a glossary next to the document file (\"sibling\") or within the glossary itself (\"self\"). The option allows for a hierarchy of glossaries e.g. a top-level glossary for common terms linked throughout a book and glossaries whose terms are being linked within a particular (sub-)directory/section branch, only. It may also provide a means of limiting auto-linking when the `glossaries` option is used with `file` wildcard patterns. Enumerating all elements is equivalent to keeping the array empty. It will make glossarify-md link each glossary term in every document. Defaults to `[]`."
-                    ,"type": "array"
-                    ,"items": {
-                        "type": "string",
-                        "enum": ["self", "parent", "sibling", "child", "parent-sibling"]
+                ,"sortAlternatives.by.glossary-ref-count": {
+                    "type": "object"
+                    ,"description": "Sorting alternative definitions by glossary reference count sorts links to those glossary definitions by comparing the popularity of glossaries hosting the to-be-linked term definitions. It assumes a glossary to be more popular when its terms have occured (referenced, cited) more often in a section. In particular it assumes the most popular glossary in a section to provide the likely most appropriate definition when there competing definitions."
+                    ,"properties": {
+                        "by": {
+                            "type": "string"
+                            ,"const": "glossary-ref-count"
+                        }
+                        ,"perSectionDepth": {
+                            "type": "number"
+                            ,"description": "When there are ambiguous terms in a book one glossary term definition might be more appropriate in a section A while another definition for the same term may be more appropriate in a section B. glossary-ref-count' can prioritize term definitions separately per section by counting term usage individually per sections at level `perSectionDepth` but not for their subsections deeper than `perSectionDepth`."
+                            ,"min": 1
+                            ,"max": 6
+                            ,"default": 2
+                            ,"more": "https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md"
+                        }
                     }
-                    ,"since": "6.1.0"
-                }
-                ,"byReferenceDefinition": {
-                    "description": "When 'true' replaces markdown inline links with numbered references to a link reference definition list at the bottom of a markdown file. See 'Link Reference Definitions' on http://commonmark.org."
-                    ,"type": "boolean"
-                    ,"since": "6.0.0"
+                    ,"additionalProperties": false
+                    ,"examples": [
+                        {
+                            "sortAlternatives": {
+                                "by": "glossary-ref-count"
+                                ,"perSectionDepth": 2
+                            }
+                        }
+                    ]
+                    ,"more": "https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md"
                 }
             }
         }
@@ -505,6 +583,7 @@
                 "rcPath": {
                     "description": "Path to an external *unified* configuration file as documented under https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md. See description of *unified* property why you may want such a configuration."
                     ,"type": "string"
+                    ,"more": "https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins"
                 }
                 ,"plugins": {
                     "description": "Object or array with names of *unified* and *remark* plug-ins and plug-in settings as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md\nNote that this configuration is not to be considered part of glossarify-md's own configuration interface!\nIf you like to keep *unified* configuration separate use 'rcPath' to load a unified configuration from an external file."
@@ -521,21 +600,45 @@
                         "type": "object"
                         , "title": "Unified Plug-in Configuration (Object Syntax)"
                     }]
+                    ,"more": "https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins"
                 }
                 ,"settings": {
                     "description": "Unified _processor_ settings as described in https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md . glossarify-md uses the \"remark\" Markdown processor. To customize Markdown output style you can apply any _formatting options_ documented at https://github.com/syntax-tree/mdast-util-to-markdown#formatting-options which is the module used by 'remark-stringify' to serialize (compile) the Markdown Abstract Syntax Tree that was created from Markdown text input back into Markdown text output."
                     ,"type": "object"
+                    ,"docs": "https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#settings"
                 }
 
             }
             ,"not": {
                 "required": ["plugins", "rcPath"]
             }
+            ,"examples": [
+                {
+                    "rcPath": "./.remarkrc.json"
+                }
+                ,{
+                    "settings": {
+                        "bullet": "*",
+                        "ruleRepetition": 3,
+                        "fences": true
+                    }
+                    ,"plugins": {
+                        "remark-frontmatter": {
+                            "type": "yaml",
+                            "marker": "-"
+                        }
+                    }
+                }
+            ]
         }
         ,"dev": {
             "type": "object"
             ,"properties": {
-                "printInputAst": {
+                "effectiveConfFile": {
+                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults."
+                    ,"type": "string"
+                }
+                ,"printInputAst": {
                     "description": "Print the AST of scanned markdown documents prior to linkification. May be a Regex to only print AST for particular document."
                     ,"type": ["boolean", "string"]
                 }
@@ -544,7 +647,7 @@
                     ,"type": ["boolean", "string"]
                 }
                 ,"reportsFile": {
-                    "description": "File where to write console report output. Enables testing the report output generated  by the 'writer' component."
+                    "description": "File where to write console report output. Enables testing the report output generated by the 'writer' component."
                     ,"type": "string"
                 }
                 ,"reproducablePaths": {
@@ -553,10 +656,6 @@
                 }
                 ,"termsFile": {
                     "description": "File where to write term book to. Enables testing the term extraction results of the 'terminator' component."
-                    ,"type": "string"
-                }
-                ,"effectiveConfFile": {
-                    "description": "File where to write the configuration that is applied effectively after merging config file, cli opts and schema defaults."
                     ,"type": "string"
                 }
             }

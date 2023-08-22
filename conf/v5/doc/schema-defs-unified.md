@@ -1,6 +1,34 @@
+## unified Examples
+
+```json
+{
+  "rcPath": "./.remarkrc.json"
+}
+```
+
+```json
+{
+  "settings": {
+    "bullet": "*",
+    "ruleRepetition": 3,
+    "fences": true
+  },
+  "plugins": {
+    "remark-frontmatter": {
+      "type": "yaml",
+      "marker": "-"
+    }
+  }
+}
+```
+
 # unified Properties
 
-
+| Property              | Type     | Required | Nullable       | Defined by                                                                                                                                                                                    |
+| :-------------------- | :------- | :------- | :------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [rcPath](#rcpath)     | `string` | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-rcpath.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/unified/properties/rcPath")     |
+| [plugins](#plugins)   | Merged   | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-plugins.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/unified/properties/plugins")   |
+| [settings](#settings) | `object` | Optional | cannot be null | [Configuration Schema](schema-defs-unified-properties-settings.md "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json#/$defs/unified/properties/settings") |
 
 ## rcPath
 
@@ -11,6 +39,8 @@ Path to an external *unified* configuration file as documented under <https://gi
 *   is optional
 
 *   Type: `string`
+
+*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ## plugins
 
@@ -23,6 +53,8 @@ If you like to keep *unified* configuration separate use 'rcPath' to load a unif
 *   is optional
 
 *   Type: merged type ([Details](schema-defs-unified-properties-plugins.md))
+
+*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ## settings
 
