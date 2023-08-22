@@ -151,7 +151,7 @@ By counting `perSectionDepth: 1` the algorithm assesses a new distribution and r
 >
 > a good choice for many situations.
 >
-> The default algorithm for priortizing definitions is `"by": "glossary-filename"`. It does not sort, contextually, but assumes priority of definitions from the alphanumeric order of glossary file names. This is a quite arbitrary decision and less helpful when it comes to ambiguities but is easier to reason about for new users.
+> The default algorithm for priortizing definitions is `"by": "glossary-filename"`. It assumes definition priority solely from the alphanumeric order of glossary file names hosting definition. This strategy won't adapt to the writer's contextual use of terminology but therefore is also easier to reason about. For example, it is not expected to update link order in sections which haven't been changed, which is expected, though, when sorting by `glossary-ref-count`.
 
 > **Supplementary Notes**
 >
