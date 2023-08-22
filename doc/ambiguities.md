@@ -10,9 +10,9 @@
 
 [D]: ./glossary-d.md#ambiguous-term "Glossary D"
 
-If you have [multiple glossaries] there could be multiple definitions for the same term in two or more glossaries (polysemy). When glossarify-md finds a term occurrence for which multiple term definitions exist, say four, then it will create links to all four definitions by default using a format *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. This way a reader won't miss different meanings of a term. Technically, you can <x>configure glossarify-md</x> to list **up to `95`** alternative definitions. The **default limit is `10`**, though.
+If you have [multiple glossaries] there could be multiple definitions for the same term in two or more glossaries (polysemy, ambiguity). When glossarify-md finds a [term occurrence][1] for which multiple term definitions exist, say four, then it will create links to all four definitions by default using a format *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. This way a reader won't miss different meanings of a term. Technically, you can <x>configure glossarify-md</x> to list **up to `95`** alternative definitions. The **default limit is `10`**, though.
 
-You have various options to fine tune the handling of ambiguities.
+You have various options to fine tune this behavior and the handling of term ambiguities.
 
 <!--
 There are some questions you may ask yourself when thinking about ambiguities:
@@ -34,7 +34,7 @@ There are some questions you may ask yourself when thinking about ambiguities:
 }
 ```
 
-Produces a result *[Ambiguous Term][A]* linking the term phrase to a single definition, only, but not to alternative definitions. This provides no indication on ambiguity of a term. You might be interested to read below on how to improve automatically [selecting the most appropriate definition][1].
+produces a result *[Ambiguous Term][A]* linking the term phrase to a single definition, only, but not to alternative definitions. This provides no indication on ambiguity of a term. You might be interested to read below on how to improve linking the most appropriate definition, automatically.
 
 ## [Stop linking at a certain degree of ambiguity](#stop-linking-at-a-certain-degree-of-ambiguity)
 
@@ -44,7 +44,7 @@ Produces a result *[Ambiguous Term][A]* linking the term phrase to a single defi
 }
 ```
 
-Stops linking automatically once there are six definitions in total, one definition and five alternative definitions. Since there are only three alternative definitions in our example, this setting produces a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. In contrast
+stops linking automatically once there are five alternative definitions. So it stops linking once there are six definitions in total, one "primary" definition and five alternative definitions. Since there are only four definitions in our example, this setting were to produce a result *[Ambiguous Term][A]<sup>[2)][B],[3)][C],[4)][D]</sup>*. In contrast
 
 ```json
 "linking": {
@@ -52,7 +52,7 @@ Stops linking automatically once there are six definitions in total, one definit
 }
 ```
 
-would permit two alternative definitions, at most, that is three definitions in total. *Ambiguous Term* were not linkified, anymore, since there are three alternative definitions for the term.
+stops linking once there are two alternative definitions. Our example *Ambiguous Term* were not linkified, anymore, since it has three alternative definitions and four definitions in total.
 
 ## [Not linking ambiguous terms, at all](#not-linking-ambiguous-terms-at-all)
 
@@ -62,7 +62,9 @@ would permit two alternative definitions, at most, that is three definitions in 
 }
 ```
 
-Stops linking if there are two definitions in total, one definition and one alternative definition. But you could also exclude a particular term occurrence in a case by case decision by wrapping it in a pseudo HTML tag like `<x>Ambiguous Term</x>`.
+stops linking once there is at least one alternative definition, that is, two definitions in total.
+
+You could also exclude a particular [term occurrence][1] in a case by case decision by wrapping it in a pseudo HTML tag like `<x>Ambiguous Term</x>`.
 
 ## [Selecting the most appropriate definition](#selecting-the-most-appropriate-definition)
 
@@ -70,13 +72,17 @@ You can choose from different tactics to prioritize glossary definitions for amb
 
 1.  Explicitly choosing the link target, see [Identifier-based Cross-Linking][2]
 2.  Limiting the applicable scope of glossaries, see [Tree-Scoped Linking][3] (**since v7.0.0**)
-3.  Choosing from sort algorithms for determining definition priority, algorithmically (**since v7.1.0**):
+3.  Choosing from sort algorithms for determining definition priority (**since v7.1.0**):
 
-The rest of this section documents algorithms for the third option. By sorting term definitions, we determine the primary definition which the term's phrase *Ambiguous Term* refers to but also the order of definitions when referred to by indicators <sup>2),3),4)</sup>. Sorting term definitions, *contextually*, means determining the order more *individually* for term occurrences  such that, ideally, the term occurrence's phrase refers to the definition which is most appropriate and applicable in the context of a particular term occurrence.
+Options 2 and 3 can be combined since option 2 works more like a filtering strategy while option 3 works more like a sort strategy which could be applied to filtered sets, as well. The rest of this section describes option 3.
 
-#### [Sorting by Counting Glossary References](#sorting-by-counting-glossary-references)
+### [Choosing from sort algorithms for determining definition priority](#choosing-from-sort-algorithms-for-determining-definition-priority)
 
-> **Assumption:** When there are more terms of glossary B within the same section S than terms from glossary A, then for an occurrence of an ambiguous term which is defined in glossary A *and* glossary B it is more likely that the *most appropriate*  definition for that occurrence *in the context of section S* is provided by glossary B.
+By sorting term definitions, we determine the primary definition which the term's phrase *Ambiguous Term* refers to but also the order of definitions when referred to by indicators <sup>2),3),4)</sup> and so forth. Sorting term definitions, *contextually* means determining the order more *individually* for [term occurrences][1]  such that, *ideally*, the term occurrence's phrase refers to the definition which is most appropriate and applicable in the context of a particular term occurrence. This ideal is impossible to achieve with 100% accuracy due to the lack of computers fully understanding book content and context. Algorithms provided are meant to increase the accuracy without claiming to be 100% accurate.
+
+#### [Sorting contextually by counting glossary references](#sorting-contextually-by-counting-glossary-references)
+
+> **Premise:** When there are more terms of glossary B within the same section S than terms from glossary A, then for an occurrence of an ambiguous term which is defined in glossary A *and* glossary B it is more likely that the *most appropriate*  definition for that occurrence *in the context of section S* is provided by glossary B.
 
 ```json
 "linking": {
@@ -90,7 +96,7 @@ The rest of this section documents algorithms for the third option. By sorting t
 \n\n Finding a good section depth: As a writer you may want to ask yourself at which heading depth it is more likely for you to change topics in a way that the meaning of ambiguous terms is more likely to change as well. For example, given your book is a single Markdown file then there is probably only one title heading '# Title' at heading depth 1. Given book chapters '## Chapter' at depth 2 cover different topics and use a topic-specific terminology while sections at heading depths 3 and deeper will only add details to the chapter's topic but do not change the overall topic and terminology of chapters. Then 'perSectionDepth: 2' can be a viable choice, because 'perSectionDepth: 1' would result in only a single term definition priority for the whole book. Consequently, an ambiguous term's primary definition would be the same in all chapters ignoring chapter-specific differences in terminology. In contrast, with 'perSectionDepth: 2' the algorithm determines a different term definition priority per chapter based on terminology use in those chapters. With 'perSectionDepth: 3' or deeper precision may or may not increase further. As a book writer when choosing the deeper value boundary you may also want to ask yourself how likely it is to having enough glossary terms at that depth, at all. The likelihood for finding (enough) term occurrences as samples for the term-glossary-distribution decreases with larger depths. With lower values for 'perSectionDepth' deeper sections use the same term-glossary-distribution and term definition priority as their parent sections. That distribution was derived from all of the parent's child sections, so the sampling space is larger. Because term-glossary-distributions at lower depths are always aggregations of more granular term-glossary-distributions from deeper levels for the term definition priority _at level 2_ it will make no difference whether sampling only one term-glossary-distribution 'perSectionDepth: 2' or sampling multiple separate term-glossary-distributions 'perSectionDepth: 3' then aggregating their ref counts. For disambiguation of terms at section level 2 the difference is comparable to a bar chart where 'perSectionDepth: 3' only reveals how much each subsection contributes to the glossary-term-distribution without changing the total distribution, though. At level 2 the higher resolution is meaningless. It is only relevant for disambiguation at section levels of 3 or deeper."
 -->
 
-Counting how often terms of various glossaries occur in a section scope gives us a kind of "popularity" distribution which could look like:
+Counting how often terms of various glossaries occur is a numerical expression for glossary relevance, which could be distributed like in this bar chart:
 
     refCount
         ^
@@ -102,7 +108,7 @@ Counting how often terms of various glossaries occur in a section scope gives us
         +-|---|---|---|---|--> glossary
           | A | B | C | D |
 
-The distribution tells us that some writer has used terms from glossary *B* three times, terms from glossary *C* two times and terms of glossaries *A* and *D* only once. Sorting glossaries "by glossary reference count" yields a *glossary priority*:
+The distribution tells us that the writer has mentioned (whichever) terms defined in glossary *B* three times, terms defined in glossary *C* two times and terms defined in glossaries *A* and *D* only once. Sorting the bars "by glossary reference count" yields:
 
     refCount
         ^
@@ -114,31 +120,81 @@ The distribution tells us that some writer has used terms from glossary *B* thre
         +-|---|---|---|---|--> glossary
           | B | C | A | D |
 
-It shows the order B, C, A, D which is the context-sensitive order derived from a writer's actual use of glossary terminology. When there's an occurrence for an ambiguous term which has a definition in all those glossaries, then *glossary priority* will determine *term definition priority*. In the example, the most appropriate definition is assumed to be provided by glossary B. Its definition will be associated with the term occurrence's term phrase: *[Ambiguous Term][B]<sup>[2)][C],[3)][A],[4)][D]</sup>* (move mouse over the links to get a tooltip with the glossary name).
+It shows the order `B,C,A,D` which is the context-sensitive *glossary priority* derived from a writer's actual use of glossary terminology in the scope that has been analyzed for above distribution. Given within the analyzed scope we find a [term occurrence][1] with a [term definition][4] in glossaries `A,C,D` then above distribution suggests prioritzing definitions by their glossary origin in order `C,A,D`: *[Ambiguous Term][C]<sup>[2)][A],[3)][D]</sup>* (move your mouse over the links to get a tooltip which denotes the priority of term definitions being linked).
 
-> **ⓘ** We recommend sorting term definitions, contextually, when setting `"linking.limitByAlternatives": 0`. Since the latter disables superscript indicators even when there are multiple definitions, there's only one possible link *[Ambiguous Term][B]* to some term definition. Sorting contextually, increases the likelihood for that link to refer to a definition which seems contextually appropriate given your use of terminology.
+> **ⓘ** We recommend sorting term definitions contextually when setting `"linking.limitByAlternatives": 0`. The latter disables superscript indicators even when there are multiple definitions. When there's only one possible link *[Ambiguous Term][B]* to some term definition sorting contextually, increases the likelihood for the generated link to refer to the definition which seems the most appropriate given your use of terminology.
 
 #### [Going Deeper (Optional Reading)](#going-deeper-optional-reading)
 
-```json
-"linking": {
-   "sortAlternatives": {
-      "by": "glossary-ref-count",
-      "perSectionDepth": 1
-   }
-}
-```
+So far we have seen how reference counting works in general to yield a [term definition][4] priority. We could consider the bar charts above to describe a term definition priority for an entire markdown file which were equal to counting references `perSectionDepth: 0`. By telling glossarify-md to count references `perSectionDepth: 1` or deeper we can increase sensitivity regarding section-specfic terminology which results in *different term definition priorities for different sections* (the default is `perSectionDepth: 2`).
 
-By counting `perSectionDepth: 1` the algorithm assesses a new distribution and reference count whenever coming across a new heading at depth 1, like `# Heading 1`. Counting references always *includes* terms in direct *subsections* at deeper levels, e.g. (`## Heading 1.1, ### Heading 1.1.1`, etc.). By counting `perSectionDepth: 2` glossarify-md will assess a separate distribution for each section at level 2, *as well*. The sort order of links *at section level 2 or deeper* may change. Their order will no longer depend on the sorted distribution for their parent section at depth 1 (which was derived from *all* subsections at depth 2) but there will be a distinct distribution per section at depths 2 which determines the sort order for the particular section and their subsections. Going deeper may help dealing better with terminological variance at a given section level.
+**Example (Optional Reading):**
+Let's assume a Markdown document with a *[Table of Contents][5]:*
 
-> **ⓘ Discussion:** What's the "right" value for `perSectionDepth`?
+*   `# Section 1`
+*   `# Section 2`
+    *   `## Section 2.1`
+    *   `## Section 2.2`
+        *   `### Section 2.2.1`
+
+Counting `perSectionDepth: 1` makes glossarify-md create a tree of section-specific reference count distributions like this:
+
+    Heading
+     Depth
+       |                    .:.
+       |                   ::::
+       |                   ::::
+       |                   ABCD
+     0_|                    o
+       |           .       / \       ..::
+       |         .::.     /   \      ::::
+       |         ABCD    /     \     ABCD
+     1_|_#    Section 1 o       o  Section 2
+       |
+       V
+
+Glossary references are no longer summarized at the root, only, but the contribution of distinct distributions at section depths 1 are kept separately. Sorting the distributions for each section by counting the dots suggests that, in this example, term definitions should be prioritized
+
+*   in glossary order `C,B,A,D` in context of Section 1
+*   in glossary order `C,D,A,B` in context of Section 2
+
+With `perSectionDepth: 0`, *Section 1* and *Section 2* had been inheriting priority `C,B,D,A` from sorting the root aggregtion. Going even deeper by counting `perSectionDepth: 2` may then yield a tree
+
+    Heading
+     Depth
+       |                    .:.
+       |                   ::::
+       |                   ::::
+       |                   ABCD
+     0_|                    o
+       |           .       / \       ..::
+       |         .::.     /   \      ::::
+       |         ABCD    /     \     ABCD
+     1_|_#    Section 1 o       o  Section 2
+       |              .        / \         .
+       |           .:.:       /   \      :.:.
+       |           ABCD      /     \     ABCD
+     2_|_##     Section 2.1 o       o  Section 2.2
+       |
+       V
+
+Once again, the tree suggests that term definitions should be prioritized in context of
+
+*   Section 1 in glossary order `C,B,A,D`
+*   Section 2 in glossary order `C,D,A,B`
+*   Section 2.1 (and subsections) in glossary order `D,B,A,C`
+*   Section 2.2 (and subsections) in glossary order `C,A,B,D`
+
+You may note that the priorities for *Section 1* and *Section 2* at section depth 1 have *not* changed. What changed, again, by going deeper is that sections at depths 2 no longer inherit [term definition][4] priority from upper levels (which included reference counts of sibling sections). Instead term definition priority for sections at depth 2 or deeper reflect more specifically the use of terminology in those sections ignoring the use of terminology in sibling sections and their child sections.
+
+> **ⓘ What's the "right" value for `perSectionDepth`?**
 >
 > Short answer: there is none. You may want to ask yourself
 >
 > *   at which section level are you more likely to change terminology in a way that meaning of ambiguous terms, changes as well?
-> *   up to which depth do you mention enough glossary terms to provide enough samples for good results?
+> *   up to which depth do you mention enough glossary terms to provide enough samples for meaningful results?
 >
-> Our reasoning is that upper section levels (e.g. chapters) are more likely to introduce new topics and *different* terminology than sections at deeper levels which only add details to a chapter's topic. Furthermore, deeper levels will be less verbose than upper sections. The less verbose a section the higher the risk of not having enough glossary terms being mentioned and found, at all. Furthermore the less terms being mentioned the higher the weight of those (few?) terms in selecting the "most likely appropriate" definition for ambiguous terms, automatically. Based on this reasoning we consider
+> Our reasoning is that upper section levels (e.g. chapters) are more likely to introduce new topics and *different* terminology than sections at deeper levels which only add details to a chapter's topic. Furthermore, deeper levels will be less verbose than upper sections in total. The less verbose a section the higher the risk of not having enough glossary terms for sampling good term distributions. Furthermore the less terms being mentioned the higher the weight of those (few?) terms that have been mentioned in selecting the "most likely appropriate" definition for ambiguous terms. Based on this reasoning we consider
 >
 > ```json
 > {
@@ -149,17 +205,20 @@ By counting `perSectionDepth: 1` the algorithm assesses a new distribution and r
 > }
 > ```
 >
-> a good choice for many situations.
+> a good choice for many situations. `perSectionDepth: 2` will be the default if none was given.
 >
-> The default algorithm for priortizing definitions is `"by": "glossary-filename"`. It assumes definition priority solely from the alphanumeric order of glossary file names hosting definition. This strategy won't adapt to the writer's contextual use of terminology but therefore is also easier to reason about. For example, it is not expected to update link order in sections which haven't been changed, which is expected, though, when sorting by `glossary-ref-count`.
+> The *default algorithm* for priortizing definitions is `"by": "glossary-filename"`. It assumes definition priority solely from the alphanumeric order of glossary file names hosting definitions. This strategy won't adapt to your use of glossary terms but is less confusing to new users since it requires less knowledge on how text analysis affects linking and link order.
 
-> **Supplementary Notes**
+> **ⓘ Supplementary Notes**
 >
 > *   Keep in mind that sorting by glossary ref. count means linkification is expected to produce different results between subsequent runs of glossarify-md depending on how your use of glossary terms changed between those runs.
-> *   Counting `perSectionDepth: 2` or deeper instead of counting references `perSectionDepth: 1` won't change sort order of links *at section level 1*. Increasing depth only increases "resolution". A higher resolution *might* improve results in sections at the level denoted by `perSectionDepth` and deeper but upper levels remain to be a summary distribution of all the partial distributions of their subsections (think of bar charts where going deeper with `perSectionDepth` only reveals more details on how much each subsection contributes to the total distribution of the parent section without changing the total heights of the bars for the parent section, though. Changes to the distributions itself can only be induced by changing the book contents and term usage that has been analyzed).
 
-[1]: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md#selecting-the-most-appropriate-definition "You can choose from different tactics to prioritize glossary definitions for ambiguous terms: Explicitly choosing the link target, see Identifier-based Cross-Linking Limiting the applicable scope of glossaries, see Tree-Scoped Linking (since v7.0.0) Choosing from sort algorithms for determining definition priority, algorithmically (since v7.1.0): The rest of this section documents algorithms for the third option."
+[1]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term-occurrence "A phrase in a Markdown file A which matches the phrase of a heading in a Markdown file B where B was configured to be a glossary file."
 
 [2]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#identifier-based-cross-linking "When there are two or more term definitions or book sections with the same heading phrase then you might want to refer to a particular term definition or section."
 
 [3]: https://github.com/about-code/glossarify-md/blob/master/doc/cross-linking.md#tree-scoped-linking "Tree Scoped Linking can be used to restrict Term-Based Linking to link targets within particular branches of a file tree and prevent links across branches."
+
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term-definition "A term definition is, technically, the phrase of a heading in a Markdown file which was configured to be a glossary file."
+
+[5]: https://github.com/about-code/glossarify-md/blob/master/README.md

@@ -17,11 +17,19 @@ Terms are headings in a markdown file which has been configured to be a *glossar
 
 Term Attributes are passed in a comment following a term's heading. The comment must adhere to YAML syntax.
 
+## Term Definition
+
+A term definition is, technically, the phrase of a heading in a Markdown file which was configured to be a glossary file. For a term definition to be useful the heading is expected to be followed by a paragraph describing the meaning of the heading's phrase. See also Term Occurrence.
+
 ## Term Hint
 <!-- aliases: term hint, term-hint -->
 
-An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link.
-See glossarify-md configuration options for details.
+An optional (symbol-) character like for example `↴` decorating a term link to distinguish it from a regular link. See glossarify-md configuration options for details.
+
+## Term Occurrence
+<!-- aliases: term occurrence, term occurrences -->
+
+A phrase in a Markdown file A which matches the phrase of a heading in a Markdown file B where B was configured to be a glossary file. As a user of glossarify-md you want the tool to find term occurrences in your Markdown documents and simplify/automate linking them with corresponding term definitions in a glossary.
 
 ## Vocabulary
 <!-- aliases: vocabularies, Formal Ontologies -->

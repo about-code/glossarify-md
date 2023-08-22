@@ -61,7 +61,7 @@ Superficial injury of knee or lower leg
 
 ### [Resolvability](#resolvability)
 
-URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a term's [URI][7] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make glossarify-md link term occurrences with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On imported glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
+URIs can be *just identifiers*. But URIs can also be used to *locate and retrieve* representations of what they identify over a network protocol like HTTPS. For example, a web browser and a term's [URI][7] could be used to retrieve an HTML representation with a human readable definition of a term. A `glossaries` entry with `linkUris: true` will make glossarify-md link [term occurrences][9] with a *book-external* authoritative definition on the web rather than with the book-internal glossary. On imported glossaries `showUris: true` or `showUris: "${uri}"` will render URI links in the markdown glossary generated from imported terms.
 
 ### [Authority](#authority)
 
@@ -100,3 +100,5 @@ urn:uuid:b3c38d70-3887-11ec-a63d-779a5e093fff
 [7]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
 
 [8]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term-attribute "Term Attributes are passed in a comment following a term's heading."
+
+[9]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#term-occurrence "A phrase in a Markdown file A which matches the phrase of a heading in a Markdown file B where B was configured to be a glossary file."
