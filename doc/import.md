@@ -15,7 +15,7 @@ aliases: Import, importing, imports
 
 ***
 
-### [From CSV](#from-csv)
+### [Importing from CSV](#importing-from-csv)
 
 **Since v7.0.0**
 
@@ -69,7 +69,7 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 #123;My Term;Alternative Term;This Term stands for Foo
 ```
 
-### [From JSON (glossarify-md exports)](#from-json-glossarify-md-exports)
+### [Importing from JSON exported by glossarify-md](#importing-from-json-exported-by-glossarify-md)
 
 **Since v6.0.0**
 
@@ -84,7 +84,9 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ```
 
-### [From JSON (arbitrary)](#from-json-arbitrary)
+### [Importing from JSON exported by other software](#importing-from-json-exported-by-other-software)
+
+In contrast to [importing][4] from a JSON file which was exported by glossarify-md itself, importing from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][5] types. Have a look at glossarify-md's own JSON [export][6] format to see how it maps format-specific attribute and type names onto SKOS properties and concepts. See Interoperability with SKOS and [JSON-LD 🌎][7] for an in-depth example.
 
 ```json
 {
@@ -98,16 +100,15 @@ A `schema` mapping can be omitted when the CSV file embeds these as header label
 }
 ```
 
-[Importing][4] from arbitrary data models and JSON serializations is likely to require mappings onto [SKOS 🌎][5] types and attributes. See Interoperability with SKOS and [JSON-LD 🌎][6] for an in-depth example.
-
 ### [From RDF + SKOS](#from-rdf--skos)
 
 **Since v6.0.0**
 
-If you have an [SKOS 🌎][5] description of a glossary or taxonomy stored in some RDF [linked data 🌎][7] store then you might find linked data tooling that is able to [export][8]/convert/serialize your linked data [vocabulary][9] to **N-Triples, N-Quads or [JSON-LD 🌎][6]**.
+Glossary terms can also be imported from RDF serializations when the RDF triples refer to supported [SKOS 🌎][5] concepts and properties. Supported RDF serializations are **N-Triples, N-Quads or [JSON-LD 🌎][7]**.
 
-*   [Importing][4] from [JSON-LD 🌎][6] should work similar to importing glossarify-md's own JSON [exports][8]
 *   [Importing][4] N-Triples/N-Quads requires the file name to end with `.nq`
+*   [Importing][4] from [JSON-LD 🌎][7] requires the file name to end with `.jsonld`
+    *   For an example on how to [import][4] from [JSON-LD 🌎][7] have a look at glossarify-md's own JSON [export][6] format to see how it maps format-specific attribute and type names onto [SKOS 🌎][5] properties and concepts. See also Interoperability with SKOS and JSON-LD for an in-depth example.
 
 *Example: [Import][4] RDF + [SKOS 🌎][5] from an N-Quads serialization:*
 
@@ -132,10 +133,6 @@ If you have an [SKOS 🌎][5] description of a glossary or taxonomy stored in so
 
 [5]: http://w3.org/skos/ "With the Simple Knowledge Organization System (SKOS) the World Wide Web Consortium (W3C) has standardized a (meta-)vocabulary which is suited and intended for modeling Simple Knowledge Organization Systems such as Glossaries, Thesauri, Taxonomies or Word Nets."
 
-[6]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
+[6]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 
-[7]: https://www.w3.org/standards/semanticweb/ontology "See Linked Data."
-
-[8]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
-
-[9]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#vocabulary "A collection of terms which is uniquely identifiable."
+[7]: https://json-ld.org "JSON-LD is a standardized JSON document format for mapping system-specific terms of a JSON-based data format to well-know terms from public vocabularies."
