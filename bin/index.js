@@ -6,13 +6,13 @@ import nodeFs from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
 import proc from "node:process";
-import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
+
 import { upgrade } from "../lib/cli/upgrade.js";
-import * as main from "../lib/main.js";
+import { runViaCli } from "../lib/main.js";
+import { getRunnableConfig, getDefaultConfig } from "../lib/model/config.js";
 import { watch } from "chokidar";
 
 const require_ = createRequire(import.meta.url);
-const confSchema = require_("../conf/v5/schema.json");
 const packageJson = require_("../package.json");
 const version = packageJson.version;
 const CWD = proc.cwd();
@@ -69,6 +69,12 @@ const cli = {
     ,"new": {
         alias: ""
         ,description: "When used with --init generates a file ./docs/glossary.md"
+        ,type: "boolean"
+        ,default: false
+    }
+    ,"noupgrade": {
+        alias: ""
+        ,description: "When used prevents entering an interactive upgrade workflow when upgrade routines are available."
         ,type: "boolean"
         ,default: false
     }
@@ -131,14 +137,7 @@ if (argv.help || proc.argv.length === 2) {
  */
 async function configure(argv, cwd) {
 
-    const confSchemaProps = confSchema.properties;
-    const confDefault = Object
-        .keys(confSchemaProps)
-        .reduce((obj, key) => {
-            // Set up a default config from default values in the config schema.
-            obj[key] = confSchemaProps[key].default;
-            return obj;
-        }, { "$schema": confSchema.$id });
+    const confDefault = getDefaultConfig();
 
     // --config
     let confPath = argv.config || "";
@@ -154,6 +153,7 @@ async function configure(argv, cwd) {
             if (!argv.noupgrade) {
                 confUser = await upgrade(confData, confPath, confDefault);
             }
+            proc.chdir(confDir);
         } catch (e) {
             console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
             proc.exit(1);
@@ -181,48 +181,12 @@ async function configure(argv, cwd) {
         }
     }
 
-    // Merge custom conf with default conf
-    const conf = merge(confDefault, confUser, {
-        clone: false
-        , arrayMerge: (_default, curConf) => {
-            return curConf && curConf.length > 0 ? curConf : _default;
-        }
-    });
-
-    return { confDir, conf };
+    const conf = getRunnableConfig(confUser);
+    return conf;
 }
 
 
 // _/ Helpers \_________________________________________________________________
-function validateConf(conf) {
-
-    if (conf.baseDir === "") {
-        console.log(NO_BASEDIR);
-        console.log("ABORTED.\n");
-        proc.exit(0);
-    }
-
-    if (conf.outDir === "") {
-        console.log(NO_OUTDIR);
-        console.log("ABORTED.\n");
-        proc.exit(0);
-    }
-
-    console.log(`☛ Reading from: ${conf.baseDir}`);
-    console.log(`☛ Writing to:   ${conf.outDir}\n`);
-
-    if (conf.outDir === conf.baseDir) {
-        if (conf.outDirDropOld) {
-            console.log(OUTDIR_IS_BASEDIR_WITH_DROP);
-            console.log("ABORTED.\n");
-            proc.exit(0);
-        } else if (!argv.force) {
-            console.log(OUTDIR_IS_BASEDIR);
-            console.log("ABORTED.\n");
-            proc.exit(0);
-        }
-    }
-}
 
 // --init
 function writeConf(conf, argv) {
@@ -292,7 +256,7 @@ function printHelp(parameters) {
 // _/ Run \_____________________________________________________________________
 async function run() {
 
-    const { confDir, conf } = await configure(argv, CWD);
+    const conf = await configure(argv, CWD);
 
     // --init
     if (argv.init) {
@@ -300,29 +264,25 @@ async function run() {
         proc.exit(0);
     }
 
-    // Resolve baseDir relative to confDir and outDir relative to baseDir
-    conf.baseDir = path.resolve(confDir, conf.baseDir);
-    conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
-    validateConf(conf, argv);
     try {
         // --watch
         if (argv.watch) {
-            await main.run(conf);
+            await runViaCli(conf, argv.force);
             // Do not drop 'outDir' while watching. Dropping it would cause some
             // subsequent 3rd-party watchers on it to break (e.g. vuepress 1.x)
             conf.outDirDropOld = false;
             console.log(`Start watching ${conf.baseDir}...`);
             const watcher = watch(conf.baseDir, { ignoreInitial: true, interval: 200 })
-                .on("add",    path => { console.log(`${path} added.`);   main.run(conf); })
-                .on("change", path => { console.log(`${path} changed.`); main.run(conf); })
-                .on("unlink", path => { console.log(`${path} deleted.`); main.run(conf); });
+                .on("add",    path => { console.log(`${path} added.`);   runViaCli(conf, argv.force); })
+                .on("change", path => { console.log(`${path} changed.`); runViaCli(conf, argv.force); })
+                .on("unlink", path => { console.log(`${path} deleted.`); runViaCli(conf, argv.force); });
             const stopWatching = async () => {
                 await watcher.close();
                 console.log("Stopped watching.");
             };
             process.on("SIGINT", stopWatching);
         } else {
-            await main.run(conf);
+            await runViaCli(conf, argv.force);
         }
     } catch (err) {
         console.error(err);
