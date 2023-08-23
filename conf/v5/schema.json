@@ -558,7 +558,7 @@
                         ,"perSectionDepth": {
                             "type": "number"
                             ,"description": "When there are ambiguous terms in a book one glossary term definition might be more appropriate in a section A while another definition for the same term may be more appropriate in a section B. glossary-ref-count' can prioritize term definitions separately per section by counting term usage individually per sections at level `perSectionDepth` but not for their subsections deeper than `perSectionDepth`."
-                            ,"min": 1
+                            ,"min": 0
                             ,"max": 6
                             ,"default": 2
                             ,"more": "https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md"
