@@ -67,5 +67,6 @@
   "unified": {},
   "dev": {
     "effectiveConfFile": "./glossarify-md-effective.conf.json"
-  }
+  },
+  "srcDir": "{CWD}/input/config-cli/deep-defaults"
 }
