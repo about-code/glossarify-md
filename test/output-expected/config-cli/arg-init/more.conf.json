@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v7.0.0/conf/v5/schema.json",
+  "$schema": "https://raw.githubusercontent.com/about-code/glossarify-md/v7.1.0/conf/v5/schema.json",
   "baseDir": "./docs",
   "excludeFiles": [
     "node_modules",
