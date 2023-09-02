@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [7.1.0](https://github.com/about-code/glossarify-md/compare/v7.0.0...v7.1.0) (2023-08-27)
+
+
+### Features
+
+* New option `linking.sortAlternatives` for sorting and linking the most likely appropriate definition, first, when there are multiple definitions for a term. More see [Multiple Glossaries and Ambiguities](https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md#selecting-the-most-appropriate-definition) ([#269](https://github.com/about-code/glossarify-md/issues/269)) ([74744a3](https://github.com/about-code/glossarify-md/commit/74744a3ede184805a6064e41c2cf6a7a4ab97f9c))
+
+
+### Documentation Updates
+
+* Minor changes to story and examples. ([d3fe139](https://github.com/about-code/glossarify-md/commit/d3fe139b6844cbf8cdbfb6a0e1a427fd46c56e8c))
+
 ## [7.0.0](https://github.com/about-code/glossarify-md/compare/v6.3.3...v7.0.0) (2023-03-26)
 
 
@@ -16,7 +28,7 @@ All notable changes to this project will be documented in this file. See [standa
   - `keepRawFiles`
 
   Notable changes:
-  
+
   - `\` is now only used as an escape character, and never as a path separator in glob patterns, so that **Windows users** have a way to match against filenames containing literal glob pattern characters.
   - **Glob pattern paths must use forward-slashes as path separators**, since `\` is an escape character to match literal glob pattern characters.
   - further changes see [glob/changelog.md](https://github.com/isaacs/node-glob/blob/main/changelog.md)
