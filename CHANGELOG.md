@@ -13,6 +13,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### Documentation Updates
 
 * Minor changes to story and examples. ([d3fe139](https://github.com/about-code/glossarify-md/commit/d3fe139b6844cbf8cdbfb6a0e1a427fd46c56e8c))
+* Incorporate changes to the vuepress2 config api in beta 47. ([6a57fff](https://github.com/about-code/glossarify-md/commit/6a57fffdfe0091b24e97a33e06c06e3c3a1241cd))
 
 ## [7.0.0](https://github.com/about-code/glossarify-md/compare/v6.3.3...v7.0.0) (2023-03-26)
 
@@ -20,7 +21,7 @@ All notable changes to this project will be documented in this file. See [standa
 ### ⚠ BREAKING CHANGES
 
 * End of support for NodeJS 14.x.
-* No longer supporting CommonJS module system, see [using with vuepress 1.x](https://github.com/about-code/glossarify-md/blob/v7.0.0/docuse-with-vuepress.md)
+* No longer supporting CommonJS module system, see [using with vuepress 1.x](https://github.com/about-code/glossarify-md/blob/v7.0.0/doc/use-with-vuepress.md)
 * Bumped `glob` dependency from `v7` to `v9`. **This *might* affect you** when using glob patterns in a glossarify-md config, e.g.:
   - `glossaries` with `[{ "file": "./some/**/glob/**/pattern*.md" }]`
   - `includeFiles`
