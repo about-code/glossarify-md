@@ -5,6 +5,8 @@
 
 [CommonMark]: https://www.commonmark.org
 
+[doc-ambiguity]: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguity.md
+
 [doc-book-index]: https://github.com/about-code/glossarify-md/blob/master/doc/gen-book-index.md
 
 [doc-config]: https://github.com/about-code/glossarify-md/blob/master/conf/README.md
@@ -307,8 +309,17 @@ Superficial injury of knee or lower leg
 ```
 
 With adding *who-icd-codes.md* to the list of glossaries every mention of [⚕NC32](#nc32 "Fracture of forearm") or [⚕NC90](#nc90 "Superficial injury of knee or lower leg") in documents will have a tooltip and link to the glossary definition, too.
+**Since v5.0.0** `file` can also be used with a [glob] file pattern:
 
-> **ⓘ Since v5.0.0** `file` can also be used with a [glob] file pattern. This way each markdown file matching a pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking].
+```json
+"glossaries": [
+    { "file": "./**/*.md" },
+]
+```
+
+This way each markdown file matching the pattern will be processed like a glossary. More see [Cross-Linking][doc-cross-linking] and [Multiple Glossaries and Ambiguity][doc-ambiguity].
+
+> **ⓘ Note:** `termHint` only works for `file` pointing at a particular file name.
 
 ## Sorting Glossaries
 
@@ -337,7 +348,7 @@ The `i18n` object is passed *as is* to the collator function. Thus you can use a
 
 ## [Advanced Topics][doc-extended]
 
-See **[here][doc-extended]**, for example:
+See **[here][doc-extended]**, for advanced topics:
 
 - Importing and exporting terms
 - Generating files, such as a book index, lists of figures, etc.

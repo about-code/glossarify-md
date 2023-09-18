@@ -75,7 +75,22 @@ Installs glossarify-md with a syntax plug-in for *frontmatter* syntax.
 
 ## [Configure vuepress](#configure-vuepress)
 
+> *   vuepress v1
+> *   vuepress v2 (beta 47+)
+
 glossarify-md and [vuepress 🌎][1] need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *[slugs][2]*.
+
+<em>./docs/.vuepress/config.js</em>
+
+```js
+import { getSlugger } from "glossarify-md"
+
+module.exports = {
+    markdown: {
+      slugify: getSlugger()
+    }
+};
+```
 
 > ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent.
 > For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
@@ -83,28 +98,9 @@ glossarify-md and [vuepress 🌎][1] need to be aligned in how they create hyper
 > 1.  Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
 > 2.  As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
 
-### [Configure vuepress 2.x](#configure-vuepress-2x)
+### [Get rid of glossarify-md](#get-rid-of-glossarify-md)
 
-<em>./docs/.vuepress/config.js</em>
-
-```js
-import { getSlugger } from "glossarify-md"
-
-const slugify = {
-  slugify: getSlugger()
-};
-module.exports = {
-    markdown: {               // vuepress v2.x
-      toc: { ...slugify },
-      anchor: { ...slugify },
-      extractHeaders: { ...slugify }
-    }
-};
-```
-
-### [Configure vuepress 1.x](#configure-vuepress-1x)
-
-> ⚠ **We recommend [using vuepress 1.x with glossarify-md <= v6, only][doc-v6]**. Using glossarify-md v7 with vuepress 1.x requires you to install a CommonJS version of [github-slugger v1][github-slugger] for yourself while glossarify-md uses [github-slugger v2][github-slugger]. Slugs should be compatible, because [github-slugger v1 and v2 still implement the same algorithm][github-slugger-diff] but the mere fact that vuepress and glossarify-md no longer physically execute the same code to generate slugs makes it more likely to break in a future when some major release of glossarify-md starts using a potentially incompatbile [github-slugger v3][github-slugger].
+Given you want to get rid of glossarify-md but keep on using [vuepress 🌎][1]. Then you may not want URLs and [URL][3] [slugs][2], to change. To keep them stable while dropping glossarify-md just [import][4] `github-slugger` yourself.
 
     npm i --save github-slugger@^1.5.0
 
@@ -142,10 +138,14 @@ module.exports = {
 *   `npm run glossarified` builds and serves the glossarified version from `outDir`.
 *   `npm run build` just builds the glossarified [vuepress 🌎][1] site without running a server.
 
-More see [README.md][3].
+More see [README.md][5].
 
 [1]: https://vuepress.vuejs.org "A static website generator translating markdown files into a website powered by [vuejs]."
 
 [2]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#slug "A slug is a URL-friendly identifier that can be used within URL fragments to address headings / sections on a page."
 
-[3]: ../README.md
+[3]: https://github.com/about-code/glossarify-md/blob/master/doc/glossary.md#uri--url "Uniform Resource Identifier and Uniform Resource Locator are both the same thing, which is an ID with a syntax scheme://authority.tld/path/#fragment?query like https://my.org/foo/#bar?q=123."
+
+[4]: https://github.com/about-code/glossarify-md/blob/master/doc/import.md#importing-terms "⚠ Important: glossarify-md is able to import terms and definitions from a remote location using https, when configured this way."
+
+[5]: ../README.md

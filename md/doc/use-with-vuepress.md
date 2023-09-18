@@ -70,39 +70,35 @@ Installs glossarify-md with a syntax plug-in for *frontmatter* syntax.
 
 ## Configure vuepress
 
+> - vuepress v1
+> - vuepress v2 (beta 47+)
+
 glossarify-md and vuepress need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *slugs*.
 
-
-> ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent. 
-> For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
-> 
-> 1. Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
-> 2. As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
-
-
-### Configure vuepress 2.x
 
 <em>./docs/.vuepress/config.js</em>
 
 ~~~js
 import { getSlugger } from "glossarify-md"
 
-const slugify = {
-  slugify: getSlugger()
-};
 module.exports = {
-    markdown: {               // vuepress v2.x
-      toc: { ...slugify },
-      anchor: { ...slugify },
-      extractHeaders: { ...slugify }
+    markdown: {
+      slugify: getSlugger()
     }
 };
 ~~~
 
 
-### Configure vuepress 1.x
+> ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent.
+> For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
+>
+> 1. Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
+> 2. As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
 
-> ⚠ **We recommend [using vuepress 1.x with glossarify-md <= v6, only][doc-v6]**. Using glossarify-md v7 with vuepress 1.x requires you to install a CommonJS version of [github-slugger v1][github-slugger] for yourself while glossarify-md uses [github-slugger v2][github-slugger]. Slugs should be compatible, because [github-slugger v1 and v2 still implement the same algorithm][github-slugger-diff] but the mere fact that vuepress and glossarify-md no longer physically execute the same code to generate slugs makes it more likely to break in a future when some major release of glossarify-md starts using a potentially incompatbile [github-slugger v3][github-slugger].  
+
+### Get rid of glossarify-md
+
+Given you want to get rid of glossarify-md but keep on using vuepress. Then you may not want URLs and URL slugs, to change. To keep them stable while dropping glossarify-md just import `github-slugger` yourself.
 
 ~~~
 npm i --save github-slugger@^1.5.0
