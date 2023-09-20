@@ -265,7 +265,7 @@ In the output files aliases will be linked to their related term:
 ```md
 # About Cats
 
-[Cats](./glossary.md#cat) and kitten almost hidden spotting mouses in their houses. [Andreas Martin]
+[Cats](./glossary.md#cat) and kitten almost hidden spotting mice of any size. [Andreas Martin]
 ```
 
 > **ⓘ Note:** [YAML] syntax is *case-sensitive* as well as *sensitive to tabs and whitespaces*. In general term attributes will be lowercase.
