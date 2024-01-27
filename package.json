@@ -7,7 +7,7 @@
   },
   "license": "MIT",
   "exports": {
-    "import": "./lib/main.js"
+    "import": "./lib/api.js"
   },
   "type": "module",
   "engines": {
