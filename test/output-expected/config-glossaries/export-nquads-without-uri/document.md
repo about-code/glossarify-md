@@ -2,30 +2,30 @@
 
 GIVEN
 
-*   a configuration
+* a configuration
 
-    ```json
-    {
-      "glossaries": [{
-        "file": "./glossary.md",
-        "export": {
-          "file": "./glossary.nq"
-        }
-      }]
-    }
-    ```
+  ```json
+  {
+    "glossaries": [{
+      "file": "./glossary.md",
+      "export": {
+        "file": "./glossary.nq"
+      }
+    }]
+  }
+  ```
 
-*   AND [jsonld][1] npm package being installed
+* AND [jsonld][1] npm package being installed
 
-*   AND a glossary `glossary.md`
+* AND a glossary `glossary.md`
 
-*   AND NO glossary `uri`
+* AND NO glossary `uri`
 
-*   AND `glossary.md` to be exported to a file `glossary.nq` using `export`
+* AND `glossary.md` to be exported to a file `glossary.nq` using `export`
 
 THEN
 
-*   glossarify-md MUST NOT write data to a file `glossary.nq`
-*   AND glossarify-md MUST print a console message informing about the missing URI.
+* glossarify-md MUST NOT write data to a file `glossary.nq`
+* AND glossarify-md MUST print a console message informing about the missing URI.
 
 [1]: https://npmjs.com/package/jsonld

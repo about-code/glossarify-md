@@ -1,24 +1,24 @@
 # [Document B](#document-b)
 
-*   GIVEN a configuration
+* GIVEN a configuration
 
-    ```json
-    "glossaries": [
-      { "file": "./documents/**/document-*.md" },
-      { "file": "./glossaries/glossary-a.md", "termHint": "🄰 ${term}" },
-      { "file": "./glossaries/glossary-b.md", "termHint": "🄱 ${term}" }
-    ]
-    ```
+  ```json
+  "glossaries": [
+    { "file": "./documents/**/document-*.md" },
+    { "file": "./glossaries/glossary-a.md", "termHint": "🄰 ${term}" },
+    { "file": "./glossaries/glossary-b.md", "termHint": "🄱 ${term}" }
+  ]
+  ```
 
-*   AND a set x of glossaries found by glob pattern
+* AND a set x of glossaries found by glob pattern
 
-*   AND a set y of glossaries listed explicitly
+* AND a set y of glossaries listed explicitly
 
-*   AND both sets x and y being disjunct
+* AND both sets x and y being disjunct
 
-*   THEN term *[🄱 Beta][1]* from Glossary B MUST be linked
+* THEN term *[🄱 Beta][1]* from Glossary B MUST be linked
 
-*   AND term *[Heading A][2]* from Document A MUST be linked
+* AND term *[Heading A][2]* from Document A MUST be linked
 
 ## [Heading B](#heading-b)
 

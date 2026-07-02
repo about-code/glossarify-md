@@ -1,15 +1,15 @@
 GIVEN
 
-*   a configuration...
-    ```json
-    {
-      "glossaries": [{
-        "file": "./glossary-*.md"
-      }]
-    }
-    ```
-*   AND a term <em>Shared All</em> ambiguously defined in all glossaries
-*   AND a distinct term per glossary
+* a configuration...
+  ```json
+  {
+    "glossaries": [{
+      "file": "./glossary-*.md"
+    }]
+  }
+  ```
+* AND a term <em>Shared All</em> ambiguously defined in all glossaries
+* AND a distinct term per glossary
 
 THEN...
 
@@ -17,14 +17,14 @@ THEN...
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 1 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 1 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 
 ## [Chapter 1 (Depth 2)](#chapter-1-depth-2)
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only A][4]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only A][4]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 
@@ -32,8 +32,8 @@ MUST generate links to glossary definitions in order ABC which is the order by g
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only B][5]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only B][5]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary fi
 
@@ -41,8 +41,8 @@ MUST generate links to glossary definitions in order ABC which is the order by g
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only C][6]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only C][6]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 
@@ -50,8 +50,8 @@ MUST generate links to glossary definitions in order ABC which is the order by g
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only B][5]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only B][5]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 
@@ -59,8 +59,8 @@ MUST generate links to glossary definitions in order ABC which is the order by g
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only B][5]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only B][5]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 
@@ -68,8 +68,8 @@ MUST generate links to glossary definitions in order ABC which is the order by g
 
 ...
 
-*   mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
-*   mentioning distinct term [Only C][6]
+* mentioning ambiguous term [Shared All][1][<sup>2)</sup>][2][<sup> 3)</sup>][3] at section depth 2
+* mentioning distinct term [Only C][6]
 
 MUST generate links to glossary definitions in order ABC which is the order by glossary filename.
 

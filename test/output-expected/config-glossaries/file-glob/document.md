@@ -1,24 +1,24 @@
 # [Testing file globs](#testing-file-globs)
 
-*   GIVEN a configuration
+* GIVEN a configuration
 
-    ```json
-    glossaries: [{
-        "file": "./**/document.md"
-        ,"termHint": "~"
-    }]
-    ```
+  ```json
+  glossaries: [{
+      "file": "./**/document.md"
+      ,"termHint": "~"
+  }]
+  ```
 
-*   WITH a **glob pattern**
+* WITH a **glob pattern**
 
-*   AND WITH a **termHint**
+* AND WITH a **termHint**
 
-*   AND multiple documents matching the glob pattern
+* AND multiple documents matching the glob pattern
 
-*   THEN
+* THEN
 
-    *   all terms and headings in those documents MUST be treated like terms
-    *   AND `termHint` *CAN* be ignored if it is too costly to find out whether a file is being processed as a glossary file due to this particular glob pattern
+  * all terms and headings in those documents MUST be treated like terms
+  * AND `termHint` *CAN* be ignored if it is too costly to find out whether a file is being processed as a glossary file due to this particular glob pattern
 
 ## [Root](#root)
 

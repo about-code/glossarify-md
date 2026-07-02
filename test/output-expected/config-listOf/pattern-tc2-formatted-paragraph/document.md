@@ -23,9 +23,9 @@ GIVEN above configuration
 AND this mdAst *text* node: "Test Case: 2"
 THEN the system MUST prepend an HTML element WITH attributes
 
-*   `id` whose value is a Slug limited to 20 characters in length
-*   AND `title` whose value is the value of the text node
-*   AND `class` whose value is `tc1`
+* `id` whose value is a Slug limited to 20 characters in length
+* AND `title` whose value is the value of the text node
+* AND `class` whose value is `tc1`
 
 ## [Test Case 2](#test-case-2)
 

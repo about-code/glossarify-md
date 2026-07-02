@@ -5,9 +5,9 @@ AND a term `PandocId` with an explicit heading id {#pandoc-id}
 AND a configuration `linking.headingIdAlgorithm: "md5"`
 THEN
 
-*   the term *[HashId][1]* MUST be linkified AND MUST use an MD5 url fragment
-*   the term *[PandocId][2]* MUST be linkified AND MUST use the #pandoc-id fragment
-*   a link *[arbitrary][2]* MUST be linked to the definition of *[PandocId][2]*
+* the term *[HashId][1]* MUST be linkified AND MUST use an MD5 url fragment
+* the term *[PandocId][2]* MUST be linkified AND MUST use the #pandoc-id fragment
+* a link *[arbitrary][2]* MUST be linked to the definition of *[PandocId][2]*
 
 [1]: ./glossary.md#md5-de0b62fa03c4c0dcffcc53b3d6d330be "A term which expects an id hash to be generated."
 

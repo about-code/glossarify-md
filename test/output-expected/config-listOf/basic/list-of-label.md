@@ -1,14 +1,14 @@
 # [Test Suite: List of 'label'](#test-suite-list-of-label)
 
-1.  [./document-infer-label.md][1]
-2.  [Test Case B: Label from 'id'][2]
-3.  [Test Case C: 'innerText'][3]
-4.  [Test Case D: 'title'][4]
-5.  [Test Case E: 'title'][5]
-6.  [Test Case F: Partly formatted innerText][6]
-7.  [Test Case G: Fully formatted innerText][7]
-8.  [Test Case H: Cite HTML element][8]
-9.  [Test Case I: Figure HTML element][9]
+1. [./document-infer-label.md][1]
+2. [Test Case B: Label from 'id'][2]
+3. [Test Case C: 'innerText'][3]
+4. [Test Case D: 'title'][4]
+5. [Test Case E: 'title'][5]
+6. [Test Case F: Partly formatted innerText][6]
+7. [Test Case G: Fully formatted innerText][7]
+8. [Test Case H: Cite HTML element][8]
+9. [Test Case I: Figure HTML element][9]
 10. [Test Case J: Span HTML element][10]
 
 [1]: ./document-infer-label.md "./document-infer-label.md"
