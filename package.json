@@ -82,7 +82,10 @@
   },
   "devDependencies": {
     "@adobe/jsonschema2md": "^8.0.11",
-    "eslint": "8.48",
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.6.0",
+    "globals": "^17.7.0",
     "npm-run-all": "^4.1.5",
     "remark-cli": "^12.0.1",
     "remark-comment-config": "^8.0.0",
