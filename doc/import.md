@@ -54,10 +54,10 @@ Without a header row embedded into the CSV data a `schema` mapping is required t
 }]
 ```
 
-*   Use `@id` for the ID column
-*   Use [http://www.w3.org/2004/02/skos/core#prefLabel][1] for the term column
-*   Use [http://www.w3.org/2004/02/skos/core#altLabel][2] for one or more alternative term columns (aliases)
-*   Use [http://www.w3.org/2004/02/skos/core#definition][3] for the [term definition][4] column
+* Use `@id` for the ID column
+* Use [http://www.w3.org/2004/02/skos/core#prefLabel][1] for the term column
+* Use [http://www.w3.org/2004/02/skos/core#altLabel][2] for one or more alternative term columns (aliases)
+* Use [http://www.w3.org/2004/02/skos/core#definition][3] for the [term definition][4] column
 
 A `schema` mapping can be omitted when the CSV file embeds these as header labels in the first row:
 
@@ -106,9 +106,9 @@ In contrast to [importing][5] from a JSON file which was exported by glossarify-
 
 Glossary terms can also be imported from RDF serializations when the RDF triples refer to supported [SKOS 🌎][6] concepts and properties. Supported RDF serializations are **N-Triples, N-Quads or [JSON-LD 🌎][8]**.
 
-*   [Importing][5] N-Triples/N-Quads requires the file name to end with `.nq`
-*   [Importing][5] from [JSON-LD 🌎][8] requires the file name to end with `.jsonld`
-    *   For an example on how to [import][5] from [JSON-LD 🌎][8] have a look at glossarify-md's own JSON [export][7] format to see how it maps format-specific attribute and type names onto [SKOS 🌎][6] properties and concepts. See also Interoperability with SKOS and JSON-LD for an in-depth example.
+* [Importing][5] N-Triples/N-Quads requires the file name to end with `.nq`
+* [Importing][5] from [JSON-LD 🌎][8] requires the file name to end with `.jsonld`
+  * For an example on how to [import][5] from [JSON-LD 🌎][8] have a look at glossarify-md's own JSON [export][7] format to see how it maps format-specific attribute and type names onto [SKOS 🌎][6] properties and concepts. See also Interoperability with SKOS and JSON-LD for an in-depth example.
 
 *Example: [Import][5] RDF + [SKOS 🌎][6] from an N-Quads serialization:*
 

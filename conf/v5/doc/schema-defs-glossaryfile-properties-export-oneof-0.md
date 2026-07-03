@@ -11,9 +11,9 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 
 `context`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## file
 
@@ -21,6 +21,14 @@ A JSON file name to write exported terms to. Recommended file extension is '.jso
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
+
+### file Default Value
+
+The default value is:
+
+```json
+""
+```

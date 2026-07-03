@@ -20,9 +20,9 @@
 
 `by`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### by Constraints
 

@@ -13,9 +13,9 @@ Path relative to 'outDir' where to create the index markdown file.
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 ## glossary
 
@@ -23,9 +23,9 @@ When you configured multiple glossaries, then this option can be used to generat
 
 `glossary`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## hideDeepLinks
 
@@ -33,9 +33,9 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 
 `hideDeepLinks`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ## title
 
@@ -43,6 +43,6 @@ The page title for the index file. If missing the application uses a default val
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`

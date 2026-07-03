@@ -38,7 +38,7 @@ After running glossarify-md there will be a file:
 
 > ## [List of Videos](#list-of-videos)
 >
-> *   [Tutorial Part 1][2]
+> * [Tutorial Part 1][2]
 
 You can **type less** when prefixing ids with your list classifier:
 
@@ -189,9 +189,9 @@ The result for the tables above will be:
 
 > ## [List of Tables](#list-of-tables-1)
 >
-> *   [Table of average prices by article category][13]
-> *   [Average prices by category][14]
-> *   [Average Prices by Article Category][15]
+> * [Table of average prices by article category][13]
+> * [Average prices by category][14]
+> * [Average Prices by Article Category][15]
 
 **Since v5.0.0** and the introduction of [`listOf`][4] all the previous examples will make glossarify-md annotate the table with an HTML anchor. While not recommended due to verbosity, you could also just add an HTML anchor yourself, of course, applying what was described in [`listOf`][4] above:
 
@@ -207,9 +207,9 @@ The result for the tables above will be:
 
 > **ⓘ Note:** If glossarify-md can't find a list item label by any of the above means it will fall back to rendering a list item
 >
-> 1.  using the table headers separated by comma,
-> 2.  or if no headers, using the closest section heading
-> 3.  or if no section heading, using the file name.
+> 1. using the table headers separated by comma,
+> 2. or if no headers, using the closest section heading
+> 3. or if no section heading, using the file name.
 
 <!--
 1. **HTML anchor** see `listOf`

@@ -13,9 +13,9 @@ The class is used to compile lists of content elements. Elements with a common c
 
 `class`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## file
 
@@ -23,9 +23,9 @@ Path relative to 'outDir' where to create the index markdown file.
 
 `file`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## pattern
 
@@ -33,9 +33,9 @@ A regular expression which when matching against text will generate an entry in 
 
 `pattern`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## title
 
@@ -43,6 +43,6 @@ The page title for the index file. If missing the application uses a default val
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`

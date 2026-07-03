@@ -10,9 +10,9 @@
 
 `file`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### file Constraints
 

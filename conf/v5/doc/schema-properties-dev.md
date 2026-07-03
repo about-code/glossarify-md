@@ -23,9 +23,9 @@ File where to write the configuration that is applied effectively after merging 
 
 `effectiveConfFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## printInputAst
 
@@ -33,9 +33,9 @@ Print the AST of scanned markdown documents prior to linkification. May be a Reg
 
 `printInputAst`
 
-*   is optional
+* is optional
 
-*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
+* Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
 
 ## printOutputAst
 
@@ -43,9 +43,9 @@ Print the AST of scanned markdown documents after linkification. May be a Regex 
 
 `printOutputAst`
 
-*   is optional
+* is optional
 
-*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
+* Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
 
 ## reportsFile
 
@@ -53,9 +53,9 @@ File where to write console report output. Enables testing the report output gen
 
 `reportsFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## reproducablePaths
 
@@ -63,9 +63,9 @@ Write system-independent paths into 'termsFile' to produce reproducable output a
 
 `reproducablePaths`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ## termsFile
 
@@ -73,6 +73,6 @@ File where to write term book to. Enables testing the term extraction results of
 
 `termsFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`

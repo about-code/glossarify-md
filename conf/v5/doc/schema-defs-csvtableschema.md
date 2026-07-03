@@ -10,9 +10,9 @@
 
 `fields`
 
-*   is required
+* is required
 
-*   Type: `object[]` ([Details](schema-defs-csvtableschemafield.md))
+* Type: `object[]` ([Details](schema-defs-csvtableschemafield.md))
 
 ### fields Constraints
 

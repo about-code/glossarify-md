@@ -12,17 +12,21 @@ The following example demonstrates how to [install][1] [remark-frontmatter 🌎]
 
 We'll assume the following project structure:
 
-    ${root}
-       +- docs/                        (baseDir)
-       +- docs-glossarified/           (outDir)
-       +- node_modules/
-       |- glossarify-md.conf.json
-       |- package.json
-       '- .gitignore
+```
+${root}
+   +- docs/                        (baseDir)
+   +- docs-glossarified/           (outDir)
+   +- node_modules/
+   |- glossarify-md.conf.json
+   |- package.json
+   '- .gitignore
+```
 
 **1:** [Install][1] [remark-frontmatter 🌎][2]:
 
-    npm install remark-frontmatter
+```
+npm install remark-frontmatter
+```
 
 **2:** In your `glossarify-md.conf.json` add:
 
@@ -41,8 +45,8 @@ We'll assume the following project structure:
 
 Keys of the `plugins` object tell what plug-in to load and may be:
 
-*   a name of an [npm 🌎][6] package in a global or local `node_modules` folder
-*   a path to a JavaScript file [exporting][7] a plug-in function (see page [Writing a Plug-in][8])
+* a name of an [npm 🌎][6] package in a global or local `node_modules` folder
+* a path to a JavaScript file [exporting][7] a plug-in function (see page [Writing a Plug-in][8])
 
 Their value in turn are options passed to the plug-in. Read [remark-frontmatter 🌎][2] docs, to find out about available options.
 

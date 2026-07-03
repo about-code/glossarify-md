@@ -12,9 +12,9 @@ A character sequence to use as the field separator.
 
 `delimiter`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 ### delimiter Default Value
 
@@ -30,9 +30,9 @@ A one-character string for surrounding field values in CSV data (no matter wheth
 
 `quoteChar`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### quoteChar Default Value
 
@@ -48,9 +48,9 @@ Specifies a one-character string to use as an escape character within a field va
 
 `escapeChar`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### escapeChar Default Value
 

@@ -44,11 +44,11 @@ Path to an external *unified* configuration file as documented under <https://gi
 
 `rcPath`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
+* more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ## plugins
 
@@ -58,11 +58,11 @@ If you like to keep *unified* configuration separate use 'rcPath' to load a unif
 
 `plugins`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-unified-properties-plugins.md))
+* Type: merged type ([Details](schema-defs-unified-properties-plugins.md))
 
-*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
+* more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ## settings
 
@@ -70,6 +70,6 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 
 `settings`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-unified-properties-settings.md))
+* Type: `object` ([Details](schema-defs-unified-properties-settings.md))

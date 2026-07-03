@@ -8,9 +8,11 @@ glossarify-md supports [CommonMark 🌎][1] and [GitHub Flavoured Markdown 🌎]
 
 *Frontmatter Syntax*
 
-    ---
-    key: This is a frontmatter
-    ---
+```
+---
+key: This is a frontmatter
+---
+```
 
 Without special support for it [CommonMark 🌎][1] compliant parsers like our [remark 🌎][4] parser will interpret the line of trailing dashes as *heading* markers and the text before them as *heading text*. So to make our parser aware of frontmatter syntax we need to enhance it.
 

@@ -8,8 +8,8 @@ Consider a term *skin*. In anatomy it's a term for a human organ while in comput
 
 *A computer programme* can't understand a natural language description of a term's meaning. What it is good at is comparing and distingushing *symbols*. With unique IDs like
 
-*   `https://example.com/glossary/anatomy/#skin`
-*   `https://example.com/glossary/computer-science/#skin`.
+* `https://example.com/glossary/anatomy/#skin`
+* `https://example.com/glossary/computer-science/#skin`.
 
 a computer can operate on symbols equivalent to *some meaning* without having to know the exact meaning to a human. Such IDs can then be used, for example, to establish relationships between semantic concepts (like `xID not-equal yID`). Semantic modeling goes beyond glossaries. Assigning glossary terms unique IDs, though, enables using them in other technical implementations of knowledge organization systems such as thesauri, taxonomies or word nets.
 
@@ -33,8 +33,8 @@ a computer can operate on symbols equivalent to *some meaning* without having to
 
 If you need more control about a term's [URI][7] then there are two switches you can tweak:
 
-*   providing a custom heading ID using pandoc-style `{#headingId}`
-*   providing a `uri` [term attribute][8]
+* providing a custom heading ID using pandoc-style `{#headingId}`
+* providing a `uri` [term attribute][8]
 
 *Custom heading ID*
 

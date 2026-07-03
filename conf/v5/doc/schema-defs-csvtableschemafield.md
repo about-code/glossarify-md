@@ -10,9 +10,9 @@ A name for this field.
 
 `name`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### name Default Value
 

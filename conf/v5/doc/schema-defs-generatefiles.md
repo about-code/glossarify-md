@@ -14,9 +14,9 @@ Generate a file with a list of glossary terms and where they have been used.
 
 `indexFile`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-indexfile.md))
+* Type: `object` ([Details](schema-defs-indexfile.md))
 
 ## indexFiles
 
@@ -24,9 +24,9 @@ Similar to 'indexFile' but allows you to split terms from multiple glossaries in
 
 `indexFiles`
 
-*   is optional
+* is optional
 
-*   Type: `object[]` ([Details](schema-defs-indexfile.md))
+* Type: `object[]` ([Details](schema-defs-indexfile.md))
 
 ## listOf
 
@@ -34,9 +34,9 @@ Generate an arbitrary list of links into your documents. For example, to generat
 
 `listOf`
 
-*   is optional
+* is optional
 
-*   Type: `object[]` ([Details](schema-defs-listofitemsfile.md))
+* Type: `object[]` ([Details](schema-defs-listofitemsfile.md))
 
 ## listOfFigures
 
@@ -44,9 +44,9 @@ Generate a file with a list of figures and where they can be found.
 
 `listOfFigures`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-listofitemsfile.md))
+* Type: `object` ([Details](schema-defs-listofitemsfile.md))
 
 ## listOfTables
 
@@ -54,6 +54,6 @@ Generate a file with a list of tables and where they can be found.
 
 `listOfTables`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-listofitemsfile.md))
+* Type: `object` ([Details](schema-defs-listofitemsfile.md))

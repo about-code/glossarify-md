@@ -17,11 +17,11 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 `export`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
+* Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ## file
 
@@ -29,9 +29,9 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 ## import
 
@@ -39,13 +39,13 @@ Import a JSON glossary (see 'export'). Generates a glossary markdown file from i
 
 `import`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-glossaryfileimport.md))
+* Type: `object` ([Details](schema-defs-glossaryfileimport.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/import.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/import.md
 
 ## linkUris
 
@@ -53,11 +53,11 @@ Set this to true to hyperlink occurrences of a term to an 'authoritative' web gl
 
 `linkUris`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ## sort
 
@@ -65,9 +65,9 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 
 `sort`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### sort Constraints
 
@@ -84,11 +84,11 @@ Whether to render a term's URI in the glossary (currently for imported glossarie
 
 `showUris`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
+* Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### showUris Examples
 
@@ -110,9 +110,9 @@ A symbol to append to a link to denote that the term refers to a glossary term.
 
 `termHint`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## uri
 
@@ -120,11 +120,11 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 
 `uri`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### uri Constraints
 

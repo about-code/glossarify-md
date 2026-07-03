@@ -10,7 +10,9 @@ Get a complete list of available command line arguments.
 
 ## [`--config [file]`](#--config-file)
 
-    npx glossarify-md --config ./glossarify-md.conf.json
+```
+npx glossarify-md --config ./glossarify-md.conf.json
+```
 
 > **Tipp:** If you have installed glossarify-md locally to a project folder with a `package.json` then you can define an `npm run` script in the `scripts` section of your `package.json`:
 >
@@ -26,8 +28,10 @@ Get a complete list of available command line arguments.
 >
 > Next time you can run glossarify-md by just typing line 1. Pass arguments after a `--` separator (line 2).
 >
->     1 | npm run glossarify
->     2 | npm run glossarify -- --help
+> ```
+> 1 | npm run glossarify
+> 2 | npm run glossarify -- --help
+> ```
 
 ## [Configuration Overrides](#configuration-overrides)
 
@@ -35,26 +39,32 @@ Get a complete list of available command line arguments.
 
 Use Cases
 
-1.  Provide a [configuration][1] solely via command line
-2.  Merge a [configuration][1] with a config file
+1. Provide a [configuration][1] solely via command line
+2. Merge a [configuration][1] with a config file
 
 **Example:** use `--shallow` to *replace* simple top-level options:
 
-    glossarify-md
-      --config ./glossarify-md.conf.json
-      --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'baseDir':'./docs', 'outDir':'../target' }"
+```
 
 **Example:** use `--shallow` to *replace* nested object-like options like `glossaries`:
 
-    glossarify-md
-      --config ./glossarify-md.conf.json
-      --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --shallow "{ 'glossaries': [{'file':'./replace.md'}] }"
+```
 
 **Example:** use `--deep` to *extend* nested object-like options e.g. to add another array item to `glossaries` in the config file:
 
-    glossarify-md
-      --config ./glossarify-md.conf.json
-      --deep "{'glossaries': [{'file':'./extend.md'}] }"
+```
+glossarify-md
+  --config ./glossarify-md.conf.json
+  --deep "{'glossaries': [{'file':'./extend.md'}] }"
+```
 
 ## [`--watch`](#--watch)
 

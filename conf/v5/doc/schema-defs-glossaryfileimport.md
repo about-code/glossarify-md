@@ -11,9 +11,9 @@ File path or URL to a custom JSON-LD context document (application/ld+json) mapp
 
 `context`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## file
 
@@ -21,6 +21,14 @@ The file to import terms from. Supported file content types: 'application/json',
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
+
+### file Default Value
+
+The default value is:
+
+```json
+""
+```

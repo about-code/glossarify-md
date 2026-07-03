@@ -22,27 +22,31 @@ Read [Ambiguities][1], first, to a get a bit more context on what this aims to a
 
 By counting how often terms of various glossaries occur we get a distribution like, for example:
 
-    refCount
-        ^
-        |
-      3_|       _
-      2_|      | |  _
-      1_|   _  | | | |  _
-      0_|  |1| |3| |2| |1|
-        +-|---|---|---|---|--> glossary
-          | A | B | C | D |
+```
+refCount
+    ^
+    |
+  3_|       _
+  2_|      | |  _
+  1_|   _  | | | |  _
+  0_|  |1| |3| |2| |1|
+    +-|---|---|---|---|--> glossary
+      | A | B | C | D |
+```
 
 The distribution tells us that the writer has mentioned (whatever) terms defined in glossary `B` *three times*, terms defined in glossary `C` *two times* and terms defined in glossaries `A` or `D` *once*, each. Sorting the bars by glossary reference count (descending) yields a glossary priority:
 
-    refCount
-        ^
-        |
-      3_|   _
-      2_|  | |  _
-      1_|  | | | |  _   _
-      0_|  |3| |2| |1| |1|
-        +-|---|---|---|---|--> glossary
-          | B | C | A | D |
+```
+refCount
+    ^
+    |
+  3_|   _
+  2_|  | |  _
+  1_|  | | | |  _   _
+  0_|  |3| |2| |1| |1|
+    +-|---|---|---|---|--> glossary
+      | B | C | A | D |
+```
 
 The order `B,C,A,D` is a *context-sensitive glossary priority derived from a writer's actual use of glossary terminology*. Once we find a [term occurrence][2] *Ambiguous Term* with definitions in glossaries, e.g. `A,B,C` then above distribution suggests linking term definitions in glossary order `B,C,A` producing a linkified result *[Ambiguous Term][B]<sup>[2)][C],[3)][A]</sup>* (move your mouse over the links to get a hint on the link target).
 
@@ -61,69 +65,73 @@ The order `B,C,A,D` is a *context-sensitive glossary priority derived from a wri
 
 Let's assume a Markdown document with a *[Table of Contents][3]:*
 
-*   `# Section 1`
-*   `# Section 2`
-*   `## Section 2.1`
-*   `## Section 2.2`
-*   `### Section 2.2.1`
+* `# Section 1`
+* `# Section 2`
+* `## Section 2.1`
+* `## Section 2.2`
+* `### Section 2.2.1`
 
 By sorting definitions `perSectionDepth: 0` the system counts and aggregates a single distribution per markdown file. Counting and sorting `perSectionDepth: 1` increases sensitivity towards *section-specfic* use of terminology and makes glossarify-md aggregate distinct distributions for sections at a heading level `# Heading 1` which add up to the total count for the file:
 
 *Each dot denotes an occurrence of some term from glossary A, B, C or D in the section:*
 
-    Heading
-     Depth                   .
-       |                   . : .
-       |                 : : : :
-       |                 : : : :
-       |                 A,B,C,D
-       |                  Total
-     0_|                    o          .
-       |         .         / \     . . : :
-       |       . : : .    /   \    : : : :
-       |       A,B,C,D   /     \   A,B,C,D
-     1_|_#    Section 1 o       o Section 2
-       |
-       V
+```
+Heading
+ Depth                   .
+   |                   . : .
+   |                 : : : :
+   |                 : : : :
+   |                 A,B,C,D
+   |                  Total
+ 0_|                    o          .
+   |         .         / \     . . : :
+   |       . : : .    /   \    : : : :
+   |       A,B,C,D   /     \   A,B,C,D
+ 1_|_#    Section 1 o       o Section 2
+   |
+   V
+```
 
 The new setting changes [term definition][4] priorities to
 
-*   `B,C,A,D` in context of Section 1
-*   `C,D,A,B` in context of Section 2
+* `B,C,A,D` in context of Section 1
+* `C,D,A,B` in context of Section 2
 
 Subsections *Section 2.1, Section 2.2* and *Section 2.2.1* inherit [term definition][4] priority `C,D,A,B` from their parent section *Section 2*. You may notice that the total count hasn't changed. Upper nodes summarize their child nodes.
 
 The **default** sensitivity when sorting by `glossary-ref-count` is sorting `perSectionDepth: 2`. Omitting `perSectionDepth` would be equal to `perSectionDepth: 2` and in our example it may revealead distributions:
 
-    Heading
-     Depth                   .
-       |                   . : .
-       |                 : : : :
-       |                 : : : :
-       |                 A,B,C,D
-       |                  Total
-     0_|                    o          .
-       |         .         / \     . . : :
-       |       . : : .    /   \    : : : :
-       |       A,B,C,D   /     \   A,B,C,D
-     1_|_#    Section 1 o       o Section 2
-       |                       / \
-       |               .      /   \           :
-       |         . : . :     /     \      : . : .
-       |         A,B,C,D    /       \     A,B,C,D
-     2_|_##    Section 2.1 o         o  Section 2.2
-       |
-       V
+```
+Heading
+ Depth                   .
+   |                   . : .
+   |                 : : : :
+   |                 : : : :
+   |                 A,B,C,D
+   |                  Total
+ 0_|                    o          .
+   |         .         / \     . . : :
+   |       . : : .    /   \    : : : :
+   |       A,B,C,D   /     \   A,B,C,D
+ 1_|_#    Section 1 o       o Section 2
+   |                       / \
+   |               .      /   \           :
+   |         . : . :     /     \      : . : .
+   |         A,B,C,D    /       \     A,B,C,D
+ 2_|_##    Section 2.1 o         o  Section 2.2
+   |
+   V
+```
 
 The new tree continues to suggest a glossary priority
 
-*   `B,C,A,D` in context of Section 1
-*   `C,D,A,B` in context of Section 2
+* `B,C,A,D` in context of Section 1
+* `C,D,A,B` in context of Section 2
 
 but now suggests different [term definition][4] priorities
 
-*   `D,B,A,C` in context of Section 2.1 and deeper
-*   `C,A,B,D` in context of Section 2.2 and deeper.
+* `D,B,A,C` in context of Section 2.1 and deeper
+* `C,A,B,D` in context of Section 2.2 and deeper.
 
 *Section 2.2.1* now inherits a priority `C,A,B,D` from its parent section *Section 2.2*.
 
@@ -131,8 +139,8 @@ but now suggests different [term definition][4] priorities
 >
 > Short story: there's none. You may want to ask yourself two questions for a good *tradeoff*:
 >
-> 1.  At which section level do you think your use of glossary terminology changes in a way that terms with a meaning in section A may could have a different meaning in section B?
-> 2.  Are your sections verbose enough at the given section depth and do they mention enough glossary terms (on average) to help selecting the most appropriate definition for an ambiguous term occurrence?
+> 1. At which section level do you think your use of glossary terminology changes in a way that terms with a meaning in section A may could have a different meaning in section B?
+> 2. Are your sections verbose enough at the given section depth and do they mention enough glossary terms (on average) to help selecting the most appropriate definition for an ambiguous term occurrence?
 >
 > The default is `perSectionDepth: 2`. See details for our own answers which drove that decision.
 >

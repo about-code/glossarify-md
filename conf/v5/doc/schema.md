@@ -25,9 +25,9 @@ Path to directory where to search for the glossary file and markdown files. All 
 
 `baseDir`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### baseDir Default Value
 
@@ -43,9 +43,9 @@ An array of files or file name patterns that should not be included in any proce
 
 `excludeFiles`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
 ### excludeFiles Default Value
 
@@ -64,9 +64,17 @@ Choose true, only if you know the consequences.
 
 `force`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
+
+### force Default Value
+
+The default value is:
+
+```json
+false
+```
 
 ## generateFiles
 
@@ -74,9 +82,9 @@ File generation options.
 
 `generateFiles`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-generatefiles.md))
+* Type: `object` ([Details](schema-properties-generatefiles.md))
 
 ### generateFiles Default Value
 
@@ -94,9 +102,9 @@ An array of glossaries. Allows for different kinds of glossaries and definitions
 
 `glossaries`
 
-*   is optional
+* is optional
 
-*   Type: `object[]` ([Details](schema-properties-glossaries-items.md))
+* Type: `object[]` ([Details](schema-properties-glossaries-items.md))
 
 ### glossaries Default Value
 
@@ -117,9 +125,17 @@ Find and link every occurrence of a term no matter how it is spelled.
 
 `ignoreCase`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
+
+### ignoreCase Default Value
+
+The default value is:
+
+```json
+false
+```
 
 ## includeFiles
 
@@ -127,9 +143,9 @@ Path or glob patterns of files to include for linking to glossaries.
 
 `includeFiles`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
 ### includeFiles Default Value
 
@@ -147,9 +163,9 @@ Options configuring the indexer.
 
 `indexing`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-indexing.md))
+* Type: `object` ([Details](schema-properties-indexing.md))
 
 ### indexing Default Value
 
@@ -175,9 +191,9 @@ i18n and collation options. See <https://developer.mozilla.org/en-US/docs/Web/Ja
 
 `i18n`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-i18n.md))
+* Type: `object` ([Details](schema-properties-i18n.md))
 
 ### i18n Default Value
 
@@ -195,9 +211,9 @@ Glob patterns for (markdown) files to copy from 'baseDir' to 'outDir' but to ign
 
 `keepRawFiles`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
 ### keepRawFiles Default Value
 
@@ -213,9 +229,9 @@ Options to control linkification behavior.
 
 `linking`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-linking.md))
+* Type: `object` ([Details](schema-properties-linking.md))
 
 ### linking Default Value
 
@@ -257,9 +273,9 @@ Path to directory where to write processed files to.
 
 `outDir`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### outDir Default Value
 
@@ -275,9 +291,9 @@ If true, remove old 'outDir' before creating a new one. Otherwise just overwrite
 
 `outDirDropOld`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ### outDirDropOld Default Value
 
@@ -293,9 +309,17 @@ Report on terms which exist in a glossary but have neither been mentioned direct
 
 `reportNotMentioned`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
+
+### reportNotMentioned Default Value
+
+The default value is:
+
+```json
+false
+```
 
 ## unified
 
@@ -306,9 +330,9 @@ If you like to keep *unified* configuration separate use e.g. '{ "unified": { "r
 
 `unified`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-unified.md))
+* Type: `object` ([Details](schema-properties-unified.md))
 
 ### unified Default Value
 
@@ -348,9 +372,9 @@ The default value is:
 
 `dev`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-properties-dev.md))
+* Type: `object` ([Details](schema-properties-dev.md))
 
 ### dev Default Value
 
@@ -382,9 +406,9 @@ A character sequence to use as the field separator.
 
 `delimiter`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 #### delimiter Default Value
 
@@ -400,9 +424,9 @@ A one-character string for surrounding field values in CSV data (no matter wheth
 
 `quoteChar`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### quoteChar Default Value
 
@@ -418,9 +442,9 @@ Specifies a one-character string to use as an escape character within a field va
 
 `escapeChar`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### escapeChar Default Value
 
@@ -448,9 +472,9 @@ Reference this group by using
 
 `fields`
 
-*   is required
+* is required
 
-*   Type: `object[]` ([Details](schema-defs-csvtableschema-properties-fields-items.md))
+* Type: `object[]` ([Details](schema-defs-csvtableschema-properties-fields-items.md))
 
 #### fields Constraints
 
@@ -474,9 +498,9 @@ A name for this field.
 
 `name`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### name Default Value
 
@@ -519,9 +543,9 @@ Generate a file with a list of glossary terms and where they have been used.
 
 `indexFile`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-generatefiles-properties-indexfile.md))
+* Type: `object` ([Details](schema-defs-generatefiles-properties-indexfile.md))
 
 ### indexFiles
 
@@ -529,9 +553,9 @@ Similar to 'indexFile' but allows you to split terms from multiple glossaries in
 
 `indexFiles`
 
-*   is optional
+* is optional
 
-*   Type: `object[]` ([Details](schema-defs-generatefiles-properties-indexfiles-items.md))
+* Type: `object[]` ([Details](schema-defs-generatefiles-properties-indexfiles-items.md))
 
 ### listOf
 
@@ -539,9 +563,9 @@ Generate an arbitrary list of links into your documents. For example, to generat
 
 `listOf`
 
-*   is optional
+* is optional
 
-*   Type: `object[]` ([Details](schema-defs-generatefiles-properties-listof-items.md))
+* Type: `object[]` ([Details](schema-defs-generatefiles-properties-listof-items.md))
 
 ### listOfFigures
 
@@ -549,9 +573,9 @@ Generate a file with a list of figures and where they can be found.
 
 `listOfFigures`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-generatefiles-properties-listoffigures.md))
+* Type: `object` ([Details](schema-defs-generatefiles-properties-listoffigures.md))
 
 ### listOfTables
 
@@ -559,9 +583,9 @@ Generate a file with a list of tables and where they can be found.
 
 `listOfTables`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
+* Type: `object` ([Details](schema-defs-generatefiles-properties-listoftables.md))
 
 ## Definitions group glossaryFile
 
@@ -588,11 +612,11 @@ Export terms from the markdown file as a JSON glossary. Output will contain JSON
 
 `export`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
+* Type: merged type ([Details](schema-defs-glossaryfile-properties-export.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### file
 
@@ -600,9 +624,9 @@ Name of the glossary file. Conventional default is *glossary.md*. You can use a 
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 ### import
 
@@ -610,13 +634,13 @@ Import a JSON glossary (see 'export'). Generates a glossary markdown file from i
 
 `import`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-glossaryfile-properties-import.md))
+* Type: `object` ([Details](schema-defs-glossaryfile-properties-import.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/import.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/import.md
 
 ### linkUris
 
@@ -624,11 +648,11 @@ Set this to true to hyperlink occurrences of a term to an 'authoritative' web gl
 
 `linkUris`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### sort
 
@@ -636,9 +660,9 @@ If present, sort terms in output glossary. Default: None. See also i18n options.
 
 `sort`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### sort Constraints
 
@@ -655,11 +679,11 @@ Whether to render a term's URI in the glossary (currently for imported glossarie
 
 `showUris`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
+* Type: merged type ([Details](schema-defs-glossaryfile-properties-showuris.md))
 
-*   since: 6.0.0
+* since: 6.0.0
 
 #### showUris Examples
 
@@ -681,9 +705,9 @@ A symbol to append to a link to denote that the term refers to a glossary term.
 
 `termHint`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### uri
 
@@ -691,11 +715,11 @@ A namespace or vocabulary identifier used as a prefix to construct URIs for glos
 
 `uri`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 #### uri Constraints
 
@@ -720,9 +744,9 @@ File path or URL to a custom JSON-LD context document. JSON-LD contexts map term
 
 `context`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### file
 
@@ -730,9 +754,17 @@ A JSON file name to write exported terms to. Recommended file extension is '.jso
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
+
+#### file Default Value
+
+The default value is:
+
+```json
+""
+```
 
 ## Definitions group glossaryFileImport
 
@@ -753,9 +785,9 @@ File path or URL to a custom JSON-LD context document (application/ld+json) mapp
 
 `context`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### file
 
@@ -763,9 +795,17 @@ The file to import terms from. Supported file content types: 'application/json',
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
+
+#### file Default Value
+
+The default value is:
+
+```json
+""
+```
 
 ## Definitions group indexFile
 
@@ -788,9 +828,9 @@ Path relative to 'outDir' where to create the index markdown file.
 
 `file`
 
-*   is required
+* is required
 
-*   Type: `string`
+* Type: `string`
 
 ### glossary
 
@@ -798,9 +838,9 @@ When you configured multiple glossaries, then this option can be used to generat
 
 `glossary`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### hideDeepLinks
 
@@ -808,9 +848,9 @@ When this is `false` (default) then term occurrences in sections deeper than `in
 
 `hideDeepLinks`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ### title
 
@@ -818,9 +858,9 @@ The page title for the index file. If missing the application uses a default val
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## Definitions group indexing
 
@@ -841,9 +881,9 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 `groupByHeadingDepth`
 
-*   is optional
+* is optional
 
-*   Type: `integer`
+* Type: `integer`
 
 #### groupByHeadingDepth Constraints
 
@@ -857,9 +897,9 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 
 `headingDepths`
 
-*   is optional
+* is optional
 
-*   Type: `integer[]`
+* Type: `integer[]`
 
 ## Definitions group listOfItemsFile
 
@@ -882,9 +922,9 @@ The class is used to compile lists of content elements. Elements with a common c
 
 `class`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### file
 
@@ -892,9 +932,9 @@ Path relative to 'outDir' where to create the index markdown file.
 
 `file`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### pattern
 
@@ -902,9 +942,9 @@ A regular expression which when matching against text will generate an entry in 
 
 `pattern`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### title
 
@@ -912,9 +952,9 @@ The page title for the index file. If missing the application uses a default val
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## Definitions group i18n
 
@@ -940,9 +980,9 @@ Whether upper case or lower case should sort first. Default: 'false' (Use locale
 
 `caseFirst`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### caseFirst Constraints
 
@@ -960,9 +1000,9 @@ Whether punctuation should be ignored. Default: false. See <https://developer.mo
 
 `ignorePunctuation`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ### locale
 
@@ -970,9 +1010,9 @@ The locale to use for operations such as sorting. See <https://developer.mozilla
 
 `locale`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### localeMatcher
 
@@ -980,9 +1020,9 @@ The locale matching algorithm to use. Default: 'best fit'. See <https://develope
 
 `localeMatcher`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### localeMatcher Constraints
 
@@ -999,9 +1039,9 @@ Whether to use numeric collation. Default: false. See <https://developer.mozilla
 
 `numeric`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ### sensitivity
 
@@ -1009,9 +1049,9 @@ Which differences in the strings should lead to non-zero result values. Default:
 
 `sensitivity`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### sensitivity Constraints
 
@@ -1030,9 +1070,9 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 
 `usage`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### usage Constraints
 
@@ -1075,9 +1115,9 @@ The base URL to use for (web-)linking. Use `paths: "absolute"` to (cross-)link t
 
 `baseUrl`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### baseUrl Constraints
 
@@ -1089,11 +1129,11 @@ When 'true' replaces markdown inline links with numbered references to a link re
 
 `byReferenceDefinition`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### headingAsLink
 
@@ -1101,11 +1141,11 @@ Whether to linkify headings. Some Markdown-to-HTML renderers may require this is
 
 `headingAsLink`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### headingDepths
 
@@ -1113,9 +1153,9 @@ An array of numerical values each in a range of 1-6 denoting the headings level 
 
 `headingDepths`
 
-*   is optional
+* is optional
 
-*   Type: `integer[]`
+* Type: `integer[]`
 
 ### headingIdAlgorithm
 
@@ -1123,11 +1163,11 @@ Algorithm to use for generating heading IDs. The "github" algorithm (default) pr
 
 `headingIdAlgorithm`
 
-*   is optional
+* is optional
 
-*   Type: unknown
+* Type: unknown
 
-*   since: 6.0.0
+* since: 6.0.0
 
 #### headingIdAlgorithm Constraints
 
@@ -1147,11 +1187,11 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 `headingIdPandoc`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### limitByAlternatives
 
@@ -1165,9 +1205,9 @@ A value of `-1` makes the system stop linking a term once there is at least 1 ad
 
 `limitByAlternatives`
 
-*   is optional
+* is optional
 
-*   Type: `integer`
+* Type: `integer`
 
 ### limitByTermOrigin
 
@@ -1175,11 +1215,11 @@ This option can be used to deal with ambiguities when there are multiple glossar
 
 `limitByTermOrigin`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   since: 6.1.0
+* since: 6.1.0
 
 ### mentions
 
@@ -1187,9 +1227,9 @@ Control the link density and whether every occurrence of a term in your document
 
 `mentions`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### mentions Constraints
 
@@ -1206,9 +1246,9 @@ Control how paths to linked documents will be constructed. When choosing "absolu
 
 `paths`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 #### paths Constraints
 
@@ -1226,11 +1266,11 @@ Adjust which path components should make it into auto-generated links. glossarif
 
 `pathComponents`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 #### pathComponents Constraints
 
@@ -1242,11 +1282,11 @@ KEY-VALUE map where VALUE is a single search string or an array of strings or re
 
 `pathRewrites`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
+* Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
 
-*   since: 6.1.0
+* since: 6.1.0
 
 ### sortAlternatives
 
@@ -1254,13 +1294,13 @@ When there are multiple glossaries a term could have multiple definitions (ambig
 
 `sortAlternatives`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-linking-properties-sortalternatives.md))
+* Type: merged type ([Details](schema-defs-linking-properties-sortalternatives.md))
 
-*   since: 7.1.0
+* since: 7.1.0
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 #### sortAlternatives Default Value
 
@@ -1289,9 +1329,9 @@ Sorting alternative definitions by glossary file name sorts links to those gloss
 
 `sortAlternatives.by.glossary-filename`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-filename.md))
+* Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-filename.md))
 
 #### sortAlternatives.by.glossary-filename Examples
 
@@ -1309,11 +1349,11 @@ Sorting alternative definitions by glossary reference count sorts links to those
 
 `sortAlternatives.by.glossary-ref-count`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md))
+* Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md))
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 #### sortAlternatives.by.glossary-ref-count Examples
 
@@ -1346,11 +1386,11 @@ Path to an external *unified* configuration file as documented under <https://gi
 
 `rcPath`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
-*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
+* more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ### plugins
 
@@ -1360,11 +1400,11 @@ If you like to keep *unified* configuration separate use 'rcPath' to load a unif
 
 `plugins`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-unified-properties-plugins.md))
+* Type: merged type ([Details](schema-defs-unified-properties-plugins.md))
 
-*   more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
+* more: https://github.com/unifiedjs/unified-engine/blob/main/doc/configure.md#plugins
 
 ### settings
 
@@ -1372,9 +1412,9 @@ Unified *processor* settings as described in <https://github.com/unifiedjs/unifi
 
 `settings`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-unified-properties-settings.md))
+* Type: `object` ([Details](schema-defs-unified-properties-settings.md))
 
 ## Definitions group dev
 
@@ -1399,9 +1439,9 @@ File where to write the configuration that is applied effectively after merging 
 
 `effectiveConfFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### printInputAst
 
@@ -1409,9 +1449,9 @@ Print the AST of scanned markdown documents prior to linkification. May be a Reg
 
 `printInputAst`
 
-*   is optional
+* is optional
 
-*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
+* Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printinputast.md))
 
 ### printOutputAst
 
@@ -1419,9 +1459,9 @@ Print the AST of scanned markdown documents after linkification. May be a Regex 
 
 `printOutputAst`
 
-*   is optional
+* is optional
 
-*   Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
+* Type: any of the following: `boolean` or `string` ([Details](schema-defs-dev-properties-printoutputast.md))
 
 ### reportsFile
 
@@ -1429,9 +1469,9 @@ File where to write console report output. Enables testing the report output gen
 
 `reportsFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### reproducablePaths
 
@@ -1439,9 +1479,9 @@ Write system-independent paths into 'termsFile' to produce reproducable output a
 
 `reproducablePaths`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ### termsFile
 
@@ -1449,6 +1489,6 @@ File where to write term book to. Enables testing the term extraction results of
 
 `termsFile`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`

@@ -69,7 +69,9 @@ glossarify-md will resolve the actual path to the corresponding section heading 
 
 *./pages/page2.md*
 
-    [any phrase](../page1.md#s-241)
+```
+[any phrase](../page1.md#s-241)
+```
 
 ## [Tree-Scoped Linking](#tree-scoped-linking)
 
@@ -79,19 +81,21 @@ Tree Scoped Linking can be used to restrict Term-Based Linking to link targets w
 
 *Project directory layout:*
 
-    ${ROOT}
-       |-context-1/
-       |   |-context-1-1/
-       |   |   |-document.md
-       |   |   '-glossary.md
-       |   |-context-1-2/
-       |   |   |-document.md
-       |   |   '-glossary.md
-       |   '-glossary.md
-       |
-       |-context-2/
-       |- ...
-       '-glossary.md
+```
+${ROOT}
+   |-context-1/
+   |   |-context-1-1/
+   |   |   |-document.md
+   |   |   '-glossary.md
+   |   |-context-1-2/
+   |   |   |-document.md
+   |   |   '-glossary.md
+   |   '-glossary.md
+   |
+   |-context-2/
+   |- ...
+   '-glossary.md
+```
 
 *[Configuration][4]*
 
@@ -114,16 +118,16 @@ A term's *origin* is the glossary section where the term was defined. A link is 
 
 ...linkifies [term occurrences][9] when the term origin is found
 
-*   in the same file (`"self"`),
-*   a sibling file within the same directory (`"sibling"`)
-*   or a file in a direct parent directory (`"parent"`; bottom up linking)
+* in the same file (`"self"`),
+* a sibling file within the same directory (`"sibling"`)
+* or a file in a direct parent directory (`"parent"`; bottom up linking)
 
 Given above example, the config then
 
-*   *does* link [term occurrences][9] with term definitions in the same file
-*   *does* link [term occurrences][9] in `context-1-1` with terms defined in `context-1` or context root `/`
-*   *does not* link [term occurrences][9] in context root `/` or `context-1` with terms defined in `context-1-1`
-*   *does not* link [term occurrences][9] in `context-1-1` with terms defined in `context-1-2` or `context-2`
+* *does* link [term occurrences][9] with term definitions in the same file
+* *does* link [term occurrences][9] in `context-1-1` with terms defined in `context-1` or context root `/`
+* *does not* link [term occurrences][9] in context root `/` or `context-1` with terms defined in `context-1-1`
+* *does not* link [term occurrences][9] in `context-1-1` with terms defined in `context-1-2` or `context-2`
 
 ```json
 "limitByTermOrigin": ["children", "sibling", "self"]
