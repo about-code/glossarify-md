@@ -1,6 +1,24 @@
 # Changelog
 
+[remark]: https://github.com/remarkjs/remark/tags
+
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [8.0.0](https://github.com/about-code/glossarify-md/compare/v7.1.0...v8.0.0) (2026-07-03)
+
+This is mostly a maintenance update which implies changes from upgrading software dependencies.
+
+### ⚠ BREAKING CHANGES
+
+- End of support for NodeJS `16.x`, `18.x`, `20.x`
+- Upgrading to latest major versions of [remark], the internal Markdown parser and serializer.
+  - Configuration
+    - Part of its configuration surface has changed. It is not officially part of glossarify-md and not officially supported. Nevertheless, if you have customized output options, please check error messages whether they provide hints of misconfiguration. Then please compare glossarify-md v7 vs. v8 `package.json` to see the major version changes on our side and have a look at breaking changes between those versions in the [remark changelog][remark].
+    - We have observed changes in `remark-stringify` setting `listItemIndent` which no longer accepts arbitrary integer values but only one of `one`, `tab` or `mixed`.
+  - Markdown Output
+    - bullet point syntax now defaults to `*`.
+    - list indentation changed and is closer to CommonMark syntax specfication
+
 
 ## [7.1.0](https://github.com/about-code/glossarify-md/compare/v7.0.0...v7.1.0) (2023-08-27)
 
