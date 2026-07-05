@@ -94,8 +94,8 @@
     "standard-version": "^9.3.2"
   },
   "optionalDependencies": {
-    "csv-parse": "^5.6.0",
-    "inquirer": "^9.3.8",
+    "csv-parse": "^7.0.1",
+    "inquirer": "^14.0.2",
     "jsonld": "^9.0.0"
   },
   "remarkConfig": {
