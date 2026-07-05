@@ -1,14 +1,14 @@
 # [Test Suite: List of 'figure'](#test-suite-list-of-figure)
 
-1.  [image-title1][1]
-2.  [My figure21][2]
-3.  [My figure22][3]
-4.  [My figure31][4]
-5.  [My figure32][5]
-6.  [My other figure][6]
-7.  [image-title33][7]
-8.  [image-title4][8]
-9.  [image-title4][9]
+1. [image-title1][1]
+2. [My figure21][2]
+3. [My figure22][3]
+4. [My figure31][4]
+5. [My figure32][5]
+6. [My other figure][6]
+7. [image-title33][7]
+8. [image-title4][8]
+9. [image-title4][9]
 
 [1]: ./document-anchors-image.md#image-title1 "image-title1"
 

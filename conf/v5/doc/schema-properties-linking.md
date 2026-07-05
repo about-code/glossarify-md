@@ -58,9 +58,9 @@ The base URL to use for (web-)linking. Use `paths: "absolute"` to (cross-)link t
 
 `baseUrl`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### baseUrl Constraints
 
@@ -72,11 +72,11 @@ When 'true' replaces markdown inline links with numbered references to a link re
 
 `byReferenceDefinition`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ## headingAsLink
 
@@ -84,11 +84,11 @@ Whether to linkify headings. Some Markdown-to-HTML renderers may require this is
 
 `headingAsLink`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ## headingDepths
 
@@ -96,9 +96,9 @@ An array of numerical values each in a range of 1-6 denoting the headings level 
 
 `headingDepths`
 
-*   is optional
+* is optional
 
-*   Type: `integer[]`
+* Type: `integer[]`
 
 ## headingIdAlgorithm
 
@@ -106,11 +106,11 @@ Algorithm to use for generating heading IDs. The "github" algorithm (default) pr
 
 `headingIdAlgorithm`
 
-*   is optional
+* is optional
 
-*   Type: unknown
+* Type: unknown
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### headingIdAlgorithm Constraints
 
@@ -130,11 +130,11 @@ When true appends pandoc-style {#...} heading identifiers where necessary. Note 
 
 `headingIdPandoc`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ## limitByAlternatives
 
@@ -148,9 +148,9 @@ A value of `-1` makes the system stop linking a term once there is at least 1 ad
 
 `limitByAlternatives`
 
-*   is optional
+* is optional
 
-*   Type: `integer`
+* Type: `integer`
 
 ## limitByTermOrigin
 
@@ -158,11 +158,11 @@ This option can be used to deal with ambiguities when there are multiple glossar
 
 `limitByTermOrigin`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   since: 6.1.0
+* since: 6.1.0
 
 ## mentions
 
@@ -170,9 +170,9 @@ Control the link density and whether every occurrence of a term in your document
 
 `mentions`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### mentions Constraints
 
@@ -189,9 +189,9 @@ Control how paths to linked documents will be constructed. When choosing "absolu
 
 `paths`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### paths Constraints
 
@@ -209,11 +209,11 @@ Adjust which path components should make it into auto-generated links. glossarif
 
 `pathComponents`
 
-*   is optional
+* is optional
 
-*   Type: `string[]`
+* Type: `string[]`
 
-*   since: 6.0.0
+* since: 6.0.0
 
 ### pathComponents Constraints
 
@@ -225,11 +225,11 @@ KEY-VALUE map where VALUE is a single search string or an array of strings or re
 
 `pathRewrites`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
+* Type: `object` ([Details](schema-defs-linking-properties-pathrewrites.md))
 
-*   since: 6.1.0
+* since: 6.1.0
 
 ## sortAlternatives
 
@@ -237,13 +237,13 @@ When there are multiple glossaries a term could have multiple definitions (ambig
 
 `sortAlternatives`
 
-*   is optional
+* is optional
 
-*   Type: merged type ([Details](schema-defs-linking-properties-sortalternatives.md))
+* Type: merged type ([Details](schema-defs-linking-properties-sortalternatives.md))
 
-*   since: 7.1.0
+* since: 7.1.0
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 ### sortAlternatives Default Value
 
@@ -272,9 +272,9 @@ Sorting alternative definitions by glossary file name sorts links to those gloss
 
 `sortAlternatives.by.glossary-filename`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-filename.md))
+* Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-filename.md))
 
 ### sortAlternatives.by.glossary-filename Examples
 
@@ -292,11 +292,11 @@ Sorting alternative definitions by glossary reference count sorts links to those
 
 `sortAlternatives.by.glossary-ref-count`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md))
+* Type: `object` ([Details](schema-defs-linking-properties-sortalternativesbyglossary-ref-count.md))
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 ### sortAlternatives.by.glossary-ref-count Examples
 

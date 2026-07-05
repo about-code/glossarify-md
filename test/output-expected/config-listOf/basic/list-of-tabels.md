@@ -1,14 +1,14 @@
 # [Test Suite: List of 'table'](#test-suite-list-of-table)
 
-1.  [Table Comment in Paragraph][1]
-2.  [Table Comment][2]
-3.  [My id][3]
-4.  [My other table][4]
-5.  [Test4\_Column1, Test4\_Column2][5]
-6.  [Test5\_Column1, Test5\_Column2][6]
-7.  [Test5\_Column1, Test5\_Column2][7]
-8.  [Ambiguous][8]
-9.  [Ambiguous][9]
+1. [Table Comment in Paragraph][1]
+2. [Table Comment][2]
+3. [My id][3]
+4. [My other table][4]
+5. [Test4\_Column1, Test4\_Column2][5]
+6. [Test5\_Column1, Test5\_Column2][6]
+7. [Test5\_Column1, Test5\_Column2][7]
+8. [Ambiguous][8]
+9. [Ambiguous][9]
 
 [1]: ./document-anchors-table.md#table-comment-in-paragraph "Table Comment in Paragraph"
 

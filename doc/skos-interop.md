@@ -10,12 +10,12 @@
 
 Model terms understood by glossarify-md are:
 
-*   `skos:ConceptScheme`
-*   `skos:Concept`
-*   `skos:prefLabel`
-*   `skos:altLabel`
-*   `skos:definition`
-*   `dc:title`
+* `skos:ConceptScheme`
+* `skos:Concept`
+* `skos:prefLabel`
+* `skos:altLabel`
+* `skos:definition`
+* `dc:title`
 
 To see how this works a good starting point is to have a look at a glossarify-md `export` file first.
 
@@ -167,14 +167,16 @@ Now provide this *external context* document along the imported file:
 
 What's left is to enhance glossarify-md with [JSON-LD 🌎][6] capabilities for interoperability: [^2]
 
-    npm install jsonld
+```
+npm install jsonld
+```
 
 [^2]: We could have installed [jsonld 🌎][8] together with glossarify-md by default but decided against to minimize bloat for the average user.
 
 On the next [run glossarify-md][9] will be looking for `@context` mappings
 
-1.  *embedded into the JSON [import][2] file*
-2.  or provided *externally* using `context` in the `import` config.
+1. *embedded into the JSON [import][2] file*
+2. or provided *externally* using `context` in the `import` config.
 
 In our example the second applies. Glossary terms in `term-data.json` from the previously *unknown* format should now have been imported and written to a new markdown file `imported.md`.
 
@@ -182,9 +184,9 @@ To sum up: we've just seen an example of interoperability and how two or more ap
 
 ### [Additional Notes](#additional-notes)
 
-*   glossarify-md will only [import][2] typed documents directly using [JSON-LD 🌎][6]'s `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
+* glossarify-md will only [import][2] typed documents directly using [JSON-LD 🌎][6]'s `@type` attribute or mapping their `type`-like attribute onto `@type`. Unknown type names need to be mapped onto `skos:ConceptScheme` (the glossary) and  `skos:Concept` (the terms).
 
-*   More complicated data formats may require use of some additional [JSON-LD 🌎][6] keywords from the JSON-LD Spec.
+* More complicated data formats may require use of some additional [JSON-LD 🌎][6] keywords from the JSON-LD Spec.
 
 [1]: https://github.com/about-code/glossarify-md/blob/master/doc/export.md#export "Since v6.0.0 Exporting makes glossarify-md generate and write a structured representation of a markdown glossary to the output directory."
 

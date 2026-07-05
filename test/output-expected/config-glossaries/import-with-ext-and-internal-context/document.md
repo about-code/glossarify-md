@@ -17,24 +17,24 @@ GIVEN a configuration
 WITH file `glossary.md` missing
 AND file `glossary.json` existing as a glossary in a custom format
 
-*   WITH its own `@context`
-*   AND NO mappings of the custom format onto SKOS and DC
-*   AND WITH terms
-    *   *[Glossary][1]*
-    *   *[Taxonomy][2]*
-    *   *[Thesaurus][3]*
-        AND file `custom-context.jsonld` existing
-*   WITH its own `@context`
-*   AND mappings of the custom format onto SKOS and DC
+* WITH its own `@context`
+* AND NO mappings of the custom format onto SKOS and DC
+* AND WITH terms
+  * *[Glossary][1]*
+  * *[Taxonomy][2]*
+  * *[Thesaurus][3]*
+    AND file `custom-context.jsonld` existing
+* WITH its own `@context`
+* AND mappings of the custom format onto SKOS and DC
 
 THEN
 
-1.  the system MUST NOT fail from the missing `glossary.md`
-2.  AND glossarify-md MUST generate a file `glossary.md`
-    1.  AND the file MUST have a title `# Custom Import Format`
-    2.  AND the file MUST have a heading `## ...` for each term
-3.  AND the system MUST linkify the terms mentioned above in *this* file
-4.  AND the terms must be linked to the generated file `glossary.md`
+1. the system MUST NOT fail from the missing `glossary.md`
+2. AND glossarify-md MUST generate a file `glossary.md`
+   1. AND the file MUST have a title `# Custom Import Format`
+   2. AND the file MUST have a heading `## ...` for each term
+3. AND the system MUST linkify the terms mentioned above in *this* file
+4. AND the terms must be linked to the generated file `glossary.md`
 
 [1]: ./glossary.md#glossary "Glossaries are collections of terms and their definitions."
 

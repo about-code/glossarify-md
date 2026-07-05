@@ -5,17 +5,18 @@ import minimist from "minimist";
 import nodeFs from "node:fs";
 import { createRequire } from "node:module";
 import path from "node:path";
-import proc from "node:process";
+import {argv as _argv, cwd, exit} from "node:process";
 import { NO_BASEDIR, NO_OUTDIR, OUTDIR_IS_BASEDIR, OUTDIR_IS_BASEDIR_WITH_DROP } from "../lib/cli/messages.js";
 import { upgrade } from "../lib/cli/upgrade.js";
 import * as main from "../lib/main.js";
 import { watch } from "chokidar";
+import { toMinimistOpts } from "../lib/cli/compatMinimist.js";
 
 const require_ = createRequire(import.meta.url);
 const confSchema = require_("../conf/v5/schema.json");
 const packageJson = require_("../package.json");
 const version = packageJson.version;
-const CWD = proc.cwd();
+const CWD = cwd();
 const banner =
 `┌──────────────────────────┐
 │   glossarify-md v${version}   │
@@ -28,7 +29,7 @@ const cli = {
         alias: "c"
         ,description: "Path to config file, e.g. './glossarify-md.conf.json'."
         ,type: "string"
-        ,default: "./glossarify-md.conf.json"
+        ,default: ""
     }
     ,"deep": {
         alias: ""
@@ -84,8 +85,16 @@ const cli = {
         ,type: "boolean"
         ,default: false
     }
+    ,"verbose": {
+        alias: "v"
+        ,description: "Print additional details such as the effective configuration, applied."
+        ,type: "boolean"
+        ,default: false
+    }
 };
-const argv = minimist(proc.argv.slice(2), cli);
+
+// Convert CLI to minimist options interface
+const argv = minimist(_argv.slice(2), toMinimistOpts(cli));
 
 // --logfile
 if (argv.logfile) {
@@ -118,9 +127,9 @@ if (!argv.init) {
 }
 
 // --help (or no args at all)
-if (argv.help || proc.argv.length === 2) {
+if (argv.help) {
     printHelp(cli);
-    proc.exit(0);
+    exit(0);
 }
 
 /**
@@ -156,7 +165,7 @@ async function configure(argv, cwd) {
             }
         } catch (e) {
             console.error(`Failed to read config '${confPath}'.\nReason:\n  ${e.message}\n`);
-            proc.exit(1);
+            exit(1);
         }
     }
 
@@ -167,7 +176,7 @@ async function configure(argv, cwd) {
             confUser = merge(confUser, confUserCli);
         } catch (e) {
             console.error(`Failed to parse value for --deep.\nReason:\n  ${e.message}\n`);
-            proc.exit(1);
+            exit(1);
         }
     }
     // --shallow
@@ -177,7 +186,7 @@ async function configure(argv, cwd) {
             confUser = Object.assign(confUser, confUserCli);
         } catch (e) {
             console.error(`Failed to parse value for --shallow.\nReason:\n  ${e.message}\n`);
-            proc.exit(1);
+            exit(1);
         }
     }
 
@@ -199,15 +208,14 @@ function validateConf(conf) {
     if (conf.baseDir === "") {
         console.log(NO_BASEDIR);
         console.log("ABORTED.\n");
-        proc.exit(0);
+        exit(0);
     }
 
     if (conf.outDir === "") {
         console.log(NO_OUTDIR);
         console.log("ABORTED.\n");
-        proc.exit(0);
+        exit(0);
     }
-
     console.log(`☛ Reading from: ${conf.baseDir}`);
     console.log(`☛ Writing to:   ${conf.outDir}\n`);
 
@@ -215,11 +223,11 @@ function validateConf(conf) {
         if (conf.outDirDropOld) {
             console.log(OUTDIR_IS_BASEDIR_WITH_DROP);
             console.log("ABORTED.\n");
-            proc.exit(0);
+            exit(0);
         } else if (!argv.force) {
             console.log(OUTDIR_IS_BASEDIR);
             console.log("ABORTED.\n");
-            proc.exit(0);
+            exit(0);
         }
     }
 }
@@ -297,13 +305,19 @@ async function run() {
     // --init
     if (argv.init) {
         writeConf(conf, argv);
-        proc.exit(0);
+        exit(0);
     }
 
     // Resolve baseDir relative to confDir and outDir relative to baseDir
     conf.baseDir = path.resolve(confDir, conf.baseDir);
     conf.outDir  = path.resolve(conf.baseDir, conf.outDir);
     validateConf(conf, argv);
+
+    // --config without path: print current config.
+    if (argv.verbose) {
+        console.info(`Using effective configuration:\n\n ${JSON.stringify(conf, null, 2)}\n`);
+    }
+
     try {
         // --watch
         if (argv.watch) {
@@ -326,7 +340,7 @@ async function run() {
         }
     } catch (err) {
         console.error(err);
-        proc.exit(1);
+        exit(1);
     }
 }
 run();

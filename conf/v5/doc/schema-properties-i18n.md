@@ -26,9 +26,9 @@ Whether upper case or lower case should sort first. Default: 'false' (Use locale
 
 `caseFirst`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### caseFirst Constraints
 
@@ -46,9 +46,9 @@ Whether punctuation should be ignored. Default: false. See <https://developer.mo
 
 `ignorePunctuation`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ## locale
 
@@ -56,9 +56,9 @@ The locale to use for operations such as sorting. See <https://developer.mozilla
 
 `locale`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ## localeMatcher
 
@@ -66,9 +66,9 @@ The locale matching algorithm to use. Default: 'best fit'. See <https://develope
 
 `localeMatcher`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### localeMatcher Constraints
 
@@ -85,9 +85,9 @@ Whether to use numeric collation. Default: false. See <https://developer.mozilla
 
 `numeric`
 
-*   is optional
+* is optional
 
-*   Type: `boolean`
+* Type: `boolean`
 
 ## sensitivity
 
@@ -95,9 +95,9 @@ Which differences in the strings should lead to non-zero result values. Default:
 
 `sensitivity`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### sensitivity Constraints
 
@@ -116,9 +116,9 @@ Whether the comparison is for sorting or for searching for matching strings. Def
 
 `usage`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### usage Constraints
 

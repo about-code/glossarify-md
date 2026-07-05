@@ -22,9 +22,9 @@
 
 `by`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### by Constraints
 
@@ -40,11 +40,11 @@ When there are ambiguous terms in a book one glossary term definition might be m
 
 `perSectionDepth`
 
-*   is optional
+* is optional
 
-*   Type: `number`
+* Type: `number`
 
-*   more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
+* more: https://github.com/about-code/glossarify-md/blob/master/doc/ambiguities.md
 
 ### perSectionDepth Default Value
 

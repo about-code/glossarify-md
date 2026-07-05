@@ -78,16 +78,16 @@ There are some questions you may ask yourself when thinking about ambiguities:
 
 When there are multiple definitions available we usually want a [term occurrence][1]'s phrase refer to the definition most appropriate in the context of the term occurrence. What the primary definition is *for ambiguous terms* depends on the context in which a term occurs. This makes solving this problem tricky when [linkification][2] happens, automatically. You can affect this process by choosing or even combining different approaches case-by-case:
 
-1.  Manually choosing the link target yourself. For more, see [Identifier-based Cross-Linking][3].
-2.  Avoiding ambiguities by scoping glossaries. For more, see [Tree-Scoped Linking][4].
-3.  Sorting term definitions by a priority metric. For more, continue reading.
+1. Manually choosing the link target yourself. For more, see [Identifier-based Cross-Linking][3].
+2. Avoiding ambiguities by scoping glossaries. For more, see [Tree-Scoped Linking][4].
+3. Sorting term definitions by a priority metric. For more, continue reading.
 
 ### [Sorting term definitions by priority metrics](#sorting-term-definitions-by-priority-metrics)
 
 By sorting term definitions we can affect what becomes the *primary definition* linked with the [term occurrence][1]'s phrase as well as the order for linking alternative definitions from indicators <sup>2)3)4)</sup>.There are two sort strategies at the moment:
 
-1.  [Sorting *context-free* by glossary filename][5]
-2.  [Sorting *contextually* by counting references to glossary terms][6]
+1. [Sorting *context-free* by glossary filename][5]
+2. [Sorting *contextually* by counting references to glossary terms][6]
 
 #### [Sorting by `glossary-filename`](#sorting-by-glossary-filename)
 

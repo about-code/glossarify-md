@@ -12,9 +12,9 @@ A CSV dialect descriptor. Similar to dialect in a <https://frictionlessdata.io> 
 
 `dialect`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-csvdialect.md))
+* Type: `object` ([Details](schema-defs-csvdialect.md))
 
 ### dialect Default Value
 
@@ -36,9 +36,9 @@ A mapping of CSV table fields onto SKOS terms, e.g.
 
 `schema`
 
-*   is optional
+* is optional
 
-*   Type: `object` ([Details](schema-defs-csvtableschema.md))
+* Type: `object` ([Details](schema-defs-csvtableschema.md))
 
 ## title
 
@@ -46,9 +46,9 @@ A mapping of CSV table fields onto SKOS terms, e.g.
 
 `title`
 
-*   is optional
+* is optional
 
-*   Type: `string`
+* Type: `string`
 
 ### title Default Value
 

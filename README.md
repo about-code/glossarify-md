@@ -360,14 +360,17 @@ See **[here][doc-extended]**, for advanced topics:
 
 The term *support* refers to *runs on the given platform* and is subject to the terms and conditions in [LICENSE](#license).
 
-| NodeJS  | glossarify-md |                                                                           Current Test Matrix                                                                            |
-| ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Current | v7            | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |
-| 18 LTS  | v6, v7        | Tested + Supported
-| 16 LTS  | v5, v6, v7    | Tested + Supported                                                                                                                                                       |
-| 14 LTS  | v4, v5, v6    | |
-| 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |
-| 10 LTS  | v2, v3, v4    |                                                                                                                                                                          |
+| NodeJS  | glossarify-md |                                                                           Current Test Matrix                                                                            |     |
+| ------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| Current | v8            | Tested. Should node.js introduce breaking changes which affect [glossarify-md], then we may choose to step back from supporting *Current* until it becomes the next LTS. |     |
+| 24 LTS  | v7, v8        | Tested + Supported
+| 22 LTS  | v7, v8        | Tested + Supported                                                                                                                                                       |     |
+| 20 LTS  | v6, v7        |                                                                                                                                                                         |     |
+| 18 LTS  | v6, v7        |                                                                                                                                                                          |     |
+| 16 LTS  | v5, v6, v7    |                                                                                                                                                                          |     |
+| 14 LTS  | v4, v5, v6    |                                                                                                                                                                          |     |
+| 12 LTS  | v3, v4, v5    |                                                                                                                                                                          |     |
+| 10 LTS  | v2, v3, v4    |                                                                                                                                                                          |     |
 
 ## Special Thanks go to
 

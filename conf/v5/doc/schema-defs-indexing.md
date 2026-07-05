@@ -11,9 +11,9 @@ Level of detail by which to group occurrences of terms or syntactic elements in 
 
 `groupByHeadingDepth`
 
-*   is optional
+* is optional
 
-*   Type: `integer`
+* Type: `integer`
 
 ### groupByHeadingDepth Constraints
 
@@ -27,6 +27,6 @@ An array with items in a range of 1-6 denoting the depths of headings that shoul
 
 `headingDepths`
 
-*   is optional
+* is optional
 
-*   Type: `integer[]`
+* Type: `integer[]`

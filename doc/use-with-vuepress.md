@@ -22,30 +22,34 @@
 
 Below we assume a *sample* project structure like this:
 
-    ${root}
-       +- docs/
-       |   +- .vuepress/
-       |   |   |- public/
-       |   |   '- config.js
-       |   |
-       |   +- images/
-       |   |   '...
-       |   +- section-1/
-       |   |   |- page-1.md
-       |   |   |- page-2.md
-       |   |   '- page-3.md
-       |   |
-       |   '- glossary.md
-       |
-       +- docs-glossarified/           (Generated)
-       +- node_modules/
-       |- glossarify-md.conf.json
-       |- package.json
-       '- .gitignore
+```
+${root}
+   +- docs/
+   |   +- .vuepress/
+   |   |   |- public/
+   |   |   '- config.js
+   |   |
+   |   +- images/
+   |   |   '...
+   |   +- section-1/
+   |   |   |- page-1.md
+   |   |   |- page-2.md
+   |   |   '- page-3.md
+   |   |
+   |   '- glossary.md
+   |
+   +- docs-glossarified/           (Generated)
+   +- node_modules/
+   |- glossarify-md.conf.json
+   |- package.json
+   '- .gitignore
+```
 
 ## [Install glossarify-md](#install-glossarify-md)
 
-    npm i glossarify-md remark-frontmatter
+```
+npm i glossarify-md remark-frontmatter
+```
 
 Installs glossarify-md with a syntax plug-in for *frontmatter* syntax.
 
@@ -75,8 +79,8 @@ Installs glossarify-md with a syntax plug-in for *frontmatter* syntax.
 
 ## [Configure vuepress](#configure-vuepress)
 
-> *   vuepress v1
-> *   vuepress v2 (beta 47+)
+> * vuepress v1
+> * vuepress v2 (beta 47+)
 
 glossarify-md and [vuepress 🌎][1] need to be aligned in how they create hyperlink URLs with browser-friendly URL-hashes `#...`, also called *[slugs][2]*.
 
@@ -95,14 +99,16 @@ module.exports = {
 > ⚠ **Important (Non-English / Non-ASCII charsets):** vuepress's default slugger creates hashes with lowercase *ASCII characters, only*. [github-slugger] instead maps UNICODE characters onto their lowercase UNICODE equivalent.
 > For example, non-ASCII *Äquator* (German) becomes `#aquator` with vuepress defaults but becomes `#äquator` when using vuepress with [github-slugger]. Some consequences to consider:
 >
-> 1.  Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
-> 2.  As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
+> 1. Bookmarks onto published web pages continue to resolve to the web page but a browser may no longer resolve the page section and stops scrolling when sections outside the visible viewport.
+> 2. As a Markdown writer you may have authored links `[Foo](#aquator)`, manually, which have to be changed to `[Foo](#äquator)`.
 
 ### [Get rid of glossarify-md](#get-rid-of-glossarify-md)
 
 Given you want to get rid of glossarify-md but keep on using [vuepress 🌎][1]. Then you may not want URLs and [URL][3] [slugs][2], to change. To keep them stable while dropping glossarify-md just [import][4] `github-slugger` yourself.
 
-    npm i --save github-slugger@^1.5.0
+```
+npm i --save github-slugger@^1.5.0
+```
 
 <em>./docs/.vuepress/config.js</em>
 
@@ -133,10 +139,10 @@ module.exports = {
 }
 ```
 
-*   `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
-*   `npm run glossarify` writes glossarified markdown files to `outDir`
-*   `npm run glossarified` builds and serves the glossarified version from `outDir`.
-*   `npm run build` just builds the glossarified [vuepress 🌎][1] site without running a server.
+* `npm start` builds and serves files quickly from `baseDir` with *live-reload*. This is what you probably want while writing even though it doesn't produce glossarified output.
+* `npm run glossarify` writes glossarified markdown files to `outDir`
+* `npm run glossarified` builds and serves the glossarified version from `outDir`.
+* `npm run build` just builds the glossarified [vuepress 🌎][1] site without running a server.
 
 More see [README.md][5].
 

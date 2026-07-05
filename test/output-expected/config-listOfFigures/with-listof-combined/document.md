@@ -8,8 +8,10 @@
 
 <a id="foo" class="my-figures" title="Invisible image of foo"></a>
 
-    @startuml
-    Assume some generated PlantUML graphic here.
-    @enduml
+```
+@startuml
+Assume some generated PlantUML graphic here.
+@enduml
+```
 
 [1]: ./figure.png

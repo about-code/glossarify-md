@@ -35,9 +35,9 @@ THEN expected
 
 must equal actual:
 
-*   ![Image Inline (png)](/static/foo.png)
-*   ![Image Inline (jpg)](/static/foo.jpg)
-*   ![Image Inline (gif)](/static/foo.gif)
+* ![Image Inline (png)](/static/foo.png)
+* ![Image Inline (jpg)](/static/foo.jpg)
+* ![Image Inline (gif)](/static/foo.gif)
 
 ## [Test Case: Image References](#test-case-image-references)
 
@@ -67,9 +67,9 @@ THEN expected
 
 MUST equal actual:
 
-*   ![Image Reference (png)][PNG]
-*   ![Image Reference (jpg)][JPG]
-*   ![Image Reference (gif)][GIF]
+* ![Image Reference (png)][PNG]
+* ![Image Reference (jpg)][JPG]
+* ![Image Reference (gif)][GIF]
 
 [PNG]: /static/bar.png
 

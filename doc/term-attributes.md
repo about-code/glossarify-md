@@ -59,8 +59,10 @@ If you've been using JSON [term attribute][1] syntax and want to switch to YAML 
 
 *Regular Expressions*
 
-    Search :  <!--\{\s?"(.*)"\s?:\s?"(.*)"\s?\}-->
-    Replace:  <!-- $1: $2 -->
+```
+Search :  <!--\{\s?"(.*)"\s?:\s?"(.*)"\s?\}-->
+Replace:  <!-- $1: $2 -->
+```
 
 *Output (YAML):*
 
@@ -83,17 +85,19 @@ If you've been using JSON [term attribute][1] syntax and want to switch to YAML 
 
 *Regular Expressions*
 
-    Search:
-    <!--\{.*
-    .*"(.*)"\s?:\s?"(.*)",+
-    .*"(.*)"\s?:\s?"(.*)"
-    \}-->
+```
+Search:
+<!--\{.*
+.*"(.*)"\s?:\s?"(.*)",+
+.*"(.*)"\s?:\s?"(.*)"
+\}-->
 
-    Replace:
-    <!--
-      $1: $2
-      $3: $4
-    -->
+Replace:
+<!--
+  $1: $2
+  $3: $4
+-->
+```
 
 *Output (YAML)*
 

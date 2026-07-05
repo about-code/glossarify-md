@@ -20,8 +20,8 @@ AND a glossary `glossary-2.md` with a term *[Bar][3]*
 AND this document mentioning the terms
 THEN the system MUST linkify
 
-1.  term *[Foo][2]* using URL `https://my.org/vocab/#foo`
-2.  term *[Bar][3]* using URL `https://my.org/vocab/#bar`
+1. term *[Foo][2]* using URL `https://my.org/vocab/#foo`
+2. term *[Bar][3]* using URL `https://my.org/vocab/#bar`
 
 [1]: #document
 
